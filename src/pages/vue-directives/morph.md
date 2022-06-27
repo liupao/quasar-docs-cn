@@ -1,6 +1,6 @@
 ---
 title: Morph Directive
-desc: Quasar中可以实现dom在两种状态间变化的Vue指令。
+desc: Quasar中可以实现dom在两种状态间动画形变的Vue指令。
 keys: morph
 related:
   - /quasar-utils/morph-utils
@@ -18,15 +18,13 @@ related:
 
 请先阅读 [Morph工具函数](/quasar-utils/morph-utils)页面，有利于理解这个指令的工作原理。
 
-这个指令将组中的一个元素变为另一个元素。变形是通过改变指令的值(model)来匹配变形元素的名称来激活的。
-
-This directive morphs one element in a group into another. The morphing is activated by changing the value (model) of the directive to match the name of the morphing element.
+这个指令将组中的一个元素变形为另一个元素（变形过程带有动画）。变形是通过改变指令的值(model)来匹配变形元素的名称来激活的。
 
 ::: warning
-* The "name" and "group" (as directive arg or through the value of the directive) are mandatory.
-* If the value of the directive is in Object form, then "model" is also mandatory.
+* "name"和"group"字段是必传的（可以作为指令参数或者值传入）
+* 若指令的值为对象格式，那么"model"字段也是必传的。
 :::
 
-<doc-example title="Morph between multiple elements in a group" file="Morph/BasicGroup" />
+<doc-example title="一组内多个元素形变" file="Morph/BasicGroup" />
 
-<doc-example title="Morph a button into a card" file="Morph/Card" />
+<doc-example title="从一个按钮行形变为卡片" file="Morph/Card" />
