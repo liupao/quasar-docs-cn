@@ -9,6 +9,10 @@ related:
 
 **注意：本页属于个人经验，并不属于官方文档内容**
 
+## 方式一
+直接安装 IntelliSense for CSS class names in HTML 插件，插件ID: Zignd.html-css-class-completion，安装完成后即可以在vscode中获得对quasar的内置css的代码提示
+
+## 方式二
 1. 安装 Scss Everywhere 插件，插件ID： `gencer.html-slim-scss-css-class-completion`
 2. 将以下代码复制进vscode的配置文件（.vscode/settings.json）中去：
 ``` json
