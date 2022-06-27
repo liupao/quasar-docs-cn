@@ -221,6 +221,10 @@
       {
         "name": "其他的css辅助类",
         "path": "other-helper-classes"
+      },
+      {
+        "name": "在vscode中的代码提示",
+        "path": "intellisense-css-vscode"
       }
     ]
   },

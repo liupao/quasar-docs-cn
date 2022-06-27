@@ -6,75 +6,75 @@ related:
   - /vue-directives/morph
 ---
 
-You can morph one DOM element into another (with animation) or between two states of the same element using Quasar's morph util described below.
+Quasar提供了一个形变工具函数，可以将一个DOM元素变形为另一个元素(形变过程带有动画)，或者同一个DOM元素在两个不同的状态之间形变。
 
-Might also be worth to look at the [Morph directive](/vue-directives/morph) which uses this util but it's simpler to use.
+也可以去看看[Morph 指令](/vue-directives/morph)，它在底层使用了Morph函数，但它使用起来更简单。
 
-## Basic usage
+## 用法
 
 ```js
 import { morph } from 'quasar'
 
-// Morph one DOM element to another:
+// 将一个dom变形成另外一个：
 const cancelMorph = morph({
   from: '#from-el',
   to: '#to-el'
 })
 
-// call cancelMorph() to cancel the morphing
+// 可以调用 cancelMorph() 来取消变形
 ```
 
-The function expects one mandatory Object parameter with the following keys:
+这个函数需要一个必填的对象参数，这个对象中可以有以下属性：
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | --- | --- | --- | --- |
-| from | DOM | - | (**required**) A DOM element or CSS selector or a function returning a DOM element |
-| to | DOM | - | Same as "from"; if "to" is missing, then it is assumes that it is the same as "from" |
-| onToggle() | Function | - | A synchronous toggle function that will be executed immediately after the state of the initial element is saved. Use a function that toggles the state of the components so that the destination element becomes available. |
-| waitFor | Number/'transitioned'/Promise | 0 | A number, 'transitionend' or a Promise - it will delay animation start for that number of milliseconds, or until a 'transitionend' event is emitted by the destination element, or until the promise is resolved (if the promise is rejected the morphing will abort, but the `toggle function` was already called) |
-| duration | Number | 300 | The duration in milliseconds for the animation |
-| easing | String | 'ease-in-out' | The timing function for the animation (CSS easing format) |
-| delay | Number | 0 | The delay in milliseconds for the animation |
-| fill | String | 'none' | The fill mode for the animation |
-| style | String/Object | - | The extra style to be applied to the morphing element while it is animated (either as string or a CSSStyleDeclaration object) |
-| classes | String | - | The extra classes to be applied to the morphing element while it is animated (as string) |
-| resize | Boolean | *false* | Force resizing instead of the default scaling transformation |
-| useCSS | Boolean | *false* | Force use of CSS instead of the Animation API |
-| hideFromClone | Boolean | *false* | By default a clone of the initial element is used to fill the space after the element is removed - set this flag if the initial element is not removed or resizing of the space occupied by the initial element is not desired |
-| keepToClone | Boolean | *false* | By default the final element is removed from it's final position to be animated - set this flag to keep a copy in the final position |
-| tween | Boolean | *false* | By default the final element is morphed from the position and aspect of the initial element to the ones of the final element - set this flag to use an opacity tween between the initial and final elements |
-| tweenFromOpacity | Number | 0.6 | If using **tween** it is the initial opacity of the initial element (will be animated to 0) - the initial element is placed on top of the destination element |
-| tweenToOpacity | Number | 0.5 | If using **tween** it is the initial opacity of the destination element (will be animated to 1) |
-| onEnd(direction, aborted) | Function | - | A function that will be called once the morphing is finalized - receives two params: "direction" is a string ('to' if the morphing was finished in the final state or 'from' if it was finished in the initial state) and "aborted" is a boolean (true means that the animation was aborted) |
+| from | DOM | - | (**必填**) 一个DOM或者CSS选择器或者是一个返回了DOM的函数 |
+| to | DOM | - | 类型于"form",若"to"没有填，那么它将等于"from" |
+| onToggle() | Function | - | 一个同步切换函数，在保存初始元素状态后立即执行。使用一个函数来切换组件的状态。 |
+| waitFor | Number/'transitioned'/Promise | 0 | 一个数字，'transitionend'字符串或者一个Promise，他会延迟动画指定的毫秒数，或者等待目标DOM的'transitionend'事件被触发之后再开始变形，或者等待promise完成之后再开始变形（如果这个 Promise失败了，那么这个变形会被中止，但是`toggle`函数已经被调用了）。 |
+| duration | Number | 300 | 动画的持续时间，单位毫秒。 |
+| easing | String | 'ease-in-out' | 动画采用的加速度函数（CSS easing 格式） |
+| delay | Number | 0 | 动画延迟的毫秒数 |
+| fill | String | 'none' | 动画的fill模式 |
+| style | String/Object | - | 会被应用在变形后的元素上的额外的样式。（字符串或者CSS样式对象） |
+| classes | String | - | 会被应用在变形后的元素上的额外的CSS类名。（字符串或者CSS样式对象） |
+| resize | Boolean | *false* | 强制调整大小而不是默认的缩放转换 |
+| useCSS | Boolean | *false* | 强制使用CSS而不是动画API |
+| hideFromClone | Boolean | *false* | 默认情况下，初始元素的克隆体用于填充删除后的空间——如果初始元素未被删除或不希望调整初始元素占用的空间大小，则设置此标志。|
+| keepToClone | Boolean | *false* | 默认情况下，final元素会从动画的最终位置移除-设置此标志以在最终位置保留一个副本 |
+| tween | Boolean | *false* | 默认情况下，final元素从初始元素的位置和角度变形为final元素的位置和角度-设置此标志以在初始元素和final元素之间使用不透明度渐变 |
+| tweenFromOpacity | Number | 0.6 | 如果使用 **tween** 为初始元素设置初始透明度 it is the initial opacity of the initial element (will be animated to 0) -初始元素放置在目标元素的顶部 |
+| tweenToOpacity | Number | 0.5 | 如果使用 **tween** 为目标元素设置初始透明度it is the initial opacity of the destination element (will be animated to 1) |
+| onEnd(direction, aborted) | Function | - | 一个在变形完成后会被调用的函数，它接受两个参数："direction"是一个字符串（如果变形在最终状态完成，则为“to”；如果变形在初始状态完成，则为“from”），aborted是一个布尔值（true代表动画中止了） |
 
-## Morphing lifecycle
+## 形变的生命周期
 
-1. Get the aspect and position of the initial element (if a function is provided for getting the initial element it will be called)
-2. Calculate the size and position of the container of the initial element
-3. If another morphing was using the same element that morphing will be aborted
-4. Execute the onToggle() function (if present)
-5. Recalculate the size and position of the container of the initial element to check if they are changed
-6. In the next tick (to allow Vue to process the state changes) the final element will be identified (if a function is provided for getting the final element it will be called)
-7. If another morphing was using the same element that morphing will be aborted
-8. Calculate the size and position of the container of the final element
-9. If a **waitFor** is provided, wait that number of milliseconds, for a 'transitionend' event or until the promise is resolved (if the promise is rejected then the morphing is aborted)
-10. Recalculate the size and position of the container of the final element to check if they are changed
-11. Get the aspect and position of the final element
-12. Start the animation
+1. 获取初始元素的形状和位置（如果提供了用于获取初始元素的函数，则将调用该函数）
+1. 计算初始元素容器的大小和位置
+1. 如果另一个变形正在使用相同的元素，则变形将被中止
+1. 执行`onToggle()`函数（如果存在）
+1. 重新计算初始元素的容器的大小和位置，以检查它们是否发生了变化
+1. 在下一个tick（允许Vue处理状态更改）中，将标识变形的最终状态的元素（如果提供了获取最终元素的函数，则将调用该函数）
+1. 如果另一个变形正在使用相同的元素，则变形将被中止）
+1. 计算最终形态元素的容器的大小和位置
+1. 如果提供了一个waitFor，请等待该毫秒数，或等待“transitionend”事件，或直到Promise得到解决（如果Promise被拒绝，则变形将中止）
+1. 重新计算最终元素的容器的大小和位置，以检查它们是否已更改
+1. 得到最终形态元素的形状和位置
+1. 启动动画
 
-Regarding the cancel() function (the return value of a call to morph()):
-* If the `cancel` function that was returned is called during steps 1 to 11 then the morphing will be aborted (the `toggle function` will still be called if the cancel comes after step 4) and the returned value will be **false**.
-* If the `cancel` function is called between the start and end of the animation then the animation will be reversed and the returned value will be **true**.
-* If the `cancel` function is called after the end of the animation nothing will happen and the returned value will be **false**.
+* 如果在步骤1到11期间调用了`cancel`函数，则变形将中止（如果在步骤4之后取消，则仍会调用`toggle`函数），返回值将为false。
+* 如果在动画的开始和结束之间调用`cancel`函数，则动画将反转，返回值将为true。
+* 如果在动画结束后调用cancel函数，则不会发生任何事情，返回值将为false。
 
-## Examples
 
-<doc-example title="Morphing the same element" file="MorphUtils/SameElement" />
+## 示例
 
-<doc-example title="Morphing a QCard from a QFabAction" file="MorphUtils/FabCard" />
+<doc-example title="对同一个元素变形" file="MorphUtils/SameElement" />
 
-<doc-example title="Image gallery " file="MorphUtils/ImageGallery" />
+<doc-example title="从QFabAction变形为QCard" file="MorphUtils/FabCard" />
 
-<doc-example title="Horizontal image strip " file="MorphUtils/ImageStripHorizontal" />
+<doc-example title="画廊" file="MorphUtils/ImageGallery" />
 
-<doc-example title="Vertical image strip " file="MorphUtils/ImageStripVertical" />
+<doc-example title="水平的图片查看器 " file="MorphUtils/ImageStripHorizontal" />
+
+<doc-example title="垂直的图片查看器 " file="MorphUtils/ImageStripVertical" />
