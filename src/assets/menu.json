@@ -655,7 +655,7 @@
         "path": "touch-hold"
       },
       {
-        "name": "Touch Pan 滑动",
+        "name": "Touch Pan 平移",
         "path": "touch-pan"
       },
       {
@@ -663,7 +663,7 @@
         "path": "touch-repeat"
       },
       {
-        "name": "Touch Swipe 轻扫",
+        "name": "Touch Swipe 滑动",
         "path": "touch-swipe"
       }
     ]
