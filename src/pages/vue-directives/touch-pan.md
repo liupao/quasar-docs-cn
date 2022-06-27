@@ -7,83 +7,83 @@ related:
   - /vue-directives/touch-repeat
   - /vue-directives/touch-hold
 ---
-Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: `v-touch-pan`, `v-touch-swipe`, `v-touch-hold` and even `v-touch-repeat`.
 
-> **These directives also work with mouse events, not only touch events**, so you are able to build cool functionality for your App on desktops too.
+类星体提供了功能齐全的Vue指令，可以完全取代像`Hammerjs`这样的库:`v-touch-pan`, `v-touch-swipe`, `v-touch-hold`，甚至`v-touch-repeat`。
 
-We will be describing `v-touch-pan` on the lines below.
+> **这些指令不仅可以处理鼠标事件，还可以处理触摸事件**，所以你可以用它们在你的App中完成一些很酷的事情。
+
+下面我们将讲述`v-touch-pan`指令
 
 ## TouchPan API
 
 <doc-api file="TouchPan" />
 
-## Usage 用法
-Click then pan in a direction with your mouse on the area below to see it in action.
-Page scrolling is prevented, but you can opt out if you wish.
+## 用法
+点击然后往一个方向平移鼠标，然后查看页面的变化。在有触摸功能的设备上，上下平移时，页面滚动会被禁用。
 
 ::: tip
-If your content also has images, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+如果你的内容带有图片，你可能需要给它们添加`draggable="false"`属性，否则浏览器的原生事件可能会起副作用。
 :::
 
-<doc-example title="All directions" file="TouchPan/Basic" />
+<doc-example title="任意方向" file="TouchPan/Basic" />
 
-Panning works both with a mouse or a native touch action.
-You can also capture pan to certain directions (any) only as you'll see below.
+平移可以运行于鼠标和触摸事件。也可以指定平移的方向。例如只捕获水平方向的平移。
 
-Example on capturing only horizontal panning.
-Notice that on touch capable devices the scrolling is automatically not blocked, since we are only capturing horizontally.
+注意，在有触摸功能的设备上，滚动不会被自动阻止，因为我们只是水平平移。
 
-<doc-example title="Horizontally" file="TouchPan/Horizontal" />
 
-Example on capturing only vertically panning. Page scrolling is prevented, but you can opt out if you wish.
+<doc-example title="水平方向" file="TouchPan/Horizontal" />
 
-<doc-example title="Vertically" file="TouchPan/Vertical" />
+下面的示例只捕获垂直方向的平移，页面滚动会被禁用，但是你希望的话，也可以选择不禁用。
 
-Example on capturing panning on custom directions. For this, use modifiers: `up`, `down`, `left`, `right`. Page scrolling is prevented, but you can opt out if you wish.
+<doc-example title="垂直方向" file="TouchPan/Vertical" />
+下面的示例演示如何使用`up`, `down`, `left`, `right`这四个修饰符来捕获自定义方向的平移。
+
+页面滚动会被自动禁用，但是你希望的话，也可以选择不禁用。
+
 
 <doc-example title="Custom directions" file="TouchPan/Custom" />
 
-### Handling Mouse Events
-When you want to handle mouse events too, use the `mouse` modifier:
+### 处理鼠标事件
+当你想处理鼠标事件时，使用`mouse`修饰符：
 
 ```html
 <!--
-  directive will also be triggered by mouse actions
+  指令也会被鼠标操作触发
 -->
 <div v-touch-pan.mouse="userHasPanned">...</div>
 ```
 
-### Preventing Scroll (on touch capable devices)
-By default, the directive does not block page scrolling. If you want to prevent scrolling, then use the `prevent` modifier.
+### 禁用页面滚动 (在有触摸功能的设备上)
+默认情况请下，这个指令不会阻止页面的滚动，但是你希望阻止页面滚动的话，使用 `prevent`修饰符。
 
 ```html
 <div v-touch-pan.prevent="userHasPanned">...</div>
 ```
 
 ### Inhibiting TouchPan
-When you want to inhibit TouchPan, you can do so by stopping propagation of the `touchstart`/`mousedown` events from the inner content:
+你可以通过阻止内部元素`touchstart`/`mousedown`事件的冒泡行为来抑制TouchPan事件：
 
 ```html
 <div v-touch-pan.mouse="userHasHold">
   <!-- ...content -->
   <div @touchstart.stop @mousedown.stop>
     <!--
-      TouchPan will not apply here because
-      we are calling stopPropagation() on touchstart
-      and mousedown events
+      TouchPan事件不会应用到这里， 因为我们
+      在touchstart 和 mousedown 事件上
+      调用了stopPropagation()
     -->
   </div>
   <!-- ...content -->
 </div>
 ```
+然而，若你使用`capture` 或者 `mouseCapture`修饰符，则事件会先到达TouchPan指令，然后才是内部元素，所以TouchPan事件仍然会被触发。
 
-However, if you are using `capture` or `mouseCapture` modifiers then events will first reach the TouchPan directive then the inner content, so TouchPan will still trigger.
+## FAB示例
 
-## Example with FAB
-
-Below is a nice example on using TouchPan on a QFab. You can drag it across the screen.
+下面是一个使用QFab的优秀示例，你可以拖拽它穿出屏幕。
 
 <doc-example title="Draggable" file="QFab/Draggable" />
 
-## Note on HMR
-Due to performance reasons, not all of the modifiers are reactive. Some require a window/page/component refresh to get updated. Please check the API card for the modifiers which are not marked as reactive.
+## 注意热更新相关
+由于性能的原因，不是所有的修饰符都是reactive的，有一些需要刷新页面才能更新，请在API卡片中检查的哪些修饰符不具备reactive
