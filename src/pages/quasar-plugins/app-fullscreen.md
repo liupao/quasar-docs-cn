@@ -1,44 +1,44 @@
 ---
-title: Fullscreen Plugin
-desc: A Quasar plugin to toggle the fullscreen state of your app through the Web Fullscreen API.
+title: 全屏插件
+desc: 一个可以切换全屏状态的Quasar插件。
 keys: AppFullScreen
 ---
-There are times when you want your website or App to run in fullscreen.
-Quasar makes it easy by wrapping the [Web Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API).
+有些时候，你可能希望你的网站/app，运行在全屏状态下。Quasar通过封装[Web Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)提供了一个全屏插件。
 
-::: warning
-Please note that the behavior is different depending on the platform the code is running on, due to the fact that there isn't a fixed Web standard for Web Fullscreen API yet.
+
+::: warning 警告
+请注意，由于 Web Fullscreen API 没有还固定的标准，所以在不同的平台上，这个全屏行为不一致。
 :::
 
 ## AppFullscreen API
 
 <doc-api file="AppFullscreen" />
 
-## Installation
+## 安装
 <doc-installation plugins="AppFullscreen" />
 
-## Usage 用法
-::: tip
-For an exhaustive list of properties and methods, please check out the API section.
+##  用法
+::: tip 提示
+关于完整的属性和方法，请查看API部分。
 :::
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外这样使用
 import { AppFullscreen } from 'quasar'
 
-// Requesting fullscreen mode:
+//请求进入全屏模式:
 AppFullscreen.request()
   .then(() => {
-    // success!
+    // 成功!
   })
   .catch(err => {
     // oh, no!!!
   })
 
-// Exiting fullscreen mode:
+// 退出全屏模式:
 AppFullscreen.exit()
   .then(() => {
-    // success!
+    // 成功!
   })
   .catch(err => {
     // oh, no!!!
@@ -46,14 +46,14 @@ AppFullscreen.exit()
 ```
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内这样使用
 
 import { useQuasar } from 'quasar'
 
 setup () {
   const $q = useQuasar()
 
-  // Requesting fullscreen mode:
+  //请求进入全屏模式:
   $q.fullscreen.request()
     .then(() => {
       // success!
@@ -62,7 +62,7 @@ setup () {
       // oh, no!!!
     })
 
-  // Exiting fullscreen mode:
+  // 退出全屏模式:
   $q.fullscreen.exit()
     .then(() => {
       // success!
@@ -73,19 +73,18 @@ setup () {
 }
 ```
 
-<doc-example title="Basic" file="AppFullscreen/Basic" />
+<doc-example title="基础" file="AppFullscreen/Basic" />
 
-<doc-example title="On custom element" file="AppFullscreen/Targeted" />
+<doc-example title="在一个指定的元素上全屏" file="AppFullscreen/Targeted" />
 
-::: warning
-On some phones this will have little effect:
-* For example, on Samsung S4, when App goes into fullscreen, the top bar will slide up but still remain on screen.
-* On Nexus phones, on the other hand, like Nexus 5, Android navigation buttons and top bar disappear completely.
-
-It all depends on the Web Fullscreen API support of the platform the code is running on.
+::: warning 警告
+在一些手机上，可能会有一些小影响：
+* 例如在三星 S4上，当App进入全屏模式后，顶部栏会向上滑动，然后保留在屏幕上。
+* 在Nexus手机上，例如Nexus 5，安卓导航键和顶部状态栏会完全消失。
+这完全取决于 Web Fullscreen API在代码运行的平台上的支持程度。
 :::
 
-## Watching for fullscreen changes
+## 监听全屏状态的变化
 
 ```vue
 <template>...</template>
@@ -99,7 +98,7 @@ export default {
     const $q = useQuasar()
 
     watch(() => $q.fullscreen.isActive, val => {
-      console.log(val ? 'In fullscreen now' : 'Exited fullscreen')
+      console.log(val ? '目前是全屏' : '已退出全屏')
     })
   }
 }
