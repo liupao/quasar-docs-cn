@@ -206,7 +206,7 @@ Quasar也提供了一些开箱即用的方法来检测用户所在的地区：
 import { Quasar } from 'quasar'
 Quasar.lang.getLocale() // returns a string
 
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {

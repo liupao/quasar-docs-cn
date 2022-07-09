@@ -152,7 +152,7 @@ export default {
 }
 ```
 
-Now let's see an example of Notify being used outside of a Vue file:
+Now let's see an example of Notify being used 在Vue文件之外:
 
 ```js
 import { Notify } from 'quasar'

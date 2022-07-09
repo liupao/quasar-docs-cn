@@ -39,11 +39,11 @@ In order to create #2, the options selection form, you have the `options` proper
 ## Usage 用法
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Dialog } from 'quasar'
 (Object) Dialog.create({ ... })
 
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {

@@ -24,7 +24,7 @@ This plugin is automatically installed. No need to do anything but directly use 
 Do not manually assign a value to `isActive` or `mode` from below. Instead, use the `set(val)` method.
 :::
 
-### Inside of a Vue file
+### 在Vue文件之内
 
 ```js
 import { useQuasar } from 'quasar'
@@ -60,7 +60,7 @@ export default {
 }
 ```
 
-### Outside of a Vue file
+### 在Vue文件之外
 
 ```js
 // Warning! This method will not
@@ -100,7 +100,7 @@ When on a SSR build:
 * `import { Dark } from 'quasar'` method of using Dark mode will not error out but it will not work (won't do anything). But you can use the other two ways (see previous section). We recommend through quasar.config.js.
 * It's preferred to avoid setting Dark mode to 'auto' for SSR builds. It's because the client dark mode preference cannot be inferred, so SSR will always render in light mode then when the client takes over, it will switch to Dark (if it will be the case). As a result, a quick flicker of the screen will occur.
 
-## Watching for status change
+## 监听状态的变化
 
 ```vue
 <template>...</template>

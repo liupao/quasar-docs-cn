@@ -28,7 +28,7 @@ When running the code server-side on SSR builds, this feature can't work. Web St
 ## Usage 用法
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { LocalStorage, SessionStorage } from 'quasar'
 
 LocalStorage.set(key, value)
@@ -39,7 +39,7 @@ let value = SessionStorage.getItem(key)
 ```
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {

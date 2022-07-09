@@ -45,7 +45,7 @@ The reason for this is that in a client-only app, every user will be using a fre
 ## Read a Cookie
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 const value = Cookies.get('cookie_name')
 ```
@@ -53,7 +53,7 @@ const value = Cookies.get('cookie_name')
 When cookie is not set, the return value is `null`.
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -65,7 +65,7 @@ setup () {
 ## Read All Cookies
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 const cookies = Cookies.getAll()
 ```
@@ -73,7 +73,7 @@ const cookies = Cookies.getAll()
 `cookies` variable will be an object with key-value pairs (cookie_name : cookie_value).
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -85,13 +85,13 @@ setup () {
 ## Verify if Cookie is Set
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 Cookies.has('cookie_name') // Boolean
 ```
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -103,7 +103,7 @@ setup () {
 ## Write a Cookie
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 
 Cookies.set('cookie_name', cookie_value)
@@ -113,7 +113,7 @@ Cookies.set('cookie_name', cookie_value, options)
 ```
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 
 Cookies.set('quasar', 'framework', {
@@ -122,7 +122,7 @@ Cookies.set('quasar', 'framework', {
 ```
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -212,7 +212,7 @@ Raw string for other cookie options. To be used as a last resort for possible ne
 
 ## Remove a Cookie
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Cookies } from 'quasar'
 
 Cookies.remove('cookie_name')
@@ -223,7 +223,7 @@ Cookies.remove('cookie_name', options)
 ```
 
 ```js
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {

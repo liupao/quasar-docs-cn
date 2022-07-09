@@ -24,11 +24,11 @@ Bottom Sheets can be displayed as a list or as a grid, with icons or with avatar
 ## Usage 用法
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { BottomSheet } from 'quasar'
 BottomSheet.create({ ... }) // returns Object
 
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 setup () {
   const $q = useQuasar()
