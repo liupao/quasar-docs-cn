@@ -10,7 +10,7 @@
 
 |微信 |支付宝|
 | :-: | :-: |
-|<img style="width:350px" src="public/pay/wechat.png" alt="微信" />|<img style="width:350px" src="public/pay/zfb.jpg" alt="支付宝" />|
+|<img style="width:350px" src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iirq80h6j30ep0f7mzf.jpg" alt="微信" />|<img style="width:350px" src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iisk6y7vj30jf0k9wgn.jpg" alt="支付宝" />|
 
 如果你也想参与翻译，请fork本仓库然后向我提交PR。另外，我的B站账号中有[quasar的视频教程](https://www.bilibili.com/video/BV1pA4y197Zc)欢迎观看👏
 <br>
