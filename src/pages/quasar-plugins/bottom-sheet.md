@@ -1,17 +1,18 @@
 ---
 title: Bottom Sheet Plugin
-desc: A Quasar plugin for displaying a list of user actions that slides up from the bottom edge of the app window.
+desc: 当用户在应用底部窗口底部上划时展示一组操作菜单的Quasar组件。
 keys: BottomSheet
 related:
   - /quasar-plugins/dialog
   - /vue-components/dialog
 ---
 
-Bottom Sheets slide up from the bottom edge of the device screen, and display a set of options with the ability to confirm or cancel an action. Bottom Sheets can sometimes be used as an alternative to menus, however, they should not be used for navigation.
+Bottom Sheets： 从设备的屏幕底部向上滑动时展示一组操作菜单，底部菜单可以作为菜单的代替方案，但是不应该用作导航。
 
-The Bottom Sheet always appears above any other components on the page, and must be dismissed in order to interact with the underlying content. When it is triggered, the rest of the page darkens to give more focus to the Bottom Sheet options.
+弹出来的底部菜单总是会展示在所有元素的上方，页面的其他部分会产生一个暗色的遮罩，以使得焦点更多的放在弹出的底部菜单上，并且必须将其关闭后才能与其他组件进行交互。
 
-Bottom Sheets can be displayed as a list or as a grid, with icons or with avatars. They can be used either as a component in your Vue file templates, or as a globally available method.
+Bottom Sheets可以展示列表、网格、图标、头像或者任意Vue组件。
+
 
 ## BottomSheet API
 
@@ -21,14 +22,14 @@ Bottom Sheets can be displayed as a list or as a grid, with icons or with avatar
 
 <doc-installation plugins="BottomSheet" />
 
-## Usage 用法
+## 用法
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { BottomSheet } from 'quasar'
 BottomSheet.create({ ... }) // returns Object
 
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 setup () {
   const $q = useQuasar()
@@ -37,15 +38,15 @@ setup () {
 ```
 
 ::: tip
-When user hits the phone/tablet back button (only for Cordova apps), the Action Sheet will get closed automatically.
+当用户点击手机/平板电脑的返回按钮（仅适用于Cordova应用程序）时，底部对话框将自动关闭。
 
-Also, when on a desktop browser, hitting the `ESCAPE` key also closes the Action Sheet.
+同样，在桌面浏览器上，按`ESCAPE`键也会关闭底部对话框。
 :::
 
-<doc-example title="List and Grid" file="BottomSheet/Basic" />
+<doc-example title="列表和网格" file="BottomSheet/Basic" />
 
-<doc-example title="Dark mode" file="BottomSheet/Dark" />
+<doc-example title="暗色模式" file="BottomSheet/Dark" />
 
 ::: tip
-For an exhaustive list of options, please check API section.
+完整的选项列表请见api部分
 :::

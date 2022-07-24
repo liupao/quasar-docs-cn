@@ -10,5 +10,6 @@
     "vue": "html"
   },
   "html-css-class-completion.remoteStyleSheets": ["https://cdn.jsdelivr.net/npm/quasar@latest/dist/quasar.prod.css"],
-  "html-css-class-completion.includeGlobPattern": "**/*.{css,scss,sass,html,vue}"
+  "html-css-class-completion.includeGlobPattern": "**/*.{css,scss,sass,html,vue}",
+  "editor.acceptSuggestionOnCommitCharacter": false,
 }

@@ -18,7 +18,7 @@ Notify is a Quasar plugin that can display animated messages (floating above eve
 ### Basic 基础
 
 ```js
-// outside of a Vue file
+// 在Vue文件之外
 import { Notify } from 'quasar'
 
 Notify.create('Danger, Will Robinson! Danger!')
@@ -27,7 +27,7 @@ Notify.create({
   message: 'Danger, Will Robinson! Danger!'
 })
 
-// inside of a Vue file
+// 在Vue文件之内
 import { useQuasar } from 'quasar'
 
 setup () {

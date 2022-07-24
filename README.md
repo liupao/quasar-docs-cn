@@ -6,6 +6,11 @@
 
 本仓库是由[我](https://github.com/dongwa)个人维护的quasar中文文档，信息来自：[英文官网](https://quasar.dev)。纯手工，非机器翻译，并且添加了一些个人经验，站点持续翻译中，如果对你有帮助麻烦给我的仓库点一个star✨，谢谢🙏
 
+如果我所做的工作帮助到了你，你想请我喝杯咖啡，那么你的`打赏`将会是我更新的最大动力:
+
+|微信 |支付宝|
+| :-: | :-: |
+|<img style="width:350px" src="public/pay/wechat.png" alt="微信" />|<img style="width:350px" src="public/pay/zfb.jpg" alt="支付宝" />|
 
 如果你也想参与翻译，请fork本仓库然后向我提交PR。另外，我的B站账号中有[quasar的视频教程](https://www.bilibili.com/video/BV1pA4y197Zc)欢迎观看👏
 <br>
