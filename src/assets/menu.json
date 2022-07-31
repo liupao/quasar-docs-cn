@@ -674,19 +674,19 @@
     "path": "quasar-plugins",
     "children": [
       {
-        "name": "Addressbar Color",
+        "name": "Addressbar Color 地址栏颜色",
         "path": "addressbar-color"
       },
       {
-        "name": "App Fullscreen",
+        "name": "App Fullscreen 全屏",
         "path": "app-fullscreen"
       },
       {
-        "name": "App Visibility",
+        "name": "App Visibility 应用可见",
         "path": "app-visibility"
       },
       {
-        "name": "Bottom Sheet",
+        "name": "Bottom Sheet 底部抽屉菜单",
         "path": "bottom-sheet"
       },
       {
@@ -694,11 +694,11 @@
         "path": "cookies"
       },
       {
-        "name": "Dark",
+        "name": "Dark 暗色模式",
         "path": "dark"
       },
       {
-        "name": "Dialog",
+        "name": "Dialog 对话框",
         "path": "dialog"
       },
       {
@@ -714,11 +714,11 @@
         "path": "web-storage"
       },
       {
-        "name": "Meta",
+        "name": "Meta 管理meta标签",
         "path": "meta"
       },
       {
-        "name": "Notify",
+        "name": "Notify 通知",
         "path": "notify"
       }
     ]
