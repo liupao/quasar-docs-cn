@@ -1,25 +1,28 @@
 ---
-title: What is SSR
-desc: (@quasar/app-vite) Introduction on server-side rendered apps with Quasar CLI.
+title: 什么是 SSR
+desc: (@quasar/app-vite) 使用Quasar CLI构建SSR服务端渲染应用的介绍。
 ---
 
-Quasar and Vue.js are frameworks for building client-side applications. By default, Quasar Vue components produce and manipulate DOM in the browser as output. However, it is also possible to render the same components into HTML strings on the server, send them directly to the browser, and finally "hydrate" the static markup into a fully interactive app on the client.
+默认情况下Quasar和Vue都是构建客户端渲染的框架，在浏览器中生成和操作DOM。然而，也可以在服务器端将相同的组件渲染成HTML字符串，直接发送到浏览器，最后在客户端将静态的html标签水化（`hydrate`）成一个可以交互的应用程序。
 
-A server-rendered Quasar app can also be considered `isomorphic` or `universal`, in the sense that the majority of your app's code runs on both the server and the client.
+一个由服务端渲染的 Quasar 应用也可以被认为是“同构的” (`Isomorphic`) 或“通用的” (`Universal`)，因为应用的大部分代码同时运行在服务端和客户端。
 
-## Why SSR?
-Compared to a traditional SPA (Single-Page Application), the advantage of SSR primarily lies in:
+## 为什么需要 SSR?
+与SPA(Single-Page Application 单页面应用)相比SSR有如下优点：
 
-* **Better SEO**, as the search engine crawlers will directly see the fully rendered page.
-* **Faster time-to-content**, especially on slow internet or slow devices. Server-rendered markup doesn't need to wait until all JavaScript has been downloaded and executed to be displayed, so your user will see a fully-rendered page sooner. This generally results in better user experience, and can be critical for applications where time-to-content is directly associated with conversion rate.
+* **更好的SEO**, 因为浏览器的搜索引擎爬虫可以直接拿到完整呈现的页面。
+* **更快的首屏渲染**, 特别是在网速慢或设备慢的情况下。服务端渲染页面不需要等待所有的JavaScript脚本加载完成后才显示，因此用户可以更快地看到完整呈现的页面。这通常可以带来更高的核心 Web 指标评分、更好的用户体验，而对于那些“首屏加载速度与转化率直接相关”的应用来说，这点可能至关重要。
 
-There are also some trade-offs to consider when using SSR:
+使用 SSR 时还有一些权衡之处需要考量：
 
-* **Development constraints**. Browser-specific code can only be used inside certain lifecycle hooks; some external libraries may need special treatment to be able to run in a server-rendered app.
-* **More server-side load**. Rendering a full app in Node.js is obviously going to be more CPU-intensive than just serving static files, so if you expect high traffic, be prepared for corresponding server load and wisely employ caching strategies.
+* **开发中的限制。**浏览器端特定的代码只能在某些生命周期钩子中使用；一些外部库可能需要特殊处理才能在服务端渲染的应用中运行。
 
-Before using SSR for your app, the first question you should ask is whether you actually need it. It mostly depends on how important time-to-content is for your app. For example, if you are building an internal dashboard where an extra few hundred milliseconds on initial load doesn't matter that much, SSR would be an overkill. However, in cases where time-to-content is absolutely critical, SSR can help you achieve the best possible initial load performance.
+* **更多的与构建配置和部署相关的要求。** 服务端渲染的应用需要一个能让 Node.js 服务器运行的环境，不像完全静态的 SPA 那样可以部署在任意的静态文件服务器上。
+
+* **更高的服务端负载。**在 Node.js 中渲染一个完整的应用要比仅仅托管静态文件更加占用 CPU 资源，因此如果你预期有高流量，请为相应的服务器负载做好准备，并采用合理的缓存策略。
+
+在为你的应用使用 SSR 之前，你首先应该问自己是否真的需要它。这主要取决于首屏加载速度对应用的重要程度。例如，如果你正在开发一个内部的管理面板，初始加载时的那额外几百毫秒对你来说并不重要，这种情况下使用 SSR 就没有太多必要了。然而，在内容展示速度极其重要的场景下，SSR 可以尽可能地帮你实现最优的初始加载性能。
 
 <q-separator class="q-mt-xl" />
 
-> Parts of this page are taken from the official [Vue.js SSR guide](https://vuejs.org/guide/scaling-up/ssr.html).
+> 此页面中的部分内容引用自：[vue官文档SSR开发指南](https://vuejs.org/guide/scaling-up/ssr.html).
