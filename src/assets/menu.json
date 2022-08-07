@@ -861,79 +861,79 @@
         ]
       },
       {
-        "name": "Developing SSR",
+        "name": "开发 SSR",
         "path": "developing-ssr",
         "children": [
           {
-            "name": "Introduction",
+            "name": "介绍",
             "path": "introduction"
           },
           {
-            "name": "Writing Universal Code",
+            "name": "编写通用的代码",
             "path": "writing-universal-code"
           },
           {
-            "name": "Upgrade guide",
+            "name": "升级指南",
             "path": "ssr-upgrade-guide"
           },
           {
-            "name": "Preparation",
+            "name": "准备",
             "path": "preparation"
           },
           {
-            "name": "Configuring SSR",
+            "name": "配置 SSR",
             "path": "configuring-ssr"
           },
           {
-            "name": "ssrContext",
+            "name": "ssrContext 上下文",
             "path": "ssr-context"
           },
           {
-            "name": "SSR Middleware",
+            "name": "SSR Middleware 中间件",
             "path": "ssr-middleware"
           },
           {
-            "name": "SSR Webserver",
+            "name": "SSR Webserver web服务器",
             "path": "ssr-webserver"
           },
           {
-            "name": "Vue SSR Directives",
+            "name": "Vue SSR 指令",
             "path": "vue-ssr-directives"
           },
           {
-            "name": "App Icons for SSR",
+            "name": "SSR的应用图标",
             "path": "app-icons-ssr"
           },
           {
-            "name": "SEO for SSR",
+            "name": "SSR的SEO",
             "path": "seo-for-ssr"
           },
           {
-            "name": "Client Side Hydration",
+            "name": "客户端水化 Hydration",
             "path": "client-side-hydration"
           },
           {
-            "name": "Handling 404 and 500 Errors",
+            "name": "处理404和500错误",
             "path": "handling-404-and-500-errors"
           },
           {
-            "name": "SSR with PWA",
+            "name": "SSR 搭配 PWA",
             "path": "ssr-with-pwa"
           },
           {
-            "name": "SSR Frequently Asked Questions",
+            "name": "SSR常见问题",
             "path": "ssr-frequently-asked-questions"
           },
           {
-            "name": "Build Commands",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
-            "name": "SSR with Typescript",
+            "name": "SSR 搭配 Typescript",
             "path": "ssr-with-typescript"
           },
           {
-            "name": "Deploying",
+            "name": "部署",
             "path": "deploying"
           }
         ]
