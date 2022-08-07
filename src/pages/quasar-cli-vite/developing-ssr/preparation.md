@@ -1,27 +1,25 @@
 ---
-title: Preparation for SSR
-desc: (@quasar/app-vite) How to add SSR mode with Quasar CLI.
+title: 开发SSR的准备
+desc: (@quasar/app-vite) 如何使用Quasar添加SSR模式
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
 
-We’ll be using Quasar CLI to develop and build a SSR website. The difference between building a SPA, Mobile App, Electron App, PWA or SSR is simply determined by the “mode” parameter in “quasar dev” and “quasar build” commands.
+我们将利用Quasar CLI开发和构建SSR网站。构建SPA、Mobile App、Electron App、PWA或SSR之间的区别仅仅是由`quasar dev`和`quasar build` 命令中的`mode`参数决定的。
 
-In order to develop or build a SSR website, we first need to add the SSR mode to our Quasar project:
+为了开发或建立一个SSR网站，我们首先需要将SSR模式添加到我们的Quasar项目中:
 
 ```bash
 $ quasar mode add ssr
 ```
-
-If you want to jump right in and start developing, you can skip the "quasar mode" command and issue:
+如果你想直接开始开发，也可以跳过"quasar mode"命令直接使用:
 
 ```bash
 $ quasar dev -m ssr
 ```
+这样，如果项目缺少 SSR 模式，则会自动添加后启动。
 
-This will add SSR mode automatically, if it is missing.
-
-A new folder will appear in your project folder (which is explained in detail on the [Configuring SSR](/quasar-cli-vite/developing-ssr/configuring-ssr) page):
+项目中会被新建一个目录，详情请参考[Configuring SSR](/quasar-cli-vite/developing-ssr/configuring-ssr)页面。
 
 ```bash
 .

@@ -674,19 +674,19 @@
     "path": "quasar-plugins",
     "children": [
       {
-        "name": "Addressbar Color",
+        "name": "Addressbar Color 地址栏颜色",
         "path": "addressbar-color"
       },
       {
-        "name": "App Fullscreen",
+        "name": "App Fullscreen 全屏",
         "path": "app-fullscreen"
       },
       {
-        "name": "App Visibility",
+        "name": "App Visibility 应用可见",
         "path": "app-visibility"
       },
       {
-        "name": "Bottom Sheet",
+        "name": "Bottom Sheet 底部抽屉菜单",
         "path": "bottom-sheet"
       },
       {
@@ -694,11 +694,11 @@
         "path": "cookies"
       },
       {
-        "name": "Dark",
+        "name": "Dark 暗色模式",
         "path": "dark"
       },
       {
-        "name": "Dialog",
+        "name": "Dialog 对话框",
         "path": "dialog"
       },
       {
@@ -714,11 +714,11 @@
         "path": "web-storage"
       },
       {
-        "name": "Meta",
+        "name": "Meta 管理meta标签",
         "path": "meta"
       },
       {
-        "name": "Notify",
+        "name": "Notify 通知",
         "path": "notify"
       }
     ]
@@ -771,23 +771,23 @@
         "path": "quasar-config-js"
       },
       {
-        "name": "Convert project to CLI with Vite",
+        "name": "将现有项目迁移到 CLI with Vite",
         "path": "convert-to-quasar-cli-with-vite"
       },
       {
-        "name": "Browser Compatibility",
+        "name": "浏览器兼容性",
         "path": "browser-compatibility"
       },
       {
-        "name": "Directory Structure",
+        "name": "目录结构",
         "path": "directory-structure"
       },
       {
-        "name": "Commands List",
+        "name": "命令列表",
         "path": "commands-list"
       },
       {
-        "name": "CSS Preprocessors",
+        "name": "CSS预处理器",
         "path": "css-preprocessors"
       },
       {
@@ -795,39 +795,39 @@
         "path": "routing"
       },
       {
-        "name": "Lazy Loading - Code Splitting",
+        "name": "懒加载 - 代码拆分",
         "path": "lazy-loading"
       },
       {
-        "name": "Handling Assets",
+        "name": "处理静态资源 Assets",
         "path": "handling-assets"
       },
       {
-        "name": "Boot Files",
+        "name": "Boot文件",
         "path": "boot-files"
       },
       {
-        "name": "Prefetch Feature",
+        "name": "数据预取 Prefetch Feature",
         "path": "prefetch-feature"
       },
       {
-        "name": "API Proxying",
+        "name": "API 代理",
         "path": "api-proxying"
       },
       {
-        "name": "Handling Vite",
+        "name": "处理 Vite",
         "path": "handling-vite"
       },
       {
-        "name": "Handling process.env",
+        "name": "处理 process.env",
         "path": "handling-process-env"
       },
       {
-        "name": "State Management with Pinia",
+        "name": "使用Pinia作为状态管理库",
         "path": "state-management-with-pinia"
       },
       {
-        "name": "State Management with Vuex",
+        "name": "使用Vuex作为状态管理库",
         "path": "state-management-with-vuex"
       },
       {
@@ -835,11 +835,11 @@
         "path": "linter"
       },
       {
-        "name": "Testing & Auditing",
+        "name": "集成测试",
         "path": "testing-and-auditing"
       },
       {
-        "name": "Developing SPA",
+        "name": "开发 SPA",
         "path": "developing-spa",
         "children": [
           {
@@ -861,85 +861,85 @@
         ]
       },
       {
-        "name": "Developing SSR",
+        "name": "开发 SSR",
         "path": "developing-ssr",
         "children": [
           {
-            "name": "Introduction",
+            "name": "介绍",
             "path": "introduction"
           },
           {
-            "name": "Writing Universal Code",
+            "name": "编写通用的代码",
             "path": "writing-universal-code"
           },
           {
-            "name": "Upgrade guide",
+            "name": "升级指南",
             "path": "ssr-upgrade-guide"
           },
           {
-            "name": "Preparation",
+            "name": "准备",
             "path": "preparation"
           },
           {
-            "name": "Configuring SSR",
+            "name": "配置 SSR",
             "path": "configuring-ssr"
           },
           {
-            "name": "ssrContext",
+            "name": "ssrContext 上下文",
             "path": "ssr-context"
           },
           {
-            "name": "SSR Middleware",
+            "name": "SSR Middleware 中间件",
             "path": "ssr-middleware"
           },
           {
-            "name": "SSR Webserver",
+            "name": "SSR Webserver web服务器",
             "path": "ssr-webserver"
           },
           {
-            "name": "Vue SSR Directives",
+            "name": "Vue SSR 指令",
             "path": "vue-ssr-directives"
           },
           {
-            "name": "App Icons for SSR",
+            "name": "SSR的应用图标",
             "path": "app-icons-ssr"
           },
           {
-            "name": "SEO for SSR",
+            "name": "SSR的SEO",
             "path": "seo-for-ssr"
           },
           {
-            "name": "Client Side Hydration",
+            "name": "客户端水化 Hydration",
             "path": "client-side-hydration"
           },
           {
-            "name": "Handling 404 and 500 Errors",
+            "name": "处理404和500错误",
             "path": "handling-404-and-500-errors"
           },
           {
-            "name": "SSR with PWA",
+            "name": "SSR 搭配 PWA",
             "path": "ssr-with-pwa"
           },
           {
-            "name": "SSR Frequently Asked Questions",
+            "name": "SSR常见问题",
             "path": "ssr-frequently-asked-questions"
           },
           {
-            "name": "Build Commands",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
-            "name": "SSR with Typescript",
+            "name": "SSR 搭配 Typescript",
             "path": "ssr-with-typescript"
           },
           {
-            "name": "Deploying",
+            "name": "部署",
             "path": "deploying"
           }
         ]
       },
       {
-        "name": "Developing PWA",
+        "name": "开发 PWA",
         "path": "developing-pwa",
         "children": [
           {
@@ -977,11 +977,11 @@
         ]
       },
       {
-        "name": "Developing Mobile Apps",
+        "name": "开发移动应用",
         "path": "developing-mobile-apps"
       },
       {
-        "name": "Developing Capacitor Apps",
+        "name": "开发 Capacitor 应用",
         "path": "developing-capacitor-apps",
         "children": [
           {
@@ -1027,7 +1027,7 @@
         ]
       },
       {
-        "name": "Developing Cordova Apps",
+        "name": "开发 Cordova 应用",
         "path": "developing-cordova-apps",
         "children": [
           {
@@ -1069,7 +1069,7 @@
         ]
       },
       {
-        "name": "Developing Electron Apps",
+        "name": "开发 Electron 应用",
         "path": "developing-electron-apps",
         "children": [
           {
@@ -1127,7 +1127,7 @@
         ]
       },
       {
-        "name": "Developing Browser Extensions",
+        "name": "开发浏览器差插件",
         "path": "developing-browser-extensions",
         "children": [
           {
@@ -1173,11 +1173,11 @@
         ]
       },
       {
-        "name": "Ajax Requests",
+        "name": "Ajax 请求",
         "path": "ajax-requests"
       },
       {
-        "name": "Opening Dev Server To Public",
+        "name": "将开发服务器公开",
         "path": "opening-dev-server-to-public"
       }
     ]
