@@ -25,4 +25,4 @@ desc: (@quasar/app-vite) 使用Quasar CLI构建SSR服务端渲染应用的介绍
 
 <q-separator class="q-mt-xl" />
 
-> 此页面中的部分内容引用自：[vue官文档SSR开发指南](https://vuejs.org/guide/scaling-up/ssr.html).
+> 此页面中的部分内容引用自：[vue官文档SSR开发指南](https://vuejs.org/guide/scaling-up/ssr.html)。
