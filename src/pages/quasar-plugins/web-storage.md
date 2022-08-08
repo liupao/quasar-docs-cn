@@ -1,13 +1,13 @@
 ---
 title: Local/Session Storage Plugins
-desc: A Quasar plugin that wraps the Local/Session Storage, retrieving data with its original JS type.
+desc: 一个封装了LocalStorage和SessionStorage的Quasar插件，可以存储原始的JS类型。
 keys: LocalStorage,SessionStorage
 ---
 
-Quasar provides a wrapper over [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
+Quasar提供了[Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)的封装。
 
 ::: tip
-Web Storage API only retrieves strings. **Quasar retrieves data with its original data type.** You tell it to store a Number then to retrieve it and it will still be a Number, not a string representation of the number as with Web Storage API. Same for JSON, Regular Expressions, Dates, Booleans and so on.
+Web Storage API只能以字符串的方式读写数据，**Quasar封装的版本可以读写JS原始类型**，当你存入一个Number类型的数据时，通过Quasar封装的Storage插件读取出来的数据也是Number类型，而通过Web Storage API读取出来的数据会是String类型。JSON、正则表达式、日期、布尔值等也是如此。
 :::
 
 ## LocalStorage API
@@ -18,14 +18,14 @@ Web Storage API only retrieves strings. **Quasar retrieves data with its origina
 
 <doc-api file="SessionStorage" />
 
-## Installation
+## 安装
 <doc-installation :plugins="['LocalStorage', 'SessionStorage']" />
 
-::: danger Note about SSR
-When running the code server-side on SSR builds, this feature can't work. Web Storage is a browser API only. You can however make use of it on the client-side with SSR.
+::: danger SSR相关注意事项
+此功能在SSR的服务端不可用，因为Web Storage只是浏览器上特有的API，你需要确保只在客户端使用它。
 :::
 
-## Usage 用法
+## 用法
 
 ```js
 // 在Vue文件之外
@@ -52,25 +52,24 @@ setup () {
   const otherValue = $q.sessionStorage.getItem(key)
 }
 ```
-
-For a bulletproof approach when setting a value, it's best to also catch any potential errors raised by the underlying Local/Session Storage Web API, like when exceeding quota:
+为了以防万一，在写入数据时最好是捕获一下使用Local/Session Storage Web API时可能引发的潜在错误，例如写入的数据超出内存大小限制之类的：
 
 ```js
 try {
   $q.localStorage.set(key, value)
 } catch (e) {
-  // data wasn't successfully saved due to
-  // a Web Storage API error
+  // 由于Web Storage API报错数据未能写入成功
 }
 ```
 
-::: tip
-For an exhaustive list of methods, please check the API section.
+::: tip 提示
+关于完整的方法列表，请查看API卡片部分。
 :::
 
-## Data Types
+## 数据类型
 
-Quasar Storage supports (but not limited to) the following data types out of the box. If you store one of these types, the retrieved data will have the same data type.
+
+Quasar封装的Storage支持以下数据类型（但不局限于此），如果你写入了以下数据类型的数据，在读取时还会获得相同的数据类型数据。
 
 * Dates
 * Regular Expressions
@@ -79,6 +78,6 @@ Quasar Storage supports (but not limited to) the following data types out of the
 * Strings
 * Plain Javascript Objects
 
-If you store any *other* data type, the returned value will be a String.
+如果你存储了*别的*数据类型的数据，在读取时会得到String类型的数据。
 
-So you can even store functions, but be careful that you need to eval() the returned value (which is a String representation of the function).
+所以你甚至可以存储函数，但是需要注意读取时会得到这个函数的String表达方式，需要使用eval()来运行函数。
