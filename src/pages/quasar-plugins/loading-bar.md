@@ -7,28 +7,27 @@ related:
   - /vue-components/linear-progress
   - /vue-components/skeleton
 ---
-The Quasar LoadingBar plugin offers an easy way to set up your app with a [QAjaxBar](/vue-components/ajax-bar) in case you don't want to handle a QAjaxBar component yourself.
+如果你不想使用[QAjaxBar](/vue-components/ajax-bar)组件的话，Quasar的LoadingBar插件提供了一个更简单的方式来为ajax请求添加一个进度条。
 
-For a demo, please visit the QAjaxBar documentation page.
+请转到[QAjaxBar](/vue-components/ajax-bar)组件页面查看示例demo。
 
 ## LoadingBar API
 
 <doc-api file="LoadingBar" />
 
-## Installation
+## 安装
 
 <doc-installation plugins="LoadingBar" config="loadingBar" />
 
 LoadingBar options are same as when configuring a [QAjaxBar](/vue-components/ajax-bar).
 
 ::: warning
-When using the UMD version of Quasar, all components, directives and plugins are installed by default. This includes LoadingBar. Should you wish to disable it, specify `loadingBar: { skipHijack: true }` (which turns off listening to Ajax traffic).
+当使用UMD版本的quasar时，所有的组件和插件都会默认安装，也包括LoadingBar。如果你想禁用它，请配置`loadingBar: { skipHijack: true }`（关闭侦听Ajax流量）。
 :::
 
-## Usage 用法
+## 用法
 
-Inside Vue components:
-
+在Vue组件内：
 ```js
 import { useQuasar } from 'quasar'
 
@@ -41,7 +40,7 @@ setup () {
 }
 ```
 
-Outside of Vue components:
+在Vue组件外：
 
 ```js
 import { LoadingBar } from 'quasar'
@@ -51,11 +50,11 @@ LoadingBar.stop()
 LoadingBar.increment(value)
 ```
 
-### Setting Up Defaults
+### 默认配置
 
-Should you wish to set up some defaults, rather than specifying them each time, you can do so by using quasar.config.js > framework > config > loadingBar: {...} or by calling `LoadingBar.setDefaults({...})` or `$q.loadingBar.setDefaults({...})`. Supports all [QAjaxBar](/vue-components/ajax-bar) properties.
+相较于每次调用时都传入配置对象，你可能更希望有一些全局的默认配置，你可以通过quasar.config.js > framework > config > loadingBar: {...} 对象来为LoadingBar插件指定一个全局的默认配置，或者调用`LoadingBar.setDefaults({...})` 或 `$q.loadingBar.setDefaults({...})`函数。配置对象中支持[QAjaxBar](/vue-components/ajax-bar) 中全部的props参数。
 
-Inside Vue components:
+在Vue组件内：
 
 ```js
 import { useQuasar } from 'quasar'
@@ -71,7 +70,7 @@ setup () {
 }
 ```
 
-Outside of Vue components (includes boot files):
+在Vue组件外(包括在boot文件中):
 
 ```js
 import { LoadingBar } from 'quasar'
@@ -83,18 +82,17 @@ LoadingBar.setDefaults({
 })
 ```
 
-### Using an Ajax filter <q-badge align="top" color="brand-primary" label="v2.4.5+" />
+### 过滤部分的Ajax请求 <q-badge align="top" color="brand-primary" label="v2.4.5+" />
 
-Should you want to trigger LoadingBar only for some URLs, then you can use the `setDefaults()` method (described above) to configure the `hijackFilter` property:
+若你想只为指定部分的URL请求触发LoadingBar加载进度条，此时可以通过上述的`setDefaults()`函数内配置`hijackFilter`字段：
 
 ```js
 import { LoadingBar } from 'quasar'
 
 LoadingBar.setDefaults({
-  // return a Boolean which has the meaning of
-  // "does this URL should trigger LoadingBar?"
+  // 返回一个boolean值，表示当前url是否会触发LoadingBar
   hijackFilter (url) {
-    // example (only https://my-service.com/* should trigger)
+    // 示例： (只捕获 https://my-service.com/* )
     return /^https:\/\/my-service\.com/.test(url)
   }
 })

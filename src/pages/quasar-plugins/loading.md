@@ -1,5 +1,5 @@
 ---
-title: Loading Plugin
+title: 加载插件Loading
 desc: 这个Quasar插件可以通过旋转器和消息为你的应用程序展示加载状态。
 keys: Loading
 related:
