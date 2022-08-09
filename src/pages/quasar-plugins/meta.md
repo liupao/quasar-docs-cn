@@ -1,39 +1,41 @@
 ---
 title: Quasar Meta Plugin
-desc: A Quasar plugin to easily handle the meta tags of an app, helping you to add SEO. It manages meta, style and script tags, html and body attributes and page titles.
+desc: 可以轻松管理meta标签的Quasar插件，帮助改善应用的SEO。它能管理meta，style，script标签，html和body的属性以及页面的title。
 keys: Meta
 related:
   - /vue-composables/use-meta
 ---
 
-**Better SEO for your website!** The Meta plugin can dynamically change page title, manage `<meta>` tags, manage `<html>` and `<body>` DOM element attributes, add/remove/change `<style>` and `<script>` tags in the head of your document (useful for CDN stylesheets or for json-ld markup, for example), or manage `<noscript>` tags.
+**改善网站的SEO!** Meta插件可以动态的改变页面的title，管理页面的`meta`标签，管理`html`和`body`标签的DOM属性，管理页面head中的`style`，`script`和`noscript`标签(对CDN引入的样式表和json-ld标签很有用)。
 
-::: tip
-Take full advantage of this feature by using it with **Quasar CLI**, especially **for the SSR (Server-Side Rendering) builds**. It also makes sense to use it for SPA (Single Page Applications). Although the meta information in this case will be added at run-time and not supplied directly by the webserver (as on SSR builds), modern web-crawlers like the [Googlebot](https://developers.google.com/search/docs/guides/javascript-seo-basics) will render dynamic pages and extract out the dynamically set meta information.
+::: tip 提示
+使用Quasar CLI可以充分利用这一特性，特别时在构建SSR（服务端渲染）应用时。当然构建SPA（单页应用）时也可以使用，虽然在SPA中，meta标签不是像SSR那样直接在服务端添加，而在运行时添加的，但是现代的网络爬虫，例如[Googlebot](https://developers.google.com/search/docs/guides/javascript-seo-basics)仍然可以抓取动态添加的meta信息。
 :::
 
-## Installation
+## 安装
 
 <doc-installation plugins="Meta" />
 
-## Usage 用法
-What the Meta plugin does is that it enables the use of a special property in your Vue components called `meta`. Take a look at the example below, with almost all of its features.
+## 用法
 
-::: warning Important!
-Make sure not to duplicate content that already exists in `/src/index.template.html`. If you want to use the Meta plugin, the recommended way is to remove the same tags from the html template. But on use-cases where you know a tag will never change and you always want it rendered, then it's better to have it only on the html template instead.
+Meta插件允许在你在Vue组件中使用一个叫做`meta`的特殊对象。看看下面的例子，它几乎包含了所有的特性。
+
+::: warning 重要!
+确保不要重复添加`/src/index.template.html`中已经存在的meta标签。如果你想使用Meta插件，推荐的方法是先在html模板中删除相同的meta标签。但是当你知道某个meta标签永远不会改变，并且总是会被渲染时，最好还是把它留在html模板中。
 :::
 
-### Composition API
+### 组合式 (Composition API)
 
-We will be using the [useMeta](/vue-composables/use-meta) composable.
+我们会使用 [useMeta](/vue-composables/use-meta) composable。
 
 ```js
-// some .vue file
+// 在某些.vue文件中
 import { useMeta } from 'quasar'
 
 const metaData = {
-  // sets document title
+  // 设置页面title
   title: 'Index Page',
+  // 可选的；设置最终的title为“Index Page - My Website”,
   // optional; sets final title as "Index Page - My Website", useful for multiple level meta
   titleTemplate: title => `${title} - My Website`,
 
@@ -67,14 +69,14 @@ const metaData = {
 
   // <html> attributes
   htmlAttr: {
-    'xmlns:cc': 'http://creativecommons.org/ns#', // generates <html xmlns:cc="http://creativecommons.org/ns#">,
-    empty: undefined // generates <html empty>
+    'xmlns:cc': 'http://creativecommons.org/ns#', // 生成 <html xmlns:cc="http://creativecommons.org/ns#">,
+    empty: undefined // 生成 <html empty>
   },
 
   // <body> attributes
   bodyAttr: {
-    'action-scope': 'xyz', // generates <body action-scope="xyz">
-    empty: undefined // generates <body empty>
+    'action-scope': 'xyz', // 生成 <body action-scope="xyz">
+    empty: undefined // 生成 <body empty>
   },
 
   // <noscript> tags
@@ -85,23 +87,24 @@ const metaData = {
 
 export default {
   setup () {
-    // needs to be called in setup()
+    // 需要在setup()中调用
     useMeta(metaData)
   }
 }
 ```
+如果你需要通过组件中的数据来计算出要设置的meta对象，请使用一个函数来代替对象，更多参考请见"Reactive"部分
 
-If you depend on the state of the component to compute the meta Object, then you can supply a Function instead of the Object itself. For more information, check the "Reactive" section on this page.
 
-### Options API
+### 选项式 (Options API)
 
 ```js
-// some .vue file
+// 在某些.vue文件中
 import { createMetaMixin } from 'quasar'
 
 const metaData = {
-  // sets document title
+  // 设置页面title
   title: 'Index Page',
+  // 可选的；设置最终的title为“Index Page - My Website”,
   // optional; sets final title as "Index Page - My Website", useful for multiple level meta
   titleTemplate: title => `${title} - My Website`,
 
@@ -135,14 +138,14 @@ const metaData = {
 
   // <html> attributes
   htmlAttr: {
-    'xmlns:cc': 'http://creativecommons.org/ns#' // generates <html xmlns:cc="http://creativecommons.org/ns#">,
-    empty: undefined // generates <html empty>
+    'xmlns:cc': 'http://creativecommons.org/ns#' // 生成 <html xmlns:cc="http://creativecommons.org/ns#">,
+    empty: undefined // 生成 <html empty>
   },
 
   // <body> attributes
   bodyAttr: {
-    'action-scope': 'xyz', // generates <body action-scope="xyz">
-    empty: undefined // generates <body empty>
+    'action-scope': 'xyz', // 生成 <body action-scope="xyz">
+    empty: undefined // 生成 <body empty>
   },
 
   // <noscript> tags
@@ -158,15 +161,15 @@ export default {
 }
 ```
 
-For the Options API approach, if you depend on the state of the component to compute the meta Object, then you can supply a Function instead of the Object itself:
+对于选项式api，如果你需要通过组件中的数据来计算出要设置的meta对象，请使用一个函数来代替对象:
 
 ```js
 export default {
   mixins: [
     createMetaMixin(function () {
-      // "this" here refers to your component
+      // 通过 `this` 访问组件中的数据
       return {
-        // assuming `this.myTitle` exists in your mixed in component
+        // 假设你的组件中有`this.myTitle`
         title: this.myTitle
       }
     })
@@ -174,13 +177,16 @@ export default {
 }
 ```
 
-## How It Works
-Metas are computed from .vue files in the order their vue components are activated by Vue Router (let’s call this a chain for further explanations). Example: App.vue > SomeLayout.vue > IndexPage.vue > …?
+## 工作原理
 
-When a component that uses Meta plugin gets rendered or destroyed, it is added/removed to/from the chain and metas are updated accordingly.
+Meta数据是根据Vue Router激活的Vue组件的顺序计算的。示例：App.vue > SomeLayout.vue > IndexPage.vue> ...?
 
-### Handling HTML attributes
-When you need to set a Boolean HTML attribute in `meta`, `link` or `script` sections, set its value to Boolean `true`.
+当一个使用了Meta插件的组件被渲染或者被销毁时，这条路由链中的meta数据将会被更新。
+
+### 处理 HTML attributes
+
+当你需要给`meta`,`link`,`script`等HTML标签设置一个boolean类型的属性时，请讲其值设置为true。
+
 
 ```js
 script: {
@@ -189,36 +195,35 @@ script: {
     defer: true
   }
 }
-// will output:
+// 上述代码将会生成:
 // <script src="https://..."
 //         defer
 //         data-qmeta="myScript">
 ```
-
-If you have an attribute and you want to set it to the actual value of "true", then use String form. More details below:
+当你需要给一个属性设置为字符串类型的 "true" 时:
 
 ```js
 someattribute: 'true'
-// will output: someattribute="true"
+// 将会输出: someattribute="true"
 
 someattribute: true
-// will output: someattribute
+// 将会输出: someattribute
 
 someattribute: void 0
-// will NOT output the attribute
-// (useful when you set it upstream
-// and want to remove it downstream)
+// 不会生成属性
+// ( useful when you set it upstream
+// and want to remove it downstream )
 
 someattribute: ''
-// will output: someattribute=""
+// 将会输出: someattribute=""
 ```
 
 ### Non-reactive
 
-Notice that all properties (except for title and titleTemplate) are Objects; you can override meta props defined in previous Vue components in the chain by using the same keys again. Example:
+注意：除了title 和 titleTemplate，所有的字段都是对象，您可以通过再次使用相同的键来重写被之前的Vue组件定义过的meta数据。例子：
 
 ```js
-// first loaded Vue component
+// 第一个被加载Vue组件：
 setup () {
   useMeta({
     meta: {
@@ -227,8 +232,8 @@ setup () {
   })
 }
 
-// a subsequent Vue component in the chain;
-// this will override the first definition on "myKey"
+// 路由链中处于后面的Vue组件
+// 下面的代码会重写第一个组件定义的'myKey'
 setup () {
   useMeta({
     meta: {
@@ -240,10 +245,10 @@ setup () {
 
 ### Reactive
 
-In the section above, you noticed all of the meta props are "static". But they can be dynamic (reactive) instead, should you wish. This is how you can manage them just as with a Vue computed property:
+在上面的列子中，你可能注意到了所有的属性都是静态的，但是它们也可以使用vue组件中的响应式数据：
 
 ```js
-// some .vue file
+// 在某些.vue文件中
 import { useMeta } from 'quasar'
 import { ref } from 'vue'
 
@@ -251,17 +256,17 @@ export default {
   setup () {
     const title = ref('Some title') // we define the "title" prop
 
-    // NOTICE the parameter here is a function
-    // Under the hood, it is converted to a Vue computed prop for reactivity
+    // 注意传入的参数是一个函数
+    // 通过这种方式它会被转化为带有响应性的Vue计算属性
     useMeta(() => {
       return {
-        // whenever "title" from above changes, your meta will automatically update
+        // 当上面的title变化时，你的meta数据也会自动跟着变变
         title: title.value
       }
     })
 
     function setAnotherTitle () {
-      title.value = 'Another title' // will automatically trigger a Meta update due to the binding
+      title.value = 'Another title' //由于上面的绑定这里更新title会触发Meta的更新
     }
 
     return {
@@ -271,9 +276,11 @@ export default {
 }
 ```
 
-## Testing Meta
-Before you deploy, you really should make sure that your work on the meta tags is compliant. Although you could just copy and paste your link into a Discord chat, a Facebook post or a Tweet, we recommend verifying with [https://metatags.io/](https://metatags.io/).
+## 测试 Meta
 
-::: warning Important!
-**This test will only work for SSR builds** because SSR directly supplies the rendered HTML when accessing the webserver (as opposed to SPA or PWA which supplies an empty page then loads the code that renders the page on client's browser). Services like above (metatags.io) expect the page to be already rendered when fetching it (it does not run the JS to render it themselves).
+在部署之前，你需要确认所设置的meta标签是否符合规范，可以复制你的链接到Discord chat，一个Facebook帖子，或者Tweet中，, 我们推荐使用 [https://metatags.io/](https://metatags.io/)来验证。
+
+
+::: warning 重要!
+**这个测试只适用于SSR构建**，因为当访问web服务器时，SSR直接提供呈现完整的HTML(与SPA或PWA相反，后者提供一个空页面，然后加载代码，在客户端浏览器上呈现页面)。像上面这样的服务(metatags.io)期望页面在获取时已经完全呈现(它不会等待所有的js运行完毕)。
 :::
