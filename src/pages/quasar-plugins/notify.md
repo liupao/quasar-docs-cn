@@ -1,6 +1,6 @@
 ---
-title: Notify
-desc: A Quasar plugin to display animated messages to users like notifications, toasts and snackbars.
+title: Notify 通知
+desc: 一个可以给用户展示带有动画的信息的Quasar插件，例如提示，通知，警告等。
 keys: Notify
 ---
 Notify is a Quasar plugin that can display animated messages (floating above everything in your pages) to users in the form of a notification. They are useful for alerting the user of an event and can even engage the user through actions. Also known as a toast or snackbar.
@@ -9,20 +9,20 @@ Notify is a Quasar plugin that can display animated messages (floating above eve
 
 <doc-api file="Notify" />
 
-## Installation
+## 安装
 
 <doc-installation plugins="Notify" config="notify" />
 
-## Usage 用法
+##  用法
 
-### Basic 基础
+###  基础
 
 ```js
 // 在Vue文件之外
 import { Notify } from 'quasar'
 
 Notify.create('Danger, Will Robinson! Danger!')
-// or with a config object:
+// 或者带有配置对象:
 Notify.create({
   message: 'Danger, Will Robinson! Danger!'
 })
@@ -34,81 +34,86 @@ setup () {
   const $q = useQuasar()
 
   $q.notify('Message')
-  // or with a config object:
+  // 或者带有配置对象:
   $q.notify({...})
 }
 ```
 
 <doc-example title="Basic" file="Notify/Basic" />
 
-::: tip
-If you define any actions, the notification will automatically be dismissed when the user picks it.
+::: tip 提示
+如果定义了任何的操作按钮，则在用户选择该操作时，该通知将自动删除。
 :::
 
-### With caption
+### 带有副标题
 
 <doc-example title="Caption" file="Notify/Caption" />
 
-### With icon, avatar or spinner
+### 带有图标，头像或者加载动画
 
-<doc-example title="With icon" file="Notify/Icon" />
+<doc-example title="带有图标" file="Notify/Icon" />
 
-<doc-example title="With avatar" file="Notify/Avatar" />
+<doc-example title="带有头像" file="Notify/Avatar" />
 
-<doc-example title="With spinner" file="Notify/Spinner" />
+<doc-example title="带有加载动画" file="Notify/Spinner" />
 
-### With actions
+### 带有操作按钮
 
-<doc-example title="With actions" file="Notify/Actions" />
+<doc-example title="带有操作按钮" file="Notify/Actions" />
 
-### Multiline
+### 多行信息
 
-<doc-example title="Multiline" file="Notify/Multiline" />
+<doc-example title="多行信息" file="Notify/Multiline" />
 
-### Positioning
+### 出现的位置
 
-<doc-example title="Positioning & different options" file="Notify/Positioning" />
+<doc-example title="在不同的位置出现" file="Notify/Positioning" />
 
-::: tip
-For a full list of options, check the API section.
+::: tip 提示
+关于完整的配置列表，请查看API卡片部分
+
 :::
 
-### Grouping
+### 分组
 
-Each notification has an underlying unique group which is computed out of the message + caption + multiLine + actions labels + position. When multiple notifications get triggered with the same group, instead of showing all of them and flooding the view, only the first one remains on screen along with a badge. The badge content represents the number of times that the same notification has been triggered (and with same position) since the first one appeared on screen.
+每个通知都会按照内容（message + caption + multiLine + actions labels + position）被自动划分到一个组中。也可以使用group字段手动分组。
 
-However, if you wish to disable this behavior, specify `group: false`. In the example below, the first button triggers the same notification twice each time is clicked. The second button has grouping disabled. The third button, however, has a custom group name so each subsequent notification replaces the old one and increments the badge number.
+当多个被划分到同组中的提示相继被触发时，屏幕上只会显示一个通知，后面触发的会替换前面的，并且带有一个角标，角标的内容是被触发的通知个数。
 
-<doc-example title="Grouping" file="Notify/Grouping" />
+然而，如果你想禁用此行为，可以设置`group: false`。
+下面的示例中，第一个按钮触发的两个内容相同的提示，它们被划分到同一组中，屏幕上只会显示一个通知，角标为2。
+第二个按钮触发了两个相同内容的通知，但是配置了`group: false`，所以屏幕上显示了两个通知。
+第三个按钮触发了两个内容不同的通知，但是它们被手动划分到同一个组中，所以屏幕上只有一个通知，内容为后触发的，角标为2。
 
-<doc-example title="Custom badge" file="Notify/GroupingCustomBadge" />
+<doc-example title="分组" file="Notify/Grouping" />
 
-### Timeout progress
+<doc-example title="自定义角标" file="Notify/GroupingCustomBadge" />
 
-Should you wish, there is a way to tell the user when the notification will disappear from the screen. That's for the cases when timeout is not set to 0.
+### 倒计时进度条
+如果你希望，可以告知用户这个通知什么时候会消失，可以看看下面的列子，只需要设置：`progress: true` 即可。
 
 <doc-example title="Timeout progress" file="Notify/TimeoutProgress" />
 
-### Updatable notifications
+### 更新通知的内容
 
-Should you have an ongoing process and you want to inform the user of its progress without blocking what he is currently doing, then you can generate an updatable notification. It's useful to also show a spinner while at it.
+如果您有一个正在进行的工作，并且希望在不阻止用户当前正在做的事情的情况下通知其进度，那么你可以生成一个可更新的通知。此时显示一个加载动画也是很有用的。
 
-Please note in the example below that we are explicitly setting "group: false" (because only non-grouped notifications can be updated) and "timeout: 0" (because we want to be in full control when the notification will be dismissed).
+请注意在下面的示例中，设置了`group: false`(因为只有不分组的通知才能更新)和`timeout: 0`(因为我们想完全控制此通知的关闭)
 
-<doc-example title="Updatable" file="Notify/Updatable" />
+<doc-example title="可更新的" file="Notify/Updatable" />
 
-### Predefined types
+### 预设的通知类型
 
-There are four predefined types out of the box that you can use: "positive", "negative", "warning" and "info":
+我们预设了四种开箱即用的通知类型： "positive", "negative", "warning" 和 "info":
 
 <doc-example title="Out of the box types" file="Notify/PredefinedTypesDefault" />
 
-Furthermore, you can register your own types or even override the predefined ones. The best place to do this would be in a [@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) or a [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
+此外，你也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个boot文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
 
-<doc-example title="Custom type" file="Notify/PredefinedTypesCustom" />
+<doc-example title="自定义通知类型" file="Notify/PredefinedTypesCustom" />
 
 ```js
-// How to register in a boot file:
+// 如何在一个boot文件中注册类型：
 
 import { Notify } from 'quasar'
 
@@ -121,13 +126,14 @@ Notify.registerType('my-notif', {
 })
 ```
 
-### Using HTML
-You can use HTML on message if you specify the `html: true` prop. **Please note that this can lead to XSS attacks**, so make sure that you sanitize the message by yourself.
+### 使用 HTML
+若设置了`html: true`字段，也可以使用html作为message，**一定要注意这样做可能导致XSS攻击**，所以一定要自己保证message的安全。
 
 <doc-example title="Unsafe HTML message" file="Notify/UnsafeHtml" />
 
-### Setting attributes
-You can set custom HTML attributes on the notification itself or on individual notification actions by setting the `attrs` Object property.
+### 设置属性
+
+也可以通过设置`attrs`对象字段为通知的DOM或者它的子元素操作按钮（actions）的DOM自定义HTML属性：
 
 ```js
 import { useQuasar } from 'quasar'
@@ -139,14 +145,14 @@ setup () {
     ...
 
     attrs: {
-      // for the notification itself:
+      // 为通知的DOM本身设置属性:
       role: 'alertdialog'
     },
 
     actions: [
       {
         icon: 'close',
-        // for individual action (button):
+        // 为通知的操作按钮DOM设置属性:
         attrs: {
           'aria-label': 'Dismiss'
         }
@@ -156,8 +162,9 @@ setup () {
 }
 ```
 
-### Programmatically closing
-Notifications are meant to be dismissed only by the user, however for exceptional cases you can do it programmatically. Especially useful when you set indefinite timeout (0).
+### 通过编程关闭通知
+
+通知只能由用户关闭，但在特殊情况下，你可以通过代码关闭它。在设置了`timeout:0`时尤其有用。
 
 ```js
 const dismiss = $q.notify({...})
@@ -165,18 +172,17 @@ const dismiss = $q.notify({...})
 dismiss()
 ```
 
-### Setting defaults
-There are two ways of setting default configuration that will apply to all Notifications: through quasar.config.js > framework > config > notify Object (see Installation section) or programmatically (see below).
+### 设置默认值
+有两种方式设置全局的默认配置：通过quasar.config.js > framework > config > notify对象配置（配置对象见API卡片部分），或者：
 
-We'll describe setting the defaults through a [@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) or a [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files) (works the same anywhere in your code, but a boot file ensures this is run before your app starts):
+通过一个boot文件（[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)）来设置全局的默认配置。
 
-First we create the boot file. Let's name it "notify-defaults.js".
+首先，我们创建一个boot文件，示例取名为："notify-defaults.js".
 
 ```bash
 $ quasar new boot notify-defaults [--format ts]
 ```
-
-Add the created notify-defaults.js file to the boot array in `quasar.config.js`:
+将其文件名添加至`quasar.config.js`的boot数组中：
 
 ```js
 module.exports = function(ctx) {
@@ -187,7 +193,7 @@ module.exports = function(ctx) {
   }
 ```
 
-We then edit the newly created `/src/boot/notify-defaults.js`:
+编辑 `/src/boot/notify-defaults.js`，如:
 
 ```js
 import { Notify } from 'quasar'
@@ -200,11 +206,11 @@ Notify.setDefaults({
 })
 ```
 
-::: warning
-You can only set default `actions` through this method. Specifying `actions` with handlers in quasar.config.js cannot and will NOT work.
+::: warning 警告
+我们只能通过这种方式设置默认的`actions`，通过quasar.config.js设置的actions不会生效。
 :::
 
-We could also set the defaults in some Vue file:
+也可以在Vue文件中设置默认配置：
 
 ```js
 // inside of a Vue component
