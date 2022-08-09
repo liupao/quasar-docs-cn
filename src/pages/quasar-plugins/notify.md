@@ -3,7 +3,8 @@ title: Notify 通知
 desc: 一个可以给用户展示带有动画的信息的Quasar插件，例如提示，通知，警告等。
 keys: Notify
 ---
-Notify is a Quasar plugin that can display animated messages (floating above everything in your pages) to users in the form of a notification. They are useful for alerting the user of an event and can even engage the user through actions. Also known as a toast or snackbar.
+
+Notify是一个Quasar插件，它以通知的形式向用户展示带动画的消息(浮动在页面的所有内容之上)。对于提醒用户某个事件非常有用，甚至可以通过操作按钮吸引用户交互。也被称为toast 或者 snackbar。
 
 ## Notify API
 
