@@ -15,7 +15,7 @@ q-page.doc-page
     a.doc-page__top-link.text-brand-primary.flex.flex-center(v-if="noEdit === false", :href="editHref", target="_blank", rel="noopener noreferrer")
       q-icon(:name="mdiPencil")
       q-tooltip
-        span Caught a mistake? Edit page in browser
+        span 发现了一处错误？ 在此修改
         q-icon.q-ml-xs(:name="mdiFlash" size="2em")
 
   .doc-page-nav.text-brand-primary(v-if="related !== void 0")
@@ -57,8 +57,9 @@ q-page.doc-page
     q-separator.q-mb-sm
 
     .q-mb-md(v-if="noEdit === false")
-      span Caught a mistake?
-      doc-link.q-ml-xs(:to="editHref") Edit this page in browser
+      span 发现了一处错误？
+      doc-link.q-ml-xs(:to="editHref") 类似错别字的小错误可以直接在此修改
+      doc-link.q-ml-xs(:to="issueHref") 发现重大错误或者落后于官方文档可在此提交
 
     .doc-page-footer__icons.row.items-center.q-gutter-sm
       a(href="https://github.quasar.dev", target="_blank", rel="noopener")
@@ -137,12 +138,14 @@ export default {
 
     const $route = useRoute()
     const editHref = computed(() => {
-      return `https://github.com/quasarframework/quasar/edit/dev/docs/src/pages${$route.path}.md`
+      return `https://github.com/dongwa/quasar-docs-cn/edit/dev/src/pages${$route.path}.md`
     })
+    const issueHref = 'https://github.com/dongwa/quasar-docs-cn/issues/new'
 
     return {
       year,
       editHref,
+      issueHref,
 
       copyIntroductionHeading () {
         copyHeading('introduction')
