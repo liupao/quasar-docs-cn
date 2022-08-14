@@ -3,22 +3,22 @@ title: SSR Webserver
 desc: (@quasar/app-vite) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.
 ---
 
-Notice that your generated `/src-ssr` contains a file named `server.js`. This file defines how your SSR webserver is created, managed and served. You can start listening to a port or provide a handler for your serverless infrastructure to use. It's up to you.
+生成的文件中有一个`/src-ssr/server.js`文件。这个文件决定了你的SSR服务端是如何创建并运转的。你可以选择监听一个端口启动服务，或者为serverless提供一个handler。
 
-## Anatomy
+## 解析
 
-The `/src-ssr/server.[js|ts]` file is a simple JavaScript/Typescript file which boots up your SSR webserver and defines what how your webserver starts & handles requests and what it exports (if exporting anything).
+`/src-ssr/server.[js|ts]`是一个简单的 JavaScript/TypeScript文件，它可以启动你的SSR服务器，决定如何处理来自客户端的请求。
 
 ::: danger
-The `/src-ssr/server.[js|ts]` file is used for both DEV and PROD, so please be careful on how you configure it. To differentiate between the two states you can use `process.env.DEV` and `process.env.PROD`.
+`/src-ssr/server.[js|ts]`在开发环境和生产环境中都会运行，所以你要小心配置它，对于不同情况下做出不同的处理，可以使用 `process.env.DEV` 和 `process.env.PROD`来区分不同的环境。
 :::
 
 ``` js
 /**
- * More info about this file:
+ * 更多信息请参考：
  * https://v2.quasar.dev/quasar-cli-vite/developing-ssr/ssr-webserver
  *
- * Runs in Node context.
+ * 运行在Node环境上下文中
  */
 
 /**
