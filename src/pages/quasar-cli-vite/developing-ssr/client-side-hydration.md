@@ -1,5 +1,5 @@
 ---
-title: Client Side Hydration
+title: 客户端水化
 desc: (@quasar/app-vite) 什么是hydration（水化），在Quasar的服务端渲染中是怎么进行hydration（水化）的。
 ---
 
