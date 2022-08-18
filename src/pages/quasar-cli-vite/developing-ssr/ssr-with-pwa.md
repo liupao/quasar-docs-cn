@@ -1,8 +1,9 @@
 ---
 title: SSR with PWA Client Takeover
-desc: (@quasar/app-vite) How to configure your Quasar server-side rendered app to become a Progressive Web App on the client side.
+desc: (@quasar/app-vite) 如何给Quasar的服务端渲染应用的客户端使用PWA。
 ---
-With Quasar CLI you can build your app with the killer combo of SSR + PWA. In order to enable PWA for SSR builds, you need to edit your `/quasar.config.js` first:
+
+使用 Quasar CLI 你可以构建 SSR + PWA 组合的应用。为了给SSR应用开启PWA，首先你需要编辑 `/quasar.config.js` ：
 
 ```js
 // quasar.config.js
@@ -14,6 +15,6 @@ return {
 }
 ```
 
-The first request of a **new** client will be served from the webserver (so SSR supplies the initial page content). The PWA gets installed then it takes over on client side. All further requests will be served from cache (unless you have some custom configuration to change that).
+**新客户端**的第一个请求将从 webserver 获取（ SSR 提供初始页面内容）。PWA 安装完成后就接管了客户端。所有后续的请求都将从缓存中获取（除非有一些自定义配置修改了这一点）。
 
-> For more information on PWA, head on to [PWA Introduction](/quasar-cli-vite/developing-pwa/introduction) and read the whole PWA Guide section.
+> 更多关于 PWA 的信息，请参考 [PWA Introduction](/quasar-cli-vite/developing-pwa/introduction) 部分。
