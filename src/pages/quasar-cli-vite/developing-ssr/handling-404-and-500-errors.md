@@ -103,7 +103,7 @@ export default ({ app, resolve, render, serve }) => {
   ```
 
 ::: danger
-你必须保证渲染'/error500'路由的时候不会发生500错误，否则，你的程序将进入无线循环。
+你必须保证渲染 `/error500` 路由的时候不会发生500错误，否则，你的程序将进入无线循环。
 :::
 
 避免这种情况的完美方法是直接从 `/src-ssr/middlewares/render.js` 文件中返回500错误页的HTML（作为字符串）：
