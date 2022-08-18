@@ -3,43 +3,45 @@ title: SSR Webserver
 desc: (@quasar/app-vite) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.
 ---
 
-Notice that your generated `/src-ssr` contains a file named `server.js`. This file defines how your SSR webserver is created, managed and served. You can start listening to a port or provide a handler for your serverless infrastructure to use. It's up to you.
+生成的文件中有一个`/src-ssr/server.js`文件。这个文件决定了你的SSR服务端是如何创建并运转的。你可以选择监听一个端口启动服务，或者为serverless提供一个handler。
 
-## Anatomy
+## 解析
 
-The `/src-ssr/server.[js|ts]` file is a simple JavaScript/Typescript file which boots up your SSR webserver and defines what how your webserver starts & handles requests and what it exports (if exporting anything).
+`/src-ssr/server.[js|ts]`是一个简单的 JavaScript/TypeScript文件，它可以启动你的SSR服务器，决定如何处理来自客户端的请求。
+
 
 ::: danger
-The `/src-ssr/server.[js|ts]` file is used for both DEV and PROD, so please be careful on how you configure it. To differentiate between the two states you can use `process.env.DEV` and `process.env.PROD`.
+`/src-ssr/server.[js|ts]`在开发环境和生产环境中都会运行，所以你要小心配置它。对于不同情况下做出不同的处理，可以使用 `process.env.DEV` 和 `process.env.PROD`来区分不同的环境。
 :::
 
 ``` js
 /**
- * More info about this file:
+ * 更多信息请参考：
  * https://v2.quasar.dev/quasar-cli-vite/developing-ssr/ssr-webserver
  *
- * Runs in Node context.
+ * 运行在Node环境上下文中
  */
 
 /**
- * Make sure to yarn add / npm install (in your project root)
- * anything you import here (except for express and compression).
+ * 确保在项目根目录下已经安装了依赖
+ * 任何包都可以在此导入使用，并不局限于express和compression。
  */
 import express from 'express'
 import compression from 'compression'
 
 /**
- * Create your webserver and return its instance.
+ * 创建web服务并返回实例。
+ *
  * If needed, prepare your webserver to receive
  * connect-like middlewares.
  *
+ * 不能是异步的
  * Should NOT be async!
  */
 export function create (/* { ... } */) {
   const app = express()
 
-  // place here any middlewares that
-  // absolutely need to run before anything else
+  // 在函数返回之前，将所有需要运行的中间件放在这里
   if (process.env.PROD) {
     app.use(compression())
   }
@@ -48,15 +50,11 @@ export function create (/* { ... } */) {
 }
 
 /**
- * You need to make the server listen to the indicated port
- * and return the listening instance or whatever you need to
- * close the server with.
+ * 需要让server监听独立的端口，然后返回监听的实例
  *
- * The "listenResult" param for the "close()" definition below
- * is what you return here.
+ * 下反的"close()"函数中的"listenResult"参数来自于你在此返回的内容
  *
- * For production, you can instead export your
- * handler for serverless use or whatever else fits your needs.
+ * 对于生产环境下，你也可以将导出替换为一个为serverless准备的handler
  */
 export async function listen ({ app, port, isReady, ssrHandler }) {
   await isReady()
@@ -68,14 +66,12 @@ export async function listen ({ app, port, isReady, ssrHandler }) {
 }
 
 /**
- * Should close the server and free up any resources.
- * Will be used on development only when the server needs
- * to be rebooted.
+ * 关闭serve然后释放资源
+ * 在开发环境下只有在服务重启时才会被使用
  *
- * Should you need the result of the "listen()" call above,
- * you can use the "listenResult" param.
+ * 若你需要使用上面的"listen()"函数返回的结果，可以使用"listenResult"参数
  *
- * Can be async.
+ * 可以是异步的函数
  */
 export function close ({ listenResult }) {
   return listenResult.close()
@@ -86,8 +82,7 @@ const maxAge = process.env.DEV
   : 1000 * 60 * 60 * 24 * 30
 
 /**
- * Should return middleware that serves the indicated path
- * with static content.
+ * 应返回一个为指定路径提供静态资源服务的中间件。
  */
 export function serveStaticContent (path, opts) {
   return express.static(path, {
@@ -105,8 +100,7 @@ const jpgRE = /\.jpe?g$/
 const pngRE = /\.png$/
 
 /**
- * Should return a String with HTML output
- * (if any) for preloading indicated file
+ * 为预加载的文件返回一个HTML格式的字符串（如果有的话）
  */
 export function renderPreloadTag (file) {
   if (jsRE.test(file) === true) {
@@ -142,10 +136,10 @@ export function renderPreloadTag (file) {
 ```
 
 ::: tip
-Remember that whatever the `listen()` function returns (if anything) will be exported from your built `dist/ssr/index.js`. You can return your ssrHandler for a serverless architecture should you need it.
+无论`listen()`返回什么，它都会作为最终打包出来的`dist/ssr/index.js`文件的导出值。所以，如果需要的话，你也可以返回一个为serverless架构准备的**ssrHandler**。
 :::
 
-## Parameters
+## 参数解析
 
 ``` js
 export function <functionName> ({
@@ -154,27 +148,28 @@ export function <functionName> ({
 }) => {
 ```
 
-Detailing the Object:
+对象参数详细解析:
 
 ``` js
 {
-  app,     // Expressjs app instance (or whatever you return from create())
+  app,     // Expressjs的app实例（取决于你在create()函数中的返回值）
 
-  port,    // on production: process.env.PORT or quasar.config.js > ssr > prodPort
-           // on development: quasar.config.js > devServer > port
+  port,    // 在生产环境下，它等于
+           //  process.env.PORT || quasar.config.js > ssr > prodPort
+           // 在开发环境下，它等于quasar.config.js > devServer > port
 
-  isReady, // Function to call returning a Promise
-           // when app is ready to serve clients
+  isReady, // 调用时返回一个Promise，当app准备好为客户端服务时resolve
 
-  ssrHandler, // Prebuilt app handler if your serverless service
+  ssrHandler,  // 预构建处理程序（如果serverless服务不需要特定方法来提供它）。
+              // Prebuilt app handler if your serverless service
               // doesn't require a specific way to provide it.
-              // Form: ssrHandler (req, res, next)
-              // Tip: it uses isReady() under the hood already
+              // 语法格式: ssrHandler (req, res, next)
+              // 提示: 在在底层使用了isReady()
 
-  // all of the following are the same as
-  // for the SSR middlewares (check its docs page);
-  // normally you don't need these here
-  // (use a real SSR middleware instead)
+  // 下面的内容都于SSR middleware（中间件）中的参数一样
+  // （请查看ssr-middleware文档页面）
+  // 一般来说，你不需要使用这些
+  // 如果需要的话，直接使用一个中间件代替即可
   resolve: {
     urlPath(path)
     root(arg1, arg2),
@@ -193,16 +188,16 @@ Detailing the Object:
 }
 ```
 
-## Usage 用法
+## 用法
 
 ::: warning
-* If you import anything from node_modules, then make sure that the package is specified in package.json > "dependencies" and NOT in "devDependencies".
-* This is usually not the place to add middlewares (but you can do it). Add middlewares by using the [SSR Middlewares](/quasar-cli-vite/developing-ssr/ssr-middleware) instead. You can configure SSR Middlewares to run only for dev or only for production too.
+* 如果你需要从`node_modules`中导入一个包，请确保将它安装在了"dependencies"依赖中，而不是"devDependencies"中。
+* 一般不需要在此文件中调用中间件（但是也可以这样做），启用一个中间件更推荐使用[SSR Middlewares](/quasar-cli-vite/developing-ssr/ssr-middleware) 方法代替，这样可以配置某些中间件只在开发或者生产环境下运行。
 :::
 
-### Replacing express.js
+### 替换express.js
 
-You can replace the default Express.js Node server with any other connect API compatible one. Just make sure to yarn/npm install its package first.
+默认使用的Nodejs服务框框架是Express.js，你可以使用任何连接API兼容的Nodejs服务端框架/库来替换它。只需要确保使用yarn/npm将它安装到项目中即可。
 
 ```js
 // src-ssr/server.[js|ts]
@@ -222,9 +217,9 @@ export function create (/* { ... } */) {
 }
 ```
 
-### Listen on a port
+### 监听一个端口
 
-This is the default option that you get when adding SSR support in a Quasar CLI project. It starts listening on the configured port (process.env.PORT or quasar.config.js > ssr > prodPort).
+这是使用Quasar CLI在项目中添加SSR模式时获得的默认选项。它启动后会监听配置的端口号（process.env.PORT 或者 quasar.config.js > ssr > prodPort）。
 
 ``` js
 // src-ssr/server.[js|ts]
@@ -241,15 +236,13 @@ export async function listen ({ app, port, isReady }) {
 
 ### Serverless
 
-If you have a serverless infrastructure, then you generally need to export a handler instead of starting to listen to a port.
+如果你有一个serverless架构的基础设施，那么需要导出一个handler处理程序，而不是开始监听一个端口。
 
-Say that your serverless service requires you to:
-
+你的serverless服务需要你提供：
 ``` js
 module.exports.handler = __your_handler__
 ```
-
-Then what you'd need to do is:
+那么你需要做：
 
 ``` js
 // src-ssr/server.[js|ts]
@@ -263,22 +256,25 @@ export async function listen ({ app, port, ssrHandler }) {
       }
     })
   }
-  else { // in production
+  else {
+    // 在开发模式下：
+    // "ssrHandler"是一个预构建程序，他会等待所有的中间件在服务客户端之前运行。
     // "ssrHandler" is a prebuilt handler which already
     // waits for all the middlewares to run before serving clients
 
-    // whatever you return here is equivalent to module.exports.<key> = <value>
+
+    // 你在这里返回的内容等价于module.exports.<key> = <value>
     return { handler: ssrHandler }
   }
 }
 ```
+请注意：需要提供的`ssrHandler`是一个`(req, res, next) => void`格式的函数。
 
-Please note that the provided `ssrHandler` is a Function of form: `(req, res, next) => void`.
-Should you require to export a handler of form `(event, context, callback) => void` then you will most likely want to use the `serverless-http` package (see below).
+当你需要导出导出一个`(event, context, callback) => void`格式的函数时，可以看看`serverless-http`这个包，如下：
 
-#### Example: serverless-http
+#### 示例: serverless-http
 
-You will need to manually yarn/npm install the `serverless-http` package.
+你需要手动安装`serverless-http`到项目中。
 
 ``` js
 // src-ssr/server.[js|ts]
@@ -295,13 +291,13 @@ export async function listen (({ app, port, ssrHandler }) => {
       }
     })
   }
-  else { // in production
+  else { // 生产环境下：
     return { handler: serverless(ssrHandler) }
   }
 })
 ```
 
-#### Example: Firebase function
+#### 示例： Firebase function
 
 ``` js
 // src-ssr/server.[js|ts]
@@ -317,7 +313,7 @@ export async function listen (({ app, port, ssrHandler }) => {
       }
     })
   }
-  else { // in production
+  else { // 生产环境下：
     return {
       handler: functions.https.onRequest(ssrHandler)
     }

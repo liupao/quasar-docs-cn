@@ -1,6 +1,5 @@
 ---
 title: SSR with Typescript
-desc: (@quasar/app-vite) How to use Typescript with SSR in Quasar
+desc: (@quasar/app-vite) 如何在 Quasar 的 SSR 模式中使用 Typescript
 ---
-
-In order to support SSR with Typescript, you will need to rename all your files in /src-ssr from `.js` to `.ts` and make the necessary TS code changes.
+为了在 SSR 模式中使用 Typescript，你需要将 `/src-ssr` 目录下所有文件的后缀从 `.js` 修改为 `.ts`,然后为 TS 代码做出一些必要的修改。

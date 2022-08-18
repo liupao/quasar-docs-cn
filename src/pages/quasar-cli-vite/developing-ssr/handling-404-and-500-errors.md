@@ -1,26 +1,31 @@
 ---
-title: SSR Handling of 404 and 500 Errors
-desc: (@quasar/app-vite) Managing the common 404 and 500 HTTP errors in a Quasar server-side rendered app.
+title: SSR 处理404和500错误
+desc: (@quasar/app-vite) 在Quaasr的服务端渲染中处理通用的404和500的HTTP错误
 ---
 
-The handling of the 404 & 500 errors on SSR is a bit different than on the other modes (like SPA). If you check out `/src-ssr/middlewares/render.js`, you will notice the following section:
+处理SSR模式的404和500错误的方式与其他的模式（SPA等）有些不同，如果你打开了`/src-ssr/middlewares/render.js`，你会发现以下代码：
 
 ```js
+// src-ssr/middlewares/render.js
+
+// 这个中间件需要在最后执行
+// 因为他会捕获所有路由，并使用Vue渲染页面
+
 export default ({ app, resolve, render, serve }) => {
-  // we capture any other Express route and hand it
-  // over to Vue and Vue Router to render our page
+  // 我们捕获所有的Express路由然后处理它
+  // 通过Vue和Vue Router去渲染页面
   app.get(resolve.urlPath('*'), (req, res) => {
     res.setHeader('Content-Type', 'text/html')
 
     render({ req, res })
       .then(html => {
-        // now let's send the rendered html to the client
+        // 发送渲染好的html页面给客户端
         res.send(html)
       })
       .catch(err => {
-        // oops, we had an error while rendering the page
+        // 处理渲染页面时发生的异常
 
-        // we were told to redirect to another URL
+        // 重定向到另一个URL
         if (err.url) {
           if (err.code) {
             res.redirect(err.code, err.url)
@@ -29,74 +34,80 @@ export default ({ app, resolve, render, serve }) => {
             res.redirect(err.url)
           }
         }
-        // hmm, Vue Router could not find the requested route
+        // 处理404请求，Vue Router没有找到的路由
         else if (err.code === 404) {
-          // Should reach here only if no "catch-all" route
-          // is defined in /src/routes
+          // 只有当/src/routes中没有定义"catch-all"路由时才会到达这里
           res.status(404).send('404 | Page Not Found')
         }
-        // well, we treat any other code as error;
-        // if we're in dev mode, then we can use Quasar CLI
-        // to display a nice error page that contains the stack
-        // and other useful information
+        // 我们也可以处理其他类型的错误
+        // 如果处于开发模式，我们可以使用Quasar CLI
+        // 来显示一个带调用栈的漂亮的错误页面
+        // 以及其他的提示信息
         else if (process.env.DEV) {
-          // serve.error is available on dev only
+          // serve.error 只在开发模式下可用
           serve.error({ err, req, res })
         }
-        // we're in production, so we should have another method
-        // to display something to the client when we encounter an error
-        // (for security reasons, it's not ok to display the same wealth
-        // of information as we do in development)
+        // 当处于生产环境下时
+        // 我们需要使用另一种方法通知客户端发生了错误
+        // （出于安全的考虑，不能在生产模式下
+        // 展示开发模式下同样的报错信息）
         else {
-          // Render Error Page on production or
-          // create a route (/src/routes) for an error page and redirect to it
+          // 渲染一个错误页面
+          // 或者重定向到一个提前准备好的错误页面中
+          // （提前定义在(/src/routes)中的错误页面）
           res.status(500).send('500 | Internal Server Error')
+          // console.error(err.stack)
         }
       })
   })
 }
 ```
 
-The section above is written after catching the other possible requests (like for /public folder, the manifest.json and service worker, etc). This is where we render the page with Vue and Vue Router.
+上面的部分是在捕获其他可能的请求（如/public目录、manifest.json和service worker等）之后编写的。这是我们使用Vue和Vue Router渲染页面的地方。
 
-## Things to be aware of
 
-We'll discuss some architectural decisions that you need to be aware of. Choose whatever fits your app best.
+## 注意事项
 
-### Error 404
+我们将讨论一些你需要注意的架构决策。选择最适合你的应用程序的内容。
 
-If you define an equivalent 404 route on your Vue Router `/src/router/routes.js` file (like below), then `if (err.code === 404) {` part from the example above will NEVER be `true` since Vue Router already handled it.
+### 404错误
+
+如果你在 Vue 路由 `/src/router/routes.js` 文件中定义了等效的404路由。（如下所示），则上述示例中的 `if (err.code === 404) {` 部分将永远不会触发，因为 Vue Router 已经处理了它。
+
 
 ```js
-// Example of route for catching 404 with Vue Router
+// Vue Router 捕获404的示例
 { path: '/:catchAll(.*)*', component: () => import('pages/Error404.vue') }
 ```
 
-### Error 500
+### 500错误
 
-On the `/src-ssr/middlewares/render.js` example at the top of the page, notice that if the webserver encounters any rendering error, we send a simple string back to the client ('500 | Internal Server Error'). If you want to show a nice page instead, you could:
+上述的`/src-ssr/middlewares/render.js`中可以看到，当服务端发生了渲染错误时，会返回一个简单的字符串给客户端('500 | Internal Server Error')，如果你想定制一个漂亮的错误页面代替：
 
-1. Add a specific route in `/src/router/routes.js`, like:
+1. 在 `/src/router/routes.js` 文件中添加一个特殊的路由，例如：
   ```js
   { path: 'error500', component: () => import('pages/Error500.vue') }
   ```
-2. Write the Vue component to handle this page. In this example, we create `/src/pages/Error500.vue`
-3. Then in `/src-ssr/middlewares/render.js`:
+2. 编写一个Vue组件来处理这个页面，示例： `/src/pages/Error500.vue`
+3. 然后修改 `/src-ssr/middlewares/render.js` ：
   ```js
   if (err.url) { ... }
   else if (err.code === 404) { ... }
   else {
-    // We got a 500 error here;
-    // We redirect to our "error500" route newly defined at step #1.
-    res.redirect(resolve.urlPath('error500')) // keep account of publicPath though!
+    // 捕获到一个500错误;
+    // 准备重定向到第一步中定义的"error500"路由
+    res.redirect(resolve.urlPath('error500'))
+    // 记得挂载在 publicPath 下
+    // keep account of publicPath though!
   }
   ```
 
 ::: danger
-The only caveat is that you need to be sure that while rendering '/error500' route you don't get another 500 error, which would put your app into an infinite loop!
+你必须保证渲染 `/error500` 路由的时候不会发生500错误，否则，你的程序将进入无线循环。
 :::
 
-A perfect approach to avoid this would simply be to directly return the HTML (as String) of the error 500 page from `/src-ssr/middlewares/render.js`:
+避免这种情况的完美方法是直接从 `/src-ssr/middlewares/render.js` 文件中返回500错误页的HTML（作为字符串）：
+
 
 ```js
 res.status(500).send(`<html>....</html>`)

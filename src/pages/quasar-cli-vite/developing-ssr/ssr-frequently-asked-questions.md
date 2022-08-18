@@ -1,33 +1,36 @@
 ---
-title: SSR FAQ
-desc: (@quasar/app-vite) Tips and tricks for a Quasar server-side rendered app.
+title: SSR 的常见问题
+desc: (@quasar/app-vite)  Quasar 服务端渲染的提示与技巧。
 ---
 
-## Why am I getting hydration errors?
-Take a look at our [Client Side Hydration](/quasar-cli-vite/developing-ssr/client-side-hydration) page. When you get hydration errors, it means the HTML rendered on the server does not match the equivalent HTML rendered on client-side. This error will appear only when developing (and NOT on production) and it definitely needs to be addressed, before you release your website. Is there some content that you can only generate on client-side? Then use [QNoSsr](/vue-components/no-ssr).
+## 为什么我获得了一个水化（Hydration）错误?
 
-## Why doesn't importing Platform and Cookies work?
-When building for SSR, use only the `$q.platform`/`$q.cookies` form. If you need to use the `import { Platform, Cookies } from 'quasar'` (when on server-side), then you’ll need to do it like this:
+看一下 [客户端水化](/quasar-cli-vite/developing-ssr/client-side-hydration) 页面。当你获得一个水化错误时，代表服务端渲染的 HTML 与客户端生成的 HTML 结构不匹配。这个报错只会在开发环境下出现，因此在发布网站之前一定要解决该错误。如果有一些内容只想在客户端渲染，那么可以使用 [QNoSsr](/vue-components/no-ssr) 组件。
+
+## 为什么导入 Platform 和 Cookies 不会生效？
+当构建 SSR 只能使用 `$q.platform`/`$q.cookies` 的格式使用相关的 api 。如果你想在服务端渲染时使用 `import { Platform, Cookies } from 'quasar'`  的格式，那么你需要像下面这样做：
 
 ```js
-// example with Platform; same thing for Cookies
+//  以 Platform 为列，Cookies 也是类似的
 import { Platform } from 'quasar'
 
-// you need access to `ssrContext`
+// 需要访问 `ssrContext` 对象
 function (ssrContext) {
   const platform = process.env.SERVER
     ? Platform.parseSSR(ssrContext)
-    : Platform // otherwise we're on client
+    : Platform // 否则我们咋客户端可以直接使用
 
-  // platform is equivalent to the global import as in non-SSR builds
+  // 这时 platform 就等价于在非SSR模式中导入的 Platform
 }
 ```
 
-The `ssrContext` is available in the [Boot Files](/quasar-cli-vite/boot-files) or the [PreFetch Feature](/quasar-cli-vite/prefetch-feature), where it is supplied as a parameter.
+可以在以下几个地方访问到它`ssrContext` 对象：[boot文件](/quasar-cli-vite/boot-files)的函数参数中、[preFetch](/quasar-cli-vite/prefetch-feature)的函数参数中。
 
-There is a good reason for this. In a client-only app, every user will be using a fresh instance of the app in their browser. For server-side rendering we want the same thing. Each request should have a fresh, isolated app instance so that there is no cross-request state pollution. So [Platform](/options/platform-detection) and [Cookies](/quasar-plugins/cookies) need to be bound to each request separately.
+在客户端渲染的应用中，每个用户都在自己的浏览器上有一个单独的、新的应用实例，在服务端渲染时，我们也希望如此：每个请求可以得到一个新的，独立的应用实例，从而不会发生跨请求状态污染。所以[Platform](/options/platform-detection) 和 [Cookies](/quasar-plugins/cookies) 分别绑定到每个请求中。
 
-Also a good idea is to read the [Writing Universal Code](/quasar-cli-vite/developing-ssr/writing-universal-code) documentation page.
 
-## Why isn't LocalStorage and SessionStorage working?
-When running the code on server-side, the storage facilities can't work. Web Storage is a browser only API.
+更多相关信息请参考 [编写通用的代码](/quasar-cli-vite/developing-ssr/writing-universal-code) 文档页面。
+
+## 为什么 LocalStorage 和 SessionStorage 不能正常运行？
+
+在代码在服务器端运行时，存储设施无法工作。Web Storage 是一种仅限浏览器中特有的 API。

@@ -1,14 +1,14 @@
 ---
 title: SEO for SSR
-desc: (@quasar/app-vite) Managing the search engine optimizations in a Quasar server-side rendered app.
+desc: (@quasar/app-vite) 在Quasar的服务端进行搜索引擎优化（SEO）
 ---
 
-The term SEO refers to Search Engine Optimization. And Quasar covers this aspect too through the [Quasar Meta Plugin](/quasar-plugins/meta).
+术语SEO指的是搜索引擎优化。而Quasar也通过[Quasar Meta 插件](/quasar-plugins/meta)提供了这一能力。
 
 ## Quasar Meta Plugin
 
-The [Quasar Meta Plugin](/quasar-plugins/meta) can dynamically change page title, manage `<meta>` tags, manage `<html>` and `<body>` DOM element attributes, add/remove/change `<style>` and `<script>` tags in the head of your document (useful for CDN stylesheets or for json-ld markup, for example), or manage `<noscript>` tags.
+[Quasar Meta Plugin](/quasar-plugins/meta)可以动态的改变页面的title，`<meta>`标签，`<html>`和`<body>`标签的属性。添加/删除/修改head标签中的`<style>` ， `<script>`和`<noscript>`。
 
-::: tip
-This Quasar plugin has the most tight integration with Quasar and so it has the best performance against any other similar solution.
+::: tip 提示
+Quasar插件与Quasar有最紧密的集成，所以它与任何其他类似的解决方案相比都是最优的。
 :::
