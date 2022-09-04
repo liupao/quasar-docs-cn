@@ -1,29 +1,32 @@
 ---
-title: How To Use Vue
-desc: Quick tutorial about Vue principles and how to use it with Quasar.
+title: 如何使用Vue
+desc: Quasar关于Vue的教程
 ---
-Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue 3 works. ([Quick overview of ES6](https://github.com/lukehoban/es6features) and [ES6 complete list of features](http://es6-features.org/#Constants) -- don't worry, you don't need to understand ALL of ES6). For devs experienced with reactive UIs, the [Vue 3 documentation](https://vuejs.org/) itself takes a half-day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.
+
+在学习Quasar之前，更好先学习一下ES6和Vue 3。
+
+[快速学习ES6](https://github.com/lukehoban/es6features) 和 [完整的 ES6 特性列表](http://es6-features.org/#Constants) -- 不要担心，你也不需要将所有的ES6都掌握）
+
+对于有响应式开发经验的开发者来说，只需要半天的时间就可以将 [Vue 3 文档](https://vuejs.org/) 从上到下阅读一遍，这对了解和使用 Quasar 的组件有非常大的帮助。
+
 
 ::: tip
-If you are a total beginner to Vue and reactive UI libraries and want a good tutorial, we recommend you take a look at [Vue and Quasar video tutorials](/video-tutorials).
+如果你是Vue初学者，也没使用过其他的响应式框架，并且在寻找一个好的教程，我们推荐你看看 [Vue 和 Quasar 视频教程](/video-tutorials)
 :::
 
-After reading the Vue documentation, let's clear up some of the most frequently asked questions, like *"How can I use Quasar components, Vue properties, methods and events"*.
+在阅读 Vue 文档之后，让我们理清一些最常问的问题，比如“如何使用 Quasar 组件、 Vue 属性、方法和事件”。
 
-## Vue Single File Components (SFC)
-
-You'll be building your Quasar app using `*.vue` files which contain multiple sections: `template` (HTML), `script` (Javascript) and `style` (CSS/SASS/SCSS/Stylus/Less) all in the same file.
+## Vue单文件组件 (SFC)
+你将会使用 `*.vue` 文件来构建 Quasar app。每个 `*.vue` 文件包括 `template` (HTML), `script` (Javascript) 和 `style` (CSS/SASS/SCSS/Stylus/Less) 三部分
 
 ```html
 <template>
-  <!-- you define your Vue template here -->
+  <!-- 在此定义 Vue 模板  -->
 </template>
 
 <script>
-// This is where your Javascript goes
-// to define your Vue component, which
-// can be a Layout, a Page or your own
-// component used throughout the app.
+  // 这里是你的 Javascript 定义Vue 组件的地方，
+  // 它可以是一个 布局组件，一个页面或者一个可复用的组件
 
 export default {
   //
@@ -31,23 +34,23 @@ export default {
 </script>
 
 <style>
-/* This is where your CSS goes */
+/* 在此写 CSS 样式 */
 </style>
 ```
 
-### CSS preprocessors
-For the `<style>` tag, you can also use whatever CSS preprocessor you want. [Sass/SCSS](https://sass-lang.com) (recommended) is available out of the box.
+### CSS 预处理器
+关于 `<style>` 标签，你也可以在其中使用喜欢的预处理器，其中 [Sass/SCSS](https://sass-lang.com)  （推荐）是开箱即用的。
 
-You can specify you want your chosen preprocessor to handle the CSS code that you're writing:
+你可以通过 style 标签的 lang 属性来指定希望选择的预处理器来处理正在编写的CSS代码：
 
 ```html
-<!-- notice lang="sass" -->
+<!-- 注意 lang="sass" -->
 <style lang="sass">
 .some-div
   font-size: 15px
 </style>
 
-<!-- notice lang="scss" -->
+<!-- 注意 lang="scss" -->
 <style lang="scss">
 .some-div {
   font-size: 15px;
@@ -55,17 +58,17 @@ You can specify you want your chosen preprocessor to handle the CSS code that yo
 </style>
 ```
 
-## Using Quasar Directives
+## 使用 Quasr 指令
 
-Quasar comes with a few custom [Vue Directives](https://vuejs.org/guide/reusability/custom-directives.html). These directives can be applied on almost any DOM element or Component.
+Quasar 提供了一些 [Vue 指令](https://vuejs.org/guide/reusability/custom-directives.html)。这些指令可以在所有的DOM和组件上使用。
 
-Example of a Quasar directive:
+示例：
 
 ```html
 <div v-ripple>Click Me</div>
 ```
+> 注意使用了`v-ripple` 指令的 HTML 在点击时会有一个涟漪水波特效。vue 指令都使用 `v-` 前缀。
 
-> Notice how Ripple is used in the HTML template as `v-ripple`. Vue directives are prefixed with `v-`.
 
 ```html
 <div v-touch-pan="handler">...</div>
@@ -73,10 +76,10 @@ Example of a Quasar directive:
 <div v-ripple>Click me. I got ripples.</div>
 ```
 
-## Using Quasar Components
-Quasar components have names beginning with "Q" like "QBtn" or "QElementResizeObserver". In order to use them, you need to add a reference to them in `/quasar.config.js`.
+## 使用 Quassa 组件
+所有的 Quasar 组件的命名都以 Q 开头比如 "QBtn", "QElementResizeObserver"。为了使用它们，需要在`/quasar.config.js`中将其引入。
 
-Let's take the following example with a QBtn and QIcon and then we'll see how to embed these components in our app:
+让我们以QBtn和QIcon为例，然后我们将看到如何在应用程序中嵌入这些组件：
 
 ```html
 <div>
@@ -85,13 +88,14 @@ Let's take the following example with a QBtn and QIcon and then we'll see how to
 </div>
 ```
 
-> Notice how QBtn is used in the Vue HTML template as `<q-btn>`. If we'd import QElementResizeObserver, then we'd use it in template as `<q-element-resize-observer>`.
+> 请注意，在模板中使用QBtn组件写法为`<q-btn>`。如果我们要导入QelementResizeObserver组件，则将`<q-element-resize-observer>`用于模板中。
 
-## Using Quasar Plugins
-Quasar Plugins are features that you can use both in your Vue files as well as outside of them, like Notify, BottomSheet, AppVisibility and so on.
+## 使用 Quasar 插件
+
+Quasar插件是可以在Vue文件中和外部使用的功能，如Notify、BottomSheet、AppVisibility等。
 
 ::: warning
-**Before using them in your app**, you need to add a reference to them in `/quasar.config.js` (as shown below).
+**使用插件之前**，需要在`/quasar.config.js`将其启用，示例：
 :::
 
 ```js
@@ -99,8 +103,7 @@ framework: {
   plugins: [ 'Notify', 'BottomSheet' ]
 }
 ```
-
-Let's take Notify as an example and see how we can then use it. In a Vue file, you'd write something like this (Composition API):
+让我们以Notify为例，看看如何使用它。在Vue文件中，你可以编写以下内容（组合式API）：
 
 ```html
 <template>
@@ -138,10 +141,9 @@ export default {
 </script>
 ```
 
-> Notice that in the template area we're using `$q.<plugin-name>`.
+> 注意我们在模板中使用了 `$q.<plugin-name>`.
 
-An equivalent script section in Options API:
-
+在选项式API中：
 ```js
 export default {
   methods: {
@@ -152,7 +154,7 @@ export default {
 }
 ```
 
-Now let's see an example of Notify being used 在Vue文件之外:
+在Vue文件之外:
 
 ```js
 import { Notify } from 'quasar'
@@ -161,53 +163,51 @@ import { Notify } from 'quasar'
 Notify.create('My message')
 ```
 
-### Self-Closing Tags
+### 自闭合的标签
 
 ::: danger
-Do NOT use self-closing tag form when you are using **Quasar UMD version**. Your browser is interpreting the HTML before Vue parses your DOM elements, so your HTML syntax must be correct. Unknown tags (like Vue components) cannot be self-closing because your browser will interpret those as if you are opening a tag but never closing it.
+不要在 **Quasar UMD 版本**中使用自闭合的标签。 你的浏览器会在 Vue 解析 DOM 之前解释 HTML ，所以你的 HTML 必须书写正确。浏览器未知的标签（比如 Vue 组件）不能是自闭合的，因为浏览器会将她们解释成没有闭合标签的错误的语法。
 :::
 
-Some Quasar components do not need you to include HTML content inside of them. In this case, you can use them as self-closing tags. One example with QIcon below:
+一些 Quasar 组件的内容不需要包含 HTML 元素，这种情况下你可以使用一个自闭合的标签，例如 QIcon 组件：
 
 ```html
 <q-icon name="cloud" />
 ```
 
-Self-closing means the above template is the equivalent to:
+上面的自闭合模板代码等价于：
 
 ```html
 <q-icon name="cloud"></q-icon>
 ```
-
-Both forms are valid and can be used, except for UMD where you must explicitly close the tags. It works the same with regular DOM elements:
+两种格式的语法都是合法的，除了在 UMD 的版本中必须使用双闭合的标签外。针对常规的 DOM 元素也是可以使用的：
 
 ```html
 <div class="col" />
-<!-- equivalent to: -->
+<!-- 等价于： -->
 <div class="col"></div>
 ```
+一些 eslint-plugin-vue 中的代码格式规则会强制要求使用自闭合的语法。
 
-Some eslint-plugin-vue linting rules actually enforce using the self-closing syntax.
+## 处理 Vue Properties
+我们假设有一个 Quasar 组件叫做 QBogus，它支持以下属性（properties），我们将会在下面讨论所有类型的属性。
 
-## Handling Vue Properties
-Let's take some examples with a bogus Quasar component (we will call it QBogus) that supports the properties below. We will discuss each of the types of Vue properties in the below sections.
-
-| Vue Property | Type | Description |
+| Vue 属性 | 类型 | 描述 |
 | --- | --- | --- |
-| `infinite` | Boolean | Infinite slides scrolling |
-| `size` | String | Thickness of loading bar. |
-| `speed` | Number | How fast should loading bar update its value (in milliseconds). |
-| `columns` | Object | Object defining columns (see "Columns Definition" below). |
-| `offset` | Array | Array with two numbers. Offset on horizontal and vertical (in pixels). |
+| `infinite` | Boolean | 无限滚动 |
+| `size` | String | 加载条的厚度 |
+| `speed` | Number | 加载条更新的速度（单位毫秒） |
+| `columns` | Object | 定义列数据的对象，（见下方 "Columns Definition" 部分）。 |
+| `offset` | Array | 两个数字的数组，分别定义水平和垂直方向的偏移量（单位像素）。 |
 
-### Boolean Property
-A boolean property means it only accepts a strictly Boolean value. The values will not be cast to Boolean, so you must ensure you are using a true Boolean.
+### 布尔（Boolean） 属性
+布尔属性意味着它只接受严格的布尔值。赋值时不会发生自动布尔转换，因此必须确保使用的是真正的布尔值。
 
-::: tip
-In Quasar, all Boolean properties have `false` as the default value. As a result, you don't have to explictly assign them the `false` value.
+::: tip 提示
+在 Quasar 中，所有的布尔类型的属性默认值都是 `false`，因此，您不必显式地为它们分配 `false`值。
 :::
 
-If you are trying to control that property and change it dynamically at runtime, then bind it to a variable in your scope:
+如果你想在运行时动态的更改其属性值，那么你可以将其绑定在一个变量上：
 
 ```html
 <template>
@@ -228,35 +228,33 @@ export default {
 </script>
 ```
 
-If, on the other hand, you know this Boolean value is not going to change, you can use the shorthand version of the variable like a component attribute and just specify it. In other words, if you don't bind the variable to a variable in the component's scope as it will always be `true`:
+另一方面，如果你知道这个布尔值不会改变，你可以使用变量的速记版本，就像组件属性一样，只需生声明它。换句话说，如果你声明了一个属性而不将值绑定到组件范围内的变量，它的值永远都会被解析成`true`：
 
 ```html
 <template>
   <q-bogus infinite />
 
   <!--
-    the following is perfectly valid,
-    but it's a longer version
+    等价于下面的版本，但是下面的代码更长
   -->
   <q-bogus :infinite="true" />
 </template>
 ```
 
-### String Property
-As you can imagine, Strings are required as a value for this type of property.
+### 字符串（String） 属性
+
+如你所想，这种类型的属性需要字符串作为值。
 
 ```html
 <template>
   <!--
-    direct assignment, no need for
-    a variable in our scope
+    直接赋值，不需要定义变量
   -->
   <q-bogus size="24px" />
 
   <!--
-    we can also bind it to a variable
-    in our scope so we can dynamically
-    change it
+    也可以将其绑定到变量上，
+    这样我们可以动态的更改它
   -->
   <q-bogus :size="mySize" />
 </template>
@@ -266,7 +264,7 @@ import { ref } from 'vue'
 
 export default {
   setup () {
-    // notice String as value
+    //  注意需要 String 类型的变量
     const mySize = ref('16px')
     return {
       mySize
@@ -276,17 +274,17 @@ export default {
 </script>
 ```
 
-### Number Property
+### 数字（Number）属性
 
 ```html
 <template>
   <!--
-    Case 1. Direct assignment.
-    Notice the colon (":") before property name.
+    示例 1. 直接赋值
+    注意属性前面的(":")符号
   -->
   <q-bogus :speed="50" />
 
-  <!-- Case 2. Assignment through a scope variable -->
+  <!-- 示例 2.赋值一个变量 -->
   <q-bogus :speed="myNumber" />
 </template>
 
@@ -295,7 +293,7 @@ import { ref } from 'vue'
 
 export default {
   setup () {
-    // notice Number as value
+    //注意需要 Number 类型的变量
     const myNumber = ref(50)
     return {
       myNumber
@@ -305,13 +303,13 @@ export default {
 </script>
 ```
 
-### Object Property
+### 对象（Object）属性
 
 ```html
 <template>
-  <!-- Case 1. Direct assignment. -->
+  <!-- 示例 1. 直接赋值 -->
   <q-bogus :columns="{key: 'value', anotherKey: 'another value'}" />
-  <!-- or a more elegant way for Case 1: -->
+  <!-- 示例1更优雅的方式 -->
   <q-bogus
     :columns="{
       key: 'value',
@@ -319,7 +317,7 @@ export default {
     }"
   />
 
-  <!-- Case 2. Assignment through a scope variable -->
+  <!-- 示例 2.赋值一个变量 -->
   <q-bogus :columns="myColumns" />
 </template>
 
@@ -339,14 +337,14 @@ export default {
 </script>
 ```
 
-### Array Property
+### 数组（Array）属性
 
 ```html
 <template>
-  <!-- Case 1. Direct assignment. -->
+  <!-- 示例 1. 直接赋值 -->
   <q-bogus :offset="[10, 20]" />
 
-  <!-- Case 2. Assignment through a scope variable -->
+  <!-- 示例 2.赋值一个变量  -->
   <q-bogus :offset="myOffset" />
 </template>
 
@@ -361,22 +359,22 @@ export default {
 </script>
 ```
 
-## Handling Vue Methods
-You will notice throughout the documentation that some Quasar components have methods that can be called. Example:
+## 处理 Vue 方法（Methods）
 
-| Vue Method | Description |
+您会在整个文档中注意到，某些 Quasar 组件具有可以调用的方法。例如：
+
+| Vue 方法 | 描述 |
 | --- | --- |
-| `next()` | Goes to next slide. |
-| `previous(doneFn)` | Goes to previous slide. |
-| `toggleFullscreen()` | Toggles fullscreen mode. |
+| `next()` | 滑动到下一个幻灯片 |
+| `previous(doneFn)` | 滑动到上一个幻灯片 |
+| `toggleFullscreen()` | 切换全屏开关 |
 
-In order for you to access these methods, you will need to set a Vue reference on the component first. Here's an example with Composition API:
-
+为了访问这些变量，首先你需要在组件中设置一个 Vue DOM 引用，下面是一个组合式 API 中的示例：
 ```html
 <template>
   <!--
-    Notice ref="myRef". We will use the name
-    assigned to "ref" in the script part below
+    注意 ref="myRef"。 我们将会在下面的 script 部分中声明一个同名的 "ref"
+    Vue 将会在组件被挂载后把引用的 DOM 赋值给同名的 "ref"。
   -->
   <q-bogus ref="myRef" />
 </template>
@@ -388,26 +386,29 @@ export default {
   setup () {
     const myRef = ref(null)
 
-    // after the component has mounted into DOM:
+    // 等待组件被挂载到 DOM 之后：
     onMounted(() => {
-      // we call "next()" method of our component
+      // 我们可以在此调用组件的 "next()" 方法
       myRef.value.next()
     })
-    // calling before mount point might result in errors
-    // as Vue hasn't yet prepared the Vue reference
+    // 在挂载之前调用将会得到一个报错
+    // 因为 Vue 还没有准备好 Vue 引用
 
-    // we expose myRef to the scope so Vue
-    // can use it in the template as well
+    // 我们可以导出 myRef
+    // 那么就可以在模板中使用它
     return { myRef }
   }
 }
 </script>
 ```
-
-And here is the same example, but with Options API:
+下面是组合式 API 的示例：
 
 ```html
 <template>
+  <!--
+    注意 ref="myRef"。 我们将会在下面的 script 部分中声明一个同名的 "ref"
+    Vue 将会在组件被挂载后把引用的 DOM 赋值给同名的 "ref"。
+  -->
   <!--
     Notice ref="myRef". We will use the name
     assigned to "ref" in the script part below
@@ -417,29 +418,29 @@ And here is the same example, but with Options API:
 
 <script>
 export default {
-  // we can now access `this.$refs.myRef`
-  // an example on the mounted() Vue component hook
+  // 现在我们可以通过 `this.$refs.myRef` 来访问它
+  // 一个在 mounted() Vue 生命周期中使用的示例：
   mounted () {
-    // calling "next()" method:
+    // 我们可以在此调用组件的 "next()" 方法：
     this.$refs.myRef.next()
   }
-  // calling before mount point might result in errors
-  // as Vue hasn't yet prepared the Vue reference
+  // 在挂载之前调用将会得到一个报错
+  // 因为 Vue 还没有准备好 Vue 引用
 }
 </script>
 ```
 
-## Handling Vue Events
-You will notice throughout the documentation that some Quasar components have a section called "Vue Events".
+## 处理 Vue 事件（Events）
 
-Example of "Vue Events":
+在整个文档中，你会注意到一些 Quasasr 组件的 API 卡片中有一个称为 "Vue Events" 的部分，例如：
 
-| Event Name | Description |
+| 时间名 | 描述 |
 | --- | --- |
-| `@show` | Triggered right after the Modal is shown. |
-| `@hide` | Triggered right after the Modal is hidden. |
+| `@show` | 模态框显示后立即触发。 |
+| `@hide` | 模态框关闭后立即触发。 |
 
-In order for you to catch these events, when they are triggered, you will need to add listeners for them on the component itself in the HTML template. Here's an example:
+当它们被触发时，为了捕获这些事件，你需要在组件的 HTML 模板中为它们绑定监听事件，示例：
+
 
 ```html
 <template>
@@ -450,13 +451,13 @@ In order for you to catch these events, when they are triggered, you will need t
 export default {
   setup () {
     function doSomething () {
-      // this method has been called (in this case)
-      // because @show event was triggered by QBogus component
+      // 由于 QBogus 组件的 @show 事件被触发了
+      // 所以这个函数会被调用
     }
 
     function doSomethingElse () {
-      // this method has been called (in this case)
-      // because @hide event was triggered by QBogus component
+      // 由于 QBogus 组件的 @hide 事件被触发了
+      // 所以这个函数会被调用
     }
 
     return {
