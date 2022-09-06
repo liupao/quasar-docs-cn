@@ -1,8 +1,16 @@
-<template lang="pug">
-q-btn.upgrade-video-link(href="https://www.youtube.com/playlist?list=PLFZAa7EupbB6atAt_liopEDvk44wRa00B" target="_blank" padding="0")
-  img(src="http://img.youtube.com/vi/TBBzdFqtehA/maxresdefault.jpg")
-  .upgrade-video-link__overlay.absolute-full.no-pointer-events
-  q-icon.absolute-center(name="launch" size="150px")
+<template>
+  <q-btn
+    class="upgrade-video-link"
+    href="https://www.youtube.com/playlist?list=PLFZAa7EupbB6atAt_liopEDvk44wRa00B"
+    target="_blank"
+    padding="0"
+  >
+    <img src="/public/imgs/hqdefault.jpg" />
+    <div
+      class="upgrade-video-link__overlay absolute-full no-pointer-events"
+    ></div>
+    <q-icon class="absolute-center" name="launch" size="150px"></q-icon>
+  </q-btn>
 </template>
 
 <script>
