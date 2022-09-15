@@ -86,7 +86,7 @@ q-page.doc-page
     div.q-mt-md
       | <doc-link to="https://github.com/quasarframework/quasar/blob/dev/LICENSE">MIT LICENSE</doc-link> | <doc-link to="https://www.iubenda.com/privacy-policy/40685560">Privacy Policy</doc-link> | <doc-link to="https://github.com/quasarframework/quasar-art">Quasar Artwork</doc-link>
 
-    div Copyright © 2015 - {{ year }} PULSARDEV SRL, Razvan Stoenescu
+    div <doc-link to="http://beian.miit.gov.cn/">鄂ICP备2022014971号-1</doc-link>
 </template>
 
 <script>

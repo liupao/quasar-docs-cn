@@ -1,12 +1,12 @@
 ---
-title: Release Notes
-desc: The changelog for Quasar core packages.
+title: 发行说明
+desc:  Quasar-core的更新日志
 components:
 - releases/QuasarReleases
 ---
 
-Release notes (with changelog) for Quasar core packages are available on [GitHub Releases](https://github.com/quasarframework/quasar/releases).
+关于Quasar核心包的发行说明（更新日志）请参考[GitHub Releases](https://github.com/quasarframework/quasar/releases)
 
-For all other packages, visit the [Quasar Organization](https://github.com/quasarframework) GitHub page and look for the repository that you are interested in then click on its "Releases".
+如果你还对 Quasar 的核心包之外的包感兴趣，请参考 [Quasar 组织](https://github.com/quasarframework)中的相关git仓库，并查看他们的 "Releases" 页面。
 
 <quasar-releases />

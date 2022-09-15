@@ -1,86 +1,89 @@
 ---
-title: Upgrade Guide
-desc: How to upgrade Quasar from older versions to the latest one.
+title: 升级指南
+desc: 如何将 Quasar 项目从老的项目升级收到新的版本
 components:
   - upgrade-guide/UpgradeVideoLink
 ---
 
-::: tip Quasar CLI with Vite or Webpack
-You now have the option to choose between Quasar CLI with Vite (currently in **BETA**) and Quasar CLI with Webpack.
+::: tip Quasar CLI 基于 Vite 或者 Webpack
+现在有基于 vite 和基于 webopack 两种版本的Quasar CLI可供选择。
 :::
 
-::: tip Composition and Options API
-You will notice that all of our documentation examples are using Vue 3's Composition API. This does NOT mean that you can't use Vue Options API. On the contrary, maintaining Options API will actually help you on your upgrade path and make it a lot easier for you. After upgrading is done we do recommend switching to the Composition API, but by no means you are required to do so.
+::: tip 组合式和选项式 API
+你会发现文档的示例代码中都采用了 Vue 3 的组合式 API。但是这并不代表你也必须使用组合式 API，你仍然可以选择使用选项式 API。事实上，继续维护选项式 API 会使得升级过程更简单一些。升级成功之后我们更推荐你使用组合式 API，但这是可选的。
 :::
 
-### Video guide <q-badge align="top" color="brand-primary" label="New" />
+### 视频教程 <q-badge align="top" color="brand-primary" label="New" />
 
-Clicking on the poster below will open a Youtube playlist on the process of upgrading your Quasar CLI project from Quasar v1 to Quasar v2. It may get out of sync as we progress with Quasar v2, but it may help you get started.
+点击下面的海报将打开一个 Youtube 播放列表，介绍如何将你的 Quasar CLI 项目从 Quasar v1 升级到 Quasar v2 的过程。随着我们使用 Quasar v2 的更新，它可能会失去同步，但它可能会帮助你开始。
 
 <upgrade-video-link />
 
-## Older v2 to latest v2
+## 老的 v2 升级到最新的 v2
 
-### With UMD
-Simply replace the version string in all the CSS and JS tags that refer to Quasar to the newer version.
+### UMD 版本
 
-### With Quasar CLI
+只需将引用 Quasar 及其所有 CSS 和 JS 链接中的版本号字符串替换为较新版本即可。
+
+### Quasar CLI 版本
 
 ```bash
-# run these commands inside
-# of a Quasar UI v2 project
+# 在一个quasar UI v2 的项目中运行以下命令
 
-# check for upgradable packages
+# 检查 quasar 有关可更新的包
 $ quasar upgrade
 
 # do the actual upgrade
 $ quasar upgrade --install
 ```
 
-It's recommended to keep `vue` & `vue-router` packages up to date too:
+建议也将 `vue` & `vue-router` 套件保持最新：
 
 ```bash
-# optional, but recommended
+# 可选的，但是推荐
 $ yarn add vue@3 vue-router@4
 ```
 
-::: warning Note for code editor terminals
-If you're using a code editor terminal instead of an external one and you run `quasar upgrade` and get the error *Command not found* or *@quasar/cli* version appears to be *undefined*, you will need to go to the settings of your code editor terminal and untick the option (or its equivalent) *Add 'node_modules/.bin' from the project root to %PATH%*, then restart your code editor.
+::: warning 注意代码编辑器的终端
+如果你在使用一个代码编辑器集成的终端来运行 `quasar upgrade` 命令，并获得了一个 *Command not found* 或者 *@quasar/cli* version appears to be *undefined*报错，那么你需要转到代码编辑器终端的设置，并取消选中添加“node_modules/”选项（或其等效项）。将“bin”从项目根目录设置为%PATH%，然后重新启动代码编辑器。
 :::
 
-### With Quasar Vite plugin
+### Quasar Vite plugin 版本
+
+```bash
+$ yarn upgrade quasar
+```
+可选的，你可能也想保证最新的 `@quasar/vite-plugin`
+
+建议同时将 `vue` and `@quasar/extras` 保持最新：
+
+```bash
+# 可选的，但是推荐
+$ yarn add vue@3 @quasar/extras@latest
+```
+
+### Vue CLI 版本
 
 ```bash
 $ yarn upgrade quasar
 ```
 
-Optionally, you may also want to make sure that you have the latest `@quasar/vite-plugin` package.
+可选的，你可能也想保证最新的 `vue-cli-plugin-quasar`
 
-It's recommended to keep `vue` and `@quasar/extras` packages up to date too:
+
+建议同时将 `vue` and `@quasar/extras` 保持最新：
 
 ```bash
-# optional, but recommended
+# 可选的，但是推荐
 $ yarn add vue@3 @quasar/extras@latest
 ```
 
-### With Vue CLI
+## 从 v1 迁移到 v2
 
-```bash
-$ yarn upgrade quasar
-```
+**这个指南适用于使用了 Quasar CLI 或 UMD 版本的项目**，但是其中一些信息可能也对 Vue CLI 版本的项目有帮助。
 
-Optionally, you may also want to make sure that you have the latest `vue-cli-plugin-quasar` package.
+对于已经在项目中使用 Vue CLI 的开发者，你可以查看如何安装与 Quasar v2 一起使用的 [vue-cli-plugin-quasar](/start/vue-cli-plugin) 。你还需要对 main.js 进行一些更改，也要升级你的 Vue CLI 以支持Vue 3。目前最好的方法是为 Vue 3 生成一个新的 Vue-CLI 项目，然后按照 Vue-CLI 插件 quasar 的[安装步骤i](/start/vue-cli-plugin#add-vue-cli-quasar-plugin)，检查该/src文件夹中发生的更改，然后将相同原则应用于新的 Vue CLI 项目中。
 
-It's recommended to keep `vue` and `@quasar/extras` packages up to date too:
-
-```bash
-# optional, but recommended
-$ yarn add vue@3 @quasar/extras@latest
-```
-
-## Migrate to v2 from v1
-
-**This guide refers to Quasar CLI & UMD projects**, but information from here can be used for Vue CLI too. For developers already using Vue CLI on your projects you can check out how to install the [vue-cli-plugin-quasar](/start/vue-cli-plugin) package that works with Quasar v2. You will also need to make a few changes to your main.js (and also upgrade your Vue CLI project to support Vue 3) too (best way currently is to generate a new Vue CLI project for Vue 3 and then following the [install steps](/start/vue-cli-plugin#add-vue-cli-quasar-plugin) for the vue-cli-plugin-quasar and check out the changes incurred to that /src folder, then apply the same principle to your current Vue CLI project).
 
 ::: danger
 * Quasar CLI for Quasar v1 only had the option to use Webpack. But now you can choose between Quasar CLI with Vite (currently in **BETA**) and Quasar CLI with Webpack. For upgrading purposes, you might want to upgrade to Quasar CLI with Webpack first, and then maybe try out Quasar CLI with Vite.
