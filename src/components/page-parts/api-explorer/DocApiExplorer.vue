@@ -1,29 +1,5 @@
-<template lang="pug">
-div
-  q-select(
-    v-model="item"
-    outlined
-    use-input
-    hide-selected
-    fill-input
-    placeholder="Names of Quasar components, directives or plugins"
-    input-debounce="0"
-    :options="options"
-    clearable
-    options-dense
-    virtual-scroll-slice-size="50"
-    @filter="filterFn"
-  )
-    template(v-slot:prepend)
-      q-icon(name="travel_explore")
-
-  doc-api(
-    v-if="item"
-    ref="apiRef"
-    :key="item"
-    :file="item"
-    page-link
-  )
+<template>
+<div><q-select v-model="item" outlined use-input hide-selected fill-input placeholder="输入名称查询Quasar 组件/指令/插件" input-debounce="0" :options="options" clearable options-dense virtual-scroll-slice-size="50" @filter="filterFn"><template v-slot:prepend><q-icon name="travel_explore"></q-icon></template></q-select><doc-api v-if="item" ref="apiRef" :key="item" :file="item" page-link></doc-api></div>
 </template>
 
 <script>
