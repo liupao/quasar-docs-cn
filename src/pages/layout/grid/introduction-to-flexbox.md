@@ -8,38 +8,38 @@ related:
   - /layout/grid/gutter
   - /layout/grid/flex-playground
 ---
-在[Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)的帮助下，Quasasr提供了大量的CSS辅助类来帮你构建页面。
-Quasar provides lots of CSS classes to help you build your UI easily with the help of [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Think of it like operating with rows and columns with many options at hand.
+在 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的帮助下，Quasasr提供了大量的CSS辅助类来帮你构建页面。可以将其想象成在页面中使用行和列的方式来布局。
 
-Flexbox (upon which Quasar Flex CSS classes are based) module aims to provide a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).
+Quasar 提供的 Flex CSS 类基于 CSS 的 Flexbox 模块，此模块旨在提供一种更方便的方式来对一个容器中的元素进行布局，对齐以及分配各个元素之间的空间，即使不指定它们的大小，或者大小是动态的。（这也是 flex 这个名字的来源）
 
 ::: tip
-This page covers the basic theory of Quasar Flex CSS classes and prepares you for the in-depth pages on [Grid Row](/layout/grid/row), [Grid Column](/layout/grid/column) and [Grid Gutter](/layout/grid/gutter).
+本页只涵盖了 Quasar Flex CSS 类的基本理论，并为您准备了更深入学习的页面:[Grid Row](/layout/grid/row)、[Grid Column](/layout/grid/column) 和 [Grid Gutter](/layout/grid/gutter)。
 :::
 
-## Key concept
-Quasar Flex CSS classes apply to either the Container (Parent) or the Container's items (Children).
+## 核心概念
+
+Quasar Flex CSS 类可以用在父容器和子元素中，父容器叫做 container，子元素叫做 items。如下图父容器是外层背景为黑色的部分，子元素是内部三个蓝色的部分。
 
 ![Flexbox Container](https://cdn.quasar.dev/img/flexbox-container.svg)
 ![Flexbox Items](https://cdn.quasar.dev/img/flexbox-items.svg)
 
-## Managing Parent
+## 管理父元素
+### 设置方向
 
-### Setting Direction
-One of the following CSS classes is mandatory for the parent in order for ones on the children (described in next sections) to have any effect.
+父容器必须选择下列 CSS 类之一，以便开启 Flex 布局，后续部分中 CSS 才能在子元素上生效。
 
 ![Flexbox Direction](https://cdn.quasar.dev/img/flexbox-direction.svg)
 
-| Class Name | Description |
+| CSS 类名 | 描述 |
 | --- | --- |
-| `row` | Flex row |
+| `row` |  开启Flex并将主轴方向设置为水平方向 Flex row |
 | `row inline` | Inline Flex row |
-| `column` | Flex column |
+| `column` | 开启Flex并将主轴方向设置为垂直方向 Flex column |
 | `column inline` | Inline Flex column |
-| `row reverse` | Flex row with `flex-direction` set to `row-reverse` |
-| `column reverse` | Flex column with `flex-direction` set to `column-reverse` |
+| `row reverse` | 开启Flex并将 `flex-direction` 设置为 `row-reverse` |
+| `column reverse` | 开启Flex并将 `flex-direction` 设置为 `column-reverse` |
 
-Example:
+示例:
 ```html
 <div class="row">
   <div>First column</div>
@@ -48,44 +48,46 @@ Example:
 </div>
 ```
 
-### Wrapping by default
-By default, all rows and columns wrap their content.
-
+### 默认换行
+默认情况下，所有的行和列都会在内容超出大小后将其折行：
 ![Flexbox Direction](https://cdn.quasar.dev/img/flexbox-wrap.svg)
 
-However if you explicitly do not want to wrap and by so doing you want to fit all content into one line, then add `no-wrap` CSS helper class.
+然而如果你不希望这个换行行为，你想所有的内容在一行内自适应大小，那么你可以使用`no-wrap` CSS 类。
 
-Also, if you want to wrap in reverse order, then `reverse-wrap` is available.
+当然还有一个 `reverse-wrap` 类可以使得内容的顺序反转。
 
-| Class Name | Description |
+| 类名 | 描述 |
 | --- | --- |
-| `wrap` | Wrap if necessary ("on" by default, no need to specify it) |
-| `no-wrap` | Do NOT wrap even if necessary |
-| `reverse-wrap` | Wrap backwards if necessary |
+| `wrap` | 必要时换行（默认值，不必显示声明） |
+| `no-wrap` | 任何情况下都不换行 |
+| `reverse-wrap` | 必要情况下换行并反转 |
 
-### Alignment
+### 对齐
 
-**For alignment along the main axis**, use classes below. It helps distribute left over free space when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.
+使用下面的 CSS 类来设置**主轴上对齐**方式（下图是主轴为横轴时的示例）。
+当一行中的子元素都不是flex元素或是flex元素但已达到其最大尺寸时，它有助于分配剩下的自由空间。当子元素溢出时，它也对元素的排列起到一定的控制作用。
 
 ![Flexbox Justify Content](https://cdn.quasar.dev/img/flexbox-main-axis-align---2.svg)
 
-**For alignment perpendicular to the main axis**, use classes below. This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the horizontal-* version for the cross-axis (perpendicular to the main-axis).
+使用下面的 CSS 类来设置**垂直于主轴的方向上的对齐**方式（下图是主轴为横轴时的示例）。
+它们定义了flex容器中的子元素在垂直于主轴的方向上如何对齐。可以将其视为横轴（垂直于主轴）的水平版本
 
 ![Flexbox Items Align](https://cdn.quasar.dev/img/flexbox-cross-axis-align.svg)
 
-::: tip
-There is also the convenience `flex-center` CSS class which is equivalent to `items-center` + `justify-center`. Use it along with `flex`, `row` or `column`.
+::: tip 提示
+有一个更方便的 CSS 类： `flex-center` 。它等于`items-center` + `justify-center`。使用时需要搭配 `flex`， `row` 或者 `column`使用。
 :::
+
+接下来的类在横轴上有额外的空间时对齐flex容器的线，类似于水平对齐主轴内的单个元素的方式。
 
 The next classes **align a flex container's lines** within when there is extra space in the cross-axis, similar to how horizontal-* aligns individual items within the main-axis.
 
 ![Flexbox Content Align](https://cdn.quasar.dev/img/flexbox-content-align.svg)
 
-## Managing Children
+## 管理子元素
 
-### Distribution of Size
-Quasar uses a 12 point column system for distributing the size of row children. Here are some examples of the available CSS helper classes:
-
+### 分配大小
+Quasar 使用的栅格系统将一行分为12份，以此来分配子元素的大小，以下是可用的 CSS 辅助类的一些示例：
 
 ```html
 <div class="row">
@@ -95,25 +97,25 @@ Quasar uses a 12 point column system for distributing the size of row children. 
   <div class="col">fills remaining available space</div>
 </div>
 ```
+在上面的例子中，由于 8/12 = 2/3 = 66％，`col-8` 占据了行宽的三分之二（2/3），而 `col-2` 占据了六分之一（2/12 = 1 / 6〜16.67％）。
 
-In the example above, `col-8` fills two thirds (2/3) of the row width, because 8/12 = 2/3 = 66%, while `col-2` occupies one sixth (2/12 = 1/6 ~ 16.67%).
+使用 `col-auto` 会使单元格只填充需要渲染的空间。相反的，`col` 会试图填充所有可用的空间，同时如果需要也可以缩小。
 
-CSS helper class `col-auto` makes the cell fill only the space it needs to be rendered. `col`, on the other hand, tries to fill all space available while also shrinking if needed.
 
-CSS helper class `col-grow` makes the cell fill at least the space it needs to be rendered, with the possibility to grow when more space is available.
+`col-grow` 使单元格至少填充需要渲染的空间，并有可能在有更多空间可用时增长。
 
-CSS helper class `col-shrink` makes the cell fill at most the space it needs to be rendered, with the possibility to shrink when not enough space is available.
+`col-shrink` 使单元格最多填充需要呈现的空间，并且当没有足够的可用空间时有可能收缩。
 
-Another example with a visual representation below it:
+示例：
+
 ```html
 <div class="row">
   <div class="col">1</div>
   <div class="col">1</div>
   <div class="col">1</div>
-  <!--
-     we have 3 children, so equivalent
-     to above would be to use `col-4`
-     on each of the children
+    <!--
+     我们有3个子元素，所以以上示例相当于
+     对每个每个子元素使用`col-4`
   -->
 </div>
 
@@ -125,45 +127,49 @@ Another example with a visual representation below it:
 ```
 ![Flexbox Grow](https://cdn.quasar.dev/img/flexbox-grow.svg)
 
-It is also possible to offset a cell. For example: `offset-4` offsets a third of space (4/12 = 1/3 = 33%).
+也有 CSS 辅助类可以实现偏移一个单元格。 例如：`offset-4` 表示偏移三分之一空间（4/12 = 1/3 = 33％）。
 
-### Wrapping
-Wrapping is a key feature in understanding Flex CSS classes. You are not bound to use exactly 12 points per row. You can use less or even more.
+### 折行
+折行是理解 Flexx CSS 类的关键特性。不一定要每行都精确的使用12份，可以使用更少或更多。
 
-This allows you, among other things, to dynamically stack rows vertically on smaller screens while displaying them on a single line on bigger screens. Read the "Responsive Design" section.
+这使得你可以在较小的屏幕上垂直动态堆叠行，并在大屏幕上的单行上显示它们。 阅读“响应式设计”部分。
+
 
 ```html
 <div class="row">
   <div class="col-2">...</div>
 
-  <!-- 2 + 6 < 12, so next element is placed on same line -->
+    <!-- 2 + 6 < 12, 所以下一个元素放在同一行上 -->
   <div class="col-6">...</div>
 
-  <!-- 2 + 6 + 10 > 12, so next element wraps to next line -->
+   <!-- 2 + 6 + 10 > 12, 所以下一个元素换行到下一行 -->
   <div class="col-10">...</div>
 
   <!--
-    10 + 3 > 12, so next element wraps to next line.
-    Note that we take into consideration the current line only
-    (with col-10 only, since it was wrapped to its own line).
+    10 + 3 > 12, 所以下一个元素换行到下一行。
+     请注意，我们只考虑当前行
+     （只有col-10，因为它被包裹到自己的行）。
   -->
   <div class="col-3">...</div>
 </div>
 ```
 
-> Note that rows are wrappable by default. Should you wish to disable this, use the `no-wrap` CSS helper class.
+> 请注意，felx元素默认是可换行的。 如果你想禁用这个特性，使用 `no-wrap`CSS 辅助类。
 
-### Self Alignment
-**An item can override the aligned specified on parent**. This allows alignment to be overridden for individual flex items. Please see the "Alignment" explanation from "Managing Parent" to understand the available values (`self-start`, `self-center`, `self-baseline`, `self-end`, `self-stretch`).
+### 自对齐
+
+**子元素可以覆写父元素设置的对齐方式**。允许对单个 Flex 子元素进行对齐。 请参阅“管理父元素”中的“对齐”说明以了解可用值(`self-start`, `self-center`, `self-baseline`, `self-end`, `self-stretch`)。
 
 ![Flexbox Self](https://cdn.quasar.dev/img/flexbox-self.svg)
 
-### Order
-**You can set the order** of child elements by using `order-first` and `order-last` CSS helper classes.
+### 顺序
 
-By default, flex items are laid out in source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use `order` CSS property and assign the desired value.
+您可以使用 `order-first` 和 `order-last` CSS 辅助类来**设置子元素的顺序**。
 
-Example:
+默认情况下，Flex 项按源(source)顺序排列。 但是，order 属性可以控制它们在 Flex 容器中的显示顺序。 如果你需要更细粒度的控制，请使用 `order` CSS 属性并分配所需的值。
+
+示例：
+
 ```html
 <div class="row">
   <div style="order: 2">Second column</div>
@@ -171,27 +177,28 @@ Example:
   <div class="order-first">First column</div>
 </div>
 ```
-
-Here is how the CSS `order` property works:
+以下是 CSS `order` 属性的工作原理：
 
 ![Flexbox Order](https://cdn.quasar.dev/img/flexbox-order.svg)
 
-## Responsive Design
-Quasar Flex CSS classes can be applied based on the width of the screen, to help you in making a responsive UI. The 12 points grid is inspired by Bootstrap's, so there are a lot of similarities.
+## 响应式设计
 
-What we've learned so far is that, for example, we can size the columns regardless of window width. If we are to create a responsive UI, we need to dynamically change the sizing while taking window width into account. First, let's learn about some tokens that you can inject in middle of `col-*`, `offset-*` and `col-auto` helper classes (look at table below for tokens).
+Quasar Flex CSS辅助类可以根据屏幕宽度进行响应式应用，以帮助你制作响应式用户界面。 12分网格系统受 Bootstrap 的启发，因此有很多相似之处。
 
-| Token | Max window width | Description / When it applies |
+我们到目前为止学到的是，例如，我们可以调整列的大小，而不管窗口的宽度。 如果我们要创建一个响应 UI，我们需要动态改变大小，同时考虑窗口的宽度。首先，让我们学习一些可以在 `col-*`, `offset-*` 和 `col-auto`  辅助类中注入的断点标记（查看下表中的标记）。
+
+
+| 断点 | 最大宽口宽度 | 描述/何时会应用 |
 | --- | --- | --- |
-| `xs` | 599px | Extra small sized window |
-| `sm` | 1023px | Small sized window |
-| `md` | 1439px | Medium-sized window |
-| `lg` | 1919px | Large sized window |
-| `xl` | Infinite | Extra large sized window |
+| `xs` | 599px | 特小尺寸窗口 |
+| `sm` | 1023px | 小尺寸窗口 |
+| `md` | 1439px | 中尺寸窗口 |
+| `lg` | 1919px | 大尺寸窗口 |
+| `xl` | Infinite | 特大尺寸窗口 |
 
-Example: `col-md-7`, `offset-lg-3`, `col-xs-auto`.
+例如: `col-md-7`, `offset-lg-3`, `col-xs-auto`.
 
-A full example: let's say we have a row with three children. In extra small windows, we need to stack the children vertically, In small windows we need to display them side by side (each having equal width), and starting with medium windows we should display them all on same line:
+一个完整的例子：假设我们有三个子元素的行。在特小窗口中，我们需要垂直叠放子元素。在小窗口中我们需要并排显示它们的（每个子元素都有相同的宽度），并且从中等窗口开始，我们将它们全部显示在同一行上：
 
 ```html
 <div class="row">
@@ -207,29 +214,29 @@ A full example: let's say we have a row with three children. In extra small wind
 </div>
 ```
 
-Notice in the above example that we used `col-xs-12` (12/12 = 100% of row, so each child will take full width of the container making all children stack vertically, since rows wrap content by default), `col-sm-6` (6/12 = 50% of row) and `col-md-4` (4/12 = 33% of row).
+在上面的例子中请注意我们使用了 `col-xs-12`（12/12 = 100％的行，所以每个子元素都会占用容器的全部宽度，使得所有的子元素垂直堆叠，因为行默认是会换行内容）、`col-sm-6` （6/12 = 50％的行）和 `col-md-4`（4/12 = 33％的行）。
 
-Like previously mentioned, rows wrap content by default, so when 12 (or more) grid points are used for a row, content is wrapped to the next line. If we have two `<div>`s and we use `col-8` on both, they will also stack, since 8 + 8 = 16 and we can only display 12 points on a single line.
+像前面提到的那样，行默认会换行内容，因此当一行使用12个（或更多）网格点时，内容将被会换行到下一行。 如果我们有两个`<div>`并且我们都使用 `col-8`，它们也会堆叠，因为8 + 8 = 16，我们只能在一行上显示12个份。
 
 ```html
 <div class="row">
-  <!--
-    more than 12 grid points together,
-    so second <div> will wrap on next line
+ <!--
+     加一起超过12个网格点，
+     所以第二个<div>将换行到下一行
   -->
   <div class="col-8">col</div>
   <div class="col-8">col</div>
 </div>
 ```
 
-Also check [Visibility](/style/visibility#window-width-related) Style page to see thresholds on window width and these tokens (xs, sm, md, lg, xl) used on their own to hide or show DOM elements.
+另外查阅[可见性](/style/visibility#window-width-related)风格页面查看窗口宽度和这些标记（xs、sm、md、lg、xl）的阈值以隐藏或显示DOM元素。
 
-## Flex Addons
+## Flex 插件（Addons）
 
-When enabled (through `quasar.config.js > framework > cssAddon: true`) it provides breakpoint aware versions for all flex (and display) related CSS classes.
+启用后（通过`quasar.config.js > framework > cssAddon: true`），它将为所有与 Flex（和显示）相关的 CSS 类提供断点感知版本。
 
 ::: warning
-Note that there will be a noticeable bump in CSS footprint when enabling it. So only do it if you really need it.
+请注意，启用后，CSS占用的代码体积将明显增加。 因此，只有在请确保您确实需要时才这样做。
 :::
 
 ```
@@ -247,15 +254,15 @@ Note that there will be a noticeable bump in CSS footprint when enabling it. So 
 .(col|offset)-<bp>-(|0..12)
 ```
 
-There are also responsive classes for spacing, both for padding and for margin:
+还有间距的响应类，包括内边距(padding)和外边距(margin)：
 
 ```
 .q-(p|m)(t|r|b|l|a|x|y)-<bp>-(none|auto|xs|sm|md|lg|xl)
 ```
 
-Examples: `row-md`, `items-lg-end`, `q-pa-xs q-pa-sm-sm q-px-md-lg q-py-md-md`
+例如：`row-md`, `items-lg-end`, `q-pa-xs q-pa-sm-sm q-px-md-lg q-py-md-md`
 
-## Flex Playground
-To see the Flex in action, you can use the Flex Playground to interactively learn more.
+## Flex 演示（Playground）
+要查看Flex的实际效果，您可以使用Flex演示(Playground)进行交互了解更多信息。
 
 <q-btn push color="brand-primary" icon-right="launch" label="Flex Playground" to="/layout/grid/flex-playground" />
