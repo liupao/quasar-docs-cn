@@ -1,6 +1,6 @@
 ---
-title: Grid Column
-desc: How to use the Quasar grid for columns.
+title: 网格列
+desc: 如何在Quasar中使用网格列。
 related:
   - /layout/grid/introduction-to-flexbox
   - /layout/grid/row
@@ -8,68 +8,72 @@ related:
   - /layout/grid/flex-playground
 ---
 
-In the hope that you've previously read the [Introduction to Flexbox](/layout/grid/introduction-to-flexbox) theory, let's get deeper into Columns.
+希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的**Flex列**(column)。
 
 Utilize breakpoint-specific row classes for equal-height rows. Add any number of unit-less classes for each breakpoint you need and every row will be the same height.
 
-## Equal-height
+## 等高 (Equal-height)
 
-For example, here are two grid layouts that apply to every device and viewport, from xs to xl.
+例如，以下是两个网格布局，它们适用于屏幕宽度在 xs 到 xl 之间的设备上。
 
 <doc-example title="Equal Height Example" file="grid/ColumnEqualWidth" />
 
-## Setting one row height
-Auto-layout for flexbox grid rows also means you can set the height of one row and the others will automatically resize around it. You may use predefined grid classes (as shown below) or inline heights. Note that the other rows will resize no matter the height of the center row.
+## 设置一行高度
+Flexbox网格行的自动布局还意味着您可以设置其中一行的宽度，其他行的宽度将自动调整。 您可以使用预定义的网格类（如下所示）或内联宽度。 请注意，无论中间行的宽度如何改变，其他行都会跟着调整大小。
 
 <doc-example title="Setting one row height" file="grid/ColumnRowWidth" />
 
-## Variable height content
-Using the `col-{breakpoint}-auto` classes, rows can size itself based on the natural height of its content. This is super handy with single line content like inputs, numbers, etc. This, in conjunction with horizontal alignment classes, is very useful for centering layouts with uneven row sizes as viewport height changes.
+## 可变高度内容
+使用 `col-{breakpoint}-auto` 类，行可以根据其内容的自然宽度调整自身大小。 这对于单行内容（如输入、数字等）非常方便（请参阅此页面上的最后一个示例）。 结合水平对齐类，这对于在视口宽度变化时行大小不均匀的居中布局非常有用。
 
 <doc-example title="Variable height content" file="grid/ColumnVariableWidth" />
 
-## Responsive classes
+## 响应式类
 
-The grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your rows on extra small, small, medium, large, or extra large devices however you see fit.
+网格系统拥有五个预定义的断点类，用于构建复杂的响应式布局。它们分别对应超小型、小型、中型、大型和超大型屏幕设备。你可以使用它们在不同的设备上适配合适的列大小。
 
-### All breakpoints
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized row; otherwise, feel free to stick to .col.
+### 断点列表
+对于从最小的设备到最大的设备都相同的网格，请使用 `.col` 和 `.col-*` 类。 需要特别大的列时，请为 col 类指定数字；否则，请坚持使用 `.col`。
 
 <doc-example title="All breakpoints" file="grid/ColumnAllBreakpoints" />
 
-### Mix and match
-Don’t want your rows to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+### 混合匹配
+
+不想让您的列简单地堆叠在某些网格层中吗？ 根据需要为每个层使用不同类的组合。 请参阅下面的示例，以更好地了解所有工作原理。
 
 <doc-example title="Mix and match" file="grid/ColumnMixAndMatch" />
 
-### Alignment
-Use flexbox alignment utilities to vertically and horizontally align columns.
+### 对齐
 
-<doc-example title="Horizontal alignment" file="grid/ColumnHorizontalAlignment" />
+使用 flexbox 对齐工具可控制垂直和水平方向的对齐方式。
 
-<doc-example title="Vertical alignment" file="grid/ColumnVerticalAlignment" />
+<doc-example title="水平对齐" file="grid/ColumnHorizontalAlignment" />
 
-::: tip
-There is also the convenience `flex-center` CSS class which is equivalent to `items-center` + `justify-center`. Use it along with `flex`, `row` or `column`.
+<doc-example title="垂直对齐" file="grid/ColumnVerticalAlignment" />
+
+::: tip 提示
+有一个更方便的 CSS 类： `flex-center` 。它等于`items-center` + `justify-center`。使用时需要搭配 `flex`， `row` 或者 `column`使用。
 :::
 
-### Wrapping
-If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+### 换行
+如果在一行中放置超过12列，则每组额外的列将作为一个单元换行到新行上。
 
 <doc-example title="Wrapping" file="grid/ColumnRowWrapping" />
 
-### Reordering
+### 排序
 
 <doc-example title="Reverse" file="grid/ColumnReverse" />
 
 <doc-example title="Flex order" file="grid/ColumnFlexOrder" />
 
-### Nesting
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+### 嵌套
+
+要使用默认网格嵌套您的内容，请在现有的 `.col-sm-*` 列中添加一个新的 `.row` 和一组 `.col-sm-*` 列。 嵌套行应包括一组总计不超过12个或更少的列（不需要全部使用12个可用列）。
 
 <doc-example title="Nesting" file="grid/ColumnNesting" />
 
-## Flex Grid Playground
-To see the Flex in action, you can use the Flex Playground to interactively learn more.
+## Flex 演示 （Playground）
+要查看Flex的实际效果，您可以使用Flex演示（Playground）进行交互学习。
+
 
 <q-btn push color="brand-primary" icon-right="launch" label="Flex Playground" to="/layout/grid/flex-playground" />
