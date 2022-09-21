@@ -1,6 +1,6 @@
 <template>
   <div class="q-px-xl q-py-md" style="max-width: 500px">
-    <p>.q-col-gutter with styling on children</p>
+    <p>.q-col-gutter 将样式设置在子元素上</p>
     <div class="row">
       <div class="col bg-red-4 q-mt-lg">
         <div class="row q-col-gutter-lg">
@@ -13,7 +13,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-col-gutter with styling on the element inside children</p>
+    <p>.q-col-gutter 将样式设置在子元素内的元素中</p>
     <div class="row">
       <div class="col bg-red-4">
         <div class="row q-col-gutter-lg">
@@ -28,7 +28,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-col-gutter with direct QBtn children</p>
+    <p>.q-col-gutter 直接使用 QBtn 作为子元素</p>
     <div class="row">
       <div class="col bg-red-4 q-mt-lg">
         <div class="row q-col-gutter-lg">
@@ -39,7 +39,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-col-gutter with QBtn inside children</p>
+    <p>.q-col-gutter 将 QBtn 放在子元素中作为子元素的子元素</p>
     <div class="row">
       <div class="col bg-red-4">
         <div class="row q-col-gutter-lg">

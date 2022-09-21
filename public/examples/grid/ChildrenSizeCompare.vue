@@ -1,6 +1,6 @@
 <template>
   <div class="q-px-xl q-py-md" style="max-width: 500px">
-    <p>.q-gutter and unsized children</p>
+    <p>.q-gutter 和未指定大小的子元素</p>
     <div class="row">
       <div class="col bg-red-4">
         <div class="row q-gutter-lg">
@@ -13,7 +13,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-col-gutter and unsized children</p>
+    <p>.q-col-gutter 和未指定大小的子元素</p>
     <div class="row">
       <div class="col bg-red-4 q-mt-lg">
         <div class="row q-col-gutter-lg">
@@ -26,7 +26,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-gutter and .col-6 sized children - 2 .col-6 adds up to <strong>more than 100%</strong></p>
+    <p>.q-gutter 大小为 .col-6 的子元素 - 两个 .col-6 加起来会 <strong>超过 100%</strong></p>
     <div class="row">
       <div class="col bg-red-4">
         <div class="row q-gutter-lg">
@@ -39,7 +39,7 @@
 
     <q-separator class="q-my-md" />
 
-    <p>.q-col-gutter and .col-6 sized children - 2 .col-6 adds up to <strong>100%</strong></p>
+    <p>.q-col-gutter 大小为 .col-6 的子元素 - 两个 .col-6 加起来会 <strong>100%</strong></p>
     <div class="row">
       <div class="col bg-red-4 q-mt-lg">
         <div class="row q-col-gutter-lg">
