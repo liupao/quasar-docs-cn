@@ -243,23 +243,23 @@
             "path": "introduction-to-flexbox"
           },
           {
-            "name": "Grid Row",
+            "name": "Grid Row 行",
             "path": "row"
           },
           {
-            "name": "Grid Column",
+            "name": "Grid Column 列",
             "path": "column"
           },
           {
-            "name": "Grid Gutter",
+            "name": "Grid Gutter 间隔",
             "path": "gutter"
           },
           {
-            "name": "Flexbox patterns",
+            "name": "Flexbox 技巧",
             "path": "flexbox-patterns"
           },
           {
-            "name": "Flex Playground",
+            "name": "Flex 演示",
             "path": "flex-playground"
           }
         ]
