@@ -5,10 +5,10 @@
         color="secondary"
         @click="toggleFullscreen"
         :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'"
-        :label="$q.fullscreen.isActive ? 'Exit Fullscreen' : 'Try playground in Fullscreen'"
+        :label="$q.fullscreen.isActive ? '退出全屏' : '全屏体验'"
       />
     </div>
-    <div class="text-subtitle2 q-pb-md">Parent Properties (container)</div>
+    <div class="text-subtitle2 q-pb-md">父容器的属性设置 (container)</div>
     <div class="row wrap justify-start content-stretch">
       <div class="col-lg-2 col-xs-6">
         <q-select color="blue-12" v-model="group.containerGroup" :options="containerOptions" label="Container" emit-value map-options dense options-dense />
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="text-weight-medium q-mt-sm">Container Classes</div>
+    <div class="text-weight-medium q-mt-sm">容器使用的 CSS 类</div>
     <q-input filled v-model="classes" dense readonly class="q-py-sm">
       <template #append>
         <copy-button :text="classes" />
@@ -38,7 +38,7 @@
     </q-input>
 
     <div class="text-subtitle2 float-left">
-      Results <span class="text-weight-thin">(children: {{ group.children.length }}/10)</span>
+      生成的结果 <span class="text-weight-thin">(children: {{ group.children.length }}/10)</span>
     </div>
 
     <q-btn class="float-right" round dense flat :icon="mdiShareVariant" @click="share">
@@ -48,7 +48,7 @@
       <q-tooltip>Edit in Codepen</q-tooltip>
     </q-btn>
 
-    <q-btn class="float-right" label="Add Child" :icon="mdiPlus" dense flat :disabled="group.children.length >= 10" @click="addChild" />
+    <q-btn class="float-right" label="添加子元素" :icon="mdiPlus" dense flat :disabled="group.children.length >= 10" @click="addChild" />
     <div class="row full-width bg-blue-grey-2" style="min-height: 400px">
       <div id="parent" :class="classes" style="overflow: hidden;">
         <child v-for="(child, index) in group.children" :key="index"
@@ -62,14 +62,14 @@
       </div>
     </div>
 
-    <div class="text-weight-medium q-mt-sm">Child Classes</div>
+    <div class="text-weight-medium q-mt-sm">子元素的 CSS 类</div>
     <q-input filled v-model="group.childClasses" dense readonly class="q-py-sm">
       <template #append>
         <copy-button :text="group.childClasses" />
       </template>
     </q-input>
 
-    <div class="text-weight-medium q-mt-sm">Child Styles</div>
+    <div class="text-weight-medium q-mt-sm">子元素设置的样式</div>
     <q-input filled v-model="group.childStyles" dense readonly class="q-py-sm">
       <template #append>
         <copy-button :text="group.childStyles" />
