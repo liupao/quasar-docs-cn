@@ -129,7 +129,7 @@ export default {
   setup (props) {
     useMeta(
       props.metaDesc !== void 0
-        ? { title: props.metaTitle, meta: getMeta(props.metaTitle + ' | Quasar Framework', props.metaDesc) }
+        ? { title: props.metaTitle, meta: getMeta(props.metaTitle + ' | Quasar 中文文档', props.metaDesc) }
         : { title: props.metaTitle }
     )
 

@@ -34,7 +34,7 @@ export default {
       return {
         title,
         meta: getMeta(
-          title + ' | Quasar Framework',
+          title + ' | Quasar 中文文档',
           `Example of a Quasar layout that looks like ${$route.meta.title}`
         )
       }

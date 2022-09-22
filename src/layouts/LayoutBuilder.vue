@@ -393,7 +393,7 @@ export default {
       title: 'Layout Builder',
 
       meta: getMeta(
-        'Layout Builder | Quasar Framework',
+        'Layout Builder | Quasar 中文文档',
         'Tool to build Quasar layouts. Configure the layout parts then export the code.'
       )
     })
