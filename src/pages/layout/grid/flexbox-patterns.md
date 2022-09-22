@@ -1,6 +1,6 @@
 ---
-title: Flexbox Patterns
-desc: Common recipes for working with flexbox CSS is and how it can be used in a Quasar App.
+title: Flexbox 技巧
+desc:  flexbox CSS的常见技巧，以及如何在Quasar app中使用
 related:
   - /layout/grid/introduction-to-flexbox
   - /layout/grid/row
@@ -9,10 +9,11 @@ related:
   - /layout/grid/flex-playground
 ---
 
-Here are some common patterns for using [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Some more info can be found at [Tobias Ahlin Blog](https://tobiasahlin.com/blog/).
+下面是一些使用 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的常见技巧。更多信息请访问 [Tobias Ahlin Blog](https://tobiasahlin.com/blog/) 博客
 
-## Flex row / column break
-You can define a CSS class that would force the element it is applied on to create a row / column break in a flex layout.
+## 分栏
+
+您可以定义一个CSS类，该类将强制应用它的元素在flex布局中创建一个行/列的分栏。
 
 ```sass
 .flex-break
@@ -24,10 +25,11 @@ You can define a CSS class that would force the element it is applied on to crea
   .flex-break
     width: 0 !important
 ```
-Take care not to use `no-wrap` when defining the flex container, and insert a `div` with class `flex-break` where you need.
+
+注意在定义 flex 容器时，不要使用 `no-wrap`，并在有需要的地方插入带有 `flex-break` 类的 `div`。
 
 ::: tip
-You can use `q-py-##` on row breaking elements or `q-px-##` on column breaking elements to increase the space.
+您可以在 `flex-break` 元素上使用  `q-py-##` 或 `q-px-##` 来增加间隔空间。
 :::
 
 ```html
@@ -43,22 +45,23 @@ You can use `q-py-##` on row breaking elements or `q-px-##` on column breaking e
 </div>
 ```
 
-<doc-example title="Row break" file="grid/BreakRow" />
+<doc-example title="行分栏" file="grid/BreakRow" />
 
 ::: warning
-When using `column` type flex you must define a height for the container. The height must be large enough to hold the longest column.
+使用 `column` 类型的 flex 时，必须定义容器的高度。高度必须足以容纳最长的列。
 :::
 
-<doc-example title="Column break" file="grid/BreakColumn" />
+<doc-example title="列分栏" file="grid/BreakColumn" />
 
-## Masonry-like layout
-When using a `column` type flex with multiple columns the visual order of the elements will be in vertical columns. Sometimes you want the order to follow the rows in the layout, and in order to achieve this you can use a combination or custom order CSS styles and column break elements.
+## 瀑布流布局
+
+当对多个列使用 `column` 类型的flex时，元素的视觉顺序是垂直布局。有时，你希望它们的顺序跟随布局中的行，可以通过搭配使用自定义顺序的 CSS 样式和上述分栏元素来实现这一点。
 
 ::: warning
-You must know how many columns you want use for the layout. Also for best visual aspect the elements in the layout should be close in height one to the others.
+您必须知道要为布局使用多少列。同样，为了获得最佳视觉效果，布局中的元素应该高度接近其他元素。
 :::
 
-The general CSS formula for `$x` number of columns is:
+`$x` 列数的一般CSS公式为：
 
 ```scss
 $x: 3;
@@ -74,7 +77,7 @@ $x: 3;
 }
 ```
 
-Example, supossing you want a 4 column layout:
+例如，如果您想要4列布局：
 
 ```sass
 .item:nth-child(4n+1)
@@ -87,13 +90,14 @@ Example, supossing you want a 4 column layout:
   order: 4
 ```
 
-For the HTML there are some requirements that should be followed:
-- the flex column container must have a height defined
-- the column breaking elements must be placed at the start
-- the column breaking elements must be as many as the columns
-- the first column breaking element must be hidden (class `hidden` or style `display: none`)
+对于HTML，应遵循以下一些要求：
 
-Example, supossing you want a 4 column layout:
+- flex列容器必须定义高度
+- 元素必须放在起始列
+- 分栏元素必须与列的数量相同
+- 第一个分栏元素必须隐藏（使用 `hidden` 类或 `display: none` 样式）
+
+例如，如果您想要4列布局：
 
 ```html
 <div class="column">
@@ -109,10 +113,11 @@ Example, supossing you want a 4 column layout:
 </div>
 ```
 
-<doc-example title="Masonry" file="grid/Masonry" />
+<doc-example title="瀑布流" file="grid/Masonry" />
 
-## Masonry with pseudo selectors to break rows / columns
-When it's not easy or not possible to insert the elements for row / column break and you need 2 or 3 rows / column you can use pseudo selectors.
+## 使用伪类选择器来分栏瀑布流
+
+当不容易或不可能插入上述分栏元素，且需要分栏2或3行/列时，可以使用伪选择器。
 
 ```sass
 .container-class
@@ -140,4 +145,4 @@ When it's not easy or not possible to insert the elements for row / column break
       order: 2
 ```
 
-<doc-example title="Masonry like table grid" file="grid/MasonryTableGrid" />
+<doc-example title="表格式的瀑布流" file="grid/MasonryTableGrid" />

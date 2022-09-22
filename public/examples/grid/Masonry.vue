@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md">
 
-    <q-btn class="q-mb-md" color="primary" label="Regenerate layout" @click="onClick" />
+    <q-btn class="q-mb-md" color="primary" label="重新生成布局" @click="onClick" />
 
     <div class="column example-container">
       <div class="flex-break hidden"></div>
