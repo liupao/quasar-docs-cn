@@ -13,7 +13,7 @@ related:
 Gutter Quasar CSS 类提供了一种将元素(尤其是在 [网格行中](/layout/grid/row))彼此等距隔开的简便方法。
 
 ## 类型
-根据不同的使用情况，gutter主要有两种类型：`q-gutter-{size}`和`q-col-gutter-{size}`。 第一种类型是在用在彼此隔开的元素未使用 `col-*` 或 `offset-*` 类指定宽度时，否则使用后一种类型。
+根据不同的使用情况，gutter主要有两种类型：`q-gutter-{size}` 和  `q-col-gutter-{size}`。 第一种类型是在用在彼此隔开的元素未使用 `col-*` 或 `offset-*` 类指定宽度时，否则使用后一种类型。
 
 ::: tip
 后缀（`-none`、 `-xs`、 `-sm`、 `-md`、 `-lg`、 `-xl`）不是指设备屏幕尺寸，而是指元素之间的 gutter（间隔） 尺寸。

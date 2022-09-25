@@ -8,9 +8,11 @@ related:
   - /layout/grid/flex-playground
 ---
 
-希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的**Flex列**(column)。
+希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的 **Flex 列**(column)。
 
-Utilize breakpoint-specific row classes for equal-height rows. Add any number of unit-less classes for each breakpoint you need and every row will be the same height.
+为父容器添加 `.column` 类后开启一个 Flex 列，为每个子元素添加一个 `.col-*` 类来瓜分父容器的高度，若每个子元素都使用不带数字的 `.col` 类则所有子元素都等高，它们会平分父容器的高度。（此段不属于官方文档，下面是英文原文）
+
+Utilize breakpoint-specific row classes for equal-height rows. Add any number of unit-less classes for each breakpoint you need and every row will be the same height.（翻译不通）
 
 ## 等高 (Equal-height)
 
@@ -19,14 +21,14 @@ Utilize breakpoint-specific row classes for equal-height rows. Add any number of
 <doc-example title="Equal Height Example" file="grid/ColumnEqualWidth" />
 
 ## 设置一行高度
-Flexbox网格行的自动布局还意味着您可以设置其中一行的宽度，其他行的宽度将自动调整。 您可以使用预定义的网格类（如下所示）或内联宽度。 请注意，无论中间行的宽度如何改变，其他行都会跟着调整大小。
+Flexbox网格行的自动布局还意味着您可以设置其中一行的高度，其他行的高度将自动调整。 您可以使用预定义的网格类（如下所示）或内联高度。 请注意，无论中间行的高度如何改变，其他行都会跟着调整大小。
 
-<doc-example title="Setting one row height" file="grid/ColumnRowWidth" />
+<doc-example title="设置一行高度" file="grid/ColumnRowWidth" />
 
 ## 可变高度内容
 使用 `col-{breakpoint}-auto` 类，行可以根据其内容的自然宽度调整自身大小。 这对于单行内容（如输入、数字等）非常方便（请参阅此页面上的最后一个示例）。 结合水平对齐类，这对于在视口宽度变化时行大小不均匀的居中布局非常有用。
 
-<doc-example title="Variable height content" file="grid/ColumnVariableWidth" />
+<doc-example title="可变高度内容" file="grid/ColumnVariableWidth" />
 
 ## 响应式类
 

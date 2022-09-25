@@ -8,12 +8,11 @@ related:
   - /layout/grid/flex-playground
 ---
 
-希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的**Flex行**(Rows)。
+希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的 **Flex 行**(Rows)。
 
+为父容器添加 `.row` 类后开启一个 Flex 行，为每个子元素添加一个 `.col-*` 类来瓜分父容器的宽度，若每个子元素都使用不带数字的 `.col` 类则所有子元素都等宽，它们会平分父容器的宽度。（此段不属于官方文档，下面是英文原文）
 
-将特定于断点的列类用于等宽列。为所需的每个断点添加任意数量的无单元类，每列的宽度将相同。
-
-Utilize breakpoint-specific column classes for equal-width columns. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.（翻译不出来）
+Utilize breakpoint-specific column classes for equal-width columns. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.（翻译不通）
 
 ## 等宽
 

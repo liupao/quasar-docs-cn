@@ -8,7 +8,7 @@ related:
   - /layout/grid/gutter
   - /layout/grid/flex-playground
 ---
-在 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的帮助下，Quasasr提供了大量的CSS辅助类来帮你构建页面。可以将其想象成在页面中使用行和列的方式来布局。
+在 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的帮助下，Quasasr 提供了大量的 CSS 辅助类来帮你构建页面。可以将其想象成在页面中使用行和列的方式来布局。
 
 Quasar 提供的 Flex CSS 类基于 CSS 的 Flexbox 模块，此模块旨在提供一种更方便的方式来对一个容器中的元素进行布局，对齐以及分配各个元素之间的空间，即使不指定它们的大小，或者大小是动态的。（这也是 flex 这个名字的来源）
 
@@ -32,12 +32,12 @@ Quasar Flex CSS 类可以用在父容器和子元素中，父容器叫做 contai
 
 | CSS 类名 | 描述 |
 | --- | --- |
-| `row` |  开启Flex并将主轴方向设置为水平方向 Flex row |
-| `row inline` | Inline Flex row |
-| `column` | 开启Flex并将主轴方向设置为垂直方向 Flex column |
-| `column inline` | Inline Flex column |
-| `row reverse` | 开启Flex并将 `flex-direction` 设置为 `row-reverse` |
-| `column reverse` | 开启Flex并将 `flex-direction` 设置为 `column-reverse` |
+| `row` |  开启 Flex 并将主轴方向设置为水平方向 Flex row |
+| `row inline` | 内联的 Flex 行 Inline Flex row |
+| `column` | 开启 Flex 并将主轴方向设置为垂直方向 Flex column |
+| `column inline` | 内联的 Flex 列 Inline Flex column |
+| `row reverse` | 开启 Flex 并将 `flex-direction` 设置为 `row-reverse` |
+| `column reverse` | 开启 Flex 并将 `flex-direction` 设置为 `column-reverse` |
 
 示例:
 ```html
@@ -50,9 +50,10 @@ Quasar Flex CSS 类可以用在父容器和子元素中，父容器叫做 contai
 
 ### 默认换行
 默认情况下，所有的行和列都会在内容超出大小后将其折行：
+
 ![Flexbox Direction](https://cdn.quasar.dev/img/flexbox-wrap.svg)
 
-然而如果你不希望这个换行行为，你想所有的内容在一行内自适应大小，那么你可以使用`no-wrap` CSS 类。
+然而如果你不希望这个换行行为，你想所有的内容在一行内自适应大小，那么你可以使用 `no-wrap` CSS 类。
 
 当然还有一个 `reverse-wrap` 类可以使得内容的顺序反转。
 
@@ -65,12 +66,12 @@ Quasar Flex CSS 类可以用在父容器和子元素中，父容器叫做 contai
 ### 对齐
 
 使用下面的 CSS 类来设置**主轴上对齐**方式（下图是主轴为横轴时的示例）。
-当一行中的子元素都不是flex元素或是flex元素但已达到其最大尺寸时，它有助于分配剩下的自由空间。当子元素溢出时，它也对元素的排列起到一定的控制作用。
+当一行中的子元素都不是 flex 元素或是 flex 元素但已达到其最大尺寸时，它有助于分配剩下的自由空间。当子元素溢出时，它也对元素的排列起到一定的控制作用。
 
 ![Flexbox Justify Content](https://cdn.quasar.dev/img/flexbox-main-axis-align---2.svg)
 
 使用下面的 CSS 类来设置**垂直于主轴的方向上的对齐**方式（下图是主轴为横轴时的示例）。
-它们定义了flex容器中的子元素在垂直于主轴的方向上如何对齐。可以将其视为横轴（垂直于主轴）的水平版本
+它们定义了 flex 容器中的子元素在垂直于主轴的方向上如何对齐。可以将其视为横轴（垂直于主轴）的水平版本
 
 ![Flexbox Items Align](https://cdn.quasar.dev/img/flexbox-cross-axis-align.svg)
 
@@ -78,9 +79,7 @@ Quasar Flex CSS 类可以用在父容器和子元素中，父容器叫做 contai
 有一个更方便的 CSS 类： `flex-center` 。它等于`items-center` + `justify-center`。使用时需要搭配 `flex`， `row` 或者 `column`使用。
 :::
 
-接下来的类在横轴上有额外的空间时对齐flex容器的线，类似于水平对齐主轴内的单个元素的方式。
-
-The next classes **align a flex container's lines** within when there is extra space in the cross-axis, similar to how horizontal-* aligns individual items within the main-axis.
+接下来的类在横轴上有额外的空间时对齐 flex 容器的线，类似于单个元素在水平方向上在主轴上的对齐方式。
 
 ![Flexbox Content Align](https://cdn.quasar.dev/img/flexbox-content-align.svg)
 
