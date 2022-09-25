@@ -1,6 +1,6 @@
 ---
-title: Layout Gallery
-desc: Gallery of a few layouts for your Quasar apps.
+title: 布局模板
+desc: 在你的 Quasar 应用中开箱即用的布局模板
 related:
   - /layout/layout
   - /layout/header-and-footer
@@ -10,6 +10,6 @@ components:
   - layout/LayoutGallery
 ---
 
-As a way to help you get started quicker, we've written a few ready Quasar Layouts for you. Please also take time to learn each Quasar component, otherwise you'll be missing a lot of features.
+为了帮助您更快地入门，我们为您编写了一些现成的 Quasar 布局。还请花一些时间来学习每个 Quasar 组件，否则您将缺少很多功能。
 
 <layout-gallery class="q-mt-md" />

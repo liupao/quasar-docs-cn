@@ -53,7 +53,7 @@ QPage 必须由 QPageContainer 封装，而QPageContainer 又必须是 QLayout �
 
 ### 示例
 ::: tip
-由于 QPageContainer和QPage 需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QPageContainer 和 QPage
+由于 QPageContainer 和 QPage 需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QPageContainer 和 QPage
 :::
 
 <doc-example title="基础" file="QPage/Basic" />
