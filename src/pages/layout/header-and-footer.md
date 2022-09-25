@@ -1,6 +1,6 @@
 ---
-title: Layout Header and Footer
-desc: How to use the QHeader and QFooter components. The top and bottom bars of your Quasar app.
+title: 页头和页脚
+desc: 如何使用 QHeader 和 QFooter组件。
 keys: QHeader,QFooter
 related:
   - /layout/layout
@@ -11,8 +11,7 @@ related:
   - /vue-components/bar
 ---
 
-QLayout allows you to configure your views as a 3x3 matrix, containing an optional Header and/or Footer (mostly used for navbar, but can be anything). If you haven’t already, please read [QLayout](/layout/layout) documentation page first.
-
+QLayout 允许您将视图配置为一个 3x3 矩阵，其中包含可选的页眉/页脚（主要用于导航栏，但也可以是别的任何东西）。如果尚未准备好，请先阅读  [QLayout](/layout/layout) 文档页面。
 
 ## QHeader API
 <doc-api file="QHeader" />
@@ -20,42 +19,43 @@ QLayout allows you to configure your views as a 3x3 matrix, containing an option
 ## QFooter API
 <doc-api file="QFooter" />
 
-## Layout Builder
-Scaffold your layout(s) by clicking on the button below.
+## 布局生成器
+点击下面的按钮来搭建您的布局。
 
-<q-btn push color="brand-primary" icon-right="launch" label="Layout Builder" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
+<q-btn push color="brand-primary" icon-right="launch" label="布局生成器" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
 
-## Usage 用法
+## 用法
 ::: tip
-Since the header and footer needs a layout and QLayout by default manages the entire window, then for demoing purposes we are going to use containerized QLayouts. But remember that by no means you are required to use containerized QLayouts for QHeader or QFooter.
+由于页眉和页脚需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QHeader 或 QFooter。
 :::
 
-<doc-example title="Basic" file="QHeader/Basic" />
+<doc-example title="基础" file="QHeader/Basic" />
 
-You can use `glossy` class on toolbars in header and footer.
+您可以在页眉和页脚的工具栏中使用 `glossy` 类。
 
 <doc-example title="Glossy" file="QHeader/Glossy" />
 
-### Various content
+### 各种不同的内容
 
-<doc-example title="Playing with QToolbar" file="QHeader/Extended" />
+<doc-example title="搭配 QToolbar 使用" file="QHeader/Extended" />
 
-<doc-example title="Playing with QBreadcrumb" file="QHeader/Breadcrumbs" />
+<doc-example title="搭配 QBreadcrumb 使用" file="QHeader/Breadcrumbs" />
 
-<doc-example title="Playing with QTabs" file="QHeader/Tabs" />
+<doc-example title="搭配 QTabs 使用" file="QHeader/Tabs" />
 
-### Reveal property
+### Reveal 属性
 
-In the example below, scroll the page to see the QHeader and QFooter behavior.
+在下面的示例中，滚动页面以查看QHeader和QFooter行为。
 
 <doc-example title="Reveal" file="QHeader/Reveal" />
 
-### iOS look and feel
-In the example below, you could use Ionicons icons (v4) with `ion-ios-` prefix for QTabs, which would perfectly match the iOS look and feel.
+### iOS 风格
+在下面的示例中，您可以为 QTab 使用带有 `ion-ios-` 前缀的 Ionicons v4 图标，这将匹配 iOS 的外观风格。
 
-<doc-example title="iOS-like" file="QHeader/LookingIOS" />
+<doc-example title="iOS 风格" file="QHeader/LookingIOS" />
 
-### Desktop app look and feel
-The example below is especially useful if you build an Electron app and you hide the default app frame.
+### 桌面应用外观风格
 
-<doc-example title="Desktop app-like" file="QHeader/AppLike" />
+如果您构建一个 Electron 应用并隐藏默认应用程序边框，则以下示例特别有用。
+
+<doc-example title="桌面应用外观风格" file="QHeader/AppLike" />
