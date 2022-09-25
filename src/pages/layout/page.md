@@ -5,8 +5,7 @@ keys: QPage
 related:
   - /layout/layout
 ---
-
-We will be talking about encapsulating pages within a QLayout. If you haven’t already, please read [QLayout](/layout/layout) documentation page first.
+我们将讨论在 QLayout 中封装页面。 如果尚未准备好，请先阅读  [QLayout](/layout/layout) 文档页面。
 
 ## QPageContainer API
 <doc-api file="QPageContainer" />
@@ -14,31 +13,30 @@ We will be talking about encapsulating pages within a QLayout. If you haven’t 
 ## QPage API
 <doc-api file="QPage" />
 
-## Layout Builder
-Scaffold your layout(s) by clicking on the button below.
+## 布局生成器
+点击下面的按钮来搭建您的布局。
 
-<q-btn push color="brand-primary" icon-right="launch" label="Layout Builder" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
+<q-btn push color="brand-primary" icon-right="launch" label="布局生成器" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
 
-## Usage 用法
+## 用法
 
-A QPage must be encapsulated by QPageContainer, which in turn must be a child of QLayout.
+QPage 必须由 QPageContainer 封装，而QPageContainer 又必须是 QLayout 的子节点。
 
 ```html
 <q-layout>
   ...
   <q-page-container>
     <q-page>
-      <!-- page content -->
+      <!-- 页面内容 -->
     </q-page>
   </q-page-container>
   ...
 </q-layout>
 ```
-
-Usually, the QPageContainer is part of the Layout template (where it contains a `<router-view />` child only), and its content goes into separate vue files under `/src/pages`. If you haven't already, please read [Routing with Layouts and Pages](/layout/routing-with-layouts-and-pages).
+通常情况下，QPageContainer 是 Layout 模板的一部分（它只包含一个`<router-view/>`子元素），其内容进入/src/pages下的单独vue文件中。 如果尚未了解，请阅读[使用布局和页面进行路由]](/layout/routing-with-layouts-and-pages)。
 
 ```html
-<!-- vue file for Layout: -->
+<!-- 布局vue文件: -->
 <q-layout>
   ...
   <q-page-container>
@@ -47,23 +45,24 @@ Usually, the QPageContainer is part of the Layout template (where it contains a 
   ...
 </q-layout>
 
-<!-- vue file for a Page: -->
+<!-- 页面vue文件: -->
 <q-page padding>
-  <!-- page content -->
+  <!-- 页面内容 -->
 </q-page>
 ```
 
-### Example
+### 示例
 ::: tip
-Since QPageContainer and QPage need a layout and QLayout by default manages the entire window, then for demoing purposes we are going to use containerized QLayouts. But remember that by no means you are required to use containerized QLayouts for QPageContainer and QPage.
+由于 QPageContainer和QPage 需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QPageContainer 和 QPage
 :::
 
-<doc-example title="Basic" file="QPage/Basic" />
+<doc-example title="基础" file="QPage/Basic" />
 
-### Style-fn
-A QPage needs a QLayout because QLayout controls all the offsets of a page, keeping account of the space that header/footer/drawer use, according to its `view` property configuration. By default, your QPage component will have a `min-height` CSS property set on it to ensure that the content fills the screen at all times, even when the content is just a few lines.
+### Style-
 
-If you wish to tweak, or even remove this property, you can do so by using the `style-fn` property:
+QPage 需要 QLayout，因为 QLayout 控制页面的所有偏移量，并根据其 `view` 属性配置计算页眉/页脚/抽屉使用的空间。默认情况下，您的 QPage 组件上将设置一个 `min-height` CSS 属性，以确保内容始终填充屏幕，即使内容只有几行也是如此。
+
+如果您想调整甚至删除此属性，可以使用 `style-fn` 属性来实现：
 
 ```html
 <template>
@@ -75,11 +74,11 @@ export default {
   // ...
   methods: {
     myTweak (offset) {
-      // "offset" is a Number (pixels) that refers to the total
-      // height of header + footer that occupies on screen,
-      // based on the QLayout "view" prop configuration
+      // "offset" 是一个数字（像素），
+      //它表示基于 QLayout "view" 属性配置的
+      //屏幕上页眉+页脚的总高度
 
-      // this is actually what the default style-fn does in Quasar
+      // 这实际上是 Quasar 中默认的 style-fn的功能如下
       return { minHeight: offset ? `calc(100vh - ${offset}px)` : '100vh' }
     }
   }
