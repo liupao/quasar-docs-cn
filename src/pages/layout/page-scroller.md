@@ -1,39 +1,38 @@
 ---
 title: Layout QPageScroller
-desc: How to use the QPageScroller component. Places components that will appear on screen after user scrolls the page.
+desc: 如何使用 QPageScroller 组件。将用户滚动后屏幕上出现的组件放置在屏幕上。
 keys: QPageScroller
 related:
   - /layout/layout
   - /layout/page
 ---
 
-The QPageScroller component helps in placing DOM elements / components wrapped by it into a static position within the content area of your QPage, no matter where the user scrolls.
+QPageScroller组件有助于将DOM元素/它包裹的组件放置在QPage内容区域内的静态位置，无论用户在何处滚动。
 
-The great advantage of this is that the elements wrapped by this component will never overlap the layout header, footer or drawer(s), even if those are not configured to be fixed. In the latter case, the position will be offset so that the overlap won't occur.
-Try it out with a non-fixed footer for example. When user reaches bottom of screen and footer comes into view, the component will shift up so it won't overlap with the footer.
+这样做的最大优点是，由该组件包装的元素永远不会与布局页眉、页脚或抽屉重叠，即使这些元素没有配置为固定。在后一种情况下，位置将偏移，因此不会发生重叠。例如，尝试使用非固定页脚。当用户到达屏幕底部并看到页脚时，组件将向上移动，这样它就不会与页脚重叠。
 
-Essentially QPageScroller is very similar to QPageSticky. Whereas a QPageSticky component is always visible, a QPageScroller component only appears after a `scroll-offset` (property) is reached. Once visible, the user can click on it to quickly get back to the top of the page via `duration` property.
+本质上，QPageScroller 与 QPageSticky 非常相似。 QPageSticky 组件始终可见，而QPageScroller 组件仅在达到 `scroll-offset`（属性）之后出现。 一旦可见，用户可以单击它，通过 `duration` 属性快速返回页面顶部。
 
 ## QPageScroller API
 <doc-api file="QPageScroller" />
 
-## Usage 用法
+## 用法
 ::: tip
-Since QPageScroller needs a layout and QLayout by default manages the entire window, then for demoing purposes we are going to use containerized QLayouts. But remember that by no means you are required to use containerized QLayouts for QPageScroller.
+由于 QPageScroller 需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QPageScroller。
 :::
 
 ::: warning
-* In order for QPageScroller to work, it must be placed within a QLayout component.
-* QPageScroller must be the last child element within its parent, so it can display on top of other content
+* 为了使 QPageScroller 起作用，必须将其放置在QLayout 组件内。
+* QPageScroller 必须是其父级中的最后一个子元素，以便它可以显示在其他内容的顶部
 :::
 
-### Basic 基础
+### 基础
 
-<doc-example title="Basic" file="QPageScroller/Basic" />
+<doc-example title="基础" file="QPageScroller/Basic" />
 
-### Expanded
+### 扩展
 
-<doc-example title="Expanded" file="QPageScroller/Expanded" />
+<doc-example title="扩展" file="QPageScroller/Expanded" />
 
 ### Reverse
 
