@@ -1,18 +1,18 @@
 ---
-title: Routing with Layouts and Pages
-desc: How to connect the Vue Router with your Quasar layouts and pages.
+title: 使用布局和页面进行路由
+desc: 如何将 Vue router 和 Quasar的布局相关联。
 ---
-You can benefit from Vue Router's capabilities while structuring your routes with a Quasar Layout. The information below is just a recommendation and not mandatory to follow. Quasar allows you full freedom. Take the lines below only as an example.
+您可以将 Vue Router 与 Quasar 的布局关联起来。本页内容只是建议，不是强制性的。Quasar 给予您充分的使用自由，可以将下面的内容当作简单的参考案例。
 
-[QLayout](/layout/layout) is the component used to encapsulate pages, so that multiple pages will share the same header, drawers and so on. However, you can also configure per page header/footer/drawers, but they all must be children of the QLayout component. In order to understand how this works, you need a little bit of reading on [Vue Router nested routes](https://router.vuejs.org/guide/essentials/nested-routes.html).
+[QLayout](/layout/layout) 是用于封装页面的组件，使得多个页面可以共享相同的页眉、侧滑抽屉菜单等。当然您也可以为每个页面配置不同的页眉/页脚/侧滑菜单，但它们都必须是 QLayout 组件的子项。 为了理解这是如何工作的，您需要阅读 [Vue Router嵌套路由](https://router.vuejs.org/guide/essentials/nested-routes.html)。
 
-To make it more clear, let's take an example. We have one layout ('user') and two pages ('user-feed' and 'user-profile'). We want to configure the website/app routes like this: `/user/feed` and `/user/profile`.
+为了更清楚一点，我们举个例子。假设我们有一个布局，（'user'），它包含两个页面（'user-feed'和'user-profile'）。 我们希望像这样配置网站/应用程序路由： `/user/feed` 和 `/user/profile`。
 
-## Creating Files
+## 创建文件
 
-**Quasar does not enforce a specific folder structure**. The following is just an example. You can put layouts and pages together in a folder, or put pages in your specific folder structure of choice, or create your own layout and page folders. It doesn't matter for Quasar. All that matters is that you reference them correctly in `/src/router/routes.js`.
+**Quasar不会强制特定的文件夹结构**。 以下仅是示例。 您可以将布局和页面一起放在一个文件夹中，或者将页面放到您选择的特定文件夹结构中，或者创建自己的布局和页面文件夹。 对于 Quasar 来说无关紧要。 重要的是您可以在 `/src/router/routes.js` 中正确引用它们。
 
-Let's create the layout and page files. You can use a helper command of Quasar CLI or simply create them yourself.
+让我们创建布局和页面文件。您可以使用 Quasar CLI 的帮助命令，也可以自己创建它们。
 
 ```bash
 $ quasar new layout User
@@ -27,22 +27,24 @@ $ quasar new page Profile Posts
  app:new Make sure to reference it in src/router/routes.js +0ms
 ```
 
-The commands above create the following folder structure:
+上述命令会创建以下文件夹结构：
+
 ```bash
 src/
 ├── layouts
-│   └── User.vue         # our QLayout definition
+│   └── User.vue         # 我们的QLayout定义文件
 └── pages
-    ├── Posts.vue        # page for /user/feed route
-    └── Profile.vue      # page for /user/profile route
+    ├── Posts.vue        # /user/feed路由页面
+    └── Profile.vue       # /user/profile路由页面
 ```
 
-## Defining Routes
-Your Pages (`/src/pages`) and Layouts (`/src/layouts`) are injected into your website/app (and also managed) through Vue Router in `/src/router/routes.js`. Each Page and Layout needs to be referenced there.
+## 定义路由
 
-Example of `routes.js` using lazy-loading:
+您的页面 (`/src/pages`) 和布局(`/src/layouts`) 都通过 `/src/router/routes.js` 中的Vue Router 注入到您的网站/应用程序中。每个页面和布局都需要在此引用。
+
+`routes.js` 示例：
 ```js
-// we define our routes in this file
+// 我们在此文件中定义路由
 
 import LandingPage from 'pages/Landing'
 
@@ -56,10 +58,10 @@ const routes = [
 export default routes
 ```
 
-Example of `routes.js` using on-demand loading:
+使用懒加载/按需加载的 `routes.js` 示例：
 
 ```js
-// we define our routes in this file
+// 我们在此文件中定义路由
 
 const routes = [
   {
@@ -72,15 +74,16 @@ export default routes
 ```
 
 ::: tip
-More in-depth analysis of Lazy loading / code-splitting with [@quasar/app-vite](/quasar-cli-vite/lazy-loading) or [@quasar/app-webpack](/quasar-cli-webpack/lazy-loading).
+关于按需加载和代码拆分在[@quasar/app-vite](/quasar-cli-vite/lazy-loading) / [@quasar/app-webpack](/quasar-cli-webpack/lazy-loading)中有更深入的分析。
 :::
 
 ::: tip
-Configuring routes to use Layouts and Pages basically consists of correctly nesting routes, as we'll see in the next section.
+配置路由以使用 Layouts 和 Pages 基本上由正确的嵌套路由组成，我们将在下一节中看到。
 :::
 
-## Nested Routes
-Real app UIs are usually composed of components that are nested multiple levels deep. It is also very common that the segments of a URL corresponds to a certain structure of nested components, for example:
+## 嵌套路由
+
+真正的应用程序用户界面通常由嵌套在多个级别的组件组成。URL的片段对应于嵌套组件中的特定结构也很常见，例如：
 
 ```
 /user/profile                   /user/posts
@@ -93,9 +96,9 @@ Real app UIs are usually composed of components that are nested multiple levels 
 +------------------+            +-----------------+
 ```
 
-With Vue Router, it is very simple to express this relationship using nested route configurations. We notice some things: both pages need to be wrapped by a User component. Hey, User component is then a Layout!
+使用 Vue Router 的嵌套路由配置表达这种关系非常简单。 我们注意到一些事情：两个页面都需要由用户组件包装。 所以，用户组件就可以看作是一个布局（Layout）！
 
-Since User layout wraps inner pages, they need an injection point. This is supplied by the `<router-view>` component:
+因为用户布局会包装内部页面，可以使用 `<router-view>`来将内部页面注入：
 
 ```html
 <!-- /src/layouts/User.vue -->
@@ -103,7 +106,7 @@ Since User layout wraps inner pages, they need an injection point. This is suppl
   <q-layout>
     ...
 
-    <!-- this is where the Pages are injected -->
+    <!-- 这是页面被注入的地方 -->
     <q-page-container>
       <router-view></router-view>
     </q-page-container>
@@ -122,7 +125,7 @@ Since User layout wraps inner pages, they need an injection point. This is suppl
 </template>
 ````
 
-Our example has some routes specified (/user/profile and /user/posts). **So how can we put everything together now?** We edit the routes file. That's where we will configure routes, tell which components are Layouts and which are Pages and also reference/import them into our app:
+我们的示例中指定了一些路由（/user/profile和/user/posts）。**那么我们现在如何将所有内容组织在一起？** 我们需要编辑路由文件，在这里，我们将配置路由，告诉哪些组件是布局，哪些是页面，并将它们引用/导入到我们的应用程序中：
 
 ```js
 // src/router/routes.js
@@ -135,22 +138,22 @@ const routes = [
   {
     path: '/user',
 
-    // we use /src/layouts/User component which is imported above
+    // 我们使用上面导入的/src/layouts/User组件
     component: User,
 
-    // hey, it has children routes and User has <router-view> in it;
-    // It is really a Layout then!
+    // 它有子路由，并且在它里面用户具有/  `<router-view>`；
+    // 那它就是一个布局！
     children: [
       // Profile page
       {
-        path: 'profile', // here it is, route /user/profile
-        component: Profile // we reference /src/pages/Profile.vue imported above
+        path: 'profile', // 这里是/user/profile路由
+        component: Profile // 我们参考上面导入的/src/pages/Profile.vue
       },
 
       // Posts page
       {
-        path: 'posts', // here it is, route /user/posts
-        component: Posts // we reference /src/pages/Posts.vue imported above
+        path: 'posts', // 这里是/user/posts路由
+        component: Posts // 我们参考上面导入的/src/pages/Profile.vue
       }
     ]
   }
@@ -160,25 +163,22 @@ export default routes
 ```
 
 ::: warning
-Note that nested paths that start with `/` will be treated as a root path. This allows you to leverage component nesting without having to use a nested URL.
+请注意，以 `/` 开头的嵌套路径将被视为根路径。 这使您可以实现组件嵌套，而不必使用嵌套的URL。
 :::
 
-Our routes configuration (`/src/router/routes.js`) should look like this:
-
+我们的路由配置 (`/src/router/routes.js`) 应如下所示：
 ```js
 export default [
   {
     path: '/user',
 
-    // We point it to our component
-    // where we defined our QLayout
+    // 将组件指向QLayout定义文件的目录
     component: () => import('layouts/user'),
 
-    // Now we define the sub-routes.
-    // These are getting injected into
-    // layout (from above) automatically
-    // by using <router-view> placeholder
-    // (need to specify it in layout)
+    // 现在我们定义子路由。
+    // 通过使用`<router-view>`占位符
+    //（需要在布局中指定它）,
+    // 这些子路由正在自动注入（上面的）布局
     children: [
       {
         path: 'feed',
@@ -193,9 +193,9 @@ export default [
 ]
 ```
 
-Please notice a few things:
+注意事项：
 
-* We are using lazy loading of layouts and pages (`() => import(<path>)`). If your website/app is small, then you can skip the lazy loading benefits as they could add more overhead than what it's worth:
+* 我们使用了延迟加载的布局和页面 (`() => import(<path>)`)。如果你的网站/应用程序很小，那么你可以不使用延迟加载，因为使用它可能会增加比它的价值更多的开销：
   ```js
   import UserLayout from 'layouts/user'
   import UserFeed from 'pages/user-feed'
@@ -210,17 +210,16 @@ Please notice a few things:
     ]
   ]
   ```
-* Quasar provides some out of the box Webpack aliases ('layouts' which points to '/src/layouts' and 'pages' which points to '/src/pages'), which are used in the above examples.
-* Pages of a Layout are declared as children of it in the Vue Router configuration so that `<router-view/>` will know what page component to inject. Remember to always use this Vue component whenever your Layout has pages attached to it.
+* Quasar提供了一些开箱即用的Webpack别名('layouts' 指向 '/src/layouts' and 'pages' 指向 '/src/pages')，已用在上面的例子中。
+* 布局的页面需要在 Vue Router 配置中声明为布局的子元素，以便 `<router-view/>` 知道要注入哪个页面组件。请记住，只要您的布局附有页面，始终使用此 Vue 组件。
 
   ```html
   <q-layout>
     ...
     <q-page-container>
-      <!--
-        This is where your pages will get
-        injected into your Layout
-      -->
+    <!--
+      这里是你的页面注入到你的布局的地方
+    -->
       <router-view />
     </q-page-container>
     ...
@@ -230,5 +229,5 @@ Please notice a few things:
 <q-separator class="q-mt-xl" />
 
 ::: tip
-Please check [Vue Router](https://router.vuejs.org/) documentation to fully understand the examples above and how to configure the router and its routes for your app.
+请查看[Vue Router](https://router.vuejs.org/)文档，以全面了解上述示例以及如何为您的应用配置路由管理器及其路由。
 :::
