@@ -1,94 +1,96 @@
 ---
-title: Layout Drawer
-desc: How to use the QDrawer component. The sidebars of your Quasar app.
+title: 布局抽屉
+desc: 如何使用QDrawer组件。Quasar 的侧边栏。
 keys: QDrawer
 related:
   - /layout/layout
   - /vue-components/list-and-list-items
 ---
 
-QLayout allows you to configure your views as a 3x3 matrix, containing optional left-side and/or right-side Drawers. If you haven’t already, please read [QLayout](/layout/layout) documentation page first.
+QLayout 允许您将视图配置为一个 3x3 矩阵，其中包含可选的页眉/页脚（主要用于导航栏，但也可以是别的任何东西）。如果尚未准备好，请先阅读  [QLayout](/layout/layout) 文档页面。
 
-QDrawer is the sidebar part of your QLayout.
+QDrawer 是 QLayout 的侧边栏部分。
 
 ## QDrawer API
 <doc-api file="QDrawer" />
 
-## Layout Builder
-Scaffold your layout(s) by clicking on the button below.
+## 布局生成器
+点击下面的按钮来搭建您的布局。
 
-<q-btn push color="brand-primary" icon-right="launch" label="Layout Builder" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
+<q-btn push color="brand-primary" icon-right="launch" label="布局生成器" href="/layout-builder" target="_blank" rel="noopener noreferrer" />
 
-## Usage 用法
+## 用法
 ::: tip
-* Since QDrawer needs a layout and QLayout by default manages the entire window, then for demoing purposes we are going to use containerized QLayouts. But remember that by no means you are required to use containerized QLayouts for QDrawer.
-* If the QDrawer content also has images and you want to use touch actions to close it, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+* 由于 QDrawer 需要布局，并且默认情况下 QLayout 会管理整个窗口，因此出于演示目的，我们将使用容器化的 QLayouts。 但是请记住，这不代表您也需要将容器化的 QLayouts 用于 QDrawer。
+* 如果 QDrawer 内容也包含图像，并且您想使用触摸操作将其关闭，则可能要向其添加`draggable="false"`，否则本地浏览器的默认行为可能会产生负面影响。
 :::
 
 ::: danger
-By default, QDrawer has touch actions attached to it. If this interferes with your drawer content components, disable it by specifying the Boolean `no-swipe-close` property.
+默认情况下，QDrawer 附带有触摸操作。 如果这干扰了您的侧滑菜单内容组件，请通过指定布尔值       `no-swipe-close` 属性来禁用它。
 :::
 
 ::: warning
-When QDrawer is set into overlay mode, **it will force it to go into fixed position**, regardless if QLayout's "view" prop is configured with  "l/r" or "L/R". Also, **if on iOS platform and QLayout is containerized**, the fixed position will also be forced upon QDrawer due to platform limitations that cannot be overcome.
+当 QDrawer 设置为覆盖(overlay)模式时，QDrawer 将**强制进入固定位置**，无论 QLayout 的“view” 属性是否配置为 “l/r” 或 “L/R”。 另外，如果**在 iOS 平台上并且 QLayout 已容器化**，由于无法克服的平台限制，固定位置也将被强制置于 QDrawer 上。
 :::
 
-### Basic 基础
+### 基础
 
-<doc-example title="Basic" file="QDrawer/Basic" />
+<doc-example title="基础" file="QDrawer/Basic" />
 
-Consider using QItems with routing props (like `to`) below. For demoing purposes these props have not been added as it would break the UMD version.
+考虑将 QItems 与下面的路由属性（如 `to` ）一起使用。 出于演示目的，未添加这些属性，因为它将破坏 UMD 版本。
 
-<doc-example title="With navigation menu" file="QDrawer/Menu" />
+<doc-example title="搭配导航菜单" file="QDrawer/Menu" />
 
-<doc-example title="Seamless menu" file="QDrawer/MenuSeamless" />
+<doc-example title="无边框菜单" file="QDrawer/MenuSeamless" />
 
-<doc-example title="Header Picture" file="QDrawer/HeaderPicture" />
+<doc-example title="顶部图片" file="QDrawer/HeaderPicture" />
 
-### Mini-mode
+### mini（迷你）模式
 
-Drawer can operate in two modes: 'normal' and 'mini', and you can switch between them by using the Boolean `mini` property on QLayoutDrawer.
+侧滑菜单可以在两种模式下运行：“正常” 和 “迷你”，您可以使用 QDrawer 上的布尔 `mini` 属性在它们之间进行切换。
 
 ::: warning
-Please note that **`mini` mode** does not apply when in **mobile** behavior.
+请注意，**mini 模式在 mobile 行为(behavior)下不适用**。
 :::
 
-There are some CSS classes that will help you customize the drawer when dealing with "mini" mode. These are very useful especially when using the "click" trigger:
+在处理 "mini" 模式时，有一些 CSS 类可以帮助您自定义侧滑菜单。尤其是在处理  "click" 触发器时，非常有用：
 
-| CSS Class | Description |
+| CSS 类名 | 描述 |
 | --- | --- |
-| `q-mini-drawer-hide` | Hide when drawer is in "mini" mode. |
-| `q-mini-drawer-only` | Show only when drawer is in "mini" mode. |
+| `q-mini-drawer-hide` | 侧滑菜单处于 "mini"模式时隐藏。 |
+| `q-mini-drawer-only` | 仅在侧滑菜单处于   "mini" 模式时显示。 |
 
-You can also write your own CSS classes based on the fact that QLayoutDrawer has `q-drawer--standard` CSS class when in "normal" mode and `q-drawer--mini` when in "mini" mode. Also, when drawer is in "mobile" behavior, it gets `q-drawer--mobile` CSS class.
+您还可以利用以下特性根据实际情况编写自己的 CSS 类：QLayoutDrawer 在 "normal" 模式下具有`q-drawer--standard` CSS类，在 "mini" 模式下具有 `q-drawer--mini`。此外，当侧滑菜单处于"mobile" 行为时，它会获得 `q-drawer--mobile` CSS类。
 
-#### Mouseover/mouseout trigger
+#### 鼠标移入/移出触发
 
-Consider using QItems with routing props (like `to`) below. For demoing purposes these props have not been added as it would break the UMD version.
+考虑将 QItems 与下面的路由属性（如 `to` ）一起使用。 出于演示目的，未添加这些属性，因为它将破坏 UMD 版本。
 
-<doc-example title="Mini-mode with mouseover/mouseout trigger" file="QDrawer/MiniMouseEvents" />
+<doc-example title="鼠标移入移出触发迷你模式 " file="QDrawer/MiniMouseEvents" />
 
-#### Mini to overlay
+#### 迷你覆盖
 
-The `mini-to-overlay` Boolean property will always set your drawer with fixed position, regardless of your configuration from the `view` prop, but will occupy space on the layout only as wide as when in mini-mode.
+不管您是否使用 `view` 属性进行配置，`mini-to-overlay` 布尔属性始终将您的侧滑菜单设置为固定位置，但仅在迷你模式下会占用布局上的空间。
 
 <doc-example title="Mini to overlay" file="QDrawer/MiniToOverlay" />
 
-#### Click trigger
-In the example below, when in "mini" mode, if the user clicks on Drawer then we switch to normal mode.
+#### 点击触发迷你模式
 
-Consider using QItems with routing props (like `to`) below. For demoing purposes these props have not been added as it would break the UMD version.
+在下面的示例中，当处于 "mini" 模式时，如果用户单击侧滑菜单，则我们将切换到普通模式。
 
-<doc-example title="Mini-mode with click trigger" file="QDrawer/MiniClickEvent" />
+考虑将QItems与下面的路由属性（如to）一起使用。 出于演示目的，未添加这些属性，因为它将破坏UMD版本。
+
+<doc-example title="点击触发迷你模式" file="QDrawer/MiniClickEvent" />
 
 #### Slots
-By default, when in "mini" mode, Quasar CSS hides a few DOM elements to provide a neat narrow drawer. But there may certainly be use-cases where you need a deep tweak. You can use the "mini" Vue slot of QLayoutDrawer just for that. The content of this slot will replace your drawer's default content when in "mini" mode.
+默认情况下，在 "mini" 模式下，Quasar CSS 隐藏一些 DOM 元素以提供整洁的狭窄侧滑菜单。 但是，肯定有一些用例需要您进行深度调整。您可以为此使用QLayoutDrawe r的 "mini" Vue 插槽。 在  "mini" 模式下，此插槽的内容将替换侧滑菜单的默认内容。
 
-<doc-example title="Mini-mode with slot" file="QDrawer/MiniSlot" />
+<doc-example title="使用插槽自定义迷你模式的内容" file="QDrawer/MiniSlot" />
 
-### Overlay mode
-The overlay mode prevents the drawer from occupying space on the layout and rather hover over the page instead. This will always set your drawer with fixed position, regardless of your configuration from the `view` prop.
+### Overlay（覆盖）模式
 
-On the example below, click the menu icon to see the drawer in action. It's best viewed on a desktop with a window of at least 500px width (this is the breakpoint that is set on this demo).
+overlay（覆盖）模式可防止侧滑菜单占用布局上的空间，而是将鼠标悬停在页面上。无论使用  `view` 属性的配置如何，这都将侧滑菜单始终固定在固定位置。
+
+在下面的示例中，单击菜单图标以查看运行中的侧滑菜单。 最好在至少宽度为 500px 的窗口的桌面上查看（这是此演示中设置的断点）。
 
 <doc-example title="Overlay mode" file="QDrawer/OverlayMode" />
