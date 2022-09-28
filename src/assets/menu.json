@@ -762,7 +762,7 @@
     ]
   },
   {
-    "name": "Quasar CLI (with Vite)",
+    "name": "Quasar CLI (Vite 版本)",
     "icon": "build",
     "path": "quasar-cli-vite",
     "children": [
@@ -985,43 +985,43 @@
         "path": "developing-capacitor-apps",
         "children": [
           {
-            "name": "Introduction",
+            "name": "介绍",
             "path": "introduction"
           },
           {
-            "name": "Preparation",
+            "name": "准备",
             "path": "preparation"
           },
           {
-            "name": "Capacitor versions",
+            "name": "Capacitor 版本",
             "path": "capacitor-version-support"
           },
           {
-            "name": "Configuring Capacitor",
+            "name": "配置 Capacitor",
             "path": "configuring-capacitor"
           },
           {
-            "name": "App Icons for Capacitor",
+            "name": "应用图标",
             "path": "app-icons-capacitor"
           },
           {
-            "name": "Capacitor API",
+            "name": "Capacitor 接口",
             "path": "capacitor-api"
           },
           {
-            "name": "Build Commands",
+            "name": "构建命令",
             "path": "build-commands"
           },
           {
-            "name": "Troubleshooting and Tips",
+            "name": "故障排除与提示",
             "path": "troubleshooting-and-tips"
           },
           {
-            "name": "Managing Google Analytics",
+            "name": "管理谷歌分析",
             "path": "managing-google-analytics"
           },
           {
-            "name": "Publishing to Store",
+            "name": "发布到应用商店",
             "path": "publishing-to-store"
           }
         ]
@@ -1183,7 +1183,7 @@
     ]
   },
   {
-    "name": "Quasar CLI (with Webpack)",
+    "name": "Quasar CLI (Webpack 版本)",
     "icon": "build",
     "path": "quasar-cli-webpack",
     "children": [
