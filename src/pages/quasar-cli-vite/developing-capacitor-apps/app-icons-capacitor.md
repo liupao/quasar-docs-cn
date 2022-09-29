@@ -1,32 +1,31 @@
 ---
-title: App Icons for Capacitor
-desc: (@quasar/app-vite) How to manage the app icons for a Quasar hybrid mobile app with Capacitor.
+title: 应用图标
+desc: (@quasar/app-vite) 如何用 Capacitor 管理 Quasar 混合移动应用程序的图标。
 ---
 
+就图标而言，Capacitor 是所有构建目标中最复杂的一个，因为不仅需要将图标放在特定的文件夹中，还需要在两个平台（Android、iOS）的配置文件中注册它们。
 
-Capacitor is one of the most complicated of all of the build targets as far as icons go, because not only do you need to place the icons in specific folders, you also need to register them in config files for both platforms (Android, iOS).
-
-If you discover one file that is new or missing, please [open an issue](https://github.com/quasarframework/quasar/issues).
+如果发现有一个文件是新的或丢失的，请 [打开这个 issue](https://github.com/quasarframework/quasar/issues).
 
 <img src="https://cdn.quasar.dev/img/iconfactory.png" style="float:right;max-width:15%;min-width:240px;padding-top:40px" />
 
-## Icon Genie CLI
+## 图标精灵命令行界面
 
-::: tip
-We highly recommend using the [Icon Genie CLI](/icongenie/introduction), because it consumes a source icon and automatically clones, scales, minifies and places the icons in the appropriate directories for you. When needed, it also tells you what tags you'll need to add to your /index.html file.
+::: tip 提示
+强烈建议使用 [图标精灵命令行界面](/icongenie/introduction)，因为它消耗一个图标源，并自动克隆、缩放、最小化，并把图标放在适当的目录中。当需要时，它还会告诉你需要在 /index.html 文件中添加哪些标签。
 :::
 
-Quickly bootstrap the necessary images with Icon Genie CLI. For a complete list of options, please visit the [Icon Genie CLI](/icongenie/command-list) command list page.
+用图标精灵命令行界面快速启动必要的图像。有关完整的选项清单，请访问 [图标精灵命令行界面](/icongenie/command-list) 的命令清单页面。
 
 ```bash
 $ icongenie generate -m capacitor -i /path/to/source/icon.png [-b /path/to/background.png]
 ```
 
-Depending on what packager (electron-packager or electron-builder) you will be using, please see their docs on how to hook the icons.
+根据将使用的打包器（electron-packager 或 electron-builder），请看他们关于如何勾选图标的文档。
 
-## Manual instructions
+## 使用说明
 
-Unless you are using the Icon Genie app extension, these are the files that you need to replace:
+除非你使用图标精灵应用扩展，否则这些是需要替换的文件：
 
 ```
 .
