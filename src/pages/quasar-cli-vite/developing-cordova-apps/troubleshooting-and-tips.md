@@ -1,41 +1,42 @@
 ---
-title: Cordova Troubleshooting and Tips
-desc: (@quasar/app-vite) Tips and tricks for a Quasar hybrid mobile app with Cordova.
+title: Cordova 的常见问题和技巧
+desc: (@quasar/app-vite) 使用Quasar和Cordova开发混合应用时的常见问题和技巧。
 ---
 
 ## $q.cordova
-While you are developing a Mobile App with Cordova Mode, you can access `$q.cordova` in your Vue files. This is an alias to the global `cordova` Object.
+在使用 Cordova 模式开发移动应用程序时，您可以在Vue 文件中访问 `$q.cordova`。 这是全局 `cordova` 对象的别名。
 
-## Android Tips
+## Android 技巧
 
-### Android remote debugging
-If you are debugging Android Apps, you can use Google Chrome [Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en) through a USB cable attached to your Android phone/tablet. It can be used for emulator too.
+### Android 远程调试
 
-This way you have Chrome Dev Tools directly for your App running on the emulator/phone/table. Inspect elements, check console output, and so on and so forth.
+如果您正在调试Android应用，则可以通过 USB 连接Android手机/平板电脑并使用Google Chrome 远程调试[Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en)。 它也可以用于模拟器。
+
+通过这种方式，您可以直接使用 Chrome 开发工具调试您运行的应用。检查元素、检查控制台输出等等。
 
 ![Android Remote Debugging](https://cdn.quasar.dev/img/remote-debug.png "Android Remote Debugging")
 ![Android Remote Debugging](https://cdn.quasar.dev/img/remote-debug-2.png "Android Remote Debugging")
 
-### Accept Licenses
-If you are having problems getting Android builds to finish and you see a message like:
+### 接受许可
+如果您在完成Android构建时遇到问题，则会看到如下消息：
 
 ```
 > Failed to install the following Android SDK packages as some licenses have not been accepted.
 ```
 
-If this is the case you need to accept ALL the licenses. Thankfully there is a tool for this:
+如果是这种情况，您需要接受所有许可证。 值得庆幸的是，有一个工具可以解决它：
 
 - Linux: `sdkmanager --licenses`
 - macOS: `~/Library/Android/sdk/tools/bin/sdkmanager --licenses`
 - Windows: `%ANDROID_SDK_ROOT%/tools/bin/sdkmanager --licenses`
 
-### Android SDK not found after installation of the SDK
+### 安装完成后报错找不到 Android SDK
 
 ::: warning
-The environmental variable `ANDROID_HOME` has been deprecated and replaced with `ANDROID_SDK_ROOT`. Depending on your version of Android Studio you may need one or the other. It doesn't hurt to have both set.
+环境变量  `ANDROID_HOME`  已被弃用，并被替换为  `ANDROID_SDK_ROOT`。根据您的 Android Studio 版本，您可能需要其中一个，或者干脆直接将两个都设置，也没有什么坏处。
 :::
 
-Some newer Debian-based OS (e.g. ubuntu, elementary OS) might leave you with a `Android SDK not found.` after you installed and (correctly) configured the environment. The output might look similar to this:
+在安装完成并配置环境之后，一些较新的基于 Debian 的操作系统（例如ubuntu，elementary OS）可能会报错：`Android SDK not found.`。 输出结果可能与此类似：
 
 ``` bash
 $ cordova requirements
@@ -50,8 +51,7 @@ Could not find gradle wrapper within Android SDK. Might need to update your Andr
 Looked here: /home/your_user/Android/Sdk/tools/templates/gradle/wrapper
 Error: Some of requirements check failed
 ```
-
-This could have two different reasons: Usually the paths aren't configured correctly. The first step is to verify if your paths are set correctly. This can be done by running the following commands:
+这可能有两个不同的原因：通常环境变量 path 配置不正确。 第一步是验证您的 path 是否设置正确。 这可以通过运行以下命令来完成：
 
 ``` bash
 $ echo $ANDROID_HOME
@@ -60,9 +60,7 @@ $ echo $ANDROID_HOME
 
 $ echo $ANDROID_SDK_ROOT
 ```
-
-The expected output should be a path similar to this `$HOME/Android/Sdk`. After this run:
-
+预期的输出应该是一个类似于这个 `$HOME/Android/Sdk` 的路径。 然后运行：
 
 ``` bash
 $ ls -la $ANDROID_HOME
@@ -71,40 +69,38 @@ $ ls -la $ANDROID_HOME
 
 $ ls -la $ANDROID_SDK_ROOT
 ```
-
-To ensure the folder contains the SDK. The expected output should contain folders like 'tools', 'sources', 'platform-tools', etc.
+确保文件夹包含 SDK。预期的输出应该包含 'tools',  'sources',  'platform-tools' 等文件夹。
 
 ``` bash
 $ echo $PATH
 ```
 
-The output should contain each one entry for the Android SDK 'tools'-folder and 'platform-tools'-tools. This could look like this:
+输出应包含 Android SDK 中的 'tools' 文件夹和 'platform-tools' 文件夹。这可能看起来像这样：
 
 ``` bash
 /home/your_user/bin:/home/your_user/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/your_user/Android/Sdk/tools:/home/your_user/Android/Sdk/platform-tools
 ```
 
-> If you ensured your paths are set correctly and still get the error on `cordova requirements` you can try the following fix: [Replacing the Android Studio 'tools' folder manually](https://github.com/meteor/meteor/issues/8464#issuecomment-288112504)
+> 如果您确定环境变量设置正确，但仍然遇到 cordova requirements 错误，则可以尝试以下修复：[手动替换Android Studio 'tools'文件夹](https://github.com/meteor/meteor/issues/8464#issuecomment-288112504)
 
 ### Android Studio
 
-In Android Studio (if you open it on `/src-cordova/platforms/android`), you will be greeted with a message recommending to upgrade the Gradle version. **DO NOT UPGRADE GRADLE** as it will break the Cordova project. Same goes for any other requested upgrades.
+在 Android Studio 中，系统会提示您升级 Gradle 版本的消息。**请勿升级 GRADLE**，因为它会破坏 Cordova 项目。 其他要求的升级也是如此。
 
-<img src="https://cdn.quasar.dev/img/gradle-upgrade-notice.png" alt="Gradle upgrade" class="q-mb-md fit rounded-borders" style="max-width: 350px">
+<img src="https://cdn.quasar.dev/img/gradle-upgrade-notice.png" alt="Gradle upgrade" class="q-my-md fit rounded-borders" style="max-width: 350px">
 
-If you encounter any IDE errors then click on File > Invalidate caches and restart.
+如果遇到任何 IDE 报错，请单击 File > Invalidate caches 并重新启动。
 
-<img src="https://cdn.quasar.dev/img/gradle-invalidate-cache.png" alt="Gradle upgrade" class="fit rounded-borders" style="max-width: 350px">
+<img src="https://cdn.quasar.dev/img/gradle-invalidate-cache.png" alt="Gradle upgrade" class="q-mt-md fit rounded-borders" style="max-width: 350px">
 
-### Setting up device on Linux
+### 在 Linux 上连接设备
 
-You may bump into `?????? no permissions` problem when trying to run your App directly on an Android phone/tablet.
+当尝试在 Android手机/平板电脑上直接运行您的应用时, 您可能碰到 `?????? no permissions` 问题。
 
-Here's how you fix this:
+以下告诉您如何解决这个问题：
 
 ```bash
-# create the .rules file and insert the content
-# from below this example
+# 创建.rules文件并写入下方的内容
 sudo vim /etc/udev/rules.d/51-android.rules
 sudo chmod 644   /etc/udev/rules.d/51-android.rules
 sudo chown root. /etc/udev/rules.d/51-android.rules
@@ -112,7 +108,7 @@ sudo service udev restart
 sudo killall adb
 ```
 
-The content for `51-android.rules`:
+`51-android.rules`的内容：:
 ```
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0bb4", MODE="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0e79", MODE="0666"
@@ -147,78 +143,78 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="0930", MODE="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="19d2", MODE="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="1bbb", MODE="0666"
 ```
+现在运行 `adb devices` 应该会发现您的设备。
 
-Now running `adb devices` should discover your device.
 
-### Post-build debugging
-There are intermediate states to help with debugging, between `quasar dev` and distributing a completed app. If your app works fine on `quasar dev` but is not running properly after `quasar build`, you have two options:
+### 构建后调试
 
-* go to your `src-cordova` directory and `cordova run [platform]`.
-  * You will be running the final build, but you can still use Chrome DevTools Remote Debugging with a wired connection (see above), to inspect the internal web internals. You cannot do this while running the .apk file.
-  * For more detail, read the Cordova [platform guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-buildjson) and the [CLI reference](https://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html)
-* open Android Studio and watch the Logcat
-  * Here you can watch everything related to the app and its interaction with the underlying Android OS. After opening your Cordova project in Android Studio, go to `Run`...`Debug` from the top menu. Android Studio will ask you to confirm the device or emulator, then will deploy the app. In the bottom window, choose `Logcat` You may want to use the filters to reduce the volume of messages. You should see `[your app id].MainActivity.onCreate()` signifying the app launch, then various messages related to your app functionality.
-  * Note: this should be for experienced Android developers only. If your app is not functioning properly, it is much more likely that `quasar dev` or `cordova run` can reveal the issue.
+在 `quasar dev` 和分发一个完成的应用之间有一些中间状态可以帮助调试。如果您的应用程序在 `quasar dev` 上正常工作但在 `quasar build` 之后运行不正常，您有两个选择：
 
-::: danger Important!
-If you find a bug using one of the above methods, do not edit the output files (probably the `www` folder) directly, as they will soon be overwritten. Go back to your quasar source, fix the bug, then re-run `quasar build`.
+* 转到您的 `src-cordova` 目录然后运行 `cordova run [platform]`.
+  * 您将运行最终构建版本，但您仍然可以通过有线连接（参见上文）使用Chrome DevTools远程调试来检查网页内部。运行.apk文件时无法执行此操作。
+  * 更多有关信息，请参考： Cordova [平台指南](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-buildjson) 和 [CLI reference](https://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html)
+* 打开 Android Studio 并查看 Logcat
+  * 在这里，您可以查看与应用程序及其与底层 Android 操作系统的交互相关的所有日志。在 Android Studio 中打开 Cordova 项目后，从顶部菜单转到 `Run`...`Debug`。Android Studio 会询问您确认设备或模拟器，然后将部署该应用程序。在底部窗口中，选择 `Logcat`。您可能希望使用过滤器来减少消息量。您应该看到 `[your app id].MainActivity.onCreate()`, 这表示应用启动，然后是与您的应用功能相关的各种消息。
+  * 注意：这应该仅适用于有经验的Android开发人员。如果您的应用程序运行不正常，那么 `quasar dev` or `cordova run` 就更有可能提示这个问题。
+
+::: danger 重要!
+如果您使用上述方法之一发现错误，请不要直接编辑输出文件（可能是 `www` 文件夹），因为它们很快就会被覆盖。 回到您的 quasar 源文件，修复 bug，然后重新运行 quasar build。
 :::
 
-## iOS Tips
+## iOS 技巧
 
 ### Device type not found
-If you get this error while running `$ quasar dev -m cordova -T ios`:
+如果在运行 `$ quasar dev -m cordova -T ios` 时出现此错误：
 
 ```
 No target specified for emulator. Deploying to undefined simulator
 Device type "com.apple.CoreSimulator.SimDeviceType.undefined" could not be found.
 ```
-
-Then it means you need to specify an emulator. Depending on your Cordova CLI version, here are some examples:
+那么这意味着您需要指定一个模拟器。 根据您的 Cordova CLI 版本，以下是一些示例：
 
 ```bash
 $ quasar dev -m cordova -T ios -e iPhone-X,12.2
-# or with older versions of Cordova CLI installed on your machine:
+# 或者在您的设备上安装旧版本的Cordova CLI：
 $ quasar dev -m cordova -T ios -e iPhone-X,com.apple.CoreSimulator.SimRuntime.iOS-12-2
 ```
 
-### Enabling modern build
-By default, Xcode modern build for iOS is disabled due to Cordova issues. However, if you know what you are doing and you want to enable it, do so from `/quasar.config.js`:
+### 启用 iOS modern build
+
+默认情况下，由于 Cordova 问题，iOS 的 Xcode modern build 已禁用。如果您明确知道自己需要它，那么可以将其开启，请从 `/quasar.config.js` 执行此操作：
 
 ```js
 cordova: {
   noIosLegacyBuildFlag: true
 }
 ```
+如果您想在您的  "build.json" 文件中明确构建的类型也可以执行上述操作。
 
-The above applies also if you want to specify the build type in your "build.json".
+### iOS 远程调试
+如果您正在调试 iOS 应用程序，则可以通过 USB 连接 iOS手机/平板电脑并使用 Safari 开发人员工具进行远程调试。它也可以用于模拟器。
 
-### iOS remote debugging
-If you are debugging iOS Apps, you can use the Safari developer tools to remotely debug through a USB cable attached to your iOS phone/tablet. It can be used for emulator too.
+这样，您可以直接为在模拟器/手机/桌面上运行的应用程序使用Safari开发人员工具。检查元素、检查控制台输出等等。
 
-This way you have Safari developer tools directly for your App running on the emulator/phone/table. Inspect elements, check console output, and so on and so forth.
+首先启用Safari设置中的  "developer"  菜单选项。 然后，如果您导航到  "developer"  菜单选项，您将看到顶部附近列出了您的模拟器或连接设备。从这里您可以打开开发人员工具。
 
-First enable the "developer" menu option in the Settings of Safari. Then if you navigate to the "developer" menu option you will see your emulator or connected device listed near the top. From here you can open the developer tools.
+### 状态栏和异形屏
 
-### Status bar and notch safe-areas
-Since mobile phones have a status bar and/or notches, your app's styling might need some tweaking when building on Cordova. In order to prevent parts of your app from going behind the status bar, there is a global CSS variable that can be used for creating a "safe-area". This variable can then be applied in your app's top and bottom padding or margin.
+由于移动手机具有状态栏和或异形屏，因此在 Cordova 上构建时，应用程序的样式可能需要进行一些调整。为了防止应用程序的某些部分进入状态栏，有一个全局 CSS 变量可用于创建 “安全区域”。 然后，可以在应用程序的顶部和底部填充或边距中应用此变量。
 
-Quasar has support for these CSS safe-areas by default in QHeader/QFooter and Notify. However it's important to always check your Cordova build on several models to see if all cases of your app are dealing with the safe areas correctly.
+Quasar 默认在 QHeader/QFooter 和 Notify 中支持这些 CSS 安全区域。但是，一定要检查几种型号的移动设备，看看应用程序的所有案例是否都正确处理了安全区域，这一点很重要。
 
-In cases you need to manually tweak your CSS you can do so with:
+如果您需要手动调整您的 CSS，您可以这样做：
 
 ```css
-/* for your app's header */
+/* 处理应用的 header */
 padding-top: constant(safe-area-inset-top); // for iOS 11.0
 padding-top: env(safe-area-inset-top); // for iOS 11.2 +
-/* for your app's footer */
+/* 处理应用的 footer */
 padding-bottom: constant(safe-area-inset-bottom);
 padding-bottom: env(safe-area-inset-bottom);
 ```
+当然你也可以在上面的例子中使用 `margin` 而不是 `padding` 取决于你的应用程序。
 
-Of course you can also use the above example with `margin` instead of `padding` depending on your app.
-
-In order to make sure these are only added when opened on mobile via the Cordova build, you can check for the CSS class `.cordova` which is automatically added to the body by Quasar. Example:
+通过 Cordova 构建后，为了确保仅在在移动设备上打开时添加这些内容，您可使用由 Quasar 提供的 在 body 上的 CSS 类 `.cordova`。 例：
 
 ```css
 body.cordova .my-selector {
@@ -227,8 +223,8 @@ body.cordova .my-selector {
 }
 ```
 
-### Disabling iOS rubber band effect
-When building an iOS app with Cordova and you want to [disable the rubber band effect](https://www.youtube.com/watch?v=UjuNGpU29Mk), add this to your `/src-cordova/config.xml`:
+### 禁用 iOS 的橡皮筋效果
+使用 Cordova 构建 IOS 应用时若想[禁用橡皮筋效果](https://www.youtube.com/watch?v=UjuNGpU29Mk)，添加下述代码到您的`/src-cordova/config.xml`
 
 ```xml
 <preference name="DisallowOverscroll" value="true" />

@@ -109,8 +109,6 @@ $ cordova requirements
 强烈建议切换到 WKWebView（但可选！），因为在 iOS 12.0 中已弃用 UIWebView，如 Cordova 博客文章中所述：
  [https://cordova.apache.org/news/2018/08/01/future-cordova-ios-webview.html](https://cordova.apache.org/news/2018/08/01/future-cordova-ios-webview.html)
 
-**但是，如果要替换默认的webview，请明智地选择。 每个都有自己的注意事项。**确保您访问上面的链接。
-
 **然而, 是否要替换掉默认的 webview，需要仔细斟酌，因为每种方式都有自己的优缺点和注意事项。** 确保您仔细地阅读了上面的文章。
 
 #### 选项 1: Ionic Webview 插件
