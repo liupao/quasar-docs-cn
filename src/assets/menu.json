@@ -1031,15 +1031,15 @@
         "path": "developing-cordova-apps",
         "children": [
           {
-            "name": "Introduction",
+            "name": "安装",
             "path": "introduction"
           },
           {
-            "name": "Preparation",
+            "name": "准备",
             "path": "preparation"
           },
           {
-            "name": "Configuring Cordova",
+            "name": "配置 Cordova",
             "path": "configuring-cordova"
           },
           {
@@ -1047,23 +1047,23 @@
             "path": "app-icons-cordova"
           },
           {
-            "name": "Cordova Plugins",
+            "name": "Cordova 插件",
             "path": "cordova-plugins"
           },
           {
-            "name": "Build Commands",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
-            "name": "Troubleshooting and Tips",
+            "name": "常见问题和技巧",
             "path": "troubleshooting-and-tips"
           },
           {
-            "name": "Managing Google Analytics",
+            "name": "管理 Google 分析",
             "path": "managing-google-analytics"
           },
           {
-            "name": "Publishing to Store",
+            "name": "发布到商店",
             "path": "publishing-to-store"
           }
         ]
