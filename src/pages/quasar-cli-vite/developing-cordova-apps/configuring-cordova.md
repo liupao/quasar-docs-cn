@@ -31,9 +31,7 @@ return {
     androidVersionCode: '..', // string
 
     /**
-     * Enable Xcode modern build even if after considering iOS-Cordova issues.
-     *
-     * 即使考虑到 iOS-Cordova 问题，也启用Xcode modern构建，
+     * 即使考虑到 iOS-Cordova 问题，也启用 Xcode modern build，
      * 如果你明确知道自己需要它，那么可以将其开启，
      * 例如，如果你想在你的“build.json”文件中明确构建的类型。
      *
