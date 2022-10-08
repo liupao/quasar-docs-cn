@@ -1,5 +1,3 @@
-/* global gtag */
-
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
 import routes from './routes'
@@ -39,12 +37,6 @@ export default function () {
     else {
       next()
     }
-  })
-
-  process.env.CLIENT === true && Router.afterEach(to => {
-    gtag('config', 'UA-6317975-6', {
-      page_path: to.path
-    })
   })
 
   return Router
