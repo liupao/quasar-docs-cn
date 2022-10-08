@@ -1,7 +1,7 @@
 {
-  "name": "Quasar v2 Docs",
+  "name": "Quasar v2 中文文档",
   "short_name": "Quasar v2",
-  "description": "Quasar Framework v2 Documentation",
+  "description": "Quasar Framework v2 中文文档",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#000000",
