@@ -1,24 +1,13 @@
-<template lang="pug">
-.relative
-  q-btn(
-    color="brand-primary"
-    round
-    dense
-    flat
-    :icon="mdiContentCopy"
-    @click="copy"
-  )
-    q-tooltip Copy to Clipboard
-
-  transition(
-    enter-active-class="animated fadeIn"
-    leave-active-class="animated fadeOut"
-  )
-    q-badge.absolute(
-      v-show="copied"
-      style="top: 8px; right: 58px;"
-      color="brand-primary"
-    ) Copied to clipboard
+<template>
+  <div class="relative">
+    <q-btn color="brand-primary" round dense flat :icon="mdiContentCopy" @click="copy">
+      <q-tooltip>Copy to Clipboard</q-tooltip>
+    </q-btn>
+    <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+      <q-badge class="absolute" v-show="copied" style="top: 8px; right: 58px" color="brand-primary">Copied to clipboard
+      </q-badge>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -45,7 +34,7 @@ export default {
             timer = null
           }, 2000)
         })
-        .catch(() => {})
+        .catch(() => { })
     }
 
     return {

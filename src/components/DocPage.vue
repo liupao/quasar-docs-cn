@@ -1,92 +1,84 @@
-<template lang="pug">
-q-page.doc-page
-
-  q-badge.doc-page__overline(
-    v-if="overline"
-    :label="overline"
-    color="grey-3"
-    text-color="grey-10"
-  )
-
-  .doc-h1.row.items-start.no-wrap
-    .col.doc-heading#introduction(v-if="title" @click="copyIntroductionHeading")
-      span {{ title }}
-      q-badge.q-ml-sm.doc-page__badge(v-if="badge" color="brand-primary" :label="badge")
-    a.doc-page__top-link.text-brand-primary.flex.flex-center(v-if="noEdit === false", :href="editHref", target="_blank", rel="noopener noreferrer")
-      q-icon(:name="mdiPencil")
-      q-tooltip
-        span 发现了一处错误？ 在此修改
-        q-icon.q-ml-xs(:name="mdiFlash" size="2em")
-
-  .doc-page-nav.text-brand-primary(v-if="related !== void 0")
-    .q-gutter-md.flex
-      router-link.q-link.doc-page-related.rounded-borders.q-pa-md.cursor-pointer.column.justify-center.bg-grey-3(
-        v-for="link in related"
-        :key="link.category + link.path"
-        :to="link.path"
-      )
-        .row.no-wrap.items-center
-          .col
-            .doc-page-nav__categ.text-uppercase {{ link.category || 'Docs' }}
-            .doc-page-nav__name.text-weight-bold {{ link.name }}
-
-          q-icon.q-ml-lg(:name="mdiLaunch")
-
-  slot
-
-  .doc-page-nav.doc-page-nav__footer.text-brand-primary.q-pb-xl(v-if="nav !== void 0")
-    .text-h6.q-pb-md Ready for more?
-    .q-gutter-md.flex
-      router-link.q-link.doc-page-related.doc-page-related-bordered.rounded-borders.q-pa-md.cursor-pointer.column.justify-center.bg-grey-1(
-        v-for="link in nav"
-        :key="link.category + link.path"
-        :to="link.path"
-      )
-        .row.no-wrap.items-center
-          q-icon(
-            :name="link.dir === 'left' ? mdiChevronLeft : mdiChevronRight"
-            v-if="link.dir !== void 0"
-            :class="link.dir === 'right' ? 'order-last q-ml-md' : 'order-first q-mr-md'"
-          )
-
-          .col
-            .doc-page-nav__categ.text-uppercase {{ link.category || 'Docs' }}
-            .doc-page-nav__name.text-weight-bold {{ link.name }}
-
-  .doc-page-footer
-    q-separator.q-mb-sm
-
-    .q-mb-md(v-if="noEdit === false")
-      span 发现了一处错误？
-      doc-link.q-ml-xs(:to="editHref") 类似错别字的小错误可以直接在此修改
-      doc-link.q-ml-xs(:to="issueHref") 发现重大错误或者落后于官方文档可在此提交
-
-    .doc-page-footer__icons.row.items-center.q-gutter-sm
-      a(href="https://github.quasar.dev", target="_blank", rel="noopener")
-        q-icon(:name="fabGithub")
-
-      a(href="https://blog.quasar.dev", target="_blank", rel="noopener")
-        q-icon(:name="mdiPost")
-
-      a(href="https://chat.quasar.dev", rel="noopener", target="_blank")
-        q-icon(:name="mdiChat")
-
-      a(href="https://forum.quasar.dev/", rel="noopener", target="_blank")
-        q-icon(:name="mdiForum")
-
-      a(href="https://twitter.quasar.dev", target="_blank", rel="noopener")
-        q-icon(:name="fabTwitter")
-
-      a(href="https://facebook.quasar.dev", target="_blank", rel="noopener")
-        q-icon(:name="fabFacebook")
-
-      a(href="https://donate.quasar.dev", rel="sponsored", target="_blank")
-        q-icon(:name="mdiCharity")
-
-    div.q-mt-md
-      | <doc-link to="https://github.com/quasarframework/quasar/blob/dev/LICENSE">MIT LICENSE</doc-link> | <doc-link to="https://www.iubenda.com/privacy-policy/40685560">Privacy Policy</doc-link> | <doc-link to="https://github.com/quasarframework/quasar-art">Quasar Artwork</doc-link>
-
-    div <doc-link to="http://beian.miit.gov.cn/">鄂ICP备2022014971号-1</doc-link>
+<template>
+  <q-page class="doc-page">
+    <q-badge class="doc-page__overline" v-if="overline" :label="overline" color="grey-3" text-color="grey-10"></q-badge>
+    <div class="doc-h1 row items-start no-wrap">
+      <div class="col doc-heading" id="introduction" v-if="title"><span>
+        {{ title }}
+      </span>
+        <q-badge class="q-ml-sm doc-page__badge" v-if="badge" color="brand-primary" :label="badge"></q-badge>
+      </div><a class="doc-page__top-link text-brand-primary flex flex-center" v-if="noEdit === false" :href="editHref"
+        target="_blank" rel="noopener noreferrer">
+        <q-icon :name="mdiPencil"></q-icon>
+        <q-tooltip><span>发现了一处错误？ 在此修改</span>
+          <q-icon class="q-ml-xs" :name="mdiFlash" size="2em"></q-icon>
+        </q-tooltip>
+      </a>
+    </div>
+    <div class="doc-page-nav text-brand-primary" v-if="related !== void 0">
+      <div class="q-gutter-md flex">
+        <router-link
+          class="q-link doc-page-related rounded-borders q-pa-md cursor-pointer column justify-center bg-grey-3"
+          v-for="link in related" :key="link.category + link.path" :to="link.path">
+          <div class="row no-wrap items-center">
+            <div class="col">
+              <div class="doc-page-nav__categ text-uppercase">{{ link.category || 'Docs' }}</div>
+              <div class="doc-page-nav__name text-weight-bold">{{ link.name }}</div>
+            </div>
+            <q-icon class="q-ml-lg" :name="mdiLaunch"></q-icon>
+          </div>
+        </router-link>
+      </div>
+    </div>
+    <slot></slot>
+    <div class="doc-page-nav doc-page-nav__footer text-brand-primary q-pb-xl" v-if="nav !== void 0">
+      <div class="text-h6 q-pb-md">Ready for more?</div>
+      <div class="q-gutter-md flex">
+        <router-link
+          class="q-link doc-page-related doc-page-related-bordered rounded-borders q-pa-md cursor-pointer column justify-center bg-grey-1"
+          v-for="link in nav" :key="link.category + link.path" :to="link.path">
+          <div class="row no-wrap items-center">
+            <q-icon :name="link.dir === 'left' ? mdiChevronLeft : mdiChevronRight" v-if="link.dir !== void 0"
+              :class="link.dir === 'right' ? 'order-last q-ml-md' : 'order-first q-mr-md'"></q-icon>
+            <div class="col">
+              <div class="doc-page-nav__categ text-uppercase">{{ link.category || 'Docs' }}</div>
+              <div class="doc-page-nav__name text-weight-bold">{{ link.name }}</div>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+    <div class="doc-page-footer">
+      <q-separator class="q-mb-sm"></q-separator>
+      <div class="q-mb-md" v-if="noEdit === false"><span>发现了一处错误？</span>
+        <doc-link class="q-ml-xs" :to="editHref">类似错别字的小错误可以直接在此修改</doc-link>
+        <doc-link class="q-ml-xs" :to="issueHref">发现重大错误或者落后于官方文档可在此提交</doc-link>
+      </div>
+      <div class="doc-page-footer__icons row items-center q-gutter-sm"><a href="https://github.quasar.dev"
+          target="_blank" rel="noopener">
+          <q-icon :name="fabGithub"></q-icon>
+        </a><a href="https://blog.quasar.dev" target="_blank" rel="noopener">
+          <q-icon :name="mdiPost"></q-icon>
+        </a><a href="https://chat.quasar.dev" rel="noopener" target="_blank">
+          <q-icon :name="mdiChat"></q-icon>
+        </a><a href="https://forum.quasar.dev/" rel="noopener" target="_blank">
+          <q-icon :name="mdiForum"></q-icon>
+        </a><a href="https://twitter.quasar.dev" target="_blank" rel="noopener">
+          <q-icon :name="fabTwitter"></q-icon>
+        </a><a href="https://facebook.quasar.dev" target="_blank" rel="noopener">
+          <q-icon :name="fabFacebook"></q-icon>
+        </a><a href="https://donate.quasar.dev" rel="sponsored" target="_blank">
+          <q-icon :name="mdiCharity"></q-icon>
+        </a></div>
+      <div class="q-mt-md">
+        <doc-link to="https://github.com/quasarframework/quasar/blob/dev/LICENSE">MIT LICENSE</doc-link> | <doc-link
+          to="https://www.iubenda.com/privacy-policy/40685560">Privacy Policy</doc-link> | <doc-link
+          to="https://github.com/quasarframework/quasar-art">Quasar Artwork</doc-link>
+      </div>
+      <div>
+        <doc-link to="http://beian.miit.gov.cn/">鄂ICP备2022014971号-1</doc-link>
+      </div>
+    </div>
+  </q-page>
 </template>
 
 <script>

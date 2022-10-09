@@ -1,23 +1,25 @@
-<template lang="pug">
-.doc-code-container
-  code-prism(:lang="lang" :code="code" :style="style")
-
-  .doc-code-container__copy.absolute
-    copy-button(:text="code")
+<template>
+  <div class="doc-code-container">
+    <code-prism :lang="lang" :code="code" :style="style"></code-prism>
+    <div class="doc-code-container__copy absolute">
+      <copy-button :text="code"></copy-button>
+      <!-- {{code}} -->
+    </div>
+  </div>
 </template>
 
 <script>
 import { computed } from 'vue'
 
 import CodePrism from './CodePrism.js'
-import CopyButton from './CopyButton.vue'
+// import CopyButton from './CopyButton.vue'
 
 export default {
   name: 'DocCode',
 
   components: {
-    CodePrism,
-    CopyButton
+    CodePrism
+    // CopyButton
   },
 
   props: {
