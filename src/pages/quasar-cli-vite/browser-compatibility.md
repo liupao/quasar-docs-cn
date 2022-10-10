@@ -1,11 +1,11 @@
 ---
-title: Browser compatibility
-desc: (@quasar/app-vite) How to handle the browser support with Quasar CLI.
+title: 浏览器兼容性
+desc: (@quasar/app-vite) 如果利用Quasar CLI处理浏览器兼容性。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
 
-In order to configure the browser compatibility for your app, you will need to edit `/quasar.config.js`:
+为了配置应用程序的浏览器兼容性，您需要编辑 `/quasar.config.js` 文件：
 
 ```js
 // quasar.config.js
@@ -16,10 +16,9 @@ build: {
   }
 }
 ```
+根据您的 Quasar 开发模式（SPA/SSR/PWA/Electron/... 等等），不仅有客户端文件（运行在浏览器中），还会有运行在 node.js 环境中的文件，这就是上述 `target` 配置项的用途。
 
-Based on the Quasar Mode that you will be using (SPA/SSR/PWA/Electron/... etc) you will have client-side files (that run in the browser) and possibly Node.js running files. This is what the two keys of `target` Object above are for.
-
-Also, independent of this configuration, you need to decide if you want the [module preload polyfill](https://guybedford.com/es-module-preloading-integrity#modulepreload-polyfill) since all the script tags will be injected as modules. By default, the polyfill is NOT included:
+此外，独立于此配置，您还可决定是否要开启 [模块预加载补丁 polyfill](https://guybedford.com/es-module-preloading-integrity#modulepreload-polyfill)，开启后为所有脚本都注入模块补丁。默认情况下，不开启 polyfill：
 
 ```js
 // quasar.config.js
@@ -28,7 +27,7 @@ build: {
 }
 ```
 
-Furthermore, based on your `/postcss.config.js` file content, your CSS will also pass through `autoprefixer` for which you can configure the browser levels that you are interested in:
+此外，基于您的  `/postcss.config.js` 文件内容，您的 CSS 还将通过 autorefixer 来进行浏览器兼容，您可以为其配置为您感兴趣的浏览器级别：
 
 ```js
 // postcss.config.js
@@ -47,4 +46,4 @@ require('autoprefixer')({
 })
 ```
 
-More info on how to specify `autoprefixer` browser ranges: [browserslist](https://github.com/browserslist/browserslist).
+更多关于 `autoprefixer` 的设置范围[请参考 browserslist](https://github.com/browserslist/browserslist).
