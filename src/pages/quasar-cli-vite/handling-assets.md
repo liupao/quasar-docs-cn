@@ -1,34 +1,35 @@
 ---
-title: App Handling Assets
-desc: (@quasar/app-vite) How to use regular app assets and static assets in a Quasar app.
+title: 应用处理静态资源
+desc: (@quasar/app-vite) Quasar项目如何处理静态（assets和static）资源。
 ---
-You will notice in the project structure we have two directories for assets: `/public/` and `/src/assets/`. What is the difference between them? Some are static assets while the others are processed and embedded by the build system.
+您会注意到在项目结构中我们有两个资源目录：`/public/` 和 `/src/assets/`。他们有什么区别？前者是纯静态资源，后者需要由构建工具打包处理后导入。
 
-So let's try to answer the question above. We'll first talk about using regular assets then we'll see what the difference is for static assets.
+我们先讨论常规资源和静态资源的区别。
 
-## Regular assets - /src/assets
-In `*.vue` components, all your templates and CSS are parsed by `vue-html-loader` and `css-loader` to look for asset URLs. For example, in `<img src="./logo.png">` and `background: url(./logo.png)`, `"./logo.png"` is a relative asset path and will be resolved by Vite as a module dependency.
+## 常规资源 - /src/assets
+在 `*.vue` 组件中，所有的模板和 CSS 都会经过 `vue-html-loader` 和 `css-loader` 进行解析，在解析时会查找其中的资源链接。例如： 在`<img src="./logo.png">` 和 `background: url(./logo.png)`, `"./logo.png"` 中存在相对路径，它们会被 Vite 解析成一个依赖模块。
 
-Since these assets may be inlined/copied/renamed during build, they are essentially part of your source code. This is why it is recommended to place Vite-processed assets inside `/src/assets`, along side other source files. In fact, you don't even have to put them all in `/src/assets`: you can organize them based on the module/component using them. For example, you can put each component in its own directory, with its static assets right next to it.
+由于这些资源可能在构建期间被内联/复制/重命名，因此它们可被看作是源代码的一部分。这也是为什么推荐您将其放在 `/src/assets` 目录下，与其他源码放在一起。实际上，甚至不需要将它们全部都放在 `/src/assets` 目录下，例如，您可以将每个组件需要用的资源跟组件放在一起。
 
-### Asset Resolving Rules
+### 资源解析规则
 
-Relative URLs, e.g. `./assets/logo.png` will be interpreted as a module dependency. They will be replaced with an auto-generated URL based on your Vite output configuration.
+相对路径，例如：`./assets/logo.png`，会被解析为一个依赖模块。它们将根据您的 vite 输出配置将它们替换为自动生成的 URL。
 
-URLs prefixed with `~` are treated as a module request, similar to `import 'some-module/image.png'`. You need to use this prefix if you want to leverage Vite's module resolving configurations. Quasar provides the `assets` alias out of the box, so it is recommended that you use it like this: `<img src="~assets/logo.png">`. Notice `~` in front of 'assets'.
 
-## Static Assets - /public
-Root-relative URLs (e.g. `/logo.png` -- where '/' is your publicPath) or `logo.png` are not processed at all. This should be placed in `public/`. These won't be processed at all. The content of the public folder is simply copied over to the distributable folder as-is.
+前缀为 `~` 的 URL 会被视为模块请求，类似于导入 `import 'some-module/image.png'`。如果要利用 Vite 的模块解析，则需要使用此前缀。所以推荐您这样使用：`<img src="~assets/logo.png">`，注意其中的 `~` 前缀。
+
+## 静态资源 - /public
+绝对路径不会被构建工具处理（例如：`/logo.png` -- 其中 '/' 是您设置的 publicPath）这些资源应该放在 `public/` 目录中。这个目录中的内容不会被处理，在构建时会被简单的被复制到产物目录中。
 
 ::: tip Assets vs Statics
-Files in the "assets" folder are only included in your build if they have a literal reference in one of your Vue files.
-Every file and folder from the "public" folder are copied into your production build as-is, no matter what.
+"assets" 目录中的文件，只有您在 vue 文件中引入并使用了的文件，才会被打包到构建产物中去。
+而 "public" 目录中的文件在构建时全部都会被直接复制到构建产物中去。
 :::
 
 ::: danger
-When not building a SPA/PWA/SSR, then `/public/icons/*` and `/public/favicon.ico` will NOT be embedded into your app because they would not serve any purpose. For example, Electron or Cordova apps do not require those files.
+如果您不是构建 SPA/PWA/SSR 应用，那么 `/public/icons/*` 和 `/public/favicon.ico` 目录中的文件不会被构建到应用中，因为它们不会用于任何目的。例如，Electron 或 Cordova 应用程序不需要这些文件。
 :::
 
-## More info with Vite
+## 更多关于 Vite
 
-Please read Vite's guide [here](https://vitejs.dev/guide/assets.html).
+请阅读 [Vite 文档](https://vitejs.dev/guide/assets.html).
