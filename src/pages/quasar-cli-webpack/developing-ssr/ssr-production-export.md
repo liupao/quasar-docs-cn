@@ -111,7 +111,7 @@ export default ssrProductionExport(({ app, port, isReady }) => {
 })
 ```
 
-## Usage 用法
+## 用法
 
 ::: warning
 * If you import anything from node_modules, then make sure that the package is specified in package.json > "dependencies" and NOT in "devDependencies".

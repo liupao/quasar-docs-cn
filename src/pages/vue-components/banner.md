@@ -11,7 +11,7 @@ QBanner组件创建一个banner元素用于展示一些醒目的信息和一些�
 
 <doc-api file="QBanner" />
 
-## Usage 用法
+## 用法
 
 <doc-example title="Basic" file="QBanner/Basic" />
 

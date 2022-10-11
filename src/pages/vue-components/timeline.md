@@ -17,7 +17,7 @@ QTimeline has 3 layouts:
 ## QTimelineEntry API
 <doc-api file="QTimelineEntry" />
 
-## Usage 用法
+## 用法
 
 ### Basic 基础
 

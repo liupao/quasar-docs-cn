@@ -20,7 +20,7 @@ QToolbar is a component usually part of Layout Header and Footer, but it can be 
 
 <doc-api file="QToolbarTitle" />
 
-## Usage 用法
+## 用法
 
 <doc-example title="Basic" file="QToolbar/Basic" />
 

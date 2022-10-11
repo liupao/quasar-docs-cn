@@ -23,7 +23,7 @@ QAjaxBar是一个用于自动展示Ajax请求进度的组件，当然也可以�
 
 <doc-api file="QAjaxBar" />
 
-## Usage 用法
+## 用法
 QAjaxBar组件默认会自动捕获Ajax调用，然后展示它的进度。(除非你禁止了它的自动捕获)。
 
 

@@ -19,7 +19,7 @@ Please also refer to the [QOptionGroup](/vue-components/option-group) on other p
 
 <doc-api file="QRadio" />
 
-## Usage 用法
+## 用法
 
 ### Standard
 

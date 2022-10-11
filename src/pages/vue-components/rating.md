@@ -10,7 +10,7 @@ Quasar Rating is a Component which allows users to rate items, usually known as 
 
 <doc-api file="QRating" />
 
-## Usage 用法
+## 用法
 
 ### Basic 基础
 

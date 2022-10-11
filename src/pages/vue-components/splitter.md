@@ -15,7 +15,7 @@ The QSplitter component allow containers to be split vertically and/or horizonta
 
 <doc-api file="QSplitter" />
 
-## Usage 用法
+## 用法
 
 ::: warning
 The use of the `before` and `after` slots is required.

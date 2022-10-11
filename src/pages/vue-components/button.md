@@ -17,7 +17,7 @@ Quasar中的按钮组件叫QBtn，它还带有一些额外实用的特性。例�
 
 <doc-api file="QBtn" />
 
-## Usage 用法
+## 用法
 
 ### 标准
 

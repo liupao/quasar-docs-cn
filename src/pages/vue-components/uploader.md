@@ -16,7 +16,7 @@ If all you want is an input file, you might want to consider using [QFile](/vue-
 
 <doc-api file="QUploader" />
 
-## Usage 用法
+## 用法
 
 ::: warning
 QUploader requires a back-end server to receive the files. The examples below will not actually upload.

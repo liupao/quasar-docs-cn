@@ -16,7 +16,7 @@ They are basically [QItem](/vue-components/list-and-list-items) components wrapp
 
 <doc-api file="QExpansionItem" />
 
-## Usage 用法
+## 用法
 
 ### Basic 基础
 

@@ -17,7 +17,7 @@ For handling colors, also check out [Quasar Color Utils](/quasar-utils/color-uti
 
 <doc-api file="QColor" />
 
-## Usage 用法
+## 用法
 
 ### Basic 基础
 

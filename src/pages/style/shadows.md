@@ -4,7 +4,7 @@ desc: Quasar提供了css工具类帮助给DOM添加阴影
 ---
 Quasar提供了css工具类帮助给DOM添加阴影，使用起来简单又高效，并且这些阴影遵循Material Design的设计规范（将阴影分为24个等级，数字越大，阴影越深）
 
-## Usage 用法
+## 用法
 
 | CSS类名 | 描述 |
 | --- | --- |
