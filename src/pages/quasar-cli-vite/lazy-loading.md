@@ -1,16 +1,21 @@
 ---
-title: Lazy Loading / Code Splitting
-desc: (@quasar/app-vite) How to create async chunks in a Quasar CLI with Vite app.
+title: 按需加载/代码拆分
+desc: (@quasar/app-vite)Vite版本的Quasar CLI怎么创建异步加载模块。
 ---
-When your website/app is small, you can load all layouts/pages/components into the initial bundle and serve everything at startup. But when your code gets complex and has many layouts/pages/components, it won't be optimal to do this as it will massively impact loading time. Fortunately, there is a way to solve this.
 
-We'll cover how you can lazy load / code split parts of your app so that they are automatically requested only on demand. This is done through dynamic imports. Let's start with an example and then convert it so that we use lazy loading -- we'll focus this example on loading a page, but the same principle can be applied to load anything (assets, JSONs, ...).
+当您的网站/应用程序很小时，您可以将所有布局/页面/组件都放到一个初始加载包中，并在启动时提供所有内容。
 
-## Lazy-load router pages
-It's normal to use the Vue Router calling static components as below.
+但是，当您的代码变得复杂时，有大量的布局/页面/组件时，这样做并不是最理想的，因为它会影响加载时间。幸运的是，有一种方法可以解决这个问题。
+
+我们将介绍如何通过动态导入来进行按需加载/拆分应用程序的部分代码，以便仅在需要时才自动请求它们。我们将举一个加载页面的例子，但是这种方法也同样适用于别的文件（静态资源，JSON 文件，……）：
+
+## 在定义路由时按需加载页面
+
+如下所示，使用 Vue 路由器调用静态组件是正常的
 
 ::: warning
-Quasar documentation assumes you are already familiar with [Vue Router](https://github.com/vuejs/vue-router). Below it's described only the basics of how to make use of it in a Quasar CLI project. For the full list of its features please visit the [Vue Router documentation](https://router.vuejs.org/).
+Quasar 文档假设您已经熟悉了 [Vue Router](https://github.com/vuejs/vue-router)。
+下面的内容描述了如何在 Quasar CLI 项目中使用路由。更多关于 Vue Router 本身的内容请参考： [Vue Router 文档](https://router.vuejs.org/)。
 :::
 
 ```js
@@ -23,8 +28,7 @@ const routes = [
   }
 ]
 ```
-
-Now let's change this and make the page be loaded on demand only, using dynamic imports:
+现在，让我们使用动态导入来更改此内容，这样，浏览器将仅在需要时再加载此页面：
 
 ```js
 const routes = [
@@ -34,11 +38,11 @@ const routes = [
   }
 ]
 ```
+简单吧？它所做的是为 `/src/pages/SomePage.vue` 创建一个单独的文件块，只有在需要时才加载它。在这个例子中，就是指当用户访问 '/some-page' 路由的时候。
 
-Easy, right? What this does is that it creates a separate chunk for `/src/pages/SomePage.vue` which is then loaded only when it is needed. In this case, when a user visits the '/some-page' route.
+## 按需加载组件
 
-## Lazy-load components
-Normally you would import a component and then register it to the Page, Layout or Component.
+通常情况下，您会导入一个组件，然后将其注册到页面、布局或组件中。
 
 ```html
 <script>
@@ -51,8 +55,7 @@ export default {
 }
 </script>
 ```
-
-Now let's change this and make the component be loaded on demand only, using dynamic imports:
+现在让我们改变这种方式，使用动态导入使组件按需加载：
 ```html
 <script>
 import { defineAsyncComponent } from 'vue'
@@ -64,24 +67,23 @@ export default {
 </script>
 ```
 
-## Lazy-load on the fly
-As you noticed above, we're using dynamic imports (`import('..resource..')`) instead of regular imports (`import Resource from './path/to/resource'`). Dynamic imports are essentially returning a Promise that you can use:
+## ES 的动态导入
+
+正如你在上面注意到的那样，我们使用动态导入（`import('..resource..')`）代替（`import Resource from './path/to/resource'`）。动态导入会返回一个 Promise：
 
 ```js
 import('./categories.json')
   .then(categories => {
-    // hey, we have lazy loaded the file
-    // and we have its content in "categories"
+    // 在此，我们已经按需加载了这个文件，可以访问 "categories" 中的内容
   })
   .catch(() => {
-    // oops, something went wrong...
-    // couldn't load the resource
+    // 出错了，加载资源失败
   })
 ```
 
-## Importing with Vite
+## 使用 Vite 的 import
 
-### Dynamic import statements
+### 动态导入语法
 
 ```js
 const importList = import.meta.glob('./pages/*.vue')
@@ -95,6 +97,6 @@ const routes = Object.keys(importList).map(key => {
 })
 ```
 
-### Other import options
+### import 的其他选项
 
-More info on importing assets with Vite [here](https://vitejs.dev/guide/assets.html).
+更多关于导入资源的知识请参考 [Vite](https://vitejs.dev/guide/assets.html)。

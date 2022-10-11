@@ -795,7 +795,7 @@
         "path": "routing"
       },
       {
-        "name": "懒加载 - 代码拆分",
+        "name": "按需加载 - 代码拆分",
         "path": "lazy-loading"
       },
       {
