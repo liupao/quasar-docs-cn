@@ -1,16 +1,15 @@
 ---
-title: CSS Preprocessors
-desc: (@quasar/app-vite) Sass/SCSS are the out of the box supported css preprocessors in Quasar
+title: CSS 预处理器
+desc: (@quasar/app-vite) Quasar中提供开箱即用的 Sass/SCSS CSS 预处理器。
 related:
   - /style/sass-scss-variables
 ---
 
-**Sass** or **SCSS** (recommending any of the two flavours) are the out of the box supported css preprocessors through Quasar CLI, should you want to use them.
+Quasar CLI 中提供了开箱即用的 **Sass** 或 **SCSS** 支持。
 
-## Configuration
+## 配置
 
-You can configure how your CSS is handled through `/postcss.config.js` and through extending the Vite config:
-
+您可以通过 `/postcss.config.js` 文件和扩展 Vite 配置的方式来配置如何处理您的 CSS。
 ```js
 // quasar.config.js
 
@@ -23,13 +22,13 @@ build: {
 }
 ```
 
-More info: [css.modules](https://vitejs.dev/config/#css-modules), [css.postcss](https://vitejs.dev/config/#css-postcss), [css.preprocessorOptions](https://vitejs.dev/config/#css-preprocessoroptions).
+更多信息请参考：[css.modules](https://vitejs.dev/config/#css-modules), [css.postcss](https://vitejs.dev/config/#css-postcss), [css.preprocessorOptions](https://vitejs.dev/config/#css-preprocessoroptions).
 
-## Usage 用法
-Your Vue files can contain Sass/SCSS code through the `<style>` tag.
+## 用法
+您的 Vue 文件可以通过 `<style>` 标签来包含 Sass/SCSS 代码。
 
 ```html
-<!-- Notice lang="sass" -->
+<!-- 注意 lang="sass" -->
 <style lang="sass">
 div
   color: #444
@@ -38,7 +37,7 @@ div
 ```
 
 ```html
-<!-- Notice lang="scss" -->
+<!-- 注意 lang="scss" -->
 <style lang="scss">
 div {
   color: #444;
@@ -47,7 +46,7 @@ div {
 </style>
 ```
 
-And, of course, standard CSS is also supported:
+当然标准的 CSS 也是支持的：
 
 ```html
 <style>
@@ -58,5 +57,5 @@ div {
 </style>
 ```
 
-## Variables
-Quasar also supplies variables (`$primary`, `$grey-3`, ...and many more) and you can directly use them. Read more about [Sass/SCSS variables](/style/sass-scss-variables).
+## 变量
+Quasar 也提供了一些可以直接使用的变量（如: `$primary`, `$grey-3`, ...）,关于更多信息，请参考：[Sass/SCSS 变量](/style/sass-scss-variables)。
