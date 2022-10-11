@@ -1,14 +1,15 @@
 ---
-title: Commands List
-desc: (@quasar/app-vite) The entire list of Quasar CLI commands.
+title: 命令列表
+desc: (@quasar/app-vite) Quasar CLI 完整的命令列表。
 ---
 
-Familiarize yourself with the list of available commands inside a Quasar project:
+
+请熟悉 Quasar 项目中可用命令的列表：
 
 ``` bash
 $ quasar
 
-  Example usage
+  Example 用法
     $ quasar <command> <options>
 
   Help for a command
@@ -16,74 +17,69 @@ $ quasar
     $ quasar <command> -h
 
   Options
-    --version, -v Print Quasar App CLI version
+    --version, -v 打印 Quasar App CLI 的版本信息
 
   Commands
-    dev, d        Start a dev server for your App
-    build, b      Build your app for production
-    clean, c      Clean all build artifacts
-    new, n        Quickly scaffold page/layout/component/... vue file
-    mode, m       Add/remove Quasar Modes for your App
-    inspect       Inspect Vite/esbuild configs used under the hood
-                    - keeps into account your quasar.config.js
-                      and your installed App Extensions
-    ext, e        Manage Quasar App Extensions
-    run, r        Run specific command provided by an installed
-                    Quasar App Extension
-    describe      Describe a Quasar API (component)
-    test, t       Run @quasar/testing App Extension command
-                    - requires @quasar/testing App Extension to be installed
-                    - this is an alias command for convenience purposes
-    info, i       Display info about your machine and your App
-    help, h       Displays this message
+    dev, d        为您的项目启动一个开发服务
+    build, b      打包构建生产环境下的代码
+    clean, c      清除构建产物目录
+    new, n        快捷创建一个pages/layout/component等模板文件
+    mode, m       为您的项目添加/删除 Quasar 开发模式
+    inspect       检查底层工具的配置项（vite/esbuild）
+                    -可以用于调试您的 quasar.config.js 和安装的扩展
+    ext, e        管理 Quasar 扩展
+    run, r        运行指定的由 Quasar App 扩展提供的命令
+    describe      查看 Quasar 组件的 API
+    test, t       运行 @quasar/testing 扩展的命令
+                    - 需要安装 @quasar/testing
+                    - 这是一个为方便目的的别名命令
+    info, i       显示有关您的机器和应用程序的信息
+    help, h       显示帮助信息
 
-  If the specified command is not found, then "quasar run"
-  will be executed with the provided arguments.
+  如果找不到指定的命令，则会利用输入的参数执行 "quasar run"。
 
-  Commands supplied by @quasar/cli global installation:
+  全局安装的 @quasar/cli 提供的命令：
 
-    upgrade       Check (and optionally) upgrade Quasar packages
-                    from a Quasar project folder
-    serve         Create an ad-hoc server on App's distributables
+    upgrade       需要在 quasar 项目目录中运行，检查当前项目可更新的 Quasar 包
+    serve         为产物目录启动一个静态资源服务器
 ```
 
-See help for any command:
-
+查看某个命令的帮助信息：
 ``` bash
 $ quasar [command name] --help
 ```
 
 ## Upgrade
 
-Check (and optionally) upgrade Quasar packages from a Quasar project folder:
+需要在 quasar 项目目录中运行，检查当前项目可更新的 Quasar 包。
 
 ```bash
-# view all options:
+# 查看所有选项：
 $ quasar upgrade -h
 
-# checks for non-breaking change upgrades and displays them,
-# but will not carry out the install
+# 检查没有破坏性更新的包并展示
+# 但是不会自动安装
 $ quasar upgrade
 
-# checks for pre-releases (alpha/beta):
+# 检查预发布版本的更新：
 $ quasar upgrade -p
 
-# checks for major new releases (includes breaking changes):
+# 检查 major 版本的更新（包括破坏性的更新）
 $ quasar upgrade -m
 
-# to perform the actual upgrade,
-# combine any of the params above and add "-i" (or "--install"):
+# 执行更新
+# 可同时使用上述参数来指定更新何种版本
 $ quasar upgrade -i
 ```
 
-::: warning Note for code editor terminals
-If you're using a code editor terminal instead of the real one, you run `quasar upgrade` and get an error *Command not found* or *@quasar/cli* version appears to be *undefined*, you will need to go to the settings of your code editor terminal and untick the option (or its equivalent) *Add 'node_modules/.bin' from the project root to %PATH%* then restart your code editor.
+::: warning 使用编辑器自带终端时的注意事项
+如果您在使用一个编辑器内置的终端运行 `quasar upgrade` 命令并得到报错: *Command not found* 或 *@quasar/cli* version appears to be *undefined* 时。您需要检查编辑器终端的相关设置： 取消勾选 *Add 'node_modules/.bin' from the project root to %PATH%* 然后重启编辑器。
 :::
 
 ## Info
-The Quasar CLI is equipped with a stable combination of multiple NPM build packages (Vite, Vue, etc) which gets updated frequently after heavy testing.
+Quasar CLI 配备了多个 NPM 包(Vite，Vue 等)的稳定组合，这些软件包在经过大量测试后会频繁更新。
 
-In order for you to see what versions of Node, Quasar CLI, Quasar, Vue (and many others) you are using, issue this command in a Quasar project folder:
+有时为了定位问题，需要查看您的项目中各个包的版本，请在项目根目录中运行以下命令：
 
 ``` bash
 $ quasar info
@@ -94,116 +90,108 @@ $ quasar info
 ```bash
 $ quasar dev -h
 
-  Description
-    Starts the app in development mode (hot-code reloading, error
-    reporting, etc)
+  描述
+    以开发模式启动您的应用（具有热更新，错误报告等功能）
 
-  Usage
+  用法
     $ quasar dev
     $ quasar dev -p <port number>
 
     $ quasar dev -m ssr
 
-    # alias for "quasar dev -m cordova -T ios"
+    # 是 "quasar dev -m cordova -T ios" 命令的别名
     $ quasar dev -m ios
 
-    # alias for "quasar dev -m cordova -T android"
+    # 是 "quasar dev -m cordova -T android" 命令的别名
     $ quasar dev -m android
 
-    # passing extra parameters and/or options to
-    # underlying "cordova" or "electron" executables:
+    # 传递更多的参数和选项给底层的 "cordova" 或 "electron"
     $ quasar dev -m ios -- some params --and options --here
     $ quasar dev -m electron -- --no-sandbox --disable-setuid-sandbox
-    # when on Windows and using Powershell:
+    # 当在 Windows 上使用 Powershell 时：
     $ quasar dev -m ios '--' some params --and options --here
     $ quasar dev -m electron '--' --no-sandbox --disable-setuid-sandbox
 
-  Options
-    --mode, -m       App mode [spa|ssr|pwa|bex|cordova|capacitor|electron] (default: spa)
-    --port, -p       A port number on which to start the application
-    --hostname, -H   A hostname to use for serving the application
-    --help, -h       Displays this message
+  选项
+    --mode, -m       应用模式 [spa|ssr|pwa|bex|cordova|capacitor|electron] (默认值: spa)
+    --port, -p       将应用开发服务运行在哪个端口号上
+    --hostname, -H   用于应用开发服务的主机名（hostname）
+    --help, -h       显示帮助信息
 
-    Only for Cordova mode:
-    --target, -T     (required) App target
+    只在 Cordova 模式下可用的选项：
+    --target, -T     (必填值) 应用平台
                         [android|ios]
-    --emulator, -e   (optional) Emulator name
-                        Examples: iPhone-7, iPhone-X
+    --emulator, -e   (可选值) 模拟器名称
+                        例如：iPhone-7, iPhone-X
                         iPhone-X,com.apple.CoreSimulator.SimRuntime.iOS-12-2
-    --ide, -i        Open IDE (Android Studio / XCode) instead of letting Cordova
-                        booting up the emulator, in which case the "--emulator"
-                        param will have no effect
+    --ide, -i        在 IDE 中打开 (Android Studio / XCode) Cordova 项目，这种情况下 "--emulator" 参数将会失效
 
-    --devtools, -d   Open remote Vue Devtools
+    --devtools, -d   打开远程的 Vue Devtools
 
-    Only for Capacitor mode:
-    --target, -T     (required) App target
+   只在 Capacitor 模式下可用的选项：
+    --target, -T     (必填值) 应用平台
                         [android|ios]
 ```
 
-The Quasar development server allows you to develop your App by compiling and maintaining code in-memory. A web server will serve your App while offering hot-reload out of the box. Running in-memory offers faster rebuilds when you change your code.
+Quasar 开发服务器允许您通过编译和维护内存中的代码来开发应用程序。web服务器将为您的应用程序提供服务，同时提供开箱即用的热重新加载。在内存中运行可以在更改代码时更快地重建。
 
-> Hot Reload is much more than just refreshing your browser when code changes. It skips the refresh and updates your code on the fly, while maintaining your App's state (like your Vue's model data). Please note that there are cases when this is impossible, so the dev webserver will simply refresh your browser. (Always ensure you are running only one instance of Quasar CLI at a time, otherwise Hot-Reload and other stuff will break!)
+> 热重新加载不仅仅是在代码更改时刷新浏览器。它跳过刷新并动态更新代码，同时保持应用程序的状态（如 Vue 的 model 数据）。请注意，在某些特殊情况下，这是不可能的，因此 dev Web 服务器将会刷新您的浏览器。（始终确保一次只运行一个 Quasar CLI 实例，否则热重新服务和其他服务将中断）
 
-Based on what you want to develop, you can start the development server by using "quasar dev" command as follows:
+根据您想要开发的内容，您可以使用 `quasar dev` 命令启动开发服务器，如下所示：
 
 ``` bash
-# Developing a SPA
+# 开发一个 SPA
 $ quasar dev
-# ...or
+# ...或者
 $ quasar dev -m spa
 
-# Developing for SSR
+# 开发一个 SSR
 $ quasar dev -m ssr
 
-# Developing a PWA
+# 开发一个 PWA
 $ quasar dev -m pwa
 
-# Developing a BEX for production
-$ quasar dev -m bex
-
-# Developing a Mobile App (through Cordova)
+# 开发一个手机应用 (通过 Cordova)
 $ quasar dev -m cordova -T [android|ios]
-# or the short form:
+# 或者更短的格式：
 $ quasar dev -m [android|ios]
 
-# Developing an Electron App
+# 开发一个 Electron App
 $ quasar dev -m electron
 
-# Developing a Browser Extension (BEX)
+# 开发一个 BEX 浏览器插件
 $ quasar dev -m bex
 
-# passing extra parameters and/or options to
-# underlying "cordova" or "electron" executables:
+# 传递更多的参数和选项给底层的 "cordova" 或 "electron"
 $ quasar dev -m ios -- some params --and options --here
 $ quasar dev -m electron -- --no-sandbox --disable-setuid-sandbox
-# when on Windows and using Powershell:
+# 当在 Windows 上使用 Powershell 时：
 $ quasar dev -m ios '--' some params --and options --here
 $ quasar dev -m electron '--' --no-sandbox --disable-setuid-sandbox
 ```
 
-If you wish to change the hostname or port serving your App you have 3 options:
-* Edit '/quasar.config.js':
+如果要更改应用程序的主机名或端口，您有 3 个选项：
+* 编辑 '/quasar.config.js':
   ```js
   devServer: {
     host: '...',
     port: ...
   }
   ```
-* Through '-H' (hostname) and '-p' (port) command options.
-* If this is a one time thing, specify the hostname and/or port as an environment variable:
+* 在命令中传入 '-H' (hostname) 和 '-p' (port) 选项。
+* 如果只是一次性配置，还可以通过环境变量来修改：
   ``` bash
   $ PORT=3000 quasar dev
   $ HOSTNAME=1.1.1.14 quasar dev
   ```
 
-If there appears to be an issue with hot reload, you can try two fixes:
-* Change the permissions for the project folder with
+如果热重新加载似乎有问题，可以尝试两种修复方法：
+* 使用更改项目文件夹的权限
 
   ```bash
   sudo chown -R username: .
   ```
-* or run the dev server with root privileges
+* 或使用root权限运行dev服务器
 
   ```bash
   sudo quasar dev
@@ -214,155 +202,151 @@ If there appears to be an issue with hot reload, you can try two fixes:
 ```bash
 $ quasar build -h
 
-  Description
-    Builds distributables of your app.
+  描述
+    打包构建您的应用
 
-  Usage
+  用法
     $ quasar build
     $ quasar build -p <port number>
 
     $ quasar build -m ssr
 
-    # alias for "quasar build -m cordova -T ios"
+    # 是 "quasar build -m cordova -T ios" 命令的别名
     $ quasar build -m ios
 
-    # alias for "quasar build -m cordova -T android"
+    # 是 "quasar build -m cordova -T android" 命令的别名
     $ quasar build -m android
 
-    # passing extra parameters and/or options to
-    # underlying "cordova" executable:
+    # 传递更多的参数和选项给底层的 "cordova"
     $ quasar build -m ios -- some params --and options --here
-    # when on Windows and using Powershell:
+    # 当在 Windows 上使用 Powershell 时：
     $ quasar build -m ios '--' some params --and options --here
 
-  Options
-    --mode, -m      App mode [spa|ssr|pwa|bex|cordova|capacitor|electron] (default: spa)
-    --target, -T    App target
-                      - Cordova (default: all installed)
+  选项：
+    --mode, -m     应用开发模式 [spa|ssr|pwa|bex|cordova|capacitor|electron] (默认值: spa)
+    --target, -T    应用平台
+                      - Cordova (默认值: all installed)
                         [android|ios]
                       - Capacitor
                         [android|ios]
-                      - Electron with default "electron-packager" bundler (default: yours)
-                        [darwin|win32|linux|mas|all]
-                      - Electron with "electron-builder" bundler (default: yours)
-                        [darwin|mac|win32|win|linux|all]
-    --publish, -P   Also trigger publishing hooks (if any are specified)
-                      - Has special meaning when building with Electron mode and using
-                        electron-builder as bundler
-    --debug, -d     Build for debugging purposes
-    --skip-pkg, -s  Build only UI (skips creating Cordova/Capacitor/Electron executables)
-                      - Cordova (it only fills in /src/cordova/www folder with the UI code)
-                      - Capacitor (it only fills in /src/capacitor/www folder with the UI code)
-                      - Electron (it only creates the /dist/electron/UnPackaged folder)
-    --help, -h      Displays this message
+                      - Electron 通过 "electron-packager"（默认） 构建
+                        [darwin|win32|linux|mas|all](默认值: yours)
+                      - Electron 通过 "electron-builder" 构建
+                        [darwin|mac|win32|win|linux|all](默认值: yours)
+    --publish, -P   构建后触发 publishing 钩子（如果指定了的话）
+                      - 如果使用 electron-builder 构建 Electron 此参数还有特殊效果
+    --debug, -d     构建一个可调试的版本
+    --skip-pkg, -s  只构建 UI (跳过创建 Cordova/Capacitor/Electron 应用程序)
+                      - Cordova (只生成 in /src/cordova/www 目录下的UI 文件)
+                      - Capacitor (只生成 in /src/capacitor/www 目录下的UI 文件)
+                      - Electron (只创建 /dist/electron/UnPackaged 目录下的文件)
+    --help, -h      显示帮助信息
 
-    ONLY for Cordova and Capacitor mode:
-    --ide, -i       Open IDE (Android Studio / XCode) instead of finalizing with a
-                    terminal/console-only build
+    只在 Cordova 和 Capacitor 模式下可用的选项：
+    --ide, -i       打开并在 IDE(Android Studio / XCode) 中构建而不是在控制台中构建
 
-    ONLY for Electron mode:
-    --bundler, -b   Bundler (electron-packager or electron-builder)
+    只在 Electron 模式下可用的选项：
+    --bundler, -b   选择构建器 (electron-packager 或者 electron-builder)
                       [packager|builder]
-    --arch, -A      App architecture (default: yours)
-                      - with default "electron-packager" bundler:
-                          [ia32|x64|armv7l|arm64|mips64el|all]
-                      - with "electron-builder" bundler:
+    --arch, -A      应用构建产物格式 App architecture
+                      - 通过 "electron-packager" （默认）打包构建：
+                          [ia32|x64|armv7l|arm64|mips64el|all](默认值：yours)
+                      - 通过 "electron-builder" 打包构建：
                           [ia32|x64|armv7l|arm64|all]
 
-    ONLY for electron-builder (when using "publish" parameter):
-    --publish, -P  Publish options [onTag|onTagOrDraft|always|never]
-                     - see https://www.electron.build/configuration/publish
+    使用 electron-builder 并传入 "publish" 参数时：
+    --publish, -P  发布选项 [onTag|onTagOrDraft|always|never]
+                     - 见 https://www.electron.build/configuration/publish 页面
 ```
 
-The Quasar CLI can pack everything together and optimize your App for production. It minifies source code, extracts vendor components, leverages browser cache and much more.
+Quasar CLI 可以将所有内容打包在一起，并优化您的应用程序构建生产环境下的代码。它会利用压缩代码，提取三方组件，利用浏览器缓存等手动进行优化。
 
 ``` bash
-# Build a SPA for production
+# 构建一个 SPA  用于生产环境
 $ quasar build
 # ...or
 $ quasar build -m spa
 
-# Build a SSR for production
+# 构建一个 SSR  用于生产环境
 $ quasar build -m ssr
 
-# Build a PWA for production
+# 构建一个 PWA  用于生产环境
 $ quasar build -m pwa
 
-# Build a BEX for production
+# 构建一个 BEX  用于生产环境
 $ quasar build -m bex
 
-# Build a Mobile App (through Cordova)
+# 构建一个手机应用，用于生产环境 (通过 Cordova)
 $ quasar build -m cordova -T [android|ios]
-# or the short form:
+# 或者更短的格式：
 $ quasar build -m [android|ios]
 
-# Build an Electron App for production
+# 构建一个 electron 桌面应用，用于生产环境
 $ quasar build -m electron
 
-# passing extra parameters and/or options to
-# underlying "cordova" executable:
+# 传递更多的参数和选项给底层的 "cordova"
 $ quasar build -m ios -- some params --and options --here
-# when on Windows and using Powershell:
+# 当在 Windows 上使用 Powershell 时：
 $ quasar build -m ios '--' some params --and options --here
 
-# Create a production build with ability to debug it
-# (has source-maps and code is NOT minified)
+# 构建一个可调试的版本
+# (带有 source-maps 并且不会压缩代码)
 $ quasar build -d [-m <mode>]
 ```
 
 ## Clean
-Cleans up all the build assets:
+清除所有构建产物：
 
 ``` bash
 $ quasar clean
 ```
 
 ## New
-Generates Components, Pages, Layouts, Vuex Store.
+生成 Components, Pages, Layouts, Vuex Store.
 
 ::: tip
-This command is simply a helper in order to quickly scaffold a page/layout/component/vuex store module. You are not required to use it, but can help you when you don't know how to start.
+这个命令只是一个辅助，用于快速创建一个页面/布局/组件/vuex store 的模板文件。您可以不需要使用它，但当您不知道如何开始时可以帮助您。
 :::
 
 ```bash
 $ quasar new -h
 
-  Description
-    Quickly scaffold a page/layout/component/store module.
+  描述
+    快速创建一个页面/布局/组件/store 的模板文件.
 
-  Usage
+  用法
     $ quasar new <p|page> [-f <option>] <page_file_name>
     $ quasar new <l|layout> [-f <option>] <layout_file_name>
     $ quasar new <c|component> [-f <option>] <component_file_name>
     $ quasar new <b|boot> [-f ts] <boot_name>
     $ quasar new <s|store> [-f ts] <store_module_name>
 
-    # Examples:
+    # 示例:
 
-    # Create src/pages/MyNewPage.vue:
+    # 创建 src/pages/MyNewPage.vue:
     $ quasar new p MyNewPage
 
-    # Create src/pages/MyNewPage.vue and src/pages/OtherPage.vue:
+    # 创建 src/pages/MyNewPage.vue and src/pages/OtherPage.vue:
     $ quasar new p MyNewPage OtherPage
 
-    # Create src/layouts/shop/Checkout.vue
+    # 创建 src/layouts/shop/Checkout.vue
     $ quasar new layout shop/Checkout.vue
 
-    # Create src/layouts/shop/Checkout.vue with TypeScript options API
+    # 创建 src/layouts/shop/Checkout.vue （使用 TypeScript 和 选项式 API 的格式）
     $ quasar new layout -f ts-options shop/Checkout.vue
 
-    # Create a store with TypeScript support
+    # 创建一个 TypeScript 格式的 store
     $ quasar new store -f ts myStore
 
-  Options
-    --help, -h            Displays this message
+  选项：
+    --help, -h            显示帮助信息
 
-    --format -f <option>  (optional) Use a supported format for the template
+    --format -f <option>  (可选的) 为模选择一个支持的格式
                           Option can be:
-                             * ts-options - TS options API
-                             * ts-composition - TS composition API
-                             * ts-class - [DEPRECATED] TS class style syntax
-                             * ts - use for TS boot file and store modules only
+                             * ts-options - TS 选项式 API
+                             * ts-composition - TS 组合式 API
+                             * ts-class - [被废弃的] TS class 风格语法
+                             * ts - 创建 TS 格式的 boot 和 store 文件时可用
 ```
 
 ## Mode
@@ -370,113 +354,113 @@ $ quasar new -h
 ```bash
 $ quasar mode -h
 
-  Description
-    Add/Remove support for PWA / BEX / Cordova / Capacitor / Electron modes.
+  描述
+    添加或删除 PWA / BEX / Cordova / Capacitor / Electron 模式。
 
-  Usage
+  用法
     $ quasar mode [add|remove] [pwa|ssr|bex|cordova|capacitor|electron] [--yes]
 
-    # determine what modes are currently installed:
+    # 检查当前项目安装了哪些开发模式：
     $ quasar mode
 
   Options
-    --yes, -y     Skips the "Are you sure?" question
-                  when removing a Quasar mode
-    --help, -h    Displays this message
+    --yes, -y     当删除一个 Quasar 模式时，跳过 "Are you sure?" 的询问
+    --help, -h    显示帮助信息
 ```
 
-When you initialize a project with the CLI, you can build SPA (Single Page Website/Application), SSR (Server-side Render Website/Application with optional PWA client takeover), PWA (Progressive Web App), Mobile App (through Cordova), and/or Electron Apps. When you develop for SSR, PWA, Cordova or Electron, you need these modes installed. If you issue "quasar dev" or "quasar build" they will automatically be installed.
+只有当您的项目是使用 Quasar CLI 创建的时，您才能构建 SPA (单页面应用), SSR (服务端渲染应用), PWA (渐进式 Web 应用), 手机 App (通过 Cordova), 或/和 Electron 应用。当您开发时，您可以直接运行 "quasar dev" 或 "quasar build"，相关的模式会被自动安装。
 
-These modes will add a "src-*" folder into your project with very specific code for it:
+添加开发模式会在项目的根目录下添加一个 "src-*" 目录，其中是被添加模式的专属源代码：
 
-| Folder | Mode | Description |
+| 目录 | Mode | 描述 |
 | --- | --- | --- |
-| src-ssr | ssr | Contains the production Node server files. |
-| src-pwa | pwa | Contains the Service Worker file that you can tweak. |
-| src-cordova | cordova | Is a Cordova project folder that will be using your 'src' as content. Tweak Cordova config, add/remove platforms, splash screens, Cordova plugins and so on from this folder. Do NOT touch "src-cordova/www" folder though as it will get overwritten at every build. |
-| src-electron | electron | Has code for the main Electron thread. The renderer thread will be your app in 'src'. |
-| src-bex | bex | Contains the specific files for Browser Extensions mode. |
+| src-ssr | ssr | 包括生产环境下的 Node 服务代码。 |
+| src-pwa | pwa | 包括 Service Worker 文件供您调整。 |
+| src-cordova | cordova | 其中是一个 Cordova 项目，它会使用 src 目录下的代码作为视图内容。调整您的 Cordova 配置，可以添加/删除平台、启动画面、Cordova 插件等。不要修改 "src-cordova/www" 目录下的文件，因为它们是使用 src 下的文件构建出来的，每次构建都会被重新覆盖。 |
+| src-electron | electron | 包括 Electron 主进程的代码，渲染进程会采用 src 目录下的代码。 |
+| src-bex | bex | 包括适用于开发浏览器插件的专属文件。 |
 
-If for some reason you decide you don't need a mode, you can remove it. **This will permanently delete** the respective "src-*" folder.
+如果您发现您不需要某个开发模式时，您可以删除它，**这将永久删除**相应的 "src-*"文件夹。
 
 ```bash
 $ quasar mode remove pwa
 ```
 
 ## Describe
-This command is useful to describe the API of any Quasar components/directives/plugins that your project is using. **It is specific to your Quasar version installed in your project folder.**
+这个命令可以查看您项目中使用的任意一个 Quasar 组件/指令/插件的 API。
+**它查询的是您项目中安装的特性的 Quasar 版本**
 
-Examples: `$ quasar describe QIcon`, `$ quasar describe TouchPan`, `$ quasar describe Cookies`.
+例如: `$ quasar describe QIcon`, `$ quasar describe TouchPan`, `$ quasar describe Cookies`.
 
 ```bash
 $ quasar describe -h
 
-  Description
-    Describes a component API for project's Quasar version being used
+  描述
+    查询项目中使用的 Quasar 的组件API。
 
-  Usage
+  用法
     $ quasar describe <component/directive/Quasar plugin>
 
-    # display everything:
+    # 展示所有信息：
     $ quasar describe QIcon
 
-    # displaying only props:
+    # 只展示 props 相关的信息：
     $ quasar describe QIcon -p
-    # displaying props and methods only:
+    # 只展示 props 和 methods 相关的信息：
     $ quasar describe QIcon -p -m
-    # filtering by "si":
+    # 使用 "si" 过滤信息
     $ quasar describe QIcon -f si
-    # filtering only props by "co":
+    # 只展示 props 相关的信息并使用 "co" 过滤：
     $ quasar describe QIcon -p -f co
 
-    # Open docs URL:
+    # 打开文档链接：
     $ quasar describe QIcon -d
 
-  Options
-    --filter, -f <filter> Filters the API
-    --props, -p           Displays the API props
-    --slots, -s           Displays the API slots
-    --methods, -m         Displays the API methods
-    --events, -e          Displays the API events
-    --value, -v           Displays the API value
-    --arg, -a             Displays the API arg
-    --modifiers, -M       Displays the API modifiers
-    --injection, -i       Displays the API injection
-    --quasar, -q          Displays the API quasar conf options
-    --help, -h            Displays this message
+  选项
+    --filter, -f <filter> 过滤 API 信息
+    --props, -p           展示 props 相关 API 信息
+    --slots, -s           展示 slots 相关 API 信息
+    --methods, -m         展示 methods 相关 API 信息
+    --events, -e          展示 events 相关 API 信息
+    --value, -v           展示 value 相关 API 信息
+    --arg, -a             展示 arg 相关 API 信息
+    --modifiers, -M       展示 modifiers 相关 API 信息
+    --injection, -i       展示 injection 相关 API 信息
+    --quasar, -q          展示 quasar conf options 相关 API 信息
+    --help, -h            显示帮助信息
 ```
-
+示例：
 ```bash
 $ quasar describe QIcon
 
  Describing QIcon component API
- Description is based on your project's Quasar version
+ describe is based on your project's Quasar version
 
  Properties
 
    name (String)
-     Description: Name of the icon, following Quasar convention
+     describe: Name of the icon, following Quasar convention
      Examples:
        map
        ion-add
 
    color (String)
-     Description: Color name for component from the Quasar Color Palette
+     describe: Color name for component from the Quasar Color Palette
      Examples:
        primary
        teal-10
 
    size (String)
-     Description: Size in CSS units, including unit name
+     describe: Size in CSS units, including unit name
      Examples:
        16px
        2rem
 
    left (Boolean)
-     Description: Apply a standard margin on the left side. Useful if icon is on the right side of something.
+     describe: Apply a standard margin on the left side. Useful if icon is on the right side of something.
 
    right (Boolean)
-     Description: Apply a standard margin on the right side. Useful if icon is on the left side of something.
+     describe: Apply a standard margin on the right side. Useful if icon is on the left side of something.
 
  Slots
 
@@ -497,149 +481,143 @@ $ quasar describe QIcon
 ```
 
 ## Inspect
-This command can be used to inspect the Vite config generated by Quasar CLI.
-
+这个命令用于查看 Quasar CLI 生成的 Vite 配置。
 ```bash
 $ quasar inspect -h
 
-  Description
-    Inspect Quasar generated Vite config
+  描述
+    查看 Quasar CLI 生成的 Vite 配置。
 
-  Usage
+  用法
     $ quasar inspect
     $ quasar inspect -c build
     $ quasar inspect -m electron -p 'build.outDir'
 
   Options
-    --cmd, -c        Quasar command [dev|build] (default: dev)
-    --mode, -m       App mode [spa|ssr|pwa|bex|cordova|capacitor|electron] (default: spa)
-    --depth, -d      Number of levels deep (default: 2)
+    --cmd, -c        Quasar 命令 [dev|build] (默认: dev)
+    --mode, -m       应用开发模式 [spa|ssr|pwa|bex|cordova|capacitor|electron] (默认: spa)
+    --depth, -d      深度 (默认: 2)
     --path, -p       Path of config in dot notation
                         Examples:
                           -p module.rules
                           -p plugins
-    --thread, -t     Display only one specific app mode config thread
-    --help, -h       Displays this message
+    --thread, -t     只展示某个特定的开发模式信息
+    --help, -h       显示帮助信息
 ```
 
 ## Ext
-This command is used to manage [App Extensions](/app-extensions/introduction).
+这个命令用于管理 [App 扩展](/app-extensions/introduction).
 
 ```bash
 $ quasar ext -h
 
-  Description
-    Manage Quasar App Extensions
+  描述
+    管理 Quasar App 扩展
 
-  Usage
-    # display list of installed extensions
+  用法
+    # 展示所有安装的扩展
     $ quasar ext
 
-    # Add Quasar App Extension
+    # 添加一个 Quasar App 扩展
     $ quasar ext add <ext-id>
 
-    # Remove Quasar App Extension
+    # 删除 Quasar App 扩展
     $ quasar ext remove <ext-id>
 
-    # Add Quasar App Extension, but
-    # skip installing the npm package
-    # (assumes it's already installed)
+    # 添加一个 Quasar App 扩展，但是跳过 npm 安装过程
+    # （假设已经安装了）
     $ quasar ext invoke <ext-id>
 
-    # Remove Quasar App Extension, but
-    # skip uninstalling the npm package
+    # 删除一个 Quasar App 扩展，但是跳过卸载 npm 包的过程
     $ quasar ext uninvoke <ext-id>
 
   Options
-    --help, -h       Displays this message
+    --help, -h       显示帮助信息
 ```
 
 ## Run
-This command is used to run commands supplied by the [App Extensions](/app-extensions/introduction) that you've installed into your project folder.
+这个命令用于运行某个 [App 扩展](/app-extensions/introduction)中的命令
 
 ```bash
 $ quasar run -h
 
-  Description
-    Run app extension provided commands
+  描述
+    运行某个 Quasar App 扩展中的命令
 
-  Usage
+  用法
     $ quasar run <extension-id> <cmd> [args, params]
     $ quasar <extension-id> <cmd> [args, params]
 
     $ quasar run iconify create pic -s --mark some_file
     $ quasar iconify create pic -s --mark some_file
-        # Note: "iconify" is an example and not a real extension.
-        # Looks for installed extension called "iconify"
+        # 注意："iconify" 只是一个举例，并一定真实存在。
+        # 在项目中查找某个叫做 "iconify" 的扩展
         # (quasar-app-extension-iconify extension package)
-        # and runs its custom defined "create" command
-        # with "pic" argument and "-s --mark some_file" params
+        # 然后运行它提供的 "create" 命令，并传入 "pic" 和 "-s --mark some_file" 参数
 
   Options
-    --help, -h       Displays this message
+    --help, -h       显示帮助信息
 ```
 
 ## Serve
-This command can be used in production too and it is being supplied by the global installation of `@quasar/cli` package.
 
+这个命令也可以在生产环境中使用，它由全局安装的 `@quasar/cli` 包提供。
 ```bash
 $ quasar serve -h
 
-  Description
+  描述
     Start a HTTP(S) server on a folder.
 
-  Usage
+  用法
     $ quasar serve [path]
-    $ quasar serve . # serve current folder
+    $ quasar serve . # 服务当前的目录
 
-    If you serve a SSR folder built with the CLI then
-    control is yielded to /index.js and params have no effect.
+    如果您想服务启动一个使用 CLI 构建的 SSR 目录，那么服务控制权将会交给  /index.js 文件，并且传入的参数无效。
 
   Options
-    --port, -p              Port to use (default: 4000)
-    --hostname, -H          Address to use (default: 0.0.0.0)
-    --gzip, -g              Compress content (default: true)
-    --silent, -s            Suppress log message
-    --colors                Log messages with colors (default: true)
-    --open, -o              Open browser window after starting
-    --cache, -c <number>    Cache time (max-age) in seconds;
-                            Does not apply to /service-worker.js
-                            (default: 86400 - 24 hours)
-    --micro, -m <seconds>   Use micro-cache (default: 1 second)
+    --port, -p              服务使用的端口号 (默认: 4000)
+    --hostname, -H          使用的地址 (默认: 0.0.0.0)
+    --gzip, -g              压缩内容 (默认: true)
+    --silent, -s            隐藏日志消息
+    --colors                打印带高亮的日志消息 (默认: true)
+    --open, -o              启动后在浏览器中打开
+    --cache, -c <number>    最大缓存时间，单位秒(max-age)
+                            不对 /service-worker.js 文件生效
+                            (默认: 86400 = 24 小时)
+    --micro, -m <seconds>   Use micro-cache (默认: 1 second)
 
-    --history               Use history api fallback;
-                              All requests fallback to /index.html,
-                              unless using "--index" parameter
-    --index, -i <file>      History mode (only!) index url path
-                              (default: index.html)
+    --history               使用 history 回退 API；
+                              所有的请求都会回退到 /index.html，除非设置了 "--index" 参数
+    --index, -i <file>      History 模式中的 index url
+                              (默认: index.html)
 
-    --https                 Enable HTTPS
-    --cert, -C [path]       Path to SSL cert file (Optional)
-    --key, -K [path]        Path to SSL key file (Optional)
-    --proxy <file.js>       Proxy specific requests defined in file;
-                            File must export Array ({ path, rule })
-                            See example below. "rule" is defined at:
+    --https                 开启 HTTPS
+    --cert, -C [path]       SSL cert 文件 (可选) 的路径
+    --key, -K [path]        SSL key 文件 (可选) 的路径
+    --proxy <file.js>       定义代理特殊请求的文件；
+                            文件必须导出一个数组 ({ path, rule })
+                            见下方示例：
                             https://github.com/chimurai/http-proxy-middleware
-    --cors                  Enable CORS for all requests
-    --help, -h              Displays this message
+    --cors                  为所有的请求开启跨域 （CORS）
+    --help, -h              显示帮助信息
 
-  Proxy file example
+  代理文件示例：
     module.exports = [
       {
         path: '/api',
         rule: { target: 'http://www.example.org' }
       }
     ]
-    --> will be transformed into app.use(path, httpProxyMiddleware(rule))
+    --> 将会被转化成 app.use(path, httpProxyMiddleware(rule))
 ```
 
-### Custom Node server
-When building a SPA or PWA, the distributable folder can be served by any static webserver. To test it out (assuming you don't have a specific publicPath or not using Vue Router "history" mode), you can use the "http-server" npm package.
+### 自定义 Node server
+当构建一个 SPA 或 PWA 时，产物目录可以使用任意的静态服务器提供服务。为了测试它（假设您没有特定的 publicPath 或者没有使用 Vue 路由的 "history" 模式），您可以使用 "http-server" npm 包。
 
-Or you can build your own server. Here are some examples:
+或者你可以建立你自己的服务器。 这里有些例子：
 
 ```js
-// when using default Vue Router "hash" mode
+// 当使用默认的 "hash" 路由模式时
 const
   express = require('express'),
   serveStatic = require('serve-static'),
@@ -652,7 +630,7 @@ app.listen(port)
 ```
 
 ```js
-// when using Vue Router "history" mode
+// 当使用 "history" 路由模式时
 const
   express = require('express'),
   serveStatic = require('serve-static'),
@@ -666,10 +644,10 @@ app.use(serveStatic(...path-to-dist...))
 app.listen(port)
 ```
 
-If you need URL rewrites of API, or simply put you want to proxy your API requests, then you can use "http-proxy-middleware" package:
+如果您需要重写 API 的 URL，或者需要代理您的 API 请求，那么您可以使用 "http-proxy-middleware" 软件包：
 
 ```js
-// add this to one of the two previous examples:
+// 在前面的两个例子中加上这一点:
 const { createProxyMiddleware } = require('http-proxy-middleware')
 
 // ...
@@ -681,29 +659,27 @@ app.use('/api', createProxyMiddleware({
 // then app.listen(...)
 ```
 
-Finally, run one of these files:
+最后，运行文件：
 
 ```bash
 $ node my-server.js
 ```
 
 ## Create
-
-Creates a Quasar project (app, AppExtension or UI kit) from **CUSTOM** starter kits.
+创建一个 Quasar 项目 （app，App扩展或 UI kit），**可自定义**开始模板。
 
 ```bash
 $ quasar create <folder_name> --kit <address> [--branch <branch_name>]
 ```
+您可以通过提供**本地**文件夹路径来使用计算机上存储的开始模板 （例如： `quasar create --kit ./my-custom-starter-kit`）。
 
-You can use a starter kit stored on your machine by providing a **local path** to a folder (eg. `quasar create --kit ./my-custom-starter-kit`).
-
-You can use a starter kit stored into any publicly accessible Git repository by providing a reference which follows this schema:
+您也可以使用存储在公开的 Git 仓库中的开始模板：
 - GitHub - `github:owner/name` or simply `owner/name`
 - GitLab - `gitlab:owner/name`
 - Bitbucket - `bitbucket:owner/name`
 
-`master` branch will be checked out by default, but you can specify the one you prefer via `--branch <branch name>` (eg. `quasar create --kit owner/name --branch my-branch`).
+默认会拉取仓库中的 `master` 分支，但是您也可以手动指定分支，通过 `--branch <branch name>` 参数，（例如：`quasar create --kit owner/name --branch my-branch`）。
 
 ::: warning
-The preferred way to build reusable code and UI Components into Quasar ecosystem are App Extensions. Use a custom starter kit only if you really know what you're doing and be aware that it will make more difficult for the Quasar team to provide you assistance.
+在 Quasar 生态系统中构建可重用代码和 UI 组件的首选方法是应用程序扩展。只有当你真正知道自己在做什么，并且意识到 Quasar 团队为你提供帮助不足应对时，再考虑使用自定义入门套件。
 :::
