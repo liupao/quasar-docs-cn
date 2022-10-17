@@ -14,20 +14,20 @@
     "start": "cd ./dist/quasar.dev && npm i && npm run start"
   },
   "dependencies": {
-    "@quasar/extras": "^1.15.3",
+    "@quasar/extras": "^1.15.5",
     "prismjs": "^1.29.0",
-    "quasar": "^2.8.2",
-    "vue": "^3.2.39",
+    "quasar": "^2.10.0",
+    "vue": "^3.2.41",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.1.0",
-    "autoprefixer": "^10.4.11",
-    "eslint": "^8.23.1",
+    "@quasar/app-vite": "^1.1.3",
+    "autoprefixer": "^10.4.12",
+    "eslint": "^8.25.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.0",
     "eslint-plugin-quasar": "^1.1.0",
     "eslint-plugin-vue": "^8.7.1",
     "gray-matter": "^4.0.3",
