@@ -5,9 +5,8 @@ desc: (@quasar/app-vite) 如何在Quasar项目中根不同的环境加载不同�
 
 使用 `process.env` 可以帮助您：
   * 根据 Quasar 模式 (SPA/PWA/Cordova/Electron) 区分运行时的程序
-Using `process.env` can help you in many ways:
   * 根据开发或生产环境，区分运行时的程序
-  * 在构建时根据终端环境变量添加标志
+  * 在构建时根据终端中的环境变量添加标志
 
 ## Quasar CLI 提供的环境变量
 
@@ -32,7 +31,7 @@ if (process.env.DEV) {
   console.log(`I'm on a development build`)
 }
 
-// process.env.MODE 来自 "quasar dev/build -m <mode>" 命令中的 <mode> 参数，默认为 spa
+// process.env. MODE 来自 "quasar dev/build -m <mode>" 命令中的 <mode> 参数，默认为 spa
 if (process.env.MODE === 'electron') {
   const { BrowserWindow } = require('@electron/remote')
   const win = BrowserWindow.getFocusedWindow()
