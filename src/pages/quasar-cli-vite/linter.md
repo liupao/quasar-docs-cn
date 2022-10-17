@@ -5,7 +5,7 @@ desc: (@quasar/app-vite) 如何为Quasar项目配置ESLint。
 
 强烈推荐您使用一个代码检查工具（linter） （例如  [ESLint](https://eslint.org/)）来保证您的代码的可读性。它也可以帮助您在代码运行前检查代码中的一些错误。
 
-当您使用 Quasar CLI 创建项目时，它会询问是否要添加代码检查工具（linter）和何种配置的 ESlint:
+当您使用 Quasar CLI 创建项目时，它会询问是否要添加代码检查工具（linter）以及选择哪一种风格的 ESlint 配置：
 
 * [Prettier](https://github.com/prettier/prettier)
 * [Standard](https://github.com/standard/standard)

@@ -159,5 +159,5 @@ build: {
       my: { prop: 'value' }
     }
     ```
-# 视频讲解
-[【quasar入门教程-quasar处理env】](https://www.bilibili.com/video/BV1N3411N7Bd?share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
+## 视频讲解
+[quasar入门教程-quasar处理env](https://www.bilibili.com/video/BV1N3411N7Bd?share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
