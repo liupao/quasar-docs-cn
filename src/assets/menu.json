@@ -1073,55 +1073,55 @@
         "path": "developing-electron-apps",
         "children": [
           {
-            "name": "Introduction",
+            "name": "介绍",
             "path": "introduction"
           },
           {
-            "name": "Upgrade guide",
+            "name": "升级指南",
             "path": "electron-upgrade-guide"
           },
           {
-            "name": "Preparation",
+            "name": "准备工作",
             "path": "preparation"
           },
           {
-            "name": "Configuring Electron",
+            "name": "Electron 配置",
             "path": "configuring-electron"
           },
           {
-            "name": "App Icons for Electron",
+            "name": "Electron 应用图标",
             "path": "app-icons-electron"
           },
           {
-            "name": "Build Commands",
+            "name": "构建命名",
             "path": "build-commands"
           },
           {
-            "name": "Preload Script",
+            "name": "Preload 预加载脚本",
             "path": "electron-preload-script"
           },
           {
-            "name": "Electron Packages",
+            "name": "Electron npm 包",
             "path": "electron-packages"
           },
           {
-            "name": "Accessing files",
+            "name": "访问文件",
             "path": "electron-accessing-files"
           },
           {
-            "name": "Frameless Electron Window",
+            "name": "Electron 无边框窗口",
             "path": "frameless-electron-window"
           },
           {
-            "name": "Electron with Typescript",
+            "name": "Electron 搭配 Typescript",
             "path": "electron-with-typescript"
           },
           {
-            "name": "Electron Security Concerns",
+            "name": "Electron 安全问题",
             "path": "electron-security-concerns"
           },
           {
-            "name": "Troubleshooting and Tips",
+            "name": "常见问题和技巧",
             "path": "troubleshooting-and-tips"
           }
         ]
