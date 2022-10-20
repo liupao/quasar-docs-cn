@@ -10,6 +10,5 @@ If you were to target all platforms that Quasar currently supports, you will nee
 ## Icon Genie CLI
 
 ::: tip
-
 我们强力推荐你去使用我们的[Icon Genie CLI](/icongenie/introduction),因为它只需要一份资源图标，就能自动生成克隆、缩放、缩小图标，然后生成不同平台上需要的图标格式，并将其放置在合适的目录中。必要时，它还会告诉你需要向 `/src/index.template.html` 中添加哪些标签。
 :::
