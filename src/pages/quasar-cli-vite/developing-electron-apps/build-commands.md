@@ -1,82 +1,84 @@
 ---
-title: Electron Build Commands
-desc: (@quasar/app-vite) The Quasar CLI list of commands when developing or building a desktop app.
+title: Electron 打包命令
+desc: (@quasar/app-vite)Quasar CLI 提供的用于开发或打包桌面应用的命令。
 ---
 
-## Developing
+## 开发
 ```bash
 $ quasar dev -m electron
 
-# ..or the longer form:
+# 或更长的格式：
 $ quasar dev --mode electron
 
-# passing extra parameters and/or options to
-# underlying "electron" executable:
+# 传递更多的参数和选项给底层的 "electron"
 $ quasar dev -m electron -- --no-sandbox --disable-setuid-sandbox
-# when on Windows and using Powershell:
+# 当在 Windows 上使用 Powershell 时：
 $ quasar dev -m electron '--' --no-sandbox --disable-setuid-sandbox
 ```
 
-It opens up an Electron window with dev-tools included. You have HMR for the renderer process and changes to main process are also picked up (but the latter restarts the Electron window on each change).
+运行成功后会打开一个 Electron 窗口渲染您的应用并在右边打开一个开发者调试工具。当您修改渲染进程的代码时，项目将会热更新，但是修改主进程的代码时窗口将会重启。
 
-Check how you can tweak Esbuild config Object for the Main Process and the Preload script on the [Configuring Electron](/quasar-cli-vite/developing-electron-apps/configuring-electron) page.
+关于如何修改 Esbuild 打包主进程和 Preload 脚本的配置项，请参考：[Electron 配置项](/quasar-cli-vite/developing-electron-apps/configuring-electron)页面
+
 
 ### Chrome DevTools
-While in dev mode, hit the following combination (while your app window has focus):
-- macOS: <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
-- Linux: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
-- Windows: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
+
+当处于开发模式时，使用以下快捷键（当您的应用窗口聚焦时）：
+- macOS: <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>I</kbd> 或者 <kbd>F12</kbd>
+- Linux: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> 或者 <kbd>F12</kbd>
+- Windows: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> 或者 <kbd>F12</kbd>
 
 ### Vuejs Devtools
-Should you want to also access Vue Devtools for the renderer thread:
+您可能也想使用 Vuejs Devtools 来调试渲染进程：
 
 ```bash
 $ quasar dev -m electron --devtools
 ```
 
-## Building for Production
+## 构建生产版本
 ```bash
 $ quasar build -m electron
 
-# ..or the longer form:
+# 或者更长的格式：
 $ quasar build --mode electron
 ```
 
-It builds your app for production and then uses electron-packager to pack it into an executable. Check how to configure this on [Configuring Electron](/quasar-cli-vite/developing-electron-apps/configuring-electron) page.
+这个命令会为您的应用构建生产版本，然后使用 electron-packager 将其打包成可执行文件。请参考 [Electron 配置项](/quasar-cli-vite/developing-electron-apps/configuring-electron)页面进行配置。
 
-If you want a production build with debugging enabled for the UI code:
+如果您想构建一个 UI 带调试功能的版本：
 
 ```bash
 $ quasar build -m electron -d
 
-# ..or the longer form
+# 或者更长的格式：
 $ quasar build -m electron --debug
 ```
 
-### A note for non-Windows users
-If you want to build for Windows with a custom icon using a non-Windows platform, you must have [wine](https://www.winehq.org/) installed. [More Info](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms).
+### 非 Windows 用户的注意
+如果您想使用一个非 Windows 平台来构建一个 Windows 应用，并自定义其图标，您必须安装 [wine](https://www.winehq.org/)。[更多信息](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms)。
 
-## Publishing (electron-builder only)
+## 发布 （仅支持 electron-builder）
 ```bash
 $ quasar build -m electron -P always
 
-# ..or the longer form:
+# 或者更长的格式：
 $ quasar build --mode electron --publish always
 ```
 
-You can specify using `electron-builder` to build your app either directly on the command line (`--bundler builder`) or by setting it explicitly within `quasar.config.js` at `electron.bundler`. This flag has no effect when using `electron-packager`.
+您可以指定使用 `electron-builder` 来构建您的应用，直接在命令行的构建命令中加上 `--bundler builder`，或者修改 `quasar.config.js` 中的 `electron.bundler` 配置项。使用 `electron-packager` 时 --publish 参数不会生效。
 
-Currently (June 2019) supported publishing destinations include GitHub, Bintray, S3, Digital Ocean Spaces, or a generic HTTPS server. More information, including how to create valid publishing instructions, can be found [here](https://www.electron.build/configuration/publish).
+目前（2019年6月）支持发布的平台包括： GitHub、Bintray、S3、Digital Ocean Spaces、或一个 generic HTTPS server。更多关于发布的信息，请[参考](https://www.electron.build/configuration/publish)。
 
-Valid options for `-P` are "onTag", "onTagOrDraft", "always" and "never" which are explained at the above link. In addition, you must have valid `publish` configuration instructions in your `quasar.config.js` at `electron.builder`.
 
-A very basic configuration to publish a Windows EXE setup file to Amazon S3 might look like this:
+`-P` 的有效选项包括 "onTag"、"onTagOrDraft"、"always" 和 "never"，这些选项在上面的链接中进行了解释。此外，您必须在 `quasar.config.js` 中的 `electron.builder` 中配置有效的 `publish` 字段。
+
+下面是一个讲的示例，发布一个 Windows EXE 安装包到  Amazon S3 上：
 
 ```js
 // quasar.config.js
 
 electron: {
-  bundler: 'builder', // set here instead of using command line flag --bundler
+  bundler: 'builder', // 代替命令行中的  --bundler 参数
   builder: {
     appId: 'com.electron.myelectronapp',
     win: {

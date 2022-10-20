@@ -1093,7 +1093,7 @@
             "path": "app-icons-electron"
           },
           {
-            "name": "构建命名",
+            "name": "构建命令",
             "path": "build-commands"
           },
           {
