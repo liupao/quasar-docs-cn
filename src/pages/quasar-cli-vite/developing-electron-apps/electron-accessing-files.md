@@ -1,10 +1,11 @@
 ---
-title: Electron Accessing Files
-desc: (@quasar/app-vite) How to access files in a Quasar desktop app.
+title: Electron 访问文件
+desc: (@quasar/app-vite)在Quasar桌面项目中如何访问文件。
 ---
 
-## Using __dirname & __filename
-Since the main process is bundled using Esbuild, the use of `__dirname` and `__filename` will not provide an expected value in production. Referring to the File Tree, you'll notice that in production the electron-main.js and electron-preload.js files are placed inside the `dist/electron-*` folder. Based on this knowledge, use `__dirname` & `__filename` accordingly.
+## 使用 __dirname & __filename
+
+由于主进程打包时使用 Esbuild，所以使用 `__dirname` 和 `__filename` 可能会在生产环境中产生一些非预期的结果。参照下面的文件结构，您可以注意到在生产环境下 electron-main.js 和 electron-preload.js 文件会被放在 `dist/electron-*` 目录下，请基于此目录结构使用 `__dirname` & `__filename`。
 
 ```bash
 app.asar
@@ -20,10 +21,10 @@ app.asar
       └─ ...contents of /public
 ```
 
-## Read & Write Local Files
-One great benefit of using Electron is the ability to access the user's file system. This enables you to read and write files on the local system. To help avoid Chromium restrictions and writing to your application's internal files, make sure to make use of electron's APIs, specifically the app.getPath(name) function. This helper method can get you file paths to system directories such as the user's desktop, system temporary files, etc.
+## 读写本地文件
+使用 Electron 的一大好处是能够访问用户的文件系统。这使您能够在本地系统上读写文件。为了解除 Chromium 的限制进行读写应用的内部文件，您可以使用 Electron 提供的 API，特别是 `app.getPath(name)` 函数，它可以帮助您获取系统目录，如用户的桌面，系统的临时目录等。
 
-We can use the userData directory, which is reserved specifically for our application, so we can have confidence other programs or other user interactions should not tamper with this file space.
+我们可以使用 userData 目录，它是专门为我们的应用程序保留的，因此我们可以确信其他程序或其他用户交互不会篡改这个文件空间。
 
 ```js
 // electron-main or electron-preload
@@ -34,9 +35,8 @@ import { app } from '@electron/remote'
 const filePath = path.join(app.getPath('userData'), '/some.file')
 ```
 
-## Accessing the Public Folder
-
-If for some reason, you have important files that you are storing in the /public folder, you can access those too by following the code below. To understand why you need to access them this way, please read the "Using __dirname & __filename" section above.
+## 访问 Public 目录
+如果出于某种原因，您将一些重要的文件存放在了 /public 目录下，那么您可以通过以下代码访问它。为了理解这段代码为什么可以访问到它，请阅读上述的“使用 __dirname & __filename”部分。
 
 ```js
 // electron-main or electron-preload
