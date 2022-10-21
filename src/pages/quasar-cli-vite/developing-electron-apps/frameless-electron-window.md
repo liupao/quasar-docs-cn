@@ -1,32 +1,30 @@
 ---
-title: Frameless Electron Window
-desc: (@quasar/app-vite) How to hide the window frame in a Quasar desktop app.
+title: 无边框 Electron 窗口
+desc: (@quasar/app-vite) 如何给Quasar桌面应用隐藏边框。
 related:
   - /vue-components/bar
 ---
+将 Electron 无边框窗口与  [QBar](/vue-components/bar) 一起使用是一个不错的组合：
 
-A nice combo is to use frameless Electron window along with [QBar](/vue-components/bar) component. Here's why.
-
-## Main thread
-### Setting frameless window
-Firstly, install the `@electron/remote` dependency into your app.
+## 主进程
+### 设置无边框窗口
+首先，安装 `@electron/remote` 依赖。
 
 ```bash
 $ yarn add @electron/remote
 // or:
 $ npm install @electron/remote
 ```
-
-Then, in your `src-electron/main-process/electron-main.js` file, make some edits to these lines:
+然后，在您的 `src-electron/main-process/electron-main.js` 文件中添加以下代码：
 
 ```js
 // src-electron/main-process/electron-main.js
 
 import { app, BrowserWindow, nativeTheme } from 'electron'
-import { initialize, enable } from '@electron/remote/main' // <-- add this
+import { initialize, enable } from '@electron/remote/main' // <-- 添加这里
 import path from 'path'
 
-initialize() // <-- add this
+initialize() // <-- 添加这里
 
 // ...
 
@@ -34,23 +32,23 @@ mainWindow = new BrowserWindow({
   width: 1000,
   height: 600,
   useContentSize: true,
-  frame: false // <-- add this
+  frame: false // <-- 添加这里
   webPreferences: {
     // ...
   }
 })
 
-enable(mainWindow.webContents) // <-- add this
+enable(mainWindow.webContents) // <-- 添加这里
 
 mainWindow.loadURL(process.env.APP_URL)
 
 // ...
 ```
 
-Notice that we need to explicitly enable the remote module too. We'll be using it in the preload script to provide the renderer thread with the window minimize/maximize/close functionality.
+注意，我们还需要手动地启用 remote 模块。我们将在预加载脚本中使用它来为渲染线程提供窗口最小化/最大化/关闭功能。
 
-### The preload script
-Since we can't directly access Electron from within the renderer thread, we'll need to provide the necessary functionality through the electron preload script (`src-electron/main-process/electron-preload.js`). So we edit it to:
+### 预加载脚本
+由于我们不能在渲染进程中直接访问 Electron 的能力，我们需要通过预加载脚本（`src-electron/main-process/electron-preload.js`）来提供必要的功能，我们需要编辑它：
 
 ```js
 // src-electron/main-process/electron-preload.js
@@ -79,9 +77,9 @@ contextBridge.exposeInMainWorld('myWindowAPI', {
 })
 ```
 
-## Renderer thread
-### Handling window dragging
-When we use a frameless window (only frameless!) we also need a way for the user to be able to move the app window around the screen. You can use `q-electron-drag` and `q-electron-drag--exception` Quasar CSS helper classes for this.
+## 渲染进程
+### 处理窗口拖拽
+我们使用一个无边框窗口时，我们还需要为用户提供在桌面上任意移动应用程序的能力（只有在使用无边框窗口时才需要）。您可以使用 `q-electron-drag` 和 `q-electron-drag--exception` Quasar CSS 类来帮您。
 
 ```html
 <q-bar class="q-electron-drag">
@@ -89,11 +87,11 @@ When we use a frameless window (only frameless!) we also need a way for the user
 </q-bar>
 ```
 
-What this does is that it allows the user to drag the app window when clicking, holding and simultaneously dragging the mouse on the screen.
+它允许用户在点击、按住鼠标来拖动应用程序窗口。
 
-While this is a good feature, you must also take into account that you'll need to specify some exceptions. There may be elements in your custom statusbar that you do not want to trigger the window dragging. By default, [QBtn](/vue-components/button) is **excepted from this behavior** (no need to do anything for this). Should you want to add exceptions to any children of the element having `q-electron-drag` class, you can attach the `q-electron-drag--exception` CSS class to them.
+虽然这是一个很好的功能，但您还必须考虑到一些例外情况。自定义状态栏中可能有您不希望它触发窗口拖动的元素。[QBtn](/vue-components/button) **组件默认不会触发此拖拽行为**。您可以给 `q-electron-drag` 的子元素添加 `q-electron-drag--exception` CSS 类来排除它的拖拽行为。
 
-Example of adding an exception to an icon:
+下面是给一个图标排除拖拽行为的示例：
 
 ```html
 <q-bar class="q-electron-drag">
@@ -103,18 +101,17 @@ Example of adding an exception to an icon:
 </q-bar>
 ```
 
-### Minimize, maximize and close app
+### 最小化/最大化/关闭应用
 
 <doc-example title="Full example" file="frameless-electron-window/StatusBar" />
 
-In the example above, notice that we add `q-electron-drag` to our QBar and we also add handlers for the minimize, maximize and close app buttons by using the injected `window.myWindowAPI` Object (from the Electron preload script).
+在上面的示例中，我们给自定义边框添加了 `q-electron-drag`，同时通过预加载脚本注入了 `window.myWindowAPI` 对象。
 
 ```js
-// some .vue file
+// 在一个 .vue 文件中
 
-// We guard the Electron API calls, but this
-// is only needed if we build same app with other
-// Quasar Modes as well (SPA/PWA/Cordova/SSR...)
+// 我们在调用  Electron API 时做了判断，
+// 这是为了我们构建其他模式时也能正常工作 (SPA/PWA/Cordova/SSR...)
 
 export default {
   setup () {
