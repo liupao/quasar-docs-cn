@@ -1,6 +1,6 @@
 ---
 title: quasar.config.js 配置详解
-desc: (@quasar/app-vite) 在Quasar和vite的项目中如何进行配置
+desc: (@quasar/app-vite) 在Quasar和vite的项目中如何进行配置。
 ---
 注意，使用脚手架创建的项目的根目录下有一个 `/quasar.config.js` 文件，Quasra CLI 几乎所有的行为都通过这个文件进行配置：
 
@@ -9,7 +9,7 @@ desc: (@quasar/app-vite) 在Quasar和vite的项目中如何进行配置
 * 选择您喜欢的[图标库](/options/installing-icon-libraries)；
 * 配置 Quasar 组件使用的[默认图标集合](/options/quasar-icon-sets)；
 * 配置开发服务器的端口、HTTPS模式、主机名等等；
-* 配置您先用的 [CSS 动画](/options/animations)
+* 配置您想用的 [CSS 动画](/options/animations)
 * 配置启用哪些 [Boot 文件](/quasar-cli-vite/boot-files) 以及其执行顺序（位于 `src/boot` 目录下会在 Vue 根组件挂载之前被执行的文件）；
 * 配置会被打包的全局 CSS/Sass... 文件；
 * SPA, PWA, Electron, Capacitor, Cordova, SSR, BEX (浏览器插件) 配置项；
@@ -215,7 +215,7 @@ interface QuasarEslintConfiguration {
 
 ```js
 /**
- * 想要从 [@quasar/extras](https://github.com/quasarframework/quasar/tree/dev/extras) 包中导入哪些功能.
+ * 想要从 [@quasar/extras](https://github.com/quasarframework/quasar/tree/dev/extras) 包中导入哪些功能。
  * @example ['material-icons', 'roboto-font', 'ionicons-v4']
  */
 extras?: (QuasarIconSets | QuasarFonts)[];
@@ -225,8 +225,8 @@ extras?: (QuasarIconSets | QuasarFonts)[];
 
 ```js
 /**
- * What Quasar language pack to use, what Quasar icon
- * set to use for Quasar components.
+ * 配置导入哪些 Quasar 组件/指令/插件，
+ * 使用哪个语言包，哪些图标库等
  */
 framework?: QuasarFrameworkConfiguration;
 
@@ -344,7 +344,7 @@ devServer: {
 ### build
 
 ```js
-/** Build 配置项. */
+/** Build 配置项。 */
 build?: QuasarBuildConfiguration;
 
 import { UserConfig as ViteUserConfig } from "vite";

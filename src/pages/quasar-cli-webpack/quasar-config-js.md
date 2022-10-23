@@ -1,42 +1,45 @@
 ---
-title: Configuring quasar.config.js
-desc: (@quasar/app-webpack) Where, how and what you can configure in a Quasar app.
+title: quasar.config.js 配置详解
+desc: (@quasar/app-webpack) 在Quasar和webpack的项目中如何进行配置。
 ---
-Quasar makes use of some awesome development tools under its hood, like [Webpack](https://webpack.js.org/). One of the great things about Quasar is its handling of most of the complex configuration needed by the underlying tools for you. As a result, you don't even need to know Webpack or any of the other development tools in order to use Quasar.
+Quasar 在底层使用了一些很优秀的工具，例如 [Webpack](https://webpack.js.org/)。
+Quasar 的一大优点是它能够帮您处理底层工具所需的大部分复杂配置。因此，您甚至不需要了解 Webpack 或任何其他开发工具就可以使用 Quasar。
 
-So what can you configure through `/quasar.config.js`?
 
-* Quasar components, directives and plugins that you'll be using in your website/app
-* Default [Quasar Language Pack](/options/quasar-language-packs)
-* [Icon libraries](/options/installing-icon-libraries) that you wish to use
-* Default [Quasar Icon Set](/options/quasar-icon-sets) for Quasar components
-* Development server port, HTTPS mode, hostname and so on
-* [CSS animations](/options/animations) that you wish to use
-* [Boot Files](/quasar-cli-webpack/boot-files) list (that determines order of execution too) -- which are files in `/src/boot` that tell how your app is initialized before mounting the root Vue component
-* Global CSS/Sass/... files to be included in the bundle
-* PWA [manifest](/quasar-cli-webpack/developing-pwa/configuring-pwa#Configuring-Manifest-File) and [Workbox options](/quasar-cli-webpack/developing-pwa/configuring-pwa#quasar.config.js)
-* [Electron Packager](/quasar-cli-webpack/developing-electron-apps/configuring-electron#quasar.config.js) and/or [Electron Builder](/quasar-cli-webpack/developing-electron-apps/configuring-electron#quasar.config.js)
-* Extend Webpack config
+注意，使用脚手架创建的项目的根目录下有一个 `/quasar.config.js` 文件，Quasra CLI 几乎所有的行为都通过这个文件进行配置：
+
+* 配置您的网站/app 使用哪些 Quasar 组件，指令和插件；
+* 设置默认的 [Quasar 语言包](/options/quasar-language-packs)；
+* 选择您喜欢的[图标库](/options/installing-icon-libraries)；
+* 配置 Quasar 组件使用的[默认图标集合](/options/quasar-icon-sets)；
+* 配置开发服务器的端口、HTTPS模式、主机名等等；
+* 配置您想用的 [CSS 动画](/options/animations)
+* 配置启用哪些 [Boot 文件](/quasar-cli-vite/boot-files) 以及其执行顺序（位于 `src/boot` 目录下会在 Vue 根组件挂载之前被执行的文件）；
+* 配置会被打包的全局 CSS/Sass... 文件；bundle
+* SPA, PWA, Electron, Capacitor, Cordova, SSR, BEX (浏览器插件) 配置项；
+* [Electron Packager](/quasar-cli-webpack/developing-electron-apps/configuring-electron#quasar.config.js) 和/或 [Electron Builder](/quasar-cli-webpack/developing-electron-apps/configuring-electron#quasar.config.js)
+* 扩展底层工具的配置项，例如 Webpack 的配置项；
 
 ::: tip
-You'll notice that changing any of these settings does not require you to manually reload the dev server. Quasar detects and reloads the necessary processes. You won't lose your development flow, because you can just sit back while Quasar CLI quickly reloads the changed code, even keeping the current state. This saves tons of your time!
+您会发现，更改这些设置后并不需要手动重启开发服务器。Quasar CLI 会检测更改后的代码并重新加载必要的进程，您不会丢失您的开发流程，甚至可以保持当前状态，这样可以节省大量时间！
 :::
 
 ::: warning
-`/quasar.config.js` is run by the Quasar CLI build system, so this code runs under Node directly, not in the context of your app. This means you can require modules like 'fs', 'path', 'webpack', and so on. Make sure the ES features that you want to use in this file are [supported by your Node version](https://node.green/) (which should be >= 12).
+`/quasar.config.js` 由 Quasar CLI 的构建系统运行，因此这段代码直接在 Node.js 环境下运行，而不是运行在您的项目应用的上下文环境中。这代表您可以直接在其中导入一些 'fs','path','webpack'等模块。但是要确保您在其中使用的 ES 特性已经被您使用的 [Node 版本支持](https://node.green/)（Node 版本需要  >= 12）。
 :::
 
-## Structure
 
-### The basics
+## 结构
 
-You'll notice that `/quasar.config.js` exports a function that takes a `ctx` (context) parameter and returns an Object. This allows you to dynamically change your website/app config based on this context:
+### 基础
+
+您会注意到 `/quasar.config.js` 导出一个带有一个 `ctx` （上下文 context）参数的函数，并返回一个对象。您可以通过这个上下文（context）动态的改变您的网站/app 的配置：
 
 ```js
-module.exports = function (ctx) { // can be async too
+module.exports = function (ctx) { // 也可是一个异步的函数
   console.log(ctx)
 
-  // Example output on console:
+  // 打印 ctx 的输出示例:
   {
     dev: true,
     prod: false,
@@ -48,36 +51,34 @@ module.exports = function (ctx) { // can be async too
     archName: undefined,
     debug: undefined
   }
-
-  // context gets generated based on the parameters
-  // with which you run "quasar dev" or "quasar build"
+  // 上下文会根据您运行 "quasar dev" 或 "quasar build" 时传入的参数生成
 }
 ```
 
-What this means is that, as an example, you can load a font when building for a certain mode (like PWA), and pick another one for the others:
+例如，您可以在为特定模式（如PWA）构建时加载一种字体，并为其他模式加载另一种字体：
 
 ```js
 module.exports = function (ctx) {
   extras: [
-    ctx.mode.pwa // we're adding only if working on a PWA
+    ctx.mode.pwa // 我们只在 PWA 模式下加载此字体
       ? 'roboto-font'
       : null
   ]
 }
 ```
 
-Or you can use a global CSS file for SPA mode and another one for Cordova mode while avoiding loading any such file for the other modes.
+或者您可以为 SPA 模式使用一个全局 CSS 文件，为 Cordova 模式使用另一个全局 CSS 文件，同时避免为其他模式加载任何这样的文件
 
 ```js
 module.exports = function (ctx) {
   css: [
-    ctx.mode.spa ? 'app-spa.sass' : null, // looks for /src/css/app-spa.sass
-    ctx.mode.cordova ? 'app-cordova.sass' : null  // looks for /src/css/app-cordova.sass
+    ctx.mode.spa ? 'app-spa.sass' : null, // 加载 /src/css/app-spa.sass
+    ctx.mode.cordova ? 'app-cordova.sass' : null  // 加载 /src/css/app-cordova.sass
   ]
 }
 ```
 
-Or you can configure the dev server to run on port 8000 for SPA mode, on port 9000 for PWA mode or on port 9090 for the other modes:
+或者您可以将开发服务器的端口配置为：SPA 模式下为8000，在 PWA 模式下为9000，其他模式下为9090
 
 ```js
 module.exports = function (ctx) {
@@ -89,7 +90,7 @@ module.exports = function (ctx) {
 }
 ```
 
-You can also do async work before returning the quasar configuration:
+您也可以在返回 Quasar 配置之前进行异步工作:
 
 ```js
 module.exports = async function (ctx) {
@@ -99,11 +100,11 @@ module.exports = async function (ctx) {
   }
 }
 
-// or:
+// 或者:
 module.exports = function (ctx) {
   return new Promise(resolve => {
-    // some async work then:
-    // resolve() with the quasar config
+    // 在此进行异步工作:
+    // 将 Quasar 配置传入 resolve() 函数返回
     resolve({
       //
     })
@@ -111,64 +112,65 @@ module.exports = function (ctx) {
 }
 ```
 
-The possibilities are endless.
+可能性是无限的。
 
-### IDE autocompletion
+### IDE 自动补全
 
-You can wrap the returned function with `configure()` helper to get a better IDE autocomplete experience (through Typescript):
+您可以将导出的函数使用 `configure()` 包裹起来，则在配置时可获得 IDE 的自动补全提示 （通过 Typescript）：
 
 ```js
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (ctx) {
-  /* configuration options */
+  /* 配置项 */
 })
 ```
 
-## Options to Configure
-Let's take each option one by one:
+## 配置项详解
 
-| Property | Type | Description |
+我们来逐个看一下每个配置项：
+
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| css | Array | Global CSS/Sass/... files from `/src/css/`, except for theme files, which are included by default. |
-| preFetch | Boolean | Enable [PreFetch Feature](/quasar-cli-webpack/prefetch-feature). |
-| extras | Array | What to import from [@quasar/extras](https://github.com/quasarframework/quasar/tree/dev/extras) package. Example: _['material-icons', 'roboto-font', 'ionicons-v4']_ |
-| vendor | Object | Add/remove files/3rd party libraries to/from vendor chunk: { add: [...], remove: [...] }. |
-| supportTS | Boolean/Object | Add support for TypeScript. [More info](/quasar-cli-webpack/supporting-ts) |
-| htmlVariables | Object | Add variables that you can use in index.template.html. |
-| framework | Object/String | What Quasar components/directives/plugins to import, what Quasar language pack to use, what Quasar icon set to use for Quasar components. |
-| animations | Object/String | What [CSS animations](/options/animations) to import. Example: _['bounceInLeft', 'bounceOutRight']_ |
-| devServer | Object | Webpack devServer options. Some properties are overwritten based on the Quasar mode you're using in order to ensure a correct config. Note: if you're proxying the development server (i.e. using a cloud IDE), set the `public` setting to your public application URL. |
-| build | Object | Build configuration options. |
-| sourceFiles | Object | Change the default name of parts of your app. |
-| cordova | Object | Cordova specific [config](/quasar-cli-webpack/developing-cordova-apps/configuring-cordova). |
-| capacitor | Object | Quasar CLI Capacitor specific [config](/quasar-cli-webpack/developing-capacitor-apps/configuring-capacitor). |
-| pwa | Object | PWA specific [config](/quasar-cli-webpack/developing-pwa/configuring-pwa). |
-| ssr | Object | SSR specific [config](/quasar-cli-webpack/developing-ssr/configuring-ssr). |
-| electron | Object | Electron specific [config](/quasar-cli-webpack/developing-electron-apps/configuring-electron). |
+| css | Array | 配置全局加载的来自 `/src/css/` 目录下的 CSS/Stylus/SCSS/SASS/... 文件，除了会被默认加载的 theme （主题）文件 |
+| preFetch | Boolean | 开启 [PreFetch 预取特性](/quasar-cli-webpack/prefetch-feature)。 |
+| extras | Array |想要从 [@quasar/extras](https://github.com/quasarframework/quasar/tree/dev/extras) 包中导入哪些功能。 例如: _['material-icons', 'roboto-font', 'ionicons-v4']_ |
+| vendor | Object | 添加/删除 文件/第三方库 到/去 vendor 块  chunk: { add: [...], remove: [...] }. |
+| supportTS | Boolean/Object | 添加 TypeScript 支持吗， [更多信息](/quasar-cli-webpack/supporting-ts) |
+| htmlVariables | Object | 添加您可以在 index.template.html. 文件中使用的变量。 |
+| framework | Object/String | 配置导入哪些 Quasar 组件/指令/插件，使用哪个语言包，哪些图标库等 |
+| animations | Object/String | 导入哪些 [CSS 动画](/options/animations)。 示例: _['bounceInLeft', 'bounceOutRight']_ |
+| devServer | Object | Webpack 开发服务器配置项。为了确保正确的配置，一些属性会根据您使用的 Quasar 模式进行覆盖。  注意：如果您正在代理开发服务器（如使用云 IDE） ，请将 `public` 设置设置为您的公共应用程序 URL。 |
+| build | Object | Build 配置项。 |
+| sourceFiles | Object | 如果需要，可以使用此属性更改网站/应用程序的某些文件的默认名称。 |
+| cordova | Object | Cordova 模式专属[配置项](/quasar-cli-webpack/developing-cordova-apps/configuring-cordova). |
+| capacitor | Object | Quasar CLI Capacitor 模式专属[配置项](/quasar-cli-webpack/developing-capacitor-apps/configuring-capacitor). |
+| pwa | Object | PWA 模式专属[配置项](/quasar-cli-webpack/developing-pwa/configuring-pwa). |
+| ssr | Object | SSR 模式专属[配置项](/quasar-cli-webpack/developing-ssr/configuring-ssr). |
+| electron | Object | Electron 模式专属[配置项](/quasar-cli-webpack/developing-electron-apps/configuring-electron). |
 
 ### Property: css
-Global CSS/Sass/... files from `/src/css/`, except for theme files, which are included by default.
+配置全局加载的来自 `/src/css/` 目录下的 CSS/Stylus/SCSS/SASS/... 文件，除了会被默认加载的 theme （主题）文件
 
 ```js
 // quasar.config.js
 return {
   css: [
-    'app.sass', // referring to /src/css/app.sass
-    '~some-library/style.css' // referring to node_modules/some-library/style.css
+    'app.sass', // 加载 /src/css/app.sass
+    '~some-library/style.css' // 加载 node_modules/some-library/style.css
   ]
 }
 ```
 
 ### Property: vendor
-By default, everything that comes from `node_modules` will be injected into the vendor chunk for performance & caching reasons. However, should you wish to add or remove something from this special chunk, you can do so:
+默认情况下，由于性能和缓存的原因，任何来自 `node_modules` 的内容都会在打包时被注入到 vendor 块，然而，如果你想为这个特定的块添加/删除内容，那么您可以：
 
 ```js
 // quasar.config.js
 return {
   vendor: {
-    /* optional;
-       disables vendor chunk: */ disable: true,
+    /* 可选的;
+       禁用 vendor chunk: */ disable: true,
 
     add: [ 'src/plugins/my-special-plugin' ],
     remove: ['axios', 'vue$']
@@ -177,79 +179,81 @@ return {
 ```
 
 ### Property: framework
-Tells the CLI what Quasar components/directives/plugins to import, what Quasar I18n language pack to use, what icon set to use for Quasar components and more.
+告诉 CLI 导入哪些 Quasar 组件/指令/插件，使用哪个语言包，使用哪些图标库等。
 
-Filling "components" and "directives" is required only if "all" is set to `false`.
+只有当 "all" 被设置为 `false` 时，才需要填入 "components" 和 "directives"。
 
 ```js
 // quasar.config.js
 return {
   // a list with all options (all are optional)
   framework: {
-    // is using "auto" import strategy, you can also configure:
+    // 自动导入策略，您可以配置：
     autoImportComponentCase: 'pascal', // or 'kebab' (default) or 'combined'
 
-    // For special cases outside of where auto-import can have an impact
-    // (example: vue components written in .js files instead of .vue),
-    // you can manually specify Quasar components/directives to be available everywhere:
-    //
+    /**
+     * 在 Vue 文件中的 Quasar 组件可以被自动导入，但是还有一些特殊情况需要手动处理
+     * （例如在 .js 或 .ts 文件中）
+     * 您可以手动声明哪些 Quasar 组件/指令可以在任何地方都可以被使用。
+     * @example [ 'QAvatar', 'QChip' ]
+     */
     // components: [],
     // directives: [],
 
-    // Quasar plugins
+    // 启动的 Quasar 插件
     plugins: ['Notify' /* ... */],
 
-    // Quasar config
-    // You'll see this mentioned for components/directives/plugins which use it
+    // Quasar 配置
+    // 您会在需要使用时在文档中见到它
     config: { /* ... */ },
 
-    iconSet: 'fontawesome-v6', // requires icon library to be specified in "extras" section too,
-    lang: 'de', // Tell Quasar which language pack to use for its own components
+    iconSet: 'fontawesome-v6', // 选择 Quasar 图标库中的一个作为 Quasar 组件的默认图标库，也需要在  "extras" 配置项中指明
+    lang: 'de', // 告诉 Quasar 为它自带的组件使用哪个语言包
 
-    cssAddon: true // Adds the flex responsive++ CSS classes (noticeable bump in footprint)
+    cssAddon: true // 添加 flex 响应式 CSS 类 是否开启 CSS 断点功能（注意代码体积会明显增大）
   }
 }
 ```
 
-More on cssAddon [here](/layout/grid/introduction-to-flexbox#flex-addons).
+更多关于 cssAddon [参考这里](/layout/grid/introduction-to-flexbox#flex-addons).
 
 ### Property: devServer
-**Webpack devServer options**. Take a look at the [full list](https://webpack.js.org/configuration/dev-server/) of options. Some are overwritten by Quasar CLI based on "quasar dev" parameters and Quasar mode in order to ensure that everything is setup correctly. Note: if you're proxying the development server (i.e. using a cloud IDE or local tunnel), set the `webSocketURL` setting in the `client` section to your public application URL to allow features like Live Reload and Hot Module Replacement to work as [described here](https://webpack.js.org/configuration/dev-server/#websocketurl).
+**Webpack 开发服务器配置项**。看一下 [完整的配置列表](https://webpack.js.org/configuration/dev-server/)。为了确保正确的配置，一些属性会根据您使用的 Quasar 模式进行覆盖。注意：如果您正在代理开发服务器（如使用云 IDE），将请将 `client` 中的 `webSocketURL` 设置为您的应用程序的 public URL 以开启热更新之类的特性，请[参考这里](https://webpack.js.org/configuration/dev-server/#websocketurl)。
 
-Most used properties are:
+下面时一些常用的配置项：
 
-| Property | Type | Description |
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| port | Number | Port of dev server |
-| host | String | Local IP/Host to use for dev server |
-| open | Boolean/String | Unless it's set to `false`, Quasar will open up a browser pointing to dev server address automatically. Applies to SPA, PWA and SSR modes. Uses [open](https://github.com/sindresorhus/open#usage) package params. For more details, please see below. |
-| proxy | Object/Array | Proxying some URLs can be useful when you have a separate API backend development server and you want to send API requests on the same domain. |
-| devMiddleware | Object | Configuration supplied to webpack-dev-middleware v4 |
-| server | Object | Here you can configure HTTPS instead of HTTP (see below) |
-| onBeforeSetupMiddleware | Function | Configure the dev middlewares before webpack-dev-server applies its own config. |
-| onAfterSetupMiddleware | Function | Configure the dev middlewares after webpack-dev-server applies its own config. |
+| port | Number | 开发服务器的端口好 |
+| host | String | 开发服务器使用的本机 IP/主机名 |
+| open | Boolean/String | 除非设置为 `false`，否则 Quasar 会在开发服务器启动后自动在浏览器中打开开发服务器的地址。应用于 SPA, PWA 和 SSR 模式。使用 [open](https://github.com/sindresorhus/open#usage) 包的参数。更多细节，请见下方。 |
+| proxy | Object/Array | 但您有一个单独的后端 API，并想要使用同样的域名向其发送请求时，代理一些 URL 会很有用。 |
+| devMiddleware | Object | 应用于 webpack-dev-middleware v4 的配置项。 |
+| server | Object | 这里您可以配置 HTTPS 代替 HTTP（见下方） |
+| onBeforeSetupMiddleware | Function | webpack-dev-server 启动之前的开发中间件。 |
+| onAfterSetupMiddleware | Function |  webpack-dev-server 启动之后的开发中间件。 |
 
-Using `open` prop to open with a specific browser and not with the default browser of your OS (check [supported values](https://github.com/sindresorhus/open#options)). The `options` param described in previous link is what you should configure quasar.config.js > devSever > open with. Some examples:
+使用 `open` 属性可以配置打开一个特定的浏览器而不是使用系统默认浏览器，在[浏览器支持列表](https://github.com/sindresorhus/open#options) 页面查看可配置内容，其中的 `options` 字段就是您可以填入 quasar.config.js > devSever > open 中的内容。例如：
 
 ```js
 // quasar.config.js
-// (syntax below requires @quasar/app-webpack v3.3+)
+// （下面的语法需要 @quasar/app-webpack v3.3+）
 
-// opens Google Chrome
+// 打开 Google Chrome
 devServer: {
   open: {
     app: { name: 'google chrome' }
   }
 }
 
-// opens Firefox
+// 打开 Firefox
 devServer: {
   open: {
     app: { name: 'firefox' }
   }
 }
 
-// opens Google Chrome and automatically deals with cross-platform issues:
+// 打开 Google Chrome 并自动处理跨平台问题
 const open = require('open')
 
 devServer: {
@@ -259,7 +263,7 @@ devServer: {
 }
 ```
 
-When you set `devServer > https: true` in your quasar.config.js file, Quasar will auto-generate a SSL certificate for you. However, if you want to create one yourself for your localhost, then check out this blog post by [Filippo](https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/). Then your `quasar.config.js > devServer > https` should look like this:
+当您设置 `devServer > https: true` 时，Quasar 会自动为您生成一个 SSL 证书，然而，如果您想使用自己的证书，那么可以参考这个博客：[Filippo](https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/)，然后您的 `quasar.config.js > devServer > https` 配置应该类似这样：
 
 ```js
 // quasar.config.js
@@ -280,7 +284,7 @@ devServer: {
 }
 ```
 
-You can also configure automatically opening remote Vue Devtools:
+您还可以配置自动打开远程 Vue Devtools：
 
 ```js
 // quasar.config.js
@@ -289,11 +293,11 @@ devServer: {
   vueDevtools: true
 }
 ```
-#### Docker and WSL Issues with HMR
-If you are using a Docker Container, you may find HMR stops working. HMR relies on the operating system to give notifications about changed files which may not work for your Docker Container.
+#### Docker 和 WSL 上的热更新问题
 
-A stop-gap solution can be achieved by using the polling mode to check for filesystem changes.
-This can be enabled with:
+如果您使用的是 Docker 容器，则可能会发现 HMR（热更新）停止工作。HMR（热更新）依靠操作系统来提供有关监听更改文件的通知，这些可能对您的 Docker 容器不起作用。
+
+通过使用轮询模式检查文件系统更改，可以实现一种权宜之计的解决方案。这可以通过以下方式实现：
 
 ```js
 // quasar.config.js
@@ -310,11 +314,11 @@ build: {
 ```
 
 ### Property: build
-| Property | Type | Description |
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| transpile | Boolean | Enables or disables Babel transpiling. |
+| transpile | Boolean | 开启或禁用 Babel 转译。 |
 | transpileDependencies | Array of Regex | Does not applies if "transpile" is set to "false". Add dependencies for transpiling with Babel (from node_modules, which are by default not transpiled). Example: `[ /my-dependency/, ...]` |
-| showProgress | Boolean | Show a progress bar while compiling. |
+| showProgress | Boolean | 编译时显示进度条 |
 | transformAssetUrls | Object | Add support for also referencing assets for custom tags props. Example: `{ 'my-img-comp': 'src', 'my-avatar': [ 'src', 'placeholder-src' ]}` |
 | extendWebpack(cfg) | Function | Extend Webpack config generated by Quasar CLI. Equivalent to chainWebpack(), but you have direct access to the Webpack config object. |
 | chainWebpack(chain) | Function | Extend Webpack config generated by Quasar CLI. Equivalent to extendWebpack(), but using [webpack-chain](https://github.com/neutrinojs/webpack-chain) instead. |
