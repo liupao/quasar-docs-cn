@@ -653,7 +653,7 @@ module.exports = function (ctx) {
 
 ### 为开发/生产设置不同的环境变量 env
 
-请参考 [添加 process.env](/quasar-cli-vite/handling-process-env#adding-to-process-env) 页面。
+请参考[添加 process.env](/quasar-cli-vite/handling-process-env#adding-to-process-env) 页面。
 
 ### 添加 vite 插件
 

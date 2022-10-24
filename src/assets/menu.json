@@ -1127,7 +1127,7 @@
         ]
       },
       {
-        "name": "开发浏览器差插件",
+        "name": "开发浏览器插件",
         "path": "developing-browser-extensions",
         "children": [
           {
