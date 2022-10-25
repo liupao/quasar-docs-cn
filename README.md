@@ -39,7 +39,7 @@
 
 Quasar的官方网站: [https://quasar.dev](https://quasar.dev)
 
-本仓库的中文文档[地址](https://quasar-docs-cn.vercel.app/)
+本仓库的中文文档[地址](https://quasar-cn.cn)
 
 ## Quasar 的进度和计划
 
