@@ -1,6 +1,6 @@
 ---
 title: Chip
-desc: The QChip Vue component is a simple UI block entity, representing for example more advanced underlying data, such as a contact, but in a compact way.
+desc: QChip Vue 组件基本上是一个简单的 UI 实体块，以紧凑的方式表示更复杂的数据，例如用来展示联系人。
 keys: QChip
 related:
   - /vue-components/avatar
@@ -8,12 +8,13 @@ related:
   - /vue-components/badge
 ---
 
-The QChip component is basically a simple UI block entity, representing for example more advanced underlying data, such as a contact, in a compact way.
+QChip Vue 组件基本上是一个简单的 UI 实体块，以紧凑的方式展示更复杂的数据，例如用来展示联系人。
 
-Chips can contain entities such as an avatar, text or an icon, optionally having a pointer too. They can also be closed or removed if configured so.
+QChip 可以包含多种内容：头像、文案、图标。还能被设置成可关闭或可删除的。
+
 
 ::: tip
-Also check out [QBadge](/vue-components/badge).
+也看看 [QBadge](/vue-components/badge).
 :::
 
 
@@ -22,20 +23,20 @@ Also check out [QBadge](/vue-components/badge).
 <doc-api file="QChip" />
 
 ## 用法
-<doc-example title="Basic" file="QChip/Basic" />
+<doc-example title="基础" file="QChip/Basic" />
 
-<doc-example title="Dense" file="QChip/Dense" />
+<doc-example title="紧凑的" file="QChip/Dense" />
 
-<doc-example title="Custom size" file="QChip/Sizes" />
+<doc-example title="指定大小" file="QChip/Sizes" />
 
-<doc-example title="Square" file="QChip/Square" />
+<doc-example title="方形" file="QChip/Square" />
 
-<doc-example title="Outline" file="QChip/Outline" />
+<doc-example title="轮廓" file="QChip/Outline" />
 
-<doc-example title="Clickable" file="QChip/Clickable" />
+<doc-example title="可点击" file="QChip/Clickable" />
 
-<doc-example title="Selected" file="QChip/Selected" />
+<doc-example title="可选择" file="QChip/Selected" />
 
-<doc-example title="Removable" file="QChip/Removable" />
+<doc-example title="可删除" file="QChip/Removable" />
 
-<doc-example title="Long label truncation" file="QChip/LongLabel" />
+<doc-example title="长标签截断" file="QChip/LongLabel" />
