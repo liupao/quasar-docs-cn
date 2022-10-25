@@ -1,15 +1,14 @@
 ---
-title: Color Picker
-desc: The QColorPicker Vue component provides a way for the user to input colors.
+title: 颜色选择器
+desc: QColor Vue 组件提供了一种输入颜色的方式。
 keys: QColorPicker
 related:
   - /quasar-utils/color-utils
 ---
-
-The QColor component provides a method to input colors.
+QColor 组件提供了一种输入颜色的方式。
 
 ::: tip
-For handling colors, also check out [Quasar Color Utils](/quasar-utils/color-utils).
+有关处理颜色，也请查看 [Quasar 颜色工具](/quasar-utils/color-utils).
 :::
 
 
@@ -21,52 +20,53 @@ For handling colors, also check out [Quasar Color Utils](/quasar-utils/color-uti
 
 ### 基础
 
-<doc-example title="Basic" file="QColor/Basic" />
+<doc-example title="基础" file="QColor/Basic" />
 
-### With QInput
+### 与 QInput 一起使用
 
 <doc-example title="Input" file="QColor/Input" />
 
-There are **helpers** for QInput `rules` prop: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js). You can use these for convenience or write the string specifying your [custom needs](/vue-components/input#internal-validation).
+这里有一些可以用在 QInput 的 `rules` 中的工具：[完整列表](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js)。
+为了方便起见，您可以使用它们，也可以编写指定[自定义需求的字符串](/vue-components/input#internal-validation)。
 
-Examples: "hexColor", "rgbOrRgbaColor", "anyColor".
+示例： "hexColor", "rgbOrRgbaColor", "anyColor".
 
-More info: [QInput](/vue-components/input).
+更多信息： [QInput](/vue-components/input).
 
-### No header or footer
+### 不要头部或底部
 
-You can choose if you don't want to render the header and/or footer, like in example below:
+你可以选择不渲染头部或底部，比如下面的例子:
 
 <doc-example title="No header/footer" file="QColor/NoHeaderFooter" />
 
-### Custom default view
+### 自定义默认视图
 
-You can also pick the default view, like in example below, where we also specify we don't want to render the header and footer. The end result generates a nice color palette that the user can pick from:
+您还可以选择默认视图，如下面的示例所示，在这里我们还指定不希望渲染头部和底部。最终结果生成了一个漂亮的调色板，用户可以从中选择：
 
-<doc-example title="Custom default view" file="QColor/CustomDefaultView" />
+<doc-example title="自定义默认视图" file="QColor/CustomDefaultView" />
 
-### Custom palette
+### 自定义调色盘
 
-<doc-example title="Custom palette" file="QColor/CustomPalette" />
+<doc-example title="自定义调色盘" file="QColor/CustomPalette" />
 
-### Dark mode
+### 暗色模式
 
-<doc-example title="Dark version" file="QColor/Dark" />
+<doc-example title="暗色版本" file="QColor/Dark" />
 
-### Default value
+### 默认值
 
-<doc-example title="Default value" file="QColor/DefaultValue" />
+<doc-example title="默认值" file="QColor/DefaultValue" />
 
-### Lazy update
+### 懒更新
 
-<doc-example title="Lazy model" file="QColor/LazyModel" />
+<doc-example title="懒更新" file="QColor/LazyModel" />
 
-### Disable and readonly
+### 禁用或只读
 
-<doc-example title="Disable and readonly" file="QColor/DisableReadonly" />
+<doc-example title="禁用或只读" file="QColor/DisableReadonly" />
 
-### Native form submit
+### 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QColor, otherwise formData will not contain it (if it should):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QColor 声明 `name` 属性，否则表单数据中不会包含它：
 
-<doc-example title="Native form" file="QColor/NativeForm" />
+<doc-example title="原生表单" file="QColor/NativeForm" />
