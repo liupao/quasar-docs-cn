@@ -23,11 +23,11 @@ Quasar 的 boot （启动）文件会**在 Vue 根实例创建之前被执行**�
 | --- | --- |
 | `app` | Vue 应用实例 |
 | `router` | 来自 'src/router/index.js' 的 Vue Router 实例  |
-| `store` | Pinia 或 Vuex 实例，**只有您的项目中使用了 Pinia（带有src/stores 目录） 或 Vuex（带有 src/stores 目录） 时才可访问这个参数**  |
+| `store` | Pinia 或 Vuex 实例，**只有您的项目中使用了 Pinia（带有 src/stores 目录） 或 Vuex（带有 src/stores 目录） 时才可访问这个参数**  |
 | `ssrContext` | 只能在 SSR 的服务端能访问，[请参考](/quasar-cli-vite/developing-ssr/ssr-context) |
 | `urlPath` |  URL 的路径名（路径+搜索）部分；在客户端（仅在客户端），它也包含哈希值。 |
 | `publicPath` | 配置的公共路径。 |
-| `redirect` | 重定向到另一个 URL 的函数。可接受一个字符串（URL路径）或 Vue 路由位置对象参数。 |
+| `redirect` | 重定向到另一个 URL 的函数。可接受一个字符串（URL 路径）或 Vue 路由位置对象参数。 |
 
 ```js
 export default ({ app, router, store }) => {
@@ -95,7 +95,7 @@ Boot 文件实现了一个特殊的目的：它们的代码会在应用的根组
 * 在 Vue app 实例上注入一些全局属性，例如，在使用选项式 API 时，您可以方便的使用 `this.$axios` 避免在每个文件中都导入 Axios。
 * 扩展路由，例如，使用 `router.beforeEach` 来验证是否登录认证。
 * 扩展 Pinia 或者 Vuex，例如使用 `vuex-router-sync` 包。
-* 引入并配置第三方库，例如：为 Axios 创建一个带基础请求路径的实例，然后将其注入到vue 原型上或者将其导出。
+* 引入并配置第三方库，例如：为 Axios 创建一个带基础请求路径的实例，然后将其注入到 vue 原型上或者将其导出。
 
 ### 一些不适合使用 boot 文件的案例
 * 对于像 Lodash 这样的纯 JavaScript 库，在使用之前不需要任何初始化操作。那么除非您想将 Lodash 注入到 Vue 的原型上，然后在 Vue 文件中可以通过类似 `this.$_` 的方式来访问它，不然不需要使用一个 boot 文件来导入它。
@@ -199,7 +199,7 @@ export default ({ urlPath, redirect }) => {
 }
 ```
 
-`redirect()` 函数可接受一个字符串（URL路径）或 Vue 路由位置对象参数。在 SSR 模式下，还能传递第二个参数来指定浏览器重定向的状态码（推荐使用 3xx）。
+`redirect()` 函数可接受一个字符串（URL 路径）或 Vue 路由位置对象参数。在 SSR 模式下，还能传递第二个参数来指定浏览器重定向的状态码（推荐使用 3xx）。
 
 ```js
 // 示例传入一个 vue Router 路径：
@@ -211,7 +211,7 @@ redirect('https://quasar.dev')
 ```
 
 ::: warning 重要！
-传入的 Vue 路由信息（字符串或对象形式）不是指 URL 路径（和哈希），而是指您实际定义Vue 路由。所以**不要添加 publicPath,如果您在使用 Vue Router 的哈希模式，也不要添加哈希值。
+传入的 Vue 路由信息（字符串或对象形式）不是指 URL 路径（和哈希），而是指您实际定义 Vue 路由。所以**不要添加 publicPath,如果您在使用 Vue Router 的哈希模式，也不要添加哈希值。
 
 <br>假设我们定义了这个 Vue 路由：<br><br>
 
@@ -282,7 +282,7 @@ export default () => {
 4. 加载 App.vue is （但是现在还不使用）
 5. 导入状态管理 Store （如果使用了 Pinia 或 Vuex 的话）
 6. Pinia （如果使用了的话）会被注入到 Vue app 实例中
-6. 导入路由（在 src/router目录下）
+6. 导入路由（在 src/router 目录下）
 7. 导入 boot 文件
 8. 路由的默认导出函数会被执行
 9. boot 文件的默认导出函数会被执行
@@ -352,7 +352,7 @@ export default boot(({ router, store }) => {
 
 幸运的是，因为 boot 文件本质上只是普通的 JavaScript 文件，所以您可以向 boot 文件中添加任意多的命名导出。
 
-让我们以 Axios 为例。有时您希望访问J avaScript 文件中的 Axios 实例，但无法访问根 Vue 实例。要解决此问题，可以将 Axios 实例也在 boot 文件中导出，然后将其导入其他位置。
+让我们以 Axios 为例。有时您希望访问 J avaScript 文件中的 Axios 实例，但无法访问根 Vue 实例。要解决此问题，可以将 Axios 实例也在 boot 文件中导出，然后将其导入其他位置。
 
 参考以下 axios 的 boot 文件：
 

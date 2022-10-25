@@ -1,6 +1,6 @@
 ---
 title: 浏览器兼容性
-desc: (@quasar/app-vite) 如果利用Quasar CLI处理浏览器兼容性。
+desc: (@quasar/app-vite) 如果利用 Quasar CLI 处理浏览器兼容性。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---

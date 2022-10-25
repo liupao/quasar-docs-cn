@@ -1,6 +1,6 @@
 ---
 title: 安装图标库
-desc: 如果在Quasar中引用图标库
+desc: 如果在 Quasar 中引用图标库
 related:
   - /options/quasar-icon-sets
   - /vue-components/icon
@@ -8,17 +8,17 @@ related:
 
 ::: tip
 **此页面讲述如何使用字体图标 [webfont icons](/vue-components/icon#webfont-icons) only.**
-Svg图标不需要安装步骤，可直接使用。
+Svg 图标不需要安装步骤，可直接使用。
 :::
 
-Quasar已经提供了几套开箱即用的图标库: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) 和 [Bootstrap Icons](https://icons.getbootstrap.com/).但是你任然可以自行添加其他的图标库 [add support for others](/vue-components/icon#custom-mapping)。
+Quasar 已经提供了几套开箱即用的图标库: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) 和 [Bootstrap Icons](https://icons.getbootstrap.com/).但是你任然可以自行添加其他的图标库 [add support for others](/vue-components/icon#custom-mapping)。
 
 ::: tip
 关于字体图标库，你可以选择安装一个或多个。
 :::
 
 ## 安装字体图标库
-如何你只是构建一个网站，那么你可以使用CDN来引用图标资源，但是如果你需要构建一个离线的手机app或者electron程序，那么你可能不希望它的图标依赖联网的服务。Quasar为你解决了这个问题：
+如何你只是构建一个网站，那么你可以使用 CDN 来引用图标资源，但是如果你需要构建一个离线的手机 app 或者 electron 程序，那么你可能不希望它的图标依赖联网的服务。Quasar 为你解决了这个问题：
 
 编辑 `/quasar.config.js` 文件中的:
 
@@ -46,15 +46,15 @@ extras: [
 
 你现在可以在 [QIcon](/vue-components/icon) 组件中使用这些图标了
 
-## 使用CDN替代
+## 使用 CDN 替代
 
-如果你想使用CDN，你自需要在`index.template.html`中使用style/link标签去引入CDN资源，但是不要同时在 `/quasar.config.js > extras`中配置。按照[UMD Installation Guide](/start/umd#installation)页面的示例修改`index.template.html`文件。
+如果你想使用 CDN，你自需要在`index.template.html`中使用 style/link 标签去引入 CDN 资源，但是不要同时在 `/quasar.config.js > extras`中配置。按照[UMD Installation Guide](/start/umd#installation)页面的示例修改`index.template.html`文件。
 
 ## 使用 Fontawesome-Pro
-如果你有 Fontawesome v6 Pro 的许可证，你可以按照下述步骤使用Pro版本来替换免费版本：
+如果你有 Fontawesome v6 Pro 的许可证，你可以按照下述步骤使用 Pro 版本来替换免费版本：
 
 1. 打开网站 [Linked Accounts section](https://fontawesome.com/account)的用户界面 npm TOKENID
-2. 将复制的TOKENID复制到`.npmrc`（若没有此文件先创建它，文件位于package.json同级目录）
+2. 将复制的 TOKENID 复制到`.npmrc`（若没有此文件先创建它，文件位于 package.json 同级目录）
   ```
   @fortawesome:registry=https://npm.fontawesome.com/
   //npm.fontawesome.com/:_authToken=TOKENID
@@ -63,11 +63,11 @@ extras: [
   ```bash
    yarn add @fortawesome/fontawesome-pro
   ```
-4. 创建一个新的boot文件:
+4. 创建一个新的 boot 文件:
   ```bash
    quasar new boot fontawesome-pro [--format ts]
   ```
-5. 将boot文件添加到 `/quasar.config.js`:
+5. 将 boot 文件添加到 `/quasar.config.js`:
   ```js
   boot: [
     ...
@@ -95,7 +95,7 @@ extras: [
   ```
 7. (可选的) 重写默认的图标： Override default icons:
 
-由于fontawesome-pro默认的 `font-weight` 是 `light` 或 `fal` ，导致一些图标用在组件中可能不太美观，最好在boot文件中覆盖掉它。
+由于 fontawesome-pro 默认的 `font-weight` 是 `light` 或 `fal` ，导致一些图标用在组件中可能不太美观，最好在 boot 文件中覆盖掉它。
 
 例如
 

@@ -1,15 +1,15 @@
 ---
 title: RTL 支持
-desc: 在Quasar中支持从右到左的布局。
+desc: 在 Quasar 中支持从右到左的布局。
 related:
   - /options/quasar-language-packs
   - /options/app-internationalization
 ---
 
-RTL是指支持语言从右到左的UI排版。
+RTL 是指支持语言从右到左的 UI 排版。
 RTL is referring to "right to left" UI for languages that need it.
 
-## 开启RTL支持
+## 开启 RTL 支持
 
 ### Quasar CLI with Vite
 * Edit `/postcss.config.js` file and uncomment the `require('postcss-rtlcss')` line.

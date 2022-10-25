@@ -1,6 +1,6 @@
 ---
 title: 应用 Vuex Store
-desc: (@quasar/app-vite) 如何在Quasar项目中使用Vuex管理状态数据。
+desc: (@quasar/app-vite) 如何在 Quasar 项目中使用 Vuex 管理状态数据。
 ---
 
 ::: danger

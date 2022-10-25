@@ -1,6 +1,6 @@
 ---
 title: Electron 配置项
-desc: (@quasar/app-vite) 如何在Quasar项目中对您的Electron进行配置。
+desc: (@quasar/app-vite) 如何在 Quasar 项目中对您的 Electron 进行配置。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---

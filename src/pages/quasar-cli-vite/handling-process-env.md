@@ -1,6 +1,6 @@
 ---
 title: 处理 process.env
-desc: (@quasar/app-vite) 如何在Quasar项目中根不同的环境加载不同的环境变量。
+desc: (@quasar/app-vite) 如何在 Quasar 项目中根不同的环境加载不同的环境变量。
 ---
 
 使用 `process.env` 可以帮助您：
@@ -160,4 +160,4 @@ build: {
     }
     ```
 ## 视频讲解
-[quasar入门教程-quasar处理env](https://www.bilibili.com/video/BV1N3411N7Bd?share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
+[quasar 入门教程-quasar 处理 env](https://www.bilibili.com/video/BV1N3411N7Bd?share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)

@@ -11,7 +11,7 @@ related:
   - /vue-components/toggle
 ---
 
-QBtnToggle组件也是一个基础的交互组件，有点相似于QRadio，但是它是基于按钮的。你可以使用这个组件来充当一个开关或者用于true/false的收集。
+QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。你可以使用这个组件来充当一个开关或者用于 true/false 的收集。
 The QBtnToggle component is another basic element for user input, similar to QRadio but with buttons. You can use this to supply a way for the user to pick an option from multiple choices.
 
 ## QBtnToggle API

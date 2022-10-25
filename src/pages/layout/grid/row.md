@@ -1,6 +1,6 @@
 ---
 title: 网格行
-desc: 如何在Quasar中使用网格行。
+desc: 如何在 Quasar 中使用网格行。
 related:
   - /layout/grid/introduction-to-flexbox
   - /layout/grid/column
@@ -8,7 +8,7 @@ related:
   - /layout/grid/flex-playground
 ---
 
-希望您以前已经阅读过 [Flexbox介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的 **Flex 行**(Rows)。
+希望您以前已经阅读过 [Flexbox 介绍](/layout/grid/introduction-to-flexbox) 理论，让我们更深入地了解网络系统中的 **Flex 行**(Rows)。
 
 为父容器添加 `.row` 类后开启一个 Flex 行，为每个子元素添加一个 `.col-*` 类来瓜分父容器的宽度，若每个子元素都使用不带数字的 `.col` 类则所有子元素都等宽，它们会平分父容器的宽度。（此段不属于官方文档，下面是英文原文）
 
@@ -22,7 +22,7 @@ Utilize breakpoint-specific column classes for equal-width columns. Add any numb
 
 ## 设置一列的宽度
 
-Flexbox网格列的自动布局还意味着您可以设置其中一列的宽度，其他列的宽度将自动调整。 您可以使用预定义的网格类（如下所示）或内联宽度。 请注意，无论中间列的宽度如何改变，其他列都会跟着调整大小。
+Flexbox 网格列的自动布局还意味着您可以设置其中一列的宽度，其他列的宽度将自动调整。 您可以使用预定义的网格类（如下所示）或内联宽度。 请注意，无论中间列的宽度如何改变，其他列都会跟着调整大小。
 
 <doc-example title="设置一列的宽度" file="grid/RowColumnWidth" />
 
@@ -66,7 +66,7 @@ Flexbox网格列的自动布局还意味着您可以设置其中一列的宽度�
 :::
 
 ### 列换行
-如果在一行中放置超过12列，则每组额外的列将作为一个单元换行到新行上。
+如果在一行中放置超过 12 列，则每组额外的列将作为一个单元换行到新行上。
 
 <doc-example title="列换行" file="grid/RowColumnWrapping" />
 
@@ -83,11 +83,11 @@ Flexbox网格列的自动布局还意味着您可以设置其中一列的宽度�
 
 ### 嵌套
 
-要使用默认网格嵌套您的内容，请在现有的 `.col-sm-*` 列中添加一个新的 `.row` 和一组 `.col-sm-*` 列。 嵌套行应包括一组总计不超过12个或更少的列（不需要全部使用12个可用列）。
+要使用默认网格嵌套您的内容，请在现有的 `.col-sm-*` 列中添加一个新的 `.row` 和一组 `.col-sm-*` 列。 嵌套行应包括一组总计不超过 12 个或更少的列（不需要全部使用 12 个可用列）。
 
 <doc-example title="Nesting" file="grid/RowNesting" />
 
 ## Flex 演示 （Playground）
-要查看Flex的实际效果，您可以使用Flex演示（Playground）进行交互学习。
+要查看 Flex 的实际效果，您可以使用 Flex 演示（Playground）进行交互学习。
 
 <q-btn push color="brand-primary" icon-right="launch" label="Flex Playground" to="/layout/grid/flex-playground" />

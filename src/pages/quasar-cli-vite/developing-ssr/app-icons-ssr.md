@@ -1,9 +1,9 @@
 ---
-title: SSR模式的应用图标
-desc: (@quasar/app-vite) 如果管理Quasar的服务端渲染应用程序的图标。
+title: SSR 模式的应用图标
+desc: (@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的图标。
 ---
 
-为SSR模式生成用于各种浏览器和操作系统的特殊图标，构建出来的所有的图标都是有用的，如果你发现缺少了用于某个平台的图标，请 [提交一个issue](https://github.com/quasarframework/quasar/issues)。
+为 SSR 模式生成用于各种浏览器和操作系统的特殊图标，构建出来的所有的图标都是有用的，如果你发现缺少了用于某个平台的图标，请 [提交一个 issue](https://github.com/quasarframework/quasar/issues)。
 
 
 <img src="https://cdn.quasar.dev/img/iconfactory.png" style="float:right;max-width:15%;min-width:240px;padding-top:40px" />
@@ -11,10 +11,10 @@ desc: (@quasar/app-vite) 如果管理Quasar的服务端渲染应用程序的图�
 ## Icon Genie CLI
 
 ::: tip 提示
-我们强烈推荐使用[Icon Genie CLI](/icongenie/introduction)，你可以提供一个资源图标，使用它帮你生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到你的/index.html文件中。
+我们强烈推荐使用[Icon Genie CLI](/icongenie/introduction)，你可以提供一个资源图标，使用它帮你生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到你的/index.html 文件中。
 :::
 
-通过Icon Genie CLI快速生成所需的图标，关于完整的命令列表和配置参数请移步[Icon Genie CLI](/icongenie/command-list)页面。
+通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步[Icon Genie CLI](/icongenie/command-list)页面。
 ```bash
 # SSR only:
 $ icongenie generate -m ssr -i /path/to/source/icon.png
@@ -45,7 +45,7 @@ public/
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
 ```
 
-然而，如果你在开发SSR + PWA模式，还需要准备PWA所需的资源：
+然而，如果你在开发 SSR + PWA 模式，还需要准备 PWA 所需的资源：
 ```
 public/
    icons/
@@ -72,7 +72,7 @@ public/
       apple-launch-2048x2732.png
 ```
 
-需要将以下代码添加到`/index.html`中来引用这些图标（注意，不是所有的文件都需要引用，因为Quasar CLI会自动注入其他文件）：
+需要将以下代码添加到`/index.html`中来引用这些图标（注意，不是所有的文件都需要引用，因为 Quasar CLI 会自动注入其他文件）：
 
 ```html
 <!-- iPhone XR -->

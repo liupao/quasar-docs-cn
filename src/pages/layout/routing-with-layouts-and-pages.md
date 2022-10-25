@@ -1,16 +1,16 @@
 ---
 title: 使用布局和页面进行路由
-desc: 如何将 Vue router 和 Quasar的布局相关联。
+desc: 如何将 Vue router 和 Quasar 的布局相关联。
 ---
 您可以将 Vue Router 与 Quasar 的布局关联起来。本页内容只是建议，不是强制性的。Quasar 给予您充分的使用自由，可以将下面的内容当作简单的参考案例。
 
-[QLayout](/layout/layout) 是用于封装页面的组件，使得多个页面可以共享相同的页眉、侧滑抽屉菜单等。当然您也可以为每个页面配置不同的页眉/页脚/侧滑菜单，但它们都必须是 QLayout 组件的子项。 为了理解这是如何工作的，您需要阅读 [Vue Router嵌套路由](https://router.vuejs.org/guide/essentials/nested-routes.html)。
+[QLayout](/layout/layout) 是用于封装页面的组件，使得多个页面可以共享相同的页眉、侧滑抽屉菜单等。当然您也可以为每个页面配置不同的页眉/页脚/侧滑菜单，但它们都必须是 QLayout 组件的子项。 为了理解这是如何工作的，您需要阅读 [Vue Router 嵌套路由](https://router.vuejs.org/guide/essentials/nested-routes.html)。
 
 为了更清楚一点，我们举个例子。假设我们有一个布局，（'user'），它包含两个页面（'user-feed'和'user-profile'）。 我们希望像这样配置网站/应用程序路由： `/user/feed` 和 `/user/profile`。
 
 ## 创建文件
 
-**Quasar不会强制特定的文件夹结构**。 以下仅是示例。 您可以将布局和页面一起放在一个文件夹中，或者将页面放到您选择的特定文件夹结构中，或者创建自己的布局和页面文件夹。 对于 Quasar 来说无关紧要。 重要的是您可以在 `/src/router/routes.js` 中正确引用它们。
+**Quasar 不会强制特定的文件夹结构**。 以下仅是示例。 您可以将布局和页面一起放在一个文件夹中，或者将页面放到您选择的特定文件夹结构中，或者创建自己的布局和页面文件夹。 对于 Quasar 来说无关紧要。 重要的是您可以在 `/src/router/routes.js` 中正确引用它们。
 
 让我们创建布局和页面文件。您可以使用 Quasar CLI 的帮助命令，也可以自己创建它们。
 
@@ -32,15 +32,15 @@ $ quasar new page Profile Posts
 ```bash
 src/
 ├── layouts
-│   └── User.vue         # 我们的QLayout定义文件
+│   └── User.vue         # 我们的 QLayout 定义文件
 └── pages
-    ├── Posts.vue        # /user/feed路由页面
-    └── Profile.vue       # /user/profile路由页面
+    ├── Posts.vue        # /user/feed 路由页面
+    └── Profile.vue       # /user/profile 路由页面
 ```
 
 ## 定义路由
 
-您的页面 (`/src/pages`) 和布局(`/src/layouts`) 都通过 `/src/router/routes.js` 中的Vue Router 注入到您的网站/应用程序中。每个页面和布局都需要在此引用。
+您的页面 (`/src/pages`) 和布局(`/src/layouts`) 都通过 `/src/router/routes.js` 中的 Vue Router 注入到您的网站/应用程序中。每个页面和布局都需要在此引用。
 
 `routes.js` 示例：
 ```js
@@ -83,7 +83,7 @@ export default routes
 
 ## 嵌套路由
 
-真正的应用程序用户界面通常由嵌套在多个级别的组件组成。URL的片段对应于嵌套组件中的特定结构也很常见，例如：
+真正的应用程序用户界面通常由嵌套在多个级别的组件组成。URL 的片段对应于嵌套组件中的特定结构也很常见，例如：
 
 ```
 /user/profile                   /user/posts
@@ -125,7 +125,7 @@ export default routes
 </template>
 ````
 
-我们的示例中指定了一些路由（/user/profile和/user/posts）。**那么我们现在如何将所有内容组织在一起？** 我们需要编辑路由文件，在这里，我们将配置路由，告诉哪些组件是布局，哪些是页面，并将它们引用/导入到我们的应用程序中：
+我们的示例中指定了一些路由（/user/profile 和/user/posts）。**那么我们现在如何将所有内容组织在一起？** 我们需要编辑路由文件，在这里，我们将配置路由，告诉哪些组件是布局，哪些是页面，并将它们引用/导入到我们的应用程序中：
 
 ```js
 // src/router/routes.js
@@ -138,7 +138,7 @@ const routes = [
   {
     path: '/user',
 
-    // 我们使用上面导入的/src/layouts/User组件
+    // 我们使用上面导入的/src/layouts/User 组件
     component: User,
 
     // 它有子路由，并且在它里面用户具有/  `<router-view>`；
@@ -146,13 +146,13 @@ const routes = [
     children: [
       // Profile page
       {
-        path: 'profile', // 这里是/user/profile路由
+        path: 'profile', // 这里是/user/profile 路由
         component: Profile // 我们参考上面导入的/src/pages/Profile.vue
       },
 
       // Posts page
       {
-        path: 'posts', // 这里是/user/posts路由
+        path: 'posts', // 这里是/user/posts 路由
         component: Posts // 我们参考上面导入的/src/pages/Profile.vue
       }
     ]
@@ -163,7 +163,7 @@ export default routes
 ```
 
 ::: warning
-请注意，以 `/` 开头的嵌套路径将被视为根路径。 这使您可以实现组件嵌套，而不必使用嵌套的URL。
+请注意，以 `/` 开头的嵌套路径将被视为根路径。 这使您可以实现组件嵌套，而不必使用嵌套的 URL。
 :::
 
 我们的路由配置 (`/src/router/routes.js`) 应如下所示：
@@ -172,7 +172,7 @@ export default [
   {
     path: '/user',
 
-    // 将组件指向QLayout定义文件的目录
+    // 将组件指向 QLayout 定义文件的目录
     component: () => import('layouts/user'),
 
     // 现在我们定义子路由。
@@ -210,7 +210,7 @@ export default [
     ]
   ]
   ```
-* Quasar提供了一些开箱即用的Webpack别名('layouts' 指向 '/src/layouts' and 'pages' 指向 '/src/pages')，已用在上面的例子中。
+* Quasar 提供了一些开箱即用的 Webpack 别名('layouts' 指向 '/src/layouts' and 'pages' 指向 '/src/pages')，已用在上面的例子中。
 * 布局的页面需要在 Vue Router 配置中声明为布局的子元素，以便 `<router-view/>` 知道要注入哪个页面组件。请记住，只要您的布局附有页面，始终使用此 Vue 组件。
 
   ```html

@@ -1,6 +1,6 @@
 ---
 title: 按需加载/代码拆分
-desc: (@quasar/app-vite)Vite版本的Quasar CLI怎么创建异步加载模块。
+desc: (@quasar/app-vite)Vite 版本的 Quasar CLI 怎么创建异步加载模块。
 ---
 
 当您的网站/应用程序很小时，您可以将所有布局/页面/组件都放到一个初始加载包中，并在启动时提供所有内容。

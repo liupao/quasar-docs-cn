@@ -1,13 +1,13 @@
 ---
 title: 常见问题
-desc: (@quasar/app-vite) 使用Quasar开发Electron桌面应用时的常见问题和技巧。
+desc: (@quasar/app-vite) 使用 Quasar 开发 Electron 桌面应用时的常见问题和技巧。
 ---
 
 ## 浏览器调试工具
 
 您可能希望您的应用程序只允许在开发模式下访问浏览器 devtools。在生产版本（未启用调试）上禁用此行为。
 
-当我们处于开发模式时，为什么不在默认情况下打开devtools呢。
+当我们处于开发模式时，为什么不在默认情况下打开 devtools 呢。
 
 ```js
 // electron-main.[js|ts]

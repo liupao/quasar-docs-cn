@@ -1,6 +1,6 @@
 ---
 title: Carousel
-desc: QCarousel Vue组件允许您使用幻灯片以更少的空间显示更多信息，对于创建向导或图库也很有用。
+desc: QCarousel Vue 组件允许您使用幻灯片以更少的空间显示更多信息，对于创建向导或图库也很有用。
 keys: QCarousel
 ---
 
@@ -62,14 +62,14 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 
 ### 自定义导航
 
-关于`navigation-icon`插槽的完整属性列表，请见页面上方的API卡片
+关于`navigation-icon`插槽的完整属性列表，请见页面上方的 API 卡片
 
 <doc-example title="Custom navigation" file="QCarousel/CustomNavigation" />
 
 ### 自动填充
 
 
-下面的示例中你可以对QCarousel做出不同的设置后观看控件间padding的变化：
+下面的示例中你可以对 QCarousel 做出不同的设置后观看控件间 padding 的变化：
 
 <doc-example title="Padding" file="QCarousel/AutoPadding" />
 
@@ -103,7 +103,7 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 
 ### 搭配 QScrollArea
 
-请注意下面两个示例中如何使用[QScrollArea](/vue-components/scroll-area)。还要注意第二个示例中的`q-carousel--padding`CSS类名。
+请注意下面两个示例中如何使用[QScrollArea](/vue-components/scroll-area)。还要注意第二个示例中的`q-carousel--padding` CSS 类名。
 
 <doc-example title="With QScrollArea and padding" file="QCarousel/WithScrollareaPadding" />
 

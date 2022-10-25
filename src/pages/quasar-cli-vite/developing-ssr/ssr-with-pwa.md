@@ -1,9 +1,9 @@
 ---
 title: SSR with PWA Client Takeover
-desc: (@quasar/app-vite) 如何给Quasar的服务端渲染应用的客户端使用PWA。
+desc: (@quasar/app-vite) 如何给 Quasar 的服务端渲染应用的客户端使用 PWA。
 ---
 
-使用 Quasar CLI 你可以构建 SSR + PWA 组合的应用。为了给SSR应用开启PWA，首先你需要编辑 `/quasar.config.js` ：
+使用 Quasar CLI 你可以构建 SSR + PWA 组合的应用。为了给 SSR 应用开启 PWA，首先你需要编辑 `/quasar.config.js` ：
 
 ```js
 // quasar.config.js

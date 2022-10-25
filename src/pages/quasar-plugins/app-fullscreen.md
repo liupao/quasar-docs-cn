@@ -1,9 +1,9 @@
 ---
 title: 全屏插件
-desc: 一个可以切换全屏状态的Quasar插件。
+desc: 一个可以切换全屏状态的 Quasar 插件。
 keys: AppFullScreen
 ---
-有些时候，你可能希望你的网站/app，运行在全屏状态下。Quasar通过封装[Web Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)提供了一个全屏插件。
+有些时候，你可能希望你的网站/app，运行在全屏状态下。Quasar 通过封装[Web Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)提供了一个全屏插件。
 
 
 ::: warning 警告
@@ -19,11 +19,11 @@ keys: AppFullScreen
 
 ##  用法
 ::: tip 提示
-关于完整的属性和方法，请查看API部分。
+关于完整的属性和方法，请查看 API 部分。
 :::
 
 ```js
-// 在Vue文件之外这样使用
+// 在 Vue 文件之外这样使用
 import { AppFullscreen } from 'quasar'
 
 //请求进入全屏模式:
@@ -46,7 +46,7 @@ AppFullscreen.exit()
 ```
 
 ```js
-// 在Vue文件之内这样使用
+// 在 Vue 文件之内这样使用
 
 import { useQuasar } from 'quasar'
 
@@ -79,9 +79,9 @@ setup () {
 
 ::: warning 警告
 在一些手机上，可能会有一些小影响：
-* 例如在三星 S4上，当App进入全屏模式后，顶部栏会向上滑动，然后保留在屏幕上。
-* 在Nexus手机上，例如Nexus 5，安卓导航键和顶部状态栏会完全消失。
-这完全取决于 Web Fullscreen API在代码运行的平台上的支持程度。
+* 例如在三星 S4 上，当 App 进入全屏模式后，顶部栏会向上滑动，然后保留在屏幕上。
+* 在 Nexus 手机上，例如 Nexus 5，安卓导航键和顶部状态栏会完全消失。
+这完全取决于 Web Fullscreen API 在代码运行的平台上的支持程度。
 :::
 
 ## 监听全屏状态的变化

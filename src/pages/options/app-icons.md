@@ -1,8 +1,8 @@
 ---
 title: App Icons
-desc: 管理Quasar的应用图标和启动页面。
+desc: 管理 Quasar 的应用图标和启动页面。
 ---
-若你的目标是全平台支持，那么你需要分别为它们制作100多种不同要求的图标(png, ico, icns and svg)。balabala....总之就是推荐你使用下面这个图标生成工具。可以帮你一个图片搞定所有格式的应用图标。
+若你的目标是全平台支持，那么你需要分别为它们制作 100 多种不同要求的图标(png, ico, icns and svg)。balabala....总之就是推荐你使用下面这个图标生成工具。可以帮你一个图片搞定所有格式的应用图标。
 If you were to target all platforms that Quasar currently supports, you will need to make 100+ different files of 4 different media types (png, ico, icns and svg). If you just use a tool like Gimp, Photoshop or Affinity Designer, you will find that these files are rather large and the process of making them and naming them is prone to operator error. You will probably want to compress the PNG files at least, and also remove unnecessary app-metadata from the SVG.
 
 <img src="https://cdn.quasar.dev/img/iconfactory.png" style="float:right;max-width:15%;min-width:240px;padding-top:40px" />

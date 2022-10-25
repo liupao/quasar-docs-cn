@@ -1,5 +1,5 @@
 ---
-title: Quasar视频教程
+title: Quasar 视频教程
 desc: 下面的视频教程都是由社区贡献的。
 keys: Video Tutorials
 components:
@@ -25,6 +25,6 @@ components:
 
 ## Vue 2 (过时的) 视频教程
 
-Quaasr是基于Vue的，所以先学会Vue也很重要
+Quaasr 是基于 Vue 的，所以先学会 Vue 也很重要
 
 <tutorial-listing which="vue" />

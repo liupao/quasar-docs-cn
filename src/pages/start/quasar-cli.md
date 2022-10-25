@@ -6,16 +6,16 @@ desc: How to use the Quasar CLI, the premium developer experience for free.
 Quasar CLI 是我们引以为傲的脚手架，您可以通过它构建:
 
 * SPA (Single Page App，单页应用)
-* SSR (Server-side Rendered App，服务端渲染) (可与PWA同时存在)
-* PWA (渐进式web应用程序)
+* SSR (Server-side Rendered App，服务端渲染) (可与 PWA 同时存在)
+* PWA (渐进式 web 应用程序)
 * BEX (Browser Extension，浏览器插件)
-* 手机App (Android, iOS, …) 通过 Cordova 或者 Capacitor 构建
+* 手机 App (Android, iOS, …) 通过 Cordova 或者 Capacitor 构建
 * 跨平台的桌面应用 (使用 Electron 构建)
 
 ## 安装
 
 ::: tip 环境要求:
-* Webpack版本的 Quasar CLI 需要 Node 12+ , vite 版本的 Quasar CLI 需要 Node 14+。.
+* Webpack 版本的 Quasar CLI 需要 Node 12+ , vite 版本的 Quasar CLI 需要 Node 14+。.
 * Yarn v1 (推荐) 或者 NPM.
 :::
 
@@ -54,7 +54,7 @@ $ npm i -g @quasar/cli
     * 更快的开发项目启动速度
     * 更快的热更新
     * 更快的打包
-    * 更优越的PWA、SSR和BEX模式（更多特性支持）
+    * 更优越的 PWA、SSR 和 BEX 模式（更多特性支持）
     :::
 
 4. 接下来命令行会继续提问您需要使用哪些模块，包括 ts，eslint，axios 等，跟随提示回答剩下的问题，就差不多完成了。
@@ -73,7 +73,7 @@ $ npm i -g @quasar/cli
     set -U fish_user_paths (yarn global bin) $fish_user_paths
     ```
     <br>
-     在Windows下，修改用户的 PATH 环境变量。如果您使用 yarn，则添加 `%LOCALAPPDATA%\yarn\bin`, 若使用 npm 则添加 `%APPDATA%\npm`.
+     在 Windows 下，修改用户的 PATH 环境变量。如果您使用 yarn，则添加 `%LOCALAPPDATA%\yarn\bin`, 若使用 npm 则添加 `%APPDATA%\npm`.
     :::
 
     ::: tip WSL2
@@ -82,9 +82,9 @@ $ npm i -g @quasar/cli
     When using WSL2 (Windows Subsystem for Linux) [Microsoft recommends](https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems) keeping files in the linux file system to maximize performance. Projects will build around 3X slower and HMR (Hot Module Reload) will not work without a hack if the project files are on the Windows mount instead of the local linux file system. This is also true in Docker for Windows based development environments.
     :::
 
-## Quasar CLI是如何工作的
+## Quasar CLI 是如何工作的
 
-Quasar CLI（`@quasar/cli`）与 `@quasar/app-vite` 或 `@quasar/app-webpack` 协同工作。第一个包是可选的（但强烈建议全局安装），它允许您直接运行 Quasar CLI 的命令，如`quasar upgrade`（无缝升级 Quasar 的依赖）或 `quasar serve`（帮助启动一个 webserver 服务）。第二个包是它的核心（包含重要的命令：dev、build、inspect、info、descripe等），它会被本地安装到每个 Quasar 项目文件夹中。
+Quasar CLI（`@quasar/cli`）与 `@quasar/app-vite` 或 `@quasar/app-webpack` 协同工作。第一个包是可选的（但强烈建议全局安装），它允许您直接运行 Quasar CLI 的命令，如`quasar upgrade`（无缝升级 Quasar 的依赖）或 `quasar serve`（帮助启动一个 webserver 服务）。第二个包是它的核心（包含重要的命令：dev、build、inspect、info、descripe 等），它会被本地安装到每个 Quasar 项目文件夹中。
 
 #### 在没有全局安装`@quasar/cli` 的情况下怎么运行
 
@@ -121,4 +121,4 @@ Quasar CLI（`@quasar/cli`）与 `@quasar/app-vite` 或 `@quasar/app-webpack` �
 
 ## What next?
 
-<q-btn color="brand-primary" no-caps no-wrap push label="去看看vue组件" to="/vue-components" />
+<q-btn color="brand-primary" no-caps no-wrap push label="去看看 vue 组件" to="/vue-components" />

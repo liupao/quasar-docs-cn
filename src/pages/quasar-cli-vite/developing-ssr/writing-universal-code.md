@@ -1,9 +1,9 @@
 ---
-title: 为SSR编写通用的代码
-desc: (@quasar/app-vite) 如何为Quasar的SSR服务端渲染编写通用的代码。
+title: 为 SSR 编写通用的代码
+desc: (@quasar/app-vite) 如何为 Quasar 的 SSR 服务端渲染编写通用的代码。
 ---
 
-编写通用（`universal`）或者叫同构(`isomorphic`)的代码是指编写的代码可以同时运行在服务端和客户端。但是由于用例和平台API的差异，我们的代码在不同的环境中运行时的行为不会完全相同。因此，下面我们将讨论你需要注意的关键事项。
+编写通用（`universal`）或者叫同构(`isomorphic`)的代码是指编写的代码可以同时运行在服务端和客户端。但是由于用例和平台 API 的差异，我们的代码在不同的环境中运行时的行为不会完全相同。因此，下面我们将讨论你需要注意的关键事项。
 
 ![Quasar SSR Build System](https://cdn.quasar.dev/img/ssr-build.png "Quasar SSR Build System")
 
@@ -15,17 +15,17 @@ desc: (@quasar/app-vite) 如何为Quasar的SSR服务端渲染编写通用的代�
 
 ## 组件生命周期钩子
 
-因为没有任何动态更新，所以在所有的Vue生命周钩子中，只有`beforeCreate` 和 `created` 会在SSR的服务端被调用，也就是说，写在其他的生命周期（比如`beforeMount` 或 `mounted`）中的代码只会在客户端被执行。
+因为没有任何动态更新，所以在所有的 Vue 生命周钩子中，只有`beforeCreate` 和 `created` 会在 SSR 的服务端被调用，也就是说，写在其他的生命周期（比如`beforeMount` 或 `mounted`）中的代码只会在客户端被执行。
 
 另外需要注意的是，你应该避免在`beforeCreate` 和 `created`生命周期中使用会产生全局副作用的代码，这类副作用的常见例子是使用 `setInterval` 设置定时器。
 我们可能会在客户端特有的代码中设置定时器，然后在 `onBeforeUnmount` 或 `onUnmounted` 中清除。然而，由于 `unmount` 钩子不会在 SSR 期间被调用，所以定时器会永远存在。为了避免这种情况，请将含有副作用的代码放到 `onMounted` 或`beforeMount` 中。
 
 ## 避免使用有状态的单例 Avoid Stateful Singletons
-当我们写只在客户端的代码时，我们习惯了我们的代码总是在一个崭新的上下文环境中运行，然而一个nodejs服务是一个长时间运行的进程，当我们的代码生效后它会被驻留在内存中，这意味着如果你创建了一个单例对象，它会被分享到每个请求中。
+当我们写只在客户端的代码时，我们习惯了我们的代码总是在一个崭新的上下文环境中运行，然而一个 nodejs 服务是一个长时间运行的进程，当我们的代码生效后它会被驻留在内存中，这意味着如果你创建了一个单例对象，它会被分享到每个请求中。
 
-所以Quasar CLI会为每个请求创建一个新的根Vue实例、它带有新的Router和新的Store实例。这类似于每个用户在自己的浏览器中使用应用程序的新实例。如果我们跨多个请求使用一个共享实例，就很容易导致跨请求状态污染。
+所以 Quasar CLI 会为每个请求创建一个新的根 Vue 实例、它带有新的 Router 和新的 Store 实例。这类似于每个用户在自己的浏览器中使用应用程序的新实例。如果我们跨多个请求使用一个共享实例，就很容易导致跨请求状态污染。
 
-与直接创建Router和Store实例不同，你可以公开一个工厂函数，它可以重复执行，为每个请求创建新的应用程序实例：
+与直接创建 Router 和 Store 实例不同，你可以公开一个工厂函数，它可以重复执行，为每个请求创建新的应用程序实例：
 
 ```js
 // src/router/index.js
@@ -43,7 +43,7 @@ export default function (/* { ssrContext } */) {
 }
 ```
 
-如果你在使用 [Vuex modules](https://vuex.vuejs.org/guide/modules.html) 不要忘记将state作为一个函数导出，否则将会创建一个单例对象。
+如果你在使用 [Vuex modules](https://vuex.vuejs.org/guide/modules.html) 不要忘记将 state 作为一个函数导出，否则将会创建一个单例对象。
 ```js
 // src/store/myModule/state.js
 export default () => ({
@@ -56,7 +56,7 @@ export default () => ({
 
 通用代码不能访问平台特有的 API，如果你的代码直接使用了浏览器特有的全局变量，比如 `window` 或 `document`，他们会在 Node.js 运行时报错，反过来也一样。
 
-对于在服务器和客户端之间共享，但使用了不同的平台 API 的任务，建议将平台特定的实现封装在一个通用的 API 中，或者使用能为你做这件事的库。例如你可以使用  [Axios](https://github.com/axios/axios) 在服务端和客户端使用相同的API。
+对于在服务器和客户端之间共享，但使用了不同的平台 API 的任务，建议将平台特定的实现封装在一个通用的 API 中，或者使用能为你做这件事的库。例如你可以使用  [Axios](https://github.com/axios/axios) 在服务端和客户端使用相同的 API。
 对于浏览器特有的 API，通常的方法是在仅客户端特有的生命周期钩子中惰性地访问它们，例如 onMounted。
 
 
@@ -64,7 +64,7 @@ export default () => ({
 
 请注意，如果一个第三方库编写时没有考虑到通用性，那么要将它集成到一个 SSR 应用中可能会很棘手。你*或许*可以通过模拟一些全局变量来让它工作，但这只是一种 *hack* 手段并且可能会影响到其他库的环境检测代码。
 
-当你通过boot文件添加一个第三方的库到你的项目中时，请考虑它是否可以同时在服务器和客户端上运行。如果它需要只在服务器上运行或只在客户端运行，那么请在`quasar.config.js`中指定它：
+当你通过 boot 文件添加一个第三方的库到你的项目中时，请考虑它是否可以同时在服务器和客户端上运行。如果它需要只在服务器上运行或只在客户端运行，那么请在`quasar.config.js`中指定它：
 
 ```js
 // quasar.config.js
@@ -80,12 +80,12 @@ return {
 
 ## 数据预取 Data Pre-Fetching and State
 
-在SSR期间，我们实际上是在渲染应用程序的一个“快照”，所以如果应用程序依赖于一些异步数据，这些数据需要在我们开始渲染过程之前预取和解析。
+在 SSR 期间，我们实际上是在渲染应用程序的一个“快照”，所以如果应用程序依赖于一些异步数据，这些数据需要在我们开始渲染过程之前预取和解析。
 
-Quasar CLI提供了 [PreFetch 特性](/quasar-cli-vite/prefetch-feature)可以帮你解决这个问题，请花费一些时间阅读此页面。
+Quasar CLI 提供了 [PreFetch 特性](/quasar-cli-vite/prefetch-feature)可以帮你解决这个问题，请花费一些时间阅读此页面。
 
 <q-separator class="q-mt-xl" />
 
 
-> 此页面中的部分内容引用自：[vue官文档SSR开发指南](https://vuejs.org/guide/scaling-up/ssr.html#component-lifecycle-hooks)。
+> 此页面中的部分内容引用自：[vue 官文档 SSR 开发指南](https://vuejs.org/guide/scaling-up/ssr.html#component-lifecycle-hooks)。
 

@@ -1,11 +1,11 @@
 ---
 title: 配置 Cordova
-desc: (@quasar/app-vite) 如何使用Quasar ClI 管理你的Cordova应用。
+desc: (@quasar/app-vite) 如何使用 Quasar ClI 管理你的 Cordova 应用。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
 
-我们将使用 Quasar CLI（和 Cordova CLI）开发和构建移动APP。构建SPA，PWA，Electron 应用与移动 APP 之间的区别仅由 "quasar dev" 和 "quasar build" 命令中的 "mode" 参数决定。
+我们将使用 Quasar CLI（和 Cordova CLI）开发和构建移动 APP。构建 SPA，PWA，Electron 应用与移动 APP 之间的区别仅由 "quasar dev" 和 "quasar build" 命令中的 "mode" 参数决定。
 
 有两个配置文件对您的移动 APP 非常重要。我们会逐一介绍。
 
@@ -15,7 +15,7 @@ related:
 我们将在下一节中看到该文件的一些属性将被覆盖。
 
 ## quasar.config.js
-Quasar CLI 可帮助您自动设置移动 APP 的某些属性（从config.xml文件获取）：Cordova "id"、APP 版本(version)、说明(description）和 Android 系统的 versionCode。为了方便，我们只使用一个数据源。例如，要改变你的APP版本，你不需要同时修改的多个文件，这是容易出错的。
+Quasar CLI 可帮助您自动设置移动 APP 的某些属性（从 config.xml 文件获取）：Cordova "id"、APP 版本(version)、说明(description）和 Android 系统的 versionCode。为了方便，我们只使用一个数据源。例如，要改变你的 APP 版本，你不需要同时修改的多个文件，这是容易出错的。
 
 Quasar CLI 为了确定上面提到的每个属性的值：
 1. 在 `/quasar.config.js` 中查找 "cordova" 对象。它有 "version", "description" 和/或 "androidVersionCode"吗？如果是的话，它会使用它们。
@@ -49,7 +49,7 @@ return {
   framework: {
     config: {
       cordova: {
-        // 在iOS移动设备上添加动态的顶部填充(top padding)
+        // 在 iOS 移动设备上添加动态的顶部填充(top padding)
         iosStatusBarPadding: true/false,
 
         // Quasar 处理手机的返回按钮是否退出应用

@@ -29,7 +29,7 @@ desc: (@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。
 :::
 
 ## 优化性能
-默认情况下，该 webserver 仅会利用服务器的一个CPU核心。如果您想它利用多个cpu核心，推荐使用 [PM2](http://pm2.keymetrics.io/) 作为解决方案。
+默认情况下，该 webserver 仅会利用服务器的一个 CPU 核心。如果您想它利用多个 cpu 核心，推荐使用 [PM2](http://pm2.keymetrics.io/) 作为解决方案。
 
 先在您的服务器上安装 PM2 ，然后将 websever 的启动脚本修改为：
 ```js
@@ -40,7 +40,7 @@ desc: (@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。
 
 ## 部署到 Cleavr
 
-您可以使用 [Cleavr](https://cleavr.io) 将 Quasar SSR 应用程序部署到几个流行的VPS提供商。Cleavr 将自动为您的应用程序启用群集模式的PM2。
+您可以使用 [Cleavr](https://cleavr.io) 将 Quasar SSR 应用程序部署到几个流行的 VPS 提供商。Cleavr 将自动为您的应用程序启用群集模式的 PM2。
 
 在 Cleavr 上创建一个新的 **NodeJS SSR** 项目，然后使用以下配置：
 
@@ -56,13 +56,13 @@ desc: (@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。
 
 由于上面的 Cleavr 在国内无法访问，您可以使用由我个人开发的 [node-vercel](https://github.com/dongwa/vercel-quasar) 将您的 Quasar SSR 应用免费部署到 [vercel](https://vercel.com/) 上，它免费而且在国内不墙。
 
->（2022年9月更新，“不墙”已经成为过去式了，不过您仍然可以将您的网站部署到 vercel 上，同时将自己的域名指向 vercel 给出的 IP 来提供服务，目前您访问的文档就是部署在其上。）
+>（2022 年 9 月更新，“不墙”已经成为过去式了，不过您仍然可以将您的网站部署到 vercel 上，同时将自己的域名指向 vercel 给出的 IP 来提供服务，目前您访问的文档就是部署在其上。）
 
 详细使用文档见仓库 [README](https://github.com/dongwa/vercel-quasar)
 
 简单使用步骤：
 
-1. 将 `src-ssr/server.js` 中的 `listen` 函数修改为同步函数，即移除所有的async和await，例如：
+1. 将 `src-ssr/server.js` 中的 `listen` 函数修改为同步函数，即移除所有的 async 和 await，例如：
 
 ``` js
 /**

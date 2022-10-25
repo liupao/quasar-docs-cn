@@ -43,7 +43,7 @@ setx path "%path%;%ANDROID_SDK_ROOT%\tools;%ANDROID_SDK_ROOT%\platform-tools"
 
   ![SDK manager](https://cdn.quasar.dev/img/Android-Studio-SDK-Menu.png 'SDK manager')
 
-- 选择所需的 SDK 并点击 "Apply" 来安装SDK。
+- 选择所需的 SDK 并点击 "Apply" 来安装 SDK。
 
   ![SDK selection](https://cdn.quasar.dev/img/Android-Studio-SDK-selection.png 'SDK selection')
 

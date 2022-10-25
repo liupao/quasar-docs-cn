@@ -1,6 +1,6 @@
 ---
 title: Cordova 插件
-desc: (@quasar/app-vite) 如果在Quasar中使用Cordova 插件
+desc: (@quasar/app-vite) 如果在 Quasar 中使用 Cordova 插件
 ---
 
 您可以使用 [Cordova 插件](https://cordova.apache.org/docs/en/latest/#plugin-apis) 访问设备的原生 API。
@@ -44,21 +44,21 @@ export default {
 }
 </script>
 ```
-原因很简单。Quasar 监听到 `deviceready` 事件之后挂载根 Vue组件。但在此之前，Vue 文件被导入到 `/src/router/routes.js` 文件中，因此 `export default` 之外的代码会被提前执行。
+原因很简单。Quasar 监听到 `deviceready` 事件之后挂载根 Vue 组件。但在此之前，Vue 文件被导入到 `/src/router/routes.js` 文件中，因此 `export default` 之外的代码会被提前执行。
 
 
 ## 使用一个 Cordova 插件
 
-让我们通过一些例子来学习，假设您已经为Quasar项目添加了Cordova模式并已经安装了一个平台（android，ios，…）。
+让我们通过一些例子来学习，假设您已经为 Quasar 项目添加了 Cordova 模式并已经安装了一个平台（android，ios，…）。
 
 ### 示例：电池管理
 
-第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Battery Status doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html)。
+第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova 插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Battery Status doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html)。
 
 我们看到有关如何安装此插件的说明。它总是一个 Cordova 的命令。**因此，我们将 "cd" 进入/src-cordova**（这是 Cordova 生成的文件夹）**并在那里运行安装命令**：
 
 ```bash
-# 在/src-cordova中:
+# 在/src-cordova 中:
 $ cordova plugin add cordova-plugin-battery-status
 ```
 
@@ -106,14 +106,14 @@ export default {
 
 ### 示例：相机
 
-第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Camera doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/index.html)。
+第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova 插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Camera doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/index.html)。
 
 有提及 `deviceready` 事件。 但是我们已经从前面的章节中知道如何处理它。
 
 我们看到有关如何安装此插件的说明。它总是一个 Cordova 的命令。**因此，我们将 "cd" 进入/src-cordova**（这是 Cordova 生成的文件夹）**并在那里运行安装命令**：
 
 ```bash
-# 在/src-cordova中:
+# 在/src-cordova 中:
 $ cordova plugin add cordova-plugin-camera
 ```
 
@@ -165,7 +165,7 @@ export default {
 ```
 
 ### 示例：设备
-第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Device doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html)。
+第一步是阅读我们想要使用的 Cordova 插件的文档。 我们看 [Cordova 插件列表](https://cordova.apache.org/docs/en/latest/#plugin-apis) 并点击 [Device doc page](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html)。
 
 这个插件初始化了一个名为 `device` 的全局变量，它描述了设备的硬件和软件信息。因此可以使用 `window.device` 访问它。
 
@@ -173,7 +173,7 @@ export default {
 我们看到有关如何安装此插件的说明。它总是一个 Cordova 的命令。**因此，我们将 "cd" 进入/src-cordova**（这是 Cordova 生成的文件夹）**并在那里运行安装命令**：
 
 ```bash
-# 在/src-cordova中:
+# 在/src-cordova 中:
 $ cordova plugin add cordova-plugin-device
 ```
 

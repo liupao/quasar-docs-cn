@@ -1,6 +1,6 @@
 ---
 title: 布局抽屉
-desc: 如何使用QDrawer组件。Quasar 的侧边栏。
+desc: 如何使用 QDrawer 组件。Quasar 的侧边栏。
 keys: QDrawer
 related:
   - /layout/layout
@@ -60,7 +60,7 @@ QDrawer 是 QLayout 的侧边栏部分。
 | `q-mini-drawer-hide` | 侧滑菜单处于 "mini"模式时隐藏。 |
 | `q-mini-drawer-only` | 仅在侧滑菜单处于   "mini" 模式时显示。 |
 
-您还可以利用以下特性根据实际情况编写自己的 CSS 类：QLayoutDrawer 在 "normal" 模式下具有`q-drawer--standard` CSS类，在 "mini" 模式下具有 `q-drawer--mini`。此外，当侧滑菜单处于"mobile" 行为时，它会获得 `q-drawer--mobile` CSS类。
+您还可以利用以下特性根据实际情况编写自己的 CSS 类：QLayoutDrawer 在 "normal" 模式下具有`q-drawer--standard` CSS 类，在 "mini" 模式下具有 `q-drawer--mini`。此外，当侧滑菜单处于"mobile" 行为时，它会获得 `q-drawer--mobile` CSS 类。
 
 #### 鼠标移入/移出触发
 
@@ -78,12 +78,12 @@ QDrawer 是 QLayout 的侧边栏部分。
 
 在下面的示例中，当处于 "mini" 模式时，如果用户单击侧滑菜单，则我们将切换到普通模式。
 
-考虑将QItems与下面的路由属性（如to）一起使用。 出于演示目的，未添加这些属性，因为它将破坏UMD版本。
+考虑将 QItems 与下面的路由属性（如 to）一起使用。 出于演示目的，未添加这些属性，因为它将破坏 UMD 版本。
 
 <doc-example title="点击触发迷你模式" file="QDrawer/MiniClickEvent" />
 
 #### Slots
-默认情况下，在 "mini" 模式下，Quasar CSS 隐藏一些 DOM 元素以提供整洁的狭窄侧滑菜单。 但是，肯定有一些用例需要您进行深度调整。您可以为此使用QLayoutDrawe r的 "mini" Vue 插槽。 在  "mini" 模式下，此插槽的内容将替换侧滑菜单的默认内容。
+默认情况下，在 "mini" 模式下，Quasar CSS 隐藏一些 DOM 元素以提供整洁的狭窄侧滑菜单。 但是，肯定有一些用例需要您进行深度调整。您可以为此使用 QLayoutDrawe r 的 "mini" Vue 插槽。 在  "mini" 模式下，此插槽的内容将替换侧滑菜单的默认内容。
 
 <doc-example title="使用插槽自定义迷你模式的内容" file="QDrawer/MiniSlot" />
 

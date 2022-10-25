@@ -6,7 +6,7 @@ components:
 ---
 
 ::: tip Quasar CLI 基于 Vite 或者 Webpack
-现在有基于 vite 和基于 webopack 两种版本的Quasar CLI可供选择。
+现在有基于 vite 和基于 webopack 两种版本的 Quasar CLI 可供选择。
 :::
 
 ::: tip 组合式和选项式 API
@@ -28,7 +28,7 @@ components:
 ### Quasar CLI 版本
 
 ```bash
-# 在一个quasar UI v2 的项目中运行以下命令
+# 在一个 quasar UI v2 的项目中运行以下命令
 
 # 检查 quasar 有关可更新的包
 $ quasar upgrade
@@ -82,7 +82,7 @@ $ yarn add vue@3 @quasar/extras@latest
 
 **这个指南适用于使用了 Quasar CLI 或 UMD 版本的项目**，但是其中一些信息可能也对 Vue CLI 版本的项目有帮助。
 
-对于已经在项目中使用 Vue CLI 的开发者，你可以查看如何安装与 Quasar v2 一起使用的 [vue-cli-plugin-quasar](/start/vue-cli-plugin) 。你还需要对 main.js 进行一些更改，也要升级你的 Vue CLI 以支持Vue 3。目前最好的方法是为 Vue 3 生成一个新的 Vue-CLI 项目，然后按照 Vue-CLI 插件 quasar 的[安装步骤i](/start/vue-cli-plugin#add-vue-cli-quasar-plugin)，检查该/src文件夹中发生的更改，然后将相同原则应用于新的 Vue CLI 项目中。
+对于已经在项目中使用 Vue CLI 的开发者，你可以查看如何安装与 Quasar v2 一起使用的 [vue-cli-plugin-quasar](/start/vue-cli-plugin) 。你还需要对 main.js 进行一些更改，也要升级你的 Vue CLI 以支持 Vue 3。目前最好的方法是为 Vue 3 生成一个新的 Vue-CLI 项目，然后按照 Vue-CLI 插件 quasar 的[安装步骤 i](/start/vue-cli-plugin#add-vue-cli-quasar-plugin)，检查该/src 文件夹中发生的更改，然后将相同原则应用于新的 Vue CLI 项目中。
 
 
 ::: danger

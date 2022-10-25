@@ -1,22 +1,22 @@
 ---
-title: 如何使用Vue
-desc: Quasar关于Vue的教程
+title: 如何使用 Vue
+desc: Quasar 关于 Vue 的教程
 ---
 
-在学习Quasar之前，更好先学习一下ES6和Vue 3。
+在学习 Quasar 之前，更好先学习一下 ES6 和 Vue 3。
 
-[快速学习ES6](https://github.com/lukehoban/es6features) 和 [完整的 ES6 特性列表](http://es6-features.org/#Constants) -- 不要担心，你也不需要将所有的ES6都掌握）
+[快速学习 ES6](https://github.com/lukehoban/es6features) 和 [完整的 ES6 特性列表](http://es6-features.org/#Constants) -- 不要担心，你也不需要将所有的 ES6 都掌握）
 
 对于有响应式开发经验的开发者来说，只需要半天的时间就可以将 [Vue 3 文档](https://vuejs.org/) 从上到下阅读一遍，这对了解和使用 Quasar 的组件有非常大的帮助。
 
 
 ::: tip
-如果你是Vue初学者，也没使用过其他的响应式框架，并且在寻找一个好的教程，我们推荐你看看 [Vue 和 Quasar 视频教程](/video-tutorials)
+如果你是 Vue 初学者，也没使用过其他的响应式框架，并且在寻找一个好的教程，我们推荐你看看 [Vue 和 Quasar 视频教程](/video-tutorials)
 :::
 
 在阅读 Vue 文档之后，让我们理清一些最常问的问题，比如“如何使用 Quasar 组件、 Vue 属性、方法和事件”。
 
-## Vue单文件组件 (SFC)
+## Vue 单文件组件 (SFC)
 你将会使用 `*.vue` 文件来构建 Quasar app。每个 `*.vue` 文件包括 `template` (HTML), `script` (Javascript) 和 `style` (CSS/SASS/SCSS/Stylus/Less) 三部分
 
 ```html
@@ -25,7 +25,7 @@ desc: Quasar关于Vue的教程
 </template>
 
 <script>
-  // 这里是你的 Javascript 定义Vue 组件的地方，
+  // 这里是你的 Javascript 定义 Vue 组件的地方，
   // 它可以是一个 布局组件，一个页面或者一个可复用的组件
 
 export default {
@@ -41,7 +41,7 @@ export default {
 ### CSS 预处理器
 关于 `<style>` 标签，你也可以在其中使用喜欢的预处理器，其中 [Sass/SCSS](https://sass-lang.com)  （推荐）是开箱即用的。
 
-你可以通过 style 标签的 lang 属性来指定希望选择的预处理器来处理正在编写的CSS代码：
+你可以通过 style 标签的 lang 属性来指定希望选择的预处理器来处理正在编写的 CSS 代码：
 
 ```html
 <!-- 注意 lang="sass" -->
@@ -60,7 +60,7 @@ export default {
 
 ## 使用 Quasr 指令
 
-Quasar 提供了一些 [Vue 指令](https://vuejs.org/guide/reusability/custom-directives.html)。这些指令可以在所有的DOM和组件上使用。
+Quasar 提供了一些 [Vue 指令](https://vuejs.org/guide/reusability/custom-directives.html)。这些指令可以在所有的 DOM 和组件上使用。
 
 示例：
 
@@ -79,7 +79,7 @@ Quasar 提供了一些 [Vue 指令](https://vuejs.org/guide/reusability/custom-d
 ## 使用 Quassa 组件
 所有的 Quasar 组件的命名都以 Q 开头比如 "QBtn", "QElementResizeObserver"。为了使用它们，需要在`/quasar.config.js`中将其引入。
 
-让我们以QBtn和QIcon为例，然后我们将看到如何在应用程序中嵌入这些组件：
+让我们以 QBtn 和 QIcon 为例，然后我们将看到如何在应用程序中嵌入这些组件：
 
 ```html
 <div>
@@ -88,11 +88,11 @@ Quasar 提供了一些 [Vue 指令](https://vuejs.org/guide/reusability/custom-d
 </div>
 ```
 
-> 请注意，在模板中使用QBtn组件写法为`<q-btn>`。如果我们要导入QelementResizeObserver组件，则将`<q-element-resize-observer>`用于模板中。
+> 请注意，在模板中使用 QBtn 组件写法为`<q-btn>`。如果我们要导入 QelementResizeObserver 组件，则将`<q-element-resize-observer>`用于模板中。
 
 ## 使用 Quasar 插件
 
-Quasar插件是可以在Vue文件中和外部使用的功能，如Notify、BottomSheet、AppVisibility等。
+Quasar 插件是可以在 Vue 文件中和外部使用的功能，如 Notify、BottomSheet、AppVisibility 等。
 
 ::: warning
 **使用插件之前**，需要在`/quasar.config.js`将其启用，示例：
@@ -103,7 +103,7 @@ framework: {
   plugins: [ 'Notify', 'BottomSheet' ]
 }
 ```
-让我们以Notify为例，看看如何使用它。在Vue文件中，你可以编写以下内容（组合式API）：
+让我们以 Notify 为例，看看如何使用它。在 Vue 文件中，你可以编写以下内容（组合式 API）：
 
 ```html
 <template>
@@ -143,7 +143,7 @@ export default {
 
 > 注意我们在模板中使用了 `$q.<plugin-name>`.
 
-在选项式API中：
+在选项式 API 中：
 ```js
 export default {
   methods: {
@@ -154,7 +154,7 @@ export default {
 }
 ```
 
-在Vue文件之外:
+在 Vue 文件之外:
 
 ```js
 import { Notify } from 'quasar'
@@ -309,7 +309,7 @@ export default {
 <template>
   <!-- 示例 1. 直接赋值 -->
   <q-bogus :columns="{key: 'value', anotherKey: 'another value'}" />
-  <!-- 示例1更优雅的方式 -->
+  <!-- 示例 1 更优雅的方式 -->
   <q-bogus
     :columns="{
       key: 'value',

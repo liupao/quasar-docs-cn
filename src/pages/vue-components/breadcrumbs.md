@@ -3,7 +3,7 @@ title: Breadcrumbs
 desc: The QBreadcrumbs Vue component is a navigational aid for your UI. It allows users to keep track of their location within programs, documents, or websites.
 keys: QBreadcrumbs,QBreadcrumbsEl
 ---
-QBreadcrumbs （面包屑）组件在UI中用作导航辅助。帮助用户定位目前处于应用程序中的哪个页面。通常会用在[QToolbar](/vue-components/toolbar)组件之中，但不局限于此。
+QBreadcrumbs （面包屑）组件在 UI 中用作导航辅助。帮助用户定位目前处于应用程序中的哪个页面。通常会用在[QToolbar](/vue-components/toolbar)组件之中，但不局限于此。
 
 ## QBreadcrumbs API
 
@@ -20,7 +20,7 @@ QBreadcrumbs （面包屑）组件在UI中用作导航辅助。帮助用户定�
 
 <doc-example title="Custom separators" file="QBreadcrumbs/Separator" />
 
-下面的示例在UMD中不可使用，因为它依赖Vue Router（所以在Codepen/jsFiddle中也不能正常运行）。
+下面的示例在 UMD 中不可使用，因为它依赖 Vue Router（所以在 Codepen/jsFiddle 中也不能正常运行）。
 
 <doc-example title="Router links" file="QBreadcrumbs/RouterLinks" />
 

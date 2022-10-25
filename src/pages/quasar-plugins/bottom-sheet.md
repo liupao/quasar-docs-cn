@@ -1,6 +1,6 @@
 ---
 title: Bottom Sheet Plugin
-desc: 当用户在应用底部窗口底部上划时展示一组操作菜单的Quasar组件。
+desc: 当用户在应用底部窗口底部上划时展示一组操作菜单的 Quasar 组件。
 keys: BottomSheet
 related:
   - /quasar-plugins/dialog
@@ -11,7 +11,7 @@ Bottom Sheets： 从设备的屏幕底部向上滑动时展示一组操作菜单
 
 弹出来的底部菜单总是会展示在所有元素的上方，页面的其他部分会产生一个暗色的遮罩，以使得焦点更多的放在弹出的底部菜单上，并且必须将其关闭后才能与其他组件进行交互。
 
-Bottom Sheets可以展示列表、网格、图标、头像或者任意Vue组件。
+Bottom Sheets 可以展示列表、网格、图标、头像或者任意 Vue 组件。
 
 
 ## BottomSheet API
@@ -25,11 +25,11 @@ Bottom Sheets可以展示列表、网格、图标、头像或者任意Vue组件�
 ## 用法
 
 ```js
-// 在Vue文件之外
+// 在 Vue 文件之外
 import { BottomSheet } from 'quasar'
 BottomSheet.create({ ... }) // returns Object
 
-// 在Vue文件之内
+// 在 Vue 文件之内
 import { useQuasar } from 'quasar'
 setup () {
   const $q = useQuasar()
@@ -38,7 +38,7 @@ setup () {
 ```
 
 ::: tip
-当用户点击手机/平板电脑的返回按钮（仅适用于Cordova应用程序）时，底部对话框将自动关闭。
+当用户点击手机/平板电脑的返回按钮（仅适用于 Cordova 应用程序）时，底部对话框将自动关闭。
 
 同样，在桌面浏览器上，按`ESCAPE`键也会关闭底部对话框。
 :::
@@ -48,5 +48,5 @@ setup () {
 <doc-example title="暗色模式" file="BottomSheet/Dark" />
 
 ::: tip
-完整的选项列表请见api部分
+完整的选项列表请见 api 部分
 :::

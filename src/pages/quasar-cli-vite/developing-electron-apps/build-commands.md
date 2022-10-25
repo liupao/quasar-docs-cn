@@ -67,7 +67,7 @@ $ quasar build --mode electron --publish always
 
 您可以指定使用 `electron-builder` 来构建您的应用，直接在命令行的构建命令中加上 `--bundler builder`，或者修改 `quasar.config.js` 中的 `electron.bundler` 配置项。使用 `electron-packager` 时 --publish 参数不会生效。
 
-目前（2019年6月）支持发布的平台包括： GitHub、Bintray、S3、Digital Ocean Spaces、或一个 generic HTTPS server。更多关于发布的信息，请[参考](https://www.electron.build/configuration/publish)。
+目前（2019 年 6 月）支持发布的平台包括： GitHub、Bintray、S3、Digital Ocean Spaces、或一个 generic HTTPS server。更多关于发布的信息，请[参考](https://www.electron.build/configuration/publish)。
 
 
 `-P` 的有效选项包括 "onTag"、"onTagOrDraft"、"always" 和 "never"，这些选项在上面的链接中进行了解释。此外，您必须在 `quasar.config.js` 中的 `electron.builder` 中配置有效的 `publish` 字段。

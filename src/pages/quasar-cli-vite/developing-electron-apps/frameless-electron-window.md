@@ -1,6 +1,6 @@
 ---
 title: 无边框 Electron 窗口
-desc: (@quasar/app-vite) 如何给Quasar桌面应用隐藏边框。
+desc: (@quasar/app-vite) 如何给 Quasar 桌面应用隐藏边框。
 related:
   - /vue-components/bar
 ---

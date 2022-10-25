@@ -1,6 +1,6 @@
 ---
 title: ESLint
-desc: (@quasar/app-vite) 如何为Quasar项目配置ESLint。
+desc: (@quasar/app-vite) 如何为 Quasar 项目配置 ESLint。
 ---
 
 强烈推荐您使用一个代码检查工具（linter） （例如  [ESLint](https://eslint.org/)）来保证您的代码的可读性。它也可以帮助您在代码运行前检查代码中的一些错误。

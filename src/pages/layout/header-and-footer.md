@@ -1,6 +1,6 @@
 ---
 title: 页头和页脚
-desc: 如何使用 QHeader 和 QFooter组件。
+desc: 如何使用 QHeader 和 QFooter 组件。
 keys: QHeader,QFooter
 related:
   - /layout/layout
@@ -45,7 +45,7 @@ QLayout 允许您将视图配置为一个 3x3 矩阵，其中包含可选的页�
 
 ### Reveal 属性
 
-在下面的示例中，滚动页面以查看QHeader和QFooter行为。
+在下面的示例中，滚动页面以查看 QHeader 和 QFooter 行为。
 
 <doc-example title="Reveal" file="QHeader/Reveal" />
 

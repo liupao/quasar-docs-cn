@@ -1,16 +1,16 @@
 ---
-title: v-scroll指令
-desc: 用户滚动页面时触发的Vue指令。
+title: v-scroll 指令
+desc: 用户滚动页面时触发的 Vue 指令。
 keys: scroll
 related:
   - /vue-directives/scroll-fire
   - /vue-components/scroll-observer
 ---
 
-这是一个Vue指令，它接受一个参数(一个函数)，当用户滚动包含该DOM节点的页面时触发。
+这是一个 Vue 指令，它接受一个参数(一个函数)，当用户滚动包含该 DOM 节点的页面时触发。
 
 ::: tip 提示
-* 使用此指令的另一种选择是在页面上放置QScrollObserver [QScrollObserver](/vue-components/scroll-observer) 组件。
+* 使用此指令的另一种选择是在页面上放置 QScrollObserver [QScrollObserver](/vue-components/scroll-observer) 组件。
 * 还有一个与滚动相关的指令，叫做 [Scroll Fire](/vue-directives/scroll-fire).
 :::
 
@@ -61,4 +61,4 @@ export default {
 ```
 
 ### 确定要附加滚动事件的容器
-请阅读 [这里](/vue-components/scroll-observer#determining-scrolling-container) 了解Quasar如何 确定要附加滚动事件的容器。
+请阅读 [这里](/vue-components/scroll-observer#determining-scrolling-container) 了解 Quasar 如何 确定要附加滚动事件的容器。

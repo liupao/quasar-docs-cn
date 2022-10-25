@@ -1,10 +1,10 @@
 ---
 title: Notify 通知
-desc: 一个可以给用户展示带有动画的信息的Quasar插件，例如提示，通知，警告等。
+desc: 一个可以给用户展示带有动画的信息的 Quasar 插件，例如提示，通知，警告等。
 keys: Notify
 ---
 
-Notify是一个Quasar插件，它以通知的形式向用户展示带动画的消息(浮动在页面的所有内容之上)。对于提醒用户某个事件非常有用，甚至可以通过操作按钮吸引用户交互。也被称为toast 或者 snackbar。
+Notify 是一个 Quasar 插件，它以通知的形式向用户展示带动画的消息(浮动在页面的所有内容之上)。对于提醒用户某个事件非常有用，甚至可以通过操作按钮吸引用户交互。也被称为 toast 或者 snackbar。
 
 ## Notify API
 
@@ -19,7 +19,7 @@ Notify是一个Quasar插件，它以通知的形式向用户展示带动画的�
 ###  基础
 
 ```js
-// 在Vue文件之外
+// 在 Vue 文件之外
 import { Notify } from 'quasar'
 
 Notify.create('Danger, Will Robinson! Danger!')
@@ -28,7 +28,7 @@ Notify.create({
   message: 'Danger, Will Robinson! Danger!'
 })
 
-// 在Vue文件之内
+// 在 Vue 文件之内
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -71,20 +71,20 @@ setup () {
 <doc-example title="在不同的位置出现" file="Notify/Positioning" />
 
 ::: tip 提示
-关于完整的配置列表，请查看API卡片部分
+关于完整的配置列表，请查看 API 卡片部分
 
 :::
 
 ### 分组
 
-每个通知都会按照内容（message + caption + multiLine + actions labels + position）被自动划分到一个组中。也可以使用group字段手动分组。
+每个通知都会按照内容（message + caption + multiLine + actions labels + position）被自动划分到一个组中。也可以使用 group 字段手动分组。
 
 当多个被划分到同组中的提示相继被触发时，屏幕上只会显示一个通知，后面触发的会替换前面的，并且带有一个角标，角标的内容是被触发的通知个数。
 
 然而，如果你想禁用此行为，可以设置`group: false`。
-下面的示例中，第一个按钮触发的两个内容相同的提示，它们被划分到同一组中，屏幕上只会显示一个通知，角标为2。
+下面的示例中，第一个按钮触发的两个内容相同的提示，它们被划分到同一组中，屏幕上只会显示一个通知，角标为 2。
 第二个按钮触发了两个相同内容的通知，但是配置了`group: false`，所以屏幕上显示了两个通知。
-第三个按钮触发了两个内容不同的通知，但是它们被手动划分到同一个组中，所以屏幕上只有一个通知，内容为后触发的，角标为2。
+第三个按钮触发了两个内容不同的通知，但是它们被手动划分到同一个组中，所以屏幕上只有一个通知，内容为后触发的，角标为 2。
 
 <doc-example title="分组" file="Notify/Grouping" />
 
@@ -109,12 +109,12 @@ setup () {
 
 <doc-example title="Out of the box types" file="Notify/PredefinedTypesDefault" />
 
-此外，你也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个boot文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
+此外，你也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个 boot 文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
 
 <doc-example title="自定义通知类型" file="Notify/PredefinedTypesCustom" />
 
 ```js
-// 如何在一个boot文件中注册类型：
+// 如何在一个 boot 文件中注册类型：
 
 import { Notify } from 'quasar'
 
@@ -128,13 +128,13 @@ Notify.registerType('my-notif', {
 ```
 
 ### 使用 HTML
-若设置了`html: true`字段，也可以使用html作为message，**一定要注意这样做可能导致XSS攻击**，所以一定要自己保证message的安全。
+若设置了`html: true`字段，也可以使用 html 作为 message，**一定要注意这样做可能导致 XSS 攻击**，所以一定要自己保证 message 的安全。
 
 <doc-example title="Unsafe HTML message" file="Notify/UnsafeHtml" />
 
 ### 设置属性
 
-也可以通过设置`attrs`对象字段为通知的DOM或者它的子元素操作按钮（actions）的DOM自定义HTML属性：
+也可以通过设置`attrs`对象字段为通知的 DOM 或者它的子元素操作按钮（actions）的 DOM 自定义 HTML 属性：
 
 ```js
 import { useQuasar } from 'quasar'
@@ -146,14 +146,14 @@ setup () {
     ...
 
     attrs: {
-      // 为通知的DOM本身设置属性:
+      // 为通知的 DOM 本身设置属性:
       role: 'alertdialog'
     },
 
     actions: [
       {
         icon: 'close',
-        // 为通知的操作按钮DOM设置属性:
+        // 为通知的操作按钮 DOM 设置属性:
         attrs: {
           'aria-label': 'Dismiss'
         }
@@ -174,16 +174,16 @@ dismiss()
 ```
 
 ### 设置默认值
-有两种方式设置全局的默认配置：通过quasar.config.js > framework > config > notify对象配置（配置对象见API卡片部分），或者：
+有两种方式设置全局的默认配置：通过 quasar.config.js > framework > config > notify 对象配置（配置对象见 API 卡片部分），或者：
 
-通过一个boot文件（[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)）来设置全局的默认配置。
+通过一个 boot 文件（[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)）来设置全局的默认配置。
 
-首先，我们创建一个boot文件，示例取名为："notify-defaults.js".
+首先，我们创建一个 boot 文件，示例取名为："notify-defaults.js".
 
 ```bash
 $ quasar new boot notify-defaults [--format ts]
 ```
-将其文件名添加至`quasar.config.js`的boot数组中：
+将其文件名添加至`quasar.config.js`的 boot 数组中：
 
 ```js
 module.exports = function(ctx) {
@@ -208,10 +208,10 @@ Notify.setDefaults({
 ```
 
 ::: warning 警告
-我们只能通过这种方式设置默认的`actions`，通过quasar.config.js设置的actions不会生效。
+我们只能通过这种方式设置默认的`actions`，通过 quasar.config.js 设置的 actions 不会生效。
 :::
 
-也可以在Vue文件中设置默认配置：
+也可以在 Vue 文件中设置默认配置：
 
 ```js
 // inside of a Vue component

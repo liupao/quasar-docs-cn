@@ -1,9 +1,9 @@
 ---
 title: 发布应用到商店
-desc: (@quasar/app-vite) 如果发布一个使用Quasar和Cordova开发的混合应用到google和apple商店。
+desc: (@quasar/app-vite) 如果发布一个使用 Quasar 和 Cordova 开发的混合应用到 google 和 apple 商店。
 ---
 
-所以你已经完成了你的移动APP的工作。 现在是部署它的时候了。 让我们学习如何部署。
+所以你已经完成了你的移动 APP 的工作。 现在是部署它的时候了。 让我们学习如何部署。
 
 ## Android 发布
 要为 Android 生成发布版本，我们可以使用以下 Quasar CLI 命令：
@@ -16,7 +16,7 @@ $ quasar build -m android
 
 这将根据你的 `/src-cordova/config.xml` 中的设置生成一个发布版本。
 
-接下来，我们可以在 "/src-cordova/platforms/android/app/build/outputs/apk/release" 或等效路径（写在终端输出中）中找到我们未签名的APK文件。文件名通常以 "-release-unsigned.apk" 结尾。 现在，我们需要签名未签名的 APK 并在其上运行 align 工具来对其进行优化，并为应用商店做好准备。 如果您已经有签名密钥，请跳过这些步骤并改为使用该密钥。
+接下来，我们可以在 "/src-cordova/platforms/android/app/build/outputs/apk/release" 或等效路径（写在终端输出中）中找到我们未签名的 APK 文件。文件名通常以 "-release-unsigned.apk" 结尾。 现在，我们需要签名未签名的 APK 并在其上运行 align 工具来对其进行优化，并为应用商店做好准备。 如果您已经有签名密钥，请跳过这些步骤并改为使用该密钥。
 
 让我们使用 JDK 附带的 keytool 命令生成我们的私钥。 如果找不到该工具，请参阅安装指南：
 
@@ -30,26 +30,26 @@ $ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg
 确保将这个文件保存在安全的地方，如果你失去了它，你将无法提交更新到你的 APP！
 :::
 
-要签名未签名的 APK，请运行 JDK 内置的jarsigner 工具：
+要签名未签名的 APK，请运行 JDK 内置的 jarsigner 工具：
 
 ```bash
 $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore <path-to-unsigned-apk-file> alias_name
 ```
 
-完成 apk 签名后，我们需要运行 zipalign 工具来优化 APK。zipalign 工具可以在 `/path/to/Android/sdk/build-tools/VERSION/zipalign` 中找到。例如，在安装了 Android Studio 的 OS X上，zipalign 位于 `~/Library/Android/sdk/build-tools/VERSION/zipalign` 中:
+完成 apk 签名后，我们需要运行 zipalign 工具来优化 APK。zipalign 工具可以在 `/path/to/Android/sdk/build-tools/VERSION/zipalign` 中找到。例如，在安装了 Android Studio 的 OS X 上，zipalign 位于 `~/Library/Android/sdk/build-tools/VERSION/zipalign` 中:
 
 
 ```bash
 $ zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
 ```
-现在我们有了我们的最终版本二进制文件HelloWorld.apk，我们可以在Google Play商店上发布这个二进制文件，供全世界享用！
+现在我们有了我们的最终版本二进制文件 HelloWorld.apk，我们可以在 Google Play 商店上发布这个二进制文件，供全世界享用！
 
-（还有其他一些签名APK的方法，请参阅官方的Android应用签名文档以获取更多信息。）
+（还有其他一些签名 APK 的方法，请参阅官方的 Android 应用签名文档以获取更多信息。）
 
 ### Google Play 商店
 现在我们已经为 Google Play 商店准备好了我们的 APK 版本，我们可以创建 Play 商店列表并上传 APK。
 
-首先，您需要访问 [Google Play商店开发者控制台](https://play.google.com/apps/publish)并创建一个新的开发者帐户。不幸的是，这不是免费的。但是，与苹果的99美元相比，成本仅为25美元。
+首先，您需要访问 [Google Play 商店开发者控制台](https://play.google.com/apps/publish)并创建一个新的开发者帐户。不幸的是，这不是免费的。但是，与苹果的 99 美元相比，成本仅为 25 美元。
 
 拥有开发者帐户后，您可以继续并点击“在 Google Play 上发布 Android 应用”。
 
@@ -60,7 +60,7 @@ $ zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
 ### 更新您的应用
 在开发 APP 时，您需要定期更新它。
 
-为了使谷歌 Play 商店接受更新的 APK，您需要更改 APP版本（在 `/package.json` 或 `/quasar.config.js > cordova > version` 中)，然后重新发布该 APP。
+为了使谷歌 Play 商店接受更新的 APK，您需要更改 APP 版本（在 `/package.json` 或 `/quasar.config.js > cordova > version` 中)，然后重新发布该 APP。
 
 ## iOS 发布
 首先，您需要注册 [Apple Developer Program](https://developer.apple.com/programs/)。与 Google 一样，如果您有 Apple 个人帐户，则可以为您的 APP 创建一个额外的帐户。
@@ -83,7 +83,7 @@ $ zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
 
 然后，您必须设置 APP 的名称，然后使用 “Explicit App ID” 选项并将 Bundle ID 设置为 Cordova config.xml 标记中 id 的值。
 
-另外，您必须选择任何需要启用的服务。例如，如果您在APP中使用Apple Pay或电子钱包，则需要选择这些选项。
+另外，您必须选择任何需要启用的服务。例如，如果您在 APP 中使用 Apple Pay 或电子钱包，则需要选择这些选项。
 
 您可以从[官方文档](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)了解更多关于注册 APP 标识符的信息。
 
@@ -95,7 +95,7 @@ Apple 使用 iTunes Connect 管理 APP 提交。登录后，您应该选择 My A
 
 一旦你完成了，点击 Create 按钮，你会看到一个屏幕，你必须设置一些基本的选项，如隐私政策的 URL、类别和子类别。
 
-现在，在我们填写列表中的所有内容之前，我们将构建我们的 APP并使用 Xcode 上传。然后你会回来完成列表。
+现在，在我们填写列表中的所有内容之前，我们将构建我们的 APP 并使用 Xcode 上传。然后你会回来完成列表。
 
 您可以从[官方文档](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/UsingiTunesConnect/UsingiTunesConnect.html)了解有关在 iTunes Connect 中管理 APP 的更多信息。
 
@@ -129,7 +129,7 @@ $ quasar build -m ios -- some params --and options --here
 
 此时您可以点击 `Upload to App Store …` 按钮，如果一切顺利，您将拥有一个上传的 APP，唯一需要做的就是完成 iTunes Connect 列表并将其提交以供审核！
 
-此时，您应在上传带有内容的档案后不久收到来自 iTunes Connect的电子邮件。
+此时，您应在上传带有内容的档案后不久收到来自 iTunes Connect 的电子邮件。
 
 ### 完成 APP 列表程序
 现在您应该回到 iTunes Connect 门户并登录。接下来，点击 APP STORE INFORMATION 下左侧的 Pricing and Availability。

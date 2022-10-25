@@ -1,6 +1,6 @@
 ---
 title: 应用处理静态资源
-desc: (@quasar/app-vite) Quasar项目如何处理静态（assets和static）资源。
+desc: (@quasar/app-vite) Quasar 项目如何处理静态（assets 和 static）资源。
 ---
 您会注意到在项目结构中我们有两个资源目录：`/public/` 和 `/src/assets/`。他们有什么区别？前者是纯静态资源，后者需要由构建工具打包处理后导入。
 

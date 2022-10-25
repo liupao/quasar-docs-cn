@@ -1,10 +1,10 @@
 ---
 title: Mutation Directive
-desc: 使用Mutation Observer API来监听DOM树变化的Vue指令
+desc: 使用 Mutation Observer API 来监听 DOM 树变化的 Vue 指令
 keys: mutation
 ---
 
-`v-mutation`是Quasar提供的一个vue指令，它提供了监听DOM树发生变化的能力，并在这些变化被触发时调用一个方法。
+`v-mutation`是 Quasar 提供的一个 vue 指令，它提供了监听 DOM 树发生变化的能力，并在这些变化被触发时调用一个方法。
 
 工作原理是使用了[Mutation Observer API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)。
 
@@ -27,7 +27,7 @@ keys: mutation
 
 ### 拖拽示例
 
-下面的示例只会在桌面浏览器中生效，因为它依赖于浏览器提供的拖拽api。将带颜色的块拖放到另外一个方框中，以查看效果。
+下面的示例只会在桌面浏览器中生效，因为它依赖于浏览器提供的拖拽 api。将带颜色的块拖放到另外一个方框中，以查看效果。
 
 <doc-example title="拖放 (只在桌面端生效)" file="Mutation/DragDrop" />
 

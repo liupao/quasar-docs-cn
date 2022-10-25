@@ -1,6 +1,6 @@
 ---
-title: 开发Electron的准备工作
-desc: (@quasar/app-vite) 如何给Quasar项目添加Electron开发模式。
+title: 开发 Electron 的准备工作
+desc: (@quasar/app-vite) 如何给 Quasar 项目添加 Electron 开发模式。
 ---
 开始真正的开发前，我们需要进行一些准备工作。
 
@@ -28,13 +28,13 @@ $ quasar mode add electron
 ```
 
 ### Windows  用户的注意事项
-如果您在安装 node-gyp 时遇到错误，您的电脑可能缺少必要的构建工具。例如 Python 和 Visual Studio等。所幸，这里有一个简单的工具可以帮您处理问题。
+如果您在安装 node-gyp 时遇到错误，您的电脑可能缺少必要的构建工具。例如 Python 和 Visual Studio 等。所幸，这里有一个简单的工具可以帮您处理问题。
 
 第一步要做的是检查我们的 npm 版本，确保没有过时，可以通过[npm-windows-upgrade](https://github.com/felixrieseberg/npm-windows-upgrade)来完成。但如果你在使用 yarn，那么可以跳过这个检查。
 
 然后我们可以使用 [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools) 继续安装上述的构建工具，他会为我们在全局依次安装 Visual C++，Python 等等。
 
-::: warning 注意：2019年4月
+::: warning 注意：2019 年 4 月
 使用 Powershell.exe（管理员方式运行） `npm install --global windows-build-tools` 目前似乎失败，错误指向 python2 和 vctools。您可以使用  Chocolatey 来解决这个问题：
 
 **Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))**

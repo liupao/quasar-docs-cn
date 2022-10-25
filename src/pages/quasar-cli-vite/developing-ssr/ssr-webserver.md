@@ -3,11 +3,11 @@ title: SSR Webserver
 desc: (@quasar/app-vite) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.
 ---
 
-生成的文件中有一个`/src-ssr/server.js`文件。这个文件决定了你的SSR服务端是如何创建并运转的。你可以选择监听一个端口启动服务，或者为serverless提供一个handler。
+生成的文件中有一个`/src-ssr/server.js`文件。这个文件决定了你的 SSR 服务端是如何创建并运转的。你可以选择监听一个端口启动服务，或者为 serverless 提供一个 handler。
 
 ## 解析
 
-`/src-ssr/server.[js|ts]`是一个简单的 JavaScript/TypeScript文件，它可以启动你的SSR服务器，决定如何处理来自客户端的请求。
+`/src-ssr/server.[js|ts]`是一个简单的 JavaScript/TypeScript 文件，它可以启动你的 SSR 服务器，决定如何处理来自客户端的请求。
 
 
 ::: danger
@@ -19,18 +19,18 @@ desc: (@quasar/app-vite) Configuring the Quasar SSR webserver for different plat
  * 更多信息请参考：
  * https://v2.quasar.dev/quasar-cli-vite/developing-ssr/ssr-webserver
  *
- * 运行在Node环境上下文中
+ * 运行在 Node 环境上下文中
  */
 
 /**
  * 确保在项目根目录下已经安装了依赖
- * 任何包都可以在此导入使用，并不局限于express和compression。
+ * 任何包都可以在此导入使用，并不局限于 express 和 compression。
  */
 import express from 'express'
 import compression from 'compression'
 
 /**
- * 创建web服务并返回实例。
+ * 创建 web 服务并返回实例。
  *
  * If needed, prepare your webserver to receive
  * connect-like middlewares.
@@ -50,11 +50,11 @@ export function create (/* { ... } */) {
 }
 
 /**
- * 需要让server监听独立的端口，然后返回监听的实例
+ * 需要让 server 监听独立的端口，然后返回监听的实例
  *
  * 下反的"close()"函数中的"listenResult"参数来自于你在此返回的内容
  *
- * 对于生产环境下，你也可以将导出替换为一个为serverless准备的handler
+ * 对于生产环境下，你也可以将导出替换为一个为 serverless 准备的 handler
  */
 export async function listen ({ app, port, isReady, ssrHandler }) {
   await isReady()
@@ -66,7 +66,7 @@ export async function listen ({ app, port, isReady, ssrHandler }) {
 }
 
 /**
- * 关闭serve然后释放资源
+ * 关闭 serve 然后释放资源
  * 在开发环境下只有在服务重启时才会被使用
  *
  * 若你需要使用上面的"listen()"函数返回的结果，可以使用"listenResult"参数
@@ -100,7 +100,7 @@ const jpgRE = /\.jpe?g$/
 const pngRE = /\.png$/
 
 /**
- * 为预加载的文件返回一个HTML格式的字符串（如果有的话）
+ * 为预加载的文件返回一个 HTML 格式的字符串（如果有的话）
  */
 export function renderPreloadTag (file) {
   if (jsRE.test(file) === true) {
@@ -136,7 +136,7 @@ export function renderPreloadTag (file) {
 ```
 
 ::: tip
-无论`listen()`返回什么，它都会作为最终打包出来的`dist/ssr/index.js`文件的导出值。所以，如果需要的话，你也可以返回一个为serverless架构准备的**ssrHandler**。
+无论`listen()`返回什么，它都会作为最终打包出来的`dist/ssr/index.js`文件的导出值。所以，如果需要的话，你也可以返回一个为 serverless 架构准备的**ssrHandler**。
 :::
 
 ## 参数解析
@@ -152,22 +152,22 @@ export function <functionName> ({
 
 ``` js
 {
-  app,     // Expressjs的app实例（取决于你在create()函数中的返回值）
+  app,     // Expressjs 的 app 实例（取决于你在 create()函数中的返回值）
 
   port,    // 在生产环境下，它等于
            //  process.env.PORT || quasar.config.js > ssr > prodPort
-           // 在开发环境下，它等于quasar.config.js > devServer > port
+           // 在开发环境下，它等于 quasar.config.js > devServer > port
 
-  isReady, // 调用时返回一个Promise，当app准备好为客户端服务时resolve
+  isReady, // 调用时返回一个 Promise，当 app 准备好为客户端服务时 resolve
 
-  ssrHandler,  // 预构建处理程序（如果serverless服务不需要特定方法来提供它）。
+  ssrHandler,  // 预构建处理程序（如果 serverless 服务不需要特定方法来提供它）。
               // Prebuilt app handler if your serverless service
               // doesn't require a specific way to provide it.
               // 语法格式: ssrHandler (req, res, next)
-              // 提示: 在在底层使用了isReady()
+              // 提示: 在在底层使用了 isReady()
 
-  // 下面的内容都于SSR middleware（中间件）中的参数一样
-  // （请查看ssr-middleware文档页面）
+  // 下面的内容都于 SSR middleware（中间件）中的参数一样
+  // （请查看 ssr-middleware 文档页面）
   // 一般来说，你不需要使用这些
   // 如果需要的话，直接使用一个中间件代替即可
   resolve: {
@@ -195,9 +195,9 @@ export function <functionName> ({
 * 一般不需要在此文件中调用中间件（但是也可以这样做），启用一个中间件更推荐使用[SSR Middlewares](/quasar-cli-vite/developing-ssr/ssr-middleware) 方法代替，这样可以配置某些中间件只在开发或者生产环境下运行。
 :::
 
-### 替换express.js
+### 替换 express.js
 
-默认使用的Nodejs服务框框架是Express.js，你可以使用任何连接API兼容的Nodejs服务端框架/库来替换它。只需要确保使用yarn/npm将它安装到项目中即可。
+默认使用的 Nodejs 服务框框架是 Express.js，你可以使用任何连接 API 兼容的 Nodejs 服务端框架/库来替换它。只需要确保使用 yarn/npm 将它安装到项目中即可。
 
 ```js
 // src-ssr/server.[js|ts]
@@ -219,7 +219,7 @@ export function create (/* { ... } */) {
 
 ### 监听一个端口
 
-这是使用Quasar CLI在项目中添加SSR模式时获得的默认选项。它启动后会监听配置的端口号（process.env.PORT 或者 quasar.config.js > ssr > prodPort）。
+这是使用 Quasar CLI 在项目中添加 SSR 模式时获得的默认选项。它启动后会监听配置的端口号（process.env.PORT 或者 quasar.config.js > ssr > prodPort）。
 
 ``` js
 // src-ssr/server.[js|ts]
@@ -236,9 +236,9 @@ export async function listen ({ app, port, isReady }) {
 
 ### Serverless
 
-如果你有一个serverless架构的基础设施，那么需要导出一个handler处理程序，而不是开始监听一个端口。
+如果你有一个 serverless 架构的基础设施，那么需要导出一个 handler 处理程序，而不是开始监听一个端口。
 
-你的serverless服务需要你提供：
+你的 serverless 服务需要你提供：
 ``` js
 module.exports.handler = __your_handler__
 ```
@@ -263,7 +263,7 @@ export async function listen ({ app, port, ssrHandler }) {
     // waits for all the middlewares to run before serving clients
 
 
-    // 你在这里返回的内容等价于module.exports.<key> = <value>
+    // 你在这里返回的内容等价于 module.exports.<key> = <value>
     return { handler: ssrHandler }
   }
 }

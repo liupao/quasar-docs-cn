@@ -1,6 +1,6 @@
 ---
 title: Intersection Directive
-desc: 使用Intersection Observer API监听当DOM/组件在可视窗口中出现或者消失时触发一个函数的Vue指令。
+desc: 使用 Intersection Observer API 监听当 DOM/组件在可视窗口中出现或者消失时触发一个函数的 Vue 指令。
 keys: intersection
 related:
   - /vue-components/intersection
@@ -8,10 +8,10 @@ related:
   - /vue-directives/scroll
   - /options/transitions
 ---
-"Intersection"是使用[Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)监听当DOM/组件在可视窗口中出现或者消失（由页面滚动导致）时触发一个函数的Quasar指令。
+"Intersection"是使用[Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)监听当 DOM/组件在可视窗口中出现或者消失（由页面滚动导致）时触发一个函数的 Quasar 指令。
 
 ::: warning
-并不是所有的浏览器都支持 Intersection Observer API，虽然大部分浏览器都支持，但是如果你需要兼容老的浏览器，那么你需要安装W3C官方的[polyfill](https://github.com/w3c/IntersectionObserver)（通过一个boot文件引入）。
+并不是所有的浏览器都支持 Intersection Observer API，虽然大部分浏览器都支持，但是如果你需要兼容老的浏览器，那么你需要安装 W3C 官方的[polyfill](https://github.com/w3c/IntersectionObserver)（通过一个 boot 文件引入）。
 :::
 
 ## Intersection API
@@ -50,7 +50,7 @@ Intersection 指令可以接受一个函数或者对象作为其值，对象的�
 
 ### 只触发一次
 
-这个指令可以被`once`修饰符修饰，(示例: `v-intersection.once`)，则hanler函数只会被触发一次。如果你所需要的只是在观察到的元素开始出现在屏幕上时得到通知，那么你可以使用这种方式以控制开销。
+这个指令可以被`once`修饰符修饰，(示例: `v-intersection.once`)，则 hanler 函数只会被触发一次。如果你所需要的只是在观察到的元素开始出现在屏幕上时得到通知，那么你可以使用这种方式以控制开销。
 
 <doc-example title="仅触发一次" file="Intersection/Once" no-edit />
 
@@ -62,7 +62,7 @@ Intersection 指令可以接受一个函数或者对象作为其值，对象的�
 
 ### 进阶
 
-下面是一些更高阶的用法，代码中使用了 HTML的 `data` 属性，将元素的索引绑定到`data-id`上，然后通过handler函数的`entry`参数中的`entry.target.dataset.id`访问到设置的id。如果你还不熟悉HTML的data属性，请参考：[here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
+下面是一些更高阶的用法，代码中使用了 HTML 的 `data` 属性，将元素的索引绑定到`data-id`上，然后通过 handler 函数的`entry`参数中的`entry.target.dataset.id`访问到设置的 id。如果你还不熟悉 HTML 的 data 属性，请参考：[here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
 
 <doc-example title="进阶" file="Intersection/Advanced" no-edit />
 
@@ -73,7 +73,7 @@ Intersection 指令可以接受一个函数或者对象作为其值，对象的�
 <doc-example title="Scrolling Cards" file="Intersection/ScrollingCards" scrollable no-edit />
 
 ::: tip
-上面的示例使用了Quasar的过渡效果，关于更多的过渡动画，请查看[Transitions](/options/transitions)页面。
+上面的示例使用了 Quasar 的过渡效果，关于更多的过渡动画，请查看[Transitions](/options/transitions)页面。
 :::
 
 ### 视频讲解

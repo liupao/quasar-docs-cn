@@ -1,8 +1,8 @@
 ---
 title: 屏幕插件
-desc: Quasar提供了屏幕插件来帮助开发者通过js开发出动态的响应式的页面
+desc: Quasar 提供了屏幕插件来帮助开发者通过 js 开发出动态的响应式的页面
 ---
-Quasar提供了屏幕插件来帮助开发者通过Javascript开发出动态的响应式的页面。出于性能的原因，我们更推荐你使用CSS方案[responsive CSS classes](/style/visibility#window-width-related)来实现响应式的UI。
+Quasar 提供了屏幕插件来帮助开发者通过 Javascript 开发出动态的响应式的页面。出于性能的原因，我们更推荐你使用 CSS 方案[responsive CSS classes](/style/visibility#window-width-related)来实现响应式的 UI。
 
 ## 安装
 不需要安装，这个插件可以直接使用。
@@ -23,7 +23,7 @@ Quasar提供了屏幕插件来帮助开发者通过Javascript开发出动态的�
 ```
 
 ```js
-// vue组件的js部分
+// vue 组件的 js 部分
 import { useQuasar } from 'quasar'
 import { computed } from 'vue'
 
@@ -41,7 +41,7 @@ export default {
 }
 ```
 
-我们也可以在vue文件之外使用Screen组件：
+我们也可以在 vue 文件之外使用 Screen 组件：
 
 ```js
 import { Screen } from 'quasar'
@@ -53,7 +53,7 @@ import { Screen } from 'quasar'
 
 ## Body classes
 
-如果你开启了Body classes这个特性（请查看下面的如何开启部分），你也可以使用CSS类名类为不同尺寸的屏幕设置不同的样式：`screen--xs`, `screen--sm`, ..., `screen-xl`.
+如果你开启了 Body classes 这个特性（请查看下面的如何开启部分），你也可以使用 CSS 类名类为不同尺寸的屏幕设置不同的样式：`screen--xs`, `screen--sm`, ..., `screen-xl`.
 
 ```css
 body.screen--xs {
@@ -97,17 +97,17 @@ framework: {
 
 ## 配置
 
-下面也有一些方法来控制Screen插件的工作方式：
+下面也有一些方法来控制 Screen 插件的工作方式：
 
 | 方法名 | 描述 | 示例 |
 | --- | --- | --- |
-| setSizes(Object) | 修改window断点，但是不会修改css的断点 | setSizes({ lg: 1024, xl: 2000 }) |
-| setDebounce(Number) | 修改默认的100ms间隔 Change the default 100ms debounce to some other value. | setDebounce(500) // 500ms |
+| setSizes(Object) | 修改 window 断点，但是不会修改 css 的断点 | setSizes({ lg: 1024, xl: 2000 }) |
+| setDebounce(Number) | 修改默认的 100ms 间隔 Change the default 100ms debounce to some other value. | setDebounce(500) // 500ms |
 
 Examples:
 
 ```js
-// 在vue组件之内:
+// 在 vue 组件之内:
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -116,7 +116,7 @@ setup () {
   $q.screen.setSizes({ sm: 300, md: 500, lg: 1000, xl: 2000 })
 }
 
-// 在vue组件之外:
+// 在 vue 组件之外:
 import { Screen } from 'quasar'
 Screen.setSizes({ sm: 300, md: 500, lg: 1000, xl: 2000 })
 ```

@@ -1,20 +1,20 @@
 ---
 title: 预取特性 PreFetch
-desc: (@quasar/app-vite) 如何在Quasar中预取数据，初始化Store，验证路由或者重定向路由
+desc: (@quasar/app-vite) 如何在 Quasar 中预取数据，初始化 Store，验证路由或者重定向路由
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
 
-预取（PreFetch）是 Quasar CLI 提供的一个特性，它可以让被vue router选中的组件（在`/src/router/routes.js`中定义的组件）拥有以下额外能力：
+预取（PreFetch）是 Quasar CLI 提供的一个特性，它可以让被 vue router 选中的组件（在`/src/router/routes.js`中定义的组件）拥有以下额外能力：
 
 * 预取数据 pre-fetch data
 * 验证路由 validate the route
 * 当不满足验证条件时进行路由重定向（例如用户未登录时）
-* 帮助初始化Store数据
+* 帮助初始化 Store 数据
 
 上面这些工作都在组件渲染之前完成。
 
-**这个特性在所有的开发模式中都可用** (SPA, PWA, SSR, Cordova, Electron)，但是它对SSR开发模式尤其有用。
+**这个特性在所有的开发模式中都可用** (SPA, PWA, SSR, Cordova, Electron)，但是它对 SSR 开发模式尤其有用。
 
 ## 安装
 
@@ -26,17 +26,17 @@ return {
 ```
 
 ::: warning 警告
-当你想使用预取数据时，你需要使用Pinia或Vuex来存储数据，所以请确保你的项目中已经添加了其中一个，否则，请创建一个新的项目，复制其中的`/src/stores` (Pinia) **或** `/src/store` (Vuex)目录到你的项目。（或者直接使用`quasar new store`命令来为你添加状态管理工具）
+当你想使用预取数据时，你需要使用 Pinia 或 Vuex 来存储数据，所以请确保你的项目中已经添加了其中一个，否则，请创建一个新的项目，复制其中的`/src/stores` (Pinia) **或** `/src/store` (Vuex)目录到你的项目。（或者直接使用`quasar new store`命令来为你添加状态管理工具）
 :::
 
-## 为什么PreFetch对SSR很有用
-这个特性对SSR开发模式尤其有用（但并不是只能用于SSR模式中），因为开发SSR时，我们相当于渲染了我们应用的“快照”，所以，当应用需要一些异步的数据时，**为了使得最终渲染的页面中带有这些数据，我们需要在应用开始渲染之前将这些数据预处理好**。
+## 为什么 PreFetch 对 SSR 很有用
+这个特性对 SSR 开发模式尤其有用（但并不是只能用于 SSR 模式中），因为开发 SSR 时，我们相当于渲染了我们应用的“快照”，所以，当应用需要一些异步的数据时，**为了使得最终渲染的页面中带有这些数据，我们需要在应用开始渲染之前将这些数据预处理好**。
 
 另一个问题是，在客户端，同样的数据需要在我们挂载客户端应用程序之前可用——否则客户端应用程序将使用不同的数据状态渲染，这会导致水合作用（hydration）将失败。
 
-为了解决这个问题，获取的数据需要存储在视图组件之外、一个专用的数据存储store（Pinia或Vuex）中。在服务器上，我们可以在渲染页面之前预取数据并将数据填充到store中。在客户端的store会在挂载app之前同步服务端的数据。
+为了解决这个问题，获取的数据需要存储在视图组件之外、一个专用的数据存储 store（Pinia 或 Vuex）中。在服务器上，我们可以在渲染页面之前预取数据并将数据填充到 store 中。在客户端的 store 会在挂载 app 之前同步服务端的数据。
 
-## PreFetch钩子何时被激活
+## PreFetch 钩子何时被激活
 
 预取`preFetch`钩子（将在下一节中介绍）由访问的路由确定，该路由还确定渲染哪些组件。事实上，给定路由所需的数据也是在该路由上渲染的组件所需的。**因此，只在路由组件内部放置`preFetch`钩子的逻辑是很自然的（也是必需的）**。 这也包括`/src/App.vue`，在这种情况下，在应用程序启动时只运行一次。
 
@@ -77,22 +77,22 @@ return {
 
 | 被访问的路由 | 钩子被调用的地方 | 观察分析结果 |
 | --- | --- | --- |
-| `/` | App.vue 然后是 LandingPage | 当app启动时，App.vue中的钩子会被调用 |
+| `/` | App.vue 然后是 LandingPage | 当 app 启动时，App.vue 中的钩子会被调用 |
 | `/shop/all` | ShopLayout 然后 ShopAll | - |
-| `/shop/new` | ShopNew | ShopNew是 ShopLayout的一个子页面,并且ShopLayout已经渲染过了，所以ShopLayout中的钩子没有再次被调用 |
+| `/shop/new` | ShopNew | ShopNew 是 ShopLayout 的一个子页面,并且 ShopLayout 已经渲染过了，所以 ShopLayout 中的钩子没有再次被调用 |
 | `/shop/product/pyjamas` | ShopProduct | - |
-| `/shop/product/shoes` | ShopProduct |Quaasr注意到相同的组件被渲染，但是路由和路由参数有更新，所以再次调用了组件中的钩子 |
-| `/shop/product/shoes/overview` | ShopProduct 然后 ShopProductOverview | ShopProduct中有路由参数，所以其中的钩子再次被调用，尽管他之前已经被渲染过 |
+| `/shop/product/shoes` | ShopProduct |Quaasr 注意到相同的组件被渲染，但是路由和路由参数有更新，所以再次调用了组件中的钩子 |
+| `/shop/product/shoes/overview` | ShopProduct 然后 ShopProductOverview | ShopProduct 中有路由参数，所以其中的钩子再次被调用，尽管他之前已经被渲染过 |
 | `/` | LandingPage | - |
 
 ##  用法
 
 这个钩子在路由组件中定义为一个叫做`preFetch`的静态函数。注意，因为这个函数将在组件实例化之前调用，所以它没有访问权限`this`。
 
-下面的例子是当使用Vuex时：
+下面的例子是当使用 Vuex 时：
 
 ```html
-<!-- 被路由使用的一些.vue组件 -->
+<!-- 被路由使用的一些.vue 组件 -->
 <template>
   <div>{{ item.title }}</div>
 </template>
@@ -105,11 +105,11 @@ export default {
   preFetch ({ store, currentRoute, previousRoute, redirect, ssrContext, urlPath, publicPath }) {
     // 在这里可以获取数据，验证路由，重定向路由等等...
 
-    // ssrContext 只有在开发SSR模式时才能访问
+    // ssrContext 只有在开发 SSR 模式时才能访问
 
-    // 这里无法访问this
+    // 这里无法访问 this
 
-    // 如果你执行了异步的任务，请返回一个Promise
+    // 如果你执行了异步的任务，请返回一个 Promise
     // 示例:
     return store.dispatch('fetchItem', currentRoute.params.id)
   },
@@ -117,7 +117,7 @@ export default {
   setup () {
     const $store = useStore()
 
-    // 展示store state中的items
+    // 展示 store state 中的 items
     const item = computed(() => $store.state.items[this.$route.params.id])
 
     return { item }
@@ -126,7 +126,7 @@ export default {
 </script>
 ```
 
-如果你在使用`<script setup>`，请再添加一个`<script>`单独用于处理preFetch，在其中返回一个带有preFetch函数的对象：
+如果你在使用`<script setup>`，请再添加一个`<script>`单独用于处理 preFetch，在其中返回一个带有 preFetch 函数的对象：
 
 ```html
 <script>
@@ -142,7 +142,7 @@ export default {
 ```
 
 ::: tip 提示
-如果你在开发SSR应用，你可以查看服务端提供的[ssrContext](/quasar-cli-vite/developing-ssr/ssr-context)对象。
+如果你在开发 SSR 应用，你可以查看服务端提供的[ssrContext](/quasar-cli-vite/developing-ssr/ssr-context)对象。
 :::
 
 ```js
@@ -166,7 +166,7 @@ actions: {
 
 ```js
 // 这里假设我们已经编写了身份验证逻辑
-// 在Vuex store中
+// 在 Vuex store 中
 preFetch ({ store, redirect }) {
   if (!store.state.authenticated) {
     redirect({ path: '/login' })
@@ -174,13 +174,13 @@ preFetch ({ store, redirect }) {
 }
 ```
 
-如果调用了 `redirect(false)`（仅在客户端支持！），则将中止当前的路由跳转。请注意，如果在`src/app.vue`中这样的使用，vue将停止应用程序启动，这是不可取的。
+如果调用了 `redirect(false)`（仅在客户端支持！），则将中止当前的路由跳转。请注意，如果在`src/app.vue`中这样的使用，vue 将停止应用程序启动，这是不可取的。
 
- `redirect()`函数可以接受一个Vue Router的 location对象作为参数。
+ `redirect()`函数可以接受一个 Vue Router 的 location 对象作为参数。
 
-### 使用预取 preFetch 来初始化Pinia或Vuex
+### 使用预取 preFetch 来初始化 Pinia 或 Vuex
 
-当app启动时`preFetch`钩子只会运行一次，所以你可以借助这个机会来初始化Pinia或者Vuex Store。
+当 app 启动时`preFetch`钩子只会运行一次，所以你可以借助这个机会来初始化 Pinia 或者 Vuex Store。
 
 ```js
 // -- Pinia on Non SSR --
@@ -229,9 +229,9 @@ export default {
 }
 ```
 
-### Vuex Store代码拆分
+### Vuex Store 代码拆分
 
-在大型应用程序中，Vuex Store可能会被拆分为多个模块。当然，也可以将这些模块编码为相应的路由组件块。假设我们有以下store模块：
+在大型应用程序中，Vuex Store 可能会被拆分为多个模块。当然，也可以将这些模块编码为相应的路由组件块。假设我们有以下 store 模块：
 
 ```js
 // src/store/foo.js
@@ -303,14 +303,14 @@ export default {
 </script>
 ```
 
-还要注意的是，由于该模块现在是路由组件的一个依赖项，它将被Vite移到路由组件的异步块中。
+还要注意的是，由于该模块现在是路由组件的一个依赖项，它将被 Vite 移到路由组件的异步块中。
 
 ::: warning 警告
 不要忘记为`registerModule`设置`preserveState: true`选项，这样我们就可以保持由服务端注入的数据。
 :::
 
-### Vuex搭配Typescript
-你可以使用`preFetch`的类型工具来标注`store`参数的类型（否则为any）：
+### Vuex 搭配 Typescript
+你可以使用`preFetch`的类型工具来标注`store`参数的类型（否则为 any）：
 
 ```js
 import { preFetch } from 'quasar/wrappers'
@@ -332,13 +332,13 @@ export default {
 :::
 
 ## 加载状态
-一个好的用户体验包括提示用户有一些运行在后台的工作在页面准备就绪之前需要等待。针对于此，Quasar提供了两种开箱即用的选项。
+一个好的用户体验包括提示用户有一些运行在后台的工作在页面准备就绪之前需要等待。针对于此，Quasar 提供了两种开箱即用的选项。
 
 ### LoadingBar
-当你为你的app添加了Quasar的[LoadingBar](/quasar-plugins/loading-bar)插件时，Quasar默认会自动在preFetch钩子运行时调用loadingBar。
+当你为你的 app 添加了 Quasar 的[LoadingBar](/quasar-plugins/loading-bar)插件时，Quasar 默认会自动在 preFetch 钩子运行时调用 loadingBar。
 
 ### Loading
-也可以使用Quasar的[Loading](/quasar-plugins/loading)插件。
+也可以使用 Quasar 的[Loading](/quasar-plugins/loading)插件。
 示例：
 
 ```js

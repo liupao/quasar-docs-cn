@@ -1,16 +1,16 @@
 ---
 title: Cordova 的常见问题和技巧
-desc: (@quasar/app-vite) 使用Quasar和Cordova开发混合应用时的常见问题和技巧。
+desc: (@quasar/app-vite) 使用 Quasar 和 Cordova 开发混合应用时的常见问题和技巧。
 ---
 
 ## $q.cordova
-在使用 Cordova 模式开发移动应用程序时，您可以在Vue 文件中访问 `$q.cordova`。 这是全局 `cordova` 对象的别名。
+在使用 Cordova 模式开发移动应用程序时，您可以在 Vue 文件中访问 `$q.cordova`。 这是全局 `cordova` 对象的别名。
 
 ## Android 技巧
 
 ### Android 远程调试
 
-如果您正在调试Android应用，则可以通过 USB 连接Android手机/平板电脑并使用Google Chrome 远程调试[Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en)。 它也可以用于模拟器。
+如果您正在调试 Android 应用，则可以通过 USB 连接 Android 手机/平板电脑并使用 Google Chrome 远程调试[Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en)。 它也可以用于模拟器。
 
 通过这种方式，您可以直接使用 Chrome 开发工具调试您运行的应用。检查元素、检查控制台输出等等。
 
@@ -18,7 +18,7 @@ desc: (@quasar/app-vite) 使用Quasar和Cordova开发混合应用时的常见问
 ![Android Remote Debugging](https://cdn.quasar.dev/img/remote-debug-2.png "Android Remote Debugging")
 
 ### 接受许可
-如果您在完成Android构建时遇到问题，则会看到如下消息：
+如果您在完成 Android 构建时遇到问题，则会看到如下消息：
 
 ```
 > Failed to install the following Android SDK packages as some licenses have not been accepted.
@@ -36,7 +36,7 @@ desc: (@quasar/app-vite) 使用Quasar和Cordova开发混合应用时的常见问
 环境变量  `ANDROID_HOME`  已被弃用，并被替换为  `ANDROID_SDK_ROOT`。根据您的 Android Studio 版本，您可能需要其中一个，或者干脆直接将两个都设置，也没有什么坏处。
 :::
 
-在安装完成并配置环境之后，一些较新的基于 Debian 的操作系统（例如ubuntu，elementary OS）可能会报错：`Android SDK not found.`。 输出结果可能与此类似：
+在安装完成并配置环境之后，一些较新的基于 Debian 的操作系统（例如 ubuntu，elementary OS）可能会报错：`Android SDK not found.`。 输出结果可能与此类似：
 
 ``` bash
 $ cordova requirements
@@ -81,7 +81,7 @@ $ echo $PATH
 /home/your_user/bin:/home/your_user/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/your_user/Android/Sdk/tools:/home/your_user/Android/Sdk/platform-tools
 ```
 
-> 如果您确定环境变量设置正确，但仍然遇到 cordova requirements 错误，则可以尝试以下修复：[手动替换Android Studio 'tools'文件夹](https://github.com/meteor/meteor/issues/8464#issuecomment-288112504)
+> 如果您确定环境变量设置正确，但仍然遇到 cordova requirements 错误，则可以尝试以下修复：[手动替换 Android Studio 'tools'文件夹](https://github.com/meteor/meteor/issues/8464#issuecomment-288112504)
 
 ### Android Studio
 
@@ -95,12 +95,12 @@ $ echo $PATH
 
 ### 在 Linux 上连接设备
 
-当尝试在 Android手机/平板电脑上直接运行您的应用时, 您可能碰到 `?????? no permissions` 问题。
+当尝试在 Android 手机/平板电脑上直接运行您的应用时, 您可能碰到 `?????? no permissions` 问题。
 
 以下告诉您如何解决这个问题：
 
 ```bash
-# 创建.rules文件并写入下方的内容
+# 创建.rules 文件并写入下方的内容
 sudo vim /etc/udev/rules.d/51-android.rules
 sudo chmod 644   /etc/udev/rules.d/51-android.rules
 sudo chown root. /etc/udev/rules.d/51-android.rules
@@ -151,11 +151,11 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="1bbb", MODE="0666"
 在 `quasar dev` 和分发一个完成的应用之间有一些中间状态可以帮助调试。如果您的应用程序在 `quasar dev` 上正常工作但在 `quasar build` 之后运行不正常，您有两个选择：
 
 * 转到您的 `src-cordova` 目录然后运行 `cordova run [platform]`.
-  * 您将运行最终构建版本，但您仍然可以通过有线连接（参见上文）使用Chrome DevTools远程调试来检查网页内部。运行.apk文件时无法执行此操作。
+  * 您将运行最终构建版本，但您仍然可以通过有线连接（参见上文）使用 Chrome DevTools 远程调试来检查网页内部。运行.apk 文件时无法执行此操作。
   * 更多有关信息，请参考： Cordova [平台指南](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-buildjson) 和 [CLI reference](https://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html)
 * 打开 Android Studio 并查看 Logcat
   * 在这里，您可以查看与应用程序及其与底层 Android 操作系统的交互相关的所有日志。在 Android Studio 中打开 Cordova 项目后，从顶部菜单转到 `Run`...`Debug`。Android Studio 会询问您确认设备或模拟器，然后将部署该应用程序。在底部窗口中，选择 `Logcat`。您可能希望使用过滤器来减少消息量。您应该看到 `[your app id].MainActivity.onCreate()`, 这表示应用启动，然后是与您的应用功能相关的各种消息。
-  * 注意：这应该仅适用于有经验的Android开发人员。如果您的应用程序运行不正常，那么 `quasar dev` or `cordova run` 就更有可能提示这个问题。
+  * 注意：这应该仅适用于有经验的 Android 开发人员。如果您的应用程序运行不正常，那么 `quasar dev` or `cordova run` 就更有可能提示这个问题。
 
 ::: danger 重要!
 如果您使用上述方法之一发现错误，请不要直接编辑输出文件（可能是 `www` 文件夹），因为它们很快就会被覆盖。 回到您的 quasar 源文件，修复 bug，然后重新运行 quasar build。
@@ -174,7 +174,7 @@ Device type "com.apple.CoreSimulator.SimDeviceType.undefined" could not be found
 
 ```bash
 $ quasar dev -m cordova -T ios -e iPhone-X,12.2
-# 或者在您的设备上安装旧版本的Cordova CLI：
+# 或者在您的设备上安装旧版本的 Cordova CLI：
 $ quasar dev -m cordova -T ios -e iPhone-X,com.apple.CoreSimulator.SimRuntime.iOS-12-2
 ```
 
@@ -190,11 +190,11 @@ cordova: {
 如果您想在您的  "build.json" 文件中明确构建的类型也可以执行上述操作。
 
 ### iOS 远程调试
-如果您正在调试 iOS 应用程序，则可以通过 USB 连接 iOS手机/平板电脑并使用 Safari 开发人员工具进行远程调试。它也可以用于模拟器。
+如果您正在调试 iOS 应用程序，则可以通过 USB 连接 iOS 手机/平板电脑并使用 Safari 开发人员工具进行远程调试。它也可以用于模拟器。
 
-这样，您可以直接为在模拟器/手机/桌面上运行的应用程序使用Safari开发人员工具。检查元素、检查控制台输出等等。
+这样，您可以直接为在模拟器/手机/桌面上运行的应用程序使用 Safari 开发人员工具。检查元素、检查控制台输出等等。
 
-首先启用Safari设置中的  "developer"  菜单选项。 然后，如果您导航到  "developer"  菜单选项，您将看到顶部附近列出了您的模拟器或连接设备。从这里您可以打开开发人员工具。
+首先启用 Safari 设置中的  "developer"  菜单选项。 然后，如果您导航到  "developer"  菜单选项，您将看到顶部附近列出了您的模拟器或连接设备。从这里您可以打开开发人员工具。
 
 ### 状态栏和异形屏
 

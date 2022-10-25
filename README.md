@@ -1,10 +1,10 @@
 ![Quasar Framework logo](https://cdn.quasar.dev/logo-v2/header.png)
 
-# Quasar框架中文文档 ｜ Quasar中文翻译
+# Quasar 框架中文文档 ｜ Quasar 中文翻译
 
-> 在短时间内构建高性能的vuejs应用程序,基于vuejs的开源前端框架，高性能，内置丰富的css和vue组件库，响应式支持，一套代码可以编译出SPA，PWA，SSR，手机应用和桌面应用
+> 在短时间内构建高性能的 vuejs 应用程序,基于 vuejs 的开源前端框架，高性能，内置丰富的 css 和 vue 组件库，响应式支持，一套代码可以编译出 SPA，PWA，SSR，手机应用和桌面应用
 
-本仓库是由[我](https://github.com/dongwa)个人维护的quasar中文文档，信息来自：[英文官网](https://quasar.dev)。纯手工，非机器翻译，并且添加了一些个人经验，站点持续翻译中，如果对你有帮助麻烦给我的仓库点一个star✨，谢谢🙏
+本仓库是由[我](https://github.com/dongwa)个人维护的 quasar 中文文档，信息来自：[英文官网](https://quasar.dev)。纯手工，非机器翻译，并且添加了一些个人经验，站点持续翻译中，如果对你有帮助麻烦给我的仓库点一个 star✨，谢谢🙏
 
 如果我所做的工作帮助到了你，你想请我喝杯咖啡，那么你的`打赏`将会是我更新的最大动力:
 
@@ -12,7 +12,7 @@
 | :-: | :-: |
 |<img style="width:350px" src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iirq80h6j30ep0f7mzf.jpg" alt="微信" />|<img style="width:350px" src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iisk6y7vj30jf0k9wgn.jpg" alt="支付宝" />|
 
-如果你也想参与翻译，请fork本仓库然后向我提交PR。另外，我的B站账号中有[quasar的视频教程](https://www.bilibili.com/video/BV1pA4y197Zc)欢迎观看👏
+如果你也想参与翻译，请 fork 本仓库然后向我提交 PR。另外，我的 B 站账号中有[quasar 的视频教程](https://www.bilibili.com/video/BV1pA4y197Zc)欢迎观看👏
 <br>
 <hr>
 <br>
@@ -37,13 +37,13 @@
 
 ## 帮助文档
 
-Quasar的官方网站: [https://quasar.dev](https://quasar.dev)
+Quasar 的官方网站: [https://quasar.dev](https://quasar.dev)
 
 本仓库的中文文档[地址](https://quasar-cn.cn)
 
 ## Quasar 的进度和计划
 
-关于Quasar的进度和计划，请访问: https://roadmap.quasar.dev
+关于 Quasar 的进度和计划，请访问: https://roadmap.quasar.dev
 
 ## 保持联系
 
@@ -59,7 +59,7 @@ Quasar的官方网站: [https://quasar.dev](https://quasar.dev)
 
 ## 贡献
 
-在提出PR之前，请务必阅读 [贡献指南](./CONTRIBUTING.md)。如果您有与 Quasar 相关的项目/组件/工具，请将其与 pull 请求一起添加到 [策划的列表](https://github.com/quasarframework/quasar-awesome)！
+在提出 PR 之前，请务必阅读 [贡献指南](./CONTRIBUTING.md)。如果您有与 Quasar 相关的项目/组件/工具，请将其与 pull 请求一起添加到 [策划的列表](https://github.com/quasarframework/quasar-awesome)！
 
 感谢所有已经[为 Quasar 作出贡献]的人(https://github.com/quasarframework/quasar/graphs/contributors)!
 

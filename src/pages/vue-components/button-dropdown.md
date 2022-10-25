@@ -6,7 +6,7 @@ related:
   - /vue-components/button
   - /vue-components/button-group
 ---
-QBtnDropdown组件时一个非常方便的下拉式按钮。与[QList](/vue-components/list-and-list-items)组件搭配起来非常好用，但不局限于此。
+QBtnDropdown 组件时一个非常方便的下拉式按钮。与[QList](/vue-components/list-and-list-items)组件搭配起来非常好用，但不局限于此。
 
 如果你在找一个下拉输入而不是按钮的组件，请看[QSelect](/vue-components/select) 组件。
 
@@ -32,6 +32,6 @@ QBtnDropdown组件时一个非常方便的下拉式按钮。与[QList](/vue-comp
 
 <doc-example title="Disable" file="QBtnDropdown/Disable" />
 
-下面的示例在UMD中不可使用，因为它依赖Vue Router（所以在Codepen/jsFiddle中也不能正常运行）。
+下面的示例在 UMD 中不可使用，因为它依赖 Vue Router（所以在 Codepen/jsFiddle 中也不能正常运行）。
 
 <doc-example title="Split and router link on main" file="QBtnDropdown/Link" no-edit />

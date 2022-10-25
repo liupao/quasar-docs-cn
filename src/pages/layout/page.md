@@ -20,7 +20,7 @@ related:
 
 ## 用法
 
-QPage 必须由 QPageContainer 封装，而QPageContainer 又必须是 QLayout 的子节点。
+QPage 必须由 QPageContainer 封装，而 QPageContainer 又必须是 QLayout 的子节点。
 
 ```html
 <q-layout>
@@ -33,10 +33,10 @@ QPage 必须由 QPageContainer 封装，而QPageContainer 又必须是 QLayout �
   ...
 </q-layout>
 ```
-通常情况下，QPageContainer 是 Layout 模板的一部分（它只包含一个`<router-view/>`子元素），其内容进入/src/pages下的单独vue文件中。 如果尚未了解，请阅读[使用布局和页面进行路由]](/layout/routing-with-layouts-and-pages)。
+通常情况下，QPageContainer 是 Layout 模板的一部分（它只包含一个`<router-view/>`子元素），其内容进入/src/pages 下的单独 vue 文件中。 如果尚未了解，请阅读[使用布局和页面进行路由]](/layout/routing-with-layouts-and-pages)。
 
 ```html
-<!-- 布局vue文件: -->
+<!-- 布局 vue 文件: -->
 <q-layout>
   ...
   <q-page-container>
@@ -45,7 +45,7 @@ QPage 必须由 QPageContainer 封装，而QPageContainer 又必须是 QLayout �
   ...
 </q-layout>
 
-<!-- 页面vue文件: -->
+<!-- 页面 vue 文件: -->
 <q-page padding>
   <!-- 页面内容 -->
 </q-page>
@@ -78,7 +78,7 @@ export default {
       //它表示基于 QLayout "view" 属性配置的
       //屏幕上页眉+页脚的总高度
 
-      // 这实际上是 Quasar 中默认的 style-fn的功能如下
+      // 这实际上是 Quasar 中默认的 style-fn 的功能如下
       return { minHeight: offset ? `calc(100vh - ${offset}px)` : '100vh' }
     }
   }

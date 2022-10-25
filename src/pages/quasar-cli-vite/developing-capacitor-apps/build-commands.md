@@ -31,7 +31,7 @@ $ quasar dev --mode capacitor --target [ios|android]
 2. 它启动了一个开发服务器。
 3. 它告诉 Capacitor 使用之前检测到的 IP。这样，应用程序就可以连接到开发服务器。
 4. 它使用 Capacitor CLI 来更新你所有的插件。
-5. 最后，它打开本地IDE。在这里运行应用程序，它将自动连接到开发服务器。
+5. 最后，它打开本地 IDE。在这里运行应用程序，它将自动连接到开发服务器。
 
 ::: danger 重要
 如果在手机/平板电脑上开发，非常重要的一点是，构建机器的外部 IP 地址可以从手机/平板电脑上访问，否则会得到一个只有白屏的开发应用。还要检查机器的防火墙是否允许连接到开发选择的端口。
@@ -56,7 +56,7 @@ $ quasar build --mode capacitor --target [ios|android]
 $ quasar build -m capacitor -T [ios|android] --skip-pkg
 ```
 
-* 如果希望使用IDE（Android Studio / Xcode）手动构建最终资源，而不是做终端构建，那么：
+* 如果希望使用 IDE（Android Studio / Xcode）手动构建最终资源，而不是做终端构建，那么：
 
 ```bash
 $ quasar build -m capacitor -T [ios|android] --ide

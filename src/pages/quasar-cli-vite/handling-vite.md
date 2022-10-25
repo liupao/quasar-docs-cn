@@ -1,6 +1,6 @@
 ---
 title: 配置 Vite
-desc: (@quasar/app-vite) 如何在Quasar项目中管理Vite。
+desc: (@quasar/app-vite) 如何在 Quasar 项目中管理 Vite。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
@@ -64,16 +64,16 @@ There are multiple syntaxes supported:
 
 ```js
 vitePlugins: [
-  [ '<plugin1-name>', { /* 插件1的配置项 */ } ],
-  [ '<plugin2-name>', { /* 插件2的配置项 */ } ],
+  [ '<plugin1-name>', { /* 插件 1 的配置项 */ } ],
+  [ '<plugin2-name>', { /* 插件 2 的配置项 */ } ],
   // ...
 ]
 
 // 或：
 
 vitePlugins: [
-  [ require('<plugin1-name>'), { /* 插件1的配置项 */ } ],
-  [ require('<plugin2-name>'), { /* 插件2的配置项 */ } ],
+  [ require('<plugin1-name>'), { /* 插件 1 的配置项 */ } ],
+  [ require('<plugin2-name>'), { /* 插件 2 的配置项 */ } ],
   // ...
 ]
 
@@ -82,8 +82,8 @@ vitePlugins: [
 // 所以需要您手动重启开发服务
 
 vitePlugins: [
-  require('<plugin1-name>')({ /* 插件1的配置项 */ }),
-  require('<plugin2-name>')({ /* 插件2的配置项 */ })
+  require('<plugin1-name>')({ /* 插件 1 的配置项 */ }),
+  require('<plugin2-name>')({ /* 插件 2 的配置项 */ })
   // ...
 ]
 ```
@@ -95,7 +95,7 @@ vitePlugins: [
 
 ```js
 vitePlugins: [
-  [ require('<plugin1-name>').default, { /* 插件1的配置项 */ } ],
+  [ require('<plugin1-name>').default, { /* 插件 1 的配置项 */ } ],
   // ...
 ]
 ```
@@ -107,8 +107,8 @@ vitePlugins: [
 build: {
   extendViteConf (viteConf, { isClient, isServer }) {
     viteConf.plugins.push(
-      require('<plugin1-name>')({ /* 插件1的配置项 */ }),
-      require('<plugin2-name>')({ /* 插件2的配置项 */ })
+      require('<plugin1-name>')({ /* 插件 1 的配置项 */ }),
+      require('<plugin2-name>')({ /* 插件 2 的配置项 */ })
       // ...
     )
   }

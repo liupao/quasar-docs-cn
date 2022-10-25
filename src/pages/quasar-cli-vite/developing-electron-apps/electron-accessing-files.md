@@ -1,6 +1,6 @@
 ---
 title: Electron 访问文件
-desc: (@quasar/app-vite)在Quasar桌面项目中如何访问文件。
+desc: (@quasar/app-vite)在 Quasar 桌面项目中如何访问文件。
 ---
 
 ## 使用 __dirname & __filename

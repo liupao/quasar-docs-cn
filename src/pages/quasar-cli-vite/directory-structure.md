@@ -1,9 +1,9 @@
 ---
 title: 目录结构
-desc: (@quasar/app-vite) Quasa项目的目录结构详解。
+desc: (@quasar/app-vite) Quasa 项目的目录结构详解。
 ---
 
-下面是安装了所有Quaasr模式的项目的目录结构，不过不用担心！
+下面是安装了所有 Quaasr 模式的项目的目录结构，不过不用担心！
 ::: tip
 如果您是一个初学者，那么您只需要关系那么几个文件即可，`/quasar.config.js` （Quasar 项目配置文件）, `/src/router`, `/src/layouts`, `/src/pages` 和可选的 `/src/assets`。
 :::
@@ -12,7 +12,7 @@ desc: (@quasar/app-vite) Quasa项目的目录结构详解。
 .
 ├── public/                  # 纯静态资源 （会被直接复制到产物目录中）
 ├── src/
-│   ├── assets/              # 动态的静态资源（会被vite进行处理打包）
+│   ├── assets/              # 动态的静态资源（会被 vite 进行处理打包）
 │   ├── components/          # 可用于 pages & layoute 中的 .vue 文件组件
 │   ├── css/                 # CSS/Sass/... 样式文件
 |   |   ├── app.sass
@@ -33,7 +33,7 @@ desc: (@quasar/app-vite) Quasa项目的目录结构详解。
 |   │   └── <folder>         # Vuex Store 模块...
 │   └── App.vue              # 项目的 Vue 根组件
 ├── index.html               # index.html 模板文件
-├── src-ssr/                 # SSR 模式专属文件 (例如生产环境的 Node web服务器)
+├── src-ssr/                 # SSR 模式专属文件 (例如生产环境的 Node web 服务器)
 ├── src-pwa/                 # PWA 模式专属文件 (例如 Service Worker)
 ├── src-cordova/             # Cordova 生成的用于构建手机应用的目录
 ├── src-electron/            # Electron 模式专属文件 (例如主进程文件)
@@ -49,8 +49,8 @@ desc: (@quasar/app-vite) Quasa项目的目录结构详解。
 ├── .eslintignore            # ESlint 忽略配置文件
 ├── .eslintrc.js             # ESlint 配置文件
 ├── postcss.配置文件.js        # PostCSS 配置文件
-├── js配置文件.json            # Editor 配置文件 (如果没有使用ts的话)
-├── ts配置文件.json            # Typescript 配置文件
+├── js 配置文件.json            # Editor 配置文件 (如果没有使用 ts 的话)
+├── ts 配置文件.json            # Typescript 配置文件
 ├── package.json             # npm 脚本或者依赖管理
 └── README.md                # 您的网站/App 的 readme 文件
 ```

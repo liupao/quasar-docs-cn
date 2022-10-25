@@ -1,6 +1,6 @@
 ---
 title: 使用 Pinia 管理状态
-desc: (@quasar/app-vite) 在Quasar项目中如何使用 Pinia。
+desc: (@quasar/app-vite) 在 Quasar 项目中如何使用 Pinia。
 ---
 
 在大型应用程序中，由于多个组件都有自己的状态并且相互依赖，使得状态管理变得很复杂。

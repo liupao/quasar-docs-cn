@@ -7,13 +7,13 @@ desc: (@quasar/app-vite) Managing the Vue directives for SSR in a Quasar app.
 此页文档针对于 Quasar v2.6 及其以上的版本。
 :::
 
-由于Vue3的架构调整，普通的Vue指令需要做一些额外的工作后才能在SSR模式中正常运行。
+由于 Vue3 的架构调整，普通的 Vue 指令需要做一些额外的工作后才能在 SSR 模式中正常运行。
 
-SSR构建服务端时需要所有的Vue指令都额外提供一个`getSSRProps()`方法。
+SSR 构建服务端时需要所有的 Vue 指令都额外提供一个`getSSRProps()`方法。
 
 ::: tip 提示
-*  你不需要担心Quasar提供的指令，因为它们都为SSR模式做了兼容，可以直接运行在SSR模式中。
-* 然而，当你使用第三方库提供的Vue指令并且报错时，需要考虑作者是否考虑了vue3的SSR的兼容性（是否在指令的定义中添加了getSSRProps()方法）
+*  你不需要担心 Quasar 提供的指令，因为它们都为 SSR 模式做了兼容，可以直接运行在 SSR 模式中。
+* 然而，当你使用第三方库提供的 Vue 指令并且报错时，需要考虑作者是否考虑了 vue3 的 SSR 的兼容性（是否在指令的定义中添加了 getSSRProps()方法）
 :::
 
 ## 如何声明一个指令

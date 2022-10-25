@@ -1,6 +1,6 @@
 ---
 title: Dark Plugin
-desc: 一个可以切换应用暗色模式开关的Quasar插件。
+desc: 一个可以切换应用暗色模式开关的 Quasar 插件。
 keys: Dark
 related:
   - /style/dark-mode
@@ -24,7 +24,7 @@ related:
 不要手动给下面的`isActive` 或 `mode` 赋值，而是使用`set(val)`函数去改变他们
 :::
 
-### 在Vue文件之内
+### 在 Vue 文件之内
 
 ```js
 import { useQuasar } from 'quasar'
@@ -54,16 +54,16 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    // 在这里调用等价于组件的 onCreated声明周期
+    // 在这里调用等价于组件的 onCreated 声明周期
     $q.dark.set(true)
   }
 }
 ```
 
-### 在Vue文件之外
+### 在 Vue 文件之外
 
 ```js
-// 警告！这个函数在SRR中不可用
+// 警告！这个函数在 SRR 中不可用
 
 import { Dark } from 'quasar'
 
@@ -92,13 +92,13 @@ framework: {
 }
 ```
 
-## 开发SSR时注意
+## 开发 SSR 时注意
 
 当开发**SSR**时:
 
 * `import { Dark } from 'quasar'`
-这种方式使用暗色模式不会报错，但是也不会成功运行（它不会在ssr模式中做任何事情），你可以通过另外两种方式实现，我们推荐使用quasar.config.js
-* 最好避免在开发SSR中将Dark的mode设置为'auto'，这是因为在server端无法推断客户端的暗模式首选项，因此server端将始终在亮模式下渲染，然后当客户端接管时，它将切换到暗模式（如果是这种情况）。因此，屏幕将快速闪烁。
+这种方式使用暗色模式不会报错，但是也不会成功运行（它不会在 ssr 模式中做任何事情），你可以通过另外两种方式实现，我们推荐使用 quasar.config.js
+* 最好避免在开发 SSR 中将 Dark 的 mode 设置为'auto'，这是因为在 server 端无法推断客户端的暗模式首选项，因此 server 端将始终在亮模式下渲染，然后当客户端接管时，它将切换到暗模式（如果是这种情况）。因此，屏幕将快速闪烁。
 
 ## 监听状态的变化
 

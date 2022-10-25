@@ -1,6 +1,6 @@
 ---
 title: Electron 应用图标
-desc: (@quasar/app-vite) 如何管理Quasar 桌面应用的图标。
+desc: (@quasar/app-vite) 如何管理 Quasar 桌面应用的图标。
 ---
 
 这些图像用于在操作系统的托盘，桌面，文件浏览器和相关应用商店中显示应用程序的图标。`icon.ico` 文件用于 Windows 中，`icon.icns` 文件用于 MacOS 中。如果您发现缺少了任何东西，可以向我们[报告](https://github.com/quasarframework/quasar/issues)。

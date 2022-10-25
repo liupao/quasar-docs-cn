@@ -1,6 +1,6 @@
 ---
 title: 开发时进行 API 代理
-desc: (@quasar/app-vite) Quasar开发服务如何开启API代理。
+desc: (@quasar/app-vite) Quasar 开发服务如何开启 API 代理。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---

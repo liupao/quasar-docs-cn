@@ -1,6 +1,6 @@
 ---
 title: Electron Preload 预加载脚本
-desc: (@quasar/app-vite)Quasar项目中如何使用 Electron Preload脚本处理Node集成。
+desc: (@quasar/app-vite)Quasar 项目中如何使用 Electron Preload 脚本处理 Node 集成。
 ---
 
 处于安全的原因，渲染进程（`/src` 目录中的 UI 代码）无法访问 Nodejs 的能力。然而，您可以通过 Electron Preload 预加载脚本将 Node.js 与渲染进程桥接。Preload 脚本位于 `/src-electron/electron-preload.[js|ts]`。使用 `contextBridge` 将 UI 中需要的能力注入。

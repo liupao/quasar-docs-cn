@@ -9,7 +9,7 @@ related:
   - /style/positioning
   - /style/spacing
 ---
-下面展示了quasar提供的字体排版相关的css辅助类，你可以通过将这些css类名添加到元素的class中去使用他们。
+下面展示了 quasar 提供的字体排版相关的 css 辅助类，你可以通过将这些 css 类名添加到元素的 class 中去使用他们。
 
 ## Headings 标题
 <typography-headings />
@@ -17,7 +17,7 @@ related:
 ## 字重
 <typography-weights />
 
-## 其他的CSS字体排版辅助类
+## 其他的 CSS 字体排版辅助类
 | Class 类名 | 功能 |
 | --- | --- |
 | `text-right` | 文字靠右对齐 |
@@ -35,9 +35,9 @@ related:
 ## 默认字体
 默认字体是： [Roboto](https://fonts.google.com/specimen/Roboto). **但是这是可定义的**. 你可以选择任何你喜欢的字体.
 
-Roboto提供了5种可以使用的字重：100, 300, 400, 500, 700.
+Roboto 提供了 5 种可以使用的字重：100, 300, 400, 500, 700.
 
-如果你想删除默认的Roboto字体，请编辑`quasar.config.js`中的extras数组：
+如果你想删除默认的 Roboto 字体，请编辑`quasar.config.js`中的 extras 数组：
 
 ```js
 // file: /quasar.config.js
@@ -49,9 +49,9 @@ extras: [
 ## 添加自定义的字体
 通过下列步骤添加自定义字体：
 
-1. 将你的字体文件复制到项目文件夹中，例如`./src/css/fonts/[customfont.woff]`，当然，使用别的字体格式也可以，但是woff格式的字体文件是最推荐的，因为它兼容所有的浏览器，。
+1. 将你的字体文件复制到项目文件夹中，例如`./src/css/fonts/[customfont.woff]`，当然，使用别的字体格式也可以，但是 woff 格式的字体文件是最推荐的，因为它兼容所有的浏览器，。
 
-2. 在合适的css文件中引用上述字体文件，例如在`./src/css/app.{css|sass|scss|styl}`中，注意不要写错字体文件的相对路径。
+2. 在合适的 css 文件中引用上述字体文件，例如在`./src/css/app.{css|sass|scss|styl}`中，注意不要写错字体文件的相对路径。
 
     ```css
     @font-face {
@@ -59,14 +59,14 @@ extras: [
       src: url(./fonts/customfont.woff);
     }
 
-    // 声明一个css类去使用这个字体
+    // 声明一个 css 类去使用这个字体
     .my-font {
       font-family: 'customfont';
     }
     ```
 
-3. 然后你可以将这个css类应用到需要的地方了，如果要全局使用的话，可以将`font-family: 'customfont';`直接添加到body
-或者html中，并确保这个css文件名被添加到`quasar.config.js`中的css数组中。
+3. 然后你可以将这个 css 类应用到需要的地方了，如果要全局使用的话，可以将`font-family: 'customfont';`直接添加到 body
+或者 html 中，并确保这个 css 文件名被添加到`quasar.config.js`中的 css 数组中。
 
     ```css
     /** file： /src/css/app.css */
@@ -75,7 +75,7 @@ extras: [
       src: url(./fonts/customfont.woff);
     }
 
-    // 声明一个css类去使用这个字体
+    // 声明一个 css 类去使用这个字体
     body {
       font-family: 'customfont';
     }

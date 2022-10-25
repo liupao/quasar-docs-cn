@@ -7,10 +7,10 @@ components:
 related:
   - quasar-utils/color-utils
 ---
-Quasar提供了大量现成的颜色css。你可以将它们用作Sass/SCSS变量，或者直接用作HTML模板中的CSS类。
+Quasar 提供了大量现成的颜色 css。你可以将它们用作 Sass/SCSS 变量，或者直接用作 HTML 模板中的 CSS 类。
 
 ## 主题颜色
-Quasar提供了一套默认的主题颜色如下，所有的Quasar组件都依赖这些颜色，选择主题颜色应该是在应用程序的设计阶段就定好的。
+Quasar 提供了一套默认的主题颜色如下，所有的 Quasar 组件都依赖这些颜色，选择主题颜色应该是在应用程序的设计阶段就定好的。
 
 <brand-colors />
 
@@ -19,11 +19,11 @@ Quasar提供了一套默认的主题颜色如下，所有的Quasar组件都依�
 :::
 
 ## 色彩列表
-下面这些颜色都是quasar预设的，可以直接使用的，你可以在 `.vue`文件的模版中把他们当作css类来使用，也可以在`<style lang="...">`标签中当作 [Sass/SCSS 变量](/style/sass-scss-variables)来使用。
+下面这些颜色都是 quasar 预设的，可以直接使用的，你可以在 `.vue`文件的模版中把他们当作 css 类来使用，也可以在`<style lang="...">`标签中当作 [Sass/SCSS 变量](/style/sass-scss-variables)来使用。
 
 <color-list />
 
-## 当作CSS类使用
+## 当作 CSS 类使用
 使用`text-` 或者 `bg-` 当作前缀，然后加上一个预设的颜色的名称，就可以改变文本/背景的颜色，例如：
 
 ```html
@@ -36,7 +36,7 @@ Quasar提供了一套默认的主题颜色如下，所有的Quasar组件都依�
 
 ## 当作 Sass/SCSS 变量来使用
 
-你可以通过`$`加上一个预设的颜色名称来当作一个css变量使用，例如：`$primary`, `$red-1`, 等等：
+你可以通过`$`加上一个预设的颜色名称来当作一个 css 变量使用，例如：`$primary`, `$red-1`, 等等：
 
 ```html
 <!-- Notice lang="sass" -->
@@ -58,7 +58,7 @@ div {
 ```
 
 ## 添加你自己的颜色
-你可以通过以下方式添加你自己的颜色，先在css中编写类似如下的代码：
+你可以通过以下方式添加你自己的颜色，先在 css 中编写类似如下的代码：
 
 ```css
 .text-brand {
@@ -69,12 +69,12 @@ div {
 }
 ```
 
-然后在Quasar的组件中就可以这样使用刚才定义的颜色：
+然后在 Quasar 的组件中就可以这样使用刚才定义的颜色：
 ```html
 <q-btn color="brand" ... />
 ```
 
-你可以在js中通过[getPaletteColor](/quasar-utils/color-utils#helper-getpalettecolor)工具函数拿到颜色的值（16进制字符）
+你可以在 js 中通过[getPaletteColor](/quasar-utils/color-utils#helper-getpalettecolor)工具函数拿到颜色的值（16 进制字符）
 
 ## 动态切换主题颜色
 
@@ -82,22 +82,22 @@ div {
 
 你可以在运行时修改上述主题色：`primary`, `secondary`, `accent`, `dark`, `positive`, `negative`, `info`, `warning`。也就是说，你可以为你的网站预设一个主题，然后在运行时切换不同的主题。
 
-所有的主题颜色将会作为css变量存储在页面的根结点(`:root`)上，每个颜色属性都被命名为 `--q-${name}`，例如：`--q-primary`, `--q-secondary`，这些css颜色属性跟普通的html属性一样会被子节点继承，所以你可以在运行时修改/重置他们，并且在整个应用程序中生效。
+所有的主题颜色将会作为 css 变量存储在页面的根结点(`:root`)上，每个颜色属性都被命名为 `--q-${name}`，例如：`--q-primary`, `--q-secondary`，这些 css 颜色属性跟普通的 html 属性一样会被子节点继承，所以你可以在运行时修改/重置他们，并且在整个应用程序中生效。
 
 推荐你也把自定义的颜色放在 `html` (`document.documentElement`) 或者 `body` (`document.body`)上，那么当你修改它的时候，所有的子元素都会继承这些修改。
 
-更多的关于css变量的知识请看： [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables).
+更多的关于 css 变量的知识请看： [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables).
 
 ### 工具函数: setCssVar
-Quasar提供了一个实用的工具函数帮助你设置css变量，也可以修改上述主题颜色。
+Quasar 提供了一个实用的工具函数帮助你设置 css 变量，也可以修改上述主题颜色。
 
 用法：`setCssVar(colorName, colorValue[, element])`
 
 | 参数 | 类型 | 必填| Description |
 | --- | --- | --- | --- |
-| `colorName` | String | *是* | css颜色名称，可以是主题色： `primary`, `secondary`, `accent`, `dark`, `positive`, `negative`, `info`, `warning` |
-| `colorValue` | String | *是* | 16进制色彩值 |
-| `element` | Element | 否 | (默认值: `document.body`) 将css变量注入到哪个dom元素上。 |
+| `colorName` | String | *是* | css 颜色名称，可以是主题色： `primary`, `secondary`, `accent`, `dark`, `positive`, `negative`, `info`, `warning` |
+| `colorValue` | String | *是* | 16 进制色彩值 |
+| `element` | Element | 否 | (默认值: `document.body`) 将 css 变量注入到哪个 dom 元素上。 |
 
 示例：
 
@@ -110,20 +110,20 @@ setCssVar('primary', '#F33', document.getElementById('rebranded-section-id'))
 ```
 
 ```js
-//  setCssVar('primary'，'#0273d4') 在原生js中等于:
+//  setCssVar('primary'，'#0273d4') 在原生 js 中等于:
 document.body.style.setProperty('--q-primary', '#0273d4')
 ```
 
 ### 工具函数: getCssVar
 
-同上，quasar也提供了一个获取css变量的工具函数
+同上，quasar 也提供了一个获取 css 变量的工具函数
 
 用法： `getCssVar(colorName[, element])`
 
 | 参数 | 类型 | 必填 | 描述 |
 | --- | --- | --- | --- |
-| `colorName` | String | *是* | css颜色名称，可以是主题色： `primary`, `secondary`, `accent`, `dark`, `positive`, `negative`, `info`, `warning` |
-| `element` | Element | 否 | (默认: `document.body`) 从那个Dom元素中读取css变量 |
+| `colorName` | String | *是* | css 颜色名称，可以是主题色： `primary`, `secondary`, `accent`, `dark`, `positive`, `negative`, `info`, `warning` |
+| `element` | Element | 否 | (默认: `document.body`) 从那个 Dom 元素中读取 css 变量 |
 
 示例：
 
@@ -134,17 +134,17 @@ getCssVar('primary') // '#33F'
 getCssVar('primary', document.getElementById('rebranded-section-id'))
 ```
 
-这个函数是原始js中getPropertyValue()的包装，等同于：
+这个函数是原始 js 中 getPropertyValue()的包装，等同于：
 
 ```js
-//  getCssVar('primary') 等于原生js中的：
+//  getCssVar('primary') 等于原生 js 中的：
 getComputedStyle(document.documentElement)
   .getPropertyValue('--q-primary') // #0273d4
 ```
 
 ### 更多的颜色工具
 
-除了上面的utils，quaasr还有更多的处理颜色的工具函数:[Color utils](/quasar-utils/color-utils)
+除了上面的 utils，quaasr 还有更多的处理颜色的工具函数:[Color utils](/quasar-utils/color-utils)
 
 ```js
 import { colors, setCssVar } from 'quasar'
@@ -158,7 +158,7 @@ setCssVar('primary-darkened', lighten(newPrimaryColor, -10))
 
 ## 设置颜色默认值
 
-如果不使用sass/scss，你需要通过`quasar.config.js `来修改默认的主题颜色
+如果不使用 sass/scss，你需要通过`quasar.config.js `来修改默认的主题颜色
 ```js
 // Quasar CLI - quasar.config.js
 return {
@@ -173,11 +173,11 @@ return {
 }
 ```
 
-或者使用一个Boot文件来处理， [@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) or  [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files):
+或者使用一个 Boot 文件来处理， [@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) or  [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files):
 
 ```js
 // For Quasar CLI
-//不要在SSR模式中启用此boot文件
+//不要在 SSR 模式中启用此 boot 文件
 
 import { setCssVar } from 'quasar'
 
@@ -186,7 +186,7 @@ export default () => {
 }
 ```
 
-如果你使用Quasar UMD 或者 Quasar Vite plugin 或者 Vue CLI方式引入的Quasar，则需要这么做：
+如果你使用 Quasar UMD 或者 Quasar Vite plugin 或者 Vue CLI 方式引入的 Quasar，则需要这么做：
 
 ```js
 // UMD or Quasar Vite plugin or Vue CLI

@@ -1,6 +1,6 @@
 ---
 title: Electron 和 Typescript
-desc: (@quasar/app-vite) 如何在Quasar项目的Electron中使用Typescript。
+desc: (@quasar/app-vite) 如何在 Quasar 项目的 Electron 中使用 Typescript。
 ---
 
 为了给 Electron 支持 TypeScript，您需要将 /src-electron 目录下的 `.js` 文件改为 `.ts` 文件，并做一些必要的 TS 代码修改。

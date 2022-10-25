@@ -1,6 +1,6 @@
 ---
 title: Cordova 应用的图标
-desc: (@quasar/app-vite) 如果管理 Quasar和Cordova开发的混合应用的图标。
+desc: (@quasar/app-vite) 如果管理 Quasar 和 Cordova 开发的混合应用的图标。
 ---
 
 就图标而言，Cordova 是所有构建目标中最复杂的目标之一，因为您不仅需要将图标放在特定文件夹中，还需要在 `src-cordova/config.xml` 文件中注册它们。 此外，如果您正在使用启动画面（您应该使用），您还需要安装 `cordova-plugin-splashscreen` 并在 config.xml 中注册它。
@@ -98,7 +98,7 @@ src-cordova/
         Default@2x~ipad~anyany.png
 ```
 
-你的config.xml应该是这样的：
+你的 config.xml 应该是这样的：
 
 ```xml
 <platform name="android">

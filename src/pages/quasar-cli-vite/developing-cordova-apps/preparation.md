@@ -61,13 +61,13 @@ setx path "%path%;%ANDROID_SDK_ROOT%\tools;%ANDROID_SDK_ROOT%\platform-tools;<gr
 
 安装工具后，在 Android Studio 中设置正确的 SDK 并创建一个模拟器。
 
-* 启动 Android Studio（双击安装它的文件夹中的可执行文件）。下一步是安装各个SDK：
+* 启动 Android Studio（双击安装它的文件夹中的可执行文件）。下一步是安装各个 SDK：
 
 * 打开窗口底部的 "Configure" 菜单：
 
   ![SDK manager](https://cdn.quasar.dev/img/Android-Studio-SDK-Menu.png "SDK manager")
 
-* 选择所需的 SDK。 根据 2019 年 12 月的数据，Cordova 需要android-28（Android 9.0-Pie），因此请确保将其包括在内。 点击 "Apply" 安装 SDK。
+* 选择所需的 SDK。 根据 2019 年 12 月的数据，Cordova 需要 android-28（Android 9.0-Pie），因此请确保将其包括在内。 点击 "Apply" 安装 SDK。
 
   ![SDK selection](https://cdn.quasar.dev/img/Android-Studio-SDK-selection.png "SDK selection")
 
@@ -144,7 +144,7 @@ $ cordova plugin add cordova-plugin-wkwebview-engine
 2. 有关注意事项和更多信息，请访问：[https://github.com/apache/cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine)
 
 ## 4. 开始开发
-如果您想直接开始开发，则可以跳过第2步和第3步，并运行以下命令之一。如果您的计算机连接了手机/平板电脑设备，则还可以在其真机上运行所开发的应用，而不是在模拟器中运行。
+如果您想直接开始开发，则可以跳过第 2 步和第 3 步，并运行以下命令之一。如果您的计算机连接了手机/平板电脑设备，则还可以在其真机上运行所开发的应用，而不是在模拟器中运行。
 
 ```bash
 # android 和 ios 二选一

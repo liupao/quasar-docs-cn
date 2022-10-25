@@ -1,17 +1,17 @@
 ---
 title: 什么是 SSR
-desc: (@quasar/app-vite) 使用Quasar CLI构建SSR服务端渲染应用的介绍。
+desc: (@quasar/app-vite) 使用 Quasar CLI 构建 SSR 服务端渲染应用的介绍。
 ---
 
-默认情况下Quasar和Vue都是构建客户端渲染的框架，在浏览器中生成和操作DOM。然而，也可以在服务器端将相同的组件渲染成HTML字符串，直接发送到浏览器，最后在客户端将静态的html标签水化（`hydrate`）成一个可以交互的应用程序。
+默认情况下 Quasar 和 Vue 都是构建客户端渲染的框架，在浏览器中生成和操作 DOM。然而，也可以在服务器端将相同的组件渲染成 HTML 字符串，直接发送到浏览器，最后在客户端将静态的 html 标签水化（`hydrate`）成一个可以交互的应用程序。
 
 一个由服务端渲染的 Quasar 应用也可以被认为是“同构的” (`Isomorphic`) 或“通用的” (`Universal`)，因为应用的大部分代码同时运行在服务端和客户端。
 
 ## 为什么需要 SSR?
-与SPA(Single-Page Application 单页面应用)相比SSR有如下优点：
+与 SPA(Single-Page Application 单页面应用)相比 SSR 有如下优点：
 
-* **更好的SEO**, 因为浏览器的搜索引擎爬虫可以直接拿到完整呈现的页面。
-* **更快的首屏渲染**, 特别是在网速慢或设备慢的情况下。服务端渲染页面不需要等待所有的JavaScript脚本加载完成后才显示，因此用户可以更快地看到完整呈现的页面。这通常可以带来更高的核心 Web 指标评分、更好的用户体验，而对于那些“首屏加载速度与转化率直接相关”的应用来说，这点可能至关重要。
+* **更好的 SEO**, 因为浏览器的搜索引擎爬虫可以直接拿到完整呈现的页面。
+* **更快的首屏渲染**, 特别是在网速慢或设备慢的情况下。服务端渲染页面不需要等待所有的 JavaScript 脚本加载完成后才显示，因此用户可以更快地看到完整呈现的页面。这通常可以带来更高的核心 Web 指标评分、更好的用户体验，而对于那些“首屏加载速度与转化率直接相关”的应用来说，这点可能至关重要。
 
 使用 SSR 时还有一些权衡之处需要考量：
 
@@ -25,4 +25,4 @@ desc: (@quasar/app-vite) 使用Quasar CLI构建SSR服务端渲染应用的介绍
 
 <q-separator class="q-mt-xl" />
 
-> 此页面中的部分内容引用自：[vue官文档SSR开发指南](https://vuejs.org/guide/scaling-up/ssr.html)。
+> 此页面中的部分内容引用自：[vue 官文档 SSR 开发指南](https://vuejs.org/guide/scaling-up/ssr.html)。

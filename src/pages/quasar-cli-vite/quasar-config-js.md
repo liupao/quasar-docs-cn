@@ -1,6 +1,6 @@
 ---
 title: quasar.config.js 配置详解
-desc: (@quasar/app-vite) 在Quasar和vite的项目中如何进行配置。
+desc: (@quasar/app-vite) 在 Quasar 和 vite 的项目中如何进行配置。
 ---
 注意，使用脚手架创建的项目的根目录下有一个 `/quasar.config.js` 文件，Quasra CLI 几乎所有的行为都通过这个文件进行配置：
 
@@ -8,7 +8,7 @@ desc: (@quasar/app-vite) 在Quasar和vite的项目中如何进行配置。
 * 设置默认的 [Quasar 语言包](/options/quasar-language-packs)；
 * 选择您喜欢的[图标库](/options/installing-icon-libraries)；
 * 配置 Quasar 组件使用的[默认图标集合](/options/quasar-icon-sets)；
-* 配置开发服务器的端口、HTTPS模式、主机名等等；
+* 配置开发服务器的端口、HTTPS 模式、主机名等等；
 * 配置您想用的 [CSS 动画](/options/animations)
 * 配置启用哪些 [Boot 文件](/quasar-cli-vite/boot-files) 以及其执行顺序（位于 `src/boot` 目录下会在 Vue 根组件挂载之前被执行的文件）；
 * 配置会被打包的全局 CSS/Sass... 文件；
@@ -50,7 +50,7 @@ module.exports = function (ctx) { // 也可是一个异步的函数
 }
 ```
 
-例如，您可以在为特定模式（如PWA）构建时加载一种字体，并为其他模式加载另一种字体：
+例如，您可以在为特定模式（如 PWA）构建时加载一种字体，并为其他模式加载另一种字体：
 
 ```js
 module.exports = function (ctx) {
@@ -71,7 +71,7 @@ module.exports = function (ctx) {
   ]
 }
 ```
-或者您可以将开发服务器的端口配置为：SPA 模式下为8000，在 PWA 模式下为9000，其他模式下为9090
+或者您可以将开发服务器的端口配置为：SPA 模式下为 8000，在 PWA 模式下为 9000，其他模式下为 9090
 
 ```js
 module.exports = function (ctx) {
@@ -199,12 +199,12 @@ interface QuasarEslintConfiguration {
   rawOptions?: object;
 
   /**
-   * 要包含的文件（可以是glob格式）
+   * 要包含的文件（可以是 glob 格式）
    */
   include?: string[];
 
   /**
-   * 要排除的文件（可以是glob格式）。
+   * 要排除的文件（可以是 glob 格式）。
    * 推荐使用 .eslintignore 文件代替
    */
   exclude?: string[];
@@ -372,7 +372,7 @@ interface QuasarStaticBuildConfiguration {
   target?: BuildTargetOptions;
 
   /**
-   * 扩展 Quasar CLI 生成的Vite配置
+   * 扩展 Quasar CLI 生成的 Vite 配置
    */
   extendViteConf?: (
     config: ViteUserConfig,
@@ -404,7 +404,7 @@ interface QuasarStaticBuildConfiguration {
   alias?: object[];
 
   /**
-   * 配置您的app 的 Public 路径。
+   * 配置您的 app 的 Public 路径。
    * 当您的 public 路径需要设置成特殊值的时候才需要它
    * 例如： _“<protocol>://<domain>/some/nested/folder”_
    * 这代表着您的应用部署在服务器的 _“some/nested/folder”_ 下
@@ -415,7 +415,7 @@ interface QuasarStaticBuildConfiguration {
 
   /**
    * 设置 [Vue Router 模式](https://router.vuejs.org/guide/essentials/history-mode.html).
-   * History 也需要在部署Web服务器上进行配置
+   * History 也需要在部署 Web 服务器上进行配置
    *
    * @default 'hash'
    */
@@ -475,9 +475,9 @@ interface QuasarStaticBuildConfiguration {
    * 设置产物文件名是否带有 hash 值
    * 例如: "454d87bd" 在 "assets/index.454d87bd.js" 中
    *
-   * 如果开启，请注意您的服务器的缓存策略，否则容易获得一个304错误
+   * 如果开启，请注意您的服务器的缓存策略，否则容易获得一个 304 错误
    *
-   * 如果您的vite配置中已经设置了 build.rollupOptions.output.entryFileNames/chunkFileNames/assetFileNames 属性，则此设置不会生效
+   * 如果您的 vite 配置中已经设置了 build.rollupOptions.output.entryFileNames/chunkFileNames/assetFileNames 属性，则此设置不会生效
    *
    * 只在构建生产环境时生效
    *
@@ -520,7 +520,7 @@ interface QuasarStaticBuildConfiguration {
    * (requires @quasar/app-vite v1.1.1+)
    *
    * 是否在开发模式下也开启树摇（Treeshake）
-   * 出于性能原因，建议将其保留为false。
+   * 出于性能原因，建议将其保留为 false。
    * @default false
    */
   devQuasarTreeshaking?: boolean;

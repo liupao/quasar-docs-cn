@@ -23,7 +23,7 @@ $ quasar
     dev, d        为您的项目启动一个开发服务
     build, b      打包构建生产环境下的代码
     clean, c      清除构建产物目录
-    new, n        快捷创建一个pages/layout/component等模板文件
+    new, n        快捷创建一个 pages/layout/component 等模板文件
     mode, m       为您的项目添加/删除 Quasar 开发模式
     inspect       检查底层工具的配置项（vite/esbuild）
                     -可以用于调试您的 quasar.config.js 和安装的扩展
@@ -133,7 +133,7 @@ $ quasar dev -h
                         [android|ios]
 ```
 
-Quasar 开发服务器允许您通过编译和维护内存中的代码来开发应用程序。web服务器将为您的应用程序提供服务，同时提供开箱即用的热重新加载。在内存中运行可以在更改代码时更快地重建。
+Quasar 开发服务器允许您通过编译和维护内存中的代码来开发应用程序。web 服务器将为您的应用程序提供服务，同时提供开箱即用的热重新加载。在内存中运行可以在更改代码时更快地重建。
 
 > 热重新加载不仅仅是在代码更改时刷新浏览器。它跳过刷新并动态更新代码，同时保持应用程序的状态（如 Vue 的 model 数据）。请注意，在某些特殊情况下，这是不可能的，因此 dev Web 服务器将会刷新您的浏览器。（始终确保一次只运行一个 Quasar CLI 实例，否则热重新服务和其他服务将中断）
 
@@ -191,7 +191,7 @@ $ quasar dev -m electron '--' --no-sandbox --disable-setuid-sandbox
   ```bash
   sudo chown -R username: .
   ```
-* 或使用root权限运行dev服务器
+* 或使用 root 权限运行 dev 服务器
 
   ```bash
   sudo quasar dev
@@ -237,8 +237,8 @@ $ quasar build -h
                       - 如果使用 electron-builder 构建 Electron 此参数还有特殊效果
     --debug, -d     构建一个可调试的版本
     --skip-pkg, -s  只构建 UI (跳过创建 Cordova/Capacitor/Electron 应用程序)
-                      - Cordova (只生成 in /src/cordova/www 目录下的UI 文件)
-                      - Capacitor (只生成 in /src/capacitor/www 目录下的UI 文件)
+                      - Cordova (只生成 in /src/cordova/www 目录下的 UI 文件)
+                      - Capacitor (只生成 in /src/capacitor/www 目录下的 UI 文件)
                       - Electron (只创建 /dist/electron/UnPackaged 目录下的文件)
     --help, -h      显示帮助信息
 
@@ -396,7 +396,7 @@ $ quasar mode remove pwa
 $ quasar describe -h
 
   描述
-    查询项目中使用的 Quasar 的组件API。
+    查询项目中使用的 Quasar 的组件 API。
 
   用法
     $ quasar describe <component/directive/Quasar plugin>
@@ -666,7 +666,7 @@ $ node my-server.js
 ```
 
 ## Create
-创建一个 Quasar 项目 （app，App扩展或 UI kit），**可自定义**开始模板。
+创建一个 Quasar 项目 （app，App 扩展或 UI kit），**可自定义**开始模板。
 
 ```bash
 $ quasar create <folder_name> --kit <address> [--branch <branch_name>]

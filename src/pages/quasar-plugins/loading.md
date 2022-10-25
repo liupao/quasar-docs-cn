@@ -1,6 +1,6 @@
 ---
-title: 加载插件Loading
-desc: 这个Quasar插件可以通过旋转器和消息为你的应用程序展示加载状态。
+title: 加载插件 Loading
+desc: 这个 Quasar 插件可以通过旋转器和消息为你的应用程序展示加载状态。
 keys: Loading
 related:
   - /vue-components/linear-progress
@@ -22,9 +22,9 @@ Loading（加载） 插件可以在你的页面上产生一个遮罩，并展示
 <doc-installation plugins="Loading" config="loading" />
 
 ##  用法
-触发Loading后会延迟（500ms）再显示，保证了快速操作不会使屏幕闪烁。这是因为显示然后迅速隐藏进度条使得用户没有机会看到发生了什么。显示之前的延迟消除了混乱。
+触发 Loading 后会延迟（500ms）再显示，保证了快速操作不会使屏幕闪烁。这是因为显示然后迅速隐藏进度条使得用户没有机会看到发生了什么。显示之前的延迟消除了混乱。
 
-在vue组件之内:
+在 vue 组件之内:
 
 ```js
 import { useQuasar } from 'quasar'
@@ -40,7 +40,7 @@ setup () {
 }
 ```
 
-在vue组件之外:
+在 vue 组件之外:
 
 ```js
 import {
@@ -75,4 +75,4 @@ Loading.hide()
 <doc-example title="展示之后切换加载画面" file="Loading/ShowAndChange" />
 
 ### 设置默认值
-相较于每次使用时重新指定配置，你可能想为它们设置一些默认值，你可以通过quasar.config.js > framework > config > loading: {...} 来配置全局的默认值，或者调用 `Loading.setDefaults({...})` 或 `$q.loading.setDefaults({...})`来配置。
+相较于每次使用时重新指定配置，你可能想为它们设置一些默认值，你可以通过 quasar.config.js > framework > config > loading: {...} 来配置全局的默认值，或者调用 `Loading.setDefaults({...})` 或 `$q.loading.setDefaults({...})`来配置。

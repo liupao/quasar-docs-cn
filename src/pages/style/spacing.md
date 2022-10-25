@@ -1,6 +1,6 @@
 ---
-title: CSS间距类
-desc: Quasar提供的这些CSS工具类用于简化元素排版时的内外间距，并且是响应式的
+title: CSS 间距类
+desc: Quasar 提供的这些 CSS 工具类用于简化元素排版时的内外间距，并且是响应式的
 related:
   - /style/typography
   - /style/positioning
@@ -8,8 +8,8 @@ related:
   - /style/breakpoints
 ---
 
-Quasar提供了这些CSS工具类来帮你在页面布局时调整DOM之间的间距。
-这些CSS类名的命名规则是`q-TD-S`,其中`q-`是统一前缀，`T`是类型表示内/外边距，`D`是方向，`S`是大小，详情见下表
+Quasar 提供了这些 CSS 工具类来帮你在页面布局时调整 DOM 之间的间距。
+这些 CSS 类名的命名规则是`q-TD-S`,其中`q-`是统一前缀，`T`是类型表示内/外边距，`D`是方向，`S`是大小，详情见下表
 
 ## 语法
 ```
@@ -17,7 +17,7 @@ q-[p|m][t|r|b|l|a|x|y]-[none|auto|xs|sm|md|lg|xl]
     T       D                   S
 
 T - 类型
-  - 可取值: p , m。p表示padding（内边距），m表示margin（外边距）
+  - 可取值: p , m。p 表示 padding（内边距），m 表示 margin（外边距）
 
 D - 方向
   - 可取值:
@@ -26,7 +26,7 @@ D - 方向
 
 S - 大小
   - 可取值:
-      none (表示间距等于0)
+      none (表示间距等于 0)
       auto (只能用于: q-ml-*, q-mr-*, q-mx-*),
       xs (extra small-很小),
       sm (small-小),
@@ -38,10 +38,10 @@ S - 大小
 ## 示例
 
 ```html
-<!--  在上下左右所有方向上都加一个大小为small的内边距 (padding)  -->
+<!--  在上下左右所有方向上都加一个大小为 small 的内边距 (padding)  -->
 <div class="q-pa-sm">...</div>
 
-<!-- 在上方加一个大小为medium的外边距 (margin),在右边加一个大小为 small的外边距 -->
+<!-- 在上方加一个大小为 medium 的外边距 (margin),在右边加一个大小为 small 的外边距 -->
 <q-card class="q-mt-md q-mr-sm">...</q-card>
 ```
 
@@ -143,9 +143,9 @@ S - 大小
 
 ## 响应式间距
 
-当你打开了(`quasar.config.js > framework > cssAddon: true`)时，所有的间距css类还会新增一个带有断点的版本，可以控制在不同尺寸的屏幕下有不同的效果，你可以使用这个功能轻松的构建响应式网站/app。
+当你打开了(`quasar.config.js > framework > cssAddon: true`)时，所有的间距 css 类还会新增一个带有断点的版本，可以控制在不同尺寸的屏幕下有不同的效果，你可以使用这个功能轻松的构建响应式网站/app。
 
-> 需要注意的是，打开这个功能后，打包的css体积会变大很多，请确保你需要它后再打开。
+> 需要注意的是，打开这个功能后，打包的 css 体积会变大很多，请确保你需要它后再打开。
 
 带有断点的版本语法如下：
 ```
@@ -153,13 +153,13 @@ S - 大小
 ```
 
 例如:
-`q-pa-xs-md` 表示在屏幕尺寸大于xs的时候才会加上一个全部方向大小为md的内边距
+`q-pa-xs-md` 表示在屏幕尺寸大于 xs 的时候才会加上一个全部方向大小为 md 的内边距
 
-`q-ma-sm-sm` 表示在屏幕尺寸大于sm的时候才会加上一个全部方向大小为sm的外边距
+`q-ma-sm-sm` 表示在屏幕尺寸大于 sm 的时候才会加上一个全部方向大小为 sm 的外边距
 
-`q-px-md-lg` 表示在屏幕尺寸大于md的时候才会加上一个水平方向大小为lg的内边距
+`q-px-md-lg` 表示在屏幕尺寸大于 md 的时候才会加上一个水平方向大小为 lg 的内边距
 
-`q-my-md-md` 表示在屏幕尺寸大于md的时候才会加上一个垂直方向大小为md的外边距
+`q-my-md-md` 表示在屏幕尺寸大于 md 的时候才会加上一个垂直方向大小为 md 的外边距
 
 
 ::: tip
@@ -173,4 +173,4 @@ S - 大小
 | `no-padding` | 移除内边距 |
 
 ## 视频讲解
-[B站视频讲解](https://www.bilibili.com/video/BV1pA4y197Zc?p=10)
+[B 站视频讲解](https://www.bilibili.com/video/BV1pA4y197Zc?p=10)

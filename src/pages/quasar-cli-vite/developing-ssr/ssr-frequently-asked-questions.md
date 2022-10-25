@@ -20,11 +20,11 @@ function (ssrContext) {
     ? Platform.parseSSR(ssrContext)
     : Platform // 否则我们咋客户端可以直接使用
 
-  // 这时 platform 就等价于在非SSR模式中导入的 Platform
+  // 这时 platform 就等价于在非 SSR 模式中导入的 Platform
 }
 ```
 
-可以在以下几个地方访问到它`ssrContext` 对象：[boot文件](/quasar-cli-vite/boot-files)的函数参数中、[preFetch](/quasar-cli-vite/prefetch-feature)的函数参数中。
+可以在以下几个地方访问到它`ssrContext` 对象：[boot 文件](/quasar-cli-vite/boot-files)的函数参数中、[preFetch](/quasar-cli-vite/prefetch-feature)的函数参数中。
 
 在客户端渲染的应用中，每个用户都在自己的浏览器上有一个单独的、新的应用实例，在服务端渲染时，我们也希望如此：每个请求可以得到一个新的，独立的应用实例，从而不会发生跨请求状态污染。所以[Platform](/options/platform-detection) 和 [Cookies](/quasar-plugins/cookies) 分别绑定到每个请求中。
 

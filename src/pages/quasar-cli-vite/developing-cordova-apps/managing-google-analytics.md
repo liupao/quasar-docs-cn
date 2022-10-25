@@ -26,7 +26,7 @@ desc: (@quasar/app-vite) How to use analytics in a Quasar hybrid mobile app with
 在我们开始将 Google Analytics 应用于您的应用程序之前，您需要有 [Google Analytics](https://analytics.google.com) 和 [Google Tagmanager](https://tagmanager.google.com/) 的帐户 。所以我们首先注册帐户。当您拥有这些帐户时，是时候配置标签管理器了。按照 [Multiminds 文章](https://www.multiminds.eu/blog/2016/12/google-analytics-and-tag-manager-with-ionic-and-cordova-apps/)中的步骤操作。
 
 ## 将其实施到项目中
-> 对于本指南，我们假设您拥有发送给 Google Analytics 的固定 sessionId。 Google Analytics 使用 sessionId 来区分不同的用户。如果要创建匿名 sessionId，请参阅[用户ID分析文档](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id)。
+> 对于本指南，我们假设您拥有发送给 Google Analytics 的固定 sessionId。 Google Analytics 使用 sessionId 来区分不同的用户。如果要创建匿名 sessionId，请参阅[用户 ID 分析文档](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id)。
 
 将标签管理器代码片段放置到您的 `index.html` 文件的头部（如果您已按照[Multiminds 文章](http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/)做了，你已经有了这个。）在你的代码库中创建一个名为 `analytics.js` 的新文件，内容如下：
 
@@ -80,4 +80,4 @@ boot: [
 
 关于事件的更多信息可以在 [Analytics documentation on events](https://developers.google.com/analytics/devguides/collection/analyticsjs/events)中找到。
 
-运行应用时，您会看到事件和浏览量。 在实时视图中注册浏览量通常需要大约5到10秒的时间。
+运行应用时，您会看到事件和浏览量。 在实时视图中注册浏览量通常需要大约 5 到 10 秒的时间。

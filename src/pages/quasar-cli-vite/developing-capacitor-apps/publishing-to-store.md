@@ -53,7 +53,7 @@ $ zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
 
 一旦有一个开发者账户，就可以继续点击 "Publish an Android App on Google Play"。
 
-然后，可以继续点击按钮，编辑商店列表（稍后将上传APK）。填写该应用程序的描述。
+然后，可以继续点击按钮，编辑商店列表（稍后将上传 APK）。填写该应用程序的描述。
 
 当准备好后，上传发布构建的 APK。耐心等待，辛勤工作会使得世界变得与众不同！
 

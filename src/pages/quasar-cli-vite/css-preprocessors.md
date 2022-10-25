@@ -1,6 +1,6 @@
 ---
 title: CSS 预处理器
-desc: (@quasar/app-vite) Quasar中提供开箱即用的 Sass/SCSS CSS 预处理器。
+desc: (@quasar/app-vite) Quasar 中提供开箱即用的 Sass/SCSS CSS 预处理器。
 related:
   - /style/sass-scss-variables
 ---
