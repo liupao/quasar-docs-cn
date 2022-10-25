@@ -1,6 +1,6 @@
 ---
 title: Ajax Bar
-desc: The QAjaxBar Vue component displays a loading bar whenever an Ajax call is in progress.
+desc: QAjaxBar 组件会在 Ajax 请求触发时展示一个加载进度条。
 keys: QAjaxBar
 related:
   - /quasar-plugins/loading
@@ -9,7 +9,7 @@ related:
   - /quasar-cli-webpack/ajax-requests
 ---
 
-绝大多数移动应用和桌面应用都需要通过[Ajax call](https://en.wikipedia.org/wiki/Ajax_(programming))来与服务端进行通信。
+绝大多数移动应用和桌面应用都需要通过 [Ajax call](https://en.wikipedia.org/wiki/Ajax_(programming)) 来与服务端进行通信。
 由于通信过程可能需要花费部分时间，为了好的用户体验，你可以在一个请求开始时使用 QAjaxBar 组件来给予用户反馈。
 
 
@@ -28,7 +28,7 @@ QAjaxBar 组件默认会自动捕获 Ajax 调用，然后展示它的进度。(�
 
 
 出于演示的目的，下面的示例是使用手动触发的方式。当你点击按钮的时候页面的底部会出现一个 10px 左右的进度条，当然他的大小和颜色都是可以自定义的，
-请查阅 Api 部分以帮助你了解它的所有属性。
+请查阅 API 部分以帮助你了解它的所有属性。
 
 ### 基础
 
@@ -60,7 +60,7 @@ export default {
 </script>
 ```
 
-## Tips
+## 提示
 
-* 如果 Ajax Bar 同时捕获多个事件，`@start`和`@stop`仍然只会触发一次
-* 每个 Ajax 请求开始时都会触发`start()`事件结束的时候都会触发`stop()`事件。所以若你想要手动的触发 QAjaxBar，你需要在请求开始的时候去调用他的 `start()` 方法，在请求结束的时候去调用他的 `stop()` 方法。
+* 如果 Ajax Bar 同时捕获多个事件，`@start` 和`@stop` 仍然只会触发一次
+* 每个 Ajax 请求开始时都会触发 `start()` 事件结束的时候都会触发 `stop()` 事件。所以若你想要手动的触发 QAjaxBar，你需要在请求开始的时候去调用他的 `start()` 方法，在请求结束的时候去调用他的 `stop()` 方法。
