@@ -1,6 +1,6 @@
 ---
-title: Circular Progress
-desc: The QCircularProgress Vue component displays a colored circular loading indicator. The bar can either have a determinate progress, or an indeterminate animation.
+title: 圆形进度
+desc: QCircularProgress Vue 组件显示一个彩色的圆形进度条。工具条可以有一个确定的进度值，也可以有一个不确定的动画。它可以用于通知用户在后台正在进行某个操作。
 keys: QCircularProgress
 related:
   - /vue-components/linear-progress
@@ -11,27 +11,28 @@ related:
   - /quasar-plugins/loading-bar
 ---
 
-The QCircularProgress component displays a colored circular progress. The bar can either have a determinate progress, or an indeterminate animation. It should be used to inform the user that an action is occurring in the background.
+QCircularProgress 组件显示一个彩色的圆形进度条。工具条可以有一个确定的进度值，也可以有一个不确定的动画。它可以用于通知用户在后台正在进行某个操作。
+
 
 ## QCircularProgress API
 
 <doc-api file="QCircularProgress" />
 
 ## 用法
-By default, QCircularProgress inherits current text color (as arc progress color and inner label color) and current font size (as component size). For customization, you can use the size and color related props.
+默认情况下，QCircularProgress 会继承当前的文字颜色（作为进度条和标签的颜色）和当前的字体大小（作为组件的大小）。您也可以使用 props 来自定义他们。
 
-<doc-example title="Determined state" file="QCircularProgress/Determined" />
+<doc-example title="确定的值" file="QCircularProgress/Determined" />
 
-<doc-example title="Determinate and reverse" file="QCircularProgress/Reverse" />
+<doc-example title="确定的值并反向" file="QCircularProgress/Reverse" />
 
-<doc-example title="Offset angle" file="QCircularProgress/Angle" />
+<doc-example title="偏置角度" file="QCircularProgress/Angle" />
 
-<doc-example title="Custom min/max (same model)" file="QCircularProgress/CustomMinMax" />
+<doc-example title="自定义最大/最小值" file="QCircularProgress/CustomMinMax" />
 
-In the example below, `show-value` property also enables the default slot, so you can fill it with custom content, like even a QAvatar or a QTooltip. The `font-size` prop refers to the inner label font size.
+下面的示例中，`show-value` 属性也会开启默认的插槽，所以您可以在其中放置自定义的内容，例如 QAvatar 或 QTooltip。`font-size` 属性会影响内部标签的字体。
 
-<doc-example title="Show value" file="QCircularProgress/ShowValue" />
+<doc-example title="展示值" file="QCircularProgress/ShowValue" />
 
-<doc-example title="Indeterminate state" file="QCircularProgress/Indeterminate" />
+<doc-example title="不确定的状态" file="QCircularProgress/Indeterminate" />
 
-<doc-example title="Standard sizes" file="QCircularProgress/StandardSizes" />
+<doc-example title="标准大小" file="QCircularProgress/StandardSizes" />
