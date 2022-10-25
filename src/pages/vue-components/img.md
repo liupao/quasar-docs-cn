@@ -14,7 +14,7 @@ The QImg component makes working with images (any picture format) easy and also 
 
 ## 用法
 
-### Basic 基础
+### 基础
 
 <doc-example title="Basic" file="QImg/Basic" />
 

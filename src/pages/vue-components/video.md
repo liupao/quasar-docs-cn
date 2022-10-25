@@ -16,7 +16,7 @@ You may also want to check our own HTML 5 video player component: [QMediaPlayer]
 
 ## 用法
 
-### Basic 基础
+### 基础
 <doc-example title="Basic" file="QVideo/Basic" />
 
 ### With aspect ratio

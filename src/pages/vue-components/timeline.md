@@ -19,7 +19,7 @@ QTimeline has 3 layouts:
 
 ## 用法
 
-### Basic 基础
+### 基础
 
 <doc-example title="Basic" file="QTimeline/Basic" scrollable />
 

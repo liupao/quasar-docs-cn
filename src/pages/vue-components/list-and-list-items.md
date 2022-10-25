@@ -31,7 +31,7 @@ List Items have the following pre-built child components:
 
 ## 用法
 
-### Basic 基础
+### 基础
 
 <doc-example title="Basic" file="QItem/Basic" />
 

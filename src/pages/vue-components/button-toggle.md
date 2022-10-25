@@ -20,7 +20,7 @@ The QBtnToggle component is another basic element for user input, similar to QRa
 
 ## 用法
 
-### Basic 基础
+### 基础
 
 <doc-example title="Basic" file="QBtnToggle/Basic" />
 
