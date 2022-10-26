@@ -1,6 +1,6 @@
 ---
-title: Dialog
-desc: The QDialog component provides a UI for modals with functionalities like positioning, styling, maximizing and more.
+title: 对话框
+desc: QDialog 组件提供了具有定位，样式化，最大化等功能的模态框。
 keys: QDialog
 related:
   - /quasar-plugins/dialog
@@ -9,16 +9,16 @@ related:
   - /vue-components/popup-proxy
 ---
 
-The QDialog component is a great way to offer the user the ability to choose a specific action or list of actions. They also can provide the user with important information, or require them to make a decision (or multiple decisions).
+QDialog 组件提供了一种很棒的交互方式，你可以通过对话框来向用户展示重要信息，或者请求用户做出决策。
 
-From a UI perspective, you can think of Dialogs as a type of floating modal, which covers only a portion of the screen. This means Dialogs should only be used for quick user actions, like verifying a password, getting a short App notification or selecting an option or options quickly.
+从 UI 的角度老看，你可以把对话框看作一种浮动的模态框，它只覆盖屏幕的一部分，也代表着对话框应该只被用于处理用户的快速操作,例如验证密码，简短的应用通知，或者做出快速选择等等。
 
 ::: tip
-Dialogs can also be used as a globally available method for more basic use cases, like the native JS alert(), prompt(), etc. For the latter behaviour, go to [Dialog Plugin](/quasar-plugins/dialog) page.
+对话框还可以通过更基础的方式来使用，把它当作一个全局的方法来调用，就像原生 js 的 alert(), prompt() 等方法一样。更多信息，请参考 [Dialog 插件](/quasar-plugins/dialog)页面
 :::
 
-::: warning Masterclass TIP
-Rather than cluttering your .vue templates with QDialogs, it's best if you write a component for your dialog and use the [Dialog Plugin](/quasar-plugins/dialog#invoking-custom-component) to invoke it from anywhere in your app.
+::: warning 进阶提示
+与其将 QDialog 杂揉在您的 .vue 文件的模板中，不如为对话框写一个组件，并用 [Dialog 插件](/quasar-plugins/dialog#invoking-custom-component)使它可以在应用的任何地方都可以被很方便的调用。
 :::
 
 ## QDialog API
@@ -27,64 +27,65 @@ Rather than cluttering your .vue templates with QDialogs, it's best if you write
 
 ## 用法
 
-::: warning Note
-It's best that your QDialog main content is a QCard. However, if you are planning on using any other component (like QForm) or tag, make sure that the direct child of QDialog is rendered with a `<div>` tag (or wrap it with one yourself).
+::: warning 注意
+QDialog 最好使用 QCard 作为主要内容。如果您想使用其他的组件或者标签，请确保 QDialog 的直接子元素是 `<div>` 标签（或者手动为他包裹一个 `<div>`）。
 :::
 
 ### 基础
 
-<doc-example title="Basic" file="QDialog/Basic" />
+<doc-example title="基础" file="QDialog/Basic" />
 
-### Styling
+### 样式
 
-<doc-example title="Styling" file="QDialog/Style" />
+<doc-example title="样式" file="QDialog/Style" />
 
-### Positioning
+### 定位
 <doc-example title="Positions" file="QDialog/Positioning" />
 
 ::: tip
-Do not mistake "position" prop with the show/hide animation. If you want a custom animation, you should use `transition-show` and `transition-hide` which can be applied regardless of "position" or "maximized".
+不要将  "position" 属性与显示隐藏的动画相混淆。如果您想自定义动画，您可以使用 `transition-show` 和 `transition-hide` 属性，不管 "position" 或 "maximized" 如何设置，它们都会生效。
 :::
 
-<doc-example title="Maximized" file="QDialog/Maximized" />
+<doc-example title="最大化" file="QDialog/Maximized" />
 
-### Various content
-Dialogs can contain any content. Some examples:
+### 不同的内容
+对话框可以包含任何内容。一些示例：
 
-<doc-example title="Various content" file="QDialog/VariousContent" />
+<doc-example title="不同的内容" file="QDialog/VariousContent" />
 
-<doc-example title="With containerized QLayout" file="QDialog/Layout" />
+<doc-example title="容器化的 QLayout" file="QDialog/Layout" />
 
 ::: tip
-If you are going to use the containerized QLayout, you'll need to put a width on your QDialog, if using left/right position, or a height, if using top/bottom position. You can use vw and vh units.
+当您想使用容器化的 QLayout时，如果使用左/右定位，则需要为 QDialog 设置一个宽度，如果使用上/下定位。则需要为 QDialog 设置一个高度。您可以使用 vw 和 vh 单位。
 :::
 
-### Handling scroll
-<doc-example title="Scrollable dialogs" file="QDialog/Scrollable" />
+### 处理滚动
+<doc-example title="可滚动的对话框" file="QDialog/Scrollable" />
 
-### Different modes
-User cannot dismiss the Dialog by pressing ESCAPE key or by clicking/tapping on its backdrop.
+### 不同的模式
+用户无法通过 ESCAPE 键或者点击对话框外部来关闭对话框。
 
-<doc-example title="Persistent" file="QDialog/Persistent" />
+<doc-example title="持久的" file="QDialog/Persistent" />
 
-Dialogs can also be a part of the page, without requiring immediate focus. It's where "seamless" mode comes into play:
+对话框也可以成为页面的一部分，不需要立即聚焦，这就是“无缝”（seamless）模式的作用:
 
-<doc-example title="Seamless" file="QDialog/Seamless" />
+<doc-example title="无缝的" file="QDialog/Seamless" />
 
-### Dialog in dialog
-You are able to open dialogs on top of other dialogs, with infinite number of depth levels.
+### 嵌套
+您可以在其他对话框之上打开对话框，没有深度限制。
 
-<doc-example title="Inception" file="QDialog/Inception" />
+<doc-example title="嵌套" file="QDialog/Inception" />
 
-### Sizing
-You are able to customize the size of the Dialogs. Notice we either tamper with the content's style or we use `full-width` or `full-height` props:
+### 大小
+您可以自定义对话框的大小。请注意，我们要么修改内容的样式，要么使用`full-width` 或 `full-height` 属性：
 
-<doc-example title="Sizing examples" file="QDialog/Sizing" />
+<doc-example title="大小示例" file="QDialog/Sizing" />
 
-## Cordova/Capacitor back button
-Quasar handles the back button for you by default so it can hide any opened Dialogs instead of the default behavior which is to return to the previous page (which is not a nice user experience).
+## Cordova/Capacitor 返回按钮
 
-However, should you wish to disable this behavior, edit your /quasar.config.js file:
+Quasar 默认为你处理返回按钮，所以它会关闭任何打开的对话框，而不是默认返回到前一页(这不是一个很好的用户体验)。
+
+但是，如果你希望禁用此行为，请编辑/quasar.config。js 文件：
 
 ```js
 // quasar.config.js;
@@ -93,11 +94,10 @@ return {
   framework: {
     config: {
       cordova: {
-        // Quasar handles app exit on mobile phone back button.
+         // quasar 处理手机返回键使应用程序退出。
         backButtonExit: true/false/'*'/['/login', '/home', '/my-page'],
 
-        // On the other hand, the following completely
-        // disables Quasar's back button management.
+        // 下面这个配置开启会完全禁用 quasar 管理手机的返回按钮。
         backButton: true/false
       }
     }
@@ -110,11 +110,10 @@ return {
   framework: {
     config: {
       capacitor: {
-        // Quasar handles app exit on mobile phone back button.
+        // quasar 处理手机返回键使应用程序退出。
         backButtonExit: true/false/'*'/['/login', '/home', '/my-page'],
 
-        // On the other hand, the following completely
-        // disables Quasar's back button management.
+        // 下面这个配置开启会完全禁用 quasar 管理手机的返回按钮。
         backButton: true/false
       }
     }
