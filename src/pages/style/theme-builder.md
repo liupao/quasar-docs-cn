@@ -19,7 +19,7 @@ related:
 
   accent 是强调色
 
-  dark 是暗黑模式/夜间模式的颜色
+  dark 是暗色模式/夜间模式的颜色
 
   positive,negative,info,waring 是辅助色，一般可以用在一些提示的地方（例如使用 negative/waring 来表示危险的操作）。
 :::

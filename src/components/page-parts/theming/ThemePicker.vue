@@ -30,7 +30,7 @@
           q-toolbar
             q-btn(flat, dense, round, :icon="mdiArrowLeft")
             q-space
-            q-toggle.q-mr-sm(dense, v-model="darkMode", :dark="dark.primary", color="red", label="暗黑模式")
+            q-toggle.q-mr-sm(dense, v-model="darkMode", :dark="dark.primary", color="red", label="暗色模式")
             q-btn(flat, dense, round, :icon="mdiMagnify")
             q-btn(flat, dense, round, :icon="mdiMenu")
 
