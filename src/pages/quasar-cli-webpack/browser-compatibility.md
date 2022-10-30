@@ -1,16 +1,16 @@
 ---
-title: Browser compatibility
-desc: (@quasar/app-webpack) How to handle the browser support with Quasar CLI.
+title: 浏览器兼容性
+desc: (@quasar/app-webpack) 如何处理Quasar CLI 项目的浏览器兼容性。
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
 
-## Configuring compatibility
-Your `/package.json` file should contain a `browserslist` field. This will tell Quasar App the range of browsers that the project is targeting. Babel and Autoprefixer will use this field to determine how to transpile JS code (if transpiling is left enabled) and what CSS vendor prefixes it needs to add your CSS code.
+## 配置兼容性
+您的 `/package.json` 文件中应该包含一个 `browserslist` 字段。这会告诉 Quasar 应用兼容的浏览器范围。Babel 和 Autoprefixer 会使用这个字段来决定如何转译 JS 代码（如果转译开关被打开）以及哪些 CSS 兼容性前缀会被添加到您的 CSS 代码中。
 
-Babel will look for exactly the JS features that need transpiling (based on the configured browsers) and apply them. Be mindful about it though, as it is sufficient to add one "bad apple" in the options list and that will dumb down your code back to ES5.
+Babel 将精确地寻找需要转译的 JS 特性（基于配置的浏览器）并应用它们。不过，要注意这一点，因为在选项列表中添加一个 "bad apple" 就足够了，这将使您的代码转译到 ES5。
 
-The following is the default "browserslist" when you create a Quasar project:
+以下是创建 Quasar 项目时默认的  "browserslist"：
 
 ```js
 // package.json
@@ -27,5 +27,4 @@ The following is the default "browserslist" when you create a Quasar project:
   "last 5 Opera versions"
 ]
 ```
-
-More info on how to specify browser ranges: [browserslist](https://github.com/browserslist/browserslist).
+更多关于 `autoprefixer` 的设置范围[请参考 browserslist](https://github.com/browserslist/browserslist)。

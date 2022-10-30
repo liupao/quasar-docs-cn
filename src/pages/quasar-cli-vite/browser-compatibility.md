@@ -46,4 +46,4 @@ require('autoprefixer')({
 })
 ```
 
-更多关于 `autoprefixer` 的设置范围[请参考 browserslist](https://github.com/browserslist/browserslist).
+更多关于 `autoprefixer` 的设置范围[请参考 browserslist](https://github.com/browserslist/browserslist)。
