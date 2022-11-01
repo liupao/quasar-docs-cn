@@ -1,200 +1,199 @@
 ---
-title: Input
-desc: The QInput Vue component is used to capture text input from the user.
+title: 输入框
+desc:  QInput Vue 组件用于收集用户输入的文本或数字。
 keys: QInput
 ---
 
-The QInput component is used to capture text input from the user. It uses `v-model`, similar to a regular input. It has support for errors and validation, and comes in a variety of styles, colors, and types.
+QInput 组件用于收集用户输入的文本或数字。它可以像普通的 input 一样使用 `v-model`。还支持错误验证，并具有多种样式，颜色和类型。
 
 ## QInput API
 
 <doc-api file="QInput" />
 
-## Design
+## 外观设计
 
 ::: warning
-For your QInput you can use only one of the main designs (`filled`, `outlined`, `standout`, `borderless`). You cannot use multiple as they are self-exclusive.
+您只能给 QInput 使用一种主要的外观设计款式（`filled`, `outlined`, `standout`, `borderless`），不能使用多个，因为它们是互相排斥的。
 :::
 
-<doc-example title="Design Overview" file="QInput/DesignOverview" />
+<doc-example title="外观设计预览" file="QInput/DesignOverview" />
 
-### Coloring
+### 着色
 
-<doc-example title="Coloring" file="QInput/Coloring" />
+<doc-example title="着色" file="QInput/Coloring" />
 
-### Standard
-<doc-example title="Standard" file="QInput/DesignStandard" />
+### Standard-标准
+<doc-example title="标准" file="QInput/DesignStandard" />
 
-### Filled
-<doc-example title="Filled" file="QInput/DesignFilled" />
+### Filled-填充
+<doc-example title="填充" file="QInput/DesignFilled" />
 
-### Outlined
-<doc-example title="Outlined" file="QInput/DesignOutlined" />
+### Outlined-轮廓
+<doc-example title="轮廓" file="QInput/DesignOutlined" />
 
-### Standout
-<doc-example title="Standout" file="QInput/DesignStandout" />
+### Standout-突出
+<doc-example title="突出" file="QInput/DesignStandout" />
 
-One of the most appropriate use cases for Standout design is in a QToolbar:
+其中一个很合适的的用例就是将 Standout 模式的 QInput 用在 QToolbar 中：
 
 <doc-example title="Standout in QToolbar" file="QInput/StandoutToolbar" />
 
-### Borderless
-The `borderless` design allows you to seamlessly integrate your QInput into other components without QInput drawing a border around itself or changing its background color:
+### Borderless-无边框
 
-<doc-example title="Borderless" file="QInput/Borderless" />
+无边框（`borderless`）设计允许您无缝地将 QInput 集成到其他组件中，而无需 QInput 在其周围绘制边框或更改其背景颜色：
 
-### Rounded design
+<doc-example title="无边框" file="QInput/Borderless" />
 
-The `rounded` prop only works along with Filled, Outlined and Standout designs, as showcased in the example below:
+### 圆形边框
 
-<doc-example title="Rounded" file="QInput/Rounded" />
+圆形（`rounded`）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
 
-### Square borders
+<doc-example title="圆形" file="QInput/Rounded" />
 
-The `square` prop only makes sense along with Filled, Outlined and Standout designs, as showcased in the example below:
+### 方形边框
 
-<doc-example title="Square borders" file="QInput/SquareBorders" />
+圆形（`rounded`）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
 
-### Dark background
+<doc-example title="方形边框" file="QInput/SquareBorders" />
 
-<doc-example title="Dark" file="QInput/Dark" dark />
+### 黑色背景
 
-## Basic features
+<doc-example title="黑色背景" file="QInput/Dark" dark />
 
-### Native attributes
+## 基础特性
 
-All the attributes set on `QInput` that are not in the list of `props` in the **API** will be passed to the native field (`input` or `textarea`). Some examples: autocomplete, placeholder.
+### 原生属性
 
-Please check these resources for more information about native attributes (for input check also the specific attributes for each type):
+所有给 `QInput` 设置的属性，如果未在 **API** 卡片中的 `props` 部分列出，那么它将会被传递给底层的原生标签（`input` 或 `textarea`）。例如： autocomplete，placeholder。
+
+有关更多原生属性的信息，请参考：
 
 * [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 * [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
-### Clearable
+### 可清除的
 
-As a helper, you can use `clearable` prop so user can reset model to `null` through an appended icon. The second QInput in the example below is the equivalent of using `clearable`.
-
-::: warning
-Won't work with `v-model` managed input modifiers such as `.trim` because in that case Vue doesn't handle `null` values.
-:::
-
-<doc-example title="Clearable" file="QInput/Clearable" />
-
-### Input types
-
-The following QInputs make use of the `type` prop in order to render native equivalent `<input type="...">` inside of them.
+作为辅助，您可以使用 `clearable` 属性，这样用户可以通过附加的图标将数据重置为 `null`。下面第二个示例等价于使用 `clearable`
 
 ::: warning
-Support and behavior is the subject entirely of the browser rendering the page and not Quasar's core code.
+如果 `v-model` 使用了修饰符，例如 `.trim`，那么 `clearable` 无法工作，因为 Vue 不会处理 `null` 值。
 :::
 
-<doc-example title="Input types" file="QInput/InputTypes" />
+<doc-example title="可清除的" file="QInput/Clearable" />
+
+### 输入类型
+下面示例中的 QInputs 都使用了 `type` 属性，以实现与原生等效的 `<input type="...">`。
+
+::: warning
+对某些输入类型的支持是浏览器提供的，而不在 Quasar 的核心代码中。
+:::
+
+<doc-example title="输入类型" file="QInput/InputTypes" />
 
 ::: tip
-Some input types (like `date` or `time`) always render some controls, so you if you're using a `label` then you might want to set it along with `stack-label`, otherwise the label will overlap native browser controls.
+某些输入类型（如 `date` 或 `time`）总是呈现某些控件，因此如果使用 `label`，则可能需要将其与 `stack-label` 一起设置，否则标签将与原生浏览器控件重叠。
 :::
 
-#### Input of number type
+#### 输入数字类型
 
-You'll be using `v-model.number` (notice the `number` modifier) along with `type="number"` prop:
+您可以使用 `v-model.number` （注意 `number` 修饰符）以及 `type="number"` 属性：
 
-<doc-example title="Input of number type" file="QInput/InputTypeNumber" />
+<doc-example title="输入数字类型" file="QInput/InputTypeNumber" />
 
-#### Input of file type
+#### 输入文件类型
 
-::: tip ALTERNATIVES
-**Instead of using a QInput with `type="file"`, you might want to use [QFile](/vue-components/file-picker) picker instead or even [QUploader](/vue-components/uploader)**. However, should you wish to use QInput, please read the warning below.
+::: tip 替代选择
+**推荐您使用 [QFile](/vue-components/file-picker)，甚至是 [QUploader](/vue-components/uploader) 来收集文件，而不是使用 `type="file"` 的 QInput**。但是，如果您仍希望使用QInput，请阅读以下警告
 :::
 
 ::: warning
-Do NOT use a `v-model` when QInput is of `type="file"`. Browser security policy does not allow a value to be set to such an input. As a result, you can only read it (attach an `@update:model-value` event), but not write it.
+当设置 QInput 的 `type="file"`时，请勿使用 `v-model`。浏览器安全策略不允许将值设置为此类输入。因此，您只能读取它（附加一个 `@update:model-value` 事件），而不能写入它。
 :::
 
-<doc-example title="Input of file type" file="QInput/InputTypeFile" />
+<doc-example title="输入文件类型" file="QInput/InputTypeFile" />
 
-### Textarea
+### 文本域
 
 <doc-example title="Textarea" file="QInput/Textarea" />
 
-When you need QInput to grow along with its content, then use the `autogrow` prop like in the example below:
+当您需要 QInput 与其内容一起增长时，请使用如下示例中的 `autogrow` 属性：
 
-<doc-example title="Autogrow" file="QInput/Autogrow" />
+<doc-example title="自动增长" file="QInput/Autogrow" />
 
-### Prefix and suffix
+### 前缀和后缀
 
-<doc-example title="Prefix and suffix" file="QInput/PrefixSuffix" />
+<doc-example title="前缀和后缀" file="QInput/PrefixSuffix" />
 
-### Custom Label
+### 自定义标签
 
-Using the `label` slot you can customize the aspect of the label or add special features as `QTooltip`.
+使用 `label` 槽可以自定义标签或使用 `QTooltip` 添加特殊功能。
 
 ::: tip
-Do not forget to set the `label-slot` property.
-
-If you want to interact with the content of the label (QTooltip) add the `all-pointer-events` class on the element in the slot.
+不要忘记设置  `label-slot` 属性。
+如果要与标签（QTooltip）的内容交互，请在插槽中的元素上添加`all-pointer-events` CSS 类。
 :::
 
-<doc-example title="Custom label" file="QInput/CustomLabel" />
+<doc-example title="自定义 label" file="QInput/CustomLabel" />
 
-### Shadow text
+### 阴影文本
 
-<doc-example title="Shadow text" file="QInput/ShadowText" />
+<doc-example title="阴影文本" file="QInput/ShadowText" />
 
-### Slots with QBtn type "submit"
+### 插槽中使用 "submit" 类型的 QBtn
 
 ::: warning
-When placing a QBtn with type "submit" in one of the "before", "after", "prepend", or "append" slots of a QField, QInput or QSelect, you should also add a `@click` listener on the QBtn in question. This listener should call the method that submits your form. All "click" events in such slots are not propagated to their parent elements.
+当将类型为 "submit" 的 QBtn 放置在 QField、QInput 或 QSelect 的 "before"、"after" 、"prepend"  或 "append"  插槽中时，您还应该在有问题的 QBtn 上添加 `@click` 事件。该事件应调用提交表单的方法。此类插槽中的所有点击事件均不会传播到其父元素。
 :::
 
-### Debouncing model
+### 防抖模式
 
-The role of debouncing is for times when you watch the model and do expensive operations on it. So you want to first let user type out before triggering the model update, rather than updating the model on each keystroke.
+当你监听被绑定的数据的变化并对其进行昂贵的操作时，防抖的作用就体现出来了。我们一般希望先让用户完成整个输入之后再触发数据更新，而不是在每次按键时都更新数据。
 
-<doc-example title="Debounce model" file="QInput/Debouncing" />
+<doc-example title="防抖模式" file="QInput/Debouncing" />
 
-### Loading state
+### 加载状态
 
-<doc-example title="Loading state" file="QInput/LoadingState" />
+<doc-example title="加载状态" file="QInput/LoadingState" />
 
-## Mask
+## 掩码
 
-You can force/help the user to input a specific format with help from `mask` prop.
+您可以通过 `mask` 属性强制/辅助用户输入一个特定格式的文本
 
 ::: warning
-Mask is only available if the `type` is one of 'text' (default), 'search', 'url', 'tel', or 'password'.
+掩码只在  `type` 为 'text'（默认）、 'search'、 'url'、 'tel'、 或 'password' 其中之一时才能使用。'password'.
 :::
 
-Below are mask tokens:
+下面是掩码符号：
 
-| Token | Description |
+| 符号 | 说明 |
 | --- | --- |
-| `#` | Numeric |
-| `S` | Letter, a to z, case insensitive |
-| `N` | Alphanumeric, case insensitive for letters |
-| `A` | Letter, transformed to uppercase |
-| `a` | Letter, transformed to lowercase |
-| `X` | Alphanumeric, transformed to uppercase for letters |
-| `x` | Alphanumeric, transformed to lowercase for letters |
+| `#` | 数字 |
+| `S` | 字母，a 到 z，不区分大小写 |
+| `N` | 字母数字，字母不区分大小写 |
+| `A` | 字母，转换为大写 |
+| `a` | 字母，转换为小写 |
+| `X` | 字母数字，字母转换为大写 |
+| `x` | 字母数字，字母转换为小写 |
 
-There are **helpers** for QInput `mask` prop: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6). You can use these for convenience (examples: "phone", "card") or write the string specifying your custom needs.
+这里有一组可用在  QInput `mask` 属性中的[工具](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6)。 为了方便起见，可以直接使用它们（例如：“phone”、“card”）或写出您的自定义需求的字符串。
 
-<doc-example title="Basic" file="QInput/MaskBasic" />
+<doc-example title="基础" file="QInput/MaskBasic" />
 
-<doc-example title="Filling the mask" file="QInput/MaskFill" />
+<doc-example title="填充掩码" file="QInput/MaskFill" />
 
-The `unmasked-value` is useful if for example you want to force the user type a certain format, but you want the model to contain the raw value:
+如果要强制用户输入特定格式，但希望数据中又只包含原始值（不包含掩码符号和分隔符），则  `unmasked-value` 很有用：
 
 <doc-example title="Unmasked model" file="QInput/MaskUnmaskedModel" />
 
-The `reverse-fill-mask` is useful if you want to force the user to fill the mask from the end and allow non-fixed length of input:
+如果要强制用户从末端填充掩码并允许非固定长度的输入，则 `reverse-fill-mask` 很有用：
 
-<doc-example title="Filling the mask in reverse" file="QInput/MaskFillReverse" />
+<doc-example title="反向填充掩码" file="QInput/MaskFillReverse" />
 
-### Using third party mask processors
+### 使用第三方掩码处理器
 
-You can easily use any third party mask processor by doing a few small adjustments to your QInput.
+通过对 QInput 进行一些小调整，您可以轻松使用任何第三方掩码处理器。
 
-Starting from a QInput like this:
+从这样的 QInput 开始：
 
 ```html
 <q-input
@@ -208,8 +207,7 @@ Starting from a QInput like this:
   input-class="text-right"
 />
 ```
-
-You can use v-money directive:
+您可以使用 v-money 指令：
 
 ```html
 <q-field
@@ -231,11 +229,11 @@ moneyFormatForDirective: {
   prefix: '$ ',
   suffix: ' #',
   precision: 2,
-  masked: false /* doesn't work with directive */
+  masked: false /* 不能与指令一起工作 */
 }
 ```
 
-Or you can use money component:
+或者您可以使用 money 组件：
 
 ```html
 <q-field
@@ -261,65 +259,66 @@ moneyFormatForComponent: {
 }
 ```
 
-## Validation
+## 验证
 
-### Internal validation
+### 内部验证
 
-You can validate QInput components with `:rules` prop. Specify array of embedded rules or your own validators. Your custom validator will be a function which returns `true` if validator succeeds or `String` with error message if it doesn't succeed.
+你可以使用 `:rules` 属性来对 QInput 进行验证。声明一个规则数组或自定义的验证器。自定义的验证器应该是一个函数，当验证成功时返回 `true`，验证失败时返回 `String` 类型的错误信息。
 
 ::: tip
-By default, for perf reasons, a change in the rules does not trigger a new validation until the model changes. In order to trigger the validation when rules change too, then use `reactive-rules` Boolean prop. The downside is a performance penalty (so use it when you really need this only!) and it can be slightly mitigated by using a computed prop as value for the rules (and not specify them inline in the vue template).
+默认情况下，规则的改变不会触发一次新的验证，直到绑定的数据发生变化。为了在规则改变时触发一次验证，您可以使用 `reactive-rules` 布尔属性，缺点是会降低性能（所以当您真的需要时在使用它），通过使用计算属性作为规则的值（而不是在 vue 模板中内联指定它们），可以稍微减轻这种情况。
 :::
 
-This is so you can write convenient rules of shape like:
+一个规则的格式如下：
 
 ```js
 value => condition || errorMessage
  ```
-For example:
+示例：
  ```js
 value => value.includes('Hello') || 'Field must contain word Hello'
 ```
 
-You can reset the validation by calling `resetValidation()` method on the QInput.
+您可以通过调用 QInput 的 `resetValidation()` 方法来重置验证。
 
-There are **helpers** for QInput `rules` prop: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js). You can use these for convenience (examples: "date", "time", "hexColor", "rgbOrRgbaColor", "anyColor") or write the string specifying your custom needs.
+这里有一组可用在  QInput `rules` 属性中的[工具](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js)。 为了方便起见，可以直接使用它们（例如： "date", "time", "hexColor", "rgbOrRgbaColor", "anyColor"）或写出您的自定义需求的字符串。
 
-<doc-example title="Basic" file="QInput/ValidationRequired" />
 
-<doc-example title="Maximum length" file="QInput/ValidationMaxLength" />
+<doc-example title="基础" file="QInput/ValidationRequired" />
 
-If you set `lazy-rules`, validation starts after first blur. If `lazy-rules` is set to `ondemand` String, then validation will be triggered only when component's validate() method is manually called or when the wrapper QForm submits itself.
+<doc-example title="最大长度" file="QInput/ValidationMaxLength" />
+
+如果您设置了 `lazy-rules`，验证会在第一次失去焦点后才会开始。如果将 `lazy-rules` 设置为 `ondemand` 字符串，那么验证只有在手动调用了 QInput 组件的 validate() 方法之后才会触发，或者是包裹它的 QForm 触发了提交事件。
 
 <doc-example title="Lazy rules" file="QInput/ValidationLazy" />
 
-<doc-example title="Form validation" file="QInput/ValidationForm" />
+<doc-example title="表单验证" file="QInput/ValidationForm" />
 
-#### Async rules
-Rules can be async too, by using async/await or by directly returning a Promise.
-
-::: tip
-Consider coupling async rules with `debounce` prop to avoid calling the async rules immediately on each keystroke, which might be detrimental to performance.
-:::
-
-<doc-example title="Async rules" file="QInput/ValidationAsync" />
-
-### External validation
-
-You can also use external validation and only pass `error` and `error-message` (enable `bottom-slots` to display this error message).
+#### 异步规则
+通过使用 async/await 或直接返回一个 Promise，规则也可以是异步的。
 
 ::: tip
-Depending on your needs, you might connect [Vuelidate](https://vuelidate.netlify.com/) (our recommended approach) or some other validation library to QInput.
+考虑将异步规则与 `debounce` 属性相结合，以避免在每次按键时立即调用异步规则，这可能会影响性能。
 :::
 
-<doc-example title="External" file="QInput/ValidationExternal" />
+<doc-example title="异步规则" file="QInput/ValidationAsync" />
 
-You can also customize the slot for error message:
+### 外部验证
 
-<doc-example title="Slot for error message" file="QInput/ValidationSlots" />
+您还可以使用外部验证，并且只传递 `error`  和 `error-message`（启用 `bottom-slots` 插槽以显示此错误消息）。
 
-## Native form submit
+::: tip
+根据您的需求，您可能需要 [Vuelidate](https://vuelidate.netlify.com/)（我们推荐的方法）或者别的验证库连接到 QInput。
+:::
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QInput, otherwise formData will not contain it (if it should):
+<doc-example title="外部" file="QInput/ValidationExternal" />
 
-<doc-example title="Native form" file="QInput/NativeForm" />
+您还可以为错误消息自定义插槽：
+
+<doc-example title="错误消息插槽" file="QInput/ValidationSlots" />
+
+## 原生表单提交
+
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QInput 声明 `name` 属性，否则表单数据中不会包含它：
+
+<doc-example title="原生表单" file="QInput/NativeForm" />
