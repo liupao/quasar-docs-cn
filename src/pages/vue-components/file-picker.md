@@ -1,16 +1,16 @@
 ---
-title: File Picker
-desc: The QFile Vue component is used as a file picker.
+title: 文件选择器
+desc: QFile是一个处理用户交互以选取文件的Vue组件。
 keys: QFile
 related:
   - /vue-components/uploader
   - /vue-components/input
 ---
 
-QFile is a component which handles the user interaction for picking file(s).
+QFile 是一个处理用户交互以选取文件的组件。
 
 ::: tip
-If you also want a component to handle the upload for you, please consider using [QUploader](/vue-components/uploader) instead.
+如果您还希望组件也为您处理上传，请考虑改用 [QUploader](/vue-components/uploader)。
 :::
 
 ## QFile API
@@ -20,85 +20,84 @@ If you also want a component to handle the upload for you, please consider using
 ## Design
 
 ::: warning
-For your QFile you can use only one of the main designs (`filled`, `outlined`, `standout`, `borderless`). You cannot use multiple as they are self-exclusive.
+您只能给 QFile 使用一种主要的外观设计款式（`filled`, `outlined`, `standout`, `borderless`），不能使用多个，因为它们是互相排斥的。
 :::
 
-<doc-example title="Design Overview" file="QFile/DesignOverview" />
+<doc-example title="外观设计预览" file="QFile/DesignOverview" />
 
-### Decorators
+### 装饰
 
 <doc-example title="Decorators" file="QFile/Decorators" />
 
-### Coloring
+### 着色
 
 <doc-example title="Coloring" file="QFile/Coloring" />
 
-### Clearable
-As a helper, you can use `clearable` prop so user can reset model to `null` through an appended icon. The second QFile in the example below is the equivalent of using `clearable`.
+### 可清除的
+作为辅助，您可以使用 `clearable` 属性，这样用户可以通过附加的图标将数据重置为 `null`。下面第二个示例等价于使用 `clearable`
 
 <doc-example title="Clearable" file="QFile/Clearable" />
 
-### Disable and readonly
+### 禁用和只读
 
 <doc-example title="Disable and readonly" file="QFile/DisableReadonly" />
 
 ## 用法
 
 ::: warning
-Under the hood, QFile uses a native input. Due to browser security policy, it is not allowed to programmatically fill such an input with a value. As a result, even if you set v-model from the beginning to a value, the component will show those file(s) but the input tag itself won't be filled in with that value. A user interaction (click/tap/<kbd>ENTER</kbd> key/<kbd>SPACE</kbd> key) is absolutely required in order for the native input to contain them. It's best to always have the initial value of model set to `null` or `undefined/void 0`.
+在底层，QFile 使用原生 input 标签。由于浏览器安全策略，不允许以编程方式使用值填充此类输入。因此，即使您将 v-model 从开始设置为一个值，组件虽然也会显示这些文件，但 input 标签本身不会用该值填充。一定要用户主动交互（单击/点击/ 按下 <kbd>ENTER</kbd>/按下<kbd>SPACE</kbd>），原生 input 标签才能够包含被选中的文件。最好将 model 的初始值设置为 `null` 或 `undefined/void 0`。
 :::
 
 ### 基础
 
-<doc-example title="Single file" file="QFile/BasicSingle" />
+<doc-example title="单个文件" file="QFile/BasicSingle" />
 
-<doc-example title="Multiple files" file="QFile/BasicMultiple" />
+<doc-example title="多个文件" file="QFile/BasicMultiple" />
 
-### Appending files
+### 追加文件
 
-By default, QFile replaces the model each time the user selects any files through the popup. However, when you are accepting multiple files (`multiple` prop) you can change this behavior and append the new selection to the model rather than replacing its old value.
+默认情况下，每次用户通过弹出窗口选择任何文件时， QFile 都会替换 model。但是，当您接受多个文件（`multiple` 属性）时，您可以更改此行为并将新选择的文件追加到模型中，而不是替换其旧值。
 
-Below you can pick files multiple times and QFile will keep on appending them to the model:
+在下面，您可以多次选取文件，QFile 将继续将它们追加到 model 数据中：
 
-<doc-example title="Appending files" file="QFile/AppendingFiles" />
+<doc-example title="追加文件" file="QFile/AppendingFiles" />
 
-### Counters
+### 计数器
 
-<doc-example title="Basic counter" file="QFile/CounterBasic" />
+<doc-example title="基础计数" file="QFile/CounterBasic" />
 
-<doc-example title="Counter label" file="QFile/CounterLabel" />
+<doc-example title="计数标签" file="QFile/CounterLabel" />
 
-### Using chips
+### 使用 chips
 
 <doc-example title="With chips" file="QFile/WithChips" />
 
-### Using file slot
+### 使用文件插槽
+下面的示例重点介绍如何自定义每个文件的显示，甚至包括上传进度指示器：
 
-The example below highlights how you can customize the display of each file and even incorporate a possible upload progress indicator:
+<doc-example title="上传进度" file="QFile/WithProgress" />
 
-<doc-example title="With progress indicator" file="QFile/WithProgress" />
+### 限制文件格式
 
-### Restricting files
+<doc-example title="基础限制" file="QFile/RestrictionBasic" />
 
-<doc-example title="Basic restrictions" file="QFile/RestrictionBasic" />
-
-You can even combine the restrictions above.
+你甚至可以把上面的限制结合起来。
 
 ::: tip
-In the example above, we're using `accept` property. Its value must be a comma separated list of unique file type specifiers. Maps to 'accept' attribute of native input type=file element. [More info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers).
+在上面的示例中，我们使用的是 `accept` 属性。其值必须是以逗号分隔的唯一文件类型说明符列表。映射到原生input type=file 标签的 'accept' 属性。[更多信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers)。
 :::
 
 ::: warning
-Recommended format for the `accept` property is `<mediatype>/<extension>`. Examples: "image/png", "image/png". QFile uses an `<input type="file">` under the hood and it relies entirely on the host browser to trigger the file picker. If the `accept` property (that gets applied to the input) is not correct, no file picker will appear on screen or it will appear but it will accept all file types.
+`accept` 属性的建议格式为 `<mediatype>/<extension>`。示例："image/png", "image/png"。 QFile 在底层使用了一个 `<input type="file">`，它完全依赖于浏览器来触发文件选择器。如果 `accept` 属性（应用于 input）不正确，则不会在屏幕上显示文件选取器，或者它将出现，但它将接受所有文件类型。
 :::
 
-You can also apply custom filters (which are executed after user picks files):
+您还可以自定义过滤器（在用户选取文件后执行）：
 
-<doc-example title="Filter" file="QFile/RestrictionFilter" />
+<doc-example title="过滤" file="QFile/RestrictionFilter" />
 
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QFile, otherwise formData will not contain it (if it should):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QFile 声明 `name` 属性，否则表单数据中不会包含它：
 
-<doc-example title="Native form" file="QFile/NativeForm" />
+<doc-example title="原生表单" file="QFile/NativeForm" />
