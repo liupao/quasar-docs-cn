@@ -1,6 +1,6 @@
 ---
-title: Form
-desc: The QForm Vue component renders a form and allows easy validation of child form components like QInput, QSelect or QField.
+title: 表单
+desc: QForm Vue组件渲染一个表单元素，并提供简单的表单验证方式
 keys: QForm
 related:
   - /vue-components/input
@@ -9,7 +9,7 @@ related:
   - /vue-composables/use-form-child
 ---
 
-The QForm component renders a `<form>` DOM element and allows you to easily validate child form components (like [QInput](/vue-components/input#Internal-validation), [QSelect](/vue-components/select) or your [QField](/vue-components/field) wrapped components) that have the **internal validation** (NOT the external one) through `rules` associated with them.
+QForm 组件渲染一个 `<form>` DOM 元素，并提供简单的表单验证方式，表单中的子元素（例如 [QInput](/vue-components/input#Internal-validation), [QSelect](/vue-components/select) 或者 [QField](/vue-components/field)）这些组件都可以通过它们的 `rules` 属性实现**内部验证**。
 
 ## QForm API
 
@@ -18,27 +18,25 @@ The QForm component renders a `<form>` DOM element and allows you to easily vali
 ## 用法
 
 ::: warning
-Please be aware of the following:
-* QForm hooks into QInput, QSelect or QField wrapped components
-* QInput, QSelect or QField wrapped components must use the internal validation (NOT the external one).
-* If you want to take advantage of the `reset` functionality, then be sure to also capture the `@reset` event on QForm and make its handler reset all of the wrapped components models.
+请注意以下几点：
+* QForm 可以配合 QInput, QSelect 或 QField 组件使用。
+* QInput, QSelect 或 QField 组件必须使用内部验证器（而不是外部验证器）。
+* 如果您要使用 `reset` 功能，请监听 QForm 的 `@reset` 事件并重置所有表单元素的数据。
 :::
 
-<doc-example title="Basic" file="QForm/Basic" />
+<doc-example title="基础" file="QForm/Basic" />
 
-In order for the user to be able to activate the `@submit` or `@reset` events on the form, create a QBtn with `type` set to `submit` or `reset`:
-
+为了使用户能够激活表单上的 `@submit` 或 `@reset`事件，请创建一个 QBtn，将 `type` 设置为 `submit` 或 `reset`：
 ```html
 <div>
-  <q-btn label="Submit" type="submit" color="primary"/>
-  <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+  <q-btn label="Submit" type="提交" color="primary"/>
+  <q-btn label="Reset" type="重置" color="primary" flat class="q-ml-sm" />
 </div>
 ```
-
-Alternatively, you can give the QForm a Vue ref name and call the `validate` and `resetValidation` functions directly:
+另外，您可以给 QForm 设置一个 Vue 引用（ref）名称，并直接调用其 `validate` 和 `resetValidation` 函数：
 
 ```js
-// Composition API variant
+// 组合式 API 格式
 
 // <q-form ref="myForm">
 
@@ -48,16 +46,16 @@ setup () {
   function validate () {
     myForm.value.validate().then(success => {
       if (success) {
-        // yay, models are correct
+        // model 数据验证通过
       }
       else {
-        // oh no, user has filled in
-        // at least one invalid value
+        // 数据验证失败
+        // 用户至少输入了一个无效值
       }
     })
   }
 
-  // to reset validations:
+  // 重置表单
   function reset () {
     myForm.value.resetValidation()
   }
@@ -70,26 +68,26 @@ setup () {
 ```
 
 ```js
-// Options API variant
+//  选项式 API 格式
 
 // <q-form ref="myForm">
 
 this.$refs.myForm.validate().then(success => {
   if (success) {
-    // yay, models are correct
+    // model 数据验证通过
   }
   else {
-    // oh no, user has filled in
-    // at least one invalid value
+    // 数据验证失败
+    // 用户至少输入了一个无效值
   }
 })
 
-// to reset validations:
+    // 重置表单：
 this.$refs.myForm.resetValidation()
 ```
 
-## Turning off Autocompletion
-If you want to turn off the way that some browsers use autocorrection or spellchecking of all of the input elements of your form, you can also add these pure HTML attributes to the QForm component:
+## 关闭自动补全
+在某些情况下，你可能想关闭许多现代浏览器提供的自动纠错、自动补全、自动大写和拼写纠错“功能”。您可以给 QForm 组件设置以下元素 HTML 属性：
 
 ```html
 autocorrect="off"
@@ -98,8 +96,8 @@ autocomplete="off"
 spellcheck="false"
 ```
 
-## Submitting to a URL (native form submit)
-If you are using the native `action` and `method` attributes on a QForm, please remember to use the `name` prop on each Quasar form component, so that the sent formData to actually contain what the user has filled in.
+## 提交到 URL（原生表单提交）
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为每一个  Quasar 表单组件声明 `name` 属性，否则表单数据中不会包含它：
 
 ```html
 <q-form action="https://some-url.com" method="post">
@@ -128,45 +126,44 @@ methods: {
 }
 ```
 
-## Child communication
+## 子元素通信
 
-By default, all the Quasar form components communicate with the parent QForm instance. If, for some reason, you are creating your own form component (**that doesn't wrap a Quasar form component**), then you can make QForm aware of it by using:
+默认情况下，所有的 Quasar 表单组件都与父级的 QForm 实例通信。如果由于某种原因，你正在创建你自己的表单组件（**不是一个 Quasar 表单组件的封装**），那么你可以通过使用以下方法使 QForm 联系到它:
 
 ```js
-// Composition API variant
-
+// 组合式 API
 import { useFormChild } from 'quasar'
 
 setup () {
   // function validate () { ... }
 
   useFormChild({
-    validate, // Function; Can be async;
-              // Should return a Boolean (or a Promise resolving to a Boolean)
-    resetValidation,    // Optional function which resets validation
-    requiresQForm: true // should it error out if no parent QForm is found?
+    validate, // 函数；可以是异步的；
+              // 应该返回一个布尔值（或一个 resolve 布尔值的 Promise）
+    resetValidation,    // 可选的函数，可重置验证
+    requiresQForm: true // 如果没有找到父级 QForm，它是否应该报错？
   })
 }
 ```
 
 ```js
-// Options API variant
+// 选项式 API
 
 import { QFormChildMixin } from 'quasar'
 
-// some component
+// 某些组件
 export default {
   mixins: [ QFormChildMixin ],
 
   methods: {
-    // required! should return a Boolean
-    // or a Promise resolving to a Boolean
+    // 必需！应该返回一个布尔值
+    // 或一个 resolve 布尔值的 Promise
     validate () {
       console.log('called my-comp.validate()')
       return true
     },
 
-    // optional function
+    // 可选函数
     resetValidation () {
       // ...
     }
