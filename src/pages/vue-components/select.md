@@ -1,269 +1,276 @@
 ---
-title: Select
+title: 选择框
 desc: The QSelect Vue component has two types of selection - single or multiple. This component opens up a menu for the selection list and action. A filter can also be used for longer lists.
 keys: QSelect
 ---
 
-The QSelect component has two types of selection: single or multiple. This component opens up a menu for the selection list and action. A filter can also be used for longer lists.
+QSelect 组件有两种类型的选择框：单选和多选。这个组件可以打开一组可操作的菜单列表。对于较长的列表还可以选择过滤功能。
 
-In case you are looking for a dropdown "button" instead of "input" use [Button Dropdown](/vue-components/button-dropdown) instead.
+如果您在找一个下拉按钮而不是输入框，那么使用请使用[下拉按钮](/vue-components/button-dropdown)。
+
 
 ## QSelect API
 
 <doc-api file="QSelect" />
 
-## Design
+## 外观设计
 
 ### Overview
 
 ::: warning
-For your QSelect you can use only one of the main designs (`filled`, `outlined`, `standout`, `borderless`). You cannot use multiple as they are self-exclusive.
+您只能给 QSelect 使用一种主要的外观设计款式（`filled`, `outlined`, `standout`, `borderless`），不能使用多个，因为它们是互相排斥的。
 :::
 
-<doc-example title="Design Overview" file="QSelect/DesignOverview" />
+<doc-example title="外观设计预览" file="QSelect/DesignOverview" />
 
-### Decorators
+### 装饰
 
 <doc-example title="Decorators" file="QSelect/Decorators" />
 
-### Coloring
+### 着色
 
 <doc-example title="Coloring" file="QSelect/Coloring" />
 
-### Clearable
-As a helper, you can use `clearable` prop so user can reset model to `null` through an appended icon. The second QSelect in the example below is the equivalent of using `clearable`.
+### 可清除的
+
+作为辅助，您可以使用 `clearable` 属性，这样用户可以通过附加的图标将数据重置为 `null`。下面第二个示例等价于使用 `clearable`
 
 <doc-example title="Clearable" file="QSelect/Clearable" />
 
-### Disable and readonly
+### 禁用和只读
 
 <doc-example title="Disable and readonly" file="QSelect/DisableReadonly" />
 
-### Slots with QBtn type "submit"
+### 插槽中使用 "submit" 类型的 QBtn
 
 ::: warning
-When placing a QBtn with type "submit" in one of the "before", "after", "prepend", or "append" slots of a QField, QInput or QSelect, you should also add a `@click` listener on the QBtn in question. This listener should call the method that submits your form. All "click" events in such slots are not propagated to their parent elements.
+当将类型为 "submit" 的 QBtn 放置在 QField、QInput 或 QSelect 的 "before"、"after" 、"prepend"  或 "append"  插槽中时，您还应该在有问题的 QBtn 上添加 `@click` 事件。该事件应调用提交表单的方法。此类插槽中的所有点击事件均不会传播到其父元素。
 :::
 
-### Menu transitions
+### 菜单过渡动画
 
 ::: warning
-Please note that transitions do not work when using `options-cover` prop.
+请注意，当使用选项 `options-cover` 属性时，过渡效果不生效。
 :::
 
-In the example below there's a few transitions showcased. For a full list of transitions available, go to [Transitions](/options/transitions).
+在下面的示例中，显示部分过渡效果。有关可用过渡效果的完整列表，请转到 [过渡效果](/options/transitions)页面。
 
 <doc-example title="Menu transitions" file="QSelect/MenuTransitions" />
 
-### Options list display mode
-By default QSelect shows the list of options as a menu on desktop and as a dialog on mobiles. You can force one behavior by using the `behavior` property.
+### 选项列表的展示模式
+默认情况下，QSelect 在桌面上使用菜单的方式展示选项列表，在手机上使用对话框展示选项列表。但是您可以使用 `behavior` 来强制控制使用某种模式。
 
 ::: warning
-Please note that on iOS menu behavior might generate problems, especially when used in combination with `use-input` prop. You can use a conditional `behavior` prop like `:behavior="$q.platform.is.ios === true ? 'dialog' : 'menu'"` to use dialog mode only on iOS.
+请注意，在 iOS 上，菜单模式可能会产生问题，尤其是与 `use-input` 属性结合使用时。您可以控制在 IOS 设备上只是用对话框模式，例如：`:behavior="$q.platform.is.ios === true ? 'dialog' : 'menu'"`。
 :::
 
-<doc-example title="Show options in menu" file="QSelect/BehaviorMenu" />
+<doc-example title="菜单模式" file="QSelect/BehaviorMenu" />
 
-<doc-example title="Show options in dialog" file="QSelect/BehaviorDialog" />
+<doc-example title="对话框模式" file="QSelect/BehaviorDialog" />
 
 ## The model
 
 ::: danger
-The model for single selection can be anything (String, Object, ...) while the model for multiple selection must be an Array.
+model 在单选模式下可以是任意类型（String, Object, ...），但是在多选模式下只能是一个数组。
 :::
 
-<doc-example title="Single vs multiple selection" file="QSelect/ModelSingleMultiple" />
+<doc-example title="单选和多选" file="QSelect/ModelSingleMultiple" />
 
-<doc-example title="Multiple selection, counter and max-values" file="QSelect/ModelMultipleCounter" />
+<doc-example title="多选，计数器和控制最大数量" file="QSelect/ModelMultipleCounter" />
 
-The model content can be influenced by `emit-value` prop as you'll learn in "The options" section below.
+model 的内容可能会受到 `emit-value` 属性的影响，您将在下面的 “选项” 部分中学习。
 
-## The options
+## 选项
 
-### Options type
+### 选项类型
 
-<doc-example title="String options" file="QSelect/OptionString" />
+<doc-example title="字符串选项" file="QSelect/OptionString" />
 
-<doc-example title="Object options" file="QSelect/OptionObject" />
+<doc-example title="对象选项" file="QSelect/OptionObject" />
 
 ### Affecting model
 
-When `emit-value` is used, the model becomes the determined `value` from the specified selected option. Default is to emit the whole option. It makes sense to use it only when the options are of Object form.
+当使用 `emit-value` 时，model 会明确的绑定到选项中的 `value` 属性上，而不是整个对象。只有当选项是对象类型时才有意义。
 
 <doc-example title="Emit-value" file="QSelect/OptionEmitValue" />
 
-When `map-options` is used, the model can contain only the `value`, and it will be mapped against the options to determine its label. There is a performance penalty involved, so use it only if absolutely necessary. It's not needed, for example, if the model contains the whole Object (so contains the label prop).
+当使用 `map-options` 时，model 可以只包含 `value`，并且他会根据选项进行映射以确定其 label。这涉及到性能损失，所以只有在绝对必要的情况下才使用它。例如，如果 model 包含整个 Object (因此包含 label 属性) ，就不需要它。
 
 <doc-example title="Map options" file="QSelect/OptionMapOptions" />
 
-### Custom prop names
+### 自定义属性名
 
-By default, QSelect looks at `label`, `value`, `disable` and `sanitize` props of each option from the options array Objects. But you can override those:
-
-::: warning
-If you use functions for custom props always check if the option is null. These functions are used both for options in the list and for the selected options.
-:::
-
-<doc-example title="Custom label, value and disable props" file="QSelect/OptionCustomProps" />
-
-### Customizing menu options
+默认情况下，QSelect 会寻找并使用每个选项中的 `label`, `value`, `disable` 和 `sanitize` 属性，但是您也可以重写它们：
 
 ::: warning
-The list of options is rendered using virtual scroll, so if you render more than one element for an option you must set a `q-virtual-scroll--with-prev` class on all elements except the first one.
+如果您将函数用于自定义 props，请始终检查该选项是否为 null。这些函数既用于列表中的选项，也用于选定的选项。
 :::
 
-<doc-example title="Options slot" file="QSelect/OptionSlot" />
+<doc-example title="自定义 label, value and disable props" file="QSelect/OptionCustomProps" />
 
-Here is another example where we add a QToggle to each option. The possibilities are endless.
+### 自定义菜单选项
 
-<doc-example title="Object options" file="QSelect/OptionQToggle" />
+::: warning
+使用虚拟滚动渲染选项列表，因此，如果您为一个选项渲染多个元素，则必须在所有元素上设置 `q-virtual-scroll--with-prev` CSS 类，除了第一个元素。
+:::
 
-By default, when there are no options, the menu won't appear. But you can customize this scenario and specify what the menu should display.
+<doc-example title="选项插槽" file="QSelect/OptionSlot" />
 
-<doc-example title="No options slot" file="QSelect/OptionNoneSlot" />
+这里是另一个例子，我们为每个选项添加一个 QToggle 。可能性是无穷的。
 
-### Lazy loading
+<doc-example title="对象选项" file="QSelect/OptionQToggle" />
 
-The following example shows a glimpse of how you can play with lazy loading the options. This means, along with many other things, that `options` prop is not required on first render.
+默认情况下，如果没有选项，则不会出现菜单。但是您可以自定义此情况并指定菜单应显示的内容。
+
+<doc-example title="无数据插槽" file="QSelect/OptionNoneSlot" />
+
+### 懒加载
+
+下面的示例展示了如何使用懒加载选项。这意味着，第一次渲染时不需要 `options` 属性。
 
 <doc-example title="Lazy load options" file="QSelect/OptionLazyLoad" />
 
-You can dynamically load new options when scroll reaches the end:
+当滚动到达终点时，您可以动态加载新选项:
 
-<doc-example title="Dynamic loading options" file="QSelect/OptionsDynamic" />
+<doc-example title="动态加载" file="QSelect/OptionsDynamic" />
 
-### Cover mode
+### 覆盖模式
 
-<doc-example title="Menu covering component" file="QSelect/OptionCover" />
+<doc-example title="菜单覆盖在组件之上" file="QSelect/OptionCover" />
 
-## The display value
+## 展示的值
 
-<doc-example title="Custom display value" file="QSelect/DisplayCustomValue" />
+<doc-example title="自定义展示的值" file="QSelect/DisplayCustomValue" />
 
-<doc-example title="Chips as display value" file="QSelect/DisplayChips" />
+<doc-example title="使用 Chips 展示值" file="QSelect/DisplayChips" />
 
-<doc-example title="Selected-item slot" file="QSelect/DisplaySelectedItemSlot" />
+<doc-example title="选中项插槽" file="QSelect/DisplaySelectedItemSlot" />
 
-## Filtering and autocomplete
+## 过滤和自动补全
 
-### Native attributes with `use-input`
+### `use-input` 和原生属性
 
-All the attributes set on QSelect that are not in the list of props in the API will be passed to the native input field used (please check `use-input` prop description first to understand what it does) for filtering / autocomplete / adding new value. Some examples: autocomplete, placeholder.
+所有给 QSelect 设置的属性，如果未在 **API** 卡片中的 `props` 部分列出，那么它将会被传递给底层的原生`input` 标签（请先检查 `use-input` 属性描述以了解它的作用）以完成过滤/指定补全/添加新选项。例如： autocomplete，placeholder。
 
-More information: [native input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+更多信息： [native input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
 
-<doc-example title="Filtering options" file="QSelect/InputFilterOptions" />
+<doc-example title="过滤选项" file="QSelect/InputFilterOptions" />
 
-<doc-example title="Basic filtering" file="QSelect/BasicFiltering" />
+<doc-example title="基础的过滤" file="QSelect/BasicFiltering" />
 
-<doc-example title="Filtering on more than 2 chars" file="QSelect/InputFilterMin" />
+<doc-example title="超过两个字符才开始过滤" file="QSelect/InputFilterMin" />
 
-<doc-example title="Text autocomplete" file="QSelect/TextAutocomplete" />
+<doc-example title="文本自动补全" file="QSelect/TextAutocomplete" />
 
-<doc-example title="Lazy filtering" file="QSelect/InputFilterLazy" />
+<doc-example title="懒过滤" file="QSelect/InputFilterLazy" />
 
-<doc-example title="Selecting option after filtering" file="QSelect/InputFilterAfter" />
+<doc-example title="过滤后的选择" file="QSelect/InputFilterAfter" />
 
-## Create new values
+## 创建新的值
 
 ::: tip
-The following are just a few examples to get you started into making your own QSelect behavior. This is not exhaustive list of possibilities that QSelect offers.
-
-It makes sense to use this feature along with `use-input` prop.
+以下只是一些示例，帮助您开始创建自己的 QSelect。这不是 QSelect 可以提供的全部可能性。
+将此功能与 `use-input` 属性一起使用是很有意义的。
 :::
 
-In order to enable the creation of new values, you need to **either specify** the `new-value-mode` prop **and/or** listen for `@new-value` event. If you use both, then the purpose of listening to `@new-value` would be only to override the `new-value-mode` in your custom scenarios.
+为了创建新的值，您可以使用`new-value-mode` 属性，或者监听 `@new-value` 事件，如果您同时使用两者，那么在您的自定义场景中，`@new-value` 事件应该只用于覆盖 `new-value-mode`。
 
-### The new-value-mode prop
-The `new-value-mode` prop value specifies how the value should be added: `add` (adds a value, even if duplicate), `add-unique` (add only if NOT duplicate) or `toggle` (adds value if it's not already in model, otherwise it removes it).
+### new-value-mode 属性
 
-By using this prop you don't need to also listen for `@new-value` event, unless you have some specific scenarios for which you want to override the behavior.
+`new-value-mode` 属性指定创建的新值应该怎么样被添加到数据中，可以有以下三种取值：
 
-<doc-example title="New value mode" file="QSelect/CreateNewValueMode" />
+1. `add` 即使数据中已经存在了相同的值仍然添加；
+2. `add-unique` 不会添加重复数据；
+3. `toggle` 如果数据中之前没有此数据那么添加它，否则将其删除。
 
-### The @new-value event
-The `@new-value` event is emitted with the value to be added and a `done` callback. The `done` callback has two **optional** parameters:
-  - the value to be added
-  - the behavior (same values of `new-value-mode` prop, and when it is specified it overrides that prop -- if it is used) -- default behavior (if not using `new-value-mode`) is to add the value even if it would be a duplicate
+使用这个属性时不必监听 `@new-value`  事件，除非您有特殊的场景需要重写它的行为。
 
-Calling `done()` with no parameters simply empties the input box value, without tampering with the model in any way.
+<doc-example title="添加新的数据" file="QSelect/CreateNewValueMode" />
 
-<doc-example title="Listening on @new-value" file="QSelect/CreateListener" />
+### @new-value 事件
+`@new-value` 事件中带有被添加的新数据和一个 `done` 回调函数。`done` 函数有两个可选的参数：
+ - 被添加的数据
+ - 添加数据的行为（与 `new-value-mode` 可设置的值一样，并且会覆盖它）
+    - 默认行为（如果未设置 `new-value-mode` 的话）是即使数据中已经有重复的数据也会添加
 
-<doc-example title="Adding only unique values" file="QSelect/CreateListenerUnique" />
+不带参数调用 `done()` 只会清空输入框的值，而不会以任何方式修改 model。
 
-### Using menu and filtering
-Filtering and adding the new values to menu:
+<doc-example title="监听 @new-value" file="QSelect/CreateListener" />
 
-<doc-example title="Filtering and adding to menu" file="QSelect/FilteringAddsToMenu" />
+<doc-example title="不添加重复的值" file="QSelect/CreateListenerUnique" />
 
-Filters new values (in the example below the value to be added requires at least 3 characters to pass), and does not add to menu:
+### 使用菜单和过滤
 
-<doc-example title="Filtering without adding to menu" file="QSelect/FilteringNoAddToMenu" />
+过滤和给菜单中添加新的值一起使用：
 
-Generating multiple values from input:
+<doc-example title="过滤和菜单中添加新的值" file="QSelect/FilteringAddsToMenu" />
 
-<doc-example title="Generating multiple values" file="QSelect/FilteringAddMultiple" />
+过滤但不给菜单添加新的值（下面三个示例中，要添加的值至少需要 3 个字符才能通过）：
 
-## Sanitization
+<doc-example title="过滤但不给菜单添加新的值" file="QSelect/FilteringNoAddToMenu" />
 
-**By default, all options (included selected ones) are sanitized**. This means that displaying them in HTML format is disabled. However, if you require HTML on your options and you trust their content, then there are a few ways to do this.
+从输入生成多个值：
 
-You can force the HTML form of the menu options by:
-  - setting `html` key of the trusted option to `true` (for specific trusted options)
-  - or by setting `options-html` prop of QSelect (for all options)
+<doc-example title="使用分号隔开生成多个值" file="QSelect/FilteringAddMultiple" />
 
-The displayed value of QSelect is displayed as HTML if:
-  - the `display-value-html` prop of QSelect is set
-  - or you are not using `display-value` and
-    - the `options-html` prop of QSelect is set
-    - any selected option has `html` key set to `true`
+## 安全处理
+
+**默认情况下，所有选项（包括选定的选项）都是经过安全处理的**。这意味着以 HTML 格式显示它们是无效的。然而，如果你需要在你的选项上显示 HTML，并且你信任它们的内容，那么有几种方法可以做到这一点。
+
+您可以通过以下方式强制使用菜单选项的 HTML 形式：
+  - 将受信任的选项的 `html` 键设置为 `true`（用于特定的受信任的选项生效）
+  - 或通过设置 QSelect 的 `options-html` 属性（对于所有选项生效）
+
+QSelect 的显示值会以 HTML 形式显示，如果：
+  - 设置了 QSelect 的 `display-value-html`属性
+  - 或者您不使用 `display-value` 和
+    - 设置了 QSelect 的 `options-html` 属性
+    - 所有被选定的选项的 `html` 键都被设置为 `true`
 
 ::: warning
-If you use `selected` or `selected-item` slots, then you are responsible for sanitization of the display value. The `display-value-html` prop will not apply.
+如果您使用了 `selected` 或 `selected-item` 插槽，那么您需要自行对展示的值进行安全处理。`display-value-html` 属性不会被应用。
 :::
 
-<doc-example title="Options in HTML form" file="QSelect/HtmlOptions" />
+<doc-example title="HTML 格式的选项" file="QSelect/HtmlOptions" />
 
-<doc-example title="Display value in HTML form" file="QSelect/HtmlDisplayValue" />
+<doc-example title="HTML 格式的显示值" file="QSelect/HtmlDisplayValue" />
 
-## Render performance
+## 渲染性能
 
-The render performance is NOT affected much by the number of options, unless `map-options` is used on a large set.
-Notice the infinite scroll in place which renders additional options as the user scrolls through the list.
+渲染性能不会受到选项数量的影响，除非在大的集合中使用 `map-options`。请注意，当用户在列表中滚动时，虚拟无限滚动将渲染其他选项。
 
 ::: tip
-* (Composition API) To get the best performance while using lots of options, do not wrap the array that you are passing in the `options` prop with ref()/computed()/reactive()/etc. This allows Vue to skip making the list "responsive" to changes.
-* (Options API) To get the best performance while using lots of options, freeze the array that you are passing in the `options` prop using `Object.freeze(items)`. This allows Vue to skip making the list "responsive" to changes.
+* (Composition API) 为了在使用大量选项时获得最佳性能，不要用 `ref()/computed()/reactive()/etc`来包裹您传递给 `options` 属性中的数组。这允许 Vue 跳过对列表进行响应式改变。
+* (Options API) 为了在使用大量选项的同时获得最佳性能，请使用 `Object.freeze(items)` 冻结您传递给 `options` 属性中的数组。这允许 Vue 跳过对列表进行响应式改变。
 :::
 
-<doc-example title="100k options" file="QSelect/RenderPerf" />
+<doc-example title="100k 个选项" file="QSelect/RenderPerf" />
 
-## Keyboard navigation
+## 键盘导航
 
-When QSelect is focused:
-  - pressing <kbd>ENTER</kbd>, <kbd>ARROW DOWN</kbd> (or <kbd>SPACE</kbd> if `use-input` is not set) will open the list of options
-  - if `use-chips` is set:
-    - pressing <kbd>SHIFT</kbd> + <kbd>TAB</kbd> will navigate backwards through the QChips (if a QChip is selected <kbd>TAB</kbd> will navigate forward through the QChips)
-    - pressing <kbd>ENTER</kbd> when a QChip is selected will remove that option from the selection
-    - pressing <kbd>BACKSPACE</kbd> will remove the last option from the selection (when `use-input` is set the input should be empty)
-  - pressing <kbd>TAB</kbd> (or <kbd>SHIFT</kbd> + <kbd>TAB</kbd> if `use-chips` is not set or the first QChip is selected) will navigate to the next or previous focusable element on page
-  - typing text (<kbd>0</kbd> - <kbd>9</kbd> or <kbd>A</kbd> - <kbd>Z</kbd>) if `use-input` is not set will:
-    - create a search buffer (will be reset when a new key is not typed for 1.5 seconds) that will be used to search in the options labels
-    - select the next option starting with that letter (after the current focused one) if the first key in buffer is typed multiple times
-    - select the next option (starting with the current focused one) that matches the typed text (the match is fuzzy - the option label should start with the first letter and contain all the letters)
+当 QSelect 聚焦时：
+  - 按下 <kbd>ENTER</kbd>, <kbd>ARROW DOWN</kbd> （或者 <kbd>SPACE</kbd> 如果没有设置 `use-input`的话） 将会打开选项列表。
+  - 如果设置了 `use-chips`：
+    - 按下 <kbd>SHIFT</kbd> + <kbd>TAB</kbd> 将在 QChips 中向后导航 （如果选择了一个 QChip <kbd>TAB</kbd>  键将会在 QChips 中向前导航）
+    - 当一个 QChip 被选中时，按下 <kbd>ENTER</kbd> 会取消选中该选项。
+    - 按下 <kbd>BACKSPACE</kbd> 会删除选中列表中的最后一个（如果设置了 `use-input` 输入应该为空）
+  - 按下 <kbd>TAB</kbd> 将导航至下一个或页面上的上一个可聚焦元素（如果未设置  `use-chips` 或选择了第一个 QChip，则按 <kbd>SHIFT</kbd> + <kbd>TAB</kbd>）
+  - 如果未设置 `use-input`，则输入文字（<kbd>0</kbd> - <kbd>9</kbd> or <kbd>A</kbd> - <kbd>Z</kbd>）将会：
+    - 创建一个搜索缓冲区（当在1.5秒内未输入新键时将重置），该缓冲区将用于在选项标签中进行搜索
+    - 如果多次输入缓冲区中的第一个键，则选择以该字母开头的下一个选项（在当前焦点之后）
+    - 选择与键入的文本匹配的下一个选项（从当前的焦点开始）（匹配是模糊的-选项标签应以第一个字母开头并包含所有字母）
 
-When the list of options is opened:
-  - pressing <kbd>ARROW UP</kbd> or <kbd>ARROW DOWN</kbd> will navigate up or down in the list of options
-  - pressing <kbd>PAGE UP</kbd> or <kbd>PAGE DOWN</kbd> will navigate one page up or down in the list of options
-  - pressing <kbd>HOME</kbd> or <kbd>END</kbd> will navigate to the start or end of the list of options (only if you are not using `use-input`, or the input is empty)
-  - when navigating using arrow keys, navigation will wrap when reaching the start or end of the list
-  - pressing <kbd>ENTER</kbd> (or <kbd>SPACE</kbd> when `use-input` is not set, or <kbd>TAB</kbd> when `multiple` is not set) when an option is selected in the list will:
-    - select the option and close the list of options if `multiple` is not set
-    - toggle the option if `multiple` is set
+当选项列表打开时：
+  - 按下 <kbd>ARROW UP</kbd> 或 <kbd>ARROW DOWN</kbd>将在选项列表中向上或向下导航
+  - 按下 <kbd>PAGE UP</kbd> 或 <kbd>PAGE DOWN</kbd> 将在选项列表中向上或向下导航一页
+  - 按下 <kbd>HOME</kbd> 或 <kbd>END</kbd> 将导航到选项列表的开头或结尾（仅当您未使用 `use-input` 或输入为空时）
+  - 使用箭头键进行导航时，导航将在到达列表的开头或结尾时结束
+  - 选项在列表中被选中时按下 <kbd>ENTER</kbd> （如果未设置 `use-input`，则按 <kbd>SPACE</kbd>；如果未设置 `multiple`，则按 <kbd>TAB</kbd>）将会：
+    - 选择选项，并且如果未设置 `multiple` 则关闭选项列表。
+    - 如果设置了 `multiple`，则切换选项。
 
-## Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QSelect, otherwise formData will not contain it (if it should) - all value are converted to string (native behaviour, so do not use Object values):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QSelect 声明 `name` 属性，否则表单数据中不会包含它：
 
-<doc-example title="Native form" file="QSelect/NativeForm" />
+<doc-example title="原生表单" file="QSelect/NativeForm" />

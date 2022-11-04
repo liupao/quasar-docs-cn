@@ -64,7 +64,7 @@ QInput 组件用于收集用户输入的文本或数字。它可以像普通的 
 
 ### 原生属性
 
-所有给 `QInput` 设置的属性，如果未在 **API** 卡片中的 `props` 部分列出，那么它将会被传递给底层的原生标签（`input` 或 `textarea`）。例如： autocomplete，placeholder。
+所有给 QInput 设置的属性，如果未在 **API** 卡片中的 `props` 部分列出，那么它将会被传递给底层的原生标签（`input` 或 `textarea`）。例如： autocomplete，placeholder。
 
 有关更多原生属性的信息，请参考：
 
