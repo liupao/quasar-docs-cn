@@ -52,7 +52,7 @@ QInput 组件用于收集用户输入的文本或数字。它可以像普通的 
 
 ### 方形边框
 
-圆形（`rounded`）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
+方形（`square `）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
 
 <doc-example title="方形边框" file="QInput/SquareBorders" />
 
@@ -126,10 +126,11 @@ QInput 组件用于收集用户输入的文本或数字。它可以像普通的 
 
 ### 自定义标签
 
-使用 `label` 槽可以自定义标签或使用 `QTooltip` 添加特殊功能。
+使用 `label` 插槽可以自定义标签或使用 `QTooltip` 添加特殊功能。
 
 ::: tip
 不要忘记设置  `label-slot` 属性。
+
 如果要与标签（QTooltip）的内容交互，请在插槽中的元素上添加`all-pointer-events` CSS 类。
 :::
 

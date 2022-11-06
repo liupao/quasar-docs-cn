@@ -4,12 +4,12 @@ desc: The QField Vue component is used to provide common functionality and aspec
 keys: QField
 ---
 
-The QField component is used to provide common functionality and aspect to form components. It uses `:model-value` (or `v-model` if you want to use `clearable` property) to have knowledge of the model of the component inside. It has support for labels, hints, errors, validation, and comes in a variety of styles and colors.
+QField 组件提供了表单组件的通用方法，它可以使用 `:model-value` （或者 `v-model`，如果您要使用 `clearable` 的话）来绑定组件内的数据。还支持设置标签，提示信息，错误验证以及一系列的样式和颜色。
 
-QField allows you to display any form control (or almost anything as a matter of fact) inside it. Just place your desired content inside the `control` slot.
+QField 允许您在其中展示任意的表单控件（实际上任何内容都可以），只需要将其放在 `control` 插槽中即可。
 
 ::: danger
-Do NOT wrap QInput, QFile or QSelect with QField as these components already inherit QField.
+不要再使用 QField 封装 QInput， QFile 或 QSelect，因为它们已经继承了 QField。
 :::
 
 ## QField API
@@ -19,156 +19,155 @@ Do NOT wrap QInput, QFile or QSelect with QField as these components already inh
 ## Design
 
 ::: tip
-The examples below use dumb content (text) just to show you the design that QField can use. For checking out examples that wrap real components, see the "Basic Features" section.
+下面的示例使用简单的文本内容只是为了向您展示 QField 可以使用的外观设计。要查看封装真实组件的示例，请参见“基本功能”部分。
 :::
 
 ::: danger
-QField does not (and should not) manage your `control` slot, so if you use `label` prop, it might be a good idea to also specify `stack-label`, otherwise it might overlap your control when QField is not focused.
+QField 不会（也不应该）管理您的 `control` 插槽内容，所以如果您在使用 `label` 属性，那么最好也声明一下`stack-label` 属性，否则，当 QField 未聚焦时，它可能会与您的控件重叠。
 :::
 
-### Overview
+### 预览
 
-For your QField you can use only one of the main designs (`filled`, `outlined`, `standout`, `borderless`). You cannot use multiple as they are self-exclusive.
+您只能给 QField 使用一种主要的外观设计款式（`filled`, `outlined`, `standout`, `borderless`），不能使用多个，因为它们是互相排斥的。
 
-<doc-example title="Design Overview" file="QField/DesignOverview" />
+<doc-example title="外观设计预览" file="QField/DesignOverview" />
 
-### Coloring
+### 着色
 
-<doc-example title="Coloring" file="QField/Coloring" />
+<doc-example title="着色" file="QField/Coloring" />
 
-### Standard
+### Standard-标准
 <doc-example title="Standard" file="QField/DesignStandard" />
 
-### Filled
+### Filled-填充
 <doc-example title="Filled" file="QField/DesignFilled" />
 
-### Outlined
+### Outlined-轮廓
 <doc-example title="Outlined" file="QField/DesignOutlined" />
 
-### Standout
+### Standout-突出
 <doc-example title="Standout" file="QField/DesignStandout" />
 
-One of the most appropriate use cases for Standout design is in a QToolbar:
+其中一个很合适的的用例就是将 Standout 模式的 QField 用在 QToolbar 中：
 
 <doc-example title="Standout in QToolbar" file="QField/StandoutToolbar" />
 
-### Borderless
-The `borderless` design allows you to seamlessly integrate your QField into other components without QField drawing a border around itself or changing its background color:
+### Borderless-无边框
+无边框（`borderless`）设计允许您无缝地将 QField 集成到其他组件中，而无需 QField 在其周围绘制边框或更改其背景颜色：
 
 <doc-example title="Borderless" file="QField/Borderless" />
 
-### Rounded design
+### 圆形边框
 
-The `rounded` prop only works along with Filled, Outlined and Standout designs, as showcased in the example below:
+圆形（`rounded`）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
 
 <doc-example title="Rounded" file="QField/Rounded" />
 
-### Square borders
+### 方形边框
 
-The `square` prop only makes sense along with Filled, Outlined and Standout designs, as showcased in the example below:
+方形（`square `）属性只能与填充，轮廓和突出的设计（Filled, Outlined 和 Standout ）一起工作，如下面的例子所示:
 
 <doc-example title="Square borders" file="QField/SquareBorders" />
 
-### Dark background
+### 黑色背景
 
 <doc-example title="Dark" file="QField/Dark" dark />
 
-## Basic features
+## 基础特性
 
-### Clearable
-As a helper, you can use `clearable` prop so user can reset model to `null` through an appended icon.
+### 可清除的
+作为辅助，您可以使用 `clearable` 属性，这样用户可以通过附加的图标将数据重置为 `null`。下面第二个示例等价于使用 `clearable`
 
 ::: warning
-If using `clearable` you must use `v-model` or listen on `@update:model-value` and update the value.
+如果使用 `clearable` 那么您必须使用 `v-model` 或者监听 `@update:model-value` 事件并更新其值。
 :::
 
 <doc-example title="Clearable" file="QField/Clearable" />
 
-### Control types
+### 控件类型
+任何您放置在 `control` 插槽中的内容，都会作为 QFiled 组件的内容展示。我们提供了一些示例：
 
-Anything you place inside the `control` slot will be used as content of the field. We provide a few examples of controls below.
-
-<doc-example title="Control types" file="QField/ControlTypes" />
+<doc-example title="控件类型" file="QField/ControlTypes" />
 
 ::: tip
-Most of the form controls always render something visible, so you if you're using a `label` then you might want to set it along with `stack-label`, otherwise the label will overlap the enclosed control.
+大部分的表单控件都是可见的，所以如果您在使用 `label` 属性，那么最好也声明一下`stack-label` 属性，否则，当 QField 未聚焦时，它可能会与您的控件重叠。
 :::
 
-### Prefix and suffix
+### 前缀和后缀
 
-<doc-example title="Prefix and suffix" file="QField/PrefixSuffix" />
+<doc-example title="前缀和后缀" file="QField/PrefixSuffix" />
 
-### Custom Label
+### 自定义标签
 
-Using the `label` slot you can customize the aspect of the label or add special features as `QTooltip`.
+使用 `label` 插槽可以自定义标签或使用 `QTooltip` 添加特殊功能。
 
 ::: tip
-Do not forget to set the `label-slot` property.
+不要忘记设置  `label-slot` 属性。
 
-If you want to interact with the content of the label (QTooltip) add the `all-pointer-events` class on the element in the slot.
+如果要与标签（QTooltip）的内容交互，请在插槽中的元素上添加`all-pointer-events` CSS 类。
 :::
 
 <doc-example title="Custom label" file="QField/CustomLabel" />
 
-### Slots with QBtn type "submit"
+### 插槽中使用 "submit" 类型的 QBtn
 
 ::: warning
-When placing a QBtn with type "submit" in one of the "before", "after", "prepend", or "append" slots of a QField, QInput or QSelect, you should also add a `@click` listener on the QBtn in question. This listener should call the method that submits your form. All "click" events in such slots are not propagated to their parent elements.
+当将类型为 "submit" 的 QBtn 放置在 QField、QInput 或 QSelect 的 "before"、"after" 、"prepend"  或 "append"  插槽中时，您还应该在有问题的 QBtn 上添加 `@click` 事件。该事件应调用提交表单的方法。此类插槽中的所有点击事件均不会传播到其父元素。
 :::
 
-### Loading state
-
+### 加载状态
 <doc-example title="Loading state" file="QField/LoadingState" />
 
-## Validation
+## 验证
 
-### Internal validation
+### 内部验证
 
-You can validate QField components with `:rules` prop. Specify array of embedded rules or your own validators. Your custom validator will be a function which returns `true` if validator succeeds or `String` with error message if it doesn't succeed.
+你可以使用 `:rules` 属性来对 QField 进行验证。声明一个规则数组或自定义的验证器。自定义的验证器应该是一个函数，当验证成功时返回 `true`，验证失败时返回 `String` 类型的错误信息。
 
 ::: tip
-By default, for perf reasons, a change in the rules does not trigger a new validation until the model changes. In order to trigger the validation when rules change too, then use `reactive-rules` Boolean prop. The downside is a performance penalty (so use it when you really need this only!) and it can be slightly mitigated by using a computed prop as value for the rules (and not specify them inline in the vue template).
+默认情况下，规则的改变不会触发一次新的验证，直到绑定的数据发生变化。为了在规则改变时触发一次验证，您可以使用 `reactive-rules` 布尔属性，缺点是会降低性能（所以当您真的需要时在使用它），通过使用计算属性作为规则的值（而不是在 vue 模板中内联指定它们），可以稍微减轻这种情况。
 :::
 
-This is so you can write convenient rules of shape like:
+一个规则的格式如下：
 
 ```js
 value => condition || errorMessage
  ```
-For example:
+示例：
  ```js
 value => value < 10 || 'Value should be lower'
 ```
 
-You can reset the validation by calling `resetValidation()` method on the QField.
+您可以通过调用 QField 的 `resetValidation()` 方法来重置验证。
 
-<doc-example title="Basic" file="QField/ValidationRequired" />
+<doc-example title="基础" file="QField/ValidationRequired" />
 
-<doc-example title="Maximum value" file="QField/ValidationMaxValue" />
+<doc-example title="最大长度" file="QField/ValidationMaxValue" />
 
-If you set `lazy-rules`, validation starts after first blur. If `lazy-rules` is set to `ondemand` String, then validation will be triggered only when component's validate() method is manually called or when the wrapper QForm submits itself.
+如果您设置了 `lazy-rules`，验证会在第一次失去焦点后才会开始。如果将 `lazy-rules` 设置为 `ondemand` 字符串，那么验证只有在手动调用了 QField 组件的 validate() 方法之后才会触发，或者是包裹它的 QForm 触发了提交事件。
 
 <doc-example title="Lazy rules" file="QField/ValidationLazy" />
 
-#### Async rules
-Rules can be async too, by using async/await or by directly returning a Promise.
+#### 异步规则
+通过使用 async/await 或直接返回一个 Promise，规则也可以是异步的。
 
 ::: tip
-Consider coupling async rules with `debounce` prop to avoid calling the async rules immediately on each keystroke, which might be detrimental to performance.
+考虑将异步规则与 `debounce` 属性相结合，以避免在每次按键时立即调用异步规则，这可能会影响性能。
 :::
 
-<doc-example title="Async rules" file="QField/ValidationAsync" />
+<doc-example title="异步规则" file="QField/ValidationAsync" />
 
-### External validation
+### 外部验证
 
-You can also use external validation and only pass `error` and `error-message` (enable `bottom-slots` to display this error message).
+您还可以使用外部验证，并且只传递 `error`  和 `error-message`（启用 `bottom-slots` 插槽以显示此错误消息）。
 
 ::: tip
-Depending on your needs, you might connect [Vuelidate](https://vuelidate.netlify.com/) (our recommended approach) or some other validation library to QField.
+根据您的需求，您可能需要 [Vuelidate](https://vuelidate.netlify.com/)（我们推荐的方法）或者别的验证库连接到 QField。
 :::
+
 
 <doc-example title="External" file="QField/ValidationExternal" />
 
-You can also customize the slot for error message:
+您还可以为错误消息自定义插槽：
 
 <doc-example title="Slot for error message" file="QField/ValidationSlots" />
