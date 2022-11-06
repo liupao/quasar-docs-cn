@@ -1,6 +1,6 @@
 ---
-title: Radio
-desc: The QRadio Vue component is a basic element for user input. It can be used to supply a way for the user to pick an option from multiple choices.
+title: 单选框
+desc: QRadio Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
 keys: QRadio
 related:
   - /vue-components/option-group
@@ -9,10 +9,10 @@ related:
   - /vue-components/toggle
 ---
 
-The QRadio component is another basic element for user input. You can use this to supply a way for the user to pick an option from multiple choices.
+QRadio组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
 
 ::: tip
-Please also refer to the [QOptionGroup](/vue-components/option-group) on other possibilities for creating groups of Radios.
+关于创建一组单选框的其他可能性，请参阅 [QOptionGroup](/vue-components/option-group)。
 :::
 
 ## QRadio API
@@ -21,56 +21,56 @@ Please also refer to the [QOptionGroup](/vue-components/option-group) on other p
 
 ## 用法
 
-### Standard
+### 标准
 
 <doc-example title="Standard" file="QRadio/Standard" />
 
-### With custom icons <q-badge align="top" color="brand-primary" label="v2.5+" />
+### 自定义图标 <q-badge align="top" color="brand-primary" label="v2.5+" />
 
 <doc-example title="With icons" file="QRadio/WithIcons" />
 
-### Dense
+### 紧凑模式
 
-<doc-example title="Dense" file="QRadio/Dense" />
+<doc-example title="紧凑模式" file="QRadio/Dense" />
 
-### Coloring
+### 着色
 
-In the second row in the example below, the property `keep-color` is being used to retain the passed in color when the radio button is not in a toggled state.
+在下面示例的第二行中，即使单选按钮未处于切换状态，设置了 `keep-color` 属性依然会进行着色。
 
-<doc-example title="Coloring" file="QRadio/Coloring" />
+<doc-example title="着色" file="QRadio/Coloring" />
 
-### Dark and disable
+### 黑色背景和禁用
 
-<doc-example title="On a dark background" file="QRadio/OnDarkBackground" dark />
+<doc-example title="黑色背景" file="QRadio/OnDarkBackground" dark />
 
-<doc-example title="Disable" file="QRadio/Disable" />
+<doc-example title="禁用" file="QRadio/Disable" />
 
-### Label on left-side
+### 标签放在左边
 
-<doc-example title="Label on left side" file="QRadio/LabelPosition" />
+<doc-example title="标签放在左边" file="QRadio/LabelPosition" />
 
-### Sizes
+### 大小
 
-Apart from the standard sizes below, you can define your own through the `size` property (last one is a custom size).
+除了下面的标准尺寸，您可以通过 `size` 属性定义自己的尺寸（最后一个示例是自定义尺寸）。
 
-<doc-example title="Standard sizes" file="QRadio/StandardSizes" />
+<doc-example title="标准尺寸" file="QRadio/StandardSizes" />
 
-### With QOptionGroup
+### 搭配 QOptionGroup
 
 ::: tip
-You can also use [QOptionGroup](/vue-components/option-group), which simplifies the usage when you have groups of radios, like in example below.
+您还可以使用 [QOptionGroup](/vue-components/option-group)，当您有多组单选框时，它可以简化使用，如下面的示例所示。
 :::
 
-<doc-example title="Usage with QOptionGroup" file="QRadio/OptionGroup" />
+<doc-example title="与 QOptionGroup 一起使用" file="QRadio/OptionGroup" />
 
-### With QItem
+### 搭配 QItem
 
-In the example below, we are rendering a `<label>` tag (notice `tag="label"`) so the QRadio will respond to clicks on QItems to change toggle state.
+在下面的示例中，我们 渲染了一个 `<label>` 标签（注意 `tag="label"`），因此 QRadio 将响应 QItems 上的点击以更改切换状态。
 
-<doc-example title="With QItem" file="QRadio/InaList" />
+<doc-example title="搭配 QItem" file="QRadio/InaList" />
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QRadio, otherwise formData will not contain it (if it should) - all value are converted to string (native behaviour, so do not use Object values):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QRadio 声明 `name` 属性，否则表单数据中不会包含它：
 
-<doc-example title="Native form" file="QRadio/NativeForm" />
+<doc-example title="原生表单" file="QRadio/NativeForm" />
