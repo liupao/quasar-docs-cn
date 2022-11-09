@@ -1,6 +1,6 @@
 ---
 title: Button Toggle
-desc: The QBtnToggle Vue component is a basic element for user input, similar to QRadio but with buttons.
+desc: QBtnToggle vue组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。
 keys: QBtnToggle
 related:
   - /vue-components/button
