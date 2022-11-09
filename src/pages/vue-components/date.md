@@ -1,6 +1,6 @@
 ---
 title: QDate
-desc: The QDate Vue component provides a method to input dates from Gregorian or Persian calendars.
+desc: QDate 组件提供了一种输入日期的方法。目前它支持公历（默认）和波斯历。
 keys: QDate
 related:
   - /vue-components/time
@@ -8,10 +8,10 @@ related:
   - /vue-components/field
 ---
 
-The QDate component provides a method to input date. Currently it supports Gregorian (default) and Persian calendars.
+QDate 组件提供了一种输入日期的方法。目前它支持公历（默认）和波斯历。
 
 ::: tip
-For handling date and/or time, also check out [Quasar Date Utils](/quasar-utils/date-utils).
+有关处理日期和/或时间，也可以查看 [Quasar 日期实用程序](/quasar-utils/date-utils)。
 :::
 
 ## QDate API
@@ -21,7 +21,7 @@ For handling date and/or time, also check out [Quasar Date Utils](/quasar-utils/
 ## 用法
 
 ::: warning
-Notice that the actual date(s) of the model are all in String format.
+请注意,实际的日期 model 全都是一个字符串。
 :::
 
 ### 基础
@@ -29,172 +29,174 @@ Notice that the actual date(s) of the model are all in String format.
 <doc-example title="Basic" file="QDate/Basic" overflow />
 
 ::: tip
-For landscape mode, you can use it along with `$q.screen` to make QDate responsive. Example: `:landscape="$q.screen.gt.xs"`. More info: [Quasar Screen Plugin](/options/screen-plugin).
+对于横向模式，您可以将其与 `$q.screen` 一起使用。以使 QDate 变成响应式的。示例：`:landscape="$q.screen.gt.xs"`。更多信息：[Quasar Screen Plugin](/options/screen-plugin)。
 :::
 
-<doc-example title="Landscape" file="QDate/Landscape" overflow />
+<doc-example title="横屏" file="QDate/Landscape" overflow />
 
-### Multiple selection
+### 多选
 
-Notice below that the model is an Array and we specify the "multiple" prop.
+请注意，下面的 model 是一个数组，我们指定了 "multiple" 属性。
 
-Clicking on an already selected day will deselect it.
+点击一个已经选择的日期将会取消选择它。
 
-<doc-example title="Multiple days" file="QDate/SelectionMultiple" overflow />
+<doc-example title="选择多个日期" file="QDate/SelectionMultiple" overflow />
 
-### Range selection
+### 范围选择
 
-Notice in the examples below that the model is an Object (single selection) or an Array of Objects (multiple selection).
+请注意，在下面的示例中，model 是对象（单选）或对象数组（多选）。
 
 ::: tip TIPS
-* Clicking on an already selected day will deselect it.
-* The user's current editing range can also be set programmatic through the `setEditingRange` method (check the API card).
-* There are two useful events in regards to the current editing range: `range-start` and `range-end` (check the API card).
+* 点击一个已经选择的日期将会取消选择它。
+* 还可以通过  `setEditingRange`  方法编程设置用户当前的编辑范围（见 API 部分）。
+* 对于当前的编辑范围，有两个有用的事件: `range-start` 和 `range-end`（见 API 部分）。
 :::
 
 ::: warning
-The `range` property is only partially compatible with the `options` prop: selected ranges might also include "unselectable" days.
+`range` 属性仅与 `options` 属性部分兼容：选定的范围可能还包括 "unselectable" （不可选择）的日期。
 :::
 
-<doc-example title="Single Range" file="QDate/SelectionRange" overflow />
+<doc-example title="单选范围" file="QDate/SelectionRange" overflow />
 
-<doc-example title="Multiple ranges" file="QDate/SelectionRangeMultiple" overflow />
+<doc-example title="多选范围" file="QDate/SelectionRangeMultiple" overflow />
 
-### Custom title and subtitle
+### 自定义标题和副标题
 
-When not in 'minimal' mode, QDate has a computed header title and subtitle. You can override it, like in the example below.
+当不处于 'minimal' 模式时，QDate 有一个标题和副标题。您可以覆盖它，如下面的示例所示。
 
-When clicking on title then the QDate's view is changed to the calendar and when clicking on subtitle, the view will switch to year picking.
+单击标题时，QDate 的视图将更改为日历，单击副标题时，视图将切换为年份选择。
 
-<doc-example title="Custom title and subtitle" file="QDate/CustomTitleSubtitle" overflow />
+<doc-example title="自定义标题和副标题" file="QDate/CustomTitleSubtitle" overflow />
 
-### Functionality
+### 功能
 
-When model is unfilled (like `null`, `void 0`/`undefined`) QDate still has to show the calendar for a month of a year. You can use `default-year-month` prop for this, otherwise the current month of the year will be shown:
+当 model 模型数据为空时（如 `null`, `void 0`/`undefined`）时，QDate 仍然必须显示一年中某个月份的日历。您可以使用 `default-year-month` 属性来设置默认年月，否则当前的月份将显示:
 
-<doc-example title="Default year month" file="QDate/DefaultYearMonth" overflow />
+<doc-example title="默认年月" file="QDate/DefaultYearMonth" overflow />
 
-The default view can be changed.
+默认视图可以改变。
 
-<doc-example title="Default view" file="QDate/DefaultView" overflow />
+<doc-example title="默认视图" file="QDate/DefaultView" overflow />
 
-The first day of the week is applied depending on the [Quasar Language Pack](/options/quasar-language-packs) that you've set, but you can also force it, like in the example below.
+每周第一天的设置取决于您设置的 [Quasar 语言包](/options/quasar-language-packs)，但您也可以强制指定它，如下面的示例所示。
 
-<doc-example title="First day of week" file="QDate/FirstDayOfWeek" overflow />
-
-Clicking on the "Today" button sets date to current user date. Requires the header, so you can't use it along with "minimal" mode:
+<doc-example title="每周第一天" file="QDate/FirstDayOfWeek" overflow />
+、
+单击 "Today" 按钮将日期设置为当前用户日期。需要标头，因此不能将其与 "minimal" 模式一起使用：
 
 <doc-example title="Today button" file="QDate/TodayBtn" overflow />
 
-<doc-example title="Disable and readonly" file="QDate/DisableReadonly" overflow />
+<doc-example title="禁用和只读" file="QDate/DisableReadonly" overflow />
 
-### Model mask
+### Model 掩码
 
-The default model mask is `YYYY/MM/DD`, however you can use custom ones too.
+默认的 model 数据掩码是 `YYYY/MM/DD`，然而您也可以使用自定义掩码。
 
-The `mask` prop tokens can be found at [Quasar Utils > Date utils](/quasar-utils/date-utils#format-for-display).
+`mask` 可以在 [Quasar Utils > Date utils](/quasar-utils/date-utils#format-for-display) 页面中找到。
 
-::: warning Note on SSR
-Using `x` or `X` (timestamps) in the mask may cause hydration errors on the client, because decoding the model String must be done with `new Date()` which takes into account the local timezone. As a result, if the server is in a different timezone than the client, then the rendered output of the server will differ than the one on the client so hydration will fail.
+::: warning SSR 的注意事项
+在掩码中使用 `x` 或 `X`（时间戳）可能会在客户端上造成水合错误，因为解码 model 字符串必须使用考虑到本地时区的 `new Date()` 完成。因此，如果服务器与客户端处于不同的时区，则服务器的渲染输出将与客户端的不同，因此水合将失败。
 :::
 
-::: danger Note on persian calendar
-When using the persian calendar, the mask for QDate is forced to `YYYY/MM/DD`.
+::: danger 波斯日历的注意事项
+使用波斯日历时，QTime 的掩码强制为 `YYYY/MM/DD`。
 :::
 
-<doc-example title="Simple mask" file="QDate/MaskSimple" overflow />
 
-If you want to insert strings (including `[` and `]` characters) into your mask, make sure you escape them by surrounding them with `[` and `]`, otherwise the characters might be interpreted as format tokens.
+<doc-example title="简单的掩码" file="QDate/MaskSimple" overflow />
 
-<doc-example title="Mask with escaped characters" file="QDate/MaskEscape" overflow />
+如果您想在掩码中插入字符串（包括`[`和 `]` 字符），请确保用`[` 和 `]`将其转义，否则这些字符可能会被解释为格式标记。
 
-Using the mask to connect a QDate and [QTime](/vue-components/time) to the same model:
+<doc-example title="带有转义字符的掩码" file="QDate/MaskEscape" overflow />
 
-<doc-example title="QDate and QTime on same model" file="QDate/MaskDateTime" overflow />
+使用掩码将 QDate 和 [QTime](/vue-components/time) 连接到同一模型：
+
+<doc-example title="QDate 和 QTime 使用同一个 model" file="QDate/MaskDateTime" overflow />
 
 ::: tip
-If you want to programmatically set the value of QDate, you can do so by just re-assigning the value that you pass. However, the updated value needs to be a string in the same format as your mask. Eg. in the case your mask is `'dddd, MMM D, YYYY'`, passing `'2019/04/28'` as value won't work, you would need to pass `'Sunday, Apr 28, 2019'` instead.
+如果希望以编程方式设置  QDate 的值，只需重新分配传递的值即可。但是，更新的值需要是一个与您的掩码格式相同的字符串。如，如果您的掩码为 `'dddd, MMM D, YYYY'`，那么设置值为 `'2019/04/28'` 不会生效，需要使用 `'Sunday, Apr 28, 2019'` 代替。
 :::
 
-### Custom ad-hoc locale
+### 自定义特殊语言环境
 
-If, for some reason, you need to use a custom ad-hoc locale rather than the current Quasar Language Pack that has been set, you can use the `locale` prop:
+如果出于某种原因，您需要使用自定义的特殊语言环境，而不是已设置的当前 Quasar 语言包，您可以使用 `locale` 属性：
 
-<doc-example title="Custom ad-hoc locale" file="QDate/CustomLocale" overflow />
+<doc-example title="自定义特殊语言环境" file="QDate/CustomLocale" overflow />
 
-### Coloring
+### 着色
 
-<doc-example title="Coloring" file="QDate/Color" overflow />
+<doc-example title="着色" file="QDate/Color" overflow />
 
-<doc-example title="Dark" file="QDate/Dark" overflow dark />
+<doc-example title="黑色" file="QDate/Dark" overflow dark />
 
-### Highlighting events
+### 高亮突出某些日期事件
 
-The first example is using an array and the second example is using a function.
+第一个示例使用数组，第二个示例使用函数。
 
-<doc-example title="Events" file="QDate/Events" overflow />
+<doc-example title="事件" file="QDate/Events" overflow />
 
-<doc-example title="Event color" file="QDate/EventColor" overflow />
+<doc-example title="事件颜色" file="QDate/EventColor" overflow />
 
-### Limiting options
+### 限制选项
 
-* You can use the `options` prop to limit user selection to certain times.
-* Alternatively, for a more in-depth way of limiting options, you can also supply a function (second and third example below) to `options-fn` prop.
+* 您可以使用 `options` 属性将用户选择限制在特定时间。
+* 或者，为了更深入地限制选项，您还可以为使用 `options-fn` 提供一个函数（下面的第二个示例）。
 
 ::: warning
-The `options` property is only partially compatible with the `range` prop. Ranges might contain "unselectable" days.
+`options` 属性仅与 `range` 属性部分兼容：选定的范围可能还包括 "unselectable" （不可选择）的日期。
 :::
 
 <doc-example title="Options" file="QDate/Options" overflow />
 
-### Applying navigation boundaries
+### 设置导航界限
 
-In the example below the navigation is restricted between 2020/07 and 2020/09.
+在下面的示例中，导航限制在 2020/07 和 2020/09 之间。
 
-<doc-example title="Navigation boundaries" file="QDate/NavigationBoundaries" overflow />
+<doc-example title="导航界限" file="QDate/NavigationBoundaries" overflow />
 
-### With additional buttons
+### 附加在按钮上
 
-You can use the default slot for adding buttons:
+您可以使用默认插槽附加在按钮上：
 
-<doc-example title="With additional buttons" file="QDate/AdditionalButtons" overflow />
+<doc-example title="附加在按钮上" file="QDate/AdditionalButtons" overflow />
 
-### With QSplitter and QTabPanels
+### 搭配 QSplitter 和 QTabPanels
 
-<doc-example title="With QSplitter and QTabPanels" file="QDate/Splitter" />
+<doc-example title="搭配 QSplitter 和 QTabPanels" file="QDate/Splitter" />
 
-More info: [QSplitter](/vue-components/splitter), [QTabPanels](/vue-components/tab-panels).
+更多信息： [QSplitter](/vue-components/splitter), [QTabPanels](/vue-components/tab-panels).
 
-### With QInput
+### 搭配 QInput
 
 <doc-example title="With QInput" file="QDate/Input" />
 
-Connecting a QDate and QTime with same model on a QInput:
+在 QInput 上用相同的模型连接 QDate 和 QTime:
 
 <doc-example title="QDate and QTime with QInput" file="QDate/InputFull" overflow />
 
-The following are **helpers** for QInput `mask` and `rules` props. You can use these for convenience or write the string specifying your [custom needs](/vue-components/input#mask).
+这里有一些可以用在 QInput 的 `mask` 和 `rules` 中的工具。为了方便起见，您可以使用它们，也可以编写指定[自定义需求的字符串](/vue-components/input#mask)。
 
-* Property `mask` helpers: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6).
-* Property `rules` helpers: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js).
+* `mask`  属性：[完整列表](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6).
+* `rules` 属性： [完整列表](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js).
 
-Examples: "date", "time", "fulltime".
+例如： "date", "time", "fulltime".
 
-More info: [QInput](/vue-components/input).
+更多信息： [QInput](/vue-components/input).
 
-### Persian calendar
+### 波斯日历
 ::: tip
-You can couple this with a Quasar [language pack](/options/quasar-language-packs) such as Persian (Farsi, `fa-ir`) to have the QDate strings translated too, for the full experience.
+您可以将其与诸如波斯语（波斯语，fair）之类的[Quasar 语言包](/options/quasar-language-packs)相结合，以便将 QDate 的字符串翻译，提供完整的体验。
 :::
 
 ::: warning
-When using the persian calendar, the mask for QDate is forced to `YYYY/MM/DD`.
+当使用波斯日历时，掩码会被强制设置为：`YYYY/MM/DD`。
 :::
 
-<q-btn href="https://codepen.io/rstoenescu/pen/MWKpbNa" target="_blank" label="See example" icon-right="launch" color="brand-primary" />
+<q-btn href="https://codepen.io/rstoenescu/pen/MWKpbNa" target="_blank" label="查看示例" icon-right="launch" color="brand-primary" />
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QDate, otherwise formData will not contain it (if it should):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QDate 声明 `name` 属性，否则表单数据中不会包含它：
+
 
 <doc-example title="Native form" file="QDate/NativeForm" />

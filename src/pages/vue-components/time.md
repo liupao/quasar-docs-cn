@@ -54,7 +54,7 @@ QTime 组件提供了输入时间的方法。
 :::
 
 ::: danger 波斯日历的注意事项
-使用波斯日历时，QTime 的掩码强制为`HH:mm` 或 `HH:mm:ss`（如果指定了 `with-seconds`）。
+使用波斯日历时，QTime 的掩码强制为 `HH:mm` 或 `HH:mm:ss`（如果指定了 `with-seconds`）。
 :::
 
 <doc-example title="简单的掩码" file="QTime/MaskSimple" overflow />
@@ -70,7 +70,7 @@ QTime 组件提供了输入时间的方法。
 ### 自定义特殊语言环境
 
 如果出于某种原因，您需要使用自定义的特殊语言环境，而不是已设置的当前 Quasar 语言包，您可以使用 `locale` 属性：
-If, for some reason, you need to use a custom ad-hoc locale rather than the current Quasar Language Pack that has been set, you can use the `locale` prop:
+
 
 <doc-example title="自定义特殊语言环境" file="QTime/CustomLocale" overflow />
 
