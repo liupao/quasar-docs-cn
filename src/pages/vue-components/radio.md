@@ -9,7 +9,7 @@ related:
   - /vue-components/toggle
 ---
 
-QRadio组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
+QRadio 组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
 
 ::: tip
 关于创建一组单选框的其他可能性，请参阅 [QOptionGroup](/vue-components/option-group)。

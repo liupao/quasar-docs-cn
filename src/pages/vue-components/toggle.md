@@ -1,6 +1,6 @@
 ---
 title: Toggle
-desc: The QToggle component is a basic element for user input. You can use it for turning settings, features or true/false inputs on and off.
+desc: QToggle Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。
 keys: QToggle
 related:
   - /vue-components/checkbox
@@ -8,10 +8,11 @@ related:
   - /vue-components/radio
   - /vue-components/button-toggle
 ---
-The QToggle component is another basic element for user input. You can use this for turning settings, features or true/false inputs on and off.
+
+QToggle 组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。
 
 ::: tip
-Please also refer to the [QOptionGroup](/vue-components/option-group) on other possibilities for creating groups of Checkboxes.
+关于创建一组选项框的其他可能性，请参阅 [QOptionGroup](/vue-components/option-group)。
 :::
 
 ## QToggle API
@@ -22,77 +23,78 @@ Please also refer to the [QOptionGroup](/vue-components/option-group) on other p
 
 ### 基础
 
-Use the `color` prop to control the toggle’s color.
+使用 `color` 属性来控制开关的颜色
 
-<doc-example title="Basic" file="QToggle/Standard" />
+<doc-example title="基础" file="QToggle/Standard" />
 
-### With labels
+### 带有标签
 
-<doc-example title="With labels" file="QToggle/Labels" />
+<doc-example title="带有标签" file="QToggle/Labels" />
 
-### Keeping color
+### 保留颜色
 
 <doc-example title="Keep color" file="QToggle/KeepColor" />
 
-### With icons
+### 带有图标
 
 <doc-example title="Icons" file="QToggle/Icons" />
 
-### Custom model values
+### 自定义 model 值
 
-Instead of the default `true`/`false` values, you can use custom ones.
+您可以自定义 model 的值来替换默认的 `true`/`false`。
 
-<doc-example title="Custom model values" file="QToggle/CustomValues" />
+<doc-example title="自定义 model 值" file="QToggle/CustomValues" />
 
-### Indeterminate state
+### 不定状态
 
-In the example below, as soon as you click on the first QToggle it starts toggling between true/false. The second QToggle, on the other hand toggles between the three states (indeterminate/true/false) with help from `toggle-indeterminate`. You can optionally set the property `indeterminate-value`, otherwise the indeterminate value will be considered `null`.
+在下面的示例中，只要单击第一个 QToggle，它就开始在真/假之间切换。然而，第二个 QToggle 通过设置`toggle-indeterminate` 属性可以在三种状态（不确定/真/假）之间切换。您可以选择设置 `indeterminate-value`，否则不确定的值将被视为 `null`
 
-<doc-example title="Indeterminate state" file="QToggle/IndeterminateState" />
+<doc-example title="不定状态" file="QToggle/IndeterminateState" />
 
-### Toggle order
 
-By default, QToggle follows this chain when toggling: indeterminate -> checked -> unchecked. However, you can change this behavior through the `toggle-order` prop. This property determines the order of the states and can be `tf` (default) or `ft` (`t` stands for state of true/checked while `f` for state of false/unchecked).
+### 切换顺序
 
-Toggling order is:
+默认情况下，QToggle 在点击时按照下述顺序切换值：indeterminate -> checked -> unchecked。但是您可以通过 `toggle-order` 属性来修改此行为。这个属性决定了切换状态的顺序是 `tf`（默认），或者 `ft`（`t` 表示 true/checked 状态，`f` 表示 false/unchecked 状态）
 
-* if `toggle-indeterminate` is true, then: indet -> first state -> second state -> indet (and repeat)
-* otherwise (no toggle-indeterminate): indet -> first state -> second state -> first state -> second state -> ...
+切换顺序：
+
+* 如果 `toggle-indeterminate` 是 true，那么：indet -> first state -> second state -> indet （依次循环）
+* 否则： indet -> first state -> second state -> first state -> second state -> ...
 
 <doc-example title="Toggle order" file="QToggle/ToggleOrder" />
 
-### Array model
+### 数组 model
 
-If you have a number of toggles for a selection, use can use an Array as the model for all of them and specify `val` prop on each toggle. If the toggle is ticked, its `val` will be inserted into the array and vice versa.
+如果有多个开关，则可以使用数组作为所有开关的 数据 model，并在每个开关上指定 `val` 属性。如果勾选该开关，其 `val` 将插入数组，反之亦然。
 
 <doc-example title="Array model" file="QToggle/ArrayValue" />
 
-### Dark and disable
+### 黑色和禁用
 
-<doc-example title="On a dark background" file="QToggle/DarkBackground" dark />
+<doc-example title="黑色背景" file="QToggle/DarkBackground" dark />
 
-<doc-example title="Disabled state" file="QToggle/Disabled" />
+<doc-example title="禁用状态" file="QToggle/Disabled" />
 
-### Sizes
+### 大小
 
-Apart from the standard sizes below, you can define your own through the `size` property (last one is a custom size).
+除了下面的标准尺寸，您可以通过 `size` 属性定义自己的尺寸（最后一个示例是自定义尺寸）。
 
-<doc-example title="Standard sizes" file="QToggle/StandardSizes" />
+<doc-example title="标准尺寸" file="QToggle/StandardSizes" />
 
-### With QOptionGroup
+### 搭配 QOptionGroup
 
 ::: tip
-You can also use [QOptionGroup](/vue-components/option-group), which simplifies the usage when you have groups of toggles, like in example below.
+您还可以使用 [QOptionGroup](/vue-components/option-group)，当您有多组开关时，它可以简化使用，如下面的示例所示。
 :::
 
-<doc-example title="Usage with QOptionGroup" file="QToggle/OptionGroup" />
+<doc-example title="与 QOptionGroup 一起使用" file="QToggle/OptionGroup" />
 
-### With QItem
+### 搭配 QItem
 
-<doc-example title="With QItem" file="QToggle/List" />
+<doc-example title="搭配 QItem" file="QToggle/List" />
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QToggle, otherwise formData will not contain it (if it should) - all value are converted to string (native behaviour, so do not use Object values):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QToggle 声明 `name` 属性，否则表单数据中不会包含它：
 
 <doc-example title="Native form" file="QToggle/NativeForm" />
