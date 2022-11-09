@@ -79,7 +79,7 @@ QSlider 是用户指定最小值和最大值之间的数值的好方法，滑块
 
 <doc-example title="隐藏选择栏" file="QSlider/NoSelection" />
 
-<doc-example title="自定义轨道图标" file="QSlider/TrackImages" />
+<doc-example title="自定义轨道图像" file="QSlider/TrackImages" />
 
 <doc-example title="轨道和滑块的大小" file="QSlider/SliderSizes" />
 
@@ -103,9 +103,9 @@ QSlider 是用户指定最小值和最大值之间的数值的好方法，滑块
 
 <doc-example title="禁用" file="QSlider/Disable" />
 
-### With QItem
+### 搭配 QItem
 
-<doc-example title="With QItem" file="QSlider/List" />
+<doc-example title="搭配 QItem" file="QSlider/List" />
 
 ## 原生表单提交
 

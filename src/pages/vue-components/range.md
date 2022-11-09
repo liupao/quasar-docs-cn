@@ -6,9 +6,10 @@ related:
   - /vue-components/slider
   - /vue-components/field
 ---
-The QRange component is a great way to offer the user the selection of a sub-range of values between a minimum and maximum value, with optional steps to select those values. An example use case for the Range component would be to offer a price range selection.
 
-Also check out its “sibling”, the [QSlider](/vue-components/slider) component.
+QRange 组件可以让用户在最小值和最大值之间选择一个子范围的值，还可以通过可选的步骤来选择这些值。Range 组件的一个示例用例是提供价格范围选择。
+
+也看看另一个相似的组件：[QSlider](/vue-components/slider) 。
 
 ## QRange API
 
@@ -16,77 +17,77 @@ Also check out its “sibling”, the [QSlider](/vue-components/slider) componen
 
 ## 用法
 
-Notice we are using an object for the selection, which holds values for both the lower value of the selected range - `rangeValues.min` and the higher value - `rangeValues.max`.
+请注意，我们为每一个组件使用一个对象，该对象包含选定范围的最小值 `rangeValues.min` 和最大值 `rangeValues.max`。
 
-### Standard
+### 标准
 
 ::: warning
-You are responsible for accommodating the space around QSlider so that the label and marker labels won't overlap the other content on your page. You can use CSS margin or padding for this purpose.
+您需要调整 QRange 周围的空间，以便标签和标记标签不会与页面上的其他内容重叠。您可以为此使用 CSS 边距或填充。
 :::
 
-<doc-example title="Standard" file="QRange/Standard" />
+<doc-example title="标准" file="QRange/Standard" />
 
-### Vertical
+### 垂直
 
-<doc-example title="Vertical orientation" file="QRange/Vertical" />
+<doc-example title="垂直方向" file="QRange/Vertical" />
 
-### With inner min/max <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 内部的最大/最小值 <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-Sometimes you need to restrict the model value to an interval inside of the track's length. For this purpose, use `inner-min` and `inner-max` props. First prop needs to be higher or equal to `min` prop while the latter needs to be lower or equal to the `max` prop.
+有时您需要将模型值限制为轨迹长度内的范围。您可以通过 `inner-min` 和 `inner-max` 属性来实现，前者需要大于等于 `min` 属性，后者需要小于等于 `max` 属性。
 
 <doc-example title="Inner min/max" file="QRange/InnerMinMax" />
 
-### With step
+### 离散值
 
-<doc-example title="With Step" file="QRange/Step" />
+<doc-example title="设置步长" file="QRange/Step" />
 
-The `step` property can also be a floating point number (or numeric `0` if you need infinite precision).
+`step` 属性也可以是一个浮点数（或者数字 0 如果您需要无效小的精度）。
 
-<doc-example title="Floating point" file="QRange/FloatingPoint" />
+<doc-example title="浮点数" file="QRange/FloatingPoint" />
 
 <doc-example title="Snaps to steps" file="QRange/Snap" />
 
-### With label
+### 带有标签
 
-In the example below, move the slider to see the label.
+在下面的示例中，移动滑块以查看标签。
 
-<doc-example title="With label" file="QRange/Label" />
+<doc-example title="带有标签" file="QRange/Label" />
 
-<doc-example title="Always display label" file="QRange/LabelAlways" />
+<doc-example title="始终显示标签" file="QRange/LabelAlways" />
 
-<doc-example title="Custom label values" file="QRange/LabelValue" />
+<doc-example title="自定义标签值" file="QRange/LabelValue" />
 
-The example below is better highlighting how QRange handles label positioning so that it always stays inside the QRange's box horizontally.
+下面的示例演示如何处理标签的定位，以使其始终水平地保持在 QRange 的框内。
 
-<doc-example title="Long label" file="QRange/LabelLong" />
+<doc-example title="长标签" file="QRange/LabelLong" />
 
-### Markers
+### 标记
 
-<doc-example title="Markers" file="QRange/Markers" />
+<doc-example title="标记" file="QRange/Markers" />
 
-### Marker labels <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 标记标签 <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-<doc-example title="Marker labels" file="QRange/MarkerLabels" />
+<doc-example title="标记标签" file="QRange/MarkerLabels" />
 
 ::: tip TIP on slots
-In order to use the marker label slots (see below), you must enable them by using the `marker-labels` prop.
+为了使用标记标签插槽(参见下面) ，您必须使用 `marker-labels` 来启用它们。
 :::
 
-<doc-example title="Marker label slots" file="QRange/MarkerLabelSlots" />
+<doc-example title="标记标签插槽" file="QRange/MarkerLabelSlots" />
 
-### Other customizations <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 其他的自定义选项 <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-<doc-example title="Color customizations" file="QRange/RangeColoring" />
+<doc-example title="自定义颜色" file="QRange/RangeColoring" />
 
-<doc-example title="Hide selection bar" file="QRange/NoSelection" />
+<doc-example title="隐藏选择栏" file="QRange/NoSelection" />
 
-<doc-example title="Custom track images" file="QRange/TrackImages" />
+<doc-example title="自定义轨道图像" file="QRange/TrackImages" />
 
-<doc-example title="Track & thumb size" file="QRange/RangeSizes" />
+<doc-example title="轨道和滑块的大小" file="QRange/RangeSizes" />
 
-### Dragging range
+### 可拖拽的范围
 
-Use the `drag-range` or `drag-only-range` props to allow the user to move the selected range or only a predetermined range as a whole.
+使用 `drag-range` 或 `drag-only-range` 属性允许用户移动所选范围或仅移动预定的范围。
 
 <doc-example title="Drag range" file="QRange/Drag" />
 
@@ -94,32 +95,33 @@ Use the `drag-range` or `drag-only-range` props to allow the user to move the se
 
 <doc-example title="Drag only range (fixed interval)" file="QRange/DragOnly" />
 
-### Lazy input
+### 懒输入
 
 <doc-example title="Lazy input" file="QRange/Lazy" />
 
-### Null values
+### 懒输入
 
 <doc-example title="Null values" file="QRange/Null" />
 
-### Reverse
+### 反向
 
 <doc-example title="In reverse" file="QRange/Reverse" />
 
-### Dark, readonly, disable
+### 黑色, 只读, 禁用
 
-<doc-example title="Dark" file="QRange/Dark" dark />
+<doc-example title="黑色" file="QRange/Dark" dark />
 
-<doc-example title="Readonly" file="QRange/Readonly" />
+<doc-example title="只读" file="QRange/Readonly" />
 
-<doc-example title="Disable" file="QRange/Disable" />
+<doc-example title="禁用" file="QRange/Disable" />
 
-### With QItem
+### 搭配 QItem
 
-<doc-example title="With QItem" file="QRange/List" />
+<doc-example title="搭配 QItem" file="QRange/List" />
 
-### Native form submit
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QRange, otherwise formData will not contain it (if it should):
+## 原生表单提交
+
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QRange 声明 `name` 属性，否则表单数据中不会包含它：
 
 <doc-example title="Native form" file="QRange/NativeForm" />
