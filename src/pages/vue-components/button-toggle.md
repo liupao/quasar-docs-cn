@@ -11,8 +11,7 @@ related:
   - /vue-components/toggle
 ---
 
-QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。你可以使用这个组件来充当一个开关或者用于 true/false 的收集。
-The QBtnToggle component is another basic element for user input, similar to QRadio but with buttons. You can use this to supply a way for the user to pick an option from multiple choices.
+QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。你可以使用这个组件来充当一个开关或者用于真假值的收集。
 
 ## QBtnToggle API
 
@@ -22,32 +21,31 @@ The QBtnToggle component is another basic element for user input, similar to QRa
 
 ### 基础
 
-<doc-example title="Basic" file="QBtnToggle/Basic" />
+<doc-example title="基础" file="QBtnToggle/Basic" />
 
-### Design
+### 外形设计
 
 ::: tip
-Since QBtnToggle uses QBtn, you can use design related props of QBtn to style this component.
+因为 QBtnToggle 是 QBtn 的封装，所以您可以将 QBtn 中与样式设计相关的属性用在 QBtnToggle 中 。
 :::
 
-<doc-example title="Some design examples" file="QBtnToggle/Design" />
+<doc-example title="一些外观设计示例" file="QBtnToggle/Design" />
 
-<doc-example title="Spread horizontally" file="QBtnToggle/Spread" />
+<doc-example title="水平铺开" file="QBtnToggle/Spread" />
 
-<doc-example title="On a dark background" file="QBtnToggle/Dark" dark />
+<doc-example title="黑色背景" file="QBtnToggle/Dark" dark />
 
-### Custom content
+### 自定义内容
+下面的第一个 QBtnToggle 在每个按钮上都有鼠标悬浮提示。第二个 QBtnToggle 定制了内容。请注意 `options` 对象中的 `slot` 属性。当你使用这个插槽属性时，你不需要在 `options` 中使用 `label`/`icon` 属性。
 
-First QBtnToggle below has tooltips on each button. Second QBtnToggle has customized the content. Notice the `slot` prop in the `options` Object definition. When you use this `slot` prop, you don't necessary need the `label`/`icon` props in `options`.
+<doc-example title="自定义按钮内容" file="QBtnToggle/CustomContent" />
 
-<doc-example title="Custom buttons content" file="QBtnToggle/CustomContent" />
+### 禁用和只读
 
-### Disable and readonly
+<doc-example title="禁用和只读" file="QBtnToggle/DisableReadonly" />
 
-<doc-example title="Disable and readonly" file="QBtnToggle/DisableReadonly" />
+## 原生表单提交
 
-### Native form submit
-
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QBtnToggle, otherwise formData will not contain it (if it should) - all value are converted to string (native behaviour, so do not use Object values):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QBtnToggle 声明 `name` 属性，否则表单数据中不会包含它：
 
 <doc-example title="Native form" file="QBtnToggle/NativeForm" />
