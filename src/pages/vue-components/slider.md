@@ -1,14 +1,15 @@
 ---
-title: Slider
-desc: The QSlider Vue component is a great way for the user to specify a number value between a minimum and maximum value, with optional steps between valid values.
+title: 滑块
+desc: QSlider 是用户指定最小值和最大值之间的数值的好方法。
 keys: QSlider
 related:
   - /vue-components/range
   - /vue-components/field
 ---
-The QSlider is a great way for the user to specify a number value between a minimum and maximum value, with optional steps between valid values. The slider also has a focus indicator (highlighted slider button), which allows for keyboard adjustments of the slider.
 
-Also check its “sibling”, the [QRange](/vue-components/range) component.
+QSlider 是用户指定最小值和最大值之间的数值的好方法，滑块还有一个焦点指示器（突出显示的滑块按钮），可以通过键盘调整滑块。
+
+也看看另一个相似的组件：[QRange](/vue-components/range)。
 
 ## QSlider API
 
@@ -17,97 +18,97 @@ Also check its “sibling”, the [QRange](/vue-components/range) component.
 ## 用法
 
 ::: warning
-You are responsible for accommodating the space around QSlider so that the label and marker labels won't overlap the other content on your page. You can use CSS margin or padding for this purpose.
+您需要调整 QSlider 周围的空间，以便标签和标记标签不会与页面上的其他内容重叠。您可以为此使用 CSS 边距或填充。
 :::
 
-### Standard
+### 标准
 
-<doc-example title="Standard" file="QSlider/Standard" />
+<doc-example title="标准" file="QSlider/Standard" />
 
-### Vertical
+### 垂直
 
-<doc-example title="Vertical orientation" file="QSlider/Vertical" />
+<doc-example title="垂直方向" file="QSlider/Vertical" />
 
-### With inner min/max <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 内部的最大/最小值  <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-Sometimes you need to restrict the model value to an interval inside of the track's length. For this purpose, use `inner-min` and `inner-max` props. First prop needs to be higher or equal to `min` prop while the latter needs to be lower or equal to the `max` prop.
+有时您需要将模型值限制为轨迹长度内的范围。您可以通过 `inner-min` 和 `inner-max` 属性来实现，前者需要大于等于 `min` 属性，后者需要小于等于 `max` 属性。
 
 <doc-example title="Inner min/max" file="QSlider/InnerMinMax" />
 
-### With step
+### 离散值
 
-<doc-example title="With step" file="QSlider/Step" />
+<doc-example title="设置步长" file="QSlider/Step" />
 
-The `step` property can also be floating point number (or numeric `0` if you need infinite precision).
+`step` 属性也可以是一个浮点数（或者数字 0 如果您需要无效小的精度）。
 
-<doc-example title="Floating point" file="QSlider/FloatingPoint" />
+<doc-example title="浮点数" file="QSlider/FloatingPoint" />
 
 <doc-example title="Snap to steps" file="QSlider/Snap" />
 
-### With label
+### 带有标签
 
-In the example below, move the slider to see the label.
+在下面的示例中，移动滑块以查看标签。
 
-<doc-example title="With label" file="QSlider/Label" />
+<doc-example title="带有标签" file="QSlider/Label" />
 
-<doc-example title="Always display label" file="QSlider/LabelAlways" />
+<doc-example title="始终显示标签" file="QSlider/LabelAlways" />
 
-<doc-example title="Custom label value" file="QSlider/LabelValue" />
+<doc-example title="自定义标签值" file="QSlider/LabelValue" />
 
-The example below is better highlighting how QSlider handles label positioning so that it always stays inside the QSlider's box horizontally.
+下面的示例演示 QSlider 如何处理标签的定位，以使其始终水平地保持在 QSlide 的框内。
 
-<doc-example title="Long label" file="QSlider/LabelLong" />
+<doc-example title="长标签" file="QSlider/LabelLong" />
 
-### Markers
+### 标记
 
-<doc-example title="Markers" file="QSlider/Markers" />
+<doc-example title="标记" file="QSlider/Markers" />
 
-### Marker labels <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 标记标签 <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-<doc-example title="Marker labels" file="QSlider/MarkerLabels" />
+<doc-example title="标记标签" file="QSlider/MarkerLabels" />
 
 ::: tip TIP on slots
-In order to use the marker label slots (see below), you must enable them by using the `marker-labels` prop.
+为了使用标记标签插槽(参见下面) ，您必须使用 `marker-labels` 来启用它们。
 :::
 
-<doc-example title="Marker label slots" file="QSlider/MarkerLabelSlots" />
+<doc-example title="标记标签插槽" file="QSlider/MarkerLabelSlots" />
 
-### Other customizations <q-badge align="top" color="brand-primary" label="v2.4+" />
+### 其他的自定义选项 <q-badge align="top" color="brand-primary" label="v2.4+" />
 
-<doc-example title="Color customizations" file="QSlider/SliderColoring" />
+<doc-example title="自定义颜色" file="QSlider/SliderColoring" />
 
-<doc-example title="Hide selection bar" file="QSlider/NoSelection" />
+<doc-example title="隐藏选择栏" file="QSlider/NoSelection" />
 
-<doc-example title="Custom track images" file="QSlider/TrackImages" />
+<doc-example title="自定义轨道图标" file="QSlider/TrackImages" />
 
-<doc-example title="Track & thumb size" file="QSlider/SliderSizes" />
+<doc-example title="轨道和滑块的大小" file="QSlider/SliderSizes" />
 
-### Lazy input
+### 懒输入
 
 <doc-example title="Lazy input" file="QSlider/Lazy" />
 
-### Null value
+### Null 值
 
 <doc-example title="Null value" file="QSlider/Null" />
 
-### Reverse
+### 反向
 
-<doc-example title="In reverse" file="QSlider/Reverse" />
+<doc-example title="反向" file="QSlider/Reverse" />
 
-### Dark, readonly, disable
+### 黑色, 只读, 禁用
 
-<doc-example title="Dark" file="QSlider/Dark" dark />
+<doc-example title="黑色" file="QSlider/Dark" dark />
 
-<doc-example title="Readonly" file="QSlider/Readonly" />
+<doc-example title="只读" file="QSlider/Readonly" />
 
-<doc-example title="Disable" file="QSlider/Disable" />
+<doc-example title="禁用" file="QSlider/Disable" />
 
 ### With QItem
 
 <doc-example title="With QItem" file="QSlider/List" />
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QSlider, otherwise formData will not contain it (if it should):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QSlider 声明 `name` 属性，否则表单数据中不会包含它：
 
-<doc-example title="Native form" file="QSlider/NativeForm" />
+<doc-example title="原生表单" file="QSlider/NativeForm" />
