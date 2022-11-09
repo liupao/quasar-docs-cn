@@ -1,6 +1,6 @@
 ---
 title: QTime
-desc: The QTime component provides a method to input time.
+desc: QTime 组件提供了输入时间的方法。
 keys: QTime
 related:
   - /vue-components/date
@@ -8,10 +8,10 @@ related:
   - /vue-components/field
 ---
 
-The QTime component provides a method to input time.
+QTime 组件提供了输入时间的方法。
 
 ::: tip
-For handling date and/or time, also check out [Quasar Date Utils](/quasar-utils/date-utils).
+有关处理日期和/或时间，也可以查看 [Quasar 日期实用程序](/quasar-utils/date-utils)。
 :::
 
 ## QTime API
@@ -20,98 +20,98 @@ For handling date and/or time, also check out [Quasar Date Utils](/quasar-utils/
 
 ## 用法
 
-Notice that the model is a String only.
+请注意,该 model 是一个字符串。
 
 ### 基础
 
-<doc-example title="Basic" file="QTime/Basic" overflow />
+<doc-example title="基础" file="QTime/Basic" overflow />
 
-<doc-example title="Landscape" file="QTime/Landscape" overflow />
+<doc-example title="横屏" file="QTime/Landscape" overflow />
 
 ::: tip
-For landscape mode, you can use it along with `$q.screen` to make QTime responsive. Example: `:landscape="$q.screen.gt.xs"`. More info: [Quasar Screen Plugin](/options/screen-plugin).
+对于横向模式，您可以将其与 `$q.screen` 一起使用。以使 QTime 变成响应式的。示例：`:landscape="$q.screen.gt.xs"`。更多信息：[Quasar Screen Plugin](/options/screen-plugin)。
 :::
 
-### Functionality
+### 功能
 
-The 24 hour format is applied depending on the [Quasar Language Pack](/options/quasar-language-packs) that you've set, but you can also force it, like in the example below.
+24小时格式的应用取决于您设置的 [Quasar 语言包](/options/quasar-language-packs)，但您也可以强制使用，如下面的示例所示。
 
-<doc-example title="24h format" file="QTime/Format24h" overflow />
+<doc-example title="24小时格式" file="QTime/Format24h" overflow />
 
-Clicking on the "Now" button sets time to current user time:
+单击 "Now" 按钮将时间设置为当前用户时间：
 
 <doc-example title="Now button" file="QTime/NowBtn" overflow />
 
-<doc-example title="Disable and readonly" file="QTime/DisableReadonly" overflow />
+<doc-example title="禁用和只读" file="QTime/DisableReadonly" overflow />
 
-### Model mask
+### Model 掩码
+默认的 model 数据掩码是 `HH:mm`（设置了`with-seconds` 的话为 `HH:mm:ss`），然而您也可以使用自定义掩码。
 
-The default model mask is `HH:mm` (or `HH:mm:ss` when using `with-seconds` prop), however you can use custom masks too.
+`mask` 可以在 [Quasar Utils > Date utils](/quasar-utils/date-utils#format-for-display) 页面中找到。
 
-The `mask` prop tokens can be found at [Quasar Utils > Date utils](/quasar-utils/date-utils#format-for-display).
-
-::: warning Note on SSR
-Using `x` or `X` (timestamps) in the mask may cause hydration errors on the client, because decoding the model String must be done with `new Date()` which takes into account the local timezone. As a result, if the server is in a different timezone than the client, then the rendered output of the server will differ than the one on the client so hydration will fail.
+::: warning SSR 的注意事项
+在掩码中使用 `x` 或 `X`（时间戳）可能会在客户端上造成水合错误，因为解码 model 字符串必须使用考虑到本地时区的 `new Date()` 完成。因此，如果服务器与客户端处于不同的时区，则服务器的渲染输出将与客户端的不同，因此水合将失败。
 :::
 
-::: danger Note on persian calendar
-When using the persian calendar, the mask for QTime is forced to `HH:mm` or `HH:mm:ss` (if `with-seconds` is specified).
+::: danger 波斯日历的注意事项
+使用波斯日历时，QTime 的掩码强制为`HH:mm` 或 `HH:mm:ss`（如果指定了 `with-seconds`）。
 :::
 
-<doc-example title="Simple mask" file="QTime/MaskSimple" overflow />
+<doc-example title="简单的掩码" file="QTime/MaskSimple" overflow />
 
-If you want to insert strings (including `[` and `]` characters) into your mask, make sure you escape them by surrounding them with `[` and `]`, otherwise the characters might be interpreted as format tokens.
+如果您想在掩码中插入字符串（包括`[`和 `]` 字符），请确保用`[` 和 `]`将其转义，否则这些字符可能会被解释为格式标记。
 
-<doc-example title="Mask with escaped characters" file="QTime/MaskEscape" overflow />
+<doc-example title="带有转义字符的掩码" file="QTime/MaskEscape" overflow />
 
-Using the mask to connect a [QDate](/vue-components/date) and QTime to the same model:
+使用掩码将 [QDate](/vue-components/date) 和 QTime 连接到同一模型：
 
-<doc-example title="QDate and QTime on same model" file="QTime/MaskDateTime" overflow />
+<doc-example title="QDate 和 QTime 使用同一个 model" file="QTime/MaskDateTime" overflow />
 
-### Custom ad-hoc locale
+### 自定义特殊语言环境
 
+如果出于某种原因，您需要使用自定义的特殊语言环境，而不是已设置的当前 Quasar 语言包，您可以使用 `locale` 属性：
 If, for some reason, you need to use a custom ad-hoc locale rather than the current Quasar Language Pack that has been set, you can use the `locale` prop:
 
-<doc-example title="Custom ad-hoc locale" file="QTime/CustomLocale" overflow />
+<doc-example title="自定义特殊语言环境" file="QTime/CustomLocale" overflow />
 
-### Coloring
+### 着色
 
-<doc-example title="Coloring" file="QTime/Color" overflow />
+<doc-example title="着色" file="QTime/Color" overflow />
 
-<doc-example title="Dark" file="QTime/Dark" overflow dark />
+<doc-example title="黑色" file="QTime/Dark" overflow dark />
 
-### Limiting options
+### 限制选项
 
-* You can use the `hour-options`, `minute-options` and `second-options` props to limit user selection to certain times.
-* Alternatively, for a more in-depth way of limiting options, you can also supply a function (second example below) to `options-fn` prop.
+* 您可以使用 `hour-options`，`minute-options` 和 `second-options` 属性将用户选择限制在特定时间。
+* 或者，为了更深入地限制选项，您还可以为使用 `options-fn` 提供一个函数（下面的第二个示例）。
 
-<doc-example title="Options" file="QTime/Options" overflow />
+<doc-example title="选项" file="QTime/Options" overflow />
 
-### With QInput
+### 搭配 QInput
 
 <doc-example title="Input" file="QTime/Input" overflow />
 
-Connecting a QDate and QTime with same model on a QInput:
+在 QInput 上用相同的模型连接 QDate 和 QTime:
 
 <doc-example title="QDate and QTime with QInput" file="QTime/InputFull" overflow />
 
-The following are **helpers** for QInput `mask` and `rules` props. You can use these for convenience or write the string specifying your [custom needs](/vue-components/input#mask).
+这里有一些可以用在 QInput 的 `mask` 和 `rules` 中的工具。为了方便起见，您可以使用它们，也可以编写指定[自定义需求的字符串](/vue-components/input#mask)。
 
-* Property `mask` helpers: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6).
-* Property `rules` helpers: [full list](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js).
+* `mask`  属性：[完整列表](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/input/use-mask.js#L6).
+* `rules` 属性： [完整列表](https://github.com/quasarframework/quasar/blob/dev/ui/src/utils/patterns.js).
 
-Examples: "date", "time", "fulltime".
+例如： "date", "time", "fulltime".
 
-More info: [QInput](/vue-components/input).
+更多信息： [QInput](/vue-components/input).
 
-### With additional buttons
+### 附加在按钮上
 
-You can use the default slot for adding buttons:
+您可以使用默认插槽附加在按钮上：
 
-<doc-example title="With additional buttons" file="QTime/AdditionalButtons" overflow />
+<doc-example title="附加在按钮上" file="QTime/AdditionalButtons" overflow />
 
-### Native form submit
+## 原生表单提交
 
-When dealing with a native form which has an `action` and a `method` (eg. when using Quasar with ASP.NET controllers), you need to specify the `name` property on QTime, otherwise formData will not contain it (if it should):
+当处理一个带有 `action` 和 `method` 的原生表单时（如：使用 Quasar 和 ASP.NET 控制器时），您需要为 QTime 声明 `name` 属性，否则表单数据中不会包含它：
 
 <doc-example title="Native form" file="QTime/NativeForm" />
