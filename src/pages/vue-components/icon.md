@@ -7,27 +7,37 @@ related:
   - /options/quasar-icon-sets
 ---
 
-The QIcon component allows you to easily insert icons within other components or any other area of your pages.
-Quasar supports out of the box: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) and [Bootstrap Icons](https://icons.getbootstrap.com/).
+QIcon 组件允许您轻松地将图标插入其他组件或页面的任何区域中。
 
-Furthermore you can [add support by yourself](/vue-components/icon#custom-mapping) for any icon lib.
+Quasar 对以下图标库的支持是开箱即用的：
+- [Material Icons](https://material.io/icons/)
+- [Font Awesome](https://fontawesome.com/icons)
+- [Ionicons](http://ionicons.com/)
+- [MDI](https://materialdesignicons.com/)
+- [Eva Icons](https://akveo.github.io/eva-icons)
+- [Themify Icons](https://themify.me/themify-icons)
+- [Line Awesome](https://icons8.com/line-awesome)
+- [Bootstrap Icons](https://icons.getbootstrap.com/).
 
-There are multiple types of icons in Quasar: webfont-based, svg-based and image-based. You are not bound to using only one type in your website/app.
+除此之外，您还可以[添加自己的图标库](/vue-components/icon#custom-mapping)
+
+Quasar 中有多种类型的图标：基于 web 字体、基于 svg 和基于图像。您不必在网站/应用程序中仅使用一种类型。
 
 ::: tip
-Related pages: [Installing Icon Libraries](/options/installing-icon-libraries) and [Quasar Icon Sets](/options/quasar-icon-sets).
+相关页面：[安装图标库](/options/installing-icon-libraries) 和 [Quasar 图标集合](/options/quasar-icon-sets).
 :::
 
 ## QIcon API
 
 <doc-api file="QIcon" />
 
-## Size & colors
-The sizing of a QIcon is manipulated by the `font-size` CSS property. Also, QIcon inherits the current CSS text `color` used. For ease of use there are the QIcon `size` and `color` props.
+## 尺寸 & 颜色
+QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的 `color` 属性。
+更简单的方式是使用 QIcon 的 `size` 和 `color` 属性来设置尺寸和颜色。
 
-<doc-example title="Basic" file="QIcon/Basic" />
+<doc-example title="基础" file="QIcon/Basic" />
 
-For `icon` properties on different Quasar components you won't have the means to specify an icon for each platform, but you can achieve the same effect with:
+你可以通过以下方式来实现在不同的平台上使用不同的图标：
 
 ```html
 <q-btn
@@ -35,43 +45,43 @@ For `icon` properties on different Quasar components you won't have the means to
 />
 ```
 
-<doc-example title="Standard sizes" file="QIcon/StandardSizes" />
+<doc-example title="标准尺寸" file="QIcon/StandardSizes" />
 
-## Webfont icons
+## Webfont 图标
 
-::: warning
-If you are using webfont-based icons, make sure that you [installed the icon library](/options/installing-icon-libraries) that you are using, otherwise it won't show up!
+::: warning、
+如果您要使用基于 webfont 的图标，请确保您[安装](/options/installing-icon-libraries)了您正在使用的图标库，否则它将不会显示！
 :::
 
-### Webfont usage
+### Webfont 图标用法
 
 ```html
 <q-icon name="..." />
 ```
 
-| Quasar IconSet name | Name prefix | Examples | Notes |
+| Quasar 图标库名称 | 命名前缀 | 示例 | 注意事项 |
 | --- | --- | --- | --- |
-| material-icons | *None* | thumb_up | Notice the underline character instead of dash or space |
-| material-icons-outlined | o_ | o_thumb_up | Notice the underline character instead of dash or space |
-| material-icons-round | r_ | r_thumb_up | Notice the underline character instead of dash or space |
-| material-icons-sharp | s_ | s_thumb_up | Notice the underline character instead of dash or space |
-| ionicons-v4 | ion-, ion-md-, ion-ios-, ion-logo- | ion-heart, ion-logo-npm, ion-md-airplane | Use QIcon instead of `<ion-icon>` component; Logo icons require 'ion-logo-' prefix |
-| ionicons-v5/v6 | ion- | ion-heart, ion-logo-npm, ion-airplane | Use QIcon instead of `<ion-icon>` component; Logo icons require 'ion-logo-' prefix |
-| fontawesome-v6 | fa-[solid,regular,brands] fa- | "fa-solid fa-ambulance" | QIcon "name" property is same as "class" attribute value in Fontawesome docs examples (where they show `<i>` tags) |
-| fontawesome-v6 Pro| fa-[solid,regular,brands,thin,light,duotone] fa- | "fa-solid fa-ambulance" | Note: a license must be purchased from Fontawesome for this functionality) |
-| fontawesome-v5 | fa[s,r,l,d,b] fa- | "fas fa-ambulance" | QIcon "name" property is same as "class" attribute value in Fontawesome docs examples (where they show `<i>` tags) |
-| mdi-v6/v5/v4/v3 | mdi- | mdi-alert-circle-outline | Notice the use of dash characters; Use only one of mdi-v6, mdi-v5, mdi-v4 or mdi-v3 |
-| eva-icons | eva- | eva-shield-outline, eva-activity-outline | Notice the use of dash characters |
-| themify | ti- | ti-hand-point-up | Notice the use of dash characters |
-| line-awesome | la[s,r,l,d,b] la- | "las la-atom" | QIcon "name" property is same as "class" attribute value in Line Awesome docs examples (where they show `<i>` tags); **@quasar/extras v1.5+** |
-| bootstrap-icons | bi- | bi-bug-fill | Notice the use of dash characters; **@quasar/extras v1.10+** |
+| material-icons | *None* | thumb_up | 注意下划线字符而不是破折号或空格 |
+| material-icons-outlined | o_ | o_thumb_up | 注意下划线字符而不是破折号或空格 |
+| material-icons-round | r_ | r_thumb_up | 注意下划线字符而不是破折号或空格 |
+| material-icons-sharp | s_ | s_thumb_up | 注意下划线字符而不是破折号或空格 |
+| ionicons-v4 | ion-, ion-md-, ion-ios-, ion-logo- | ion-heart, ion-logo-npm, ion-md-airplane | 使用 QIcon 代替 `<ion-icon>` 组件; Logo 图标需要 'ion-logo-' 前缀 |
+| ionicons-v5/v6 | ion- | ion-heart, ion-logo-npm, ion-airplane | 使用 QIcon 代替 `<ion-icon>` 组件; Logo 图标需要 'ion-logo-' 前缀 |
+| fontawesome-v6 | fa-[solid,regular,brands] fa- | "fa-solid fa-ambulance" | QIcon 的 "name" 属性等价于 Fontawesome 文档中示例的 `<i>` 标签的 class 属性。 |
+| fontawesome-v6 Pro| fa-[solid,regular,brands,thin,light,duotone] fa- | "fa-solid fa-ambulance" | 注意: 这项功能必须从 Fontawesome 购买许可证 |
+| fontawesome-v5 | fa[s,r,l,d,b] fa- | "fas fa-ambulance" | QIcon 的 "name" 属性等价于 Fontawesome 文档中示例的 `<i>` 标签的 class 属性。 |
+| mdi-v6/v5/v4/v3 | mdi- | mdi-alert-circle-outline | 注意破折号的使用；仅使用mdi-v6、mdi-v5、mdi-v4或mdi-v3中的一个 |
+| eva-icons | eva- | eva-shield-outline, eva-activity-outline | 注意破折号的使用 |
+| themify | ti- | ti-hand-point-up | 注意破折号的使用 |
+| line-awesome | la[s,r,l,d,b] la- | "las la-atom" | QIcon 的 "name" 属性等价于 Awesome 文档中示例的 `<i>` 标签的 class 属性。**@quasar/extras v1.5+** |
+| bootstrap-icons | bi- | bi-bug-fill | 注意破折号的使用; **@quasar/extras v1.10+** |
 
-### Naming convention
+### 命名约定
 
 #### Material Icons (Google)
 
-* Icon names are always in snake_case.
-* Go to [Material Icons](https://material.io/icons/), look for your desired icon. Remember its name (eg. "all_inbox") and use it.
+* 图标名称总是以下划线连接。
+* 请前往 [Material Icons](https://material.io/icons/)，找到您想要的图标，然后记住他的名字（例如：all_inbox），将其填入 QIcon 的 name 属性中即可。
 
 #### MDI (Material Design Icons)
 
