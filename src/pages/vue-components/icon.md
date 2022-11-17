@@ -49,7 +49,7 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
 
 ## Webfont 图标
 
-::: warning、
+::: warning
 如果您要使用基于 webfont 的图标，请确保您[安装](/options/installing-icon-libraries)了您正在使用的图标库，否则它将不会显示！
 :::
 
@@ -85,54 +85,56 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
 
 #### MDI (Material Design Icons)
 
-* Icon names are in hyphen-separated case and always begin with "mdi-" prefix.
-* Go to [MDI](https://materialdesignicons.com/), look for your desired icon, click on it. A dialog box will appear. Get the title (eg. "account-key"), prefix it with "mdi-" and you get the result (eg. "mdi-account-key").
+* 图标名称总是以中划线划线连接并且带有 "mdi-" 前缀。
+* 请前往 [MDI](https://materialdesignicons.com/)，找到您想要的图标，然后点击它，将会弹出一个对话框，记住它的标题（例如："account-key"），将其加上 "mdi-" 前缀后填入 QIcon 的 name 属性中即可（例如："mdi-account-key"）。
+
 
 #### Fontawesome
 
-* Icon names are in hyphen-serapated case and always begin with "fas fa-", "fab fa-", "fal fa-" or "far fa-" prefixes.
-* Newer versions also have `fa-solid`, `fa-brands`, `fa-light` or `fa-regular` (pro also has `fa-thin`, `fa-duotone`)
-* Go to [FontAwesome](https://fontawesome.com/icons), look for your desired icon, click on it. You'll get to its page. Below the icon name (as title), you will see something like `<i class="fa-solid fa-flag"></i>`. The result is `fa-solid fa-flag` (you can also use `fas fa-flag`).
-* Note: `fas`, `far`, `fab`, `fal`, `fat` and `fad` are deprecated and may not be available in future major versions).
+* 图标名称总是以中划线划线连接并且带有  "fas fa-"， "fab fa-"， "fal fa-" 或 "far fa-" 的前缀。
+* 新的版本中还有有 `fa-solid`, `fa-brands`, `fa-light` 或 `fa-regular` （pro 版本还有 `fa-thin`, `fa-duotone`）
+* 请前往 [FontAwesome](https://fontawesome.com/icons)，找到您想要的图标，然后点击它，然后跳转到图标详情页面。在图标名称的下方，您会看到类似 `<i class="fa-solid fa-flag"></i>` 的代码，其中 `fa-solid fa-flag` 就是我们需要的结果（您也可以使用 `fas fa-flag`）。
+* 注意：`fas`, `far`, `fab`, `fal`, `fat` 和 `fad` 已经被废弃了，并且可能在将来的版本中不可用。
 
 #### Ionicons
 
-* Icon names are in hyphen-separated case and always begin with "ion-", "ion-md-", "ion-ios-" or "ion-logo-" prefixes.
-* Go to [Ionicons (v6)](https://ionicons.com/) or [Ionicons (v4)](https://ionicons.com/v4), look for your desired icon, click on it. At the bottom of the page there will appear a popup. Notice something like `<ion-icon name="square-outline"></ion-icon>`. Remember the name (eg. "square-outline"). Based on the variant that you want (auto-detect platform, material or iOS), you'd get the result: `ion-square-outline` or `ion-md-square-outline` or `ion-ios-square-outline`.
-* **Note:** Starting with v5, Ionicons no longer supplies a webfont. Also,they no longer do Material or IOS variants.
+* 图标名称总是以中划线划线连接并且带有 "ion-", "ion-md-", "ion-ios-" 或 "ion-logo-" 前缀。
+* 请前往 [Ionicons (v6)](https://ionicons.com/) or [Ionicons (v4)](https://ionicons.com/v4)，找到您想要的图标，点击它，在页面的底部将会弹出一个对话框，注意其中类似 `<ion-icon name="square-outline"></ion-icon>` 的代码，记住它的名字（例如："square-outline"）。 根据您想要的变体（自动检测平台、材料或iOS），您将得到以下结果：`ion-square-outline` 或`ion-md-square-outline` or `ion-ios-square-outline`。
+* **注意：**从 v5 开始，Ionicons 不在使用 Ionicons，也不再提供 Material or IOS 变种。
 
 #### Eva Icons
 
-* Icon names are in hyphen-separated case and always begin with "eva-" prefix.
-* Go to [Eva Icons](https://akveo.github.io/eva-icons), look for your desired icon, click on it. A dialog box will appear. Get the name from there (eg. "attach-outline"), prefix it with "eva" and the result is "eva-attach-outline".
+* 图标名称总是以中划线划线连接并且带有 "eva-" 前缀。
+* 请前往 [Eva Icons](https://akveo.github.io/eva-icons)，找到您想要的图标，点击它，将会弹出一个对话框，记住它的名称（例如："attach-outline"），将其加上 "eva-"  前缀后填入 QIcon 的 name 属性中即可（例如："eva-attach-outline"）。
 
 #### Themify
 
-* Icon names are in hyphen-separated case and always begin with "ti-" prefix.
-* Go to [Themify](https://themify.me/themify-icons), look for your desired icon. Remember its name (eg. "ti-arrow-top-right") and use it.
+* 图标名称总是以中划线划线连接并且带有 "ti-" 前缀。
+* 请前往 [Themify](https://themify.me/themify-icons)，找到您想要的图标，然后记住它的名称（例如："ti-arrow-top-right"），将其填入 QIcon 的 name 属性中即可。
 
 #### Line Awesome
 
-* Icon names are in hyphen-separated case and always begin with "la" prefix.
-* Go to [Line Awesome](https://icons8.com/line-awesome), look for your desired icon, click on it. A dialog box will appear. You'll see something like `<i class="lab la-behance-square"></i>`. Remember its name (eg. "lab la-behance-square") and use it.
+* 图标名称总是以中划线划线连接并且带有 "la-" 前缀。
+* 请前往 [Line Awesome](https://icons8.com/line-awesome)，找到您想要的图标，点击它将会弹出一个对话框。您会看到类似 `<i class="lab la-behance-square"></i>` 的代码，记住它的名称（例如："ti-arrow-top-right"），将其填入 QIcon 的 name 属性中即可（示例："lab la-behance-square"）。
 
 #### Bootstrap Icons
 
-* Icon names are in hyphen-separated case and always begin with "bi-" prefix.
-* Go to [Bootstrap Icons](https://icons.getbootstrap.com/), look for your desired icon. Remember its name (eg. "bi-bug-fill") and use it.
+* 图标名称总是以中划线划线连接并且带有 "bi-" 前缀。
+* 请前往 [Bootstrap Icons](https://icons.getbootstrap.com/)，找到您想要的图标，然后记住它的名称，将其加上 "bi-" 前缀后填入 QIcon 的 name 属性中即可（例如："bi-bug-fill"）。
 
-## Svg icons
+## Svg 图标
 
-There are many advantages of using only svg icons in your website/app:
-* Better app footprint -- only used icons will be included in the final build (treeshaking in action)
-* Better quality icons
-* No need for including equivalent webfonts from `@quasar/extras` or CDN.
+在您的网站/应用程序中仅使用 SVG 图标有许多优点：
 
-The current disadvantage is that it is more tedious to use these icons than their webfont counterpart.
+* 应用程序占用更小的空间–最终构建中将只包含使用过的图标（使用树摇）
+* 质量更好的图标
+* 无需引入 `@quasar/extras` 或 CDN 中的 Web 字体资源。
 
-### Svg usage
+目前的缺点是，使用这些图标比使用 webfont 图标的代码更冗长。
 
-Notice in the example below that we want to avoid the Vue observable wrapping, so we inject icons on the instance through created() hook. It will work if declared in data() too, but... overhead.
+### Svg 用法
+
+注意，在下面的示例中，我们希望避免 Vue 将这些数据包装成响应式数据，因此我们通过 create () 生命周期在实例中注入图标。如果在 data() 中声明这些数据也可以正常工作，但是...会造成额外的开销。
 
 ```html
 <template>
@@ -159,10 +161,10 @@ export default {
 ```
 
 ::: tip
-If you are only using svg icons (and have configured a [Quasar Icon Set](/options/quasar-icon-sets)) then you don't need the webfont equivalent in your app at all.
+如果你只使用svg图标（并且配置了 [Quasar图标集](/options/quasar-icon-sets)），那么你的应用程序中根本不需要 webfont。
 :::
 
-| Vendor | Quasar IconSet name | Import Icons from | Requirements |
+| 图标库 | Quasar 图标集名称 | 从此导入  | 版本要求 |
 | --- | --- | --- | --- |
 | Material Icons (Google) | svg-material-icons | @quasar/extras/material-icons | |
 | Material Icons Outlined (Google) | svg-material-icons-outlined | @quasar/extras/material-icons-outlined | @quasar/extras v1.9+; |
@@ -179,135 +181,134 @@ If you are only using svg icons (and have configured a [Quasar Icon Set](/option
 | Line Awesome | svg-line-awesome | @quasar/extras/line-awesome | @quasar/extras v1.5+ |
 | Bootstrap Icons | svg-bootstrap-icons | @quasar/extras/bootstrap-icons | @quasar/extras v1.10+ |
 
-### Import guide
+### 导入指南
 
-Svg icons are supplied by `@quasar/extras` (although you can supply [your own svg icons](/vue-components/icon#svg-icon-format) too!). Here's the ins and outs of the import syntax:
+Svg 图标由 `@quasar/extras` 提供（您也可以提供自己的Svg图标！）。以下是导入语法：
 
 #### SVG Material Icons (Google)
 
-* Icon names are in camel-case and always begin with "mat" prefix.
-* Go to [Material Icons](https://material.io/icons/), look for your desired icon and remember its name (eg. "all_inbox"), prefix it with "mat" and camel-case the result (eg. "matAllInbox").
-* Import statement example: `import { matAllInbox } from '@quasar/extras/material-icons'`.
+* 图标名称总是驼峰命名并且带有 "mat" 前缀。
+* 请前往 [Material Icons](https://material.io/icons/)，找到您想要的图标，点击它，然后记住它的名字（例如："all_inbox"），加上 前缀后变成驼峰命名 "mat" 就是我们需要的结果（示例："matAllInbox"）。
+* 导入示例：`import { matAllInbox } from '@quasar/extras/material-icons'`.
 
 #### SVG Material Icons Outlined (Google)
 
-* Icon names are in camel-case and always begin with "outlined" prefix.
-* Go to [Material Icons](https://material.io/icons/), look for your desired icon and remember its name (eg. "all_inbox"), prefix it with "outlined" and camel-case the result (eg. "outlinedAllInbox").
-* Import statement example: `import { outlinedAllInbox } from '@quasar/extras/material-icons-outlined'`.
+* 图标名称总是驼峰命名并且带有 "outlined" 前缀。
+* 请前往 [Material Icons](https://material.io/icons/)，找到您想要的图标，点击它，然后记住它的名字（例如："all_inbox"），加上 "outlined" 前缀后变成驼峰命名就是我们需要的结果（示例： "outlinedAllInbox"）。
+* 导入示例：`import { outlinedAllInbox } from '@quasar/extras/material-icons-outlined'`.
 
 #### SVG Material Icons Sharp (Google)
 
-* Icon names are in camel-case and always begin with "sharp" prefix.
-* Go to [Material Icons](https://material.io/icons/), look for your desired icon and remember its name (eg. "all_inbox"), prefix it with "sharp" and camel-case the result (eg. "sharpAllInbox").
-* Import statement example: `import { sharpAllInbox } from '@quasar/extras/material-icons-sharp'`.
+* 图标名称总是驼峰命名并且带有 "sharp" 前缀。
+* 请前往 [Material Icons](https://material.io/icons/)，找到您想要的图标，点击它，然后记住它的名字（例如："all_inbox"），加上 "sharp" 前缀后变成驼峰命名就是我们需要的结果（示例："sharpAllInbox"）。
+* 导入示例：`import { sharpAllInbox } from '@quasar/extras/material-icons-sharp'`.
 
 #### SVG Material Icons Round (Google)
 
-* Icon names are in camel-case and always begin with "round" prefix.
-* Go to [Material Icons](https://material.io/icons/), look for your desired icon and remember its name (eg. "all_inbox"), prefix it with "round" and camel-case the result (eg. "roundAllInbox").
-* Import statement example: `import { roundAllInbox } from '@quasar/extras/material-icons-round'`.
+* 图标名称总是驼峰命名并且带有 "round" 前缀。
+* 请前往 [Material Icons](https://material.io/icons/)，找到您想要的图标，点击它，然后记住它的名字（例如："all_inbox"），加上 "round" 前缀后变成驼峰命名就是我们需要的结果（示例："roundAllInbox"）。
+* 导入示例： `import { roundAllInbox } from '@quasar/extras/material-icons-round'`.
 
 #### SVG MDI (Material Design Icons)
 
-* Icon names are in camel-case and always begin with "mdi" prefix.
-* Go to [MDI](https://materialdesignicons.com/), look for your desired icon, click on it. A dialog box will appear. Get the title (eg. "account-key"), prefix it with "mdi" and camel-case the result (eg. "mdiAccountKey").
-* Import statement example: `import { mdiAccountKey } from '@quasar/extras/mdi-v6'`.
+* 图标名称总是驼峰命名并且带有 "mdi" 前缀。
+* 请前往 [MDI](https://materialdesignicons.com/)，找到您想要的图标，点击它将会出现一个对话框，获得标题（例如："account-key"），加上 "mdi" 前缀后变成驼峰命名就是我们需要的结果（示例： "mdiAccountKey"）。
+* 导入示例： `import { mdiAccountKey } from '@quasar/extras/mdi-v6'`.
 
 #### SVG Fontawesome
 
-* Icon names are in camel-case and always begin with "fas", "fab", "fal" or "far" prefixes.
-* Go to [FontAwesome](https://fontawesome.com/icons), look for your desired icon, click on it. You'll get to its page. Below the icon name (as title), you will see something like `<i class="fas fa-flag"></i>`. This would translate to `fasFlag`. The prefix from the tag is important.
-* Note that we cannot supply the "Pro" version of the icons in svg format because of the license.
-* Import statement example: `import { fasFlag } from '@quasar/extras/fontawesome-v6'`.
-* The Quasar SVG form is still using `fas`, `far` and `fab`, instead of the newer `fa-solid`, `fa-regular` and `fa-brands`.
+* 图标名称总是驼峰命名并且带有 "fas", "fab", "fal" 或 "far" 前缀。
+* 请前往 [FontAwesome](https://fontawesome.com/icons)，找到您想要的图标，点击它，您将会跳转到图标详情页。在图标名称的下方，您会看到类似 `<i class="fas fa-flag"></i>` 的代码，它应该转换成 `fasFlag`。标签中的前缀是很重要的。
+* 注意，由于许可证的原因在 Pro 版本中我们无法使用 svg 格式的图标。
+* 导入示例： `import { fasFlag } from '@quasar/extras/fontawesome-v6'`.
+* Quasar 的 SVG 格式依然使用 `fas`, `far` 和 `fab`，而不是较新的 `fa-solid`, `fa-regular` 和 `fa-brands`.
 
 #### SVG Ionicons
 
-* Ionicons v4: Icon names are in camel-case and always begin with "ionMd" or "ionIos" prefixes.
-* Ionicons v5/v6: Icon names are in camel-case and always begin with "ion" prefix.
-* Ionicons v4: Go to [Ionicons v4](https://ionicons.com/v4/), look for your desired icon, click on it. At the bottom of the page there will appear a popup. Notice something like `<ion-icon name="square-outline"></ion-icon>`. Remember the name (eg. "square-outline"). Camel-case this name and prefix it with either "ionMd" (for material variant) or "ionIos" (for iOS variant).
-* Ionicons v5/v6: Go to [Ionicons v6](https://ionicons.com/), look for your desired icon, click on it. At the bottom of the page there will appear a popup. Notice something like `<ion-icon name="square-outline"></ion-icon>`. Remember the name (eg. "square-outline"). Prefix it with "ion" and camel-case the result (eg. "ionSquareOutline").
-* Ionicons v4: Import statement example: `import { ionMdSquareOutline } from '@quasar/extras/ionicons-v4'`.
-* Ionicons v5/v6: Import statement example: `import { ionSquareOutline } from '@quasar/extras/ionicons-v5'`.
+* Ionicons v4: 图标名称总是驼峰命名并且带有 "ionMd" or "ionIos" 前缀。
+* Ionicons v5/v6: 图标名称总是驼峰命名并且带有 "ion" 前缀。
+* Ionicons v4: 请前往 [Ionicons v4](https://ionicons.com/v4/)，找到您想要的图标，点击它，页面底部会出现一个弹窗，请注意其中类似 `<ion-icon name="square-outline"></ion-icon>` 的代码。记住这个名字（例如："square-outline"）。将其加上 "ionMd" 或 "ionIos"（前者是 material 风格，后者是 IOS 风格） 前缀后变成驼峰命名就是我们需要的结果。
+* Ionicons v5/v6: 请前往 [Ionicons v6](https://ionicons.com/)，找到您想要的图标，点击它 页面底部会出现一个弹窗，请注意其中类似 `<ion-icon name="square-outline"></ion-icon>`. 记住这个名字（例如："square-outline"）。加上 "ion" 前缀后变成驼峰命名就是我们需要的结果（示例："ionSquareOutline"）。
+* Ionicons v4: 导入示例：`import { ionMdSquareOutline } from '@quasar/extras/ionicons-v4'`.
+* Ionicons v5/v6: 导入示例：`import { ionSquareOutline } from '@quasar/extras/ionicons-v5'`.
 
 #### SVG Eva Icons
 
-* Icon names are in camel-case and always begin with "eva" prefix.
-* Go to [Eva Icons](https://akveo.github.io/eva-icons), look for your desired icon, click on it. A dialog box will appear. Get the name from there (eg. "attach-outline"), prefix it with "eva" and camel-case the result (eg. "evaAttachOutline").
-* Import statement example: `import { evaAttachOutline } from '@quasar/extras/eva-icons'`.
+* 图标名称总是驼峰命名并且带有 "eva" 前缀。
+* 请前往 [Eva Icons](https://akveo.github.io/eva-icons)，找到您想要的图标，获得图标的名称（例如："attach-outline"），加上 "eva" 前缀后变成驼峰命名就是我们需要的结果（示例："evaAttachOutline"）。
+* 导入示例：`import { evaAttachOutline } from '@quasar/extras/eva-icons'`.
 
 #### SVG Themify
 
-* Icon names are in camel-case and always begin with "ti" prefix.
-* Go to [Themify](https://themify.me/themify-icons), look for your desired icon. Remember its name (eg. "ti-arrow-top-right"), prefix it with "ti" and camel-case the result (eg. "tiArrowTopRight").
-* Import statement example: `import { tiArrowTopRight } from '@quasar/extras/themify'`.
+* 图标名称总是驼峰命名并且带有 "ti" 前缀。 "ti" prefix.
+* 请前往 [Themify](https://themify.me/themify-icons)，找到您想要的图标，点击它获得图标的名称（例如："arrow-top-right"），加上 "ti" 前缀后变成驼峰命名就是我们需要的结果（示例："evaAttachOutline"）。
+* 导入示例：`import { tiArrowTopRight } from '@quasar/extras/themify'`.
 
 #### SVG Line Awesome
 
-* Icon names are in camel-case and always begin with "la" prefix.
-* Go to [Line Awesome](https://icons8.com/line-awesome), look for your desired icon, click on it. A dialog box will appear. You'll see something like `<i class="lab la-behance-square"></i>`. This would translate to: `laBehanceSquare`. There is a special case though (only for solid icons!): if the prefix before "la-" is "las" (eg. `<i class="las la-atom"></i>`), then you need to suffix "la-atom" with "-solid" and camel-case the result (eg. `laAtomSolid`).
-* Import statement example: `import { laBehanceSquare } from '@quasar/extras/line-awesome'`.
+* 图标名称总是驼峰命名并且带有 "la" 前缀。
+* 请前往 [Line Awesome](https://icons8.com/line-awesome)，找到您想要的图标，点击它将会出现一个对话框。您会看见类似：`<i class="lab la-behance-square"></i>` 的代码。它应该被转换成 `laBehanceSquare`。这里有一个特例（只针对 solid 图标），如果 "la-" 前缀之前有 "las"，那么我们需要再加上一个 "-solid" 后缀，例如：`<i class="las la-atom"></i>` 需要转换成 `laAtomSolid`。
+* 导入示例：`import { laBehanceSquare } from '@quasar/extras/line-awesome'`.
 
 #### SVG Bootstrap Icons
 
-* Icon names are in camel-case and always begin with "bi" prefix.
-* Go to [Bootstrap Icons](https://icons.getbootstrap.com/), look for your desired icon. Remember its name (eg. "bi-bug-fill"), camel-case the result (eg. "biBugFill").
-* Import statement example: `import { biBugFill } from '@quasar/extras/bootstrap-icons'`.
+* 图标名称总是驼峰命名并且带有 "bi" 前缀。
+* 请前往 [Bootstrap Icons](https://icons.getbootstrap.com/)，找到您想要的图标，点击它记住它的名字（例如："bi-bug-fill"），加上 "bi-" 前缀后变成驼峰命名就是我们需要的结果（示例："biBugFill"）。
+* 导入示例：`import { biBugFill } from '@quasar/extras/bootstrap-icons'`.
 
-### Svg icon format
+### Svg 图标格式
 
-You can also supply your own svg icons. An svg icon is essentially a String with the following syntax:
+您还可以提供自己的 svg 图标。svg 图标本质上是具有以下语法的字符串：
 
 ```
-Syntax: "<path>&&<path>&&...|<viewBox>"
+语法： "<path>&&<path>&&...|<viewBox>"
            P       P             V
-                (optional)   (optional)
-                             (default: 0 0 24 24)
-
-P is a path tag with following syntax (each are attributes):
+                (可选的)   (可选的)
+                             (默认: 0 0 24 24)
+P 是符合以下语法的 path（每个都是属性）：
         "<d>@@<style>@@<transform>"
-        (required)
-            (optional)
-                     (optional)
+        (必须的)
+            (可选的)
+                     (可选的)
 ```
 
-Examples:
+示例：
 
 ```
-// Simplest ("<path>"):
+// 最简单的 ("<path>"):
   M9 3L5 6.99h3V14h2V6.99h3L9 3zm7 14.01V10h-2v7.01h-3L15 21l4-3.99h-3z
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 24 24">
   <path d="M9 3L5 6.99h3V....."/>
 </svg>
 ```
 
 ```
-// Simplest with custom viewBox ("<path>|<viewBox>"):
+// 自定义 viewBox ("<path>|<viewBox>"):
   M9 3L5 6.99h3V14h2V6.99h3L9 3zm7 14.01V10h-2v7.01h-3L15 21l4-3.99h-3z|0 0 104 104
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 104 104">
   <path d="M9 3L5 6.99h3V....."/>
 </svg>
 ```
 
 ```
-// Path with custom style ("<path>@@<style>|<viewBox>"):
+// Path 自定义 style ("<path>@@<style>|<viewBox>"):
   M48,96L464,96 464,416 48,416z@@fill:none;stroke:currentColor.....|0 0 512 512
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 512 512">
   <path d="M416,480,256,357....." style="fill:none;stroke:curren..." />
 </svg>
 ```
 
 ```
-// Path with custom style and transform ("<path>@@<style>@@transform"):
+// Path 自定义 style 和 transform ("<path>@@<style>@@transform"):
   M9 3L5 6.99h3V...@@fill:none;stroke:cu.....@@translate(10 1) rotate(180)
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 24 24">
   <path
     d="M9 3L5 6.99h3V....."
@@ -318,12 +319,12 @@ Examples:
 ```
 
 ```
-// Path with custom transform ("<path>@@@@transform"):
+// Path 自定义 transform ("<path>@@@@transform"):
 // (Notice style separator is still specified)
 
   M9 3L5 6.99h3V...@@@@translate(2 4) rotate(180)
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 24 24">
   <path
     d="M9 3L5 6.99h3V....."
@@ -336,7 +337,7 @@ Examples:
 // Multi-paths -- any number of paths are possible ("<path>&&<path>|<viewBox>"):
   M416,480,256,357.41,96,480V32H416Z&&M368,64L144 256 368 448 368 64z|0 0 512 512
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 512 512">
   <path d="M416,480,256,357....." />
   <path d="M368,64L144 256 368...." />
@@ -347,7 +348,7 @@ Examples:
 // Multi-paths, each with style and transform ("<path>&&<path>|<viewBox>"):
   M9 3L5 6.99h3V...@@stroke-width:5px@@rotate(45)&&M416,480,256,...@@stroke-width:2px@@rotate(15)&&M368,64L144 2...@@stroke-width:12px@@rotate(5)|0 0 512 512
 
-// equivalent to:
+// 等于：
 <svg viewBox="0 0 512 512">
   <path
     d="M9 3L5 6.99h3V....."
@@ -481,7 +482,7 @@ iconMapFn (String: iconName) => Object / void 0 (undefined)
  1. Defines how to interpret icon
  {
    cls: String // class name(s)
-   content: String // optional, in case you are using a ligature font
+   content: String // 可选的, in case you are using a ligature font
                    // and you need it as content of the QIcon
   }
 
