@@ -1,0 +1,2711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+  <!-- Created By http://www.zhetao.com/sitemapcreator, URLs: 300 Page: 1 Generated at: 2022-11-22 13:03:02 -->
+    <title><![CDATA[Quasa...]]></title>
+    <link>https://www.quasar-cn.cn/</link>
+    <generator>http://www.zhetao.com/sitemapcreator</generator>
+    <description><![CDATA[]]></description>
+
+    <item>
+      <title><![CDATA[Quasar中文文档]]></title>
+      <link>https://www.quasar-cn.cn/</link>
+      <guid>https://www.quasar-cn.cn/</guid>
+      <author>null</author>
+      <description><![CDATA[基于vuejs的开源前端框架，高性能，内置丰富的css和vue组件库，响应式支持，一套代码可以编译出SPA，PWA，SSR，手机应用和桌面应用。明智的人选择vue，高产的人选择quasar+vue。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[为什么要选择 Quasar? | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/introduction-to-quasar</link>
+      <guid>https://www.quasar-cn.cn/introduction-to-quasar</guid>
+      <author>null</author>
+      <description><![CDATA[What Quasar is and how it can considerably reduce your development time and costs.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Sponsors and Backers | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/sponsors-and-backers</link>
+      <guid>https://www.quasar-cn.cn/sponsors-and-backers</guid>
+      <author>null</author>
+      <description><![CDATA[The list of sponsors and backers who are donating to Quasar Framework development.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Why Donate? | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/why-donate</link>
+      <guid>https://www.quasar-cn.cn/why-donate</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar Team's manifesto on why it is essential to donate towards the development of the framework.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar API 搜索 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/api-explorer</link>
+      <guid>https://www.quasar-cn.cn/api-explorer</guid>
+      <author>null</author>
+      <description><![CDATA[搜索 Quasar 所有的组件，指令，插件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar 视频教程 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/video-tutorials</link>
+      <guid>https://www.quasar-cn.cn/video-tutorials</guid>
+      <author>null</author>
+      <description><![CDATA[下面的视频教程都是由社区贡献的。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Meet the Team | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/meet-the-team</link>
+      <guid>https://www.quasar-cn.cn/meet-the-team</guid>
+      <author>null</author>
+      <description><![CDATA[The list of people behind Quasar Framework.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Getting Started - Pick a Quasar Flavour | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/pick-quasar-flavour</link>
+      <guid>https://www.quasar-cn.cn/start/pick-quasar-flavour</guid>
+      <author>null</author>
+      <description><![CDATA[Get started with Quasar by picking one of its flavours: Quasar CLI, Vue CLI or UMD]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar CLI | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/quasar-cli</link>
+      <guid>https://www.quasar-cn.cn/start/quasar-cli</guid>
+      <author>null</author>
+      <description><![CDATA[How to use the Quasar CLI, the premium developer experience for free.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar UMD - CDN install | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/umd</link>
+      <guid>https://www.quasar-cn.cn/start/umd</guid>
+      <author>null</author>
+      <description><![CDATA[How to use the Unified Module Definition form of Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Vite plugin for Quasar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/vite-plugin</link>
+      <guid>https://www.quasar-cn.cn/start/vite-plugin</guid>
+      <author>null</author>
+      <description><![CDATA[How to embed Quasar into a Vite app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Vue CLI Quasar Plugin | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/vue-cli-plugin</link>
+      <guid>https://www.quasar-cn.cn/start/vue-cli-plugin</guid>
+      <author>null</author>
+      <description><![CDATA[How to embed Quasar into a Vue CLI app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[如何使用 Vue | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/how-to-use-vue</link>
+      <guid>https://www.quasar-cn.cn/start/how-to-use-vue</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 关于 Vue 的教程]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar Playground | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/playground</link>
+      <guid>https://www.quasar-cn.cn/start/playground</guid>
+      <author>null</author>
+      <description><![CDATA[Play with Quasar on a jsFiddle, Codepen or Codesandbox templates.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[发行说明 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/release-notes</link>
+      <guid>https://www.quasar-cn.cn/start/release-notes</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar-core 的更新日志]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar 的发展计划 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/roadmap</link>
+      <guid>https://www.quasar-cn.cn/start/roadmap</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 框架的发展计划]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[升级指南 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/upgrade-guide</link>
+      <guid>https://www.quasar-cn.cn/start/upgrade-guide</guid>
+      <author>null</author>
+      <description><![CDATA[如何将 Quasar 项目从老的项目升级收到新的版本]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Configure VS Code | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/start/vs-code-configuration</link>
+      <guid>https://www.quasar-cn.cn/start/vs-code-configuration</guid>
+      <author>null</author>
+      <description><![CDATA[How to configure VS Code for best usage with Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Contribution Guide | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/contribution-guide/contribution-guide</link>
+      <guid>https://www.quasar-cn.cn/contribution-guide/contribution-guide</guid>
+      <author>null</author>
+      <description><![CDATA[How to contribute to Quasar Framework.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Active Project, Goals and Maintainers | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/contribution-guide/running-projects</link>
+      <guid>https://www.quasar-cn.cn/contribution-guide/running-projects</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar's active projects, goals and maintainers.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[How-to Start a New Project | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/contribution-guide/new-project</link>
+      <guid>https://www.quasar-cn.cn/contribution-guide/new-project</guid>
+      <author>null</author>
+      <description><![CDATA[How to start a new project for Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[The Role of the Project Maintainer | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/contribution-guide/project-maintainer</link>
+      <guid>https://www.quasar-cn.cn/contribution-guide/project-maintainer</guid>
+      <author>null</author>
+      <description><![CDATA[The role of a Quasar project manager]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Commit Conventions | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/contribution-guide/commit-conventions</link>
+      <guid>https://www.quasar-cn.cn/contribution-guide/commit-conventions</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar commit conventions]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quaasr 中的$q 对象 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/the-q-object</link>
+      <guid>https://www.quasar-cn.cn/options/the-q-object</guid>
+      <author>null</author>
+      <description><![CDATA[如何使用 Quaasr 中的$q 对象。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/app-icons</link>
+      <guid>https://www.quasar-cn.cn/options/app-icons</guid>
+      <author>null</author>
+      <description><![CDATA[管理 Quasar 的应用图标和启动页面。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SEO with Quasar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/seo</link>
+      <guid>https://www.quasar-cn.cn/options/seo</guid>
+      <author>null</author>
+      <description><![CDATA[如何在 Quasar 中进行搜索引擎优化。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar 语言包 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/quasar-language-packs</link>
+      <guid>https://www.quasar-cn.cn/options/quasar-language-packs</guid>
+      <author>null</author>
+      <description><![CDATA[如何配置 Quasar 的语言包。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[应用程序多语言国际化 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/app-internationalization</link>
+      <guid>https://www.quasar-cn.cn/options/app-internationalization</guid>
+      <author>null</author>
+      <description><![CDATA[如何在 Quasar 中使用 vue-i18n。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[RTL 支持 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/rtl-support</link>
+      <guid>https://www.quasar-cn.cn/options/rtl-support</guid>
+      <author>null</author>
+      <description><![CDATA[在 Quasar 中支持从右到左的布局。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[安装图标库 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/installing-icon-libraries</link>
+      <guid>https://www.quasar-cn.cn/options/installing-icon-libraries</guid>
+      <author>null</author>
+      <description><![CDATA[如果在 Quasar 中引用图标库]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar Icon Sets | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/quasar-icon-sets</link>
+      <guid>https://www.quasar-cn.cn/options/quasar-icon-sets</guid>
+      <author>null</author>
+      <description><![CDATA[How to configure icon sets for Quasar components.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[平台检测 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/platform-detection</link>
+      <guid>https://www.quasar-cn.cn/options/platform-detection</guid>
+      <author>null</author>
+      <description><![CDATA[如何检测 Quasar 运行在哪个平台。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[屏幕插件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/screen-plugin</link>
+      <guid>https://www.quasar-cn.cn/options/screen-plugin</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供了屏幕插件来帮助开发者通过 js 开发出动态的响应式的页面]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[动画 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/animations</link>
+      <guid>https://www.quasar-cn.cn/options/animations</guid>
+      <author>null</author>
+      <description><![CDATA[为 Quasar 程序提供 Animate.css 支持]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar 组件的过渡效果 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/options/transitions</link>
+      <guid>https://www.quasar-cn.cn/options/transitions</guid>
+      <author>null</author>
+      <description><![CDATA[开箱即用的 Quasar 组件过渡效果]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Typography 字体和排版 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/typography</link>
+      <guid>https://www.quasar-cn.cn/style/typography</guid>
+      <author>null</author>
+      <description><![CDATA[The typography of a Quasar app and its helper CSS classes.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Color Palette | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/color-palette</link>
+      <guid>https://www.quasar-cn.cn/style/color-palette</guid>
+      <author>null</author>
+      <description><![CDATA[How to use and customize the Quasar Color Palette.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[主题 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/theme-builder</link>
+      <guid>https://www.quasar-cn.cn/style/theme-builder</guid>
+      <author>null</author>
+      <description><![CDATA[Quaasr 主题构建器，帮助你的 app 构建主题颜色]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[暗色/夜间模式 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/dark-mode</link>
+      <guid>https://www.quasar-cn.cn/style/dark-mode</guid>
+      <author>null</author>
+      <description><![CDATA[处理 Quasar 的暗色/夜间模式。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS 间距类 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/spacing</link>
+      <guid>https://www.quasar-cn.cn/style/spacing</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供的这些 CSS 工具类用于简化元素排版时的内外间距，并且是响应式的]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS Shadows (Elevation) | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/shadows</link>
+      <guid>https://www.quasar-cn.cn/style/shadows</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供了 css 工具类帮助给 DOM 添加阴影]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Breakpoints | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/breakpoints</link>
+      <guid>https://www.quasar-cn.cn/style/breakpoints</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 的 css 断点列表。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Body classes | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/body-classes</link>
+      <guid>https://www.quasar-cn.cn/style/body-classes</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar's helper classes that get added to document.body.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS 可见性 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/visibility</link>
+      <guid>https://www.quasar-cn.cn/style/visibility</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供了下述 CSS 工具类来帮助你响应式的控制组件或 DOM 的可见性。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS 定位工具类 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/positioning</link>
+      <guid>https://www.quasar-cn.cn/style/positioning</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供了下述 CSS 工具类帮你定位 DOM。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Sass/SCSS 变量 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/sass-scss-variables</link>
+      <guid>https://www.quasar-cn.cn/style/sass-scss-variables</guid>
+      <author>null</author>
+      <description><![CDATA[如何使用 Quasar 预设的 Sass/SCSS 变量。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[其他的 CSS 工具类 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/other-helper-classes</link>
+      <guid>https://www.quasar-cn.cn/style/other-helper-classes</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 提供的关于鼠标，大小，方向和边框相关的 CSS 辅助类。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar 内置 css 的代码提示 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/style/intellisense-css-vscode</link>
+      <guid>https://www.quasar-cn.cn/style/intellisense-css-vscode</guid>
+      <author>null</author>
+      <description><![CDATA[如何在 vscode 中获取 quasar 内置 css 的代码提示。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Flexbox 介绍 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/introduction-to-flexbox</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/introduction-to-flexbox</guid>
+      <author>null</author>
+      <description><![CDATA[什么是 flexbox CSS，如何将其应用到 Quasar 中]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[网格行 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/row</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/row</guid>
+      <author>null</author>
+      <description><![CDATA[如何在 Quasar 中使用网格行。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[网格列 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/column</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/column</guid>
+      <author>null</author>
+      <description><![CDATA[如何在 Quasar 中使用网格列。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Grid Gutter | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/gutter</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/gutter</guid>
+      <author>null</author>
+      <description><![CDATA[How to use the Quasar grid for gutter spaces.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Flexbox 技巧 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/flexbox-patterns</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/flexbox-patterns</guid>
+      <author>null</author>
+      <description><![CDATA[flexbox CSS 的常见技巧，以及如何在 Quasar app 中使用]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Flex Grid Playground | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/grid/flex-playground</link>
+      <guid>https://www.quasar-cn.cn/layout/grid/flex-playground</guid>
+      <author>null</author>
+      <description><![CDATA[交互式体验 Quasar Flex 网格布局]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[布局 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/layout</link>
+      <guid>https://www.quasar-cn.cn/layout/layout</guid>
+      <author>null</author>
+      <description><![CDATA[如果使用 QLayout 组件管理 Quasar 应用程序的布局主窗口。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[使用布局和页面进行路由 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/routing-with-layouts-and-pages</link>
+      <guid>https://www.quasar-cn.cn/layout/routing-with-layouts-and-pages</guid>
+      <author>null</author>
+      <description><![CDATA[如何将 Vue router 和 Quasar 的布局相关联。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[页头和页脚 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/header-and-footer</link>
+      <guid>https://www.quasar-cn.cn/layout/header-and-footer</guid>
+      <author>null</author>
+      <description><![CDATA[如何使用 QHeader 和 QFooter 组件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[布局抽屉 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/drawer</link>
+      <guid>https://www.quasar-cn.cn/layout/drawer</guid>
+      <author>null</author>
+      <description><![CDATA[如何使用 QDrawer 组件。Quasar 的侧边栏。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Layout Page | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/page</link>
+      <guid>https://www.quasar-cn.cn/layout/page</guid>
+      <author>null</author>
+      <description><![CDATA[How to use QPageContainer and QPage components. They define the contents of your Quasar app pages.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[布局模板 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/gallery</link>
+      <guid>https://www.quasar-cn.cn/layout/gallery</guid>
+      <author>null</author>
+      <description><![CDATA[在你的 Quasar 应用中开箱即用的布局模板]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Layout QPageSticky | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/page-sticky</link>
+      <guid>https://www.quasar-cn.cn/layout/page-sticky</guid>
+      <author>null</author>
+      <description><![CDATA[How to use the QPageSticky component. Statically place components on the layout without overlapping with header/footer/sidebars.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Layout QPageScroller | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout/page-scroller</link>
+      <guid>https://www.quasar-cn.cn/layout/page-scroller</guid>
+      <author>null</author>
+      <description><![CDATA[如何使用 QPageScroller 组件。将用户滚动后屏幕上出现的组件放置在屏幕上。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Ajax Bar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/ajax-bar</link>
+      <guid>https://www.quasar-cn.cn/vue-components/ajax-bar</guid>
+      <author>null</author>
+      <description><![CDATA[QAjaxBar 组件会在 Ajax 请求触发时展示一个加载进度条。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Avatar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/avatar</link>
+      <guid>https://www.quasar-cn.cn/vue-components/avatar</guid>
+      <author>null</author>
+      <description><![CDATA[The QAvatar Vue component creates an element that can embed a letter, an icon or an image within its shape.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Badge | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/badge</link>
+      <guid>https://www.quasar-cn.cn/vue-components/badge</guid>
+      <author>null</author>
+      <description><![CDATA[The QBadge Vue component allows you to display information like contextual data that needs to stand out and get noticed.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Banner | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/banner</link>
+      <guid>https://www.quasar-cn.cn/vue-components/banner</guid>
+      <author>null</author>
+      <description><![CDATA[The QBanner Vue component displays a prominent message and related optional actions.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Bar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/bar</link>
+      <guid>https://www.quasar-cn.cn/vue-components/bar</guid>
+      <author>null</author>
+      <description><![CDATA[The QBar Vue component is used to create the top bar on different platforms.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Breadcrumbs | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/breadcrumbs</link>
+      <guid>https://www.quasar-cn.cn/vue-components/breadcrumbs</guid>
+      <author>null</author>
+      <description><![CDATA[The QBreadcrumbs Vue component is a navigational aid for your UI. It allows users to keep track of their location within programs, documents, or websites.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Button | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/button</link>
+      <guid>https://www.quasar-cn.cn/vue-components/button</guid>
+      <author>null</author>
+      <description><![CDATA[The QBtn Vue component is a button with features like shaping, loading state, ripple and more.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Button Group | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/button-group</link>
+      <guid>https://www.quasar-cn.cn/vue-components/button-group</guid>
+      <author>null</author>
+      <description><![CDATA[The QBtnGroup Vue component groups QBtn and QBtnDropdown into a single unit.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Dropdown Button | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/button-dropdown</link>
+      <guid>https://www.quasar-cn.cn/vue-components/button-dropdown</guid>
+      <author>null</author>
+      <description><![CDATA[The QBtnDropdown Vue component is used to display dropdown content on a button.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Card | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/card</link>
+      <guid>https://www.quasar-cn.cn/vue-components/card</guid>
+      <author>null</author>
+      <description><![CDATA[QCard 是一个很棒的用于展示重要信息的 Vue 组件，它可以将信息聚合在卡片容器中展示，帮助用户更直观的获取信息。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Carousel | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/carousel</link>
+      <guid>https://www.quasar-cn.cn/vue-components/carousel</guid>
+      <author>null</author>
+      <description><![CDATA[QCarousel Vue 组件允许您使用幻灯片以更少的空间显示更多信息，对于创建向导或图库也很有用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[聊天消息 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/chat</link>
+      <guid>https://www.quasar-cn.cn/vue-components/chat</guid>
+      <author>null</author>
+      <description><![CDATA[QChatMessage Vue 组件可以显示包含一个或多个用户消息的聊天条目。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Chip | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/chip</link>
+      <guid>https://www.quasar-cn.cn/vue-components/chip</guid>
+      <author>null</author>
+      <description><![CDATA[QChip Vue 组件基本上是一个简单的 UI 实体块，以紧凑的方式表示更复杂的数据，例如用来展示联系人。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[圆形进度 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/circular-progress</link>
+      <guid>https://www.quasar-cn.cn/vue-components/circular-progress</guid>
+      <author>null</author>
+      <description><![CDATA[QCircularProgress Vue 组件显示一个彩色的圆形进度条。工具条可以有一个确定的进度值，也可以有一个不确定的动画。它可以用于通知用户在后台正在进行某个操作。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[颜色选择器 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/color-picker</link>
+      <guid>https://www.quasar-cn.cn/vue-components/color-picker</guid>
+      <author>null</author>
+      <description><![CDATA[QColor Vue 组件提供了一种输入颜色的方式。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[对话框 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/dialog</link>
+      <guid>https://www.quasar-cn.cn/vue-components/dialog</guid>
+      <author>null</author>
+      <description><![CDATA[QDialog 组件提供了具有定位，样式化，最大化等功能的模态框。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[富文本编辑器 (WYSIWYG) | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/editor</link>
+      <guid>https://www.quasar-cn.cn/vue-components/editor</guid>
+      <author>null</author>
+      <description><![CDATA[QEditor Vue 组件是一个 WYSIWYG 编辑器，可以将编辑的内容转化成 HTML。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[扩展项/手风琴 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/expansion-item</link>
+      <guid>https://www.quasar-cn.cn/vue-components/expansion-item</guid>
+      <author>null</author>
+      <description><![CDATA[QExpansionItem 组件可以隐藏与用户不直接相关的内容。可以把它们想象成手风琴一样，当点击它们时，它们就会展开，这也被称为可折叠面板。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[悬浮操作按钮 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/floating-action-button</link>
+      <guid>https://www.quasar-cn.cn/vue-components/floating-action-button</guid>
+      <author>null</author>
+      <description><![CDATA[使用 QFab 为来您的 Quasar 引用添加悬浮的操作按钮。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[输入框 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/input</link>
+      <guid>https://www.quasar-cn.cn/vue-components/input</guid>
+      <author>null</author>
+      <description><![CDATA[QInput Vue 组件用于收集用户输入的文本或数字。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[选择框 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/select</link>
+      <guid>https://www.quasar-cn.cn/vue-components/select</guid>
+      <author>null</author>
+      <description><![CDATA[The QSelect Vue component has two types of selection - single or multiple. This component opens up a menu for the selection list and action. A filter can also be used for longer lists.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[文件选择器 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/file-picker</link>
+      <guid>https://www.quasar-cn.cn/vue-components/file-picker</guid>
+      <author>null</author>
+      <description><![CDATA[QFile是一个处理用户交互以选取文件的Vue组件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[表单 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/form</link>
+      <guid>https://www.quasar-cn.cn/vue-components/form</guid>
+      <author>null</author>
+      <description><![CDATA[QForm Vue组件渲染一个表单元素，并提供简单的表单验证方式]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Field | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/field</link>
+      <guid>https://www.quasar-cn.cn/vue-components/field</guid>
+      <author>null</author>
+      <description><![CDATA[The QField Vue component is used to provide common functionality and aspect to form components.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[单选框 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/radio</link>
+      <guid>https://www.quasar-cn.cn/vue-components/radio</guid>
+      <author>null</author>
+      <description><![CDATA[QRadio Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[复选框 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/checkbox</link>
+      <guid>https://www.quasar-cn.cn/vue-components/checkbox</guid>
+      <author>null</author>
+      <description><![CDATA[QCheckbox是一个Vue复选框组件，带有着色，涟漪特效等特性。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Toggle | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/toggle</link>
+      <guid>https://www.quasar-cn.cn/vue-components/toggle</guid>
+      <author>null</author>
+      <description><![CDATA[QToggle Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Button Toggle | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/button-toggle</link>
+      <guid>https://www.quasar-cn.cn/vue-components/button-toggle</guid>
+      <author>null</author>
+      <description><![CDATA[QBtnToggle vue组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[选项组 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/option-group</link>
+      <guid>https://www.quasar-cn.cn/vue-components/option-group</guid>
+      <author>null</author>
+      <description><![CDATA[The QOptionGroup Vue component allows you better control for grouping binary form input components like checkboxes, radios or toggles.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[滑块 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/slider</link>
+      <guid>https://www.quasar-cn.cn/vue-components/slider</guid>
+      <author>null</author>
+      <description><![CDATA[QSlider 是用户指定最小值和最大值之间的数值的好方法。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Range | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/range</link>
+      <guid>https://www.quasar-cn.cn/vue-components/range</guid>
+      <author>null</author>
+      <description><![CDATA[The QRange Vue component offers a way for the user to select from a sub-range of values between a maximum and maximum value, with optional steps.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QTime | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/time</link>
+      <guid>https://www.quasar-cn.cn/vue-components/time</guid>
+      <author>null</author>
+      <description><![CDATA[QTime 组件提供了输入时间的方法。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QDate | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/date</link>
+      <guid>https://www.quasar-cn.cn/vue-components/date</guid>
+      <author>null</author>
+      <description><![CDATA[QDate 组件提供了一种输入日期的方法。目前它支持公历（默认）和波斯历。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Icon | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/icon</link>
+      <guid>https://www.quasar-cn.cn/vue-components/icon</guid>
+      <author>null</author>
+      <description><![CDATA[The QIcon Vue component allows you to insert icons within other components or any other area of your pages.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QImg | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/img</link>
+      <guid>https://www.quasar-cn.cn/vue-components/img</guid>
+      <author>null</author>
+      <description><![CDATA[The QImg Vue component makes working with responsive images easy and also adds a nice loading effect to them along with many other features like custom aspect ratio and captions.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Infinite Scroll | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/infinite-scroll</link>
+      <guid>https://www.quasar-cn.cn/vue-components/infinite-scroll</guid>
+      <author>null</author>
+      <description><![CDATA[The QInfiniteScroll Vue component allows you to load new content as the user scrolls the page.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Inner Loading | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/inner-loading</link>
+      <guid>https://www.quasar-cn.cn/vue-components/inner-loading</guid>
+      <author>null</author>
+      <description><![CDATA[The QInnerLoading Vue component allows you to add a loading indicator within a component in the form of a local overlay.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Intersection | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/intersection</link>
+      <guid>https://www.quasar-cn.cn/vue-components/intersection</guid>
+      <author>null</author>
+      <description><![CDATA[The QIntersection vue component, a wrapper over Quasar's Intersection directive.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Knob | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/knob</link>
+      <guid>https://www.quasar-cn.cn/vue-components/knob</guid>
+      <author>null</author>
+      <description><![CDATA[The QKnob Vue component is used to take a number input through mouse or touch panning.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Linear Progress | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/linear-progress</link>
+      <guid>https://www.quasar-cn.cn/vue-components/linear-progress</guid>
+      <author>null</author>
+      <description><![CDATA[The QLinearProgress Vue component displays a colored loading bar. The bar can either have a determinate progress or an indeterminate animation.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[List and List Items | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/list-and-list-items</link>
+      <guid>https://www.quasar-cn.cn/vue-components/list-and-list-items</guid>
+      <author>null</author>
+      <description><![CDATA[How to use the QList, QItem, QItemSection and QItemLabel Vue components.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Markup Table | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/markup-table</link>
+      <guid>https://www.quasar-cn.cn/vue-components/markup-table</guid>
+      <author>null</author>
+      <description><![CDATA[The QMarkupTable Vue component is a helper wrapper which styles a native table.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QMenu | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/menu</link>
+      <guid>https://www.quasar-cn.cn/vue-components/menu</guid>
+      <author>null</author>
+      <description><![CDATA[The QMenu Vue component is a convenient way to show menus.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[No SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/no-ssr</link>
+      <guid>https://www.quasar-cn.cn/vue-components/no-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[The QNoSsr Vue component makes it easy to differentiate content between server-side and client-side.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Resize Observer (for Element) | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/resize-observer</link>
+      <guid>https://www.quasar-cn.cn/vue-components/resize-observer</guid>
+      <author>null</author>
+      <description><![CDATA[The QResizeObserver Vue component emits a 'resize' event whenever the wrapping DOM element changes its width or height.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Scroll Observer | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/scroll-observer</link>
+      <guid>https://www.quasar-cn.cn/vue-components/scroll-observer</guid>
+      <author>null</author>
+      <description><![CDATA[The QScrollObserver Vue component emits an event whenever the user scrolls the page or the parent scrollable container.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Pagination | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/pagination</link>
+      <guid>https://www.quasar-cn.cn/vue-components/pagination</guid>
+      <author>null</author>
+      <description><![CDATA[The QPagination Vue component allows you to easily display a pagination control on a page.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Parallax | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/parallax</link>
+      <guid>https://www.quasar-cn.cn/vue-components/parallax</guid>
+      <author>null</author>
+      <description><![CDATA[The QParallax Vue component makes it easy to embed a parallax scrolling effect into a page.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Popup Edit | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/popup-edit</link>
+      <guid>https://www.quasar-cn.cn/vue-components/popup-edit</guid>
+      <author>null</author>
+      <description><![CDATA[The QPopupEdit Vue component can be used to edit a value 'in place', like for example on a cell in QTable.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Popup Proxy | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/popup-proxy</link>
+      <guid>https://www.quasar-cn.cn/vue-components/popup-proxy</guid>
+      <author>null</author>
+      <description><![CDATA[The QPopupProxy is a Vue component that should be used when you need either a QMenu or a QDialog (on smaller screens) to be displayed.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Pull to refresh | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/pull-to-refresh</link>
+      <guid>https://www.quasar-cn.cn/vue-components/pull-to-refresh</guid>
+      <author>null</author>
+      <description><![CDATA[The QPullToRefresh Vue component allows the user to pull down in order to refresh or retrieve the newest content on a page.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Rating | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/rating</link>
+      <guid>https://www.quasar-cn.cn/vue-components/rating</guid>
+      <author>null</author>
+      <description><![CDATA[The QRating Vue component allows the user to rate items. It's usually known as 'star rating'.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Responsive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/responsive</link>
+      <guid>https://www.quasar-cn.cn/vue-components/responsive</guid>
+      <author>null</author>
+      <description><![CDATA[The QResponsive Vue component forces the content to maintain an aspect ratio based on its width.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Scroll Area | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/scroll-area</link>
+      <guid>https://www.quasar-cn.cn/vue-components/scroll-area</guid>
+      <author>null</author>
+      <description><![CDATA[The QScrollArea Vue component offers a way of customizing the scrollbars for all desktop browsers.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Separator | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/separator</link>
+      <guid>https://www.quasar-cn.cn/vue-components/separator</guid>
+      <author>null</author>
+      <description><![CDATA[The QSeparator Vue component is used to separate sections of text or other components or elements. It creates a colored line across the width of the parent. It can be horizontal or vertical.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Skeleton | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/skeleton</link>
+      <guid>https://www.quasar-cn.cn/vue-components/skeleton</guid>
+      <author>null</author>
+      <description><![CDATA[The QSkeleton Vue component is used to display a placeholder preview of your content before you load the actual page data.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Slide Item | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/slide-item</link>
+      <guid>https://www.quasar-cn.cn/vue-components/slide-item</guid>
+      <author>null</author>
+      <description><![CDATA[The QSlideItem Vue component is essentially a QItem with two additional slots (left and right) which allows the user to drag it to one of the sides in order to apply a specific action.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Slide Transition | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/slide-transition</link>
+      <guid>https://www.quasar-cn.cn/vue-components/slide-transition</guid>
+      <author>null</author>
+      <description><![CDATA[The QSlideTransition Vue component slides the encapsulated element up or down, based on its visibility. Works alongside v-show and v-if.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QSpace | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/space</link>
+      <guid>https://www.quasar-cn.cn/vue-components/space</guid>
+      <author>null</author>
+      <description><![CDATA[The QSpace Vue component fills all the available space inside of a flexbox DOM element.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Spinners | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/spinners</link>
+      <guid>https://www.quasar-cn.cn/vue-components/spinners</guid>
+      <author>null</author>
+      <description><![CDATA[The QSpinner and its derived Vue components are used to show the user a timely process is currently taking place. It gives the user the feeling the system is continuing to work for longer term activities.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[QSplitter | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/splitter</link>
+      <guid>https://www.quasar-cn.cn/vue-components/splitter</guid>
+      <author>null</author>
+      <description><![CDATA[The QSplitter Vue component allow containers to be split vertically and/or horizontally through a draggable separator bar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Stepper | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/stepper</link>
+      <guid>https://www.quasar-cn.cn/vue-components/stepper</guid>
+      <author>null</author>
+      <description><![CDATA[The QStepper Vue component conveys progress through a sequence of numbered steps. It may also be used for navigation. It's usually useful when the user has to follow steps to complete a process, like in a wizard.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Table | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/table</link>
+      <guid>https://www.quasar-cn.cn/vue-components/table</guid>
+      <author>null</author>
+      <description><![CDATA[The QTable Vue component allows you to display data in a tabular manner and it's packed with a lot of related features. It's generally called a datatable.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Tabs | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/tabs</link>
+      <guid>https://www.quasar-cn.cn/vue-components/tabs</guid>
+      <author>null</author>
+      <description><![CDATA[The QTabs, QTab and QRouteTab Vue components are a way of helping the user navigate between pages or tab panels.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Tab Panels | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/tab-panels</link>
+      <guid>https://www.quasar-cn.cn/vue-components/tab-panels</guid>
+      <author>null</author>
+      <description><![CDATA[The QTabPanel Vue component is a way of displaying more information using less window real estate.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Timeline | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/timeline</link>
+      <guid>https://www.quasar-cn.cn/vue-components/timeline</guid>
+      <author>null</author>
+      <description><![CDATA[The QTimeline Vue component displays a list of events in chronological order. It is typically a graphic design showing a long bar labelled with dates alongside itself and usually events.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Toolbar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/toolbar</link>
+      <guid>https://www.quasar-cn.cn/vue-components/toolbar</guid>
+      <author>null</author>
+      <description><![CDATA[The QToolbar and QToolbarTitle Vue components are usually part of QHeader or QFooter, but it can be used anywhere on the page.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Tooltip | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/tooltip</link>
+      <guid>https://www.quasar-cn.cn/vue-components/tooltip</guid>
+      <author>null</author>
+      <description><![CDATA[The QTooltip Vue component is to be used when you want to offer the user more information about a certain area in your App. When hovering the mouse over the target element (or briefly touching and holding on mobile platforms), the tooltip will appear.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Tree | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/tree</link>
+      <guid>https://www.quasar-cn.cn/vue-components/tree</guid>
+      <author>null</author>
+      <description><![CDATA[The QTree is a highly configurable Vue component which displays hierarchical data, such as a table of contents in a tree structure.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Uploader | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/uploader</link>
+      <guid>https://www.quasar-cn.cn/vue-components/uploader</guid>
+      <author>null</author>
+      <description><![CDATA[The QUploader Vue component is a way for the user to upload files to a backend server.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Video | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/video</link>
+      <guid>https://www.quasar-cn.cn/vue-components/video</guid>
+      <author>null</author>
+      <description><![CDATA[The QVideo Vue components makes embedding a video like Youtube easy. It also resizes to fit the container by default.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Virtual Scroll | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-components/virtual-scroll</link>
+      <guid>https://www.quasar-cn.cn/vue-components/virtual-scroll</guid>
+      <author>null</author>
+      <description><![CDATA[The QVirtualScroll component renders a big list of items as the user scrolls in the container, keeping DOM tree clean and eating the lowest amount of memory possible.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[关闭弹层 Close Popup Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/close-popup</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/close-popup</guid>
+      <author>null</author>
+      <description><![CDATA[Helper Vue directive when working with QDialog or QMenu.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Intersection Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/intersection</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/intersection</guid>
+      <author>null</author>
+      <description><![CDATA[使用 Intersection Observer API 监听当 DOM/组件在可视窗口中出现或者消失时触发一个函数的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Material Ripples | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/material-ripple</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/material-ripple</guid>
+      <author>null</author>
+      <description><![CDATA[帮你轻松实现 material design 中的涟漪动画的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Mutation Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/mutation</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/mutation</guid>
+      <author>null</author>
+      <description><![CDATA[使用 Mutation Observer API 来监听 DOM 树变化的 Vue 指令]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Morph Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/morph</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/morph</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 中可以实现 dom 在两种状态间动画形变的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[v-scroll 指令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/scroll</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/scroll</guid>
+      <author>null</author>
+      <description><![CDATA[用户滚动页面时触发的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Scroll Fire Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/scroll-fire</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/scroll-fire</guid>
+      <author>null</author>
+      <description><![CDATA[当用户滚动页面导致组件进入视口时触发一个函数的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[长按指令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/touch-hold</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/touch-hold</guid>
+      <author>null</author>
+      <description><![CDATA[当用户触摸或者长按一个元素/组件时触发一个事件的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Touch Pan Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/touch-pan</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/touch-pan</guid>
+      <author>null</author>
+      <description><![CDATA[Vue directive which triggers an event when the user drags the finger or mouse on a component or element.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Touch Repeat Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/touch-repeat</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/touch-repeat</guid>
+      <author>null</author>
+      <description><![CDATA[Vue 指令，当用户触摸并按住一个组件或元素时，在指定的时间间隔内触发一个事件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Touch Swipe Directive | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-directives/touch-swipe</link>
+      <guid>https://www.quasar-cn.cn/vue-directives/touch-swipe</guid>
+      <author>null</author>
+      <description><![CDATA[当用户用手指或鼠标在组件或元素上滑动时触发一个事件的 Vue 指令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[地址栏颜色插件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/addressbar-color</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/addressbar-color</guid>
+      <author>null</author>
+      <description><![CDATA[可以再移动端浏览器上自定义地址栏颜色的 Quasar 插件]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[全屏插件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/app-fullscreen</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/app-fullscreen</guid>
+      <author>null</author>
+      <description><![CDATA[一个可以切换全屏状态的 Quasar 插件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App 可见性 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/app-visibility</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/app-visibility</guid>
+      <author>null</author>
+      <description><![CDATA[这个 Quasar 插件封装了 Page Visibility API，让你可以知道你的 App 当前是否可见。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Bottom Sheet Plugin | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/bottom-sheet</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/bottom-sheet</guid>
+      <author>null</author>
+      <description><![CDATA[当用户在应用底部窗口底部上划时展示一组操作菜单的 Quasar 组件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Cookies | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/cookies</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/cookies</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 插件封装了浏览器的 cookie api，使得其在 SSR 中也可以使用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Dark Plugin | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/dark</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/dark</guid>
+      <author>null</author>
+      <description><![CDATA[一个可以切换应用暗色模式开关的 Quasar 插件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Dialog Plugin | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/dialog</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/dialog</guid>
+      <author>null</author>
+      <description><![CDATA[Quasar 通过 Dialog 插件提供了非常简单的方式展示一个对话框，用于提示、选择、确认或警告。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[加载插件 Loading | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/loading</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/loading</guid>
+      <author>null</author>
+      <description><![CDATA[这个 Quasar 插件可以通过旋转器和消息为你的应用程序展示加载状态。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[LoadingBar | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/loading-bar</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/loading-bar</guid>
+      <author>null</author>
+      <description><![CDATA[A Quasar plugin that wraps the QAjaxBar component for the easiest way of showing such a loading indicator in an app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Local/Session Storage Plugins | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/web-storage</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/web-storage</guid>
+      <author>null</author>
+      <description><![CDATA[一个封装了 LocalStorage 和 SessionStorage 的 Quasar 插件，可以存储原始的 JS 类型。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Quasar Meta Plugin | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/meta</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/meta</guid>
+      <author>null</author>
+      <description><![CDATA[可以轻松管理 meta 标签的 Quasar 插件，帮助改善应用的 SEO。它能管理 meta，style，script 标签，html 和 body 的属性以及页面的 title。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Notify 通知 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-plugins/notify</link>
+      <guid>https://www.quasar-cn.cn/quasar-plugins/notify</guid>
+      <author>null</author>
+      <description><![CDATA[一个可以给用户展示带有动画的信息的 Quasar 插件，例如提示，通知，警告等。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[useQuasar composable | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-composables/use-quasar</link>
+      <guid>https://www.quasar-cn.cn/vue-composables/use-quasar</guid>
+      <author>null</author>
+      <description><![CDATA[What is useQuasar() composable and how you can use it]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[useDialogPluginComponent composable | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-composables/use-dialog-plugin-component</link>
+      <guid>https://www.quasar-cn.cn/vue-composables/use-dialog-plugin-component</guid>
+      <author>null</author>
+      <description><![CDATA[What is Quasar's useDialogPluginComponent() composable and how you can use it]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[useFormChild composable | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-composables/use-form-child</link>
+      <guid>https://www.quasar-cn.cn/vue-composables/use-form-child</guid>
+      <author>null</author>
+      <description><![CDATA[What is Quasar's useFormChild() composable and how you can use it]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[useMeta composable | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/vue-composables/use-meta</link>
+      <guid>https://www.quasar-cn.cn/vue-composables/use-meta</guid>
+      <author>null</author>
+      <description><![CDATA[What is Quasar's useMeta() composable and how you can use it]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Security DO's and DON'Ts | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/security/dos-and-donts</link>
+      <guid>https://www.quasar-cn.cn/security/dos-and-donts</guid>
+      <author>null</author>
+      <description><![CDATA[The list of Quasar security recommendations.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Report a vulnerability | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/security/report-a-vulnerability</link>
+      <guid>https://www.quasar-cn.cn/security/report-a-vulnerability</guid>
+      <author>null</author>
+      <description><![CDATA[How to report a Quasar security threat, vulnerability or exploit.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[quasar.config.js 配置详解 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/quasar-config-js</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/quasar-config-js</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 在 Quasar 和 vite 的项目中如何进行配置。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Convert project to Quasar CLI with Vite | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/convert-to-quasar-cli-with-vite</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/convert-to-quasar-cli-with-vite</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to convert a Quasar CLI with Webpack project to a Quasar CLI with Vite one.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[浏览器兼容性 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/browser-compatibility</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/browser-compatibility</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如果利用 Quasar CLI 处理浏览器兼容性。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[目录结构 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/directory-structure</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/directory-structure</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasa 项目的目录结构详解。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[命令列表 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/commands-list</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/commands-list</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar CLI 完整的命令列表。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS 预处理器 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/css-preprocessors</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/css-preprocessors</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar 中提供开箱即用的 Sass/SCSS CSS 预处理器。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[应用路由 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/routing</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/routing</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 中使用 Vue Router 路由。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[按需加载/代码拆分 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/lazy-loading</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/lazy-loading</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite)Vite 版本的 Quasar CLI 怎么创建异步加载模块。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[应用处理静态资源 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-assets</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/handling-assets</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar 项目如何处理静态（assets 和 static）资源。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Boot 启动文件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/boot-files</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/boot-files</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar Boot 启动文件详解。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[预取特性 PreFetch | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/prefetch-feature</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/prefetch-feature</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 中预取数据，初始化 Store，验证路由或者重定向路由]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发时进行 API 代理 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/api-proxying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/api-proxying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar 开发服务如何开启 API 代理。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[配置 Vite | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-vite</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/handling-vite</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 项目中管理 Vite。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[处理 process.env | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-process-env</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/handling-process-env</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 项目中根不同的环境加载不同的环境变量。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[使用 Pinia 管理状态 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-pinia</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-pinia</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 在 Quasar 项目中如何使用 Pinia。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[应用 Vuex Store | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-vuex</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-vuex</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 项目中使用 Vuex 管理状态数据。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[ESLint | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/linter</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/linter</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何为 Quasar 项目配置 ESLint。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Testing &amp; Auditing | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/testing-and-auditing</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/testing-and-auditing</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to unit and end to end test a Quasar app and also how to audit for quality and security.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Introduction on what a Single Page App is.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons for SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/app-icons-spa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/app-icons-spa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage the app icons for a Quasar Single Page Application.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SPA Build Commands | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) The Quasar CLI list of commands when developing or building a single page application.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Deploying a SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/deploying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/deploying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to publish a Single Page App built by Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[什么是 SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Quasar CLI 构建 SSR 服务端渲染应用的介绍。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[为 SSR 编写通用的代码 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/writing-universal-code</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/writing-universal-code</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何为 Quasar 的 SSR 服务端渲染编写通用的代码。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Upgrade guide on SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-upgrade-guide</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-upgrade-guide</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Upgrading instructions from Quasar v1 to v2 when dealing with SSR.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发 SSR 的准备 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar 添加 SSR 模式]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[配置 SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar CLI 管理你的 SSR 应用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[The ssrContext Object | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-context</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-context</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) The ssrContext Object in Quasar SSR]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Middleware | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-middleware</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-middleware</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Managing the SSR middleware in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Webserver | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-webserver</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-webserver</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Vue SSR 指令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/vue-ssr-directives</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/vue-ssr-directives</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Managing the Vue directives for SSR in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR 模式的应用图标 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/app-icons-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/app-icons-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的图标。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SEO for SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/seo-for-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/seo-for-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 在 Quasar 的服务端进行搜索引擎优化（SEO）]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[客户端水化 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/client-side-hydration</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/client-side-hydration</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 什么是 hydration（水化），在 Quasar 的服务端渲染中是怎么进行 hydration（水化）的。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR 处理 404 和 500 错误 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 在 Quaasr 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR with PWA Client Takeover | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-pwa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-pwa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何给 Quasar 的服务端渲染应用的客户端使用 PWA。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR 的常见问题 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-frequently-asked-questions</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-frequently-asked-questions</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite)  Quasar 服务端渲染的提示与技巧。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR 构建命令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar CLI 开发/构建 SSR 服务端渲染应用的命令]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR with Typescript | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-typescript</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-typescript</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 的 SSR 模式中使用 Typescript]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[部署 SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/deploying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/deploying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is a PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Introduction on what a Progressive Web App is and how it can be configured in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Preparation for PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to add PWA mode with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[PWA Build Commands | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) The Quasar CLI list of commands when developing or building a Progressive Web App.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Configuring PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/configuring-pwa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/configuring-pwa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage your Progressive Web Apps with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Hot Module Reload for PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/hmr-for-dev</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/hmr-for-dev</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage HMR (Hot Module Reload) with Quasar PWA.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons for PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/app-icons-pwa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/app-icons-pwa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage the app icons for a Quasar Progressive Web App.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Handling Service Worker | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/handling-service-worker</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/handling-service-worker</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to configure the service worker in a Quasar Progressive Web App.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[PWA with Typescript | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/pwa-with-typescript</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/pwa-with-typescript</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to use Typescript with Quasar PWA]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发手机应用 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-mobile-apps</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-mobile-apps</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Quasar CLI 开发混合应用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Capacitor 是什么 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 介绍 Quasar 移动应用程序背后的一项技术。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发 Capacitor 应用前准备 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 在你使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Capacitor 版本 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-version-support</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-version-support</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar 中支持的 Capacitor 版本。如何升级到较新的 Capacitor 版本。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[配置 Capacitor | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何用 Quasar CLI 来管理你的 Capacitor 应用程序。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[应用图标 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/app-icons-capacitor</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/app-icons-capacitor</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何用 Capacitor 管理 Quasar 混合移动应用程序的图标。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Capacitor 接口 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-api</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-api</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 应用程序中使用 Capacitor 插件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Capacitor 构建命令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Capacitor 开发或构建混合移动应用程序时，Quasar CLI 的命令列表。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Capacitor 故障与技巧 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/troubleshooting-and-tips</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/troubleshooting-and-tips</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Capacitor 的 Quasar 混合移动应用程序的技巧和窍门。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[管理谷歌分析 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/managing-google-analytics</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/managing-google-analytics</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 混合型移动应用程序 Capacitor 模式中使用谷歌分析。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[发布到应用商店 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/publishing-to-store</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/publishing-to-store</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何用 Capacitor 发布 Quasar 混合移动应用程序到谷歌商店和苹果商店。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[什么是 Cordova | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 介绍 Quasar 混合移动应用程序背后的一项技术。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发 Cordova App 的准备工作 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Quasar 和 Cordova 开发混合应用需要的准备工作。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[配置 Cordova | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar ClI 管理你的 Cordova 应用。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Cordova 应用的图标 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/app-icons-cordova</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/app-icons-cordova</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如果管理 Quasar 和 Cordova 开发的混合应用的图标。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Cordova 插件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/cordova-plugins</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/cordova-plugins</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如果在 Quasar 中使用 Cordova 插件]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[移动应用构建命令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Quasar CLI 开发 Cordova 混合应用的命令列表。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Cordova 的常见问题和技巧 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/troubleshooting-and-tips</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/troubleshooting-and-tips</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Quasar 和 Cordova 开发混合应用时的常见问题和技巧。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[管理 Google Analytics | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/managing-google-analytics</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/managing-google-analytics</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to use analytics in a Quasar hybrid mobile app with Cordova.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[发布应用到商店 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/publishing-to-store</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/publishing-to-store</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如果发布一个使用 Quasar 和 Cordova 开发的混合应用到 google 和 apple 商店。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[什么是 Electron | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Introduction about the technology behind Quasar desktop apps.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Upgrade guide on Electron | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-upgrade-guide</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-upgrade-guide</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Upgrading instructions when dealing with Electron in Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[开发 Electron 的准备工作 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何给 Quasar 项目添加 Electron 开发模式。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 配置项 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/configuring-electron</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/configuring-electron</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 项目中对您的 Electron 进行配置。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 应用图标 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/app-icons-electron</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/app-icons-electron</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何管理 Quasar 桌面应用的图标。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 打包命令 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite)Quasar CLI 提供的用于开发或打包桌面应用的命令。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron Preload 预加载脚本 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-preload-script</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-preload-script</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite)Quasar 项目中如何使用 Electron Preload 脚本处理 Node 集成。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron Packages | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-packages</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-packages</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 可以在 Quasar 中使用的 Electron 相关 npm 包。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 访问文件 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-accessing-files</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-accessing-files</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite)在 Quasar 桌面项目中如何访问文件。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[无边框 Electron 窗口 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/frameless-electron-window</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/frameless-electron-window</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何给 Quasar 桌面应用隐藏边框。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 和 Typescript | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-with-typescript</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-with-typescript</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 如何在 Quasar 项目的 Electron 中使用 Typescript。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Electron 安全问题 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-security-concerns</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-security-concerns</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 开发 Quasar 桌面应用时，您需要知道的安全问题。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[常见问题 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/troubleshooting-and-tips</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/troubleshooting-and-tips</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) 使用 Quasar 开发 Electron 桌面应用时的常见问题和技巧。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is a Browser Extension | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Introduction on what a Browser Extension (BEX) is.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Preparation for BEX | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to add the Browser Extension (BEX) mode into a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Configuring BEX | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/configuring-bex</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/configuring-bex</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage your Browser Extensions with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons for (BEX) | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/app-icons-browser-extension</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/app-icons-browser-extension</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to manage the app icons for a Quasar Browser Extension (BEX).]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[BEX Build Commands | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) The Quasar CLI list of commands when developing or building a Browser Extension (BEX).]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Types of BEX | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/types-of-bex</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/types-of-bex</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to configure each type of Browser Extensions in Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[BEX Communication | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/bex-communication</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/bex-communication</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to communicate between different parts of your Browser Extension (BEX) in Quasar.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Background Script | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/background-script</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/background-script</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to communicate using your background script with other parts of your Browser Extension (BEX).]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Content Scripts | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/content-scripts</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/content-scripts</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to communicate using your content script with your Quasar App and Background Script in Quasar Browser Extension mode.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[DOM Script | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/dom-script</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/dom-script</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to communicate to the underlying web page using dom hooks in Quasar Browser Extension mode.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Ajax Requests | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/ajax-requests</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/ajax-requests</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) Using Axios for fetching data in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Opening Your Dev Server to the Public | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-vite/opening-dev-server-to-public</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-vite/opening-dev-server-to-public</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-vite) How to offer temporary access to your development server to anyone on the Internet.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[quasar.config.js 配置详解 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/quasar-config-js</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/quasar-config-js</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) 在 Quasar 和 webpack 的项目中如何进行配置。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Convert project to Quasar CLI with Webpack | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/convert-to-quasar-cli-with-webpack</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/convert-to-quasar-cli-with-webpack</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to convert a Quasar CLI with Vite project to a Quasar CLI with Webpack one.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[浏览器兼容性 | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/browser-compatibility</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/browser-compatibility</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) 如何处理Quasar CLI 项目的浏览器兼容性。]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Supporting TypeScript | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/supporting-ts</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/supporting-ts</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to enable support for TypeScript in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Directory Structure | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/directory-structure</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/directory-structure</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) The structure of a Quasar app with explanations for each folder and file.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Commands List | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/commands-list</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/commands-list</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) The entire list of Quasar CLI commands.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[CSS Preprocessors | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/css-preprocessors</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/css-preprocessors</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Sass/SCSS are the out of the box supported css preprocessors in Quasar]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Routing | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/routing</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/routing</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to use the Vue Router in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Lazy Loading / Code Splitting | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/lazy-loading</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/lazy-loading</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to create Webpack chunks in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Handling Assets | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-assets</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/handling-assets</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to use regular app assets and static assets in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Boot files | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/boot-files</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/boot-files</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Managing your startup code in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[PreFetch Feature | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/prefetch-feature</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/prefetch-feature</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to prefetch data and initialize your Vuex store, validate the route and redirect to another page in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[API Proxying for Dev | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/api-proxying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/api-proxying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to use an API proxy with the Quasar dev server.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Handling Webpack | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-webpack</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/handling-webpack</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage Webpack in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Handling process.env | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-process-env</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/handling-process-env</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to differentiate the runtime procedure based on process.env in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[State management with Pinia | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-pinia</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-pinia</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage Pinia in a Quasar App.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Vuex Store | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-vuex</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-vuex</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage the Vuex Store in a Quasar App.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[ESLint | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/linter</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/linter</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to configure a code linter in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Testing &amp; Auditing | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/testing-and-auditing</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/testing-and-auditing</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to unit and end to end test a Quasar app and also how to audit for quality and security.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Introduction on what a Single Page App is.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons for SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/app-icons-spa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/app-icons-spa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage the app icons for a Quasar Single Page Application.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SPA Build Commands | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a single page application.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Deploying a SPA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/deploying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/deploying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to publish a Single Page App built by Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Introduction on server-side rendered apps with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Writing Universal Code | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/writing-universal-code</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/writing-universal-code</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Guide on how to write code for a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Upgrade guide on SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-upgrade-guide</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-upgrade-guide</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Upgrading instructions from Quasar v1 to v2 when dealing with SSR.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Preparation for SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to add SSR mode with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Configuring SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/configuring-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/configuring-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage your server-side rendered apps with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[The ssrContext Object | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-context</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-context</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) The ssrContext Object in Quasar SSR]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Middleware | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-middleware</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-middleware</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Managing the SSR middleware in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Production Export | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-production-export</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-production-export</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Vue SSR Directives | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/vue-ssr-directives</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/vue-ssr-directives</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Managing the Vue directives for SSR in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[App Icons for SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/app-icons-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/app-icons-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to manage the app icons for a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SEO for SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/seo-for-ssr</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/seo-for-ssr</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Managing the search engine optimizations in a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Client Side Hydration | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/client-side-hydration</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/client-side-hydration</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) What hydration is and its caveats in a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Handling of 404 and 500 Errors | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/handling-404-and-500-errors</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/handling-404-and-500-errors</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Managing the common 404 and 500 HTTP errors in a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR with PWA Client Takeover | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-pwa</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-pwa</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to configure your Quasar server-side rendered app to become a Progressive Web App on the client side.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR FAQ | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-frequently-asked-questions</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-frequently-asked-questions</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Tips and tricks for a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR Build Commands | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/build-commands</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/build-commands</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[SSR with Typescript | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-typescript</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-typescript</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to use Typescript with SSR in Quasar]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Deploying SSR | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/deploying</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/deploying</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to publish a Quasar server-side rendered app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[What is a PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/introduction</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/introduction</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) Introduction on what a Progressive Web App is and how it can be configured in a Quasar app.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Preparation for PWA | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/preparation</link>
+      <guid>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/preparation</guid>
+      <author>null</author>
+      <description><![CDATA[(@quasar/app-webpack) How to add PWA mode with Quasar CLI.]]></description>
+      <category></category>
+    </item>
+
+    <item>
+      <title><![CDATA[Layout Builder | Quasar V2 中文文档]]></title>
+      <link>https://www.quasar-cn.cn/layout-builder</link>
+      <guid>https://www.quasar-cn.cn/layout-builder</guid>
+      <author>null</author>
+      <description><![CDATA[Tool to build Quasar layouts. Configure the layout parts then export the code.]]></description>
+      <category></category>
+    </item>
+
+</channel>
+</rss>
