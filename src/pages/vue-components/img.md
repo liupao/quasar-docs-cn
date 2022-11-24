@@ -1,12 +1,13 @@
 ---
-title: QImg
-desc: The QImg Vue component makes working with responsive images easy and also adds a nice loading effect to them along with many other features like custom aspect ratio and captions.
+title: QImg 图像组件
+desc: QImg 组件可以很方便的处理响应式的图像（任何图片格式），并且还为其添加了很棒的加载效果以及许多其他特性，例如自定义长宽比等等。
 keys: QImg
 related:
   - /vue-components/spinners
   - /options/transitions
 ---
-The QImg component makes working with images (any picture format) easy and also adds a nice loading effect to it along with many other features (example: the ability to set an aspect ratio).
+
+QImg 组件可以很方便的处理响应式的图像（任何图片格式），并且还为其添加了很棒的加载效果以及许多其他特性，例如自定义长宽比等等。
 
 ## QImg API
 
@@ -16,21 +17,21 @@ The QImg component makes working with images (any picture format) easy and also 
 
 ### Basic 基础
 
-<doc-example title="Basic" file="QImg/Basic" />
+<doc-example title="基础" file="QImg/Basic" />
 
-### Aspect ratio
+### 定义长宽比
 
-<doc-example title="Custom aspect ratio" file="QImg/Ratio" />
+<doc-example title="自定义长宽比" file="QImg/Ratio" />
 
-### Captions
+### 字幕
 
-<doc-example title="Captions" file="QImg/Caption" />
+<doc-example title="字幕" file="QImg/Caption" />
 
-### Image style
+### 图片样式
 
-In the example below, we add a blur and sepia effect. Furthermore, we make use of the `rounded-borders` CSS helper class.
+在下面的例子中，我们添加了和深褐色的模糊效果。此外，我们还使用了 `rounded-borders` CSS 辅助类。
 
-<doc-example title="Custom image style" file="QImg/CustomImageStyle" />
+<doc-example title="自定义图片样式" file="QImg/CustomImageStyle" />
 
 ### Fit mode
 
