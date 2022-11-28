@@ -28,6 +28,8 @@ export function create (/* { ... } */) {
     app.use(compression())
   }
 
+  app.use('sitemaps', express.static('public/sitemaps'))
+
   return app
 }
 

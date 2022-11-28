@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Created By http://www.zhetao.com/sitemapcreator, URLs: 300 Page: 1 Generated at: 2022-11-22 13:03:02 -->
+
+  <url>
+    <loc>https://www.quasar-cn.cn/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/introduction-to-quasar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/sponsors-and-backers</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/why-donate</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/api-explorer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/video-tutorials</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/meet-the-team</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/pick-quasar-flavour</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/quasar-cli</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/umd</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/vite-plugin</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/vue-cli-plugin</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/how-to-use-vue</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/playground</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/release-notes</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/roadmap</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/upgrade-guide</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/start/vs-code-configuration</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/contribution-guide/contribution-guide</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/contribution-guide/running-projects</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/contribution-guide/new-project</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/contribution-guide/project-maintainer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/contribution-guide/commit-conventions</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/the-q-object</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/app-icons</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/seo</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/quasar-language-packs</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/app-internationalization</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/rtl-support</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/installing-icon-libraries</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/quasar-icon-sets</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/platform-detection</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/screen-plugin</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/animations</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/options/transitions</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/typography</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/color-palette</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/theme-builder</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/dark-mode</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/spacing</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/shadows</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/breakpoints</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/body-classes</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/visibility</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/positioning</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/sass-scss-variables</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/other-helper-classes</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/style/intellisense-css-vscode</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/introduction-to-flexbox</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/row</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/column</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/gutter</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/flexbox-patterns</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/grid/flex-playground</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/layout</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/routing-with-layouts-and-pages</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/header-and-footer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/drawer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/page</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/gallery</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/page-sticky</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout/page-scroller</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/ajax-bar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/avatar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/badge</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/banner</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/bar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/breadcrumbs</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/button</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/button-group</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/button-dropdown</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/card</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/carousel</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/chat</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/chip</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/circular-progress</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/color-picker</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/dialog</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/editor</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/expansion-item</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/floating-action-button</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/input</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/select</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/file-picker</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/form</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/field</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/radio</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/checkbox</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/toggle</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/button-toggle</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/option-group</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/slider</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/range</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/time</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/date</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/icon</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/img</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/infinite-scroll</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/inner-loading</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/intersection</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/knob</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/linear-progress</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/list-and-list-items</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/markup-table</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/menu</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/no-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/resize-observer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/scroll-observer</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/pagination</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/parallax</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/popup-edit</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/popup-proxy</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/pull-to-refresh</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/rating</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/responsive</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/scroll-area</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/separator</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/skeleton</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/slide-item</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/slide-transition</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/space</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/spinners</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/splitter</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/stepper</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/table</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/tabs</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/tab-panels</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/timeline</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/toolbar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/tooltip</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/tree</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/uploader</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/video</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-components/virtual-scroll</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/close-popup</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/intersection</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/material-ripple</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/mutation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/morph</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/scroll</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/scroll-fire</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/touch-hold</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/touch-pan</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/touch-repeat</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-directives/touch-swipe</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/addressbar-color</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/app-fullscreen</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/app-visibility</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/bottom-sheet</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/cookies</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/dark</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/dialog</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/loading</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/loading-bar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/web-storage</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/meta</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-plugins/notify</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-composables/use-quasar</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-composables/use-dialog-plugin-component</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-composables/use-form-child</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/vue-composables/use-meta</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/security/dos-and-donts</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/security/report-a-vulnerability</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/quasar-config-js</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/convert-to-quasar-cli-with-vite</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/browser-compatibility</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/directory-structure</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/commands-list</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/css-preprocessors</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/routing</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/lazy-loading</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/handling-assets</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/boot-files</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/prefetch-feature</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/api-proxying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/handling-vite</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/handling-process-env</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-pinia</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-vuex</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/linter</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/testing-and-auditing</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/app-icons-spa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/deploying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/writing-universal-code</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-upgrade-guide</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-context</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-middleware</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-webserver</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/vue-ssr-directives</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/app-icons-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/seo-for-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/client-side-hydration</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-pwa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-frequently-asked-questions</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-typescript</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/deploying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/configuring-pwa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/hmr-for-dev</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/app-icons-pwa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/handling-service-worker</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/pwa-with-typescript</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-mobile-apps</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-version-support</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/app-icons-capacitor</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-api</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/troubleshooting-and-tips</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/managing-google-analytics</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/publishing-to-store</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/app-icons-cordova</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/cordova-plugins</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/troubleshooting-and-tips</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/managing-google-analytics</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/publishing-to-store</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-upgrade-guide</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/configuring-electron</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/app-icons-electron</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-preload-script</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-packages</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-accessing-files</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/frameless-electron-window</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-with-typescript</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-security-concerns</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/troubleshooting-and-tips</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/configuring-bex</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/app-icons-browser-extension</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/types-of-bex</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/bex-communication</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/background-script</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/content-scripts</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/dom-script</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/ajax-requests</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-vite/opening-dev-server-to-public</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/quasar-config-js</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/convert-to-quasar-cli-with-webpack</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/browser-compatibility</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/supporting-ts</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/directory-structure</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/commands-list</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/css-preprocessors</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/routing</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/lazy-loading</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/handling-assets</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/boot-files</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/prefetch-feature</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/api-proxying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/handling-webpack</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/handling-process-env</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-pinia</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-vuex</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/linter</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/testing-and-auditing</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/app-icons-spa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/deploying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/writing-universal-code</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-upgrade-guide</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/configuring-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-context</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-middleware</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-production-export</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/vue-ssr-directives</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/app-icons-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/seo-for-ssr</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/client-side-hydration</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/handling-404-and-500-errors</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-pwa</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-frequently-asked-questions</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/build-commands</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-typescript</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/deploying</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/introduction</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/preparation</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.quasar-cn.cn/layout-builder</loc>
+    <priority>0.88</priority>
+  </url>
+
+</urlset>
