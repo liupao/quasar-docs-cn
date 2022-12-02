@@ -1,6 +1,6 @@
 ---
-title: Icon
-desc: The QIcon Vue component allows you to insert icons within other components or any other area of your pages.
+title: 图标
+desc: QIcon 组件允许您轻松地将图标插入其他组件或页面的任何区域中。
 keys: QIcon
 related:
   - /options/installing-icon-libraries
@@ -368,9 +368,9 @@ P 是符合以下语法的 path（每个都是属性）：
 </svg>
 ```
 
-## SVG-use way
+## SVG-文件 使用方法
 
-This svg method allows you to store the SVG files as static assets and reference them.
+此 svg 方法使您可以将SVG文件存储为静态资产并引用它们。
 
 ```html
 // File: /public/icons.svg
@@ -384,8 +384,7 @@ This svg method allows you to store the SVG files as static assets and reference
   </symbol>
 </svg>
 ```
-
-The standard HTML way is to include the file and specify the icon with the `svg use` tag.
+标准的 HTML 方式是使用 `svg use` 标签来引入文件
 
 ```html
 <svg>
@@ -393,7 +392,7 @@ The standard HTML way is to include the file and specify the icon with the `svg 
 </svg>
 ```
 
-To use this with Quasar through QIcon (make sure that you are referencing the correct file from your public folder):
+要通过 QIcon 将其与 Quasar 一起使用（确保您引用的是 public 文件夹中的正确文件）：
 
 ```html
 <q-icon name="svguse:icons.svg#icon-1">
@@ -401,17 +400,17 @@ To use this with Quasar through QIcon (make sure that you are referencing the co
 <q-btn-dropdown label="Custom Content" dropdown-icon="svguse:icons.svg#icon-2" />
 ```
 
-By default, the parent svg's viewBox is "0 0 24 24". However, you can also specify a custom one:
+默认情况下，父 svg 的 viewBox 为 "0 0 24 24" 。但是，也可以自定义它：
 
 ```html
 <q-icon name="svguse:icons.svg#icon-1|10 15 40 40" />
 ```
 
-## Inlined svg
+## 内联的 svg
 
-If you don't want to use the webfont or svg variants from above, note that QIcon also supports one inlined `<svg>` tag (the content of the svg can be anything, not only a path).
+如果您不想使用上面的 webfont 或 svg 变体，请注意 QIcon 还支持一个内联 `<svg>` 标记（svg的内容可以是任何内容，而不仅仅是 path）。
 
-Reasoning on why to use an `<svg>` in a QIcon is that the svg will respect the size and color as any QIcon through its props. Without these features, you're better off inlining the svg in your templates without wrapping with QIcon.
+为什么在 QIcon 中使用 `<svg>` 的原因是，svg 将会通过 QIcon 的属性来继承它的大小和颜色。如果不需要这些特性，您最好在模板中内联 svg，而不使用 QIcon 包装。
 
 ```html
 <q-icon color="accent" size="5rem">
@@ -422,28 +421,28 @@ Reasoning on why to use an `<svg>` in a QIcon is that the svg will respect the s
 </q-icon>
 ```
 
-Some limitations:
-* do not use "height"/"width" attributes on the `<svg>` tag (it will break QIcon's way of handling the size)
-* all `<path>`s will have "fill: currentColor" CSS applied by default; if you don't want that, then add `fill="none"` to the `<path>` tag
+一些限制：
+* 请勿在 `<svg>` 标签上使用 "height"/"width" 属性（它将打破Qicon处理尺寸的方式）。
+* 所有的 `<path>` 将会拥有一个默认的 "fill: currentColor" CSS；如果您不希望这样，使用 `fill="none"` 来避免。
 
-## Image icons
-You can also make an icon point to an image URL instead of relying on any webfont, by using the `img:` prefix.
+## 使用图片作为图标
+通过使用 `img:` 前缀，您还可以使图标指向一个图片 URL，而不依赖任何 webfont。
 
-**All icon related props of Quasar components can make use of this.**
+**所有带 icon 属性的 Quasar 组件都可以这样引用图片。**
 
 ```html
 <q-icon name="img:https://cdn.quasar.dev/logo-v2/svg/logo.svg" />
 <q-btn icon="img:https://cdn.quasar.dev/logo-v2/svg/logo.svg" ... />
 
-<!-- reference from /public: -->
+<!-- 引用 /public 目录下的图片： -->
 <q-icon name="img:my/path/to/some.svg" />
 ```
 
 ::: tip
-Remember that you can place images in your `/public` folder too and point to them. You don't always need a full URL.
+请记住，您也可以将图像放在 `/public` 文件夹中并引用它们，并不总是需要完整的 URL。
 :::
 
-This is not restricted to SVG only. You can use whatever image type you want (png, jpg, ...):
+这不仅限于 SVG。您可以使用任何想要的图像类型（png、jpg…）：
 
 ```html
 <q-icon name="img:bla/bla/my.png" />
@@ -451,54 +450,53 @@ This is not restricted to SVG only. You can use whatever image type you want (pn
 <q-input clearable clear-icon="img:bla/bla/my.gif" ... />
 ```
 
-It is also possible to inline the image (svg, png, jpeg, gif...) and dynamically change its style (svg):
+还可以内联图像（svg、png、jpeg、gif…）并动态更改其样式（svg）：
 
 ```html
 <q-icon name="img:data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' height='140' width='500'><ellipse cx='200' cy='80' rx='100' ry='50' style='fill:yellow;stroke:purple;stroke-width:2' /></svg>" />
 ```
 
-<doc-example title="Dynamic SVG" file="QIcon/DynamicSvg" />
+<doc-example title="动态 SVG" file="QIcon/DynamicSvg" />
 
-You can also base64 encode an image and supply it. The example below is with a QBtn, but the same principle is involved when dealing with any icon prop or with QIcon:
+您还可以使用 base64 编码的图像。下面的例子是一个 QBtn，但在处理任何图标相关属性或 QIcon 时都是类似的：
+
 
 ```html
 <q-btn icon="
 img:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" ... />
 ```
 
-## Custom mapping
+## 自定义映射
 
-Should you want, you can customize the mapping of icon names. This can be done by overriding `$q.iconMapFn`. The recommended place to do it is in the `created()` hook of your `/src/App.vue` component.
+如果需要，可以自定义图标名称的映射。这可以通过重写 `$q.iconMapFn` 来实现。推荐在 `/src/App.vue` 组件的 `created()` 生命周期中来完成。
 
-The syntax for `$q.iconMapFn` is as follows:
+`$q.iconMapFn` 的语法如下：
 
 ```js
-/* Syntax */
+/* 语法 */
 iconMapFn (String: iconName) => Object / void 0 (undefined)
 
 /*
- The returned Object (if any) must be one of the following forms:
+ 返回的对象应该是以下格式之一：
 
- 1. Defines how to interpret icon
+ 1. 定义了如何解释图标
  {
-   cls: String // class name(s)
-   content: String // 可选的, in case you are using a ligature font
-                   // and you need it as content of the QIcon
+   cls: String // 类名
+   content: String // 可选的, 如果你使用一个连字字体，并需要它作为 QIcon 的内容
   }
 
-  2. Acts essentially as a map to another icon
+  2. 本质上作为另一个图标的映射
   {
-    icon: String // the mapped icon String, which will be handled
-                 // by Quasar as if the original QIcon name was this value
+    icon: String // 被映射的图标字符串，将会被 Quasar 作为 QIcon 的 name 属性的值
   }
 */
 ```
 
-Let's take both cases now.
+让我们现在来看这两个案例：
 
-#### 1. Support for custom icon library
+#### 1. 支持自定义图标库
 
-This is especially useful when you are using a custom icon library (that doesn't come with Quasar and its `@quasar/extras` package).
+这在您使用自定义图标库时尤其有用（不存在于 Quasar 及其 `@quasar/extras` 包中的图标）。
 
 ```js
 import { useQuasar } from 'quasar'
@@ -506,18 +504,17 @@ import { useQuasar } from 'quasar'
 setup () {
   const $q = useQuasar()
 
-  // Example of adding support for
+  // 添加对
   // <q-icon name="app:...." />
-  // This includes support for all "icon" props
-  // of Quasar components
+  // 的支持示例
+  // 这将在所有带 icon 属性的 Quasar 组件中都可用
 
   $q.iconMapFn = (iconName) => {
-    // iconName is the content of QIcon "name" prop
+    // iconName 是来自 QIcon 中 "name" 属性的值
 
-    // your custom approach, the following
-    // is just an example:
+    // 您的自定义方法，以下只是一个示例：
     if (iconName.startsWith('app:') === true) {
-      // we strip the "app:" part
+      // 我们删除了 "app:" 部分
       const name = iconName.substring(4)
 
       return {
@@ -525,16 +522,13 @@ setup () {
       }
     }
 
-    // when we don't return anything from our
-    // iconMapFn, the default Quasar icon mapping
-    // takes over
+    // 当我们没有从 iconMapFn 返回任何内容时，默认的 Quasar 图标映射将接管
   }
 }
 ```
+注意，我们在上述示例中返回了一个 `my-app-icon` 类名，那么如果我们在 QIcon 的 name 属性中使用 `app:` 前缀，QIcon 就会应用 `my-app-icon` 类名。
 
-Notice in the examples above that we are returning a `my-app-icon` class that gets applied to QIcon if our icon starts with `app:` prefix. We can use it to define how QIcon should react to it, from a CSS point of view.
-
-Let's assume we have our own webfont called "My App Icon".
+假设我们拥有自己的 web 字体图标，称为 "My App Icon"。
 
 ```css
 /*
@@ -555,7 +549,7 @@ Let's assume we have our own webfont called "My App Icon".
 }
 ```
 
-We should then edit our `quasar.config.js` (if using Quasar CLI) to add the newly created CSS file into our app:
+然后，我们应该编辑我们的 `quasar.config.js`（如果使用 Quasar CLI）以将新创建的 CSS 文件添加到我们的应用中：
 
 ```js
 css: [
@@ -564,9 +558,9 @@ css: [
 ]
 ```
 
-And also add "my-app-icon.woff2" and "my-app-icon.woff" files into the same folder as "my-app-icon.css" (or somewhere else, but edit the relative paths (see "src:" above) to the woff/woff2 files).
+并将 "my-app-icon.woff2" 和 "my-app-icon.woff" 文件添加到与 "my-app-icon.css" 相同的文件夹中（或其他位置，但请编辑相对路径（请参见上面的“src:”）到 woff/woff2 文件）。
 
-#### 2. Simply mapping a few icons
+#### 2. 简单映射少量的图标
 
 ```js
 import { useQuasar } from 'quasar'
@@ -590,4 +584,4 @@ setup () {
 }
 ```
 
-Now we can use `<q-icon name="app:copy" />` or `<q-icon name="app:icon1" />` and QIcon will treat "app:copy" and "app:icon1" as if they were written as "fas fa-copy" and "img:/path/to/icon1.svg".
+现在我们可以使用 `<q-icon name="app:copy" />` 或 `<q-icon name="app:icon1" />` ，QIcon 将处理 "app:copy" 和 "app:icon1" 就像它们被写为 "fas fa-copy" 和 "img:/path/to/icon1.svg" 一样。
