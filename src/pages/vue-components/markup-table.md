@@ -1,15 +1,16 @@
 ---
-title: Markup Table
-desc: The QMarkupTable Vue component is a helper wrapper which styles a native table.
+title: markup 表格
+desc: QMarkupTable是一个封装了原生表格，使其具有质感设计样式的vue组件。
 keys: QMarkupTable
 related:
   - /vue-components/table
 ---
 
-The QMarkupTable is a way for you to simply wrap a native `<table>` in order to make it look like a Material Design table.
+QMarkupTable 组件封装了原生的 `<table>`，使其看起来像是 Material Design（质感设计）的组件。
+
 
 ::: tip
-For advanced functionality like pagination, sorting, filtering, and many more, you may want to check out [QTable](/vue-components/table) component instead.
+对于分页、排序、过滤等高级功能，您可能需要查阅 [QTable](/vue-components/table) 组件。
 :::
 
 ## QMarkupTable API
@@ -19,21 +20,21 @@ For advanced functionality like pagination, sorting, filtering, and many more, y
 ## 用法
 
 ::: warning
-Notice that the content of `QMarkupTable` reflects an accurate markup representation of a native HTML `<table>`, having a `<thead>` and `<tbody>` to wrap header and table body. This is required.
+注意，`QMarkupTable` 的内容是由原生 HTML `<table>` 标签呈现的，使用一个 `<thead>` 和一个 `<tbody>` 来包裹标题和表主体。这是必需的。
 :::
 
-::: warning UMD developers
-This component will *NOT* work as-is within the UMD version of Quasar. Browsers parse the template HTML before Vue kicks in and renders it, so the markup needs to be correct. `<q-markup-table> <thead>` or `<q-markup-table> <tbody>` is not. The solution is to directly use the QMarkupTable Vue rendered tag (`<table class="....`).
+::: warning UMD 开发者
+该组件将**不能**在 Quasar 的 UMD 版本中按原样工作。 浏览器在 Vue 插入并渲染之前先解析 HTML 模板，因此标记必须正确。 不能是`<q-markup-table> <thead>` 或 `<q-markup-table> <tbody>`。 解决方案是直接使用 QMarkupTable Vue 渲染的标签（`<table class="....`）。
 :::
 
-<doc-example title="Basic" file="QMarkupTable/Basic" no-edit />
+<doc-example title="基础" file="QMarkupTable/Basic" no-edit />
 
-<doc-example title="Separators" file="QMarkupTable/Separators" no-edit />
+<doc-example title="分割线" file="QMarkupTable/Separators" no-edit />
 
-<doc-example title="Dark" file="QMarkupTable/Dark" no-edit />
+<doc-example title="黑色" file="QMarkupTable/Dark" no-edit />
 
-<doc-example title="Customization" file="QMarkupTable/Customization" no-edit />
+<doc-example title="自定义" file="QMarkupTable/Customization" no-edit />
 
 ::: tip
-If you want to remove the hover effect on some rows or some cells add a `q-tr--no-hover` or `q-td--no-hover` class to them.
+如果要删除某些行或单元格上的悬停效果，请向其添加 `q-tr--no-hover` 或 `q-td--no-hover` 类。
 :::
