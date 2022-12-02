@@ -1,6 +1,6 @@
 ---
-title: Inner Loading
-desc: The QInnerLoading Vue component allows you to add a loading indicator within a component in the form of a local overlay.
+title: 内部加载
+desc: QInnerLoading组件是一个可以在组件内添加进度动画的vue组件。
 keys: QInnerLoading
 related:
   - /vue-components/linear-progress
@@ -11,7 +11,7 @@ related:
   - /quasar-plugins/loading-bar
 ---
 
-The QInnerLoading component allows you to add a progress animation within a component. Much like the [Loading Plugin](/quasar-plugins/loading), its purpose is to offer visual confirmation to the user that some process is happening in the background, which takes an excessive amount of time. QInnerLoading will add an opaque overlay over the delayed element along with a [Spinner](/vue-components/spinners).
+QInnerLoading 组件可以给一个组件内部添加进度动画。与[加载插件](/quasar-plugins/loading)类似，它们的目的都是给用户传递信息：某个工作在后台运行，需要等待。QInnerLoading 会给目标元素添加一个不透明的覆盖层和一个[Spinner](/vue-components/spinners)组件。
 
 ## QInnerLoading API
 
@@ -20,19 +20,19 @@ The QInnerLoading component allows you to add a progress animation within a comp
 ## 用法
 
 ::: warning
-In order for the spinner to be properly placed in the center of the element you want the loading display to show over, that element must have CSS position set to `relative` (or the `relative-position` CSS class declared).
+为了将加载器正确放置在要显示加载的元素的中央，该元素必须将 CSS 定位设置为 `relative`（或使用 `relative-position` CSS 类）。
 :::
 
 ::: warning
-QInnerLoading must be the last element inside its parent so it can appear on top of the other content.
+QInnerLoading 必须是其父元素内部的最后一个元素，以便它可以显示在其他内容的顶部。
 :::
 
 ### 基础
 
-<doc-example title="Basic" file="QInnerLoading/Basic" />
+<doc-example title="基础" file="QInnerLoading/Basic" />
 
-### Label <q-badge align="top" color="brand-primary" label="v2.2+" />
+### 标签 <q-badge align="top" color="brand-primary" label="v2.2+" />
 
-You can add a label when using the default slot, but you can also use the "label" props instead:
+在使用默认槽时，你可以添加一个标签，但你也可以使用 "label" 属性代替：
 
-<doc-example title="Label props" file="QInnerLoading/LabelProp" />
+<doc-example title="Label 属性" file="QInnerLoading/LabelProp" />
