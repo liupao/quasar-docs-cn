@@ -17,19 +17,6 @@
 <hr>
 <br>
 
-<img src="https://img.shields.io/npm/v/quasar?label=quasar">
-<img src="https://img.shields.io/npm/v/%40quasar/app?label=@quasar/app">
-<img src="https://img.shields.io/npm/v/%40quasar/cli?label=@quasar/cli">
-<img src="https://img.shields.io/npm/v/%40quasar/extras.svg?label=@quasar/extras">
-<img src="https://img.shields.io/npm/v/%40quasar/icongenie.svg?label=@quasar/icongenie">
-<img src="https://img.shields.io/npm/v/%40quasar/vite-plugin.svg?label=@quasar/vite-plugin">
-
-
-[![Join the chat at https://chat.quasar.dev](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://chat.quasar.dev)
-<a href="https://forum.quasar.dev" target="_blank"><img src="https://img.shields.io/badge/community-forum-brightgreen.svg"></a>
-[![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation)
-
-
 ## 支持 Quasar
  Quasar 框架是一个 MIT 许可的开源项目。它的持续发展得益于这些令人尊敬的[支持者](https://github.com/rstoenescu/quasar-framework/blob/dev/backers.md)的支持
 
@@ -39,7 +26,7 @@
 
 Quasar 的官方网站: [https://quasar.dev](https://quasar.dev)
 
-本仓库的中文文档[地址](https://www.quasar-cn.cn)
+本仓库的中文文档：[https://www.quasar-cn.cn](https://www.quasar-cn.cn)
 
 ## Quasar 的进度和计划
 
@@ -56,16 +43,3 @@ Quasar 的官方网站: [https://quasar.dev](https://quasar.dev)
 ## 社区论坛
 
 在官方社区论坛上提问：[https://forum.quasar.dev](https://forum.quasar.dev)
-
-## 贡献
-
-在提出 PR 之前，请务必阅读 [贡献指南](./CONTRIBUTING.md)。如果您有与 Quasar 相关的项目/组件/工具，请将其与 pull 请求一起添加到 [策划的列表](https://github.com/quasarframework/quasar-awesome)！
-
-感谢所有已经[为 Quasar 作出贡献]的人(https://github.com/quasarframework/quasar/graphs/contributors)!
-
-## 语义
-Quasar 遵循[Semantic Versioning 2.0](https://semver.org/)。
-
-## 许可证
-
-[MIT 证可证](http://en.wikipedia.org/wiki/MIT_License)
