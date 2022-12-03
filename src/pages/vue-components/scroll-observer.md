@@ -1,66 +1,67 @@
 ---
-title: Scroll Observer
-desc: The QScrollObserver Vue component emits an event whenever the user scrolls the page or the parent scrollable container.
+title: 滚动监听器
+desc: QScrollObserver是一个可以监听到用户滚动行为的Vue组件
 keys: QScrollObserver
 related:
   - /vue-components/resize-observer
 ---
-QScrollObserver is a Quasar component that emits a `scroll` event whenever the user scrolls the page or overflowed container with `.scroll` CSS class applied to it.
+
+QScrollObserver 是一个可以监听到用户滚动行为的 Quasar 组件。每当用户滚动页面，或者某个拥有 `.scroll` CSS 类名的元素溢出容器时它都会触发一个 `scroll` 事件。
 
 ## QScrollObserver API
 
 <doc-api file="QScrollObserver" />
 
 ## 用法
-Scroll this page to see the example below in action.
 
-<doc-example title="Basic" file="QScrollObserver/Basic" />
+滚动此页面以查看下面的示例。
 
-## Determining Scrolling Container
-All components or directives in Quasar have a simple algorithm to determine the container that supports the scroll:
-- if a `scroll-target` property is available on the component then it tries to use it as scroll container
-- then it searches for a parent DOM element which has the `scroll`, `scroll-y` or `overflow-auto` Quasar CSS helper classes attached to it,
-- if none is found, then it considers that the scrolling takes place on the document itself.
 
-Components like [QScrollArea](/vue-components/scroll-area), for example, respect this design and have the `scroll` class embedded into it, so that QScrollObservable (or any other scrolling component or directive) can successfully detect it and attach the necessary event handlers to it.
+<doc-example title="基础" file="QScrollObserver/Basic" />
 
-Please note that simply attaching `scroll` CSS class to a DOM element or on a Vue component will have no effect if the respective element is not overflowed (example, with: CSS `overflow: hidden` and a height smaller than its inner content height).
+## 确定滚动的容器
 
-Example of good container:
+Quasar 的所有组件和指令都有一个简单的算法来确定它支持滚动的容器：
+- 如果组件上有 `scroll-target` 属性，那么尝试使用其值作为滚动容器。
+- 然后，它会查找一个拥有 `scroll`, `scroll-y` 或 `overflow-auto` 类名的父元素
+- 如未找到，则考虑将滚动附加到 document 本身。
+
+例如，[QScrollArea](/vue-components/scroll-area) 等组件都遵循这个设计，它们会嵌入一个 `scroll` 类，以便 QScrollObservable（或其他处理滚动的组件或指令）可以成功检测到它们并附加必要的事件。
+
+请注意，如果元素没有产生溢出（例如：CSS `overflow: hidden`，或者高度不够），那么简单的附加 `scroll` 也不会有任何效果。
+
+一个好的容器示例：
 
 ```html
 <!--
-  Quasar CSS helper 'overflow-hidden' is
-  equivalent to style="overflow: hidden"
+  Quasar 的辅助 CSS  'overflow-hidden' 等于 style="overflow: hidden"
 -->
 <div class="scroll overflow-hidden" style="height: 100px">
-  ...content expanding over the 100px height from container...
+  ... 内容高度需要大于容器高度的 100px ...
   <q-scroll-observer @scroll="scrollHandler" />
 
-  <!-- example with `v-scroll` directive -->
+  <!-- 使用 `v-scroll` 指令的示例 -->
   <div v-scroll="scrollHandler">...</div>
 </div>
 ```
 
-One more example with QScrollArea:
+QScrollArea 的另一个例子：
 
 ```html
 <q-scroll-area style="width: 400px; height: 500px;" class="bg-yellow">
-  ...content expanding over the 500px height from container...
+  ... 内容高度需要大于容器高度的 500px ...
   <q-scroll-observer @scroll="scrollHandler" />
 </q-scroll-area>
 ```
 
-## Horizontal
-For capturing horizontal scrolling, use the `axis="horizontal"` prop :
-
+## 水平
+为了监听水平方向上的滚动，请使用 `axis="horizontal"` 属性：
 ```html
 <q-scroll-observer axis="horizontal" @scroll="scrollHandler" />
 ```
 
-## Layout Scrolling
-When scrolling on a Layout with a Page, rather than injecting a QScrollObservable (and by so doing registering additional scroll events) you can take advantage of [QLayout](/layout/layout)´s `@scroll` event directly on your component defining the Layout.
-
+## Layout 布局滚动
+如果需要在布局页面上监听滚动，那么您可以考虑直接使用 [QLayout](/layout/layout)´ 组件的 `@scroll` 事件。
 ```html
 <q-layout @scroll="scrollHandler">...</q-layout>
 ```
