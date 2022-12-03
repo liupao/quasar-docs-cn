@@ -1,12 +1,12 @@
 ---
-title: Resize Observer (for Element)
-desc: The QResizeObserver Vue component emits a 'resize' event whenever the wrapping DOM element changes its width or height.
+title: 元素大小变化侦听器
+desc: QResizeObserver是一个可以在监听到目标元素/组件的大小改变时触发一个事件的vue组件。
 keys: QResizeObserver
 related:
   - /vue-components/scroll-observer
 ---
-QResizeObserver is a Quasar component that emits a `resize` event whenever the wrapping DOM element / component (defined as direct parent of QResizeObserver) changes its size (width and/or height). Note that no polling is involved, but overusing it is costly too.
 
+QResizeObserver 是一个可以在目标元素/组件（QResizeObserver 的直接父元素）的大小改变时触发一个 `resize` 事件的 Quasar 组件。注意，虽然它的原理不是轮询，但是过度使用也会造成高性能开销。
 
 ## QResizeObserver API
 
@@ -14,6 +14,6 @@ QResizeObserver is a Quasar component that emits a `resize` event whenever the w
 
 ## 用法
 
-<doc-example title="Basic" file="QResizeObserver/Basic" />
+<doc-example title="基础" file="QResizeObserver/Basic" />
 
-Please note that QResizeObserver will issue an event as soon as it gets rendered and attached to DOM, so you can have the initial size of the container.
+请注意，QResizeObserver 被附加到 DOM 后会立即触发一次事件，因此您可以获得容器的初始大小。
