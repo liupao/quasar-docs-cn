@@ -1,15 +1,15 @@
 ---
-title: Popup Edit
-desc: The QPopupEdit Vue component can be used to edit a value 'in place', like for example on a cell in QTable.
+title: 弹出编辑
+desc: QPopupEdit 是一个可用于“就地”编辑值，例如 QTable 中的单元格的Vue组件。
 keys: QPopupEdit
 related:
   - /vue-components/input
   - /vue-components/menu
 ---
 
-The QPopupEdit component can be used to edit a value “in place”, like for example a cell in QTable. By default, a cell is displayed as a String, then if you are using QPopupEdit and a user clicks/taps on the table cell, a popup will open where the user will be able to edit the value using a textfield.
+QPopupEdit 组件可用于“就地”编辑值，例如 QTable 中的单元格。默认情况下，单元格显示为字符串，如果您使用 QPopupEdit，当用户单击表格单元格，将弹出一个编辑框，用户可以使用它编辑文本字段。
 
-This component injects a [QMenu](/vue-components/menu) into its parent DOM element and enables the behavior described above, so **it can be used anywhere**, not only in QTable.
+这个组件会将一个 [QMenu](/vue-components/menu) 注入到它的父 DOM 元素中来实现上述的行为，所以**它可以被用在任何地方**，而不仅仅是在 QTable 中。
 
 ## QPopupEdit API
 
@@ -18,60 +18,63 @@ This component injects a [QMenu](/vue-components/menu) into its parent DOM eleme
 ## 用法
 
 ::: warning
-If used on a QTable, QPopupEdit won't work with cell scoped slots.
+如果用于一个 QTable 中， QPopupEdit 无法在单元格范围的插槽中工作。
 :::
 
-### Standalone
+### 标准
 
-<doc-example title="Click on text" file="QPopupEdit/Standalone" />
+<doc-example title="点击文本部分" file="QPopupEdit/Standalone" />
 
-### With QTable
-Click on the cells to see the popup editor. The column "Name" demonstrates the `title` prop. The column "Calories" displays a numeric value usage. The column "Fat" also demonstrates the `disable` prop. If you look at the source code, you'll see the cell for "fat" is using QPopupEdit, yet when clicking on the cell, the popup doesn't show.
+### 在 QTable 中使用
+点击单元格来查看弹出的编辑器。"Name" 列展示了 `title` 属性的用法。"Calories" 列展示了数字类型数据的用法。"Fat" 列展示了 `disable` 属性的用法。如果你看一下源代码，你会发现 "Fat" 单元格使用了 QPopupEdit，但是当点击该单元格时，弹出窗口并没有显示。
 
-<doc-example title="Edit first columns" file="QPopupEdit/WithTable" />
+<doc-example title="点击单元格弹出编辑" file="QPopupEdit/WithTable" />
 
-### Customizing
+### 自定义
 
-<doc-example title="Customizing QPopupEdit" file="QPopupEdit/Customizing" />
+<doc-example title="自定义 QPopupEdit" file="QPopupEdit/Customizing" />
 
-### Persistent and with buttons
-You can also add two buttons with the `buttons` prop, "Cancel" and "Set" (the default labels). These buttons help to control the user's input. Along with the `buttons` prop, you also have the `persistent` prop, which denies the user from closing the popup with the escape key or clicking/ tapping outside of the popup. The `persistent` prop is demonstrated in the "carbs" column. Lastly, you can control the labels of the two buttons with the `label-set` and `label-cancel` props, as seen in the "Protein" column. Notice "Save" is replacing "Set" and "Close" is replacing "Cancel".
+### 保持且带有按钮的
+还可以使用 `buttons` 为其添加两个按钮，"Cancel" 和 "Set"（默认标签，但是您可以通过 `label-set` 和 `label-cancel` 属性来自定义它们的标签内容），这有助于用户控制用户的输入。除此之外，您还可以使用 `persistent` 来取消用户使用 escape 键和点击 QPopupEdit 外部可以关闭弹窗的行为。
 
-<doc-example title="Persistent edit, and with buttons" file="QPopupEdit/WithButtons" />
+下面的示例中，"carbs" 列展示了 `persistent` 属性的用法。"Protein" 列展示了 `label-set` 和 `label-cancel` 的用法，注意其中，"Save" 替换了默认的 "Set"，"Close" 替换了默认的 "Cancel"。
 
-### The default slot
-The default slot's parameters are:
+<doc-example title="保持编辑并添加按钮" file="QPopupEdit/WithButtons" />
+
+### 默认插槽
+
+默认插槽的参数是：
 
 ```js
 { initialValue, value, validate, set, cancel, updatePosition }
 ```
 
 ::: warning
-Do not destructure the slot's parameters as it will generate linting errors when using the `value` prop directly with `v-model`.
+不要破坏槽的参数结构，因为直接对 `value` 使用 `v-model` 时，会产生格式错误。
 :::
 
-<doc-example title="Default slot parameters" file="QPopupEdit/DefaultSlotParameters" />
+<doc-example title="默认插槽的参数" file="QPopupEdit/DefaultSlotParameters" />
 
 ### Textarea / QEditor
-Since QPopupEdit wraps QInput, you can basically use any type of QInput. For instance, you can also use a text area as shown below in the "Comments" column.
+由于 QPopupEdit 封装了 QInput，所以您基本上可以使用任意类型的 QInput。例如，您还可以使用下面的 "Comments"  列中所示的文本域。
 
 ::: tip
-When using a multi-line control (textarea, QEditor) for input, you'll need to also use `@keyup.enter.stop` on the component in order to stop the enter key from closing the popup. You'll also need to add buttons for controlling the popup too.
+当使用多行输入控件（textarea、QEditor）时，您还需要在组件上使用 `@keyup.enter.stop`，以阻止回车键关闭弹出窗口。 您还需要添加按钮来控制弹窗。
 :::
 
-<doc-example title="QInput textarea" file="QPopupEdit/TextArea" />
+<doc-example title="QInput 文本域" file="QPopupEdit/TextArea" />
 
 <doc-example title="QEditor" file="QPopupEdit/PopupWithEditor" />
 
-### Validation
-QPopupEdit also allows for simple validation of the input. To use it, you give it a callback function in the form of an arrow function and it should return a Boolean. `(value) => Boolean`. This is **demonstrated in the "Calories" column** below.
+### 验证
+QPopupEdit 还允许对输入进行简单的验证。要使用它，您需要以箭头函数的形式为其提供回调函数，并且该函数应返回布尔值。 `(value) => Boolean`。在下面的 "Calories" 列中演示。
 
-::: tip Tip 1
-Notice we are using the `hide` event to also revalidate the input. If we don't, QInput's error prop will 'hang' in an invalid state.
+::: tip 提示 1
+请注意，我们需要使用 `hide` 事件来重新验证输入。如果我们不这样做，QInput 的 error 属性将以无效状态 “挂起”。
 :::
 
-::: tip Tip 2
-With this example, we are using QInput's external error handling. We could also use QInput's validation prop and emit the value to QPopupEdit's validation prop. The same concept can be implemented, when using Vuelidate too. In other words, the value given to QPopupEdit's validate function can come from anywhere.
+::: tip 提示 2
+在本例中，我们使用 QInput 的外部错误处理。我们还可以使用 QInput 的验证属性并将值发送到 QPopupEdit 的验证属性。同样的概念也可以在使用 Vuelidate 时实现。换句话说，给 QPopupEdit 的 validate 函数的值可以来自任何地方。
 :::
 
-<doc-example title="Edit with validation" file="QPopupEdit/WithValidation" />
+<doc-example title="验证输入" file="QPopupEdit/WithValidation" />
