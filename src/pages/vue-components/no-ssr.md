@@ -1,16 +1,16 @@
 ---
 title: No SSR
-desc: The QNoSsr Vue component makes it easy to differentiate content between server-side and client-side.
+desc: QNoSsr是一个可以控制其内容只在SSR应用的客户端或服务端渲染的vue组件。
 keys: QNoSsr
 related:
   - /quasar-cli-vite/developing-ssr/introduction
   - /quasar-cli-webpack/developing-ssr/introduction
 ---
-The QNoSsr component makes sense only if you are creating a SSR website/app.
+QNoSsr 组件只在您创建 SSR 应用时有用。
 
-It avoids rendering its content on the server and leaves that for client only. Useful when you got code that is not isomorphic and can only run on the client side, in a browser.
+他可以避免它的内容在服务端被渲染，而只在客户端渲染。当您的代码不是同构的并且只能在浏览器中允许时特别有用。
 
-Alternatively, you can also use it to render content only on server-side and it automatically removes it if it ends up running on a client browser.
+或者，您也可以使用它仅在服务器端渲染某些内容，在浏览器客户端中它会自动删除相关内容。
 
 ## QNoSsr API
 
@@ -22,7 +22,7 @@ Alternatively, you can also use it to render content only on server-side and it 
 
 ```html
 <q-no-ssr>
-  <div>This won't be rendered on server</div>
+  <div>这个标签不会服务端渲染</div>
 </q-no-ssr>
 ```
 
@@ -30,44 +30,44 @@ Alternatively, you can also use it to render content only on server-side and it 
 
 ```html
 <q-no-ssr>
-  <div>This won't be rendered on server.</div>
-  <div>This won't either.</div>
+  <div>这个标签不会服务端渲染</div>
+  <div>这个也不会。</div>
 </q-no-ssr>
 ```
 
-### Multiple client nodes with tag prop
+### 多个客户端节点
 
 ```html
 <q-no-ssr tag="blockquote">
-  <div>This won't be rendered on server.</div>
-  <div>This won't either.</div>
+  <div>这个标签不会服务端渲染</div>
+  <div>这个也不会。</div>
 </q-no-ssr>
 ```
 
-### Placeholder property
+### Placeholder 属性
 
 ```html
 <q-no-ssr placeholder="Rendered on server">
-  <div>This won't be rendered on server</div>
+  <div>这个标签不会服务端渲染/div>
 </q-no-ssr>
 ```
 
-### Placeholder slot
+### Placeholder 插槽
 
 ```html
 <q-no-ssr>
-  <div>This won't be rendered on server</div>
+  <div>这个标签不会服务端渲染/div>
   <template v-slot:placeholder>
     <div>Rendered on server</div>
   </template>
 </q-no-ssr>
 ```
 
-### Multiple content in placeholder slot
+### placeholder 插槽中多个节点
 
 ```html
 <q-no-ssr>
-  <div>This won't be rendered on server</div>
+  <div>这个标签不会服务端渲染/div>
   <template v-slot:placeholder>
     <div>Rendered on server (1/2)</div>
     <div>Rendered on server (2/2)</div>
@@ -75,7 +75,7 @@ Alternatively, you can also use it to render content only on server-side and it 
 </q-no-ssr>
 ```
 
-### Only placeholder slot
+### 只有 placeholder 插槽
 
 ```html
 <q-no-ssr>
