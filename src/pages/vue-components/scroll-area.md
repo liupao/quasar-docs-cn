@@ -1,12 +1,12 @@
 ---
-title: Scroll Area
-desc: The QScrollArea Vue component offers a way of customizing the scrollbars for all desktop browsers.
+title: 滚动区域
+desc: QScrollArea是一个提供了定制滚动条的简便方法的vue组件。
 keys: QScrollArea
 related:
   - /layout/drawer
 ---
 
-The QScrollArea component offers a neat way of customizing the scrollbars by encapsulating your content. Think of it as a DOM element which has `overflow: auto`, but with your own custom styled scrollbar instead of browser's default one and a few nice features on top.
+QScrollArea 组件提供了一种通过封装内容来定制滚动条的简便方法。可以将它视为一个设置了 `overflow: auto` 的 DOM 元素，并且定制了滚动条样式以及还拥有一些其他的很棒的特性。
 
 ## QScrollArea API
 
@@ -14,48 +14,48 @@ The QScrollArea component offers a neat way of customizing the scrollbars by enc
 
 ## 用法
 
-The following examples are best seen on desktop as they make too little sense on a mobile device.
+最好在桌面设备上查看以下示例，因为它们在移动设备上意义不大。
 
 ::: tip
-You can also take a look at [Layout Drawer](/layout/drawer) to see some more examples of it in action.
+您还可以查看[布局抽屉菜单](/layout/drawer)页面以了解更多的实用示例。
 :::
 
 ### 基础
 
-<doc-example title="Vertical content" file="QScrollArea/Vertical" />
+<doc-example title="垂直内容" file="QScrollArea/Vertical" />
 
-<doc-example title="Horizontal content" file="QScrollArea/Horizontal" />
+<doc-example title="水平内容" file="QScrollArea/Horizontal" />
 
-<doc-example title="Vertical and horizontal content" file="QScrollArea/VertHoriz" />
+<doc-example title="垂直和水平" file="QScrollArea/VertHoriz" />
 
-### Styled
+### 样式
 
-<doc-example title="Styled thumb and bar" file="QScrollArea/StyledBar" />
+<doc-example title="自定义滚动条" file="QScrollArea/StyledBar" />
 
-<doc-example title="Styled" file="QScrollArea/Styled" />
+<doc-example title="自定义滚动条" file="QScrollArea/Styled" />
 
-### Dark
+### 黑色模式
 
-<doc-example title="Dark" file="QScrollArea/Dark" />
+<doc-example title="黑色模式" file="QScrollArea/Dark" />
 
-### Controlling scrollbar visibility
+###  控制滚动条的可见性
 
-When using the `visible` Boolean prop, the default mouse over/leave behavior is disabled, leaving you in full control of the scrollbar visibility.
+当使用 `visible` 属性时，默认的鼠标悬浮行为会被禁用，您可以完全控制滚动条的可见性。
 
-<doc-example title="Controlling scrollbar visibility" file="QScrollArea/ScrollbarVisibility" />
+<doc-example title="控制滚动条的可见性" file="QScrollArea/ScrollbarVisibility" />
 
-### Delay
+### 延迟
 
-When content changes, the scrollbar appears then disappears again. You can set a certain delay (amount of time in milliseconds) before scrollbar disappears again (if component is not hovered):
+当内容发生变化时，滚动条会出现，然后再次消失。您可以在滚动条再次消失之前设置一定的延迟（以毫秒为单位的时间量）（如果组件没有悬停）：
 
-<doc-example title="Delay" file="QScrollArea/Delay" />
+<doc-example title="延迟" file="QScrollArea/Delay" />
 
-### Scroll position
+### 滚动位置
 
-<doc-example title="Scroll Position" file="QScrollArea/ScrollPosition" />
+<doc-example title="滚动位置" file="QScrollArea/ScrollPosition" />
 
-### Scroll event
+### 滚动事件
 
-Below is an example of using the `@scroll` event to synchronize the scrolling between two containers.
+下面示例使用 `@scroll` 事件来同步两边内容的滚动。
 
-<doc-example title="Synchronized" file="QScrollArea/Synchronized" />
+<doc-example title="同步滚动" file="QScrollArea/Synchronized" />
