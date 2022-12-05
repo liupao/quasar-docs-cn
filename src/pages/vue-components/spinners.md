@@ -1,6 +1,6 @@
 ---
-title: Spinners
-desc: The QSpinner and its derived Vue components are used to show the user a timely process is currently taking place. It gives the user the feeling the system is continuing to work for longer term activities.
+title: 加载器
+desc: QSpinner 用于向用户显示当前正在进行的流程。这是一个重要的用户体验特性，它给用户一种系统在长期活动中继续工作的感觉，比如从服务器获取数据或进行一些繁重的计算。
 keys: QSpinner,QSpinnerAudio,QSpinnerBall,QSpinnerBars,QSpinnerBox,QSpinnerClock,QSpinnerComment,QSpinnerCube,QSpinnerDots,QSpinnerFacebook,QSpinnerGears,QSpinnerGrid,QSpinnerHearts,QSpinnerHourglass,QSpinnerInfinity,QSpinnerIos,QSpinnerOrbit,QSpinnerOval,QSpinnerPie,QSpinnerPuff,QSpinnerRadio,QSpinnerRings,QSpinnerTail
 related:
   - /vue-components/linear-progress
@@ -11,7 +11,7 @@ related:
   - /quasar-plugins/loading-bar
 ---
 
-A Spinner is used to show the user a timely process is currently taking place. It is an important UX feature, which gives the user the feeling the system is continuing to work for longer term activities, like grabbing data from the server or some heavy calculations.
+QSpinner 用于向用户显示当前正在进行的流程。这是一个重要的用户体验特性，它给用户一种系统正在加载一项长期活动的感觉，比如从服务器获取数据或进行一些繁重的计算。
 
 ## QSpinner API
 
@@ -20,7 +20,7 @@ A Spinner is used to show the user a timely process is currently taking place. I
 ## Other Spinners API
 
 ::: tip
-The API below applies to all spinners, except for QSpinner. Making an example with QSpinnerCube.
+以下 API 也适用于除 QSpinner 之外的所有加载器。以 QSpinnerCube 为例。
 :::
 
 <doc-api file="QSpinnerCube" />
@@ -29,14 +29,14 @@ The API below applies to all spinners, except for QSpinner. Making an example wi
 
 <doc-example title="QSpinner" file="QSpinner/Default" />
 
-In the example below, hover over the spinners to see their names.
+在下面的示例中，将鼠标悬停在加载器上以查看其名称
 
-<doc-example title="Other spinners" file="QSpinner/Others" />
+<doc-example title="其他加载器" file="QSpinner/Others" />
 
-<doc-example title="Coloring" file="QSpinner/Color" />
+<doc-example title="颜色" file="QSpinner/Color" />
 
-Please note that by default, QSpinner and all other spinners inherit the font-size of the parent and applies it as its size.
+请注意，默认情况下，QSpinner 和所有其他加载器继承父级的字体大小，并将其应用为其大小。
 
-<doc-example title="Size" file="QSpinner/Size" />
+<doc-example title="大小" file="QSpinner/Size" />
 
-<doc-example title="Standard sizes" file="QSpinner/StandardSizes" />
+<doc-example title="标准尺寸" file="QSpinner/StandardSizes" />
