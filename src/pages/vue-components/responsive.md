@@ -1,10 +1,10 @@
 ---
 title: Responsive
-desc: The QResponsive Vue component forces the content to maintain an aspect ratio based on its width.
+desc: QResponsive是一个vue组件，它强制内容根据其宽度保持纵横比。
 keys: QResponsive
 ---
 
-QResponsive is a component which forces the content to maintain an aspect ratio based on its width.
+QResponsive 组件会强制内容根据其宽度保持长宽比。
 
 ## QResponsive API
 
@@ -12,41 +12,41 @@ QResponsive is a component which forces the content to maintain an aspect ratio 
 
 ## 用法
 
-::: tip TIPS
-* The component can be used with any content, as long you specify **only one direct child**. If you need multiple elements inside of it, wrap them in a `<div>`.
-* It is your responsibility to make sure that your content won't overflow the container.
+::: tip 提示
+* 这个组件可以放置任何内容，只要**只指定一个直接子元素**即可。如果您有多个元素，可以使用一个 `<div>` 包裹起来。
+* 您需要确保内容不会溢出容器。
 :::
 
 ::: warning
-Do not use it on Quasar components that already have a `ratio` property, like QImg or QVideo, or on components that have a forced height.
+不要将其用于已经具有 `ratio` 属性的 Quasar 组件，如 QImg 或 QVideo，或具有强制高度的组件。
 :::
 
 ### 基础
 
-<doc-example title="Basic usage" file="QResponsive/Basic" />
+<doc-example title="基础用法" file="QResponsive/Basic" />
 
 ### Flex row
 
-Note below that we are using a vertical alignment (`items-start`) other than the default (`stretch`), so that flexbox won't force the height on each QResponsive component.
+注意，我们在下面的示例中使用了 `items-start` 来设置垂直对齐替换默认的 `stretch`，所以 flexbox 不会给 QResponsive 组件强制高度。
 
-<doc-example title="Basic usage" file="QResponsive/FlexRow" />
+<doc-example title="基础用法" file="QResponsive/FlexRow" />
 
-### On some components
+### 一些组件示例
 
-Below are just a few examples. QResponsive is not restricted to only QCard and QCarousel.
+下面只是一些例子。 QResponsive 不仅限于 QCard 和 QCarousel。
 
-<doc-example title="On QCard" file="QResponsive/Card" />
+<doc-example title="QCard" file="QResponsive/Card" />
 
-<doc-example title="On QCardSection" file="QResponsive/CardSection" />
+<doc-example title="QCardSection" file="QResponsive/CardSection" />
 
-<doc-example title="On QTable" file="QResponsive/Table" />
+<doc-example title="QTable" file="QResponsive/Table" />
 
-Notice that we will not supply a `height` prop to QCarousel when we use QResponsive on it, since it's QResponsive who will take care of that.
+注意，当我们在 QCarousel 上使用 QResponsive 时，我们不会为它提供 `height` 属性，因为由 QResponsive 会负责。
 
-<doc-example title="On QCarousel" file="QResponsive/Carousel" />
+<doc-example title="QCarousel" file="QResponsive/Carousel" />
 
-### Maximum height
+### 最大高度
 
-Apply the max height (or max width, etc etc) directly on the QResponsive component through a CSS class or inline. Remember that it is still your responsibility to ensure that the content won't overflow the container.
+通过 CSS 类或内联样式设置的最大高度（或最大宽度等）将直接应用于 QResponsive 组件。请记住，您需要确保内容不会溢出容器。
 
-<doc-example title="On QCard" file="QResponsive/MaxHeight" />
+<doc-example title="QCard" file="QResponsive/MaxHeight" />
