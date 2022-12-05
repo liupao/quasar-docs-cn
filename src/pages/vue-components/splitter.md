@@ -1,6 +1,6 @@
 ---
-title: QSplitter
-desc: The QSplitter Vue component allow containers to be split vertically and/or horizontally through a draggable separator bar.
+title: 分栏
+desc: QSplitter 是一个可以将容器通过一个可拖动的分割栏垂直或水平分开的 vue 组件。
 keys: QSplitter
 related:
   - /vue-components/expansion-item
@@ -8,8 +8,7 @@ related:
   - /vue-components/separator
 ---
 
-The QSplitter component allow containers to be split vertically and/or horizontally through a draggable separator bar.
-
+QSplitter 组件可以将容器通过一个可拖动的分割栏垂直或水平分开。
 
 ## QSplitter API
 
@@ -18,55 +17,55 @@ The QSplitter component allow containers to be split vertically and/or horizonta
 ## 用法
 
 ::: warning
-The use of the `before` and `after` slots is required.
+必须要使用 `before` 和 `after` 插槽。
 :::
 
-Click and drag on the splitter separator bar to see results.
+点击并拖拽分隔栏以查看效果。
 
 ### 基础
 
-<doc-example title="Basic" file="QSplitter/Basic" />
+<doc-example title="基础" file="QSplitter/Basic" />
 
-### Horizontal
+### 水平
 
-<doc-example title="Horizontal" file="QSplitter/Horizontal" />
+<doc-example title="水平" file="QSplitter/Horizontal" />
 
-### Custom dragging limits
+### 自定义拖拽限制
 
-<doc-example title="Custom dragging limits (50-100)" file="QSplitter/Limits" />
+<doc-example title="自定义拖拽限制 (50-100)" file="QSplitter/Limits" />
 
-### Model units
+### 数据单位
 
-By default, the CSS `unit` used is '%' (percentage). But you can also use 'px' (pixels), as in the example below.
+默认的 CSS 单位是 '%' （百分比），但是您可以将其设置为 'px'（像素）,如下所示。
 
-<doc-example title="Model in pixels" file="QSplitter/PixelModel" />
+<doc-example title="像素单位" file="QSplitter/PixelModel" />
 
-### Reverse model
+### 反向的 model 数据
 
-By default, the model is connected to the `before` slot size. But you can reverse that and make it connect to the `after` slot, as in the example below. This feature turns out especially useful if your `unit` is set to pixels and you want to control the `after` slot.
+默认情况下，model 数据表示 `before` 插槽的大小，但是您可以将其反转成 `after` 插槽的大小，如下所示。当您使用像素单位并且想控制 `after` 插槽的大小时很有用。
 
-<doc-example title="Reverse model" file="QSplitter/ReverseModel" />
+<doc-example title="反向的 model 数据" file="QSplitter/ReverseModel" />
 
-### Adding content to separator
+### 给分割条添加内容
 
 ::: tip
-If you use images as content for the separator slot, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+如果您添加的内容中有用图像，那么最好为其添加 `draggable="false"` 否则浏览器的原生行为可能会产生负面影响。
 :::
 
-<doc-example title="Adding to separator" file="QSplitter/SeparatorSlot" />
+<doc-example title="给分割条添加内容" file="QSplitter/SeparatorSlot" />
 
-### Dark design
+### 黑色模式
 
-<doc-example title="On a dark background with customized separator" file="QSplitter/CustomizedSeparator" dark />
+<doc-example title="在黑色背景上自定义分割条" file="QSplitter/CustomizedSeparator" dark />
 
-### Embedded
+### 嵌套的
 
-A QSplitter can be embedded in another QSplitter's `before` and/or `after` slots, like shown in example below.
+一个 QSplitter 也可以嵌套在另一个 QSplitter 的 `before` /`after` 插槽中，如下所示：
 
-<doc-example title="Embedded" file="QSplitter/Embedded" />
+<doc-example title="嵌套的" file="QSplitter/Embedded" />
 
-### Fun examples
+### 有趣的示例
 
 <doc-example title="Image Fun" file="QSplitter/ImageFun" />
 
-<doc-example title="Reactive Images" file="QSplitter/ReactiveImages" />
+<doc-example title="响应式图片" file="QSplitter/ReactiveImages" />
