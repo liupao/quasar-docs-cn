@@ -1,12 +1,13 @@
 ---
-title: Slide Transition
-desc: The QSlideTransition Vue component slides the encapsulated element up or down, based on its visibility. Works alongside v-show and v-if.
+title: 滑动过渡
+desc: QSlideTransition 根据其可见性向上或向下滑动 DOM 元素或组件，在单个元素上与 v-show 和 v-if 一起使用，
 keys: QSlideTransition
 related:
   - /vue-components/expansion-item
   - /options/transitions
 ---
-QSlideTransition slides the DOM element (or component) up or down, based on its visibility: works alongside `v-show` and `v-if` on a single element, similar to Vue's Transition component with the only difference being that it's not a group transition too (it only applies to one DOM element or component).
+
+QSlideTransition 根据其可见性向上或向下滑动 DOM 元素或组件：在单个元素上与 `v-show` 和 `v-if` 一起使用，类似于 Vue 的 Transition 组件，唯一的区别是它不是组合过渡,仅适用于一个 DOM 元素或组件。
 
 ## QSlideTransition API
 
@@ -14,4 +15,4 @@ QSlideTransition slides the DOM element (or component) up or down, based on its 
 
 ## 用法
 
-<doc-example title="Basic" file="QSlideTransition/Basic" />
+<doc-example title="基础" file="QSlideTransition/Basic" />
