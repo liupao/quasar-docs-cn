@@ -1,128 +1,173 @@
-<template lang="pug">
-q-layout.doc-layout(view="lHh LpR lff", @scroll="onScroll")
-  q-header.header.text-dark(bordered)
-    q-toolbar.q-px-none
-      q-btn.q-mx-sm.lt-md(flat, dense, round, @click="toggleLeftDrawer", aria-label="Menu", :icon="mdiMenu")
-
-      q-btn.quasar-logo.text-bold(key="logo", flat, no-caps, no-wrap, stretch, to="/")
-        img.quasar-logo__img(src="https://cdn.quasar.dev/logo-v2/svg/logo.svg")
-        img.quasar-logo__logotype(src="https://cdn.quasar.dev/logo-v2/svg/logotype.svg")
-
-      q-space
-
-      header-menu.self-stretch.row.no-wrap(v-if="$q.screen.gt.xs")
-
-      q-btn.q-mx-xs(
-        v-show="showRightDrawerToggler"
-        flat
-        dense
-        round
-        @click="toggleRightDrawer"
-        aria-label="Menu"
-        :icon="mdiClipboardText"
-      )
-
-  q-drawer.doc-left-drawer(
-    side="left"
-    v-model="leftDrawerState"
-    show-if-above
-    bordered
-  )
-    q-scroll-area(style="height: calc(100% - 51px); margin-top: 51px")
-      template(v-if="searchResults !== null")
-        component(
-          v-if="searchResults.masterComponent !== void 0"
-          :is="searchResults.masterComponent"
-        )
-        app-search-results(
-          v-else
-          :results="searchResults"
-          :search-has-focus="searchHasFocus"
-          :search-active-id="searchActiveId"
-        )
-
-      template(v-else)
-        //- survey-countdown.layout-countdown(
-        //-   color="primary"
-        //-   align-class="justify-center"
-        //-   padding-class="q-py-md"
-        //- )
-        //- q-separator.q-mb-lg
-
-        .row.justify-center.q-my-md
-          q-btn.doc-layout__main-btn(
-            href="https://donate.quasar.dev"
-            target="_blank"
-            rel="noopener"
-            color="brand-primary"
-            outline
-            :icon="mdiHeart"
-            label="Donate to Quasar"
-            no-wrap
-            no-caps
-          )
-
-        app-menu.q-mb-lg
-
-    .absolute-top.header
-      form(
-        autocorrect="off"
-        autocapitalize="off"
-        autocomplete="off"
-        spellcheck="false"
-      )
-        q-input.full-width.app-search-input(
-          ref="searchInputRef"
-          v-model="searchTerms"
+<template>
+  <q-layout class="doc-layout" view="lHh LpR lff" @scroll="onScroll">
+    <q-header class="header text-dark" bordered>
+      <q-toolbar class="q-px-none">
+        <q-btn
+          class="q-mx-sm lt-md"
+          flat
           dense
-          square
-          borderless
-          debounce="300"
-          @keydown="onSearchKeydown"
-          @focus="onSearchFocus"
-          @blur="onSearchBlur"
-          placeholder="Search Quasar v2..."
-          type="search"
-        )
-          template(v-slot:prepend)
-            q-icon(name="search")
-          template(v-slot:append)
-            q-icon.cursor-pointer(v-if="searchTerms" name="cancel" @click="onSearchClear")
-            .row.items-center.no-wrap.no-pointer-events(v-else-if="!searchHasFocus")
-              kbd.flex.flex-center /
-
-      q-separator
-
-  q-drawer(
-    v-if="hasRightDrawer"
-    side="right"
-    v-model="rightDrawerState"
-    show-if-above
-    :width="220"
-    @on-layout="updateRightDrawerOnLayout"
-  )
-    q-scroll-area.fit
-      header-menu.q-mt-sm.text-brand-primary.column(v-if="$q.screen.lt.sm", align="right")
-
-      q-list.doc-toc.q-my-sm.text-grey-8
-        q-item(
-          v-for="tocItem in tocList"
-          :key="tocItem.id"
-          :id="'toc--'+tocItem.id"
-          clickable
-          v-ripple
+          round
+          @click="toggleLeftDrawer"
+          aria-label="Menu"
+          :icon="mdiMenu"
+        ></q-btn>
+        <q-btn
+          class="quasar-logo text-bold"
+          key="logo"
+          flat
+          no-caps
+          no-wrap
+          stretch
+          to="/"
+        >
+          <img
+            class="quasar-logo__img"
+            src="https://cdn.quasar.dev/logo-v2/svg/logo.svg"
+          />
+          <img
+            class="quasar-logo__logotype"
+            src="https://cdn.quasar.dev/logo-v2/svg/logotype.svg"
+          />
+        </q-btn>
+        <q-space></q-space>
+        <header-menu
+          class="self-stretch row no-wrap"
+          v-if="$q.screen.gt.xs"
+        ></header-menu>
+        <q-btn
+          class="q-mx-xs"
+          v-show="showRightDrawerToggler"
+          flat
           dense
-          @click="scrollTo(tocItem.id)",
-          :active="activeToc === tocItem.id"
-        )
-          q-item-section(v-if="tocItem.sub === true", side) »
-          q-item-section {{ tocItem.title }}
-
-  q-page-container
-    router-view
-
-  q-page-scroller
-    q-btn(fab-mini, color="brand-primary", glossy, :icon="mdiChevronUp")
+          round
+          @click="toggleRightDrawer"
+          aria-label="Menu"
+          :icon="mdiClipboardText"
+        ></q-btn>
+      </q-toolbar>
+    </q-header>
+    <q-drawer
+      class="doc-left-drawer"
+      side="left"
+      v-model="leftDrawerState"
+      show-if-above
+      bordered
+    >
+      <q-scroll-area style="height: calc(100% - 51px); margin-top: 51px">
+        <template v-if="searchResults !== null">
+          <component
+            v-if="searchResults.masterComponent !== void 0"
+            :is="searchResults.masterComponent"
+          ></component>
+          <app-search-results
+            v-else
+            :results="searchResults"
+            :search-has-focus="searchHasFocus"
+            :search-active-id="searchActiveId"
+          ></app-search-results>
+        </template>
+        <template v-else>
+          <!-- <survey-countdown
+            class="layout-countdown"
+            color="primary"
+            align-class="justify-center"
+            padding-class="q-py-md"
+          ></survey-countdown>
+          <q-separator class="q-mb-lg"></q-separator> -->
+          <div class="row justify-center q-my-md">
+            <q-btn
+              class="doc-layout__main-btn"
+              href="https://donate.quasar.dev"
+              target="_blank"
+              rel="noopener"
+              color="brand-primary"
+              outline
+              :icon="mdiHeart"
+              label="Donate to Quasar"
+              no-wrap
+              no-caps
+            ></q-btn>
+          </div>
+          <app-menu class="q-mb-lg"></app-menu>
+        </template>
+      </q-scroll-area>
+      <div class="absolute-top header">
+        <form
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="off"
+          spellcheck="false"
+        >
+          <q-input
+            class="full-width app-search-input"
+            ref="searchInputRef"
+            v-model="searchTerms"
+            dense
+            square
+            borderless
+            debounce="300"
+            @keydown="onSearchKeydown"
+            @focus="onSearchFocus"
+            @blur="onSearchBlur"
+            placeholder="Search Quasar v2..."
+            type="search"
+          >
+            <template v-slot:prepend><q-icon name="search"></q-icon></template>
+            <template v-slot:append>
+              <q-icon
+                class="cursor-pointer"
+                v-if="searchTerms"
+                name="cancel"
+                @click="onSearchClear"
+              ></q-icon>
+              <div
+                class="row items-center no-wrap no-pointer-events"
+                v-else-if="!searchHasFocus"
+              >
+                <kbd class="flex flex-center">/</kbd>
+              </div>
+            </template>
+          </q-input>
+        </form>
+        <q-separator></q-separator>
+      </div>
+    </q-drawer>
+    <q-drawer
+      v-if="hasRightDrawer"
+      side="right"
+      v-model="rightDrawerState"
+      show-if-above
+      :width="220"
+      @on-layout="updateRightDrawerOnLayout"
+    >
+      <q-scroll-area class="fit">
+        <header-menu
+          class="q-mt-sm text-brand-primary column"
+          v-if="$q.screen.lt.sm"
+          align="right"
+        ></header-menu>
+        <q-list class="doc-toc q-my-sm text-grey-8">
+          <q-item
+            v-for="tocItem in tocList"
+            :key="tocItem.id"
+            :id="'toc--' + tocItem.id"
+            clickable
+            v-ripple
+            dense
+            @click="scrollTo(tocItem.id)"
+            :active="activeToc === tocItem.id"
+          >
+            <q-item-section v-if="tocItem.sub === true" side>»</q-item-section>
+            <q-item-section>{{ tocItem.title }}</q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+    </q-drawer>
+    <q-page-container><router-view></router-view></q-page-container>
+    <q-page-scroller>
+      <q-btn fab-mini color="brand-primary" glossy :icon="mdiChevronUp"></q-btn>
+    </q-page-scroller>
+  </q-layout>
 </template>
 
 <script>
@@ -130,7 +175,11 @@ import { useQuasar } from 'quasar'
 import { useRoute } from 'vue-router'
 
 import {
-  mdiMenu, mdiClipboardText, mdiHeart, mdiMagnify, mdiChevronUp
+  mdiMenu,
+  mdiClipboardText,
+  mdiHeart,
+  mdiMagnify,
+  mdiChevronUp
 } from '@quasar/extras/mdi-v6'
 
 import AppMenu from 'components/AppMenu.js'
