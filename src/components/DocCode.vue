@@ -3,7 +3,6 @@
     <code-prism :lang="lang" :code="code" :style="style"></code-prism>
     <div class="doc-code-container__copy absolute">
       <copy-button :text="code"></copy-button>
-      <!-- {{code}} -->
     </div>
   </div>
 </template>
@@ -12,14 +11,14 @@
 import { computed } from 'vue'
 
 import CodePrism from './CodePrism.js'
-// import CopyButton from './CopyButton.vue'
+import CopyButton from './CopyButton.vue'
 
 export default {
   name: 'DocCode',
 
   components: {
-    CodePrism
-    // CopyButton
+    CodePrism,
+    CopyButton
   },
 
   props: {
