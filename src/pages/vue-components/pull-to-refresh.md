@@ -37,7 +37,7 @@ To refresh, pull down (with mouse or through finger touch) on the content below 
 ## Tips
 
 ::: tip Scrolling container
-Please read [here](/vue-components/scroll-observer#determining-scrolling-container) about how Quasar determines the container to attach scrolling events to.
+Please read [here](/vue-components/scroll-observer#确定滚动的容器) about how Quasar determines the container to attach scrolling events to.
 :::
 
 * If using a QLayout, then it's recommended that you put QPullToRefresh as direct child of QPage and wrap your page content with it.

@@ -36,7 +36,7 @@ QInfiniteScroll 组件可以在用户滚动页面时加载新内容。
 ### 提示
 
 ::: tip 滚动容器
-关于 Quasar 如何决定滚动事件附加的目标容器，请阅读[这里](/vue-components/scroll-observer#determining-scrolling-container)。
+关于 Quasar 如何决定滚动事件附加的目标容器，请阅读[这里](/vue-components/scroll-observer#确定滚动的容器)。
 :::
 
 * 当作为渲染页面的 Vue 组件的直接子元素时效果最佳

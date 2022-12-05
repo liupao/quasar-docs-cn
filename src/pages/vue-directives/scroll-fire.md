@@ -19,7 +19,7 @@ Scroll Fire 是一个指令，当用户滚动当前页面时，应用它的目�
 ## 用法
 
 ::: tip 滚动容器
-请阅读 [这里](/vue-components/scroll-observer#determining-scrolling-container) 了解 Quasar 如何 确定要附加滚动事件的容器。
+请阅读 [这里](/vue-components/scroll-observer#确定滚动的容器) 了解 Quasar 如何 确定要附加滚动事件的容器。
 :::
 
 <doc-example title="Basic" file="ScrollFire/Basic" scrollable />

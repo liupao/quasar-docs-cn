@@ -17,7 +17,7 @@ QParallax 解决了很多问题，包括图像/视频的大小实际上可以小
 ## 用法
 
 ::: tip 滚动的容器
-请阅读[这里](/vue-components/scroll-observer#e7a1aee5ae9ae6bb9ae58aa8e79a84e5aeb9e599a8)来了解 Quasar 如何确定要附加滚动事件的容器。
+请阅读[这里](/vue-components/scroll-observer#确定滚动的容器)来了解 Quasar 如何确定要附加滚动事件的容器。
 :::
 
 ### 图像背景
