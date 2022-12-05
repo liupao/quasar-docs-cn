@@ -1,6 +1,6 @@
 ---
-title: Skeleton
-desc: The QSkeleton Vue component is used to display a placeholder preview of your content before you load the actual page data.
+title: 骨架屏
+desc: QSkeleton是一个用于在加载实际页面数据之前显示占位符预览内容的vue组件。
 keys: QSkeleton
 related:
   - /vue-components/circular-progress
@@ -10,7 +10,7 @@ related:
   - /quasar-plugins/loading-bar
 ---
 
-The QSkeleton is a component for displaying a placeholder preview of your content before you load the actual page data. It's a nice way of informing the user of what to expect from the page before it is fully loaded and increases the perceived performance. It can be used to incrementally display information on screen as data is being fetched.
+QSkeleton 是一个用于在加载实际页面数据之前显示占位符预览内容的组件。这是一种很好的方式，可以在页面完全加载之前告知用户对页面的期望，并提高感知性能。当获取数据时，它可用于在屏幕上逐渐显示信息。
 
 ## QSkeleton API
 
@@ -18,35 +18,35 @@ The QSkeleton is a component for displaying a placeholder preview of your conten
 
 ## 用法
 
-<doc-example title="On a QCard" file="QSkeleton/Card" />
+<doc-example title="在 QCard 中使用" file="QSkeleton/Card" />
 
-### Predefined types
+### 预设的类型
 
-Below you can see the predefined types. There are some basic types (text, rect, circle) and also some special convenience types that accurately respect Quasar components size and border radius.
+在下面，您可以看到预定义的类型。有一些基本类型（文本，矩形，圆形），还有一些特殊的便利类型，可以准确显示 Quasar 组件的形状。
+<doc-example title="QSkeleton 类型" file="QSkeleton/Types" />
 
-<doc-example title="QSkeleton types" file="QSkeleton/Types" />
+### 动画
 
-### Animations
+<doc-example title="动画" file="QSkeleton/Animations" />
 
-<doc-example title="Animations" file="QSkeleton/Animations" />
+### 大小
 
-### Sizing
+<doc-example title="大小" file="QSkeleton/Sizing" />
 
-<doc-example title="Sizing" file="QSkeleton/Sizing" />
+### 样式
 
-### Styling
+<doc-example title="边框" file="QSkeleton/StylingBordered" />
 
-<doc-example title="Bordered" file="QSkeleton/StylingBordered" />
+<doc-example title="方形边框" file="QSkeleton/StylingSquare" />
 
-<doc-example title="Square borders" file="QSkeleton/StylingSquare" />
+<doc-example title="自定义颜色" file="QSkeleton/StylingColor" />
 
-<doc-example title="Custom color" file="QSkeleton/StylingColor" />
+<doc-example title="自定义边框" file="QSkeleton/StylingCustomBorder" />
 
-<doc-example title="Custom border" file="QSkeleton/StylingCustomBorder" />
+### 示例
 
-### Recipes
+享受一些事先准备好的示例。您的想象力是唯一的限制。
 
-Enjoy some pre-made recipes. Your imagination is the only limit.
 
 <doc-example title="Youtube" file="QSkeleton/RecipeYoutube" />
 
