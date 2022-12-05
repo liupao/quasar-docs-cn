@@ -1,6 +1,6 @@
 ---
-title: Popup Proxy
-desc: The QPopupProxy is a Vue component that should be used when you need either a QMenu or a QDialog (on smaller screens) to be displayed.
+title: 弹出代理
+desc: 当您需要在较大的屏幕上显示QMenu，在较小的屏幕上显示QDialog时，您可以使用 QPopupProxy。
 keys: QPopupProxy
 related:
   - /vue-components/menu
@@ -8,7 +8,7 @@ related:
   - /vue-directives/close-popup
 ---
 
-QPopupProxy should be used when you need either a [QMenu](/vue-components/menu) (on bigger screens) or a [QDialog](/vue-components/dialog) (on smaller screens) to be displayed. It acts as a proxy which picks either of the two components to use. QPopupProxy also handles context-menus.
+当您需要在较大的屏幕上显示 [QMenu](/vue-components/menu)，在较小的屏幕上显示 [QDialog](/vue-components/dialog) 时，您可以使用 QPopupProxy。它充当一个代理，可在两个组件中挑选一个使用。Qpopupproxy 还可以处理上下文菜单。
 
 ## QPopupProxy API
 
@@ -16,28 +16,29 @@ QPopupProxy should be used when you need either a [QMenu](/vue-components/menu) 
 
 ## 用法
 ::: tip
-Use your browsers development tools to toggle the device between mobile or desktop (with browser refresh after each change) or, physically resize your browser's window to watch the QPopupProxy component switch between either a QMenu or a QDialog before clicking/tapping on its container. The default breakpoint is set at 450px.
+使用浏览器开发工具在移动设备或桌面设备之间切换（每次更改后都会刷新浏览器），或者在点击 QPopupProxy 组件的容器之前，调整浏览器窗口的大小，以观察 QPopupProxy 组件在 QMenu 或 QDialog 之间切换。默认断点设置为 450px。
 :::
 
-### Standard
+### 标准
 
-<doc-example title="Standard" file="QPopupProxy/Standard" />
+<doc-example title="标准" file="QPopupProxy/Standard" />
 
-### Context menu
+### 上下文菜单
 
-<doc-example title="Context menu (right click / long tap)" file="QPopupProxy/ContextMenu" />
+<doc-example title="上下文菜单（右键或者长按）" file="QPopupProxy/ContextMenu" />
 
-### Breakpoint
+### 断点
 
-On the example below, click on the icon in the input.
+下面的实例中，点击输入框中的图标以查看效果。
 
-<doc-example title="Breakpoint @600px" file="QPopupProxy/Breakpoint" />
+<doc-example title="断点 @600px" file="QPopupProxy/Breakpoint" />
 
-### Pass-through props
-Keep in mind that all props from both [QMenu](/vue-components/menu) and [QDialog](/vue-components/dialog) are passed through via this component. So props like `offset` or `transition-show` (as a mere example) can be used in conjunction with QPopupProxy.
+### 透传属性
 
-<doc-example title="Props from QMenu or QDialog" file="QPopupProxy/Passthrough" />
+请注意，[QMenu](/vue-components/menu) 和 [QDialog](/vue-components/dialog) 所有的属性都可以通过这个组件传递。所以类似 `offset` 或 `transition-show` 等属性也可以在 QPopupProxy 中使用。
+
+<doc-example title="使用 QMenu 或 QDialog 的属性" file="QPopupProxy/Passthrough" />
 
 ::: warning
-QPopupProxy treats some components ([QDate](/vue-components/date), [QTime](/vue-components/time), [QCarousel](/vue-components/carousel) and [QColor](/vue-components/color-picker)) as special ones and forces `cover: true` and `maxHeight: '99vh'` on them. If you don't want this behavior just place a `div` as the first level child of QPopupProxy.
+QPopupProxy 会特殊处理一些组件 ([QDate](/vue-components/date), [QTime](/vue-components/time), [QCarousel](/vue-components/carousel) 和 [QColor](/vue-components/color-picker))，会强制设置 `cover: true` 和 `maxHeight: '99vh'`，如果您不希望如此，那么请使用一个 `div` 作为 QPopupProxy 的直接子组件，包裹住上述组件。
 :::
