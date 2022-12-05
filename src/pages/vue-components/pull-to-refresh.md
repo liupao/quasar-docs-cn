@@ -1,6 +1,6 @@
 ---
-title: Pull to refresh
-desc: The QPullToRefresh Vue component allows the user to pull down in order to refresh or retrieve the newest content on a page.
+title: 下拉刷新
+desc: QPullToRefresh是一个可以让用户下拉屏幕以刷新页面或检索最新内容的vue组件。
 keys: QPullToRefresh
 related:
   - /vue-components/infinite-scroll
@@ -8,7 +8,7 @@ related:
   - /vue-components/icon
 ---
 
-The QPullToRefresh is a component that allows the user to pull down in order to refresh page content (or retrieve the newest content).
+QPullToRefresh 组件可以让用户下拉屏幕以刷新页面（或检索最新内容）。
 
 ## QPullToRefresh API
 
@@ -19,27 +19,27 @@ The QPullToRefresh is a component that allows the user to pull down in order to 
 ### 基础
 
 ::: warning
-In your `@refresh` function, don't forget to call the passed in `done()` function when you have finished loading more data.
+当您在 `@refresh` 函数中完成更多数据的加载后，请不要忘记调用参数中的 `done()`。
 :::
 
-To refresh, pull down (with mouse or through finger touch) on the content below when the inner scroll position is the top.
+在下面的示例窗口中下拉（当滚动的内容处于最顶部时）以查看效果。
 
-<doc-example title="Basic" file="QPullToRefresh/Basic" />
+<doc-example title="基础" file="QPullToRefresh/Basic" />
 
-### Custom icon
+### 自定义图标
 
-<doc-example title="Custom icon" file="QPullToRefresh/Icon" />
+<doc-example title="自定义图标" file="QPullToRefresh/Icon" />
 
-### Custom coloring
+### 自定义颜色
 
-<doc-example title="Custom coloring" file="QPullToRefresh/CustomColoring" />
+<doc-example title="自定义颜色" file="QPullToRefresh/CustomColoring" />
 
-## Tips
+## 提示
 
-::: tip Scrolling container
-Please read [here](/vue-components/scroll-observer#确定滚动的容器) about how Quasar determines the container to attach scrolling events to.
+::: tip 滚动容器
+关于 Quasar 如何决定滚动事件附加的目标容器，请阅读[这里](/vue-components/scroll-observer#/vue-components/scroll-observer#确定滚动的容器)。
 :::
 
-* If using a QLayout, then it's recommended that you put QPullToRefresh as direct child of QPage and wrap your page content with it.
-* If you change the parent of this component, don't forget to call `updateScrollTarget()` on the QPullToRefresh Vue reference.
-* QPullToRefresh also allows text selection, so if your content also has images, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+* 如果在使用一个 QLayout，那么推荐您将 QPullToRefresh 作为 QPage 的直接子元素，并将页面内容包裹在其中。
+* 如果您修改了此组件的父元素，请不要忘记通过 Vue 引用调用 QPullToRefresh 的 `updateScrollTarget()` 函数。
+* QPullToRefresh 也支持文本选择，如果您的内容也包括图像，那么您最好为它们添加 `draggable="false"` 属性，否则，浏览器的原生行为可能产生负面影响。
