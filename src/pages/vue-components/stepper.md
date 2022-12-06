@@ -81,4 +81,4 @@ QStep 的内容也可以是图像，如果您需要在图像上滑动导航，�
 
 ### 消息插槽
 
-<doc-example title="消息插槽 with fixed height steps" file="QStepper/MessageSlot" />
+<doc-example title="消息插槽和固定高度的步骤" file="QStepper/MessageSlot" />
