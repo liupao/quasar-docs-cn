@@ -568,7 +568,7 @@
         "path": "spinners"
       },
       {
-        "name": "Splitter ",
+        "name": "Splitter 切分窗口",
         "path": "splitter"
       },
       {
@@ -596,7 +596,7 @@
         "path": "toolbar"
       },
       {
-        "name": "Tooltip 提示",
+        "name": "Tooltip 悬浮提示",
         "path": "tooltip"
       },
       {

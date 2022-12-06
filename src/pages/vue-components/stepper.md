@@ -1,13 +1,13 @@
 ---
-title: Stepper
-desc: The QStepper Vue component conveys progress through a sequence of numbered steps. It may also be used for navigation. It's usually useful when the user has to follow steps to complete a process, like in a wizard.
+title: 步进器
+desc: QStepper是一个步进器vue组件，它通过一系列逻辑和编号的步骤显示进度。它们也可用作导航。当用户需要按照步骤完成一个过程时，它很有用，例如一个向导。
 keys: QStepper,QStep,QStepperNavigation
 related:
   - /options/transitions
 ---
 
-Steppers display progress through a sequence of logical and numbered steps. They may also be used for navigation.
-They're usually useful when the user has to follow steps to complete a process, like in a [wizard](https://en.wikipedia.org/wiki/Wizard_(software)).
+步进器通过一系列逻辑和编号的步骤显示进度。它们也可用作导航。当用户需要按照步骤完成一个过程时，它很有用，例如一个[向导](https://en.wikipedia.org/wiki/Wizard_(software))
+
 
 ## QStepper API
 
@@ -19,11 +19,10 @@ They're usually useful when the user has to follow steps to complete a process, 
 
 ## QStepperNavigation API
 
-This component allows you to place buttons within `QStepper` or `QStep` to
-navigate through the steps. It is up to you to add whatever buttons you require.
+此组件允许您在 `QStepper` 或 `QStep` 中放置按钮，以在步骤中导航。您可以根据需要添加任何按钮。
 
 ::: tip
-To use global navigation, you must add it to the `QStepper` 'navigation' slot.
+如果要使用全局导航，您需要将其添加到 `QStepper` 的 'navigation' 插槽中。
 :::
 
 <doc-api file="QStepperNavigation" />
@@ -31,57 +30,55 @@ To use global navigation, you must add it to the `QStepper` 'navigation' slot.
 ## 用法
 
 ::: tip
-If the QStep content also has images and you want to use swipe actions to navigate, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+QStep 的内容也可以是图像，如果您需要在图像上滑动导航，那么最好为它们添加 `draggable="false"`，否则浏览器的原生行为可能导致副作用。
 :::
 
 ::: danger Keep Alive
-* Please take notice of the Boolean `keep-alive` prop for QStepper, if you need this behavior. Do NOT use Vue's native `<keep-alive>` component over QStep.
-* Should you need the `keep-alive-include` or `keep-alive-exclude` props then the QStep `name`s must be valid Vue component names (no spaces allowed, don't start with a number etc).
+*  请注意 QStepper 的 `keep-alive` 属性，如果您需要这个功能，请使用它，而不是 Vue 提供的 `<keep-alive>` 组件包裹 QStep。
+* 如果您需要使用 `keep-alive-include` 或 `keep-alive-exclude` 属性，那么 QStep 的 `name` 属性必须是一个合法的 Vue 组件名称（不含空格、不以数字开头等）。
 :::
 
-### Horizontal
+### 水平的
 
-<doc-example title="Horizontal" file="QStepper/TypeHorizontal" />
+<doc-example title="水平的" file="QStepper/TypeHorizontal" />
 
-### Vertical
+### 垂直的
 
-<doc-example title="Vertical" file="QStepper/TypeVertical" />
+<doc-example title="垂直的" file="QStepper/TypeVertical" />
 
-### Header navigation
+### 头部导航
 
-<doc-example title="Non-linear header navigation" file="QStepper/NonLinearNavigation" />
+<doc-example title="非线性头部导航" file="QStepper/NonLinearNavigation" />
 
-<doc-example title="Linear header navigation" file="QStepper/LinearNavigation" />
+<doc-example title="线性头部导航" file="QStepper/LinearNavigation" />
 
-### Header options
+### 头部选项
+<doc-example title="步骤错误信号" file="QStepper/StepError" />
 
-<doc-example title="Signaling step error" file="QStepper/StepError" />
-
-<doc-example title="Alternative labels" file="QStepper/AlternativeLabels" />
+<doc-example title="替代标签" file="QStepper/AlternativeLabels" />
 
 ::: tip
-You can also connect `contracted` prop to `$q.screen` to create a responsive behavior, like `:contracted="$q.screen.lt.md"`.
-More info: [Quasar Screen Plugin](/options/screen-plugin).
+您可以将 `contracted` 属性与 `$q.screen` 联系起来以实现响应式的行为，例如 `:contracted="$q.screen.lt.md"`。更多信息： [Quasar 屏幕插件](/options/screen-plugin).
 :::
 
 <doc-example title="Contracted" file="QStepper/Contracted" />
 
-### Style
+### 样式
 
-Play with coloring using the `*-icon` and `*-color` props (on QStepper or override on specific QStep).
+在 QStepper 或者特定的 QStep 上使用 `*-icon` 和 `*-color` 属性进行着色。
 
-<doc-example title="Coloring" file="QStepper/Coloring" />
+<doc-example title="着色" file="QStepper/Coloring" />
 
-You can also use `prefix` prop (max 2 characters) instead of an icon for each step's header. This will be displayed if the step is not currently being edited and it isn't marked with error or as "done".
+您还可以为每个步骤的标题使用 `prefix` 属性（最多2个字符）来代替图标。如果步骤当前未被编辑，并且未标记为错误或“已完成”，则将显示此信息。
 
-<doc-example title="Step prefix" file="QStepper/Prefix" />
+<doc-example title="步骤前缀" file="QStepper/Prefix" />
 
-<doc-example title="Dark" file="QStepper/Dark" />
+<doc-example title="黑色模式" file="QStepper/Dark" />
 
-You can use the `header-class` prop to apply any CSS class(es) to the header. In the example below, we are applying bolded text:
+您可以使用 `header-class` 属性将任何 CSS 类应用于头部。在下面的示例中，我们使用了粗体文本：
 
 <doc-example title="Header Class" file="QStepper/HeaderClass" />
 
-### Message slot
+### 消息插槽
 
-<doc-example title="Message slot with fixed height steps" file="QStepper/MessageSlot" />
+<doc-example title="消息插槽 with fixed height steps" file="QStepper/MessageSlot" />
