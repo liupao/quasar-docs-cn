@@ -1,14 +1,15 @@
 ---
-title: Tab Panels
-desc: The QTabPanel Vue component is a way of displaying more information using less window real estate.
+title: 选项面板
+desc: QTabPanel 是一个可以用较小的窗口展示更多的信息的 Vue 组件。
 keys: QTabPanel,QTabPanels
 related:
   - /vue-components/tabs
 ---
-Tab panels are a way of displaying more information using less window real estate.
+
+选项卡面板是一种使用较少的窗口显示更多信息的方法。
 
 ::: tip
-Works great along with [QTabs](/vue-components/tabs) but it is not required to be used with it.
+可以很好的与 [QTabs](/vue-components/tabs) 组件配合使用，但不是必须的。
 :::
 
 ## QTabPanels API
@@ -22,53 +23,53 @@ Works great along with [QTabs](/vue-components/tabs) but it is not required to b
 ## 用法
 
 ::: tip
-* Works great along with [QTabs](/vue-components/tabs), a component which offers a nice way to select the active tab panel to display.
-* If the QTabpanel content also has images and you want to use swipe actions to navigate, you might want to add `draggable="false"` to them, otherwise the native browser behavior might interfere in a negative way.
+* 可以很好的与 [QTabs](/vue-components/tabs) 组件配合使用，QTabs 提供了一种很棒的方法来选择展示哪个面板。
+* 如果 QTabpanel 的内容包括图像，而且您还希望使用滑动操作去导航，那么您需要为其添加 `draggable="false"` 否则浏览器的原生行为可能会导致负面影响。
 :::
 
-::: warning IMPORTANT
-Do not be mistaken by the "QTabPanels" component name. Panels do not require QTabs. They can be used as standalone too.
+::: warning 重要
+不要被 "QTabPanels" 的名称带偏了，QTabPanels 和 QTabs 不是绑定的，他们都可以独立使用。
 :::
 
 ::: danger Keep Alive
-* Please take notice of the Boolean `keep-alive` prop for QTabPanels, if you need this behavior. Do NOT use Vue's native `<keep-alive>` component over QTabPanel.
-* Should you need the `keep-alive-include` or `keep-alive-exclude` props then the QTabPanel `name`s must be valid Vue component names (no spaces allowed, don't start with a number etc).
+* 请注意 QTabPanels 中 Boolean 类型的 `keep-alive` 属性，如果您需要这个特性，不要使用 Vue 原生的 `<keep-alive>` 组件包裹 QTabPanel。
+* 如果您需要使用 `keep-alive-include` 或 `keep-alive-exclude` 属性，那么 QTabPanel 的 `name` 属性必须是一个合法的 vue 组件名（没有空格，且不以数字开头）。
 :::
 
 ### 基础
 
-<doc-example title="Basic" file="QTabPanels/Basic" />
+<doc-example title="基础" file="QTabPanels/Basic" />
 
-### With QTabs
+### 搭配 QTabs
 
 ::: tip
-QTabPanels can be used as standalone too. They do not depend on the presence of a QTabs. Also, they can be placed anywhere within a page, not just near QTabs.
+QTabPanels 可以独立使用，他们不互相依赖，他们也可以放在页面的任何地方，不局限于 QTabs 附近。
 :::
 
-<doc-example title="With QTabs" file="QTabPanels/WithQTabs" />
+<doc-example title="搭配 QTabs" file="QTabPanels/WithQTabs" />
 
-<doc-example title="A more complex example" file="QTabPanels/WithNestedQTabs" />
+<doc-example title="一个更复杂的示例" file="QTabPanels/WithNestedQTabs" />
 
-### Coloring
+### 颜色
 
-<doc-example title="Coloring" file="QTabPanels/Coloring" />
+<doc-example title="颜色" file="QTabPanels/Coloring" />
 
-### With vertical QTabs and QSplitter
+### 使用垂直的 QTabs 和 QSplitter
 
-<doc-example title="With vertical QTabs and QSplitter" file="QTabs/Vertical" />
+<doc-example title="使用垂直的 QTabs 和 QSplitter" file="QTabs/Vertical" />
 
-For a full list of transitions, please check out [Transitions](/options/transitions).
 
-### Custom transitions
+### 自定义过渡效果
+关于完整的 transitions 列表，请 参考 [过渡效果](/options/transitions) 页面。
 
-<doc-example title="Custom transition examples" file="QTabPanels/Transition" />
+<doc-example title="自定义过渡效果示例" file="QTabPanels/Transition" />
 
-In the example below, use your mouse to swipe through the panels or, if on a touch capable device, swipe with your fingers.
+### 可无限滑动的
 
-### Swipeable and infinite
+在下面的示例中，使用您的鼠标来滑动面板，如果是在一个可触屏的设备上，请滑动您的手指。
 
-<doc-example title="Swipeable and infinite" file="QTabPanels/Swipeable" />
+<doc-example title="可无限滑动的" file="QTabPanels/Swipeable" />
 
-### Vertical swipeable and infinite
+### 可无限垂直滑动的
 
-<doc-example title="Vertical swipeable and infinite" file="QTabPanels/VerticalSwipeable" />
+<doc-example title="可无限垂直滑动的" file="QTabPanels/VerticalSwipeable" />
