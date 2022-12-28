@@ -1,6 +1,6 @@
 ---
-title: Tabs
-desc: The QTabs, QTab and QRouteTab Vue components are a way of helping the user navigate between pages or tab panels.
+title: 选项卡
+desc: QTabs, QTab 和 QRouteTab Vue 组件可以帮助用户在页面或选项面板之间导航。
 keys: QTabs,QTab,QRouteTab
 related:
   - /vue-components/tab-panels
@@ -8,12 +8,13 @@ related:
   - /vue-components/icon
   - /vue-components/badge
 ---
-Tabs are a way of displaying more information using less window real estate. This page describes the tab selection part through QTabs, QTab and QRouteTab.
 
-One common use case for this component is in Layout’s header/footer. Please refer to [Layouts](/layout/layout) and [Header & Footer](/layout/header-and-footer#example--playing-with-qtabs) for references.
+选项卡是一种使用较少窗口空间显示更多信息的方法。本页通过 QTabs、QTab 和 QRouteTab 介绍选项卡选择部分。
+
+该组件的一个常见用例是用于布局的页头/页脚。请参阅[页面布局](/layout/layout)和[页头 & 页脚](/layout/header-and-footer#example--playing-with-qtabs)页面以获取参考。
 
 ::: tip
-Works great along with [QTabPanels](/vue-components/tab-panels), a component which refers strictly to the panels (tab content) themselves.
+它可以很好的与 [QTabPanels](/vue-components/tab-panels) 组件搭配使用。
 :::
 
 ## QTabs API
@@ -31,87 +32,88 @@ Works great along with [QTabPanels](/vue-components/tab-panels), a component whi
 ## 用法
 
 ::: tip TIPS
-* QTabs can be scrolled horizontally when the width is longer than the container width. Adjust your browser accordingly to see this in action.
-* On a desktop you will see chevrons on either side that can be clicked.
-* On a mobile, you can pan the tabs with your finger.
-* If you want to force arrows to be visible on mobile use `mobile-arrows` prop.
+* 当宽度大于容器宽度时，QTabs 可以水平滚动。相应地调整浏览器窗口大小，以查看此操作。
+* 在桌面设备上，您会在两侧看到可点击的箭头图标。
+* 在移动设备上，您可以使用手指滑动选项卡。
+* 如果您想强制箭头图标在移动设备上可见，那么可以使用 `mobile-arrows` 属性。
 :::
 
 ::: warning
-QRouteTab won't and cannot work with the UMD version if you don't also install Vue Router.
+如果您不安装 Vue Router，QRouteTab 将不会也不能与 UMD 版本一起工作。
 :::
 
 ### 基础
 
-<doc-example title="Basic" file="QTabs/Basic" />
+<doc-example title="基础" file="QTabs/Basic" />
 
-### Outside, inside and visible on mobile arrows
+### 外置，内置，隐藏箭头图标
 
-<doc-example title="Outside, inside and visible on mobile arrows" file="QTabs/ArrowsModifiers" />
+<doc-example title="外置，内置，隐藏箭头图标" file="QTabs/ArrowsModifiers" />
 
-### Vertical
+### 垂直的
 
-<doc-example title="Vertical (example with QSplitter)" file="QTabs/Vertical" />
+<doc-example title="垂直的 (搭配 QSplitter 示例)" file="QTabs/Vertical" />
 
-### Dense
+### 紧凑的
 
-<doc-example title="Dense" file="QTabs/Dense" />
+<doc-example title="紧凑的" file="QTabs/Dense" />
 
-### Individual colors
+### 独立的颜色
 
-<doc-example title="Individual colors" file="QTabs/IndividualColor" />
+<doc-example title="独立的颜色" file="QTabs/IndividualColor" />
 
-### Ripple
+### 波纹动画
 
-<doc-example title="No ripple and custom ripple color" file="QTabs/Ripples" />
+<doc-example title="禁用波纹和自定义波纹颜色" file="QTabs/Ripples" />
 
-### Custom indicator
+### 自定义指示器
 
-In the examples below, please notice the last two QTabs: indicator at top and no indicator.
+在下面的示例中，请注意最后两个选项卡：指示器在顶部和禁用指示器。
 
-<doc-example title="Custom indicator" file="QTabs/CustomIndicator" />
+<doc-example title="自定义指示器" file="QTabs/CustomIndicator" />
 
-### Tab notifications
+### 选项卡通知
 
-There are multiple ways to display tab notifications: with a QBadge, through an alert dot or an alert icon (can be any).
+有多种展示选项卡通知的方式：使用 QBadge，通过一个小点或者一个图标（可以是任何东西）。
 
-<doc-example title="Tab notifications" file="QTabs/Notifying" />
+<doc-example title="选项卡通知" file="QTabs/Notifying" />
 
-### Alignment
+### 对其
 
-QTabs are responsive and the `align` prop (see below) becomes active when the container width (not window width) is bigger than the configured breakpoint. For demoing purposes, the tabs below have breakpoint disabled.
 
-<doc-example title="Alignment" file="QTabs/Alignment" />
+QTAB 是响应式的，当容器宽度（非窗口宽度）大于配置的断点时，`align` 属性将会生效（见下文）。出于演示的目的，下面的选项卡禁用了断点。
 
-In the second QTabs from the example below, if window width is below 1024px then the "Movies" and "Photos" tabs will be replaced by a "More..." dropdown.
+<doc-example title="对其" file="QTabs/Alignment" />
 
-### With dropdown
+### 搭配下拉框
 
-<doc-example title="With a dropdown" file="QTabs/Dropdown" />
+下面第四个选项卡中，如果窗口的宽度小于 1024px，那么 "Movies" 和 "Photos" 选项会被替换成一个 "More..." 下拉按钮。
 
-### On QToolbar
+<doc-example title="搭配下拉框" file="QTabs/Dropdown" />
 
-Notice we need to specify the `shrink` prop. By default, QTabs tries to expand to all the available horizontal space, but in this case we are using it as a child of QToolbar so we don't want that.
+### 在 QToolbar 中
 
-<doc-example title="Tabs in a QToolbar" file="QTabs/TabsInToolbar" />
+注意，我们需要声明 `shrink` 属性。默认情况下，QTabs 会尝试扩展到所有可用的水平空间，但是在下面的示例中，我们让其作为 QToolbar 的一个子元素，不希望它如此。
 
-### Dynamic update
+<doc-example title="QToolbar 中的选项卡" file="QTabs/TabsInToolbar" />
 
-<doc-example title="Dynamic tabs" file="QTabs/DynamicTabs" />
+### 动态更新
 
-### Along with QTabsPanel
+<doc-example title="动态选项卡" file="QTabs/DynamicTabs" />
+
+### 搭配 QTabsPanel
 
 ::: tip
-QTabPanels can be used as standalone too. They do not depend on the presence of a QTabs. Also, they can be placed anywhere within a page, not just near a QTabs.
+QTabPanels 也可以独立使用。它们不依赖于 QTabs 的存在。此外，它们可以放置在页面中的任何位置，而不仅仅是 QTabs 附近。
 :::
 
-<doc-example title="Tabs with tab panels" file="QTabs/TabsWithTabpanels" />
+<doc-example title="选项卡搭配选项面板" file="QTabs/TabsWithTabpanels" />
 
-More info: [Tab Panels](/vue-components/tab-panels).
+更多信息： [选项面板](/vue-components/tab-panels).
 
-## Connecting to Vue Router
-You can use tabs together with Vue Router through `QRouteTab` component.
-This component inherits everything from QTab, however it also has `router-link` properties bound to it. These allow for listening to the current app route and also triggering a route when clicked/tapped.
+## 关联到 vue Router
+
+您可以通过 `QRouteTab` 组件将选项卡与 vue Router 联系起来。这个组件继承了 QTab 的所有东西，此外，它还绑定了 `router-link` 中的属性，可以监听当前的应用程序路由，并在单击时触发路由行为。
 
 ```html
 <q-tabs>
@@ -129,10 +131,10 @@ This component inherits everything from QTab, however it also has `router-link` 
 ```
 
 ::: warning
-QRouteTab becomes "active" depending on your app's route and not due to the v-model. So the initial value of v-model or changing the v-model directly will not also change the route of your app.
+QRouteTab 是否变成选中态取决于您的应用程序的路由，而不是 v-model。所以 v-model 的初始值或者改变 v-model 的值不会改变您的应用的路由。
 :::
 
-### Handling custom navigation
+### 处理自定义的导航
 
 ```html
 <template>
@@ -142,10 +144,10 @@ QRouteTab becomes "active" depending on your app's route and not due to the v-mo
         no-caps
         class="bg-orange text-white shadow-2"
       >
-        <q-route-tab :to="{ query: { tab: '1' } }" exact replace label="Activate in 2s" @click="navDelay" />
-        <q-route-tab :to="{ query: { tab: '2' } }" exact replace label="Do nothing" @click="navCancel" />
-        <q-route-tab :to="{ query: { tab: '3' } }" exact replace label="Navigate to the second tab" @click="navRedirect" />
-        <q-route-tab :to="{ query: { tab: '4' } }" exact replace label="Navigate immediatelly" @click="navPass" />
+        <q-route-tab :to="{ query: { tab: '1' } }" exact replace label="2s 后选中" @click="navDelay" />
+        <q-route-tab :to="{ query: { tab: '2' } }" exact replace label="不做任何事" @click="navCancel" />
+        <q-route-tab :to="{ query: { tab: '3' } }" exact replace label="导航去第二个选项卡" @click="navRedirect" />
+        <q-route-tab :to="{ query: { tab: '4' } }" exact replace label="立即导航" @click="navPass" />
       </q-tabs>
     </div>
   </div>
@@ -155,21 +157,21 @@ QRouteTab becomes "active" depending on your app's route and not due to the v-mo
 export default {
   methods: {
     navDelay (e, go) {
-      e.preventDefault() // we cancel the default navigation
+      e.preventDefault() // 取消默认的导航行为
 
-      // console.log('triggering navigation in 2s')
+      // console.log('2s后触发导航')
       setTimeout(() => {
-        // console.log('navigating as promised 2s ago')
+        // console.log('按照2秒前的承诺导航')
         go()
       }, 2000)
     },
 
     navCancel (e) {
-      e.preventDefault() // we cancel the default navigation
+      e.preventDefault() //取消默认的导航行为
     },
 
     navRedirect (e, go) {
-      e.preventDefault() // we cancel the default navigation
+      e.preventDefault() // 取消默认的导航行为
       go({ query: { tab: '2', noScroll: true } })
     },
 
