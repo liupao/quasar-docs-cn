@@ -15,19 +15,19 @@ related:
 
 ## 它是如何工作的
 
-1. 它会给页面设置一个默认的黑色背景（这个黑色是可以通过`body.body--dark` css 选择器来自定义的)。
-2. 所有的 Quasar 组件都有一个`dark`的属性，当切换为暗色模式时，这个属性会被自动的设置为`true`。
+1. 它会给页面设置一个默认的黑色背景（这个黑色是可以通过 `body.body--dark` css 选择器来自定义的)。
+2. 所有的 Quasar 组件都有一个 `dark` 的属性，当切换为暗色模式时，这个属性会被自动的设置为 `true`。
 
-自动检测的原理是动态监听`prefers-color-scheme: dark`媒体查询属性。如果浏览器或者系统切换为了暗色模式，Quasar 应用也会自动切换为暗色模式（在 dark mode 设置为`auto`的情况下）
+自动检测的原理是动态监听 `prefers-color-scheme: dark` 媒体查询属性。如果浏览器或者系统切换为了暗色模式，Quasar 应用也会自动切换为暗色模式（在 dark mode 设置为 `auto` 的情况下）
 
 
 ## 如何使用
 
-你可以通过[Dark Plugin](/quasar-plugins/dark)来轻松的切换 Quasar 应用的暗色/亮色模式。
+你可以通过 [Dark Plugin](/quasar-plugins/dark)来轻松的切换 Quasar 应用的暗色/亮色模式。
 
-## How to style your app
+## 如何改变应用的样式
 
-你可以通过`body--light` or `body--dark`这两个 css 类名来定制你的 app 在亮色/暗色模式下的表现。
+你可以通过 `body--light` 或 `body--dark` 这两个 css 类名来定制你的 app 在亮色/暗色模式下的表现。
 
 ```css
 .body--light {
