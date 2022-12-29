@@ -1,15 +1,15 @@
 ---
-title: Uploader
-desc: The QUploader Vue component is a way for the user to upload files to a backend server.
+title: 上传器
+desc: QUploader 是一个上传文件到服务端的 Vue 组件。
 keys: QUploader
 related:
   - /vue-components/file-picker
 ---
 
-Quasar supplies a way for you to upload files through the QUploader component.
+Quasar 为您提供了一种通过 QUploader 组件上载文件的方法。
 
 ::: tip
-If all you want is an input file, you might want to consider using [QFile](/vue-components/file-picker) picker component instead.
+如果您只是想要一个输入一个文件，那么您需要的可能是 [QFile](/vue-components/file-picker) 文件选择器组件。
 :::
 
 ## QUploader API
@@ -19,101 +19,101 @@ If all you want is an input file, you might want to consider using [QFile](/vue-
 ## 用法
 
 ::: warning
-QUploader requires a back-end server to receive the files. The examples below will not actually upload.
+QUploader 需要一个后端服务器来接收文件。下面的示例实际上不会真正的上传。
 :::
 
 ::: tip
-QUploader is `drag and drop` compliant.
+QUploader 是兼容拖拽的。
 :::
 
 ::: warning
-When using vee-validate, you have to rename the "fieldBagName" configuration of vee-validate for the q-uploader to work.
+当使用 vee-validate 时，您需要重命名  vee-validate 的 "fieldBagName" 配置以使 q-uploader 正常工作。
 :::
 
-### Design
+### 设计
 
-<doc-example title="Basic" file="QUploader/Basic" />
+<doc-example title="基础" file="QUploader/Basic" />
 
-<doc-example title="Dark" file="QUploader/Dark" />
+<doc-example title="黑色模式" file="QUploader/Dark" />
 
-### Uploading multiple files
+### 上传多个文件
 
-By default, multiple files will be uploaded individually (one thread per file). Should you want all files to be uploaded in a single thread, use the `batch` property (second QUploader in the example below).
+默认情况下，多个文件的上传时独立的，每个文件使用一个线程。如果您希望所有上传的文件都使用同一个线程，那么使用 `batch` 属性，见下面第二个示例。
 
-<doc-example title="Multiple" file="QUploader/Multiple" />
+<doc-example title="多个文件" file="QUploader/Multiple" />
 
-### Restricting upload
+### 限制上传条件
 
-<doc-example title="Basic restrictions" file="QUploader/RestrictionBasic" />
+<doc-example title="基础限制" file="QUploader/RestrictionBasic" />
 
 ::: tip
-In the example above, we're using `accept` property. Its value must be a comma separated list of unique file type specifiers. Maps to 'accept' attribute of native input type=file element. [More info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers).
+在上面的示例中，我们使用的是 `accept` 属性。其值必须是以逗号分隔的唯一文件类型说明符列表。映射到原生input type=file 标签的 'accept' 属性。[更多信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers)。
 :::
 
 ::: warning
-Recommended format for the `accept` property is `<mediatype>/<extension>`. Examples: "image/png", "image/png". QUploader uses an `<input type="file">` under the hood and it relies entirely on the host browser to trigger the file picker. If the `accept` property (that gets applied to the input) is not correct, no file picker will appear on screen or it will appear but it will accept all file types.
+`accept` 属性的建议格式为 `<mediatype>/<extension>`。示例："image/png", "image/png"。 QUploader 在底层使用了一个 `<input type="file">`，它完全依赖于浏览器来触发文件选择器。如果 `accept` 属性（应用于 input）不正确，则不会在屏幕上显示文件选取器，或者它将出现，但它将接受所有文件类型。
 :::
 
-You can also apply custom filters (which are executed after user picks files):
+您还可以自定义过滤器（在用户选取文件后执行）：
 
-<doc-example title="Filter" file="QUploader/RestrictionFilter" />
+<doc-example title="过滤" file="QUploader/RestrictionFilter" />
 
-### Adding headers
+### 添加请求头
 
-Use `headers` for setting additional XHR headers to be sent along the upload request. Also check `form-fields` prop in the API, if you need additional fields to be embedded.
+使用 `headers` 来设置上传请求的 XHR 请求头。如果您需要嵌入其他字段，那么请查看 API 部分的 `form-fields` 属性。
 
 <doc-example title="Headers" file="QUploader/Headers" />
 
 ::: tip
-These two props (`headers` and `form-fields`) can be used as a function too (`(files) => Array`), allowing you to dynamically set them based on the files that are to be uploaded.
+`headers` 和 `form-fields` 属性都可以使用一个函数 (`(files) => Array`)，允许您根据要上传的文件动态的设置他们。
 :::
 
-There is also the `with-credentials` property, which sets `withCredentials` to `true` on the XHR used by the upload process.
+使用 `with-credentials` 属性，可以将上传过程使用的 XHR 中的 `withCredentials` 设置为 `true`。
 
-### Handling upload
+### 处理上传
 
-<doc-example title="Auto upload on file selection" file="QUploader/UploadAuto" />
+<doc-example title="选择文件后自动上传" file="QUploader/UploadAuto" />
 
-<doc-example title="Custom upload URL" file="QUploader/UploadURL" />
+<doc-example title="自定义上传 URL" file="QUploader/UploadURL" />
 
 ::: tip
-You can also customize the HTTP headers and HTTP method through `headers` and `method` props. Check QUploader API section.
+您还可以通过 `headers` 和 `method` 属性设置 HTTP 请求头和 HTTP 请求方式，请查看 API 部分。
 :::
 
-### Factory function
-There is a `factory` prop you can use which must be a Function. This function can return either an Object or a Promise resolving with an Object (and in case the Promise fails, `@factory-failed` event is emitted).
+### 工厂函数
 
-The Object described above can override the following QUploader props: `url`, `method`, `headers`, `formFields`, `fieldName`, `withCredentials`, `sendRaw`). The props of this Object can be Functions as well (of form `(file[s]) => value`):
+您还可以使用 `factory` 属性，它必须是一个函数，该函数需返回一个对象或者包裹对象的 Promise（如果该 Promise 失败，则  `@factory-failed` 事件会被触发）。
 
-<doc-example title="Promise-based factory function" file="QUploader/FactoryPromise" />
+上述对象可以重写 QUploader 中的属性：`url`, `method`, `headers`, `formFields`, `fieldName`, `withCredentials`, `sendRaw`，对象中的字段也可以是一个 `(file[s]) => value` 格式的函数:
 
-You can also use the `factory` Function prop and return immediately the same Object. This is useful if you want to set multiple props (described above) simultaneously:
+<doc-example title="Promise 版本的工厂函数" file="QUploader/FactoryPromise" />
 
-<doc-example title="Immediate return factory function" file="QUploader/FactoryImmediate" />
+您也可以使用 `factory` 立即返回相同的对象。如果您想同时设置多个属性（如上所述）时，这很有用：
 
-### Slots
+<doc-example title="立即返回的工厂函数" file="QUploader/FactoryImmediate" />
 
-In the example below we're showing the equivalent of the default header. Also notice some Boolean scope properties that you can use: `scope.canAddFiles`, `scope.canUpload`, `scope.isUploading`.
+### 插槽
+
+下面的示例中，我们使用插槽实现了与默认头部等价的功能。也要注意一些可能对您有用的布尔类型的属性：`scope.canAddFiles`, `scope.canUpload`, `scope.isUploading`
 
 ::: warning
-Notice that you must install and use one more component (QUploaderAddTrigger) in order to be able to add files to the queue. This component needs to be placed under a DOM node which has `position: relative` (hint: QBtn has it already) and will automatically inject the necessary events when user clicks on its parent (do NOT manually add `@click="scope.pickFiles"`). If the trigger is not working, check if you have an element rendered above it and change the zIndex of QUploaderAddTrigger accordingly.
+请注意，您必须安装并使用另一个组件 (QUploaderAddTrigger) 才能将文件添加到队列中。该组件需要放置在具有 `position: relative` 的 DOM 节点下：(提示：QBtn 已经具有它)，并且当用户单击其父时，将自动注入必要的事件(请勿手动添加 `@click="scope.pickFiles"`)。如果触发器不工作，请检查在它上面是否覆盖了其他元素，并相应地更改 QUploaderAddTrigger 的 zIndex。
 :::
 
-<doc-example title="Custom header" file="QUploader/SlotHeader" />
+<doc-example title="自定义头部" file="QUploader/SlotHeader" />
 
-<doc-example title="Custom files list" file="QUploader/SlotList" />
+<doc-example title="自定义文件列表" file="QUploader/SlotList" />
 
-## Server endpoint examples
+## 服务端示例
 
-QUploader works by default with the HTTP(S) protocol to upload files (but it's not limited to it as you'll see in the section following this one).
+默认情况下，Quploader 使用 HTTP 协议上传文件（但它不限于此，您将在下面的章节中看到）。
 
 ::: tip
-It is by no means required to use a Nodejs server or Spring or ASP.NET like below -- you can handle file upload however you want, as long as the method you are using fits the HTTP protocol. Example with [PHP](https://secure.php.net/manual/en/features.file-upload.php).
+下面的例子只是示例，并不代表您一定要这样做，您可以以任何您想要的方式处理上传，一个 [PHP](https://secure.php.net/manual/en/features.file-upload.php)  的示例。
 :::
 
 ### Nodejs
-
-Below is a basic server example written in Nodejs. It does nothing other than receiving the files, so consider it as a starting point.
+下面是一个在 Nodejs 编写的基本服务器示例。它只做接收文件的工作，所以把它当作一个起点。
 
 ```js
 const
@@ -160,8 +160,8 @@ app.listen(port, () => {
 ```
 
 ### ASP.NET MVC/Core
-QUploader seamlessly integrates with a Microsoft ASP.NET MVC/Core 2.x Web API backend.
-In your Vue file, configure the QUploader component with the desired Web API endpoint:
+
+Quploader 与 Microsoft ASP.NET MVC/Core 2.x Web API 后端无缝集成。在 Vue 文件中，配置所需的 Web API 链接：
 
 ```html
 <q-uploader
@@ -171,7 +171,7 @@ In your Vue file, configure the QUploader component with the desired Web API end
 />
 ```
 
-If your server requires authentication such as a JWT token, use QUploader's factory function to specify the xhr header that will be used by QUploader. For example:
+如果您的服务器需要身份验证(如JWT令牌)，请使用 QUploader 的工厂函数指定 QUploadeer 将使用的 xhr 头。例如：
 
 ```html
 <template>
@@ -202,9 +202,8 @@ export default {
 }
 </script>
 ```
-
-The file(s) payload of QUploader will be a properly formed ```IFormFileCollection``` object that you can read via your ASP.NET Web API controller's ```.Request``` property.
-ASP.NET Core 2.2 Controller:
+QUploader 的文件负载将是格式正确的 ```IFormFileCollection``` 对象，您可以通过 ASP.NET Web API 控制器的 ```.Request``` 属性读取该对象。
+ASP.NET Core 2.2 Controller：
 
 ```
 [Route("api/[controller]")]
@@ -234,7 +233,7 @@ public class FileUploaderController : ControllerBase
 
 ### Spring
 
-Below is a [Spring](https://spring.io/guides/gs/uploading-files/) example. Attribute `fieldName="file"` is mapping with `@RequestPart(value = "file")`.
+下面是一个 [Spring](https://spring.io/guides/gs/uploading-files/) 示例。属性 `fieldName="file"` 正在与 `@RequestPart(value = "file")` 进行映射。
 
 ```
 // java
@@ -324,14 +323,16 @@ end
 isrunning(:webserver) || up()
 ```
 
-## Supporting other services
-QUploader currently supports uploading through the HTTP(S) protocol. But you can extend the component to support other services as well. Like Firebase for example. Here's how you can do it.
+## 支持其他的服务器
 
-::: warning Help appreciated
-We'd be more than happy to accept PRs on supporting other upload services as well, so others can benefit. Hit the `Edit this page in browser` link at bottom of this page or the pencil icon at the top of the page.
+QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如Firebase。下面是你可以做的。
+
+
+::: warning 感谢您的帮助
+我们很乐意接受支持其他上传服务的 PR，这样其他人也能从中受益。点击此页面顶部右上角的铅笔图标。
 :::
 
-Below is an example with the API that you need to supply to the `createUploaderComponent()` Quasar util. This will create a Vue component that you can import in your app.
+下面是一个示例，其中包含需要提供给 `createUploaderComponent()` Quasar 工具函数 的 API。这将创建一个 Vue 组件，您可以在应用程序中导入它。
 
 ```js
 // MyUploader.js
@@ -395,11 +396,11 @@ export default createUploaderComponent({
 ```
 
 ::: tip TIPS
-* For the default XHR implementation in the form of such a plugin, check out [source code](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/uploader/xhr-uploader-plugin.js).
-* For the UMD version use `Quasar.createUploaderComponent({ ... })`.
+* 对于这种插件形式的默认 XHR 实现，请查看[源代码](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/uploader/xhr-uploader-plugin.js).
+* 对于UMD版本，请使用 `Quasar.createUploaderComponent({ ... })`.
 :::
 
-Then you register this component globally with Vue or you import it and add it to the "components: {}" in your Vue components.
+然后向 Vue 全局注册该组件，或者导入该组件并将其添加到 Vue 组件中的 "components: {}" 中。
 
 ```js
 // globally registering your component in a boot file
@@ -420,7 +421,7 @@ export default {
 }
 ```
 
-If you're using TypeScript, you'd need to register the new component types to allow Volar to autocomplete props and slots for you.
+如果您使用的是TypeScript，则需要注册新的组件类型，以允许 Volar 为您自动补全属性和插槽。
 
 ```js
 import {
