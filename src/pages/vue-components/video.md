@@ -1,13 +1,13 @@
 ---
-title: Video
-desc: The QVideo Vue components makes embedding a video like Youtube easy. It also resizes to fit the container by default.
+title: 视频
+desc: 使用 QVideo Vue 组件可以轻松嵌入类似 Youtube 的视频播放器。默认情况下，它还会调整大小以适合容器。
 keys: QVideo
 ---
 
-Using the QVideo component makes embedding a video like Youtube easy. It also resizes to fit the container by default.
+使用 QVideo 组件可以轻松嵌入类似 Youtube 的视频播放器。默认情况下，它还会调整大小以适合容器。
 
 ::: tip
-You may also want to check our own HTML 5 video player component: [QMediaPlayer](https://github.com/quasarframework/app-extension-qmediaplayer), which is far more advanced than QVideo (which essentially is an iframe pointing to embedded Youtube videos).
+您还可以看看我们自己的 HTML 5 视频播放器组件：[QMediaPlayer](https://github.com/quasarframework/app-extension-qmediaplayer)，它比 QVideo 高级很多 (QVideo 本质上是一个指向嵌入式 Youtube 视频的 iframe)。
 :::
 
 ## QVideo API
@@ -17,11 +17,11 @@ You may also want to check our own HTML 5 video player component: [QMediaPlayer]
 ## 用法
 
 ### 基础
-<doc-example title="Basic" file="QVideo/Basic" />
+<doc-example title="基础" file="QVideo/Basic" />
 
-### With aspect ratio
+### 定义长宽比
 
-<doc-example title="With aspect ratio" file="QVideo/Ratio" />
+<doc-example title="定义长宽比" file="QVideo/Ratio" />
 
-### Markup equivalent
-<doc-example title="HTML markup" file="QVideo/HtmlMarkup" />
+### 等价 HTML 标签
+<doc-example title="HTML 标签" file="QVideo/HtmlMarkup" />
