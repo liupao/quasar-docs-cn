@@ -612,7 +612,7 @@
         "path": "video"
       },
       {
-        "name": "Virtual Scroll 模拟滚动",
+        "name": "Virtual Scroll 虚拟滚动",
         "path": "virtual-scroll"
       }
     ]
