@@ -1721,31 +1721,42 @@
     "path": "quasar-utils",
     "children": [
       {
-        "name": "Date Utils",
+        "name": "时间工具",
         "path": "date-utils"
       },
       {
-        "name": "Color Utils",
+        "name": "颜色工具",
         "path": "color-utils"
       },
       {
-        "name": "DOM Utils",
+        "name": "DOM 工具",
         "path": "dom-utils"
       },
       {
-        "name": "Morph Utils",
+        "name": "形变工具",
         "path": "morph-utils"
       },
       {
-        "name": "Formatter Utils",
+        "name": "格式化工具",
         "path": "formatter-utils"
       },
       {
-        "name": "Scrolling Utils",
+        "name": "滚动工具",
         "path": "scrolling-utils"
       },
       {
-        "name": "Other Utils",
+        "name": "类型检查工具",
+        "badge": "new",
+        "path": "type-checking-utils"
+      },
+      {
+        "name": "事件总线工具",
+        "badge": "new",
+        "path": "event-bus-util"
+      },
+      {
+        "name": "其他工具",
+        "badge": "update",
         "path": "other-utils"
       }
     ]

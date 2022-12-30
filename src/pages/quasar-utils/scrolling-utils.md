@@ -9,7 +9,7 @@ For usage with the UMD build see [here](/start/umd#quasar-global-object).
 :::
 
 ## Determine scrolling container
-Might be worthwhile to read how this is done [here](/vue-components/scroll-observer#确定滚动的容器).
+Might be worthwhile to read how this is done [here](/vue-components/scroll-observer#determining-scrolling-container).
 
 ```js
 import { scroll } from 'quasar'
