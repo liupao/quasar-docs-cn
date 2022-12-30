@@ -1716,7 +1716,7 @@
     ]
   },
   {
-    "name": "Quasar Utils",
+    "name": "Quasar 工具函数",
     "icon": "healing",
     "path": "quasar-utils",
     "children": [
