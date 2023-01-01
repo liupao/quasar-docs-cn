@@ -1,6 +1,6 @@
 ---
 title: 线性进度
-desc: The QLinearProgress Vue component displays a colored loading bar. The bar can either have a determinate progress or an indeterminate animation.
+desc: QLinearProgress Vue 组件显示一个彩色加载进度条。进度条可以有一个确定的进度，也可以有一个不确定的动画。它应该用于通知用户在后台正在进行某个操作。
 keys: QLinearProgress
 related:
   - /vue-components/circular-progress
