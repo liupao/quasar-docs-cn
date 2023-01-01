@@ -1,69 +1,81 @@
 ---
-title: Color Utils
-desc: A set of Quasar methods for changing app brand colors and manipulating color strings.
+title: 颜色工具
+desc: Quasar 提供的一组用于修改主题颜色和操作颜色字符串的工具函数。
 keys: rgbToHex,rgbToHsv,hexToRgb,textToRgb,hsvToRgb,lighten,luminosity,brightness,blend,changeAlpha,getPaletteColor
 related:
   - style/color-palette
 ---
 
-Quasar provides a set of useful functions to manipulate colors easily in most use cases, without the high additional cost of integrating dedicated libraries.
+Quasar 提供了一组有用的函数，可以在大多数使用情况下轻松地操纵颜色，而无需再安装高昂额外成本的专用库。
 
 ::: tip
-For usage with the UMD build see [here](/start/umd#quasar-global-object).
+关于 UMD 版本的构建请看[这里](/start/umd#quasar-global-object)
 :::
 
-## Color Conversion
-These functions take a color as string or Object and convert it to another format.
+## 颜色转换
 
-| Function | Source format | Destination format | Description |
+这些函数可以接受字符串或对象格式的颜色，并将其转换为另一种格式。
+
+| 函数 | 源格式 | 目标格式 | 描述 |
 | --- | --- | --- | --- |
-| `rgbToHex` | Object | String | Converts a RGB/A color Object (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`) to its HEX/A representation as a String (`#RRGGBB<AA>`). If Alpha channel is present in the original object it will be present also in the output. |
-| `rgbToHsv` | Object | Object | Converts a RGB/A color Object (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`) to its HSV/A representation as an Object (`{ h: [0-360], s: [0-100], v: [0-100},  a: [0-100]}`). If Alpha channel is present in the original object it will be present also in the output. |
-| `hexToRgb` | String | Object | Converts a HEX/A color String (`#RRGGBB<AA>`) to its RGB/A representation as an Object (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`) . If Alpha channel is present in the original object it will be present also in the output. |
-| `textToRgb` | String | Object | Converts a HEX/A color String (`#RRGGBB<AA>`) or a RGB/A color String(`rgb(R, G, B<, A>)`) to its RGB/A representation as an Object (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`). If Alpha channel is present in the original object it will be present also in the output. |
-| `hsvToRgb` | String | Object | Converts a HSV/A color Object (`{ h: [0-360], s: [0-100], v: [0-100},  a: [0-100]}`) to its RGB/A representation as an Object (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`). If Alpha channel is present in the original object it will be present also in the output. |
+| `rgbToHex` | Object | String | 将 RGB/A 对象格式 (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`) 的颜色转化为 HEX/A 十六进制字符串格式 (`#RRGGBB<AA>`)。如果 Alpha 通道出现在原始对象中，那么它也会出现在输出中。 |
+| `rgbToHsv` | Object | Object | 将 RGB/A 对象格式 (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`) 的颜色转化为 HSV/A 对象格式 (`{ h: [0-360], s: [0-100], v: [0-100},  a: [0-100]}`)。如果 Alpha 通道出现在原始对象中，那么它也会出现在输出中。 |
+| `hexToRgb` | String | Object | 将 HEX/A 十六进制字符串格式 (`#RRGGBB<AA>`) 的颜色转化为 RGB/A 格式的对象 (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`)。如果 Alpha 通道出现在原始对象中，那么它也会出现在输出中。 |
+| `textToRgb` | String | Object | 将 HEX/A 十六进制字符串格式 (`#RRGGBB<AA>`) 或者 RGB/A 字符串格式(`rgb(R, G, B<, A>)`)的颜色转化为 RGB/A 对象格式 (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`)。如果 Alpha 通道出现在原始对象中，那么它也会出现在输出中。 |
+| `hsvToRgb` | String | Object | 将 HSV/A 对象格式的颜色 (`{ h: [0-360], s: [0-100], v: [0-100},  a: [0-100]}`) 转化为 RGB/A 对象格式 (`{ r: [0-255], g: [0-255], b: [0-255}<,  a: [0-100]>}`)。如果 Alpha 通道出现在原始对象中，那么它也会出现在输出中。 |
 
-## Color Processing
-These functions perform changes on the color or extract specific information.
+## 处理颜色
+
+这些函数可以对颜色进行更改或提取特定信息。
+
+:::tip 译者批注
+下面的小标题就是函数签名
+:::
 
 ### lighten (color, percent)
-Lighten the `color` (if `percent` is positive) or darken it (if `percent` is negative).
+调亮颜色（如果 `percent` 为正）或者调暗颜色（如果 `percent` 为父）。
 
-Accepts a HEX/A String or a RGB/A String as `color` and a `percent` (0 to 100 or -100 to 0) of lighten/darken to be applied to the `color`.
-Returns a HEX String representation of the calculated `color`.
+接受一个 HEX/A 或 RGB/A 格式的字符串作为 `color` 参数，加上一个 `percent` (0 到 100 或 -100 到 0)参数表示要做作用于 `color` 高/暗的百分比。返回一个十六进制的字符串作为 `color` 的计算结果。
 
 ### luminosity (color)
-Calculates the [relative luminance](http://www.w3.org/TR/WCAG20/#relativeluminancedef) of the `color`.
+计算颜色的[相对亮度](http://www.w3.org/TR/WCAG20/#relativeluminancedef)。
 
-Accepts a HEX/A String, a RGB/A String or a RGB/A Object as `color`.
-Returns a value between 0 and 1.
+可接受一个 HEX/A 或 RGB/A 格式的字符串，或 RGB/A 格式的对象作为  `color`。
+
+返回一个 0 到 1 之间的数字。
 
 ### brightness (color)
-Calculates the [color contrast](https://www.w3.org/TR/AERT/#color-contrast) of the `color`.
+计算颜色的[色彩对比度](https://www.w3.org/TR/AERT/#color-contrast)。
 
-Accepts a HEX/A String, a RGB/A String or a RGB/A Object as `color`.
-Returns a value between 0 and 255. A value of < 128 would be considered a dark color.
+可接受一个 HEX/A 或 RGB/A 格式的字符串，或 RGB/A 格式的对象作为  `color`。
+
+返回一个 0 到 255 之间的数字。如果值小于 128 可以被认为是一个暗色系的颜色。
 
 ### blend (fgColor, bgColor)
 
-Calculates the [blend](https://www.w3.org/TR/compositing-1/#simplealphacompositing) of two colors.
+计算两个颜色的[混合色](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
-Accepts a HEX/A String or a RGB/A Object as `fgColor`/`bgColor`.
-If the alpha channel of the `fgColor` is completely opaque, then the result will be the `fgColor`.
-If the alpha channel of the `bgColor` is completely opaque, then the resulting blended color will also be opaque.
-Returns the same type as input for fgColor.
+
+`fgColor`/`bgColor` 都可接受一个 HEX/A 格式的字符串，或 RGB/A 格式的对象。
+
+如果 `fgColor` ，则结果直接等于 `fgColor`。如果 `bgColor` 的 alpha 通道完全不透明，则计算结果的 alpha 通道也完全不透明。
+
+返回与 `fgColor` 类型一样的颜色。
+
 
 ### changeAlpha (color, offset)
 
-Increments or decrements the alpha of a string color.
+增加或减少字符串格式颜色中的 alpha 值。
 
-Accepts a HEX/A String as `color` and a number between -1 and 1 (including edges) as `offset`.
-Use a negative value to decrement and a positive number to increment (ex: `changeAlpha('#ff0000', -0.1)` to decrement alpha by 10%).
-Returns HEX/A String.
+接受一个 HEX/A 格式的字符串作为 `color`，加上一个 -1 到 1 之间的数字作为  `offset`。
+使用一个负值来减少，一个正值来增加（例如：`changeAlpha('#ff0000', -0.1)` 表示减少 alpha 10%）。
+
+返回 HEX/A 格式的字符串。
 
 ## Helper - getPaletteColor
 
-You can query any brand color, palette color or custom color in JS context to get its hex string value. Note that the method below is not cheap to run, so use it with care:
+您可以在 JS 上下文中查询任何主题中的颜色、调色板中的颜色或自定义的颜色，以获取其十六进制字符串。请注意，下面的方法运行时起来性能开销并不小，因此请谨慎使用：
+
 
 ```js
 import { colors } from 'quasar'
@@ -74,7 +86,7 @@ console.log(getPaletteColor('primary')) // '#1976d2'
 console.log(getPaletteColor('red-2')) // '#ffcdd2'
 ```
 
-Assuming you've created [a custom color](/style/color-palette#adding-your-own-colors) and named it "my-color", then you can extract its value in JS:
+假设您创建了一个[自定义颜色](/style/color-palette#adding-your-own-colors)并将其命名为 "my-color"，那么您可以在 JS 中获取它：
 
 ```js
 console.log(getPaletteColor('my-color')) // '#...'
