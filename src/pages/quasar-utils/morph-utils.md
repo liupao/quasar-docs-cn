@@ -1,37 +1,36 @@
 ---
-title: Morph Utils
-desc: Morph one DOM element into another (with animation) or between two states of the same element using Quasar's morph util.
+title: DOM 变形工具
+desc: Quasar 提供了一组 DOM 变形工具，可以将一个 DOM 元素变形成另一个（带有动画效果），或者同一个 DOM 元素在两个状态之间变形。
 keys: morph
 related:
   - /vue-directives/morph
 ---
+Quasar 提供了一组 DOM 变形工具，可以将一个 DOM 元素变形成另一个（带有动画效果），或者同一个 DOM 元素在两个状态之间变形。
 
-You can morph one DOM element into another (with animation) or between two states of the same element using Quasar's morph util described below.
+您还可以看看 Quasar 基于此工具封装的[变形指令](/vue-directives/morph)，它使用起来更加简单。
 
-Might also be worth to look at the [Morph directive](/vue-directives/morph) which uses this util but it's simpler to use.
-
-## Basic usage
+## 基础用法
 
 ```js
 import { morph } from 'quasar'
 
-// Morph one DOM element to another:
+// 将一个 DOM 元素变形成另一个：
 const cancelMorph = morph({
   from: '#from-el',
   to: '#to-el'
 })
 
-// call cancelMorph() to cancel the morphing
+// 调用 cancelMorph() 可以取消变形
 ```
 
-The function expects one mandatory Object parameter with the following keys:
+该函数接受一个必传的对象参数，它有以下字段：
 
-| Name | Type | Default value | Description |
+| 名称 | 类型 | 默认值 | 描述 |
 | --- | --- | --- | --- |
-| from | DOM | - | (**required**) A DOM element or CSS selector or a function returning a DOM element |
-| to | DOM | - | Same as "from"; if "to" is missing, then it is assumes that it is the same as "from" |
-| onToggle() | Function | - | A synchronous toggle function that will be executed immediately after the state of the initial element is saved. Use a function that toggles the state of the components so that the destination element becomes available. |
-| waitFor | Number/'transitioned'/Promise | 0 | A number, 'transitionend' or a Promise - it will delay animation start for that number of milliseconds, or until a 'transitionend' event is emitted by the destination element, or until the promise is resolved (if the promise is rejected the morphing will abort, but the `toggle function` was already called) |
+| from | DOM | - | (**必填项**) 一个 DOM 或者 CSS 选择器或者一个返回 DOM 的函数 |
+| to | DOM | - |  与 "from" 一样；如果缺少 "to"，则假设它与 "from" 相同。 |
+| onToggle() | Function | - | 保存初始元素状态后立即执行的同步切换函数。使用一个函数来切换组件的状态，以便目标元素可用。 |
+| waitFor | Number/'transitioned'/Promise | 0 | 一个数字，'transitionend' 或者一个 Promise - 它将会延迟动画的开始，指定的数字毫秒，或者等到一个 'transitionend' 事件被触发，或者等待一个 Promise 成功结束，如果 Promise 失败了，则变形过程会被中断，但此时 `toggle function` 已经被调用了。 |
 | duration | Number | 300 | The duration in milliseconds for the animation |
 | easing | String | 'ease-in-out' | The timing function for the animation (CSS easing format) |
 | delay | Number | 0 | The delay in milliseconds for the animation |
