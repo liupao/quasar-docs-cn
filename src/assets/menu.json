@@ -1733,7 +1733,7 @@
         "path": "dom-utils"
       },
       {
-        "name": "形变工具",
+        "name": "DOM 变形工具",
         "path": "morph-utils"
       },
       {
