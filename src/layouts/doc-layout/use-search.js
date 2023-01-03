@@ -4,10 +4,13 @@ import { useRouter } from 'vue-router'
 import { apiTypeToComponentMap } from 'components/AppSearchResults.vue'
 import ResultEmpty from 'components/search-results/ResultEmpty.vue'
 import ResultError from 'components/search-results/ResultError.vue'
+import algoliasearch from 'algoliasearch'
+
+const searcher = algoliasearch('QAQ47WD5F3', '435dce366a16ec195ef828d5831179c5')
 
 let requestId = 0
 
-function fetchQuery (val, onResult, onError) {
+async function fetchQuery (val, onResult, onError) {
   requestId++
   const localRequestId = requestId
 
@@ -16,6 +19,8 @@ function fetchQuery (val, onResult, onError) {
     q: val, limit: 10, cropLength: 50, attributesToCrop: ['content'], attributesToHighlight: ['content']
   })
 
+  const res = await searcher.search(val)
+  console.log('res', res)
   xhr.addEventListener('load', function () {
     // console.log(this.responseText)
     // console.log(JSON.parse(this.responseText))
