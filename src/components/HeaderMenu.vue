@@ -114,6 +114,18 @@
           </q-item-section>
           <q-item-section>jsFiddle</q-item-section>
         </q-item>
+        <q-item clickable href="https://stackblitz.quasar.dev" target="_blank" rel="noopener">
+          <q-item-section class="text-brand-primary" avatar>
+            <q-icon :name="fasBolt"></q-icon>
+          </q-item-section>
+          <q-item-section>StackBlitz (Vite)</q-item-section>
+        </q-item>
+        <q-item clickable href="https://stackblitz-webpack.quasar.dev" target="_blank" rel="noopener">
+          <q-item-section class="text-brand-primary" avatar>
+            <q-icon :name="fasBolt"></q-icon>
+          </q-item-section>
+          <q-item-section>StackBlitz (Webpack)</q-item-section>
+        </q-item>
         <q-item clickable href="https://codesandbox.quasar.dev" target="_blank" rel="noopener">
           <q-item-section class="text-black" avatar>
             <q-icon :name="fasCubes"></q-icon>
@@ -192,6 +204,7 @@ import {
   fasFlask,
   fabCodepen,
   fabJsfiddle,
+  fasBolt,
   fasCubes,
   fabTwitter,
   fabFacebook
@@ -227,6 +240,7 @@ export default {
       fabGithub,
       fasFlask,
       fabCodepen,
+      fasBolt,
       fabJsfiddle,
       fasCubes,
       fabTwitter,

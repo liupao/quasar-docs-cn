@@ -12,6 +12,13 @@ Quasar CLI 是我们引以为傲的脚手架，您可以通过它构建:
 * 手机 App (Android, iOS, …) 通过 Cordova 或者 Capacitor 构建
 * 跨平台的桌面应用 (使用 Electron 构建)
 
+## 在线体验 Quasar CLI
+
+您可以直接在浏览器中在线体验 Quasar CLI，而无需安装任何东西！
+您还可以在其中使用命令行，因此它几乎与在本地创建项目完全相同。
+
+[![在 StackBlitz 中打开](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.quasar.dev)
+
 ## 安装
 
 ::: tip 环境要求:
