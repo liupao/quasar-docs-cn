@@ -279,3 +279,27 @@ setup () {
   $q.lang.getLocale() // returns a string
 }
 ```
+
+## 禁用 HTML 属性  <q-badge align="top" color="brand-primary" label="v2.11.3+" />
+默认情况下，Quasar 会给 `<html>` 添加 `dir` 和 `lang` 属性。当 [RTL 开启](/options/rtl-support)时，`dir` 属性对 Sass 预处理器特别重要。
+
+如果您禁用此行为，那么您可以：
+
+```js
+// Quasar CLI > quasar.config.js
+framework: {
+  config: {
+    lang: {
+      noHtmlAttrs: true // 添加这里
+    }
+  }
+}
+// Vite plugin / Vue plugin / UMD
+app.use(Quasar, {
+  config: {
+    lang: {
+      noHtmlAttrs: true // 添加这里
+    }
+  }
+})
+```

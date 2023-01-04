@@ -323,6 +323,31 @@ end
 isrunning(:webserver) || up()
 ```
 
+### Perl/Mojolicious
+
+```
+# Perl
+use Mojolicious::Lite -signatures;
+# CORS
+app->hook(after_dispatch => sub {
+    my $c = shift;
+    $c->res->headers->header('Access-Control-Allow-Origin' => '*');
+});
+options '*' => sub ($c) {
+   $c->res->headers->header('Access-Control-Allow-Methods' => 'GET, OPTIONS, POST, DELETE, PUT');
+   $c->res->headers->header('Access-Control-Allow-Headers' => 'Content-Type');
+   $c->render(text => '');
+};
+post '/upload' => sub ($c) {
+   my $uploads = $c->req->uploads('files');
+   foreach my $f (@{$uploads}) {
+      $f->move_to('/tmp/' . $f->filename);
+   }
+   $c->render(text => 'Saved!');
+};
+app->start;
+```
+
 ## 支持其他的服务器
 
 QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如Firebase。下面是你可以做的。

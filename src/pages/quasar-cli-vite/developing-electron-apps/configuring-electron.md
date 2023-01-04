@@ -59,7 +59,7 @@ electron: {
   }
 }
 ```
-"packager" 对象中的配置项参考：[electron-packager options](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options)。
+"packager" 对象中的配置项参考：[electron-packager options](https://electron.github.io/electron-packager/main/)。
 但是，其中的 `dir` 和 `out` 配置项会被  Quasar CLI 重写以确保更好的集成。
 
 "builder" 对象中的配置项参考：[electron-builder options](https://www.electron.build/configuration/configuration).

@@ -185,7 +185,7 @@ return {
   // ...
   boot: [
     'some-boot-file', // 同时运行在服务端和客户端
-    { path: 'some-other', server: false } // 这个 boot 文件只会在客户端运行
+    { path: 'some-other', server: false }, // 这个 boot 文件只会在客户端运行
     { path: 'third', client: false } // 这个 boot 文件只会在服务端运行
   ]
 }

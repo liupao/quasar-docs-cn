@@ -29,7 +29,7 @@
             src="https://cdn.quasar.dev/logo-v2/svg/logotype.svg"
           />
         </q-btn>
-        <q-space></q-space>
+        <q-space />
         <header-menu
           class="self-stretch row no-wrap"
           v-if="$q.screen.gt.xs"
@@ -109,7 +109,7 @@
             @keydown="onSearchKeydown"
             @focus="onSearchFocus"
             @blur="onSearchBlur"
-            placeholder="Search Quasar v2..."
+            placeholder="搜索"
             type="search"
           >
             <template v-slot:prepend><q-icon name="search"></q-icon></template>
@@ -129,7 +129,7 @@
             </template>
           </q-input>
         </form>
-        <q-separator></q-separator>
+        <q-separator />
       </div>
     </q-drawer>
     <q-drawer
@@ -163,7 +163,9 @@
         </q-list>
       </q-scroll-area>
     </q-drawer>
-    <q-page-container><router-view></router-view></q-page-container>
+    <q-page-container>
+      <router-view />
+    </q-page-container>
     <q-page-scroller>
       <q-btn fab-mini color="brand-primary" glossy :icon="mdiChevronUp"></q-btn>
     </q-page-scroller>
