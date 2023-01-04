@@ -1,7 +1,7 @@
 import menu from './menu.json'
 
 function normalizeComps (list) {
-  let acc = [
+  const acc = [
     {
       name: 'Layout',
       path: 'layout'
@@ -30,13 +30,16 @@ function normalizeComps (list) {
       name: 'Page Scroller',
       path: 'page-scroller'
     }
-  ]
+  ].map(entry => ({ ...entry, path: `/layout/${entry.path}` }))
 
   list.forEach(entry => {
     if (entry.children) {
-      acc = acc.concat(entry.children)
-    } else {
-      acc.push(entry)
+      acc.push(
+        ...(entry.children.map(entry => ({ ...entry, path: `/vue-components/${entry.path}` })))
+      )
+    }
+    else {
+      acc.push({ ...entry, path: `/vue-components/${entry.path}` })
     }
   })
 
