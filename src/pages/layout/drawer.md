@@ -57,7 +57,7 @@ QDrawer 是 QLayout 的侧边栏部分。
 
 | CSS 类名 | 描述 |
 | --- | --- |
-| `q-mini-drawer-hide` | 侧滑菜单处于 "mini"模式时隐藏。 |
+| `q-mini-drawer-hide` | 侧滑菜单处于 "mini" 或者 "mobile" 模式时隐藏。 |
 | `q-mini-drawer-only` | 仅在侧滑菜单处于   "mini" 模式时显示。 |
 
 您还可以利用以下特性根据实际情况编写自己的 CSS 类：QLayoutDrawer 在 "normal" 模式下具有`q-drawer--standard` CSS 类，在 "mini" 模式下具有 `q-drawer--mini`。此外，当侧滑菜单处于"mobile" 行为时，它会获得 `q-drawer--mobile` CSS 类。
