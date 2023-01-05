@@ -5,7 +5,7 @@ components:
   - umd/UmdTags
 ---
 
-如需渐进式地把 Quasar 嵌入到已有网站项目中，可使用 UMD（统一模块定义，Unified Module Definition）/ Standalone 版本的 Quasar。
+如需渐进式地把 Quasar 嵌入到已有网站项目中，可使用 UMD（通用模块定义，Unified Module Definition）/ Standalone 版本的 Quasar。
 
 ## 安装
 
@@ -15,9 +15,9 @@ UMD 主要是通过添加 Quasar 样式与 Javascript 标签实现对 Quasar 的
 
 ::: warning 警告
 * 注意，不要忘记在文档开头添加 `<!DOCTYPE html>` 标签，否则，某些浏览器（尤其是 Safari）使用的兼容模式会影响 flex 布局。
-* 如需使用希伯来等 Quasar 的 RTL（右至左，right-to-left）语言包，请打开上面的 “RTL CSS support” 开关。
+* 如需在 Quasar 的语言包环境下使用 RTL 时（例如：希伯来语），请打开上面的 “RTL CSS support” 开关。
 * 不要使用 `<q-icon ... />` 等自闭合形式的标签，要使用 `<q-icon ...></q-icon>` 这样的完整标签。
-* 建议指定所有在开发时测试可用的包的版本。有时需要回溯使用旧版本，例如，Vue 3.2.32 可能会破坏页面结构，此时，可在 script 标签中，使用 https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js，把 Vue 的版本指定为 3.2.31。
+* 建议将所有使用的软件包固定为开发中已经测试过的特定版本。有时需要回溯使用旧版本，例如，Vue 3.2.32 可能会破坏页面结构，此时，可在 script 标签中，使用 https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js，把 Vue 的版本指定为 3.2.31。
 :::
 
 ::: tip 提示
@@ -84,10 +84,8 @@ app.use(Quasar, {
 把所需的 CDN 链接嵌入网页后，就可以使用 Quasar 了。
 
 ::: tip 提示
-您可能会注意到所有 Quasar 组件、指令及插件在页面顶部都有安装的内容。
+所有 Quasar 组件、指令及插件在其文档页面顶部都有安装相关的内容，但使用 UMD 版本时，无需要安装，即可直接使用。
 :::
-
-使用 UMD 版本的 Quasar 时，可以使用所有已安装的组件、指令及插件，您所要做的只是使用这些功能。
 
 **使用 UMD 版本的 Quasar 时，一定不要使用自闭合标签：**
 此时，不能使用组件的自闭合标签形式，必须使用完整的组件标签。
