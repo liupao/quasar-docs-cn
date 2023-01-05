@@ -77,7 +77,7 @@
     <section class="bg-white text-grey-10 text-center">
       <div class="landing__features row items-start q-col-gutter-lg">
         <div class="col-12 text-center">
-          <h4>令人形象深刻的用户界面组件</h4>
+          <h4>令人印象深刻的用户界面组件</h4>
         </div>
         <div class="col-12 row">
           <div class="col-12 col-md-8 landing__features-section row text-left">
