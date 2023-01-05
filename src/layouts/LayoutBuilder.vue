@@ -390,11 +390,11 @@ const sepOptions = [
 export default {
   setup () {
     useMeta({
-      title: 'Layout Builder',
+      title: '布局生成器',
 
       meta: getMeta(
-        'Layout Builder | Quasar 中文文档',
-        'Tool to build Quasar layouts. Configure the layout parts then export the code.'
+        '布局生成器 | Quasar 中文文档',
+        '生成 Quasar 布局页面的工具。可视化配置布局然后到处代码使用。'
       )
     })
 

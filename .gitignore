@@ -20,3 +20,4 @@ yarn-error.log*
 *.sln
 
 .vercel
+package-lock.json

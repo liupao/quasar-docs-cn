@@ -77,23 +77,23 @@
     <section class="bg-white text-grey-10 text-center">
       <div class="landing__features row items-start q-col-gutter-lg">
         <div class="col-12 text-center">
-          <h4>令人形象深刻的用户界面组件</h4>
+          <h4>令人印象深刻的用户界面组件</h4>
         </div>
         <div class="col-12 row">
           <div class="col-12 col-md-8 landing__features-section row text-left">
             <div class="col-12 text-left text-subtitle1 text-bold q-mt-lg q-mb-md q-mx-xs">Vue组件</div>
-            <router-link class="landing__features-link col-6 col-sm-4" v-for="dir in features.comps" :key="dir.name"
-              :to="'/vue-components/' + dir.path">{{ dir.name }}</router-link>
+            <router-link class="landing__features-link col-6 col-sm-4" v-for="entry in features.comps" :key="entry.name"
+              :to="entry.path">{{ entry.name }}</router-link>
           </div>
           <div class="col-6 col-sm-4 col-md-2 landing__features-section column text-left">
             <div class="text-left text-subtitle1 text-bold q-mt-lg q-mb-md q-mx-xs">指令</div>
-            <router-link class="landing__features-link" v-for="dir in features.dirs" :key="dir.name"
-              :to="'/vue-directives/' + dir.path">{{ dir.name }}</router-link>
+            <router-link class="landing__features-link" v-for="entry in features.dirs" :key="entry.name"
+              :to="entry.path">{{ entry.name }}</router-link>
           </div>
           <div class="col-6 col-sm-4 col-md-2 landing__features-section column text-left">
             <div class="text-left text-subtitle1 text-bold q-mt-lg q-mb-md q-mx-xs">插件</div>
-            <router-link class="landing__features-link" v-for="dir in features.plugins" :key="dir.name"
-              :to="'/quasar-plugins/' + dir.path">{{ dir.name }}</router-link>
+            <router-link class="landing__features-link" v-for="entry in features.plugins" :key="entry.name"
+              :to="entry.path">{{ entry.name }}</router-link>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@ export default {
 
   setup () {
     useMeta({
-      title: 'Quasar中文文档',
+      title: 'Quasar Framework 框架中文文档',
       titleTemplate: ''
     })
 
