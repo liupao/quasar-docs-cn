@@ -192,7 +192,7 @@ export default {
 
   setup () {
     useMeta({
-      title: 'Quasar中文文档',
+      title: 'Quasar Framework 框架中文文档',
       titleTemplate: ''
     })
 
