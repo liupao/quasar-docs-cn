@@ -1,17 +1,17 @@
 ---
-title: Type Checking Utils (<is>)
-desc: A set of Quasar methods for type checking.
+title: 类型检查工具 (<is>)
+desc: Quasar 提供的一组用于检查类型的工具函数。
 keys: is.deepEqual,is.object,is.date,is.regexp,is.number
 badge: v2.8+
 ---
 
 ::: tip
-For usage with the UMD build see [here](/start/umd#quasar-global-object).
+关于 UMD 版本的用法请看[这里](/start/umd#quasar-global-object)
 :::
 
 ## is.deepEqual
 
-Recursively checks if one Object is equal to another. Also supports Map, Set, ArrayBuffer, Regexp, Date, and many more.
+递归检查两个对象是否相等。也支持 Map，Set，ArrayBuffer，Regexp，Date 等等。
 
 ```js
 import { is } from 'quasar'
@@ -19,7 +19,7 @@ import { is } from 'quasar'
 const objA = { /* ... */ }
 const objB = { /* ... */ }
 
-console.log( is.deepEqual(objA, objB) ) // true or false
+console.log( is.deepEqual(objA，objB) ) // true or false
 ```
 
 ## is.object
