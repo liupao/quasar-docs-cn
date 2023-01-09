@@ -1,73 +1,72 @@
 ---
-title: Vite plugin for Quasar
-desc: How to embed Quasar into a Vite app.
+title: Quasar Vite 插件模式
+desc: 将 Quasar 嵌入 Vite 应用。
 components:
   - vite-plugin/VitePluginUsage
 ---
 
-If you want to embed Quasar into your existing [Vite](https://vitejs.dev) project then follow this guide to install and use the `@quasar/vite-plugin`.
-What our Vite plugin offers out of the box is tree-shaking for Quasar and also Quasar Sass variables integration.
+把 Quasar 嵌入现有的 [Vite](https://vitejs.dev) 项目，要根据下述指引安装并使用 `@quasar/vite-plugin`。Quasar 的 Vite 插件提供了开箱即用的摇树(Tree-Shaking)功能，并整合了 Quasar 的 Sass 变量。
 
-::: warning Warning! Limitation ahead:
-* Are you sure that you've landed correctly? This page will teach you to use our Vite plugin, but it's not the same as our full-fledged [Quasar CLI with Vite](/quasar-cli-vite) under the hood.
-* SSR builds with our Vite plugin are not supported (only through our Quasar CLI with Vite).
+::: warning 警告：请三思而后行
+* 您确定要选择这种模式吗？本页面中介绍的只是 Vite 插件，该插件与我们完备的 [Quasar CLI + Vite 模式](/quasar-cli-vite)其实并不一样。
+* Vite 插件不支持 SSR，且 SSR 只能通过 Quasar CLI + Vite 模式实现。
 :::
 
-> Cross-platform support with Vite is handled by community plugins. These are not tightly integrated with Quasar as with Quasar CLI and may have issues. This is why for the best developer experience we recommend to use [Quasar CLI with Vite](/quasar-cli-vite) instead.
+> 社区里的插件为 Vite 提供了跨平台支持，但这些插件与 Quasar CLI 的整合程度不高，且存在一些问题。因此，建议大家使用 [Quasar CLI with Vite](/quasar-cli-vite)，这样才能获得最佳的开发体验。
 
-## Creating a Vite project
+## 创建 Vite 项目
 
 ``` bash
 # yarn
 $ yarn create vite my-vue-app --template vue
 
-# or npm 6.x
+# 或 npm 6.x
 npm init vite@latest my-vue-app --template vue
 
-# npm 7+, extra double-dash is needed:
+# npm 7+，需要额外添加两条横线
 npm init vite@latest my-vue-app -- --template vue
 
 # pnpm
 pnpm create vite my-vue-app -- --template vue
 ```
 
-For the official (and full) guide, please visit the [Vite guide for scaffolding](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) a Vite project. **Select "Vue" when asked.**
+Vite 官方指南，详见 [Vite 官网](https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project)，了解如何搭建 Vite 项目。 **选择框架时，要选择 "Vue"。**
 
-## Installation
+## 安装
 
-Navigate to your Vite project folder and install the necessary packages.
+进入 Vite 项目目录，安装所需的依赖包。
 
-::: tip
-* Notice that `@quasar/extras` is optional.
-* Also, add `sass@1.32.0` (notice the pinned version) only if you want to use the Quasar Sass/SCSS variables.
+::: tip 提示
+* 注意，`@quasar/extras` 是**可选的**。
+* 此外，只有在使用 Quasar Sass/SCSS 时，才需要添加 `sass@1.32.0` (注意要指定版本)。
 :::
 
 ``` bash
 $ yarn add quasar @quasar/extras
 $ yarn add -D @quasar/vite-plugin sass@1.32.0
 
-# or
+# 或
 $ npm install quasar @quasar/extras
 $ npm install -D @quasar/vite-plugin sass@1.32.0
 
-# or
+# 或
 $ pnpm add quasar @quasar/extras
 $ pnpm add -D @quasar/vite-plugin sass@1.32.0
 ```
 
-## Using Quasar
+## 使用 Quasar
 
-We have built a configurator to help you get started as quick as possible:
+我们创建了一个配置器，方便您尽快启动 Quasar 项目。
 
 <vite-plugin-usage />
 
-## RTL support
+## RTL 支持
 
-For enabling, please check out our [RTL Support](/options/rtl-support) page and follow the instructions.
+开启 RTL (右向左) 的排版方式，请参阅 [RTL 支持](/options/rtl-support)。
 
-## Warning when building for production
+## 构建生产环境时的警告
 
-When building for production, you may notice the warning below. You can safely ignore it. This is a known [Vite issue](https://github.com/vitejs/vite/issues/4625).
+构建生产环境时，您可能会看到如下警告。请放心忽略此警告信息，Vite 开发团队已经知道这个 [issue](https://github.com/vitejs/vite/issues/4625) 了。
 
 ```
 warnings when minifying css:
