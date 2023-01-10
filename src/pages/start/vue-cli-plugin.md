@@ -4,7 +4,7 @@ desc: 将 Quasar 嵌入 Vue CLI 应用。
 ---
 
 ::: warning 警告
-Quasar 社区中有一些 Vue CLI 提供跨平台支持的插件。与 Quasar CLI 开箱即用的方式相比，使用这些社区插件需要花费更多的时间与精力，并且不能保证最佳的开发体验，还不能使用 Quasar CLI 提供的全部功能。Quasar 没有专门测试这些插件，因此，使用这些插件时可能会遇到一些问题，除非这些组件库特别声明它们通过了测试。
+Quasar 社区中有一些为 Vue CLI 提供跨平台支持的插件。与 Quasar CLI 开箱即用的方式相比，使用这些社区插件需要花费更多的时间与精力，并且不能保证最佳的开发体验，还不能使用 Quasar CLI 提供的全部功能。Quasar 没有专门测试这些插件，因此，使用这些插件时可能会遇到一些问题，除非这些组件库特别声明它们通过了测试。
 
 在使用这种方式开发 Quasar 项目前，我们希望您能理解以下内容。为保证您在使用 Quasar 时获得最佳的开发体验，我们强烈建议您使用 Quasar CLI 模式开发项目，这样才不会错过 Vue CLI 的各项功能，才能使用 Quasar 的全部功能，如跨平台构建支持等。这还只是 Quasar CLI 优势的冰山一角，除此之外，您还能更好地使用 Vue，如，通过 Quasar 的 [Boot Files](/quasar-cli/boot-files#Anatomy-of-an-boot-file) 使用 Vue 的插件。
 
