@@ -14,7 +14,7 @@ export default {
   setup () {
     useMeta({
       title: 'Quasar 框架新版中文网站',
-      titleTemplate: title => `${title} | Quasar Framework V2 中文文档｜ Quasar 框架 V2 中文文档`,
+      titleTemplate: title => `${title} | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档`,
 
       meta: getMeta(
         'Quasar 框架 - 帮您在短时间内构建高性能的 vuejs 应用程序',
