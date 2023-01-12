@@ -1,22 +1,22 @@
 ---
-title: Configure VS Code
-desc: How to configure VS Code for best usage with Quasar.
+title: 配置 VS Code
+desc: 配置 VS Code，以便更好地使用 Quasar。
 ---
 
-::: tip
-This guide assumes you have already installed VS Code(Visual Studio Code).
+::: tip 提示
+假设您已安装了 VS Code（Visual Studio Code）。
 :::
 
-## VS Code Extensions
+## VS Code 扩展
 
-### Essential (_IntelliSense, Linting, Formatting_)
+### 核心扩展插件（自动补全、代码检查、代码格式）
 
-- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=vue.volar)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-### Recommended
+### 推荐插件
 
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
@@ -26,16 +26,15 @@ This guide assumes you have already installed VS Code(Visual Studio Code).
 
 ## Quasar CLI
 
-If you created your project with Quasar CLI, you already have the recommended VS Code configuration. 💪
+Quasar CLI 在创建项目时已经配置好了 VS Code 的推荐选项。💪
 
-When you open your project on VS Code, it will prompt you to install our recommended extensions if you haven't installed them already.
-Just restart VS Code after installing them and you are ready to go! 🚀
+用 VS Code 打开项目时，如果还没有安装推荐的扩展插件， VS Code 会弹出安装提示。安装所需插件后，重启 VS Code 即可开始开发。🚀
 
-## Vite & Vue CLI & UMD
+## Vite、Vue CLI 及 UMD
 
-Depending on which features/presets you are using, you can add the related options to `.vscode/settings.json`.
+在 `.vscode/settings.json` 中添加使用的功能与预设内容的配置项。
 
-### Common Configuration
+### 常见配置
 
 ```json
 {
@@ -56,7 +55,7 @@ Depending on which features/presets you are using, you can add the related optio
 }
 ```
 
-#### Without Prettier
+#### 不使用 Prettier
 
 ```json
 {
@@ -64,7 +63,7 @@ Depending on which features/presets you are using, you can add the related optio
 }
 ```
 
-#### With Prettier
+#### 使用 Prettier
 
 ```json
 {
@@ -80,28 +79,29 @@ Depending on which features/presets you are using, you can add the related optio
 }
 ```
 
-## Debugging a Quasar project in VS Code
+## 在 VSCode 中调试 Quasar 项目
 
-The best approach is to open that in a browser beside this page so you can review these instructions as you are reading those instructions. And apply the changes to your project as you go.
+建议您在浏览器打开本页，一边阅读本页的内容，一边按照本页中的指引调试您的项目。
 
-The first step to properly start debugging is enabling source maps. Quasar automatically enables source maps for development mode. Here is [a good article](https://blog.scottlogic.com/2017/11/01/webpack-source-map-options-quick-guide.html) that describes the different values for the [Webpack's devtool setting](https://webpack.js.org/configuration/devtool/)(_the one that controls the source maps_). Quasar uses _eval-cheap-module-source-map_ by default.
+调试的第一步是启用 source map 功能。开发模式下，Quasar 会自动启用 source map 功能。这里有[一篇文章](https://blog.scottlogic.com/2017/11/01/webpack-source-map-options-quick-guide.html)，详细介绍了 [Webpack 的开发工具设置](https://webpack.js.org/configuration/devtool/)（控制 source maps 的设置）。
 
-`eval-cheap-module-source-map` builds slow(_not the slowest_), rebuilds fast(_not the fastest_), and preserves the original lines(_not the best quality_). If you want faster builds while giving up on some accuracy, or more accuracy while giving up on speed, you can choose other values. The slowest but the most accurate(_the original_) value of the `devtool` is `source-map`. This makes debugging in VS Code work properly due to your full Vue source files being available in the built-in Chrome debugger. So, it will be easier to find your original source and locate the line that you want to set the breakpoint to. If you want to enable this, you need to update [`quasar.config.js > build > devtool`](/quasar-cli-webpack/quasar-config-js#property-build) like this:
+Quasar 默认使用的是 `eval-cheap-module-source-map`。使用 `eval-cheap-module-source-map` 时，构建速度较慢，但并不是最慢的；不过，重构速度相对较快，但也不是最快的；并且这种方式会保存源行代码，但却不是最佳质量。如要放弃精准度以获得更快的构建速度，或要放弃构建速度以获得更高的精准度，请使用其他值。
+
+`devtool` 中最慢但最精准的值是 `source-map`。使用这个值时，因为 Chrome 的内置调试器使用的是 Vue 的完整源代码，VS Code 可以正常工作，并且使用 `source-map` 查找源代码及定位断点所在的代码行更容易。在 [`quasar.config.js > build > devtool`](/quasar-cli-webpack/quasar-config-js#property-build) 项下添加以下内容，即可启用 `source-map` 调试方式。
 
 ```js
 // quasar.config.js
 build: {
   // ...
 
-  // this is a configuration passed on
-  // to the underlying Webpack
+  // 在此向 Webpack 传递配置
   devtool: 'source-map'
 }
 ```
 
-Then you need to tell VSCode to add a configuration to the debugger. The easiest way to do that is to click on the bug icon on the action bar (for ltr languages, that is the bar on the far left). Once you click on that bug icon, the file tree area will switch to the debug and run area. Click on the gear icon in the title bar of that window and it will bring up a file called _launch.json_. This is where you put the different configurations of launching the application to be debugged. Here are the settings for launching a Quasar app in Chrome. For the Firefox version, you can check out [Vue Cookbook](https://v2.vuejs.org/v2/cookbook/debugging-in-vscode.html#Launching-the-Application-from-VS-Code)(_for Vue 2, might be outdated_).
+接下来，要为 VS Code 调试器添加配置。点击 VS Code 侧边栏（Activity Bar）上的调试图标（Run and Debug），并弹出调试面板。点击调试面板上方的齿轮图标，打开 `launch.json`。在这里输入应用启动时要使用的调试配置项。下文是在 Chrome 中启动 Quasar 应用时的设置内容。使用 Firefox 时，请参阅 [Vue Cookbook](https://v2.vuejs.org/v2/cookbook/debugging-in-vscode.html#Launching-the-Application-from-VS-Code) 中的内容，但该内容是针对 Vue 2.x 的，可能已经过时了。
 
-In the example below, replace `package-name` with the `name` property from your `package.json` file:
+下例中，用 `name` 属性替换了 `package.json` 中的 `package-name`：
 
 ```json
 {
@@ -117,8 +117,15 @@ In the example below, replace `package-name` with the `name` property from your 
 }
 ```
 
-Now save the file, then select that configuration in the dropdown on the title bar of the debug and run pane. Before you can launch the debugger, the app must be running. Start the development server by running `quasar dev`. Then click the green "Start Debugging" button in the "Run and Debug" pane(_or press F5_) to launch the debugging session and attach it to your running app. You can now set breakpoints and control step over/in/out etc., all from VSCode. You can also launch the built-in Chrome debugger and it will stay in sync. This might be useful if you also have the [Vue devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) installed (highly recommended).
+保存 `launch.json`，然后在调试面板标题栏的下拉菜单中选择配置项。在启动调试器前，必须要先运行应用。在终端（Terminal）中输入 `quasar dev` 命令，启动开发服务器。接着，点击调试面板标题栏上绿色的**开始调试**（Start Debugging）按钮（或按 F5 键），启动调试会话，监测已运行的应用。致此，就可以设置断点，并控制代码的步进执行等操作，所有这些都是在 VS Code 中进行的。您还可以启动 Chrome 内置的调试器，该调试器可以与 VS Code 同步执行调试。最后，强烈建议安装 [Vue devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 插件，该插件在调试时的用处也很大。
 
-::: tip
-If you just want to use the Chrome or Firefox debuggers but you find it hard to locate the right source file in the browser source tab then you can use the debugger statement in your code to force the debugger to stop on that line and bring up the proper source code.
+::: tip 提示
+如果只想使用 Chrome 或 Firefox 的调试器，但又觉得在浏览器的源代码（source）标签页中定位正确的源码文件太难，则可在代码中使用调试状态，强制调试器在断点所在的代码行停止执行，并指向源代码所在的正确位置。
 :::
+
+## 视频讲解
+若仍有疑惑，请观看视频讲解：
+
+[为 Quasar 项目准备插件](https://www.bilibili.com/video/BV1pA4y197Zc/?p=5&share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
+
+[在 VSCode 中调试 Quasar 项目](https://www.bilibili.com/video/BV11d4y1U77t)
