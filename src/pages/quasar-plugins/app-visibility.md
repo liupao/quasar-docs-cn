@@ -1,9 +1,9 @@
 ---
 title: App 可见性
-desc: 这个 Quasar 插件封装了 Page Visibility API，让你可以知道你的 App 当前是否可见。
+desc: 这个 Quasar 插件封装了 Page Visibility API，让您可以知道您的 App 当前是否可见。
 keys: AppVisibility
 ---
-Quasar 插件封装了 [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) 让你可以知道你的 App 当前是否可见。
+Quasar 插件封装了 [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) 让您可以知道您的 App 当前是否可见。
 
 ## AppVisibility API
 

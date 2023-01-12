@@ -8,20 +8,20 @@ related:
 Quasar 的语言包是针对与实现 Quasar 内置组件的多语言国际化的，因为部分组件上会有一些文案。
 
 ::: warning
-需要注意的是，下述方案是针对 Quasar 内置组件的多语言国际化，如果你想实现自己的组件的多语言国际化，请参考 [App Internationalization](/options/app-internationalization) 页面。
+需要注意的是，下述方案是针对 Quasar 内置组件的多语言国际化，如果您想实现自己的组件的多语言国际化，请参考 [App Internationalization](/options/app-internationalization) 页面。
 :::
-如上所述，部分组件上会有一些文案，当需要实现多语言国际化的时候，一种方案是为每个组件都配置多分不同语言的文案，但是这太耗时间，也太麻烦，你可以选择使用 quasra 语言包，其中内置了一定数量的标准字段，类似 "Cancel", "Clear", "Select", "Update"等等，就不再需要重复的翻译他们。
+如上所述，部分组件上会有一些文案，当需要实现多语言国际化的时候，一种方案是为每个组件都配置多分不同语言的文案，但是这太耗时间，也太麻烦，您可以选择使用 quasra 语言包，其中内置了一定数量的标准字段，类似 "Cancel", "Clear", "Select", "Update"等等，就不再需要重复的翻译他们。
 
 ::: tip
 完整的 Quasar 语言包列表见[Quasar Languages on GitHub](https://github.com/quasarframework/quasar/tree/dev/ui/lang).
-<br><br>**如果你在列表中没有发现想要的语言包**, 你可以提交一个 PR 来添加它，大概会花费 5 到 10 分钟，我们欢迎任何一种语言！
+<br><br>**如果您在列表中没有发现想要的语言包**, 您可以提交一个 PR 来添加它，大概会花费 5 到 10 分钟，我们欢迎任何一种语言！
 :::
 
 ## 配置默认的语言包
-在默认情况下，Quasar 使用`en-US`英文语言包，你可以通过下述方式改变默认的语言包：
+在默认情况下，Quasar 使用`en-US`英文语言包，您可以通过下述方式改变默认的语言包：
 
 ### 硬编码
-如果默认语言包需要动态切换，那么你可以通过下面的方式定义：
+如果默认语言包需要动态切换，那么您可以通过下面的方式定义：
 
 #### Quasar CLI
 修改 `/quasar.config.js`:
@@ -76,16 +76,16 @@ Check what tags you need to include in your HTML files on [UMD / Standalone](/st
 
 ### 动态配置 (非 SSR 模式)
 
-Quasar CLI: 如果你的语言需要动态的选择， (例如通过 cookie 来判断),那么你需要创建一个 boot 文件来处理:
+Quasar CLI: 如果您的语言需要动态的选择， (例如通过 cookie 来判断),那么您需要创建一个 boot 文件来处理:
 
-使用`quasar new boot quasar-lang-pack [--format ts]`命令会帮你创建一个`/src/boot/quasar-lang-pack.ts`文件，将下面的代码复制进去：
+使用`quasar new boot quasar-lang-pack [--format ts]`命令会帮您创建一个`/src/boot/quasar-lang-pack.ts`文件，将下面的代码复制进去：
 
 ```js
 // -- 使用 @quasar/app-vite --
 
 import { Quasar } from 'quasar'
 
-// 这个路径相对于你的 node_modules/quasar/..
+// 这个路径相对于您的 node_modules/quasar/..
 const langList = import.meta.glob('../../node_modules/quasar/lang/*.mjs')
 // or just a select few (example below with only DE and FR):
 // import.meta.glob('../../node_modules/quasar/lang/(de|fr).mjs')
@@ -253,7 +253,7 @@ export default {
 ```
 
 ## 在项目中使用 Quasar 语言包
-尽管 Quasar 语言包是为内置的 Quasar 组件设计的，但是你任仍然可以把他们用到你自己的项目代码中。
+尽管 Quasar 语言包是为内置的 Quasar 组件设计的，但是您任仍然可以把他们用到您自己的项目代码中。
 
 ```html
 获取 "Close" 文案在当前的语言中为

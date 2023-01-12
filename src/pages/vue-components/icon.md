@@ -37,7 +37,7 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
 
 <doc-example title="基础" file="QIcon/Basic" />
 
-你可以通过以下方式来实现在不同的平台上使用不同的图标：
+您可以通过以下方式来实现在不同的平台上使用不同的图标：
 
 ```html
 <q-btn
@@ -161,7 +161,7 @@ export default {
 ```
 
 ::: tip
-如果你只使用svg图标（并且配置了 [Quasar图标集](/options/quasar-icon-sets)），那么你的应用程序中根本不需要 webfont。
+如果您只使用svg图标（并且配置了 [Quasar图标集](/options/quasar-icon-sets)），那么您的应用程序中根本不需要 webfont。
 :::
 
 | 图标库 | Quasar 图标集名称 | 从此导入  | 版本要求 |
@@ -482,7 +482,7 @@ iconMapFn (String: iconName) => Object / void 0 (undefined)
  1. 定义了如何解释图标
  {
    cls: String // 类名
-   content: String // 可选的, 如果你使用一个连字字体，并需要它作为 QIcon 的内容
+   content: String // 可选的, 如果您使用一个连字字体，并需要它作为 QIcon 的内容
   }
 
   2. 本质上作为另一个图标的映射

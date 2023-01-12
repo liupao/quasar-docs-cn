@@ -1,6 +1,6 @@
 ---
 title: 配置 Cordova
-desc: (@quasar/app-vite) 如何使用 Quasar ClI 管理你的 Cordova 应用。
+desc: (@quasar/app-vite) 如何使用 Quasar ClI 管理您的 Cordova 应用。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
@@ -15,7 +15,7 @@ related:
 我们将在下一节中看到该文件的一些属性将被覆盖。
 
 ## quasar.config.js
-Quasar CLI 可帮助您自动设置移动 APP 的某些属性（从 config.xml 文件获取）：Cordova "id"、APP 版本(version)、说明(description）和 Android 系统的 versionCode。为了方便，我们只使用一个数据源。例如，要改变你的 APP 版本，你不需要同时修改的多个文件，这是容易出错的。
+Quasar CLI 可帮助您自动设置移动 APP 的某些属性（从 config.xml 文件获取）：Cordova "id"、APP 版本(version)、说明(description）和 Android 系统的 versionCode。为了方便，我们只使用一个数据源。例如，要改变您的 APP 版本，您不需要同时修改的多个文件，这是容易出错的。
 
 Quasar CLI 为了确定上面提到的每个属性的值：
 1. 在 `/quasar.config.js` 中查找 "cordova" 对象。它有 "version", "description" 和/或 "androidVersionCode"吗？如果是的话，它会使用它们。
@@ -32,8 +32,8 @@ return {
 
     /**
      * 即使考虑到 iOS-Cordova 问题，也启用 Xcode modern build，
-     * 如果你明确知道自己需要它，那么可以将其开启，
-     * 例如，如果你想在你的“build.json”文件中明确构建的类型。
+     * 如果您明确知道自己需要它，那么可以将其开启，
+     * 例如，如果您想在您的“build.json”文件中明确构建的类型。
      *
      * 默认值: false
      */

@@ -33,6 +33,6 @@ QInnerLoading 必须是其父元素内部的最后一个元素，以便它可以
 
 ### 标签 <q-badge align="top" color="brand-primary" label="v2.2+" />
 
-在使用默认槽时，你可以添加一个标签，但你也可以使用 "label" 属性代替：
+在使用默认槽时，您可以添加一个标签，但您也可以使用 "label" 属性代替：
 
 <doc-example title="Label 属性" file="QInnerLoading/LabelProp" />

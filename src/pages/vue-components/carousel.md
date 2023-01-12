@@ -27,7 +27,7 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 ::: danger Keep Alive
 * 请注意 QCarousel 组件的 `keep-alive` 属性，如果您使用这个功能，就不要再使用 vue3 原生的`<keep-alive>` 组件来包裹 QCarousel 组件。
 
-* 如果你需要 `keep-alive-include` 或 `keep-alive-exclude` 属性，那么 QCarouselSlide 的 `name` 属性必须是有效的 Vue 组件名称(不允许空格，不要以数字开头等)。
+* 如果您需要 `keep-alive-include` 或 `keep-alive-exclude` 属性，那么 QCarouselSlide 的 `name` 属性必须是有效的 Vue 组件名称(不允许空格，不要以数字开头等)。
 :::
 
 ### 基础
@@ -52,7 +52,7 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 
 ### 控件类型
 
-这里的控件是指的是箭头和导航按钮，虽然它们是按钮元素，但是仍可以选择它们的类型来更好地应对你的设计。`control-color` 和 `control-text-color`属性也会对你有帮助。
+这里的控件是指的是箭头和导航按钮，虽然它们是按钮元素，但是仍可以选择它们的类型来更好地应对您的设计。`control-color` 和 `control-text-color`属性也会对您有帮助。
 
 <doc-example title="Control Type" file="QCarousel/ControlType" />
 
@@ -69,7 +69,7 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 ### 自动填充
 
 
-下面的示例中你可以对 QCarousel 做出不同的设置后观看控件间 padding 的变化：
+下面的示例中您可以对 QCarousel 做出不同的设置后观看控件间 padding 的变化：
 
 <doc-example title="Padding" file="QCarousel/AutoPadding" />
 
@@ -93,7 +93,7 @@ QCarousel 组件允许您使用幻灯片以更少的空间显示更多信息，�
 
 ### 无限滚动和自动播放
 
-你可以将鼠标移到幻灯片上来暂停自动播放
+您可以将鼠标移到幻灯片上来暂停自动播放
 
 <doc-example title="Autoplay" file="QCarousel/InfiniteAutoplay" />
 

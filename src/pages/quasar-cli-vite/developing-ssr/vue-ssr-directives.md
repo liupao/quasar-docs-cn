@@ -12,8 +12,8 @@ desc: (@quasar/app-vite) Managing the Vue directives for SSR in a Quasar app.
 SSR 构建服务端时需要所有的 Vue 指令都额外提供一个`getSSRProps()`方法。
 
 ::: tip 提示
-*  你不需要担心 Quasar 提供的指令，因为它们都为 SSR 模式做了兼容，可以直接运行在 SSR 模式中。
-* 然而，当你使用第三方库提供的 Vue 指令并且报错时，需要考虑作者是否考虑了 vue3 的 SSR 的兼容性（是否在指令的定义中添加了 getSSRProps()方法）
+*  您不需要担心 Quasar 提供的指令，因为它们都为 SSR 模式做了兼容，可以直接运行在 SSR 模式中。
+* 然而，当您使用第三方库提供的 Vue 指令并且报错时，需要考虑作者是否考虑了 vue3 的 SSR 的兼容性（是否在指令的定义中添加了 getSSRProps()方法）
 :::
 
 ## 如何声明一个指令
@@ -21,7 +21,7 @@ SSR 构建服务端时需要所有的 Vue 指令都额外提供一个`getSSRProp
 
 下面的内容来自[Vue.js 文档](https://vuejs.org/guide/scaling-up/ssr.html#custom-directives)：
 
-> 因为大多数的自定义指令都包含了对 DOM 的直接操作，所以它们会在 SSR 时被忽略。但如果你想要自己控制一个自定义指令在 SSR 时应该如何被渲染 (即应该在渲染的元素上添加哪些 attribute)，你可以使用 getSSRProps 指令钩子：
+> 因为大多数的自定义指令都包含了对 DOM 的直接操作，所以它们会在 SSR 时被忽略。但如果您想要自己控制一个自定义指令在 SSR 时应该如何被渲染 (即应该在渲染的元素上添加哪些 attribute)，您可以使用 getSSRProps 指令钩子：
 
 ```js
 const myDirective = {

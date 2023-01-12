@@ -1,6 +1,6 @@
 ---
 title: 加载插件 Loading
-desc: 这个 Quasar 插件可以通过旋转器和消息为你的应用程序展示加载状态。
+desc: 这个 Quasar 插件可以通过旋转器和消息为您的应用程序展示加载状态。
 keys: Loading
 related:
   - /vue-components/linear-progress
@@ -11,7 +11,7 @@ related:
   - /quasar-plugins/loading-bar
   - /vue-components/ajax-bar
 ---
-Loading（加载） 插件可以在你的页面上产生一个遮罩，并展示一个旋转的加载态，通知用户等待某个操作完成，避免在页面中添加复杂的加载逻辑。
+Loading（加载） 插件可以在您的页面上产生一个遮罩，并展示一个旋转的加载态，通知用户等待某个操作完成，避免在页面中添加复杂的加载逻辑。
 
 ## Loading API
 
@@ -75,4 +75,4 @@ Loading.hide()
 <doc-example title="展示之后切换加载画面" file="Loading/ShowAndChange" />
 
 ### 设置默认值
-相较于每次使用时重新指定配置，你可能想为它们设置一些默认值，你可以通过 quasar.config.js > framework > config > loading: {...} 来配置全局的默认值，或者调用 `Loading.setDefaults({...})` 或 `$q.loading.setDefaults({...})`来配置。
+相较于每次使用时重新指定配置，您可能想为它们设置一些默认值，您可以通过 quasar.config.js > framework > config > loading: {...} 来配置全局的默认值，或者调用 `Loading.setDefaults({...})` 或 `$q.loading.setDefaults({...})`来配置。

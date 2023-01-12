@@ -60,7 +60,7 @@ ssrContext: {
   req,        // Express.js 中的对象
   res,        // Express.js 中的对象
   $q,         // Quasar 的$q 对象
-  state,      // Vuex 中的 state（只有当你使用了 Vuex store 时才有）
+  state,      // Vuex 中的 state（只有当您使用了 Vuex store 时才有）
 
   nonce,      // 可选的 (optional to set it yourself)
               // 全局的 nonce"属性

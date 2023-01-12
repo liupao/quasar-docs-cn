@@ -3,7 +3,7 @@ title: Getting Started - Pick a Quasar Flavour
 desc: 'Get started with Quasar by picking one of its flavours: Quasar CLI, Vue CLI or UMD'
 ---
 
-使用 Quasar 有四种方法。选一个最适合你的：
+使用 Quasar 有四种方法。选一个最适合您的：
 
 <div class="q-mx-md row items-stretch q-gutter-xs">
   <q-btn no-caps color="purple" push stack padding="sm lg" to="/start/quasar-cli">
@@ -45,10 +45,10 @@ desc: 'Get started with Quasar by picking one of its flavours: Quasar CLI, Vue C
 
 
 ::: tip (*)注意⚠️!
-虽然你可以直接通过`Vite`或`Vue CLI`和一些 Vue 社区构建的插件获得类似的多平台支持，但这些第三方的工具并没有与 Quasar 的组件紧密集成。因此，当你遇到这些第三方插件的问题时，你将不得不向每个插件的开发者的求助。有了 Quasar，你就有了一个一站式服务，以防出现任何问题。此外，Quasar CLI 确保应用程序在性能、项目规模和最佳实践方面都达到了最佳标准，这是别的工具无法提供的。
+虽然您可以直接通过`Vite`或`Vue CLI`和一些 Vue 社区构建的插件获得类似的多平台支持，但这些第三方的工具并没有与 Quasar 的组件紧密集成。因此，当您遇到这些第三方插件的问题时，您将不得不向每个插件的开发者的求助。有了 Quasar，您就有了一个一站式服务，以防出现任何问题。此外，Quasar CLI 确保应用程序在性能、项目规模和最佳实践方面都达到了最佳标准，这是别的工具无法提供的。
 :::
 
 ### 推荐
-让我们一起来尝试使用**Quasar's CLI**创建一个新的项目，你会得到极致的体验。
+让我们一起来尝试使用**Quasar's CLI**创建一个新的项目，您会得到极致的体验。
 
 <q-btn push no-caps color="brand-primary" icon-right="launch" label="尝试 Quasar CLI" to="/start/quasar-cli" class="q-mt-sm q-mb-lg" />

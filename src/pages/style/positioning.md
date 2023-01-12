@@ -1,13 +1,13 @@
 ---
 title: CSS 定位工具类
-desc: Quasar 提供了下述 CSS 工具类帮你定位 DOM。
+desc: Quasar 提供了下述 CSS 工具类帮您定位 DOM。
 related:
   - /style/typography
   - /style/visibility
   - /style/spacing
 ---
 
-你可以轻松的时候 Quasar 提供的 CSS 工具类帮你实现元素定位。
+您可以轻松的时候 Quasar 提供的 CSS 工具类帮您实现元素定位。
 
 | CSS 类名 | 描述 |
 | --- | --- |
@@ -36,7 +36,7 @@ related:
 | `on-right` | 在左边设置一个小尺寸的外边距，通常会用在 icon 组件上  |
 
 ::: tip
-相对于使用`float-left` 或 `float-right`来实现布局或对其，更推荐你使用 Quasar 提供的网格系统
+相对于使用`float-left` 或 `float-right`来实现布局或对其，更推荐您使用 Quasar 提供的网格系统
 :::
 
 垂直方向对其:

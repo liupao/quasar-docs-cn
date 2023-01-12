@@ -69,7 +69,7 @@ export default {
 
 ## ES 的动态导入
 
-正如你在上面注意到的那样，我们使用动态导入（`import('..resource..')`）代替（`import Resource from './path/to/resource'`）。动态导入会返回一个 Promise：
+正如您在上面注意到的那样，我们使用动态导入（`import('..resource..')`）代替（`import Resource from './path/to/resource'`）。动态导入会返回一个 Promise：
 
 ```js
 import('./categories.json')

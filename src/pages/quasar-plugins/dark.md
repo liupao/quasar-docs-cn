@@ -82,7 +82,7 @@ Dark.toggle()
 
 ### 通过 quasar.config.js
 
-你也可以通过`/quasar.config.js`来设置暗色模式的状态：
+您也可以通过`/quasar.config.js`来设置暗色模式的状态：
 
 ```js
 framework: {
@@ -97,7 +97,7 @@ framework: {
 当开发**SSR**时:
 
 * `import { Dark } from 'quasar'`
-这种方式使用暗色模式不会报错，但是也不会成功运行（它不会在 ssr 模式中做任何事情），你可以通过另外两种方式实现，我们推荐使用 quasar.config.js
+这种方式使用暗色模式不会报错，但是也不会成功运行（它不会在 ssr 模式中做任何事情），您可以通过另外两种方式实现，我们推荐使用 quasar.config.js
 * 最好避免在开发 SSR 中将 Dark 的 mode 设置为'auto'，这是因为在 server 端无法推断客户端的暗模式首选项，因此 server 端将始终在亮模式下渲染，然后当客户端接管时，它将切换到暗模式（如果是这种情况）。因此，屏幕将快速闪烁。
 
 ## 监听状态的变化

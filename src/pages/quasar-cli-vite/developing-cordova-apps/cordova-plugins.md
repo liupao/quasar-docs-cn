@@ -23,7 +23,7 @@ desc: (@quasar/app-vite) 如果在 Quasar 中使用 Cordova 插件
 
 ## Deviceready 事件
 
-你会注意到一些 Cordova 插件只有在 `deviceready` 事件被触发后才可用。我们不需要担心太多，Quasar 监听这个事件被触发**之后**才会挂载们的 Vue 根组件。但是如果你需要一些插件自己的变量并且在 `deviceready` 之后初始化你可以按照下面使用插件设备的例子
+您会注意到一些 Cordova 插件只有在 `deviceready` 事件被触发后才可用。我们不需要担心太多，Quasar 监听这个事件被触发**之后**才会挂载们的 Vue 根组件。但是如果您需要一些插件自己的变量并且在 `deviceready` 之后初始化您可以按照下面使用插件设备的例子
 
 
 ### 注意事项

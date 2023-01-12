@@ -10,7 +10,7 @@ keys: touch-repeat
 
 类星体提供了功能齐全的 Vue 指令，可以完全取代像`Hammerjs`这样的库:`v-touch-pan`, `v-touch-swipe`, `v-touch-hold`，甚至`v-touch-repeat`。
 
-> **这些指令不仅可以处理鼠标事件，还可以处理触摸事件**，所以你可以用它们在你的 App 中完成一些很酷的事情。
+> **这些指令不仅可以处理鼠标事件，还可以处理触摸事件**，所以您可以用它们在您的 App 中完成一些很酷的事情。
 
 下面我们将讲述`v-touch-repeat`指令
 
@@ -37,14 +37,14 @@ Vue 指令，当用户触摸并按住一个组件或元素时，在指定的时�
 <doc-example title="在 QBtn 上使用" file="TouchRepeat/Buttons" />
 
 ### 处理鼠标事件
-当你想处理鼠标事件时，使用`mouse`修饰符：
+当您想处理鼠标事件时，使用`mouse`修饰符：
 
 ```html
 <div v-touch-repeat.mouse="myHandler">...</div>
 ```
 
 ### 处理按键事件
-当你也想处理按键事件时，使用 [keycodes](https://keycode.info/) 作为修饰符:
+当您也想处理按键事件时，使用 [keycodes](https://keycode.info/) 作为修饰符:
 
 ```html
 <div v-touch-repeat.65.70="myHandler">...</div>
@@ -52,7 +52,7 @@ Vue 指令，当用户触摸并按住一个组件或元素时，在指定的时�
 对于按键，也有一些特殊的修饰符，可使用直观的字符串代替等效的 keycode: `space`, `tab`, `enter`。
 
 ### Inhibiting TouchRepeat
-你可以通过阻止内部元素`touchstart`/`mousedown`/`keydown`事件的冒泡行为来抑制 TouchRepeat 事件：
+您可以通过阻止内部元素`touchstart`/`mousedown`/`keydown`事件的冒泡行为来抑制 TouchRepeat 事件：
 
 ```html
 <div v-touch-repeat.mouse.enter="userHasHold">
@@ -67,7 +67,7 @@ Vue 指令，当用户触摸并按住一个组件或元素时，在指定的时�
   <!-- ...content -->
 </div>
 ```
-然而，若你使用`capture`，`keyCapture` 或者 `mouseCapture`修饰符，则事件会先到达 TouchRepeat 指令，然后才是内部元素，所以 TouchRepeat 事件仍然会被触发。
+然而，若您使用`capture`，`keyCapture` 或者 `mouseCapture`修饰符，则事件会先到达 TouchRepeat 指令，然后才是内部元素，所以 TouchRepeat 事件仍然会被触发。
 
 ## 注意热更新相关
 由于性能的原因，不是所有的修饰符都是 reactive 的，有一些需要刷新页面才能更新，请在 API 卡片中检查的哪些修饰符不具备 reactive。

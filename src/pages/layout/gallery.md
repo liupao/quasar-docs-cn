@@ -1,6 +1,6 @@
 ---
 title: 布局模板
-desc: 在你的 Quasar 应用中开箱即用的布局模板
+desc: 在您的 Quasar 应用中开箱即用的布局模板
 related:
   - /layout/layout
   - /layout/header-and-footer

@@ -81,7 +81,7 @@ setup () {
 
 当多个被划分到同组中的提示相继被触发时，屏幕上只会显示一个通知，后面触发的会替换前面的，并且带有一个角标，角标的内容是被触发的通知个数。
 
-然而，如果你想禁用此行为，可以设置`group: false`。
+然而，如果您想禁用此行为，可以设置`group: false`。
 下面的示例中，第一个按钮触发的两个内容相同的提示，它们被划分到同一组中，屏幕上只会显示一个通知，角标为 2。
 第二个按钮触发了两个相同内容的通知，但是配置了`group: false`，所以屏幕上显示了两个通知。
 第三个按钮触发了两个内容不同的通知，但是它们被手动划分到同一个组中，所以屏幕上只有一个通知，内容为后触发的，角标为 2。
@@ -91,13 +91,13 @@ setup () {
 <doc-example title="自定义角标" file="Notify/GroupingCustomBadge" />
 
 ### 倒计时进度条
-如果你希望，可以告知用户这个通知什么时候会消失，可以看看下面的列子，只需要设置：`progress: true` 即可。
+如果您希望，可以告知用户这个通知什么时候会消失，可以看看下面的列子，只需要设置：`progress: true` 即可。
 
 <doc-example title="Timeout progress" file="Notify/TimeoutProgress" />
 
 ### 更新通知的内容
 
-如果您有一个正在进行的工作，并且希望在不阻止用户当前正在做的事情的情况下通知其进度，那么你可以生成一个可更新的通知。此时显示一个加载动画也是很有用的。
+如果您有一个正在进行的工作，并且希望在不阻止用户当前正在做的事情的情况下通知其进度，那么您可以生成一个可更新的通知。此时显示一个加载动画也是很有用的。
 
 请注意在下面的示例中，设置了`group: false`(因为只有不分组的通知才能更新)和`timeout: 0`(因为我们想完全控制此通知的关闭)
 
@@ -109,7 +109,7 @@ setup () {
 
 <doc-example title="Out of the box types" file="Notify/PredefinedTypesDefault" />
 
-此外，你也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个 boot 文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
+此外，您也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个 boot 文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
 
 <doc-example title="自定义通知类型" file="Notify/PredefinedTypesCustom" />
 
@@ -165,7 +165,7 @@ setup () {
 
 ### 通过编程关闭通知
 
-通知只能由用户关闭，但在特殊情况下，你可以通过代码关闭它。在设置了`timeout:0`时尤其有用。
+通知只能由用户关闭，但在特殊情况下，您可以通过代码关闭它。在设置了`timeout:0`时尤其有用。
 
 ```js
 const dismiss = $q.notify({...})

@@ -18,7 +18,7 @@ QSlideItem 组件本质上是一个带有两个额外插槽（`left` 和 `right`
 用鼠标或用手指左右滑动以查看 QSlideItem 的效果。
 
 ::: tip
-如果你的内容带有图片，你可能需要给它们添加`draggable="false"`属性，否则浏览器的原生事件可能会起副作用。
+如果您的内容带有图片，您可能需要给它们添加`draggable="false"`属性，否则浏览器的原生事件可能会起副作用。
 :::
 
 <doc-example title="基础" file="QSlideItem/Basic" />

@@ -3,7 +3,7 @@ title: 移动应用构建命令
 desc: (@quasar/app-vite) Quasar CLI 开发 Cordova 混合应用的命令列表。
 ---
 
-首先确保你已经安装了 Cordova CLI。
+首先确保您已经安装了 Cordova CLI。
 
 ```bash
 $ npm install -g cordova
@@ -50,26 +50,26 @@ $ quasar dev -m [ios|android] --ide
 为了能够在设备模拟器上或直接在手机上进行开发（包括热更新），  Quasar CLI 遵循以下步骤：
 
 1. 检测您的设备的外部 IP 地址。如果检测到多个此类 IP，则会要求您选择一个。如果您要使用手机进行开发，请选择可通过手机/平板电脑 ping 通的计算机的 IP 地址。
-2. 在你的设备上启动一个开发服务器。
+2. 在您的设备上启动一个开发服务器。
 3. 暂时更改 `/src-cordova/config.xml` 中的 `<content/>` 标签指向之前检测到的 IP。这允许应用程序连接到开发服务器
 3. 使用 Cordova CLI 临时更改 config.xml 构建一个原生 APP。
 4. Cordova CLI 会检查手机/平板电脑是否连接到您的开发设备。如果是，它会在其上安装开发版应用程序。如果找不到，那么它启动一个模拟器并运行开发版应用程序。
 5. 最后，它恢复对 `/src-cordova/config.xml` 所做的临时更改。
 
 ::: danger
-如果使用手机/平板电脑进行真机开发，则必须保证手机/平板电脑能够访问构建机器的外部 IP 地址，这一点非常重要，否则您只会获得一个仅具有白色屏幕的开发版应用程序。同时检查你的机器的防火墙是否允许连接到选择的开发端口。
+如果使用手机/平板电脑进行真机开发，则必须保证手机/平板电脑能够访问构建机器的外部 IP 地址，这一点非常重要，否则您只会获得一个仅具有白色屏幕的开发版应用程序。同时检查您的机器的防火墙是否允许连接到选择的开发端口。
 :::
 
 ### 启用 iOS modern build
 
-默认情况下，由于 Cordova 问题，iOS 的 Xcode modern build 已禁用。如果你明确知道自己需要它，那么可以将其开启，请从 `/quasar.config.js` 执行此操作：
+默认情况下，由于 Cordova 问题，iOS 的 Xcode modern build 已禁用。如果您明确知道自己需要它，那么可以将其开启，请从 `/quasar.config.js` 执行此操作：
 
 ```js
 cordova: {
   noIosLegacyBuildFlag: true
 }
 ```
-如果你想在你的  "build.json" 文件中明确构建的类型也可以执行上述操作。
+如果您想在您的  "build.json" 文件中明确构建的类型也可以执行上述操作。
 
 
 ## 构建生产版本

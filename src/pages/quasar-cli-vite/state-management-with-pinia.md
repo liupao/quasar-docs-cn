@@ -79,7 +79,7 @@ export default {
     const store = useCounterStore()
 
     return {
-      // 你可以将整个 strore 实例返回供  template 使用
+      // 您可以将整个 strore 实例返回供  template 使用
       store
     }
   }

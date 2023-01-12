@@ -12,7 +12,7 @@ desc: (@quasar/app-vite) 如何用 Capacitor 管理 Quasar 混合移动应用程
 ## 图标精灵命令行界面
 
 ::: tip 提示
-强烈建议使用 [图标精灵命令行界面](/icongenie/introduction)，因为它消耗一个图标源，并自动克隆、缩放、最小化，并把图标放在适当的目录中。当需要时，它还会告诉你需要在 /index.html 文件中添加哪些标签。
+强烈建议使用 [图标精灵命令行界面](/icongenie/introduction)，因为它消耗一个图标源，并自动克隆、缩放、最小化，并把图标放在适当的目录中。当需要时，它还会告诉您需要在 /index.html 文件中添加哪些标签。
 :::
 
 用图标精灵命令行界面快速启动必要的图像。有关完整的选项清单，请访问 [图标精灵命令行界面](/icongenie/command-list) 的命令清单页面。
@@ -25,7 +25,7 @@ $ icongenie generate -m capacitor -i /path/to/source/icon.png [-b /path/to/backg
 
 ## 使用说明
 
-除非你使用图标精灵应用扩展，否则这些是需要替换的文件：
+除非您使用图标精灵应用扩展，否则这些是需要替换的文件：
 
 ```
 .

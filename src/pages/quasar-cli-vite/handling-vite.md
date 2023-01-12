@@ -9,7 +9,7 @@ related:
 
 ## quasar.config.js 的用法
 
-Quasar 已经为您做了开箱即用的默认 Vite 配置，但是如果您希望调整这些配置，你可以通过编辑 `/quasar.config.js` 文件中的 `build > extendViteConf (viteConf)` 函数来实现。
+Quasar 已经为您做了开箱即用的默认 Vite 配置，但是如果您希望调整这些配置，您可以通过编辑 `/quasar.config.js` 文件中的 `build > extendViteConf (viteConf)` 函数来实现。
 
 ```js
 // quasar.config.js

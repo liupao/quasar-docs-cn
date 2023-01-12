@@ -12,7 +12,7 @@ related:
 ```bash
 $ quasar mode add ssr
 ```
-如果你想直接开始开发，也可以跳过"quasar mode"命令直接使用:
+如果您想直接开始开发，也可以跳过"quasar mode"命令直接使用:
 
 ```bash
 $ quasar dev -m ssr

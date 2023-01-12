@@ -7,7 +7,7 @@ keys: LocalStorage,SessionStorage
 Quasar 提供了[Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)的封装。
 
 ::: tip
-Web Storage API 只能以字符串的方式读写数据，**Quasar 封装的版本可以读写 JS 原始类型**，当你存入一个 Number 类型的数据时，通过 Quasar 封装的 Storage 插件读取出来的数据也是 Number 类型，而通过 Web Storage API 读取出来的数据会是 String 类型。JSON、正则表达式、日期、布尔值等也是如此。
+Web Storage API 只能以字符串的方式读写数据，**Quasar 封装的版本可以读写 JS 原始类型**，当您存入一个 Number 类型的数据时，通过 Quasar 封装的 Storage 插件读取出来的数据也是 Number 类型，而通过 Web Storage API 读取出来的数据会是 String 类型。JSON、正则表达式、日期、布尔值等也是如此。
 :::
 
 ## LocalStorage API
@@ -22,7 +22,7 @@ Web Storage API 只能以字符串的方式读写数据，**Quasar 封装的版�
 <doc-installation :plugins="['LocalStorage', 'SessionStorage']" />
 
 ::: danger SSR 相关注意事项
-此功能在 SSR 的服务端不可用，因为 Web Storage 只是浏览器上特有的 API，你需要确保只在客户端使用它。
+此功能在 SSR 的服务端不可用，因为 Web Storage 只是浏览器上特有的 API，您需要确保只在客户端使用它。
 :::
 
 ## 用法
@@ -69,7 +69,7 @@ try {
 ## 数据类型
 
 
-Quasar 封装的 Storage 支持以下数据类型（但不局限于此），如果你写入了以下数据类型的数据，在读取时还会获得相同的数据类型数据。
+Quasar 封装的 Storage 支持以下数据类型（但不局限于此），如果您写入了以下数据类型的数据，在读取时还会获得相同的数据类型数据。
 
 * Dates
 * Regular Expressions
@@ -78,6 +78,6 @@ Quasar 封装的 Storage 支持以下数据类型（但不局限于此），如�
 * Strings
 * Plain Javascript Objects
 
-如果你存储了*别的*数据类型的数据，在读取时会得到 String 类型的数据。
+如果您存储了*别的*数据类型的数据，在读取时会得到 String 类型的数据。
 
-所以你甚至可以存储函数，但是需要注意读取时会得到这个函数的 String 表达方式，需要使用 eval()来运行函数。
+所以您甚至可以存储函数，但是需要注意读取时会得到这个函数的 String 表达方式，需要使用 eval()来运行函数。

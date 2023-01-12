@@ -12,7 +12,7 @@ Quasar 提供了一个名为$q 的对象，可以通过它来实现各种需求�
 | `$q.version` | String | Quasar 版本 |
 | `$q.platform` | Object | 与平台信息相关的对象，详见[Platform](/options/platform-detection) |
 | `$q.screen` | Object | 与屏幕插件相关的对象，详见[Screen Plugin](/options/screen-plugin). |
-| `$q.lang` | Object | Quasar 语言包管理相关,  ([全部语言包列表](https://github.com/quasarframework/quasar/tree/dev/ui/lang))，是为 Quasar 组件设计的，但你也可以将其用到自己的项目中。更多信息请看: [Quasar Language Packs](/options/quasar-language-packs). |
+| `$q.lang` | Object | Quasar 语言包管理相关,  ([全部语言包列表](https://github.com/quasarframework/quasar/tree/dev/ui/lang))，是为 Quasar 组件设计的，但您也可以将其用到自己的项目中。更多信息请看: [Quasar Language Packs](/options/quasar-language-packs). |
 | `$q.iconSet` | Object | Quasar 图标管理 ( [全部图标列表](https://github.com/quasarframework/quasar/tree/dev/ui/icon-set))。 更多信息请看: [Quasar Icon Sets](/options/quasar-icon-sets). |
 | `$q.cordova` | Object | Cordova 全局对象的引用，只有在 Cordova 平台下才能访问。 |
 | `$q.capacitor` | Object | Capacitor 全局对象的引用，只有在 Capacitor 平台下才能访问。 |

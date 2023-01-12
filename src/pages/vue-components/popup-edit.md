@@ -26,7 +26,7 @@ QPopupEdit 组件可用于“就地”编辑值，例如 QTable 中的单元格�
 <doc-example title="点击文本部分" file="QPopupEdit/Standalone" />
 
 ### 在 QTable 中使用
-点击单元格来查看弹出的编辑器。"Name" 列展示了 `title` 属性的用法。"Calories" 列展示了数字类型数据的用法。"Fat" 列展示了 `disable` 属性的用法。如果你看一下源代码，你会发现 "Fat" 单元格使用了 QPopupEdit，但是当点击该单元格时，弹出窗口并没有显示。
+点击单元格来查看弹出的编辑器。"Name" 列展示了 `title` 属性的用法。"Calories" 列展示了数字类型数据的用法。"Fat" 列展示了 `disable` 属性的用法。如果您看一下源代码，您会发现 "Fat" 单元格使用了 QPopupEdit，但是当点击该单元格时，弹出窗口并没有显示。
 
 <doc-example title="点击单元格弹出编辑" file="QPopupEdit/WithTable" />
 

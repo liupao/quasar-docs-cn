@@ -614,7 +614,7 @@ $ quasar serve -h
 ### 自定义 Node server
 当构建一个 SPA 或 PWA 时，产物目录可以使用任意的静态服务器提供服务。为了测试它（假设您没有特定的 publicPath 或者没有使用 Vue 路由的 "history" 模式），您可以使用 "http-server" npm 包。
 
-或者你可以建立你自己的服务器。 这里有些例子：
+或者您可以建立您自己的服务器。 这里有些例子：
 
 ```js
 // 当使用默认的 "hash" 路由模式时
@@ -681,5 +681,5 @@ $ quasar create <folder_name> --kit <address> [--branch <branch_name>]
 默认会拉取仓库中的 `master` 分支，但是您也可以手动指定分支，通过 `--branch <branch name>` 参数，（例如：`quasar create --kit owner/name --branch my-branch`）。
 
 ::: warning
-在 Quasar 生态系统中构建可重用代码和 UI 组件的首选方法是应用程序扩展。只有当你真正知道自己在做什么，并且意识到 Quasar 团队为你提供帮助不足应对时，再考虑使用自定义入门套件。
+在 Quasar 生态系统中构建可重用代码和 UI 组件的首选方法是应用程序扩展。只有当您真正知道自己在做什么，并且意识到 Quasar 团队为您提供帮助不足应对时，再考虑使用自定义入门套件。
 :::

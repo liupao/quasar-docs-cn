@@ -3,7 +3,7 @@ title: SSR 处理 404 和 500 错误
 desc: (@quasar/app-vite) 在 Quaasr 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误
 ---
 
-处理 SSR 模式的 404 和 500 错误的方式与其他的模式（SPA 等）有些不同，如果你打开了`/src-ssr/middlewares/render.js`，你会发现以下代码：
+处理 SSR 模式的 404 和 500 错误的方式与其他的模式（SPA 等）有些不同，如果您打开了`/src-ssr/middlewares/render.js`，您会发现以下代码：
 
 ```js
 // src-ssr/middlewares/render.js
@@ -68,11 +68,11 @@ export default ({ app, resolve, render, serve }) => {
 
 ## 注意事项
 
-我们将讨论一些你需要注意的架构决策。选择最适合你的应用程序的内容。
+我们将讨论一些您需要注意的架构决策。选择最适合您的应用程序的内容。
 
 ### 404 错误
 
-如果你在 Vue 路由 `/src/router/routes.js` 文件中定义了等效的 404 路由。（如下所示），则上述示例中的 `if (err.code === 404) {` 部分将永远不会触发，因为 Vue Router 已经处理了它。
+如果您在 Vue 路由 `/src/router/routes.js` 文件中定义了等效的 404 路由。（如下所示），则上述示例中的 `if (err.code === 404) {` 部分将永远不会触发，因为 Vue Router 已经处理了它。
 
 
 ```js
@@ -82,7 +82,7 @@ export default ({ app, resolve, render, serve }) => {
 
 ### 500 错误
 
-上述的`/src-ssr/middlewares/render.js`中可以看到，当服务端发生了渲染错误时，会返回一个简单的字符串给客户端('500 | Internal Server Error')，如果你想定制一个漂亮的错误页面代替：
+上述的`/src-ssr/middlewares/render.js`中可以看到，当服务端发生了渲染错误时，会返回一个简单的字符串给客户端('500 | Internal Server Error')，如果您想定制一个漂亮的错误页面代替：
 
 1. 在 `/src/router/routes.js` 文件中添加一个特殊的路由，例如：
   ```js
@@ -103,7 +103,7 @@ export default ({ app, resolve, render, serve }) => {
   ```
 
 ::: danger
-你必须保证渲染 `/error500` 路由的时候不会发生 500 错误，否则，你的程序将进入无线循环。
+您必须保证渲染 `/error500` 路由的时候不会发生 500 错误，否则，您的程序将进入无线循环。
 :::
 
 避免这种情况的完美方法是直接从 `/src-ssr/middlewares/render.js` 文件中返回 500 错误页的 HTML（作为字符串）：

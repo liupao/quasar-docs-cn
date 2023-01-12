@@ -11,7 +11,7 @@ related:
   - /vue-components/toggle
 ---
 
-QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。你可以使用这个组件来充当一个开关或者用于真假值的收集。
+QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。您可以使用这个组件来充当一个开关或者用于真假值的收集。
 
 ## QBtnToggle API
 
@@ -36,7 +36,7 @@ QBtnToggle 组件也是一个基础的交互组件，有点相似于 QRadio，�
 <doc-example title="黑色背景" file="QBtnToggle/Dark" dark />
 
 ### 自定义内容
-下面的第一个 QBtnToggle 在每个按钮上都有鼠标悬浮提示。第二个 QBtnToggle 定制了内容。请注意 `options` 对象中的 `slot` 属性。当你使用这个插槽属性时，你不需要在 `options` 中使用 `label`/`icon` 属性。
+下面的第一个 QBtnToggle 在每个按钮上都有鼠标悬浮提示。第二个 QBtnToggle 定制了内容。请注意 `options` 对象中的 `slot` 属性。当您使用这个插槽属性时，您不需要在 `options` 中使用 `label`/`icon` 属性。
 
 <doc-example title="自定义按钮内容" file="QBtnToggle/CustomContent" />
 

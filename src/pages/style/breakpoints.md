@@ -21,7 +21,7 @@ Quaasr 拥有以下 CSS 断点：
 
 ### Sass
 
-你也可以在 Sass/scss 中使用这些断点
+您也可以在 Sass/scss 中使用这些断点
 
 ```sass
 @media (max-width: $breakpoint-xs-max)
@@ -41,7 +41,7 @@ $sizes.<breakpoint>
 // 替换 <breakpoint> 为 xs, sm, md, lg 或 xl
 ```
 
-[如果你打开了这个设置](/options/screen-plugin#how20to20enable20body20classes),还可以在 document.body.screen 上使用断点：`screen--xs`, `screen--sm`, ..., `screen--xl`.
+[如果您打开了这个设置](/options/screen-plugin#how20to20enable20body20classes),还可以在 document.body.screen 上使用断点：`screen--xs`, `screen--sm`, ..., `screen--xl`.
 
 ```sass
 .my-div

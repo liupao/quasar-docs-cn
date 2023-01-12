@@ -23,11 +23,11 @@ related:
 
 ## 如何使用
 
-你可以通过 [Dark Plugin](/quasar-plugins/dark)来轻松的切换 Quasar 应用的暗色/亮色模式。
+您可以通过 [Dark Plugin](/quasar-plugins/dark)来轻松的切换 Quasar 应用的暗色/亮色模式。
 
 ## 如何改变应用的样式
 
-你可以通过 `body--light` 或 `body--dark` 这两个 css 类名来定制你的 app 在亮色/暗色模式下的表现。
+您可以通过 `body--light` 或 `body--dark` 这两个 css 类名来定制您的 app 在亮色/暗色模式下的表现。
 
 ```css
 .body--light {

@@ -24,7 +24,7 @@ $ npm install -g cordova
 
 ### Android 安装
 
-* 后续的步骤，需要您在您的计算机上安装 Android 平台 SDK。 你可以[在这里下载 Android Studio](https://developer.android.com/studio/index.html)然后按照这些[安装步骤](https://developer.android.com/studio/install.html) 进行安装。
+* 后续的步骤，需要您在您的计算机上安装 Android 平台 SDK。 您可以[在这里下载 Android Studio](https://developer.android.com/studio/index.html)然后按照这些[安装步骤](https://developer.android.com/studio/install.html) 进行安装。
 
 * 确保在安装完成 Android SDK 之后，接受其许可证。打开终端并转到安装 SDK 的文件夹，在 tools/bin 目录中调用 `sdkmanager --licenses`。
 
@@ -38,7 +38,7 @@ export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools; PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 ```
 
-> 请注意，有时 `/Android/Sdk` 文件夹会被添加到用户文件夹下的 `/Library/` 中。检查你的用户文件夹，如果 `/Android/` 文件夹只存在于 `/Library/` 中，那么用 `export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"` 或者 `export ANDROID_HOME="$HOME/Library/Android/Sdk"` 替换。
+> 请注意，有时 `/Android/Sdk` 文件夹会被添加到用户文件夹下的 `/Library/` 中。检查您的用户文件夹，如果 `/Android/` 文件夹只存在于 `/Library/` 中，那么用 `export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"` 或者 `export ANDROID_HOME="$HOME/Library/Android/Sdk"` 替换。
 
 #### Windows
 
@@ -46,7 +46,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools; PATH=$PATH:$ANDROID_SDK_ROOT/platform
 * 来自 Oracle 的 JDK。可以在[此处找到](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Gradle. 曾经可以在 Android Studio 中使用，但是现在您必须单独安装它。Cordova 需要一个非常特定的版本（4.10.3）。您可以在[此处下载它](https://downloads.gradle-dn.com/distributions/gradle-4.10.3-all.zip)。
 
-然后，您需要设置以下环境变量。Cordova 已经有很好的指南。可以在[此处中找到](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#setting-environment-variables)。你需要：
+然后，您需要设置以下环境变量。Cordova 已经有很好的指南。可以在[此处中找到](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#setting-environment-variables)。您需要：
 
 * 添加 ANDROID_SDK_ROOT. 它可以被安全的设置为: `%USERPROFILE%\AppData\Local\Android\Sdk`
 * 将 ANDROID_SDK_ROOT 下的两个目录添加到 path 中:   `%ANDROID_SDK_ROOT%\tools;%ANDROID_SDK_ROOT%\platform-tools`
@@ -73,7 +73,7 @@ setx path "%path%;%ANDROID_SDK_ROOT%\tools;%ANDROID_SDK_ROOT%\platform-tools;<gr
 
 ### iOS 安装
 
-你需要一个安装了 [Xcode](https://developer.apple.com/xcode/) 的 macOS 系统。安装后，请打开 Xcode 以获取许可证提示。接受许可证，然后可以将其关闭。
+您需要一个安装了 [Xcode](https://developer.apple.com/xcode/) 的 macOS 系统。安装后，请打开 Xcode 以获取许可证提示。接受许可证，然后可以将其关闭。
 
 ## 2. 为 Quasar 项目添加 Cordova 模式
 

@@ -9,16 +9,16 @@ related:
 国际化是指在不修改代码的情况下使网站/应用程序可以适应各种语言和地区。
 
 ::: tip
-推荐使用 [vue-i18n](https://github.com/intlify/vue-i18n-next)来完成多语言国际化，需要使用一个 boot 文件来引用它到项目中 ，你可以在[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或者 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)页面找到引用 vue-i18n 的示例代码。
+推荐使用 [vue-i18n](https://github.com/intlify/vue-i18n-next)来完成多语言国际化，需要使用一个 boot 文件来引用它到项目中 ，您可以在[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或者 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)页面找到引用 vue-i18n 的示例代码。
 :::
 
 ::: warning
-需要你提前了解 [vue-i18n](https://github.com/intlify/vue-i18n-next)用法。下面只讲解针对 Quasar CLIL 的使用方式。更多信息请查看： [Vue I18n documentation](https://vue-i18n.intlify.dev).
+需要您提前了解 [vue-i18n](https://github.com/intlify/vue-i18n-next)用法。下面只讲解针对 Quasar CLIL 的使用方式。更多信息请查看： [Vue I18n documentation](https://vue-i18n.intlify.dev).
 :::
 
 ## 手动安装
 
-如果你在创建项目的时候勾选了`vue-i18n`，那么你的项目中已经被安装了`vue-i18n`，并且已经准备好了相关的配置，你可以直接跳转到[如何使用](/options/app-internationalization#e5a682e4bd95e4bdbfe794a8)，如果没有的话按照下述步骤来安装：
+如果您在创建项目的时候勾选了`vue-i18n`，那么您的项目中已经被安装了`vue-i18n`，并且已经准备好了相关的配置，您可以直接跳转到[如何使用](/options/app-internationalization#e5a682e4bd95e4bdbfe794a8)，如果没有的话按照下述步骤来安装：
 
 1. 安装 `vue-i18n` 依赖。
 
@@ -67,7 +67,7 @@ return {
 
 ## 配置在 SFC 中支持`<i18n>`翻译标签
 
-如果你想在 SFC（单文件组件）中使用`<i18n>`标签，还需要做下述配置：
+如果您想在 SFC（单文件组件）中使用`<i18n>`标签，还需要做下述配置：
 
 先安装 `@intlify/vue-i18n-loader`:
 
@@ -191,7 +191,7 @@ export default {
 
 ## UPPERCASE
 
-许多语言，如希腊语、德语和荷兰语，对于大写显示都有不直观的规则，并且有一些少见的情况你应该知道：
+许多语言，如希腊语、德语和荷兰语，对于大写显示都有不直观的规则，并且有一些少见的情况您应该知道：
 
 QBtn 组件会使用`text-transform: uppercase` CSS 属性来将它的 label 自动转换为全部大写，按照[MDN webdocs](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)的规范，"页面的语言应该被在定义在 html/xml 的 lang 属性中"，但是这个属性的浏览器兼容性不是很好，另外 2017 年 ISO 标准的大写德语 `ß` 字母还没有进入标准，目前有两种方案：
 
@@ -216,5 +216,5 @@ setup () {
 ```
 
 ::: warning
-如果你使用了 Quasar 的(`$q.lang.set()`)方法来设置语言，它并不会反映到 Quasar 的 getLocale 上，原因是`getLocale()`方法总是会返回 *用户* 所在的地区（取决于浏览器的设定）。`set()`方法用于 Quasar 应用的国际化的设置，决定哪个语言包被使用。如果想查询哪个语言包被设置了，请使用`$q.lang.isoName`属性来查询。
+如果您使用了 Quasar 的(`$q.lang.set()`)方法来设置语言，它并不会反映到 Quasar 的 getLocale 上，原因是`getLocale()`方法总是会返回 *用户* 所在的地区（取决于浏览器的设定）。`set()`方法用于 Quasar 应用的国际化的设置，决定哪个语言包被使用。如果想查询哪个语言包被设置了，请使用`$q.lang.isoName`属性来查询。
 :::

@@ -20,7 +20,7 @@ animations: [
   'bounceOutRight'
 ]
 ```
-如果你只是构建网站，那么你可以跳过配置 quasar.config.js 的步骤，通过 CDN 的方式引入 Animate.css，示例：
+如果您只是构建网站，那么您可以跳过配置 quasar.config.js 的步骤，通过 CDN 的方式引入 Animate.css，示例：
 
 ```html
 <!-- src/index.template.html -->
@@ -36,7 +36,7 @@ animations: [
 ```
 
 ::: warning
-注意，若你通过 link 标签引入 Animate.css，所有的 animation CSS 类都需要添加一个`animate__`前缀。这是 Animate.css  V3 到 V4 的破坏性更新。如果你想避免使用前缀，你可以选择导入兼容性版本：[compat version](https://animate.style/#migration)。但是，如果你在使用**Quasar CLI**，则不需要理会这些改动。
+注意，若您通过 link 标签引入 Animate.css，所有的 animation CSS 类都需要添加一个`animate__`前缀。这是 Animate.css  V3 到 V4 的破坏性更新。如果您想避免使用前缀，您可以选择导入兼容性版本：[compat version](https://animate.style/#migration)。但是，如果您在使用**Quasar CLI**，则不需要理会这些改动。
 
 :::
 

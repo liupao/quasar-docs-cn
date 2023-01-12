@@ -28,7 +28,7 @@ desc: (@quasar/app-vite) How to use analytics in a Quasar hybrid mobile app with
 ## 将其实施到项目中
 > 对于本指南，我们假设您拥有发送给 Google Analytics 的固定 sessionId。 Google Analytics 使用 sessionId 来区分不同的用户。如果要创建匿名 sessionId，请参阅[用户 ID 分析文档](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id)。
 
-将标签管理器代码片段放置到您的 `index.html` 文件的头部（如果您已按照[Multiminds 文章](http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/)做了，你已经有了这个。）在你的代码库中创建一个名为 `analytics.js` 的新文件，内容如下：
+将标签管理器代码片段放置到您的 `index.html` 文件的头部（如果您已按照[Multiminds 文章](http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/)做了，您已经有了这个。）在您的代码库中创建一个名为 `analytics.js` 的新文件，内容如下：
 
 ```javascript
 export default {

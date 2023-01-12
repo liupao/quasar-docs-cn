@@ -19,7 +19,7 @@ $ quasar build -m ssr
 $ quasar build --mode ssr
 ```
 
-如果你想打包生产环境代码时带上调试能力：
+如果您想打包生产环境代码时带上调试能力：
 
 ```bash
 $ quasar build -m ssr -d

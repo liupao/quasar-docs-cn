@@ -3,7 +3,7 @@ title: SEO with Quasar
 desc: 如何在 Quasar 中进行搜索引擎优化。
 ---
 
-术语 SEO 指的是搜索引擎优化（Search Engine Optimization）。Quasar 也涵盖了这方面，通过[Quasar Meta Plugin](/quasar-plugins/meta)来帮助你进行搜索引擎优化
+术语 SEO 指的是搜索引擎优化（Search Engine Optimization）。Quasar 也涵盖了这方面，通过[Quasar Meta Plugin](/quasar-plugins/meta)来帮助您进行搜索引擎优化
 
 ## Quasar Meta Plugin
 

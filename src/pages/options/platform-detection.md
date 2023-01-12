@@ -7,7 +7,7 @@ Quasar 提供了工具来检测代码运行在哪个平台上。
 
 
 ::: tip
-根据你的需要,你可能还需要去 [Style & Identity &gt; Visibility](/style/visibility) 页面看看如何使用 CSS 实现相同的功能。但是 CSS 方案无论在任何平台上始终都会渲染 DOM 或组件，所以根据你想要的应用程序性能来选择一个合适的方案。
+根据您的需要,您可能还需要去 [Style & Identity &gt; Visibility](/style/visibility) 页面看看如何使用 CSS 实现相同的功能。但是 CSS 方案无论在任何平台上始终都会渲染 DOM 或组件，所以根据您想要的应用程序性能来选择一个合适的方案。
 :::
 
 ## 用法
@@ -28,7 +28,7 @@ setup () {
 $q.platform.is.cordova
 ```
 
-如果在一个 vue 文件之外使用，你需要像下述方式引入它：
+如果在一个 vue 文件之外使用，您需要像下述方式引入它：
 
 ```js
 import { Platform } from 'quasar'
@@ -64,7 +64,7 @@ import { Platform } from 'quasar'
 </div>
 ```
 
-<doc-example title="你设备信息" file="Platform/Basic" />
+<doc-example title="您设备信息" file="Platform/Basic" />
 
 ## 属性列表
 
@@ -105,7 +105,7 @@ import { Platform } from 'quasar'
 :::
 
 ## 关于 SSR 的注意事项
-在 SSR 应用中只能使用`$q.platform`的形式，如果需要在 server 端使用 `import { Platform } from 'quasar'` ，你需要这样做：:
+在 SSR 应用中只能使用`$q.platform`的形式，如果需要在 server 端使用 `import { Platform } from 'quasar'` ，您需要这样做：:
 
 ```js
 import { Platform } from 'quasar'

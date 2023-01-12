@@ -35,7 +35,7 @@ QColor 组件提供了一种输入颜色的方式。
 
 ### 不要头部或底部
 
-你可以选择不渲染头部或底部，比如下面的例子:
+您可以选择不渲染头部或底部，比如下面的例子:
 
 <doc-example title="No header/footer" file="QColor/NoHeaderFooter" />
 

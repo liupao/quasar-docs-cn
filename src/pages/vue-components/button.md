@@ -9,7 +9,7 @@ related:
 ---
 Quasar 中的按钮组件叫 QBtn，它还带有一些额外实用的特性。例如：它自带两种样式，默认是矩形，可以设置为圆形，自带涟漪动画（可以禁用）。
 
-自带加载动画，你可以在应用程序需要等待的时候使用，给用户一些关于延迟需要等待的反馈。使用时，当用户点击按钮时，按钮将显示一个旋转的加载动画（加载动画可以自定义）。
+自带加载动画，您可以在应用程序需要等待的时候使用，给用户一些关于延迟需要等待的反馈。使用时，当用户点击按钮时，按钮将显示一个旋转的加载动画（加载动画可以自定义）。
 
 当按钮被点击时，会触发它的`@click`事件，除非它被禁用了。
 
@@ -55,16 +55,16 @@ Quasar 中的按钮组件叫 QBtn，它还带有一些额外实用的特性。�
 
 ### 内边距
 
-默认的内边距是"xs md"。 你可以用`padding`这个属性来自定义它的内边距:
+默认的内边距是"xs md"。 您可以用`padding`这个属性来自定义它的内边距:
 
 <doc-example title="Button padding" file="QBtn/ButtonPadding" />
 
 ### 加载和进度相关
-一些按钮的操作涉及到与服务器通信，因为是异步通信，所以可能会需要一些时间。最好在异步响应准备好之前通知用户正在进行的后台进程，QBtn 提供了一个`Loading`属性可以做到这些。使用这个属性会展示一个加载动画来代替原来的文字和图标。（加载动画默认是通过 QSpinner 组件实现，当然你也可以自定义加载动画）
+一些按钮的操作涉及到与服务器通信，因为是异步通信，所以可能会需要一些时间。最好在异步响应准备好之前通知用户正在进行的后台进程，QBtn 提供了一个`Loading`属性可以做到这些。使用这个属性会展示一个加载动画来代替原来的文字和图标。（加载动画默认是通过 QSpinner 组件实现，当然您也可以自定义加载动画）
 
 <doc-example title="Indeterminate progress" file="QBtn/IndeterminateProgress" />
 
-此外，你还可以额外使用一个`percentage` 属性在按钮中显示出进度信息：
+此外，您还可以额外使用一个`percentage` 属性在按钮中显示出进度信息：
 
 <doc-example title="Deterministic progress" file="QBtn/DeterministicProgress" />
 
@@ -75,12 +75,12 @@ Quasar 中的按钮组件叫 QBtn，它还带有一些额外实用的特性。�
 ### 处理导航跳转 <q-badge align="top" color="brand-primary" label="updated for v2.4+" />
 
 ::: warning UMD usage
-* 如果你要使用`to`和`replace`属性，请确保跳转的目标路由已经被你定义在你的项目中了，否则请使用`href`属性。
+* 如果您要使用`to`和`replace`属性，请确保跳转的目标路由已经被您定义在您的项目中了，否则请使用`href`属性。
 * 鉴于上述原因，下面的一些按钮示例不能运行在 Codepen/jsFiddle 中，因为 Codepen/jsFiddle 上的项目没有 vue-router
 :::
 
 ::: tip
-如果可以的话，尽量使用`Vue Router`提供的路由做页面跳转而不是使用`href`属性，因为使用`href`你会触发浏览器原生的导航而不是页面内的`Vue Router`导航，这不符合（spa）单页应用的定义。
+如果可以的话，尽量使用`Vue Router`提供的路由做页面跳转而不是使用`href`属性，因为使用`href`您会触发浏览器原生的导航而不是页面内的`Vue Router`导航，这不符合（spa）单页应用的定义。
 :::
 
 <doc-example title="Links" file="QBtn/Links" no-edit />

@@ -30,7 +30,7 @@ $ quasar mode add electron
 ### Windows  用户的注意事项
 如果您在安装 node-gyp 时遇到错误，您的电脑可能缺少必要的构建工具。例如 Python 和 Visual Studio 等。所幸，这里有一个简单的工具可以帮您处理问题。
 
-第一步要做的是检查我们的 npm 版本，确保没有过时，可以通过[npm-windows-upgrade](https://github.com/felixrieseberg/npm-windows-upgrade)来完成。但如果你在使用 yarn，那么可以跳过这个检查。
+第一步要做的是检查我们的 npm 版本，确保没有过时，可以通过[npm-windows-upgrade](https://github.com/felixrieseberg/npm-windows-upgrade)来完成。但如果您在使用 yarn，那么可以跳过这个检查。
 
 然后我们可以使用 [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools) 继续安装上述的构建工具，他会为我们在全局依次安装 Visual C++，Python 等等。
 
@@ -45,7 +45,7 @@ $ quasar mode add electron
 这时应该安装成功了，但如果没有，那么您将需要全新安装 Visual Studio。请注意，这些不是 Quasar 的问题，而是与 NPM 和 Windows 有关。
 
 ## 2. 开始开发
-如果您想直接进入开发过程，你可以跳过上面的 "quasar mode"  步骤，直接运行：
+如果您想直接进入开发过程，您可以跳过上面的 "quasar mode"  步骤，直接运行：
 
 ```bash
 $ quasar dev -m electron

@@ -11,7 +11,7 @@ SSR middleware（中间件）文件用于：它们为运行 SSR 应用程序的 
 
 
 ::: tip 提示
-关于更高级的用法，你需要熟悉[Expressjs API](https://expressjs.com/en/4x/api.html)。
+关于更高级的用法，您需要熟悉[Expressjs API](https://expressjs.com/en/4x/api.html)。
 :::
 
 ::: warning 警告
@@ -40,7 +40,7 @@ export default async ({ app, port, resolve, publicPath, folders, render, serve }
   await something()
 }
 ```
-你可以使用`ssrMiddleware`函数将需要导出的函数包裹起来，这样你可以在 IDE 中获得 typescript 提供的类型推导以及代码补全等功能：
+您可以使用`ssrMiddleware`函数将需要导出的函数包裹起来，这样您可以在 IDE 中获得 typescript 提供的类型推导以及代码补全等功能：
 
 
 ```js
@@ -98,7 +98,7 @@ Detailing the Object:
 
 | 属性名 | 描述 |
 | --- | --- |
-| `urlPath(path)` | 当你定义一个路由时（通过 app.use(), app.get(), app.post()等），你需要使用`resolve.urlPath()`方法来设置路由的路径。这样才能将路由添加到配置的 pulicPath 中 (quasar.config.js > build > publicPath)。 |
+| `urlPath(path)` | 当您定义一个路由时（通过 app.use(), app.get(), app.post()等），您需要使用`resolve.urlPath()`方法来设置路由的路径。这样才能将路由添加到配置的 pulicPath 中 (quasar.config.js > build > publicPath)。 |
 | `root(path1[, path2, ...pathN])` | 解析 root 目录到指定目录的路径，低层使用了`path.join()`方法。 |
 | `public(path1[, path2, ...pathN])` | 解析 public 目录到指定目录的路径，低层使用了`path.join()`方法。 |
 
@@ -108,7 +108,7 @@ Detailing the Object:
 
 #### folders
 
-由于在开发环境下和生产环境下的 root 目录和 public 目录不同，你需要使用 folders 来帮你消除这些差异。
+由于在开发环境下和生产环境下的 root 目录和 public 目录不同，您需要使用 folders 来帮您消除这些差异。
 
 | 属性名 | 描述 |
 | --- | --- |
@@ -185,7 +185,7 @@ export default ({ app, port, resolve, publicPath, folders, render, serve }) => {
 
 现在可以根据 SSR 中间件文件的预期用途向该文件添加内容。
 
-最后一步是告诉 Quasar 启用你创建的新的中间件文件，你需要将其文件名添加到`/quasar.config.js`配置文件的 ssr -> middlewares 数组中：
+最后一步是告诉 Quasar 启用您创建的新的中间件文件，您需要将其文件名添加到`/quasar.config.js`配置文件的 ssr -> middlewares 数组中：
 
 ```js
 // quasar.config.js
@@ -198,7 +198,7 @@ ssr: {
 }
 ```
 
-当构建一个 SSR 应用时，你可能希望某些中间件文件只运行在开发模式或者生产环境中，示例：
+当构建一个 SSR 应用时，您可能希望某些中间件文件只运行在开发模式或者生产环境中，示例：
 ```js
 // quasar.config.js
 
@@ -209,7 +209,7 @@ ssr: {
   ]
 }
 ```
-如果你想启用来自 node_modules 中的某个 SSR 中间件文件，可以在路径前加上 `~`：
+如果您想启用来自 node_modules 中的某个 SSR 中间件文件，可以在路径前加上 `~`：
 
 ```js
 // quasar.config.js
@@ -243,7 +243,7 @@ ssr: {
     // ..... 其他的中间件
 
     'render' // 引用自 /src-ssr/middlewares/render.js;
-             // 你可以将其名称修改为任何你喜欢的,
+             // 您可以将其名称修改为任何您喜欢的,
              // 只需确保他是此数组中的最后一个即可
   ]
 }
@@ -312,12 +312,12 @@ export default ({ app, resolve, render, serve }) => {
 
 ## Hot Module Reload
 
-当开发时，只要你在 SSR 中间件文件中做出任何的修改，Quasar CLI 都会自动触发客户端资源的重新编译然后在 Node.js 的服务端 （Expressjs）应用中间件的修改。
+当开发时，只要您在 SSR 中间件文件中做出任何的修改，Quasar CLI 都会自动触发客户端资源的重新编译然后在 Node.js 的服务端 （Expressjs）应用中间件的修改。
 
 ## SSR 中间件示例
 
 ::: tip 提示
-你可以使用任何连接 API 兼容的中间件。
+您可以使用任何连接 API 兼容的中间件。
 
 You can use any connect API compatible middleware.
 :::

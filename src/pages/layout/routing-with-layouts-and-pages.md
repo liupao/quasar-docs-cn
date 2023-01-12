@@ -195,7 +195,7 @@ export default [
 
 注意事项：
 
-* 我们使用了延迟加载的布局和页面 (`() => import(<path>)`)。如果你的网站/应用程序很小，那么你可以不使用延迟加载，因为使用它可能会增加比它的价值更多的开销：
+* 我们使用了延迟加载的布局和页面 (`() => import(<path>)`)。如果您的网站/应用程序很小，那么您可以不使用延迟加载，因为使用它可能会增加比它的价值更多的开销：
   ```js
   import UserLayout from 'layouts/user'
   import UserFeed from 'pages/user-feed'
@@ -218,7 +218,7 @@ export default [
     ...
     <q-page-container>
     <!--
-      这里是你的页面注入到你的布局的地方
+      这里是您的页面注入到您的布局的地方
     -->
       <router-view />
     </q-page-container>

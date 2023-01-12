@@ -3,7 +3,7 @@ title: 发布应用到商店
 desc: (@quasar/app-vite) 如果发布一个使用 Quasar 和 Cordova 开发的混合应用到 google 和 apple 商店。
 ---
 
-所以你已经完成了你的移动 APP 的工作。 现在是部署它的时候了。 让我们学习如何部署。
+所以您已经完成了您的移动 APP 的工作。 现在是部署它的时候了。 让我们学习如何部署。
 
 ## Android 发布
 要为 Android 生成发布版本，我们可以使用以下 Quasar CLI 命令：
@@ -14,7 +14,7 @@ $ quasar build -m cordova -T android
 $ quasar build -m android
 ```
 
-这将根据你的 `/src-cordova/config.xml` 中的设置生成一个发布版本。
+这将根据您的 `/src-cordova/config.xml` 中的设置生成一个发布版本。
 
 接下来，我们可以在 "/src-cordova/platforms/android/app/build/outputs/apk/release" 或等效路径（写在终端输出中）中找到我们未签名的 APK 文件。文件名通常以 "-release-unsigned.apk" 结尾。 现在，我们需要签名未签名的 APK 并在其上运行 align 工具来对其进行优化，并为应用商店做好准备。 如果您已经有签名密钥，请跳过这些步骤并改为使用该密钥。
 
@@ -27,7 +27,7 @@ $ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg
 您将首先被提示为密钥库创建密码。 然后，回答剩下的关于好工具的问题。完成之后，应该在当前目录中有一个名为 my-release-key. keystore 的文件。
 
 ::: danger
-确保将这个文件保存在安全的地方，如果你失去了它，你将无法提交更新到你的 APP！
+确保将这个文件保存在安全的地方，如果您失去了它，您将无法提交更新到您的 APP！
 :::
 
 要签名未签名的 APK，请运行 JDK 内置的 jarsigner 工具：
@@ -55,7 +55,7 @@ $ zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
 
 然后，您可以继续并点击该按钮来编辑商品详情（我们稍后会上传 APK）。您需要填写该应用的说明。
 
-准备就绪后，请上传适用于发布版本的 APK，并发布商品详情。要有耐心，你的辛勤工作将会有回报！
+准备就绪后，请上传适用于发布版本的 APK，并发布商品详情。要有耐心，您的辛勤工作将会有回报！
 
 ### 更新您的应用
 在开发 APP 时，您需要定期更新它。
@@ -93,9 +93,9 @@ Apple 使用 iTunes Connect 管理 APP 提交。登录后，您应该选择 My A
 
 这将在下拉菜单中显示三个选项，您应该选择 New App。在此之后，出现弹出窗口，您必须选择 APP 的名称、平台、主要语言、软件包 ID 和 SKU。
 
-一旦你完成了，点击 Create 按钮，你会看到一个屏幕，你必须设置一些基本的选项，如隐私政策的 URL、类别和子类别。
+一旦您完成了，点击 Create 按钮，您会看到一个屏幕，您必须设置一些基本的选项，如隐私政策的 URL、类别和子类别。
 
-现在，在我们填写列表中的所有内容之前，我们将构建我们的 APP 并使用 Xcode 上传。然后你会回来完成列表。
+现在，在我们填写列表中的所有内容之前，我们将构建我们的 APP 并使用 Xcode 上传。然后您会回来完成列表。
 
 您可以从[官方文档](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/UsingiTunesConnect/UsingiTunesConnect.html)了解有关在 iTunes Connect 中管理 APP 的更多信息。
 
@@ -140,11 +140,11 @@ $ quasar build -m ios -- some params --and options --here
 
 接下来，您需要插入说明，关键字，支持网址和营销网址（可选）。
 
-在 Build 部分中，你必须点击 `+` 按钮并选择在前面的步骤中通过 Xcode 上传的版本。
+在 Build 部分中，您必须点击 `+` 按钮并选择在前面的步骤中通过 Xcode 上传的版本。
 
-接下来，您必须上传图标，修改评分，并设置一些其他信息，例如版权和您的信息。请注意，在此上传的图标大小必须为 1024 x 1024 像素。谢天谢地，你可以使用第二个教程中的 splash.png。如果您是唯一的开发者，那么 App Review 信息中的数据应该是您自己的。最后，作为最后一个选项，您可以保留默认选中的选项，一旦您的 APP 获得批准，它将自动发布到 App Store。
+接下来，您必须上传图标，修改评分，并设置一些其他信息，例如版权和您的信息。请注意，在此上传的图标大小必须为 1024 x 1024 像素。谢天谢地，您可以使用第二个教程中的 splash.png。如果您是唯一的开发者，那么 App Review 信息中的数据应该是您自己的。最后，作为最后一个选项，您可以保留默认选中的选项，一旦您的 APP 获得批准，它将自动发布到 App Store。
 
-现在我们将所有细节添加到了 APP 列表中，我们可以先按 Save 按钮,然后按 Submit 按钮以供审核。最后，你会看到你必须填写的最后一张表格。
+现在我们将所有细节添加到了 APP 列表中，我们可以先按 Save 按钮,然后按 Submit 按钮以供审核。最后，您会看到您必须填写的最后一张表格。
 
 将您的 APP 提交审核后，您会在我的 My Apps as Waiting for review 中看到它的状态，如下图所示。此外，在您提交 APP 以供审核后不久，您将收到来自 iTunes Connect 的确认电子邮件，表示您的 APP 正在审核中。
 
@@ -153,4 +153,4 @@ $ quasar build -m ios -- some params --and options --here
 ### 更新您的应用
 由于您可能需要在某个时候更新您的 APP，因此您首先需要对 APP 版本进行更新（在 `/package.json` 或 `/quasar.config.js > cordova > version` 中），然后重新构建 APP 以便发布。最后，您必须从 Xcode 中打开它，然后再次执行相同的步骤。
 
-一旦你提交审核，你将不得不再次等待审核过程。
+一旦您提交审核，您将不得不再次等待审核过程。

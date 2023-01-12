@@ -21,7 +21,7 @@ keys: AddressbarColor
 <doc-installation plugins="AddressbarColor" />
 
 ##  用法
-我们需要创建一个 boot 文件来进行初始化工作，运行`$ quasar new boot addressbar-color [--format ts]`后会帮你自动创建一个启动文件(`/src/boot/addressbar-color.js`)，然后编辑它，将下面的内容复制进去：
+我们需要创建一个 boot 文件来进行初始化工作，运行`$ quasar new boot addressbar-color [--format ts]`后会帮您自动创建一个启动文件(`/src/boot/addressbar-color.js`)，然后编辑它，将下面的内容复制进去：
 
 ```js
 // file: /src/boot/addressbar-color.js
@@ -41,9 +41,9 @@ return {
   ]
 }
 ```
-这个插件做的事情只是在运行的时候为你的`index.html`注入一些`<meta>`标签。
+这个插件做的事情只是在运行的时候为您的`index.html`注入一些`<meta>`标签。
 
-由于这些 meta 标签直到运行时才会被注入，所以你可以在页面的 `created()`生命周期中使用`set`函数多次动态的修改它的颜色。
+由于这些 meta 标签直到运行时才会被注入，所以您可以在页面的 `created()`生命周期中使用`set`函数多次动态的修改它的颜色。
 
 
 ```js

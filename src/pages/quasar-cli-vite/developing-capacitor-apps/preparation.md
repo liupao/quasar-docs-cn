@@ -1,6 +1,6 @@
 ---
 title: 开发 Capacitor 应用前准备
-desc: (@quasar/app-vite) 在你使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。
+desc: (@quasar/app-vite) 在您使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。
 ---
 
 在深入到实际开发之前，需要做一些准备工作。

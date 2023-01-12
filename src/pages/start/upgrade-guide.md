@@ -10,12 +10,12 @@ components:
 :::
 
 ::: tip 组合式和选项式 API
-你会发现文档的示例代码中都采用了 Vue 3 的组合式 API。但是这并不代表你也必须使用组合式 API，你仍然可以选择使用选项式 API。事实上，继续维护选项式 API 会使得升级过程更简单一些。升级成功之后我们更推荐你使用组合式 API，但这是可选的。
+您会发现文档的示例代码中都采用了 Vue 3 的组合式 API。但是这并不代表您也必须使用组合式 API，您仍然可以选择使用选项式 API。事实上，继续维护选项式 API 会使得升级过程更简单一些。升级成功之后我们更推荐您使用组合式 API，但这是可选的。
 :::
 
 ### 视频教程 <q-badge align="top" color="brand-primary" label="New" />
 
-点击下面的海报将打开一个 Youtube 播放列表，介绍如何将你的 Quasar CLI 项目从 Quasar v1 升级到 Quasar v2 的过程。随着我们使用 Quasar v2 的更新，它可能会失去同步，但它可能会帮助你开始。
+点击下面的海报将打开一个 Youtube 播放列表，介绍如何将您的 Quasar CLI 项目从 Quasar v1 升级到 Quasar v2 的过程。随着我们使用 Quasar v2 的更新，它可能会失去同步，但它可能会帮助您开始。
 
 <upgrade-video-link />
 
@@ -45,7 +45,7 @@ $ yarn add vue@3 vue-router@4
 ```
 
 ::: warning 注意代码编辑器的终端
-如果你在使用一个代码编辑器集成的终端来运行 `quasar upgrade` 命令，并获得了一个 *Command not found* 或者 *@quasar/cli* version appears to be *undefined*报错，那么你需要转到代码编辑器终端的设置，并取消选中添加“node_modules/”选项（或其等效项）。将“bin”从项目根目录设置为%PATH%，然后重新启动代码编辑器。
+如果您在使用一个代码编辑器集成的终端来运行 `quasar upgrade` 命令，并获得了一个 *Command not found* 或者 *@quasar/cli* version appears to be *undefined*报错，那么您需要转到代码编辑器终端的设置，并取消选中添加“node_modules/”选项（或其等效项）。将“bin”从项目根目录设置为%PATH%，然后重新启动代码编辑器。
 :::
 
 ### Quasar Vite plugin 版本
@@ -53,7 +53,7 @@ $ yarn add vue@3 vue-router@4
 ```bash
 $ yarn upgrade quasar
 ```
-可选的，你可能也想保证最新的 `@quasar/vite-plugin`
+可选的，您可能也想保证最新的 `@quasar/vite-plugin`
 
 建议同时将 `vue` and `@quasar/extras` 保持最新：
 
@@ -68,7 +68,7 @@ $ yarn add vue@3 @quasar/extras@latest
 $ yarn upgrade quasar
 ```
 
-可选的，你可能也想保证最新的 `vue-cli-plugin-quasar`
+可选的，您可能也想保证最新的 `vue-cli-plugin-quasar`
 
 
 建议同时将 `vue` and `@quasar/extras` 保持最新：
@@ -82,7 +82,7 @@ $ yarn add vue@3 @quasar/extras@latest
 
 **这个指南适用于使用了 Quasar CLI 或 UMD 版本的项目**，但是其中一些信息可能也对 Vue CLI 版本的项目有帮助。
 
-对于已经在项目中使用 Vue CLI 的开发者，你可以查看如何安装与 Quasar v2 一起使用的 [vue-cli-plugin-quasar](/start/vue-cli-plugin) 。你还需要对 main.js 进行一些更改，也要升级你的 Vue CLI 以支持 Vue 3。目前最好的方法是为 Vue 3 生成一个新的 Vue-CLI 项目，然后按照 Vue-CLI 插件 quasar 的[安装步骤 i](/start/vue-cli-plugin#add-vue-cli-quasar-plugin)，检查该/src 文件夹中发生的更改，然后将相同原则应用于新的 Vue CLI 项目中。
+对于已经在项目中使用 Vue CLI 的开发者，您可以查看如何安装与 Quasar v2 一起使用的 [vue-cli-plugin-quasar](/start/vue-cli-plugin) 。您还需要对 main.js 进行一些更改，也要升级您的 Vue CLI 以支持 Vue 3。目前最好的方法是为 Vue 3 生成一个新的 Vue-CLI 项目，然后按照 Vue-CLI 插件 quasar 的[安装步骤 i](/start/vue-cli-plugin#add-vue-cli-quasar-plugin)，检查该/src 文件夹中发生的更改，然后将相同原则应用于新的 Vue CLI 项目中。
 
 
 ::: danger

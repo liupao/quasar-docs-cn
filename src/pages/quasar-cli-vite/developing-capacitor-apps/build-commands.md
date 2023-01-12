@@ -27,10 +27,10 @@ $ quasar dev --mode capacitor --target [ios|android]
 
 为了能够在设备模拟器上或直接在手机上开发（包括热模块重载），Quasar CLI 遵循以下步骤：
 
-1. 检测机器的外部 IP 地址。如果检测到有多个这样的 IP，那么它会要求你选择一个。如果使用手机进行开发，那么选择机器的 IP 地址，该地址可以从手机/平板电脑上进行 ping。
+1. 检测机器的外部 IP 地址。如果检测到有多个这样的 IP，那么它会要求您选择一个。如果使用手机进行开发，那么选择机器的 IP 地址，该地址可以从手机/平板电脑上进行 ping。
 2. 它启动了一个开发服务器。
 3. 它告诉 Capacitor 使用之前检测到的 IP。这样，应用程序就可以连接到开发服务器。
-4. 它使用 Capacitor CLI 来更新你所有的插件。
+4. 它使用 Capacitor CLI 来更新您所有的插件。
 5. 最后，它打开本地 IDE。在这里运行应用程序，它将自动连接到开发服务器。
 
 ::: danger 重要
@@ -73,7 +73,7 @@ $ quasar build -m capacitor -T [ios|android] --ide
 
 :::
 
-如果你想在生产构建中启用 UI 代码的调试功能：
+如果您想在生产构建中启用 UI 代码的调试功能：
 
 ```bash
 $ quasar build -m capacitor -T [ios|android] -d

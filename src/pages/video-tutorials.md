@@ -12,7 +12,7 @@ components:
 下面的视频教程都是由社区贡献的。
 
 ::: tip
-如果你想把自己的视频教程展示在这里，请邮件联系`razvan.stoenescu [at] gmail [dot] com`，感谢
+如果您想把自己的视频教程展示在这里，请邮件联系`razvan.stoenescu [at] gmail [dot] com`，感谢
 :::
 
 ## Quasar v2 视频教程

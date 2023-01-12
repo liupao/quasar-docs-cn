@@ -26,7 +26,7 @@ return {
 ```
 
 ::: warning 警告
-当你想使用预取数据时，你需要使用 Pinia 或 Vuex 来存储数据，所以请确保你的项目中已经添加了其中一个，否则，请创建一个新的项目，复制其中的`/src/stores` (Pinia) **或** `/src/store` (Vuex)目录到你的项目。（或者直接使用`quasar new store`命令来为你添加状态管理工具）
+当您想使用预取数据时，您需要使用 Pinia 或 Vuex 来存储数据，所以请确保您的项目中已经添加了其中一个，否则，请创建一个新的项目，复制其中的`/src/stores` (Pinia) **或** `/src/store` (Vuex)目录到您的项目。（或者直接使用`quasar new store`命令来为您添加状态管理工具）
 :::
 
 ## 为什么 PreFetch 对 SSR 很有用
@@ -109,7 +109,7 @@ export default {
 
     // 这里无法访问 this
 
-    // 如果你执行了异步的任务，请返回一个 Promise
+    // 如果您执行了异步的任务，请返回一个 Promise
     // 示例:
     return store.dispatch('fetchItem', currentRoute.params.id)
   },
@@ -126,7 +126,7 @@ export default {
 </script>
 ```
 
-如果你在使用`<script setup>`，请再添加一个`<script>`单独用于处理 preFetch，在其中返回一个带有 preFetch 函数的对象：
+如果您在使用`<script setup>`，请再添加一个`<script>`单独用于处理 preFetch，在其中返回一个带有 preFetch 函数的对象：
 
 ```html
 <script>
@@ -142,7 +142,7 @@ export default {
 ```
 
 ::: tip 提示
-如果你在开发 SSR 应用，你可以查看服务端提供的[ssrContext](/quasar-cli-vite/developing-ssr/ssr-context)对象。
+如果您在开发 SSR 应用，您可以查看服务端提供的[ssrContext](/quasar-cli-vite/developing-ssr/ssr-context)对象。
 :::
 
 ```js
@@ -180,7 +180,7 @@ preFetch ({ store, redirect }) {
 
 ### 使用预取 preFetch 来初始化 Pinia 或 Vuex
 
-当 app 启动时`preFetch`钩子只会运行一次，所以你可以借助这个机会来初始化 Pinia 或者 Vuex Store。
+当 app 启动时`preFetch`钩子只会运行一次，所以您可以借助这个机会来初始化 Pinia 或者 Vuex Store。
 
 ```js
 // -- Pinia on Non SSR --
@@ -310,7 +310,7 @@ export default {
 :::
 
 ### Vuex 搭配 Typescript
-你可以使用`preFetch`的类型工具来标注`store`参数的类型（否则为 any）：
+您可以使用`preFetch`的类型工具来标注`store`参数的类型（否则为 any）：
 
 ```js
 import { preFetch } from 'quasar/wrappers'
@@ -335,7 +335,7 @@ export default {
 一个好的用户体验包括提示用户有一些运行在后台的工作在页面准备就绪之前需要等待。针对于此，Quasar 提供了两种开箱即用的选项。
 
 ### LoadingBar
-当你为你的 app 添加了 Quasar 的[LoadingBar](/quasar-plugins/loading-bar)插件时，Quasar 默认会自动在 preFetch 钩子运行时调用 loadingBar。
+当您为您的 app 添加了 Quasar 的[LoadingBar](/quasar-plugins/loading-bar)插件时，Quasar 默认会自动在 preFetch 钩子运行时调用 loadingBar。
 
 ### Loading
 也可以使用 Quasar 的[Loading](/quasar-plugins/loading)插件。

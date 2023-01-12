@@ -8,7 +8,7 @@ related:
 ---
 QBtnDropdown 组件时一个非常方便的下拉式按钮。与[QList](/vue-components/list-and-list-items)组件搭配起来非常好用，但不局限于此。
 
-如果你在找一个下拉输入而不是按钮的组件，请看[QSelect](/vue-components/select) 组件。
+如果您在找一个下拉输入而不是按钮的组件，请看[QSelect](/vue-components/select) 组件。
 
 ## QBtnDropdown API
 

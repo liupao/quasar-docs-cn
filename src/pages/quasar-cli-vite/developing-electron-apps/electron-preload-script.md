@@ -50,7 +50,7 @@ contextBridge.exposeInMainWorld('myAPI', {
 :::
 
 ## 安全注意事项
-仅仅使用 `contextBridge` 并不意味着你所做的一切都是安全的。
+仅仅使用 `contextBridge` 并不意味着您所做的一切都是安全的。
 例如，下面的代码是不安全的：
 
 

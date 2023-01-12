@@ -11,7 +11,7 @@ related:
 "Intersection"是使用[Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)监听当 DOM/组件在可视窗口中出现或者消失（由页面滚动导致）时触发一个函数的 Quasar 指令。
 
 ::: warning
-并不是所有的浏览器都支持 Intersection Observer API，虽然大部分浏览器都支持，但是如果你需要兼容老的浏览器，那么你需要安装 W3C 官方的[polyfill](https://github.com/w3c/IntersectionObserver)（通过一个 boot 文件引入）。
+并不是所有的浏览器都支持 Intersection Observer API，虽然大部分浏览器都支持，但是如果您需要兼容老的浏览器，那么您需要安装 W3C 官方的[polyfill](https://github.com/w3c/IntersectionObserver)（通过一个 boot 文件引入）。
 :::
 
 ## Intersection API
@@ -20,7 +20,7 @@ related:
 
 ## 用法
 
-请先阅读 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)页面，以便你了解这个指令工作的原理。
+请先阅读 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)页面，以便您了解这个指令工作的原理。
 
 
 Intersection 指令可以接受一个函数或者对象作为其值，对象的格式如下：
@@ -50,19 +50,19 @@ Intersection 指令可以接受一个函数或者对象作为其值，对象的�
 
 ### 只触发一次
 
-这个指令可以被`once`修饰符修饰，(示例: `v-intersection.once`)，则 hanler 函数只会被触发一次。如果你所需要的只是在观察到的元素开始出现在屏幕上时得到通知，那么你可以使用这种方式以控制开销。
+这个指令可以被`once`修饰符修饰，(示例: `v-intersection.once`)，则 hanler 函数只会被触发一次。如果您所需要的只是在观察到的元素开始出现在屏幕上时得到通知，那么您可以使用这种方式以控制开销。
 
 <doc-example title="仅触发一次" file="Intersection/Once" no-edit />
 
 ### 使用对象格式
 
-使用一个对象来作为指令的值，你可以更精确的控制监听的行为。
+使用一个对象来作为指令的值，您可以更精确的控制监听的行为。
 
 <doc-example title="使用配置对象" file="Intersection/ObjectForm" no-edit />
 
 ### 进阶
 
-下面是一些更高阶的用法，代码中使用了 HTML 的 `data` 属性，将元素的索引绑定到`data-id`上，然后通过 handler 函数的`entry`参数中的`entry.target.dataset.id`访问到设置的 id。如果你还不熟悉 HTML 的 data 属性，请参考：[here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
+下面是一些更高阶的用法，代码中使用了 HTML 的 `data` 属性，将元素的索引绑定到`data-id`上，然后通过 handler 函数的`entry`参数中的`entry.target.dataset.id`访问到设置的 id。如果您还不熟悉 HTML 的 data 属性，请参考：[here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
 
 <doc-example title="进阶" file="Intersection/Advanced" no-edit />
 

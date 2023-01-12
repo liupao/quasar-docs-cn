@@ -341,7 +341,7 @@
       <link>https://www.quasar-cn.cn/style/theme-builder</link>
       <guid>https://www.quasar-cn.cn/style/theme-builder</guid>
       <author>null</author>
-      <description><![CDATA[Quaasr 主题构建器，帮助你的 app 构建主题颜色]]></description>
+      <description><![CDATA[Quaasr 主题构建器，帮助您的 app 构建主题颜色]]></description>
       <category></category>
     </item>
 
@@ -395,7 +395,7 @@
       <link>https://www.quasar-cn.cn/style/visibility</link>
       <guid>https://www.quasar-cn.cn/style/visibility</guid>
       <author>null</author>
-      <description><![CDATA[Quasar 提供了下述 CSS 工具类来帮助你响应式的控制组件或 DOM 的可见性。]]></description>
+      <description><![CDATA[Quasar 提供了下述 CSS 工具类来帮助您响应式的控制组件或 DOM 的可见性。]]></description>
       <category></category>
     </item>
 
@@ -404,7 +404,7 @@
       <link>https://www.quasar-cn.cn/style/positioning</link>
       <guid>https://www.quasar-cn.cn/style/positioning</guid>
       <author>null</author>
-      <description><![CDATA[Quasar 提供了下述 CSS 工具类帮你定位 DOM。]]></description>
+      <description><![CDATA[Quasar 提供了下述 CSS 工具类帮您定位 DOM。]]></description>
       <category></category>
     </item>
 
@@ -539,7 +539,7 @@
       <link>https://www.quasar-cn.cn/layout/gallery</link>
       <guid>https://www.quasar-cn.cn/layout/gallery</guid>
       <author>null</author>
-      <description><![CDATA[在你的 Quasar 应用中开箱即用的布局模板]]></description>
+      <description><![CDATA[在您的 Quasar 应用中开箱即用的布局模板]]></description>
       <category></category>
     </item>
 
@@ -1232,7 +1232,7 @@
       <link>https://www.quasar-cn.cn/vue-directives/material-ripple</link>
       <guid>https://www.quasar-cn.cn/vue-directives/material-ripple</guid>
       <author>null</author>
-      <description><![CDATA[帮你轻松实现 material design 中的涟漪动画的 Vue 指令。]]></description>
+      <description><![CDATA[帮您轻松实现 material design 中的涟漪动画的 Vue 指令。]]></description>
       <category></category>
     </item>
 
@@ -1331,7 +1331,7 @@
       <link>https://www.quasar-cn.cn/quasar-plugins/app-visibility</link>
       <guid>https://www.quasar-cn.cn/quasar-plugins/app-visibility</guid>
       <author>null</author>
-      <description><![CDATA[这个 Quasar 插件封装了 Page Visibility API，让你可以知道你的 App 当前是否可见。]]></description>
+      <description><![CDATA[这个 Quasar 插件封装了 Page Visibility API，让您可以知道您的 App 当前是否可见。]]></description>
       <category></category>
     </item>
 
@@ -1376,7 +1376,7 @@
       <link>https://www.quasar-cn.cn/quasar-plugins/loading</link>
       <guid>https://www.quasar-cn.cn/quasar-plugins/loading</guid>
       <author>null</author>
-      <description><![CDATA[这个 Quasar 插件可以通过旋转器和消息为你的应用程序展示加载状态。]]></description>
+      <description><![CDATA[这个 Quasar 插件可以通过旋转器和消息为您的应用程序展示加载状态。]]></description>
       <category></category>
     </item>
 
@@ -1709,7 +1709,7 @@
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</guid>
       <author>null</author>
-      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar CLI 管理你的 SSR 应用。]]></description>
+      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar CLI 管理您的 SSR 应用。]]></description>
       <category></category>
     </item>
 
@@ -1925,7 +1925,7 @@
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</guid>
       <author>null</author>
-      <description><![CDATA[(@quasar/app-vite) 在你使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。]]></description>
+      <description><![CDATA[(@quasar/app-vite) 在您使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。]]></description>
       <category></category>
     </item>
 
@@ -1943,7 +1943,7 @@
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</guid>
       <author>null</author>
-      <description><![CDATA[(@quasar/app-vite) 如何用 Quasar CLI 来管理你的 Capacitor 应用程序。]]></description>
+      <description><![CDATA[(@quasar/app-vite) 如何用 Quasar CLI 来管理您的 Capacitor 应用程序。]]></description>
       <category></category>
     </item>
 
@@ -2024,7 +2024,7 @@
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</guid>
       <author>null</author>
-      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar ClI 管理你的 Cordova 应用。]]></description>
+      <description><![CDATA[(@quasar/app-vite) 如何使用 Quasar ClI 管理您的 Cordova 应用。]]></description>
       <category></category>
     </item>
 

@@ -5,7 +5,7 @@ keys: QBanner
 ---
 QBanner 组件创建一个 banner 元素用于展示一些醒目的信息和一些可选的按钮。
 
-根据 Material Design 的设计规范，banner 应该显示在应用程序的顶部，当然你可以把它放在任何有意义的地方，甚至是 QDialog 组件中。
+根据 Material Design 的设计规范，banner 应该显示在应用程序的顶部，当然您可以把它放在任何有意义的地方，甚至是 QDialog 组件中。
 
 ## QBanner API
 

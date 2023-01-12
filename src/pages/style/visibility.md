@@ -1,13 +1,13 @@
 ---
 title: CSS 可见性
-desc: Quasar 提供了下述 CSS 工具类来帮助你响应式的控制组件或 DOM 的可见性。
+desc: Quasar 提供了下述 CSS 工具类来帮助您响应式的控制组件或 DOM 的可见性。
 related:
   - /style/typography
   - /style/positioning
   - /style/spacing
 ---
 
-Quasar 提供了下述这些常用的 CSS 工具类，你可以直接在 html 模版中使用。
+Quasar 提供了下述这些常用的 CSS 工具类，您可以直接在 html 模版中使用。
 
 | Class 类名 | 描述 |
 | --- | --- |
@@ -49,12 +49,12 @@ Quasar 提供了下述这些常用的 CSS 工具类，你可以直接在 html �
 
 
 ::: tip
-你可以将上述可见性 css 类与`inline`结合起来使用将元素变成 inline-blocks
+您可以将上述可见性 css 类与`inline`结合起来使用将元素变成 inline-blocks
 示例: `<span class="gt-sm inline">...</span>`
 :::
 
 ::: tip
-如果你想用 JavaScript 来控制元素的响应式显示和隐藏，你可以使用[Screen Plugin](/options/screen-plugin).
+如果您想用 JavaScript 来控制元素的响应式显示和隐藏，您可以使用[Screen Plugin](/options/screen-plugin).
 :::
 
 ## 平台相关

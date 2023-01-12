@@ -5,10 +5,10 @@ desc: (@quasar/app-vite)  Quasar 服务端渲染的提示与技巧。
 
 ## 为什么我获得了一个水化（Hydration）错误?
 
-看一下 [客户端水化](/quasar-cli-vite/developing-ssr/client-side-hydration) 页面。当你获得一个水化错误时，代表服务端渲染的 HTML 与客户端生成的 HTML 结构不匹配。这个报错只会在开发环境下出现，因此在发布网站之前一定要解决该错误。如果有一些内容只想在客户端渲染，那么可以使用 [QNoSsr](/vue-components/no-ssr) 组件。
+看一下 [客户端水化](/quasar-cli-vite/developing-ssr/client-side-hydration) 页面。当您获得一个水化错误时，代表服务端渲染的 HTML 与客户端生成的 HTML 结构不匹配。这个报错只会在开发环境下出现，因此在发布网站之前一定要解决该错误。如果有一些内容只想在客户端渲染，那么可以使用 [QNoSsr](/vue-components/no-ssr) 组件。
 
 ## 为什么导入 Platform 和 Cookies 不会生效？
-当构建 SSR 只能使用 `$q.platform`/`$q.cookies` 的格式使用相关的 api 。如果你想在服务端渲染时使用 `import { Platform, Cookies } from 'quasar'`  的格式，那么你需要像下面这样做：
+当构建 SSR 只能使用 `$q.platform`/`$q.cookies` 的格式使用相关的 api 。如果您想在服务端渲染时使用 `import { Platform, Cookies } from 'quasar'`  的格式，那么您需要像下面这样做：
 
 ```js
 //  以 Platform 为列，Cookies 也是类似的

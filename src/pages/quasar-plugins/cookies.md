@@ -11,7 +11,7 @@ keys: Cookies
 <doc-api file="Cookies" />
 
 ::: tip
-当在 Electron 的版本大于等于 v1.12.2 时，这个插件的 api 不起作用。你需要参考 [Electron Cookies](https://www.electronjs.org/docs/api/cookies) 页面查看如何在其中使用 cookie。
+当在 Electron 的版本大于等于 v1.12.2 时，这个插件的 api 不起作用。您需要参考 [Electron Cookies](https://www.electronjs.org/docs/api/cookies) 页面查看如何在其中使用 cookie。
 :::
 
 ## Installation
@@ -19,7 +19,7 @@ keys: Cookies
 <doc-installation plugins="Cookies" />
 
 ## 构建 SSR 时需要注意
-当构建 SSR 应用时我们只能用`$q.cookies` 的格式，如果你想使用`import { Cookies } from 'quasar'`的格式，需要做以下操作：
+当构建 SSR 应用时我们只能用`$q.cookies` 的格式，如果您想使用`import { Cookies } from 'quasar'`的格式，需要做以下操作：
 
 
 ```js

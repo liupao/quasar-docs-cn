@@ -12,7 +12,7 @@ desc: (@quasar/app-vite) 如果管理 Quasar 和 Cordova 开发的混合应用�
 ## Icon Genie CLI
 
 ::: tip
-我们强力推荐你去使用我们的[Icon Genie CLI](/icongenie/introduction),因为它只需要一份资源图标，就能自动生成克隆、缩放、缩小图标，然后生成不同平台上需要的图标格式，并将其放置在合适的目录中。必要时，它还会告诉你需要向 `/src/index.template.html` 中添加哪些标签。
+我们强力推荐您去使用我们的[Icon Genie CLI](/icongenie/introduction),因为它只需要一份资源图标，就能自动生成克隆、缩放、缩小图标，然后生成不同平台上需要的图标格式，并将其放置在合适的目录中。必要时，它还会告诉您需要向 `/src/index.template.html` 中添加哪些标签。
 :::
 
 使用 Icon Genie CLI 快速添加必要的图标。有关选项的完整列表，请访问[Icon Genie CLI 命令列表页面](/icongenie/command-list)。
@@ -98,7 +98,7 @@ src-cordova/
         Default@2x~ipad~anyany.png
 ```
 
-你的 config.xml 应该是这样的：
+您的 config.xml 应该是这样的：
 
 ```xml
 <platform name="android">

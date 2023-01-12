@@ -18,10 +18,10 @@ related:
 
 ## 用法
 
-Meta 插件允许在你在 Vue 组件中使用一个叫做`meta`的特殊对象。看看下面的例子，它几乎包含了所有的特性。
+Meta 插件允许在您在 Vue 组件中使用一个叫做`meta`的特殊对象。看看下面的例子，它几乎包含了所有的特性。
 
 ::: warning 重要!
-确保不要重复添加`/src/index.template.html`中已经存在的 meta 标签。如果你想使用 Meta 插件，推荐的方法是先在 html 模板中删除相同的 meta 标签。但是当你知道某个 meta 标签永远不会改变，并且总是会被渲染时，最好还是把它留在 html 模板中。
+确保不要重复添加`/src/index.template.html`中已经存在的 meta 标签。如果您想使用 Meta 插件，推荐的方法是先在 html 模板中删除相同的 meta 标签。但是当您知道某个 meta 标签永远不会改变，并且总是会被渲染时，最好还是把它留在 html 模板中。
 :::
 
 ### 组合式 (Composition API)
@@ -92,7 +92,7 @@ export default {
   }
 }
 ```
-如果你需要通过组件中的数据来计算出要设置的 meta 对象，请使用一个函数来代替对象，更多参考请见"Reactive"部分
+如果您需要通过组件中的数据来计算出要设置的 meta 对象，请使用一个函数来代替对象，更多参考请见"Reactive"部分
 
 
 ### 选项式 (Options API)
@@ -161,7 +161,7 @@ export default {
 }
 ```
 
-对于选项式 api，如果你需要通过组件中的数据来计算出要设置的 meta 对象，请使用一个函数来代替对象:
+对于选项式 api，如果您需要通过组件中的数据来计算出要设置的 meta 对象，请使用一个函数来代替对象:
 
 ```js
 export default {
@@ -169,7 +169,7 @@ export default {
     createMetaMixin(function () {
       // 通过 `this` 访问组件中的数据
       return {
-        // 假设你的组件中有`this.myTitle`
+        // 假设您的组件中有`this.myTitle`
         title: this.myTitle
       }
     })
@@ -185,7 +185,7 @@ Meta 数据是根据 Vue Router 激活的 Vue 组件的顺序计算的。示例�
 
 ### 处理 HTML attributes
 
-当你需要给`meta`,`link`,`script`等 HTML 标签设置一个 boolean 类型的属性时，请讲其值设置为 true。
+当您需要给`meta`,`link`,`script`等 HTML 标签设置一个 boolean 类型的属性时，请讲其值设置为 true。
 
 
 ```js
@@ -200,7 +200,7 @@ script: {
 //         defer
 //         data-qmeta="myScript">
 ```
-当你需要给一个属性设置为字符串类型的 "true" 时:
+当您需要给一个属性设置为字符串类型的 "true" 时:
 
 ```js
 someattribute: 'true'
@@ -245,7 +245,7 @@ setup () {
 
 ### Reactive
 
-在上面的列子中，你可能注意到了所有的属性都是静态的，但是它们也可以使用 vue 组件中的响应式数据：
+在上面的列子中，您可能注意到了所有的属性都是静态的，但是它们也可以使用 vue 组件中的响应式数据：
 
 ```js
 // 在某些.vue 文件中
@@ -260,7 +260,7 @@ export default {
     // 通过这种方式它会被转化为带有响应性的 Vue 计算属性
     useMeta(() => {
       return {
-        // 当上面的 title 变化时，你的 meta 数据也会自动跟着变变
+        // 当上面的 title 变化时，您的 meta 数据也会自动跟着变变
         title: title.value
       }
     })
@@ -278,7 +278,7 @@ export default {
 
 ## 测试 Meta
 
-在部署之前，你需要确认所设置的 meta 标签是否符合规范，可以复制你的链接到 Discord chat，一个 Facebook 帖子，或者 Tweet 中，, 我们推荐使用 [https://metatags.io/](https://metatags.io/)来验证。
+在部署之前，您需要确认所设置的 meta 标签是否符合规范，可以复制您的链接到 Discord chat，一个 Facebook 帖子，或者 Tweet 中，, 我们推荐使用 [https://metatags.io/](https://metatags.io/)来验证。
 
 
 ::: warning 重要!

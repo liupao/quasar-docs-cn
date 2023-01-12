@@ -81,7 +81,7 @@ QFile 是一个处理用户交互以选取文件的组件。
 
 <doc-example title="基础限制" file="QFile/RestrictionBasic" />
 
-你甚至可以把上面的限制结合起来。
+您甚至可以把上面的限制结合起来。
 
 ::: tip
 在上面的示例中，我们使用的是 `accept` 属性。其值必须是以逗号分隔的唯一文件类型说明符列表。映射到原生input type=file 标签的 'accept' 属性。[更多信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers)。

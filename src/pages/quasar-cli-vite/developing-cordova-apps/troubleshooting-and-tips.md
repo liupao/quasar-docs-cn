@@ -212,7 +212,7 @@ padding-top: env(safe-area-inset-top); // for iOS 11.2 +
 padding-bottom: constant(safe-area-inset-bottom);
 padding-bottom: env(safe-area-inset-bottom);
 ```
-当然你也可以在上面的例子中使用 `margin` 而不是 `padding` 取决于你的应用程序。
+当然您也可以在上面的例子中使用 `margin` 而不是 `padding` 取决于您的应用程序。
 
 通过 Cordova 构建后，为了确保仅在在移动设备上打开时添加这些内容，您可使用由 Quasar 提供的 在 body 上的 CSS 类 `.cordova`。 例：
 

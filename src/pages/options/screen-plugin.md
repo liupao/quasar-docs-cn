@@ -2,7 +2,7 @@
 title: 屏幕插件
 desc: Quasar 提供了屏幕插件来帮助开发者通过 js 开发出动态的响应式的页面
 ---
-Quasar 提供了屏幕插件来帮助开发者通过 Javascript 开发出动态的响应式的页面。出于性能的原因，我们更推荐你使用 CSS 方案[responsive CSS classes](/style/visibility#window-width-related)来实现响应式的 UI。
+Quasar 提供了屏幕插件来帮助开发者通过 Javascript 开发出动态的响应式的页面。出于性能的原因，我们更推荐您使用 CSS 方案[responsive CSS classes](/style/visibility#window-width-related)来实现响应式的 UI。
 
 ## 安装
 不需要安装，这个插件可以直接使用。
@@ -53,7 +53,7 @@ import { Screen } from 'quasar'
 
 ## Body classes
 
-如果你开启了 Body classes 这个特性（请查看下面的如何开启部分），你也可以使用 CSS 类名类为不同尺寸的屏幕设置不同的样式：`screen--xs`, `screen--sm`, ..., `screen-xl`.
+如果您开启了 Body classes 这个特性（请查看下面的如何开启部分），您也可以使用 CSS 类名类为不同尺寸的屏幕设置不同的样式：`screen--xs`, `screen--sm`, ..., `screen-xl`.
 
 ```css
 body.screen--xs {

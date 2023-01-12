@@ -45,9 +45,9 @@ QDrawer 是 QLayout 的侧边栏部分。
 
 <doc-example title="顶部图片" file="QDrawer/HeaderPicture" />
 
-### mini（迷你）模式
+### mini（迷您）模式
 
-侧滑菜单可以在两种模式下运行：“正常” 和 “迷你”，您可以使用 QDrawer 上的布尔 `mini` 属性在它们之间进行切换。
+侧滑菜单可以在两种模式下运行：“正常” 和 “迷您”，您可以使用 QDrawer 上的布尔 `mini` 属性在它们之间进行切换。
 
 ::: warning
 请注意，**mini 模式在 mobile 行为(behavior)下不适用**。
@@ -66,26 +66,26 @@ QDrawer 是 QLayout 的侧边栏部分。
 
 考虑将 QItems 与下面的路由属性（如 `to` ）一起使用。 出于演示目的，未添加这些属性，因为它将破坏 UMD 版本。
 
-<doc-example title="鼠标移入移出触发迷你模式 " file="QDrawer/MiniMouseEvents" />
+<doc-example title="鼠标移入移出触发迷您模式 " file="QDrawer/MiniMouseEvents" />
 
-#### 迷你覆盖
+#### 迷您覆盖
 
-不管您是否使用 `view` 属性进行配置，`mini-to-overlay` 布尔属性始终将您的侧滑菜单设置为固定位置，但仅在迷你模式下会占用布局上的空间。
+不管您是否使用 `view` 属性进行配置，`mini-to-overlay` 布尔属性始终将您的侧滑菜单设置为固定位置，但仅在迷您模式下会占用布局上的空间。
 
 <doc-example title="Mini to overlay" file="QDrawer/MiniToOverlay" />
 
-#### 点击触发迷你模式
+#### 点击触发迷您模式
 
 在下面的示例中，当处于 "mini" 模式时，如果用户单击侧滑菜单，则我们将切换到普通模式。
 
 考虑将 QItems 与下面的路由属性（如 to）一起使用。 出于演示目的，未添加这些属性，因为它将破坏 UMD 版本。
 
-<doc-example title="点击触发迷你模式" file="QDrawer/MiniClickEvent" />
+<doc-example title="点击触发迷您模式" file="QDrawer/MiniClickEvent" />
 
 #### Slots
 默认情况下，在 "mini" 模式下，Quasar CSS 隐藏一些 DOM 元素以提供整洁的狭窄侧滑菜单。 但是，肯定有一些用例需要您进行深度调整。您可以为此使用 QLayoutDrawe r 的 "mini" Vue 插槽。 在  "mini" 模式下，此插槽的内容将替换侧滑菜单的默认内容。
 
-<doc-example title="使用插槽自定义迷你模式的内容" file="QDrawer/MiniSlot" />
+<doc-example title="使用插槽自定义迷您模式的内容" file="QDrawer/MiniSlot" />
 
 ### Overlay（覆盖）模式
 

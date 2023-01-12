@@ -97,6 +97,6 @@ QList 和 QItem 是一组组件，它们可以一起工作，将多个行项目�
 </q-item>
 ```
 
-你也可以延迟、取消或重定向导航，如下所示。关于下面使用的 `@click` 事件的更深入描述，请参考页面顶部的 QItem API 卡。
+您也可以延迟、取消或重定向导航，如下所示。关于下面使用的 `@click` 事件的更深入描述，请参考页面顶部的 QItem API 卡。
 
 <doc-example title="延迟、取消或重定向导航 (v2.9+)" file="QItem/LinksWithGo" no-edit />

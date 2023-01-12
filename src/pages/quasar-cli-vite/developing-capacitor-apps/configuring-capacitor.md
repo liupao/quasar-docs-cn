@@ -1,6 +1,6 @@
 ---
 title: 配置 Capacitor
-desc: (@quasar/app-vite) 如何用 Quasar CLI 来管理你的 Capacitor 应用程序。
+desc: (@quasar/app-vite) 如何用 Quasar CLI 来管理您的 Capacitor 应用程序。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---

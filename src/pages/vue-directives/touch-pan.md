@@ -10,7 +10,7 @@ related:
 
 类星体提供了功能齐全的 Vue 指令，可以完全取代像`Hammerjs`这样的库:`v-touch-pan`, `v-touch-swipe`, `v-touch-hold`，甚至`v-touch-repeat`。
 
-> **这些指令不仅可以处理鼠标事件，还可以处理触摸事件**，所以你可以用它们在你的 App 中完成一些很酷的事情。
+> **这些指令不仅可以处理鼠标事件，还可以处理触摸事件**，所以您可以用它们在您的 App 中完成一些很酷的事情。
 
 下面我们将讲述`v-touch-pan`指令
 
@@ -22,7 +22,7 @@ related:
 在下面的示例区域中，点击后往一个方向平移，然后查看页面的变化。在有触摸功能的设备上，上下平移时，页面滚动会被禁用。
 
 ::: tip
-如果你的内容带有图片，你可能需要给它们添加`draggable="false"`属性，否则浏览器的原生事件可能会起副作用。
+如果您的内容带有图片，您可能需要给它们添加`draggable="false"`属性，否则浏览器的原生事件可能会起副作用。
 :::
 
 <doc-example title="任意方向" file="TouchPan/Basic" />
@@ -34,18 +34,18 @@ related:
 
 <doc-example title="水平方向" file="TouchPan/Horizontal" />
 
-下面的示例只捕获垂直方向的平移，页面滚动会被禁用，但是你希望的话，也可以选择不禁用。
+下面的示例只捕获垂直方向的平移，页面滚动会被禁用，但是您希望的话，也可以选择不禁用。
 
 <doc-example title="垂直方向" file="TouchPan/Vertical" />
 下面的示例演示如何使用`up`, `down`, `left`, `right`这四个修饰符来捕获自定义方向的平移。
 
-页面滚动会被自动禁用，但是你希望的话，也可以选择不禁用。
+页面滚动会被自动禁用，但是您希望的话，也可以选择不禁用。
 
 
 <doc-example title="Custom directions" file="TouchPan/Custom" />
 
 ### 处理鼠标事件
-当你想处理鼠标事件时，使用`mouse`修饰符：
+当您想处理鼠标事件时，使用`mouse`修饰符：
 
 ```html
 <!--
@@ -55,14 +55,14 @@ related:
 ```
 
 ### 禁用页面滚动 (在有触摸功能的设备上)
-默认情况请下，这个指令不会阻止页面的滚动，但是你希望阻止页面滚动的话，使用 `prevent`修饰符。
+默认情况请下，这个指令不会阻止页面的滚动，但是您希望阻止页面滚动的话，使用 `prevent`修饰符。
 
 ```html
 <div v-touch-pan.prevent="userHasPanned">...</div>
 ```
 
 ### Inhibiting TouchPan
-你可以通过阻止内部元素`touchstart`/`mousedown`事件的冒泡行为来抑制 TouchPan 事件：
+您可以通过阻止内部元素`touchstart`/`mousedown`事件的冒泡行为来抑制 TouchPan 事件：
 
 ```html
 <div v-touch-pan.mouse="userHasHold">
@@ -77,11 +77,11 @@ related:
   <!-- ...content -->
 </div>
 ```
-然而，若你使用`capture` 或者 `mouseCapture`修饰符，则事件会先到达 TouchPan 指令，然后才是内部元素，所以 TouchPan 事件仍然会被触发。
+然而，若您使用`capture` 或者 `mouseCapture`修饰符，则事件会先到达 TouchPan 指令，然后才是内部元素，所以 TouchPan 事件仍然会被触发。
 
 ## FAB 示例
 
-下面是一个使用 QFab 的优秀示例，你可以拖拽它穿出屏幕。
+下面是一个使用 QFab 的优秀示例，您可以拖拽它穿出屏幕。
 
 <doc-example title="Draggable" file="QFab/Draggable" />
 

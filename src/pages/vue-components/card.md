@@ -6,11 +6,11 @@ related:
   - /vue-components/separator
 ---
 
-使用 QCard 组件来把重要的信息分组展示，这种模式已经成为各种网站和应用程序的主流设计，不仅能把信息展示得清晰条理，而且还很美观，不会让你的页面看上去很死板。
+使用 QCard 组件来把重要的信息分组展示，这种模式已经成为各种网站和应用程序的主流设计，不仅能把信息展示得清晰条理，而且还很美观，不会让您的页面看上去很死板。
 
 为了在有限的屏幕尺寸上展示足够多的信息，卡片式的设计风格已经成为谷歌，推特等各大公司的首选设计模式。
 
-Qcard 组件很轻巧，它实际上是一个容器元素，你可以使用 QCard 组件来包裹任何元素，使其具有卡片式的设计感。
+Qcard 组件很轻巧，它实际上是一个容器元素，您可以使用 QCard 组件来包裹任何元素，使其具有卡片式的设计感。
 
 ## QCard API
 <doc-api file="QCard" />
@@ -24,7 +24,7 @@ Qcard 组件很轻巧，它实际上是一个容器元素，你可以使用 QCar
 ## 用法
 
 ::: tip
-你可以在卡片中使用[排版](/style/typography)来创造精美的卡片。
+您可以在卡片中使用[排版](/style/typography)来创造精美的卡片。
 :::
 
 ### 基础
@@ -46,9 +46,9 @@ Qcard 组件很轻巧，它实际上是一个容器元素，你可以使用 QCar
 
 ### 水平
 
-在下面的示例中，注意一个外层的带 `horizontal` 属性的 QCardSection 组件包裹了另外的 QCardSection。另外你可以直接把 `col-*` css 类添加到子 QCardSection 组件的 class 中来控制大小。
+在下面的示例中，注意一个外层的带 `horizontal` 属性的 QCardSection 组件包裹了另外的 QCardSection。另外您可以直接把 `col-*` css 类添加到子 QCardSection 组件的 class 中来控制大小。
 
-如果需要在带有 horizontal 属性的 QCardSections 组件中展示图片，更推荐你使用 QImg 组件而不是原生的 `<img>` 标签
+如果需要在带有 horizontal 属性的 QCardSections 组件中展示图片，更推荐您使用 QImg 组件而不是原生的 `<img>` 标签
 
 <doc-example title="基础水平卡片" file="QCard/HorizontalBasic" />
 

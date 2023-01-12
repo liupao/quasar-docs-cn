@@ -350,7 +350,7 @@ app->start;
 
 ## 支持其他的服务器
 
-QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如Firebase。下面是你可以做的。
+QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如Firebase。下面是您可以做的。
 
 
 ::: warning 感谢您的帮助

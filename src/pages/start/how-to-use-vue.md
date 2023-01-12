@@ -5,19 +5,19 @@ desc: Quasar 关于 Vue 的教程
 
 在学习 Quasar 之前，更好先学习一下 ES6 和 Vue 3。
 
-[快速学习 ES6](https://github.com/lukehoban/es6features) 和 [完整的 ES6 特性列表](http://es6-features.org/#Constants) -- 不要担心，你也不需要将所有的 ES6 都掌握）
+[快速学习 ES6](https://github.com/lukehoban/es6features) 和 [完整的 ES6 特性列表](http://es6-features.org/#Constants) -- 不要担心，您也不需要将所有的 ES6 都掌握）
 
 对于有响应式开发经验的开发者来说，只需要半天的时间就可以将 [Vue 3 文档](https://vuejs.org/) 从上到下阅读一遍，这对了解和使用 Quasar 的组件有非常大的帮助。
 
 
 ::: tip
-如果你是 Vue 初学者，也没使用过其他的响应式框架，并且在寻找一个好的教程，我们推荐你看看 [Vue 和 Quasar 视频教程](/video-tutorials)
+如果您是 Vue 初学者，也没使用过其他的响应式框架，并且在寻找一个好的教程，我们推荐您看看 [Vue 和 Quasar 视频教程](/video-tutorials)
 :::
 
 在阅读 Vue 文档之后，让我们理清一些最常问的问题，比如“如何使用 Quasar 组件、 Vue 属性、方法和事件”。
 
 ## Vue 单文件组件 (SFC)
-你将会使用 `*.vue` 文件来构建 Quasar app。每个 `*.vue` 文件包括 `template` (HTML), `script` (Javascript) 和 `style` (CSS/SASS/SCSS/Stylus/Less) 三部分
+您将会使用 `*.vue` 文件来构建 Quasar app。每个 `*.vue` 文件包括 `template` (HTML), `script` (Javascript) 和 `style` (CSS/SASS/SCSS/Stylus/Less) 三部分
 
 ```html
 <template>
@@ -25,7 +25,7 @@ desc: Quasar 关于 Vue 的教程
 </template>
 
 <script>
-  // 这里是你的 Javascript 定义 Vue 组件的地方，
+  // 这里是您的 Javascript 定义 Vue 组件的地方，
   // 它可以是一个 布局组件，一个页面或者一个可复用的组件
 
 export default {
@@ -39,9 +39,9 @@ export default {
 ```
 
 ### CSS 预处理器
-关于 `<style>` 标签，你也可以在其中使用喜欢的预处理器，其中 [Sass/SCSS](https://sass-lang.com)  （推荐）是开箱即用的。
+关于 `<style>` 标签，您也可以在其中使用喜欢的预处理器，其中 [Sass/SCSS](https://sass-lang.com)  （推荐）是开箱即用的。
 
-你可以通过 style 标签的 lang 属性来指定希望选择的预处理器来处理正在编写的 CSS 代码：
+您可以通过 style 标签的 lang 属性来指定希望选择的预处理器来处理正在编写的 CSS 代码：
 
 ```html
 <!-- 注意 lang="sass" -->
@@ -103,7 +103,7 @@ framework: {
   plugins: [ 'Notify', 'BottomSheet' ]
 }
 ```
-让我们以 Notify 为例，看看如何使用它。在 Vue 文件中，你可以编写以下内容（组合式 API）：
+让我们以 Notify 为例，看看如何使用它。在 Vue 文件中，您可以编写以下内容（组合式 API）：
 
 ```html
 <template>
@@ -166,10 +166,10 @@ Notify.create('My message')
 ### 自闭合的标签
 
 ::: danger
-不要在 **Quasar UMD 版本**中使用自闭合的标签。 你的浏览器会在 Vue 解析 DOM 之前解释 HTML ，所以你的 HTML 必须书写正确。浏览器未知的标签（比如 Vue 组件）不能是自闭合的，因为浏览器会将她们解释成没有闭合标签的错误的语法。
+不要在 **Quasar UMD 版本**中使用自闭合的标签。 您的浏览器会在 Vue 解析 DOM 之前解释 HTML ，所以您的 HTML 必须书写正确。浏览器未知的标签（比如 Vue 组件）不能是自闭合的，因为浏览器会将她们解释成没有闭合标签的错误的语法。
 :::
 
-一些 Quasar 组件的内容不需要包含 HTML 元素，这种情况下你可以使用一个自闭合的标签，例如 QIcon 组件：
+一些 Quasar 组件的内容不需要包含 HTML 元素，这种情况下您可以使用一个自闭合的标签，例如 QIcon 组件：
 
 ```html
 <q-icon name="cloud" />
@@ -207,7 +207,7 @@ Notify.create('My message')
 在 Quasar 中，所有的布尔类型的属性默认值都是 `false`，因此，您不必显式地为它们分配 `false`值。
 :::
 
-如果你想在运行时动态的更改其属性值，那么你可以将其绑定在一个变量上：
+如果您想在运行时动态的更改其属性值，那么您可以将其绑定在一个变量上：
 
 ```html
 <template>
@@ -228,7 +228,7 @@ export default {
 </script>
 ```
 
-另一方面，如果你知道这个布尔值不会改变，你可以使用变量的速记版本，就像组件属性一样，只需生声明它。换句话说，如果你声明了一个属性而不将值绑定到组件范围内的变量，它的值永远都会被解析成`true`：
+另一方面，如果您知道这个布尔值不会改变，您可以使用变量的速记版本，就像组件属性一样，只需生声明它。换句话说，如果您声明了一个属性而不将值绑定到组件范围内的变量，它的值永远都会被解析成`true`：
 
 ```html
 <template>
@@ -243,7 +243,7 @@ export default {
 
 ### 字符串（String） 属性
 
-如你所想，这种类型的属性需要字符串作为值。
+如您所想，这种类型的属性需要字符串作为值。
 
 ```html
 <template>
@@ -369,7 +369,7 @@ export default {
 | `previous(doneFn)` | 滑动到上一个幻灯片 |
 | `toggleFullscreen()` | 切换全屏开关 |
 
-为了访问这些变量，首先你需要在组件中设置一个 Vue DOM 引用，下面是一个组合式 API 中的示例：
+为了访问这些变量，首先您需要在组件中设置一个 Vue DOM 引用，下面是一个组合式 API 中的示例：
 ```html
 <template>
   <!--
@@ -432,14 +432,14 @@ export default {
 
 ## 处理 Vue 事件（Events）
 
-在整个文档中，你会注意到一些 Quasasr 组件的 API 卡片中有一个称为 "Vue Events" 的部分，例如：
+在整个文档中，您会注意到一些 Quasasr 组件的 API 卡片中有一个称为 "Vue Events" 的部分，例如：
 
 | 事件名 | 描述 |
 | --- | --- |
 | `@show` | 模态框显示后立即触发。 |
 | `@hide` | 模态框关闭后立即触发。 |
 
-当它们被触发时，为了捕获这些事件，你需要在组件的 HTML 模板中为它们绑定监听事件，示例：
+当它们被触发时，为了捕获这些事件，您需要在组件的 HTML 模板中为它们绑定监听事件，示例：
 
 
 ```html
