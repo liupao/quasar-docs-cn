@@ -1,5 +1,6 @@
 <template>
   <q-layout class="doc-layout" view="lHh LpR lff" @scroll="onScroll">
+
     <q-header class="header text-dark" bordered>
       <q-toolbar class="q-px-none">
         <q-btn
@@ -77,13 +78,28 @@
           <div class="row justify-center q-my-md">
             <q-btn
               class="doc-layout__main-btn"
+              href="https://www.bilibili.com/video/BV1pA4y197Zc"
+              target="_blank"
+              rel="noopener"
+              color="brand-primary"
+              outline
+              icon="img:/imgs/svg/bilibili.svg"
+              label="Quasar 视频教程"
+              no-wrap
+              no-caps
+            >
+            </q-btn>
+          </div>
+          <div class="row justify-center q-my-md">
+            <q-btn
+              class="doc-layout__main-btn"
               href="https://donate.quasar.dev"
               target="_blank"
               rel="noopener"
               color="brand-primary"
               outline
               :icon="mdiHeart"
-              label="Donate to Quasar"
+              label="捐赠 Quasar"
               no-wrap
               no-caps
             ></q-btn>
@@ -183,7 +199,6 @@ import {
   mdiMagnify,
   mdiChevronUp
 } from '@quasar/extras/mdi-v6'
-
 import AppMenu from 'components/AppMenu.js'
 import AppSearchResults from 'components/AppSearchResults.vue'
 // import SurveyCountdown from 'components/SurveyCountdown.vue'
