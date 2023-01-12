@@ -1,6 +1,6 @@
 ---
 title: 安装图标库
-desc: 如果在 Quasar 中引用图标库
+desc: 如何在 Quasar 中引用图标库
 related:
   - /options/quasar-icon-sets
   - /vue-components/icon
@@ -11,7 +11,7 @@ related:
 Svg 图标不需要安装步骤，可直接使用。
 :::
 
-Quasar 已经提供了几套开箱即用的图标库: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) 和 [Bootstrap Icons](https://icons.getbootstrap.com/).但是您任然可以自行添加其他的图标库 [add support for others](/vue-components/icon#custom-mapping)。
+Quasar 已经提供了几套开箱即用的图标库: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) 和 [Bootstrap Icons](https://icons.getbootstrap.com/).但是您任然可以[自行添加其他的图标库](/vue-components/icon#custom-mapping)。
 
 ::: tip
 关于字体图标库，您可以选择安装一个或多个。
@@ -93,19 +93,19 @@ extras: [
   // import '@fortawesome/fontawesome-pro/css/solid.css'
   // import '@fortawesome/fontawesome-pro/css/regular.css'
   ```
-7. (可选的) 重写默认的图标： Override default icons:
+7. （可选的）重写默认的图标：
 
 由于 fontawesome-pro 默认的 `font-weight` 是 `light` 或 `fal` ，导致一些图标用在组件中可能不太美观，最好在 boot 文件中覆盖掉它。
 
 例如
 
 ```js
-// example
+// 示例
 chip: {
   remove: 'fal fa-times-circle'
 ```
 
-_Then_, override it in your `/src/boot/fontawesome-pro.js`
+然后在 `/src/boot/fontawesome-pro.js` 中重写它。
 
 ```js
 import '@fortawesome/fontawesome-pro/css/fontawesome.min.css'
