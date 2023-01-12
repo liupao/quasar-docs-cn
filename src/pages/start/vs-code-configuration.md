@@ -11,7 +11,7 @@ desc: 配置 VS Code，以便更好地使用 Quasar。
 
 ### 核心扩展插件（自动补全、代码检查、代码格式）
 
-- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=vue.volar)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
@@ -122,3 +122,10 @@ build: {
 ::: tip 提示
 如果只想使用 Chrome 或 Firefox 的调试器，但又觉得在浏览器的源代码（source）标签页中定位正确的源码文件太难，则可在代码中使用调试状态，强制调试器在断点所在的代码行停止执行，并指向源代码所在的正确位置。
 :::
+
+## 视频讲解
+若仍有疑惑，请观看视频讲解：
+
+[为 Quasar 项目准备插件](https://www.bilibili.com/video/BV1pA4y197Zc/?p=5&share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
+
+[在 VSCode 中调试 Quasar 项目](https://www.bilibili.com/video/BV11d4y1U77t)
