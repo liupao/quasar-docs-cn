@@ -771,7 +771,7 @@
         "path": "quasar-config-js"
       },
       {
-        "name": "转换为 Quasar CLI + Vite",
+        "name": "转换为 Quasar CLI（Vite）",
         "path": "convert-to-quasar-cli-with-vite"
       },
       {
@@ -807,7 +807,7 @@
         "path": "boot-files"
       },
       {
-        "name": "数据预取功能",
+        "name": "数据预取",
         "path": "prefetch-feature"
       },
       {
@@ -831,7 +831,7 @@
         "path": "state-management-with-vuex"
       },
       {
-        "name": "Linter",
+        "name": "代码检测（Linter）",
         "path": "linter"
       },
       {
@@ -959,7 +959,7 @@
             "path": "configuring-pwa"
           },
           {
-            "name": "PWA 的热更新",
+            "name": "PWA 热更新",
             "path": "hmr-for-dev"
           },
           {
@@ -1001,11 +1001,11 @@
             "path": "configuring-capacitor"
           },
           {
-            "name": "应用图标",
+            "name": "Capacitor 应用图标",
             "path": "app-icons-capacitor"
           },
           {
-            "name": "Capacitor API 接口",
+            "name": "Capacitor 接口",
             "path": "capacitor-api"
           },
           {
@@ -1192,7 +1192,7 @@
         "path": "quasar-config-js"
       },
       {
-        "name": "转换为 Quasar CLI + Webpack",
+        "name": "转换为 Quasar CLI（Webpack）",
         "path": "convert-to-quasar-cli-with-webpack"
       },
       {
@@ -1232,7 +1232,7 @@
         "path": "boot-files"
       },
       {
-        "name": "数据预取功能",
+        "name": "数据预取",
         "path": "prefetch-feature"
       },
       {
@@ -1272,7 +1272,7 @@
             "path": "introduction"
           },
           {
-            "name": "SPA 的应用图标",
+            "name": "SPA 应用图标",
             "path": "app-icons-spa"
           },
           {
@@ -1331,7 +1331,7 @@
             "path": "vue-ssr-directives"
           },
           {
-            "name": "SSR 的应用图标",
+            "name": "SSR 应用图标",
             "path": "app-icons-ssr"
           },
           {
@@ -1394,7 +1394,7 @@
             "path": "hmr-for-dev"
           },
           {
-            "name": "PWA 的应用图标",
+            "name": "PWA 应用图标",
             "path": "app-icons-pwa"
           },
           {
@@ -1433,11 +1433,11 @@
             "path": "configuring-capacitor"
           },
           {
-            "name": "Capacitor 的应用图标",
+            "name": "Capacitor 应用图标",
             "path": "app-icons-capacitor"
           },
           {
-            "name": "Capacitor API 接口",
+            "name": "Capacitor 接口",
             "path": "capacitor-api"
           },
           {
@@ -1475,7 +1475,7 @@
             "path": "configuring-cordova"
           },
           {
-            "name": "Cordova 的应用图标",
+            "name": "Cordova 应用图标",
             "path": "app-icons-cordova"
           },
           {
@@ -1692,11 +1692,11 @@
             "path": "introduction"
           },
           {
-            "name": "提供一个 UI 组件",
+            "name": "提供 UI 组件",
             "path": "provide-a-ui-component"
           },
           {
-            "name": "提供一个指令",
+            "name": "提供指令",
             "path": "provide-a-directive"
           },
           {
