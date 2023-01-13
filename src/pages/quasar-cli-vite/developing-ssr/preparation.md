@@ -12,14 +12,14 @@ related:
 ```bash
 $ quasar mode add ssr
 ```
-如果您想直接开始开发，也可以跳过"quasar mode"命令直接使用:
+如果您想直接开始开发，也可以跳过 "quasar mode" 命令，直接使用:
 
 ```bash
 $ quasar dev -m ssr
 ```
 这样，如果项目缺少 SSR 模式，则会自动添加后启动。
 
-项目中会被新建一个目录，详情请参考[Configuring SSR](/quasar-cli-vite/developing-ssr/configuring-ssr)页面。
+项目中会新建一个目录，详情请参考[配置 SSR](/quasar-cli-vite/developing-ssr/configuring-ssr)页面。
 
 ```bash
 .
