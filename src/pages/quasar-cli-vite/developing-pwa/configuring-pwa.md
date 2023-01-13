@@ -1,38 +1,38 @@
 ---
-title: Configuring PWA
-desc: (@quasar/app-vite) How to manage your Progressive Web Apps with Quasar CLI.
+title: 配置 PWA
+desc: (@quasar/app-vite) 如何使用 Quaasr CLI 管理您的渐进式 Web（PWA）应用。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
 
 ## Service Worker
-Adding PWA mode to a Quasar project means a new folder will be created: `/src-pwa`, which contains PWA specific files:
+给一个 Quasar 项目添加 PWA 模式后会自动创建一个 `/src-pwa` 目录，其中包含以下文件：
 
 ```bash
 .
 └── src-pwa/
-    ├── register-service-worker.js  # (or .ts) UI code *managing* service worker
-    ├── manifest.json               # Your PWA manifest file
-    └── custom-service-worker.js    # (or .ts) Optional custom service worker file
-                                    #               (injectManifest mode ONLY)
+    ├── register-service-worker.js  # （或 .ts） UI 代码管理 service worker
+    ├── manifest.json               #  PWA 配置清单文件
+    └── custom-service-worker.js    # （或 .ts）可选的自定义 service worker 文件
+                                    # （仅在 injectManifest 模式中)
 ```
 
-You can freely edit these files. Notice a few things:
+您可以随意修改这些文件，但要注意以下事情：
 
-1. `register-service-worker.[js|ts]` is automatically imported into your app (like any other /src file). It registers the service worker (created by Workbox or your custom one, depending on workbox plugin mode -- quasar.config.js > pwa > workboxPluginMode) and you can listen for Service Worker's events. You can use ES6 code.
-2. `custom-service-worker.[js|ts]` will be your service worker file ONLY if workbox plugin mode is set to "injectManifest" (quasar.config.js > pwa > workboxMode: 'injectManifest'). Otherwise, Quasar and Workbox will create a service-worker file for you.
-3. It makes sense to run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tests on production builds only.
+1. `register-service-worker.[js|ts]` 会被自动导入到应用中（就像 /src 中的文件一样）。它会注册 service worker（由 Workbox 创建，或者自定义，取决于 quasar.config.js > pwa > workboxPluginMode 配置），您可以在此监听 service worker 的事件。可以使用 ES6 的代码。
+2. 如果 workbox 插件模式被设置为 "injectManifest"（quasar.config.js > pwa > workboxMode: 'injectManifest'），那么将会使用`custom-service-worker.[js|ts]` 作为 service-worker 文件，否则 Quasar 和 Workbox 会创建一个 service-worker 文件。
+3. 仅在生产构建上运行 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 测试才会生效。
 
 ::: tip
-Read more on `register-service-worker.[js|ts]` and how to interact with the Service Worker on [Handling Service Worker](/quasar-cli-vite/developing-pwa/handling-service-worker) documentation page.
+阅读更多关于 `register-service-worker.[js|ts]` [的信息](/quasar-cli-vite/developing-pwa/handling-service-worker)。
 :::
 
 ## quasar.config.js
-This is the place where you can configure Workbox behavior and also tweak your manifest.json.
+在此可以配置 Workbox 的行为，也可以调整 manifest.json。
 
 ```js
 pwa: {
-  workboxMode: 'generateSW', // or 'injectManifest'
+  workboxMode: 'generateSW', // 或 'injectManifest'
   injectPwaMetaTags: true,
   swFilename: 'sw.js',
   manifestFilename: 'manifest.json',
@@ -50,7 +50,7 @@ sourceFiles: {
 }
 ```
 
-Should you want to tamper with the Vite config for UI in /src:
+您可能也希望修改 /src 中 UI 代码的 Vite 配置：
 
 ```js
 // quasar.config.js
@@ -59,7 +59,7 @@ module.exports = function (ctx) {
     build: {
       extendViteConf (viteConf) {
         if (ctx.mode.pwa) {
-          // do something with ViteConf
+          // 对 ViteConf 进行操作
         }
       }
     }
@@ -67,11 +67,11 @@ module.exports = function (ctx) {
 }
 ```
 
-More information: [Workbox](https://developers.google.com/web/tools/workbox).
+更多信息：[Workbox](https://developers.google.com/web/tools/workbox).
 
-## Adding your own meta tags in index.html
+## 在 index.html 中添加 meta 标签
 
-Quasar CLI adds (dynamically) some PWA oriented meta tags into your index.html. Should you wish to customize the tags, first disable this behavior in `/quasar.config.js`:
+Quasar CLI 会动态的在 index.html 中添加 PWA 相关的 meta 标签，如果希望自定义这些标签，首先，需要在 `/quasar.config.js` 中禁用此行为：
 
 ```js
 // quasar.config.js
@@ -80,7 +80,7 @@ pwa: {
 }
 ```
 
-Then, edit your `/index.html` file. The following are the actual meta tags that Quasar CLI injects dynamically:
+然后，编辑 `/index.html` 文件。下面是 Quasra CLI 会注入的标签：
 
 ```html
 <head>
@@ -101,14 +101,13 @@ Then, edit your `/index.html` file. The following are the actual meta tags that 
 
 </head>
 ```
+注意，可以通过 `pwaManifest` 访问 PWA 的 manifest.json。
 
-Notice that you have access to your PWA manifest through `pwaManifest` above.
+## 选择 Workbox 模式
 
-## Picking Workbox mode
+Workbox 有两种选项：**generateSW** （默认）和 **injectManifest**。
 
-There are two Workbox operating modes: **generateSW** (default) and **injectManifest**.
-
-Setting the mode that you want to use is done through quasar.config.js:
+通过 quasar.config.js 设置您想要的模式：
 
 ```js
 // quasar.config.js
@@ -116,59 +115,62 @@ Setting the mode that you want to use is done through quasar.config.js:
 pwa: {
   workboxMode: 'generateSW',
   extendGenerateSWOptions (cfg) {
-    // configure workbox on generateSW
+    // 调整 generateSW 模式下的配置
   }
 }
 
 pwa: {
   workboxMode: 'injectManifest',
   extendInjectManifestOptions (cfg) {
-    // configure workbox on injectManifest
+    // 调整 injectManifest 模式下的配置
   }
 }
 ```
 
 ### generateSW
 
-When to use generateSW:
+何时使用 generateSW：
 
-* You want to precache files.
-* You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
+* 您希望预缓存文件。
+* 您有简单的运行时配置需求（例如：该配置允许您定义路由和策略）。
 
-When NOT to use generateSW:
+何时不使用 generateSW：
 
-* You want to use other Service Worker features (i.e. Web Push).
-* You want to import additional scripts or add additional logic.
+* 您希望使用其他的 Service Worker 特性（例如 web 推送）。
+* 您希望导入其他脚本或添加其他逻辑。
 
 ::: tip
-Please check the available workboxOptions for this mode on [Workbox website](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
+关于此模式有哪些可用 workboxOptions，请参考 [Workbox 网站](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW)。
 :::
 
 ### InjectManifest
 
-When to use InjectManifest:
+何时使用 InjectManifest:
 
-* You want more control over your service worker.
-* You want to precache files.
-* You have more complex needs in terms of routing.
-* You would like to use your service worker with other APIs (e.g. Web Push).
+* 您希望对 service worker 有更多控制权。
+* 您希望预缓存文件。
+* 在路由方面，您有更复杂的需求。
+* 您希望使用其他的 Service Worker 特性（例如 web 推送）。
 
-When NOT to use InjectManifest:
+何时不使用 InjectManifest:
 
-* You want the easiest path to adding a service worker to your site.
+* 您希望以最简单的方式将 service worker 添加到您的站点。
 
-::: tip TIPS
-* If you want to use this mode, you will have to write the service worker (`/src-pwa/custom-service-worker.[js|ts]`) file by yourself.
-* Please check the available workboxOptions for this mode on [Workbox website](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).
+
+::: tip 提示
+* 如果使用此模式，需要自行编写 service worker 文件（`/src-pwa/custom-service-worker.[js|ts]`）。
+* 关于此模式有哪些可用 workboxOptions，请参考 [Workbox 网站](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest)。
 :::
 
-The following snippet is the default code for a custom service worker (`/src-pwa/custom-service-worker.[js|ts]`) which mimics the behavior of `generateSW` mode:
+下面的代码片段是自定义 service worker（`/src-pwa/custom-service-worker.[js|ts]`）的默认代码，它模仿 `generateSW` 模式的行为：
+
 
 ```js
 /*
- * This file (which will be your service worker)
- * is picked up by the build system ONLY if
- * quasar.config.js > pwa > workboxMode is set to "injectManifest"
+ * 此文件只有当
+ * quasar.config.js > pwa > workboxMode 被设置为 "injectManifest"
+ * 时才会被构建系统启用
+ * （作为您的 service-worker）
  */
 
 import { clientsClaim } from 'workbox-core'
@@ -178,13 +180,13 @@ import { registerRoute, NavigationRoute } from 'workbox-routing'
 self.skipWaiting()
 clientsClaim()
 
-// Use with precache injection
+// 与预缓存注入一起使用
 precacheAndRoute(self.__WB_MANIFEST)
 
 cleanupOutdatedCaches()
 
-// Non-SSR fallback to index.html
-// Production SSR fallback to offline.html (except for dev)
+// 非 SSR 回退到 index.html
+// 生产环境下 SSR 回退到 offline.html
 if (process.env.MODE !== 'ssr' || process.env.PROD) {
   registerRoute(
     new NavigationRoute(
@@ -196,40 +198,41 @@ if (process.env.MODE !== 'ssr' || process.env.PROD) {
 
 ```
 
-## Configuring Manifest File
-The Manifest file is located at `/src-pwa/manifest.json`. You can freely edit it.
+## 配置 Manifest 文件
+Manifest 文件位于 `/src-pwa/manifest.json`，您可以自由编辑它。
 
-Should you need to change it dynamically at build time, you can do so by editing `/quasar.config.js`:
+也可以通过 `/quasar.config.js` 实现在构建时动态的修改它：
 
 ```js
 // quasar.config.js
 pwa: {
   extendManifestJson (json) {
-    // tamper with the json
+    // 修改 json 内容
   }
 }
 ```
 
-Please read about the [manifest config](https://developer.mozilla.org/en-US/docs/Web/Manifest) before diving in.
+请在开始之前阅读 [manifest 配置](https://developer.mozilla.org/en-US/docs/Web/Manifest)。
 
 ::: warning
-Note that you don't need to edit your index.html file (generated from `/index.html`) to link to the manifest file. Quasar CLI takes care of embedding the right things for you.
+不需要编辑 `/index.html` 文件来链接 manifest 文件。 Quasar CLI 会帮您处理好这些事情。
 ::::
 
 ::: tip
-If your PWA is behind basic auth or requires an Authorization header, set quasar.config.js > pwa > useCredentialsForManifestTag to `true` to include `crossorigin="use-credentials"` on the manifest.json meta tag.
+如果您的 PWA 需要认证或者需要一个 Authorization 请求头，请将 quasar.config.js > pwa > useCredentialsForManifestTag 设置为 `true`，以便在 manifest.json 相关的 meta 标签中包括 `crossorigin="use-credentials"`。
 ::::
 
 ## PWA Checklist
-More info: [PWA Checklist](https://web.dev/pwa-checklist/)
+更多信息： [PWA Checklist](https://web.dev/pwa-checklist/)
 
 ::: danger
-Do not run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) on your development build because at this stage the code is intentionally not optimized and contains embedded source maps (among many other things). See the [Testing and Auditing](/quasar-cli-vite/testing-and-auditing) section of these docs for more information.
+不要在开发构建中运行 [Lighthouse](https://developers.google.com/web/tools/lighthouse/)，因为在这个阶段，代码没有进行优化，并嵌入了源代码映射（以及其他许多内容）。
+更多信息请前往[集成测试](/quasar-cli-vite/testing-and-auditing)页面。
 :::
 
-## Reload & Update Automatically
+## 重新加载 & 自动更新
 
-For those who don't want to manually reload the page when the service worker is updated **and are using the default generateSW workbox mode**, Quasar CLI has configured Workbox to activate it at once. Should you need to disable this behavior:
+**如果使用默认的 generateSW  模式**，Quasar CLI 已经配置了重新加载的逻辑，如果您不想在 service worker 更新时手动重新加载页面，那么您需要禁用此行为：
 
 ```js
 // quasar.config.js
