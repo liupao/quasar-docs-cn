@@ -15,6 +15,7 @@ desc: (@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的�
 :::
 
 通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步[Icon Genie CLI](/icongenie/command-list)页面。
+
 ```bash
 # SSR only:
 $ icongenie generate -m ssr -i /path/to/source/icon.png
