@@ -1,6 +1,6 @@
 ---
-title: PWA with Typescript
-desc: (@quasar/app-vite) How to use Typescript with Quasar PWA
+title: PWA 与 Typescript
+desc: (@quasar/app-vite) 如何在 Quasar PWA 中使用 Typescript。
 ---
 
-In order to support PWA with Typescript, you will need to rename the extension for your files in /src-pwa from `.js` to `.ts` and make the necessary TS code changes.
+为了给 Electron 支持 TypeScript，您需要将 //src-pwa 目录下的 `.js` 文件改为 `.ts` 文件，并做一些必要的 TS 代码修改。
