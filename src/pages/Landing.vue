@@ -17,14 +17,17 @@
           <div class="q-mt-lg text-grey-6 text-center">
             本中文网站持续翻译中,信息来自：
             <a target="_blank"
-              class="text-bold text-no-wrap" href="https://quasar.dev">英文官网</a>。
-            如果想了解翻译进度，或者参与翻译，请访问 <a target="_blank" class="text-bold text-no-wrap"
+              class="doc-link text-no-wrap" href="https://quasar.dev">英文官网</a>。
+            如果想了解翻译进度，或者参与翻译，请访问
+            <a target="_blank" class="doc-link text-no-wrap"
               href="https://github.com/dongwa/quasar-docs-cn">仓库地址</a>。
-            另外，我的B站账号中有 <a target="_blank" class="text-bold text-no-wrap"
-              href="https://www.bilibili.com/video/BV1pA4y197Zc">quasar 的视频教程</a>欢迎观看👏
+            另外，我的B站账号中有
+            <a target="_blank" class="doc-link text-no-wrap"
+              href="https://www.bilibili.com/video/BV1pA4y197Zc">quasar 的视频教程</a>，欢迎观看👏
             </div>
             <div class="q-mt-lg text-grey-6 flex text-center content-center">
-              目前，网站更新频繁，您每次访问时，可以<a href="javascript:void 0"  @click="reload" class="text-bold text-no-wrap">清除缓存</a>以防遗漏更新。
+              目前，网站更新频繁，您每次访问时，可以
+              <a class="doc-link text-no-wrap" href="javascript:void 0"  @click="reload" >清除缓存</a>以防遗漏更新。
             </div>
         </div>
       </div>
