@@ -1,25 +1,25 @@
 ---
-title: SPA Build Commands
-desc: (@quasar/app-vite) The Quasar CLI list of commands when developing or building a single page application.
+title: SPA 打包命令
+desc: (@quasar/app-vite) Quasar CLI 开发和打包单页应用的命令列表。
 ---
 
-Developing:
+开发：
 
 ```bash
 $ quasar dev
 ```
 
-Building for Production:
+打包生成环境：
 
 ```bash
 $ quasar build
 ```
 
-If you want a production build with debugging enabled:
+打包生成环境并开启调试模式：
 
 ```bash
 $ quasar build -d
 
-# ..or the longer form
+# 或者更长的格式：
 $ quasar build --debug
 ```
