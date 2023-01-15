@@ -13,7 +13,7 @@ desc: (@quasar/app-vite) 如何配置 Quasar 渐进式 Web 应用（PWA）的图
 我们强烈推荐使用[Icon Genie CLI](/icongenie/introduction)，您可以提供一个资源图标，使用它帮您生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到您的/index.html 文件中。
 :::
 
-通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步[Icon Genie CLI](/icongenie/command-list)页面。
+通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步 [Icon Genie CLI](/icongenie/command-list) 页面。
 
 ```bash
 $ icongenie generate -m pwa -i /path/to/source/icon.png [-b /path/to/background.png]
@@ -52,7 +52,7 @@ public/
       apple-launch-2048x2732.png
 ```
 
-需要将以下代码添加到`/index.html`中来引用这些图标（注意，不是所有的文件都需要引用，因为 Quasar CLI 会自动注入其他 PWA 文件）：
+需要将以下代码添加到 `/index.html` 中来引用这些图标（注意，不是所有的文件都需要引用，因为 Quasar CLI 会自动注入其他 PWA 文件）：
 
 ```html
 <link rel="icon" type="image/ico" href="icons/favicon.ico">
