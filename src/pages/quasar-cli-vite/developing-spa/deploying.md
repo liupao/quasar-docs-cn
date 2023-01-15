@@ -1,32 +1,32 @@
 ---
-title: Deploying a SPA
-desc: (@quasar/app-webpack) How to publish a Single Page App built by Quasar CLI.
+title: 部署 SPA
+desc: (@quasar/app-webpack) 如何部署 Quasar CLI 打包出来的单页应用（SPA）。
 ---
 
-There exist many services that allow deploying applications with ease.
-To list all of them would not be possible so we will focus on the general deployment process and some specifics for common services.
+有许多服务可以轻松部署应用程序。将其全部列出是不可能的，因此我们将专注于一般部署过程和一些普通服务的细节。
 
-If your favorite deployment tool is missing feel free to create a pull request on GitHub to add it to the list.
+如果缺少您最喜欢的部署工具，请在 GitHub 上创建一个拉取请求，将其添加到列表中。
 
-## General deployment
 
-The first step in deploying your Quasar SPA is always to build a production-ready bundle of your files, which gets rid of development statements and minifies your source.
+## 通用部署
 
-To produce such a build use Quasar CLI with the following command:
+部署 Quasar SPA 的第一步总是打包一个用于生产环境的构建产物，这样可以去掉开发语句并缩小源代码。
+
+要生成这样的构建产物，请使用 Quasar CLI 和以下命令：
 
 ```bash
 $ quasar build
 ```
 
-This command will build your project in SPA mode and output your production ready bundle to a newly created folder `/dist/spa`.
+该命令会以 SPA 模式打包项目，构建产物默认输出在 `/dist/spa` 目录下。
 
-To serve your production files it is *required* to use a web server, so to serve over http(s):// protocol. Simply opening the `index.html` file from within your browser will not work, since this uses the file:// protocol instead.
+要为生产环境下的构建产物提供服务，需要使用一个 web 服务器，以便通过 http(s):// 协议提供服务。简单地从浏览器中打开 `index.html` 文件是行不通的，因为它使用的是 file:// 协议。
 
-Common choices for web servers are [nginx](https://www.nginx.com/), [Caddy](https://caddyserver.com/), [Apache](https://httpd.apache.org/), [Express](https://expressjs.com/); but you should be able to use whatever web server you want.
+常用的 web 服务器有 [nginx](https://www.nginx.com/), [Caddy](https://caddyserver.com/), [Apache](https://httpd.apache.org/), [Express](https://expressjs.com/) 等。但是您可以选择任何您想要的 web 服务器。
 
-The web server requires no special setup (unless you built with Vue Router in "history" mode in `quasar.config.js`). The main requirement is to be able to serve static files from a directory, so consult the documentation of your web server on how to set up static file serving.
+该 web 服务器不需要特殊设置（除非您在 `quasar.config.js` 中配置了使用 "history" 模式的 Vue 路由）。主要要求是能够从一个目录中提供静态文件，因此请查阅 web 服务器的文档，了解如何设置静态文件服务。
 
-An example config for nginx may look like this:
+拿 nginx 举例：
 
 ```
 server {
@@ -58,13 +58,13 @@ server {
 }
 ```
 
-## Important Hosting Configuration
+## 重要的部署机器配置
 
-It's important that you do not allow browsers to cache the `index.html` file. Because otherwise updates to this file or to your app might slip through the cracks for browsers that load the index.html from cache.
+有一点很重要，不要允许浏览器缓存 `index.html` 文件，应用的更新可能因为浏览器从缓存中加载 `index.html` 而被忽略。
 
-This is why you must always make sure to add `"Cache-Control": "no-cache"` to the headers of the `index.html` file via your hosting service.
+所以在部署的主机上，必须为 `index.html` 文件添加 `"Cache-Control": "no-cache"` 响应头。
 
-As an example how this is done for Google Firebase, you would add the following to the `firebase.json` configuration:
+例如，使用 Google Firebase 部署时，需要在 `firebase.json` 中添加如下配置：
 
 ```json
 {
@@ -93,29 +93,30 @@ As an example how this is done for Google Firebase, you would add the following 
 }
 ```
 
-## Deploying with Vercel
-Deploying your Quasar application with [Vercel](https://vercel.com/) is really easy.
-All you have to do is to download the [vercel-cli](https://vercel.com/download#now-cli) and log in by running:
+## 使用 Vercel 部署
+部署 Quasar 单页应用到 [Vercel](https://vercel.com/) 非常简单。只需要安装 [vercel-cli](https://vercel.com/download#now-cli) 然后登陆：
 ```bash
 $ vercel login
 ```
 
-Then proceed to build your Quasar application using the steps described in "General deployment" section.
+然后继续使用<a class="doc-link" href='#通用部署'>通用部署</a>部分中描述的步骤来打包您的 Quasar 应用程序。
 
-After the build is finished, change directory into your deploy root (example: `/dist/spa`) and run:
+打包成功后，进入部署根目录中（例如：`/dist/spa`），然后运行：
 ```bash
 # from /dist/spa (or your distDir)
 $ vercel
 ```
 
-The Vercel CLI should now display information regarding your deployment, like the URL. That's it. You're done.
+Vercel CLI 现在应该显示相关部署的信息，如 URL。就这样，已经成功了。
 
-### Vercel configuration tips
-You should consider adding some additional configurations to your project.
+### Vercel 配置
 
-* Important: Vercel expects the build results to be in `/public` directory, and _Quasar_ has it in `/dist/spa` by default, so you will need to override the `Output Directory` in your Vercel project. Set it to `dist/spa` through the Vercel web ui under your project's settings > Build & Development Settings.
+在部署时给项目添加一些配置。
 
-* Since Vercel expects the _build_ script to be defined, you may add in `package.json` the following scripts:
+* 重要：Vercel 希望构建产物位于 `/public` 目录，但是 Quasar 的构建产物默认位于 `/dist/spa`。所以您可以在您的 Vercel 项目中将 `Output Directory` 设置为 `dist/spa`，访问 Vercel 的网页控制台，转到您的项目 > settings > Build & Development Settings。
+
+
+* 由于 Vercel 还期望一个打包脚本，可以在 `package.json` 中提供以下脚本：
 ```json
   {
     ..
@@ -127,7 +128,7 @@ You should consider adding some additional configurations to your project.
   }
 ```
 
-* In order to support SPA routing in the deployed app, consider adding `vercel.json` file in your root folder:
+* 为了在部署的应用程序中支持 SPA 路由，请考虑在根文件夹中添加 `vercel.json` 文件：
 ```json
 {
   "routes": [
@@ -136,18 +137,18 @@ You should consider adding some additional configurations to your project.
   ]
 }
 ```
-## Deploying with Heroku
+## 使用 Heroku 部署
 
-Unfortunately, Heroku does not support static sites out of the box. But don't worry, we just need to add an HTTP server to our project so Heroku can serve our Quasar application.
+不幸的是，Heroku 不支持开箱即用的静态站点。但是不用担心，只需要在项目中添加一个 HTTP 服务器，这样 Heroku 就可以为我们的 Quasar 应用程序提供服务了。
 
-In this example, we will use [Express](https://expressjs.com/) to create a minimal server which Heroku can use.
+在本例中，我们将使用 [Express](https://expressjs.com/)  创建 Heroku 可以使用的最小服务器
 
-First, we need to install the required dependencies to our project:
+首先，为项目安装所需的依赖项：project:
 ```bash
 $ yarn add express serve-static connect-history-api-fallback
 ```
 
-Now that we have installed the required dependencies, we can add our server. Create a file called `server.js` in the root directory of your project.
+然后添加服务器，在项目的根目录中创建一个名为 `server.js` 的文件。
 ```js
 const
   express = require('express'),
@@ -162,7 +163,7 @@ app.use(serveStatic(__dirname + '/dist/spa'))
 app.listen(port)
 ```
 
-Heroku assumes a set of npm scripts to be available, so we have to alter our `package.json` and add the following under the `script` section:
+Heroku 期望有一组 npm 脚本可用，因此需要修改 `package.json` 并在 `script` 部分下面添加以下内容:
 
 ```js
 "build": "quasar build",
@@ -170,13 +171,13 @@ Heroku assumes a set of npm scripts to be available, so we have to alter our `pa
 "heroku-postbuild": "yarn && yarn build"
 ```
 
-Now it is time to create an app on Heroku by running:
+现在是时候在 Heroku 上通过运行以下命令创建一个应用程序了:
 
 ```bash
 $ heroku create
 ```
 
-and deploy to Heroku using:
+并使用以下方法部署到 Heroku：
 
 ```bash
 $ git init
@@ -187,59 +188,60 @@ $ git commit -am "make it better"
 $ git push heroku master
 ```
 
-For existing Git repositories, simply add the heroku remote:
+对于现有的 Git 仓库，只需添加 heroku 远程:
 
 ```bash
 $ heroku git:remote -a <heroku app name>
 ```
 
-## Deploying with Surge
+## 使用 Surge 部署
 
-[Surge](https://surge.sh/) is a popular tool to host and deploy static sites.
+[Surge](https://surge.sh/) 是托管和部署静态站点的流行工具。
 
-If you want to deploy your application with Surge you first need to install the Surge CLI tool:
+如果要使用 Surge 部署应用程序，首先需要安装 Surge CLI 工具：
 
 ```bash
 $ npm install -g surge
 ```
 
-Next, we will use Quasar CLI to build our app:
+接下来，使用 Quasar CLI 构建应用程序：
 
 ```bash
 $ quasar build
 ```
 
-Now we can deploy our application using Surge by calling:
+通过调用以下命令使用 Surge 部署应用程序：
 
 ```bash
 $ surge dist/spa
 ```
+现在，您的应用程序应成功地使用 Surge 部署。您应该能够使本指南适应任何其他静态站点部署工具。
 
-Now your application should be successfully deployed using Surge. You should be able to adapt this guide to any other static site deployment tool.
+## 使用 GitHub Pages 部署
 
-## Deploying on GitHub Pages
+要将 Quasar 应用程序部署到 GitHub Pages，第一步是在 GitHub 上创建一个名为 `<username>.github.io` 的特殊仓库，并将此存储库克隆到本地。
 
-To deploy your Quasar application to GitHub pages the first step is to create a special repository on GitHub which is named `<username>.github.io`. Clone this repository to your local machine.
+接下来，像
+<a class="doc-link" href='#通用部署'>通用部署</a>
+中所描述的那样打包 Quasar 应用，构建产物将会在 `/dist/spa` 中。将此文件夹的内容复制到刚才克隆的仓库中。
 
-Next, you need to build your Quasar application like it is described in the "General deployment section". This will result in a `/dist/spa` directory. Copy the content of this folder to your cloned repository.
+最后一步是在该仓库中添加提交并推送到 GitHub。不久之后，应该就可以访问 `https://<username>.github.io/` 上的 Quasar 应用程序。
 
-The last step is to add a commit in your repository and push to GitHub. After a short time, you should be able to visit your Quasar application at `https://<username>.github.io/`.
+### 给 GitHub pages 添加一个自定义域名
 
-### Adding a custom domain to GitHub pages
+有关如何设置自定义域的详细说明，请参阅 [GitHub 页面指南](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)。
 
-Please see the [GitHub pages guides](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for an in-depth explanation on how to set up a custom domain.
+### 通过 push-dir 自动部署到 GitHub pages
 
-### Automated deployment to GitHub pages with push-dir
+手动将所有文件复制到 GitHub Pages 仓库可能是一项繁琐的任务。使用 [push-dir](https://github.com/L33T-KR3W/push-dir) 包可以自动执行此步骤。
 
-Manual copying all your files to your GitHub Pages repository can be a cumbersome task to do. This step can be automated by using the [push-dir](https://github.com/L33T-KR3W/push-dir) package.
-
-First, install the package with:
+第一步，安装：
 
 ```js
 $ yarn add --dev push-dir
 ```
 
-Then add a `deploy` script command to your `package.json`:
+然后在 `package.json` 添加一个 `deploy` 脚本：
 
 ```json
 "scripts": {
@@ -247,17 +249,17 @@ Then add a `deploy` script command to your `package.json`:
 }
 ```
 
-Add your GitHub Pages repository as a remote named `gh-pages`:
+添加您的 GitHub Pages 仓库作为一个远程仓库，命名为 `gh-pages`：
 
 ```bash
 $ git remote add gh-pages git@github.com:<username>/<username>.github.io.git
 ```
 
-Now you can build and deploy your application using:
+现在，您可以使用以下方法构建和部署应用程序：
 
 ```bash
 $ quasar build
 $ yarn deploy
 ```
 
-which will push the content of your build directory to your master branch on your GitHub Pages repository.
+它将把构建目录的内容推送到 GitHub Pages 仓库的主分支。
