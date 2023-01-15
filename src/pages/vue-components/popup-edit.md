@@ -1,6 +1,6 @@
 ---
 title: 弹出编辑
-desc: QPopupEdit 是一个可用于“就地”编辑值，例如 QTable 中的单元格的Vue组件。
+desc: QPopupEdit 是一个可用于“就地”编辑值，例如 QTable 中的单元格的Vue 组件。
 keys: QPopupEdit
 related:
   - /vue-components/input

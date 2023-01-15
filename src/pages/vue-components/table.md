@@ -1,6 +1,6 @@
 ---
 title: 表格
-desc: QTable 是一个可以以表格的形式展示数据的vue组件，通常被称为数据表。
+desc: QTable 是一个可以以表格的形式展示数据的Vue 组件，通常被称为数据表。
 keys: QTable,QTh,QTr,QTd
 related:
   - /vue-components/markup-table

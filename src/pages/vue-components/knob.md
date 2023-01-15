@@ -1,6 +1,6 @@
 ---
 title: 旋钮
-desc: QKnob是一个用于通过鼠标/触摸平移从用户那里输入数字的vue组件.
+desc: QKnob是一个用于通过鼠标/触摸平移从用户那里输入数字的Vue 组件.
 keys: QKnob
 related:
   - /vue-components/circular-progress

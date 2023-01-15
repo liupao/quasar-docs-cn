@@ -1,6 +1,6 @@
 ---
 title: 步进器
-desc: QStepper是一个步进器vue组件，它通过一系列逻辑和编号的步骤显示进度。它们也可用作导航。当用户需要按照步骤完成一个过程时，它很有用，例如一个向导。
+desc: QStepper是一个步进器Vue 组件，它通过一系列逻辑和编号的步骤显示进度。它们也可用作导航。当用户需要按照步骤完成一个过程时，它很有用，例如一个向导。
 keys: QStepper,QStep,QStepperNavigation
 related:
   - /options/transitions

@@ -12,7 +12,7 @@
       <link>https://www.quasar-cn.cn/</link>
       <guid>https://www.quasar-cn.cn/</guid>
       <author>null</author>
-      <description><![CDATA[基于vuejs的开源前端框架，高性能，内置丰富的css和vue组件库，响应式支持，一套代码可以编译出SPA，PWA，SSR，手机应用和桌面应用。明智的人选择vue，高产的人选择quasar+vue。]]></description>
+      <description><![CDATA[基于vuejs的开源前端框架，高性能，内置丰富的css和Vue 组件库，响应式支持，一套代码可以编译出SPA，PWA，SSR，手机应用和桌面应用。明智的人选择vue，高产的人选择quasar+vue。]]></description>
       <category></category>
     </item>
 
@@ -759,7 +759,7 @@
       <link>https://www.quasar-cn.cn/vue-components/file-picker</link>
       <guid>https://www.quasar-cn.cn/vue-components/file-picker</guid>
       <author>null</author>
-      <description><![CDATA[QFile是一个处理用户交互以选取文件的Vue组件。]]></description>
+      <description><![CDATA[QFile是一个处理用户交互以选取文件的Vue 组件。]]></description>
       <category></category>
     </item>
 
@@ -768,7 +768,7 @@
       <link>https://www.quasar-cn.cn/vue-components/form</link>
       <guid>https://www.quasar-cn.cn/vue-components/form</guid>
       <author>null</author>
-      <description><![CDATA[QForm Vue组件渲染一个表单元素，并提供简单的表单验证方式]]></description>
+      <description><![CDATA[QForm Vue 组件渲染一个表单元素，并提供简单的表单验证方式]]></description>
       <category></category>
     </item>
 
@@ -786,7 +786,7 @@
       <link>https://www.quasar-cn.cn/vue-components/radio</link>
       <guid>https://www.quasar-cn.cn/vue-components/radio</guid>
       <author>null</author>
-      <description><![CDATA[QRadio Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。]]></description>
+      <description><![CDATA[QRadio Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。]]></description>
       <category></category>
     </item>
 
@@ -804,7 +804,7 @@
       <link>https://www.quasar-cn.cn/vue-components/toggle</link>
       <guid>https://www.quasar-cn.cn/vue-components/toggle</guid>
       <author>null</author>
-      <description><![CDATA[QToggle Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。]]></description>
+      <description><![CDATA[QToggle Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。]]></description>
       <category></category>
     </item>
 
@@ -813,7 +813,7 @@
       <link>https://www.quasar-cn.cn/vue-components/button-toggle</link>
       <guid>https://www.quasar-cn.cn/vue-components/button-toggle</guid>
       <author>null</author>
-      <description><![CDATA[QBtnToggle vue组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。]]></description>
+      <description><![CDATA[QBtnToggle Vue 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。]]></description>
       <category></category>
     </item>
 

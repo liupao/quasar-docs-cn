@@ -1,6 +1,6 @@
 ---
 title: 文件选择器
-desc: QFile是一个处理用户交互以选取文件的Vue组件。
+desc: QFile是一个处理用户交互以选取文件的Vue 组件。
 keys: QFile
 related:
   - /vue-components/uploader

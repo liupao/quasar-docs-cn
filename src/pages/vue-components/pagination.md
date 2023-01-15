@@ -1,6 +1,6 @@
 ---
 title: 分页
-desc: QPagination是一个可以在页面中展示分页控件的Vue组件。
+desc: QPagination是一个可以在页面中展示分页控件的Vue 组件。
 keys: QPagination
 ---
 QPagination 组件可用于任何需要分页系统的地方。它为用户提供了一个简单的UI，用于在项目或页面之间移动。

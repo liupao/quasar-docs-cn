@@ -1,6 +1,6 @@
 ---
 title: 菜单
-desc: QMenu是一个方便展示菜单的vue组件。
+desc: QMenu是一个方便展示菜单的Vue 组件。
 keys: QMenu
 related:
   - /vue-directives/close-popup

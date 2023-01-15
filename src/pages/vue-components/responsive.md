@@ -1,6 +1,6 @@
 ---
 title: Responsive
-desc: QResponsive是一个vue组件，它强制内容根据其宽度保持纵横比。
+desc: QResponsive是一个Vue 组件，它强制内容根据其宽度保持纵横比。
 keys: QResponsive
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 下拉刷新
-desc: QPullToRefresh是一个可以让用户下拉屏幕以刷新页面或检索最新内容的vue组件。
+desc: QPullToRefresh是一个可以让用户下拉屏幕以刷新页面或检索最新内容的Vue 组件。
 keys: QPullToRefresh
 related:
   - /vue-components/infinite-scroll

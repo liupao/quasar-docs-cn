@@ -1,6 +1,6 @@
 ---
 title: 单选框
-desc: QRadio Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
+desc: QRadio Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。
 keys: QRadio
 related:
   - /vue-components/option-group

@@ -1,6 +1,6 @@
 ---
 title: Toggle
-desc: QToggle Vue组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。
+desc: QToggle Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。
 keys: QToggle
 related:
   - /vue-components/checkbox

@@ -1,6 +1,6 @@
 ---
 title: 滚动监听器
-desc: QScrollObserver是一个可以监听到用户滚动行为的Vue组件
+desc: QScrollObserver是一个可以监听到用户滚动行为的Vue 组件
 keys: QScrollObserver
 related:
   - /vue-components/resize-observer

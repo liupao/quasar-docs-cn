@@ -1,6 +1,6 @@
 ---
 title: 内部加载
-desc: QInnerLoading组件是一个可以在组件内添加进度动画的vue组件。
+desc: QInnerLoading组件是一个可以在组件内添加进度动画的Vue 组件。
 keys: QInnerLoading
 related:
   - /vue-components/linear-progress

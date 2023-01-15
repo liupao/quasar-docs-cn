@@ -1,6 +1,6 @@
 ---
 title: markup 表格
-desc: QMarkupTable是一个封装了原生表格，使其具有质感设计样式的vue组件。
+desc: QMarkupTable是一个封装了原生表格，使其具有质感设计样式的Vue 组件。
 keys: QMarkupTable
 related:
   - /vue-components/table

@@ -1,6 +1,6 @@
 ---
 title: Parallax 视差
-desc: QParallax是一个可以在页面中轻松实现视差滚动效果的Vue组件。
+desc: QParallax是一个可以在页面中轻松实现视差滚动效果的Vue 组件。
 keys: QParallax
 related:
   - /vue-components/video

@@ -1,6 +1,6 @@
 ---
 title: 元素大小变化侦听器
-desc: QResizeObserver是一个可以在监听到目标元素/组件的大小改变时触发一个事件的vue组件。
+desc: QResizeObserver是一个可以在监听到目标元素/组件的大小改变时触发一个事件的Vue 组件。
 keys: QResizeObserver
 related:
   - /vue-components/scroll-observer

@@ -1,6 +1,6 @@
 ---
 title: 骨架屏
-desc: QSkeleton是一个用于在加载实际页面数据之前显示占位符预览内容的vue组件。
+desc: QSkeleton是一个用于在加载实际页面数据之前显示占位符预览内容的Vue 组件。
 keys: QSkeleton
 related:
   - /vue-components/circular-progress

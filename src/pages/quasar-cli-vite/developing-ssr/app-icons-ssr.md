@@ -3,7 +3,7 @@ title: SSR 模式的应用图标
 desc: (@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的图标。
 ---
 
-为 SSR 模式生成用于各种浏览器和操作系统的特殊图标，构建出来的所有的图标都是有用的，如果您发现缺少了用于某个平台的图标，请 [提交一个 issue](https://github.com/quasarframework/quasar/issues)。
+为 SSR 模式生成用于各种浏览器和操作系统的特殊图标，构建出来的所有的图标都是有用的，如果您发现缺少了用于某个平台的图标，请[提交一个 issue](https://github.com/quasarframework/quasar/issues)。
 
 
 <img src="https://cdn.quasar.dev/img/iconfactory.png" style="float:right;max-width:15%;min-width:240px;padding-top:40px" />
@@ -11,10 +11,10 @@ desc: (@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的�
 ## Icon Genie CLI
 
 ::: tip 提示
-我们强烈推荐使用[Icon Genie CLI](/icongenie/introduction)，您可以提供一个资源图标，使用它帮您生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到您的/index.html 文件中。
+我们强烈推荐使用 [Icon Genie CLI](/icongenie/introduction)，您可以提供一个资源图标，使用它帮您生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到您的/index.html 文件中。
 :::
 
-通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步[Icon Genie CLI](/icongenie/command-list)页面。
+通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步 [Icon Genie CLI](/icongenie/command-list) 页面。
 
 ```bash
 # SSR only:

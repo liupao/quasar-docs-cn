@@ -1,6 +1,6 @@
 ---
 title: 表单
-desc: QForm Vue组件渲染一个表单元素，并提供简单的表单验证方式
+desc: QForm Vue 组件渲染一个表单元素，并提供简单的表单验证方式
 keys: QForm
 related:
   - /vue-components/input

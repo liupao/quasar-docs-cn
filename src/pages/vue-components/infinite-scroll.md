@@ -1,6 +1,6 @@
 ---
 title: 无限滚动
-desc: QInfiniteScroll是一个可以在用户滚动页面时加载新内容的Vue组件。
+desc: QInfiniteScroll是一个可以在用户滚动页面时加载新内容的Vue 组件。
 keys: QInfiniteScroll
 related:
   - /vue-components/spinners

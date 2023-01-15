@@ -1,6 +1,6 @@
 ---
 title: 滚动区域
-desc: QScrollArea是一个提供了定制滚动条的简便方法的vue组件。
+desc: QScrollArea是一个提供了定制滚动条的简便方法的Vue 组件。
 keys: QScrollArea
 related:
   - /layout/drawer

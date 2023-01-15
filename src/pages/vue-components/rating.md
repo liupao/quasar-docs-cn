@@ -1,6 +1,6 @@
 ---
 title: 评分组件
-desc: QRating是一个允许用户对项目进行评分的vue组件.
+desc: QRating是一个允许用户对项目进行评分的Vue 组件.
 keys: QRating
 ---
 

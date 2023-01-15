@@ -1,6 +1,6 @@
 ---
 title: 交叉
-desc: QIntersection是一个封装了Quasar的Intersection指令的vue组件。
+desc: QIntersection是一个封装了Quasar的Intersection指令的Vue 组件。
 keys: QIntersection
 related:
   - /vue-directives/intersection

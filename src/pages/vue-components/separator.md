@@ -1,6 +1,6 @@
 ---
 title: 分割条
-desc: QSeparator是一个用于分隔文本部分、其他组件等的vue组件。它在父级的容器上创建一条水平的或垂直的彩色分割线。
+desc: QSeparator是一个用于分隔文本部分、其他组件等的Vue 组件。它在父级的容器上创建一条水平的或垂直的彩色分割线。
 keys: QSeparator
 ---
 

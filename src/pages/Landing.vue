@@ -10,7 +10,7 @@
             <span class="text-bold text-no-wrap">Vue.js 3</span> 应用程序
           </div>
           <div class="landing__hero-row q-gutter-sm row items-center">
-            <q-btn color="brand-primary" unelevated no-caps to="/introduction-to-quasar" label="为何选择Quasar?"></q-btn>
+            <q-btn color="brand-primary" unelevated no-caps to="/introduction-to-quasar" label="为何选择 Quasar ？"></q-btn>
             <q-btn color="brand-primary" outline no-caps to="/start" label="Get Started"></q-btn>
             <q-btn color="accent" unelevated no-caps to="/video-tutorials" label="视频教程"></q-btn>
           </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="col-12 row">
           <div class="col-12 col-md-8 landing__features-section row text-left">
-            <div class="col-12 text-left text-subtitle1 text-bold q-mt-lg q-mb-md q-mx-xs">Vue组件</div>
+            <div class="col-12 text-left text-subtitle1 text-bold q-mt-lg q-mb-md q-mx-xs">Vue 组件</div>
             <router-link class="landing__features-link col-6 col-sm-4" v-for="entry in features.comps" :key="entry.name"
               :to="entry.path">{{ entry.name }}</router-link>
           </div>

@@ -1,6 +1,6 @@
 ---
 title: No SSR
-desc: QNoSsr是一个可以控制其内容只在SSR应用的客户端或服务端渲染的vue组件。
+desc: QNoSsr是一个可以控制其内容只在SSR应用的客户端或服务端渲染的Vue 组件。
 keys: QNoSsr
 related:
   - /quasar-cli-vite/developing-ssr/introduction
