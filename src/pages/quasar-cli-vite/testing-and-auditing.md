@@ -1,55 +1,63 @@
 ---
-title: Testing & Auditing
-desc: (@quasar/app-vite) How to unit and end to end test a Quasar app.
+title: 集成测试
+desc: (@quasar/app-vite) Quasar 应用如何进行单元测试和端到端测试。
 ---
 
-Your Quasar projects have the ability to add unit and e2e testing harnesses. This introduction will not go into details about how to write and use tests, for that please consult the specially prepared and maintained documentation at the [testing repo at GitHub](https://github.com/quasarframework/quasar-testing/tree/dev). If you are a beginner, consider reading one of the books in the "Further Reading" section.
+您可以为 Quasar 项目添加单元测试和端到端测试。本文不会详细介绍如何编写测试，对此请参考 [GitHub 上介绍测试的仓库](https://github.com/quasarframework/quasar-testing/tree/dev)。如果您是一个初学者，请考虑阅读下面
+<a class='doc-link' href='#扩展阅读'>扩展阅读</a>
+部分中推荐的书籍。
 
-## High level overview
+## 概述
 
-You can install multiple pre-rigged testing harnesses to your existing Quasar application by running a simple command. This command will pull and install a node module (with dependencies) into your project's `package.json`, place necessary configuration files as appropriate and if you so choose, it will also add script commands that expose some of the functionality of the respective harness. You can add multiple harnesses and even use them for your continuous integration pipelines - as appropriate.
+通过运行一个简单的命令，您可以为现有的 Quasar 项目安装多个预先装配好的测试套件。该命令会安装预先准备好的 node 模块并保存在 `package.json` 中，如果您选择了相关的配置，他还会生成合适的配置文件和命令脚本。您可以添加多个合适的测试套件，甚至将它们添加到持续集成流水线中。
 
-Testing is not in and of itself hard. The most complicated part is setting up the testing harness. The trick lies in knowing what to test. If you are new to testing, it is absolutely imperative that you familiarize yourself with some of the concepts and patterns. There are some links for further reading at the end of this document page.
+测试本身并不难，最复杂的部分是配置测试套件。技巧在于知道要测试什么。如果您是测试的新手，那么熟悉一些概念和模式是绝对必要的。在本文档页面的末尾有一些可以进一步阅读的
+<a class='doc-link' href='#扩展阅读'>链接</a>。
 
-## Testing documentation
 
-You can find the documentation of testing AEs at https://testing.quasar.dev or into [`dev` branch](https://github.com/quasarframework/quasar-testing/tree/dev) of quasar-testing repo.
+## 测试文档
 
-You can find the documentation of testing AEs compatible with Quasar v1 into [`qv1` branch](https://github.com/quasarframework/quasar-testing/tree/qv1) of quasar-testing repo.
+可以在
+<a class='doc-link' href='https://testing.quasar.dev'>https://testing.quasar.dev</a>
+或 [quasar-testing 仓库的 `dev` 分支](https://github.com/quasarframework/quasar-testing/tree/dev) 中找到 AE 测试文档。
 
-<q-btn color="brand-primary" label="Testing AEs documentation" icon-right="launch" no-caps href="https://testing.quasar.dev" target="_blank" />
+可以在 [quasar-testing 仓库的 `qv1` 分支](https://github.com/quasarframework/quasar-testing/tree/qv1)
+中找到兼容 Quasar v1 版本的 AE 测试文档。
 
-## Installing
+<q-btn color="brand-primary" label="AE 测试文档" icon-right="launch" no-caps href="https://testing.quasar.dev" target="_blank" />
+
+## 安装
 
 ```bash
 $ cd your-quasar-project
 $ quasar ext add @quasar/testing
 ```
 
-The lightweight extension installer will ask you which testing harnesses you want to install. Then it will install the respective extensions for these harnesses, which you can configure as you like. It is how multiple testing harnesses are ideally managed within a Quasar project.
+轻量级扩展安装程序将询问您要安装哪些测试套件。然后，它将为这些工具安装各自的扩展，您可以根据自己的喜好对它们进行配置。这就是如何在 Quasar 项目中理想地管理多个测试套件的方法。
 
-It will provide you with a new `quasar run` command that you can use to execute test-runners - and even your HMR dev environment at the same time. This approach can, for example, be quite helpful if you need to pass quasar.ctx to the test runner...
+它将为您提供一个新的 `quasar run` 命令，您可以使用它来执行测试运行程序，甚至可以与 HMR 开发环境同时运行。例如，如果您需要将 quasar.ctx 传递给测试程序，这种方法会非常有用…
+
 
 ```bash
-# Example to run jest && dev server in pwa mode
+# 示例：在 pwa 模式下同时运行 jest && dev server
 $ quasar test --unit jest --dev="-m pwa"
 ```
 
-If you ever need to review your choices you can take a look at `quasar.extensions.json`.
+如果需要回顾一下安装时的选项，可以查看 `quasar.extsions.json` 文件。
 
-If you don't want to install the helper package, you don't have to do so. You can install each test harness app extension individually. They are completely standalone, but you won't have the `quasar test` command functionality.
+如果您不想安装 @quasar/testing，那么也可以直接手动安装每个测试套件，它们是完全相互独立的，但是这样就不会拥有 `quasar test` 命令了。
 
-## Further Reading
+## 扩展阅读
 
-### Books
-- [Testing Vue.js Applications](https://www.manning.com/books/testing-vue-js-applications) by Edd Yerburgh, the author of the `@vue/test-utils` repo
-- [Free Vue Testing Handbook](https://lmiller1990.github.io/vue-testing-handbook/)
+### 书籍
+- [测试 Vue.js 应用](https://www.manning.com/books/testing-vue-js-applications)，作者 Yerburgh，也是 `@vue/test-utils` 仓库的作者。
+- [免费 Vue 测试手册](https://lmiller1990.github.io/vue-testing-handbook/)
 
-### Tutorials
-- [Unit Testing Vue Router with Jest](https://medium.com/js-dojo/unit-testing-vue-router-1d091241312)
-- ... add your suggestions here
+### 教程
+- [使用 Jest 对 Vue Router 进行单元测试](https://medium.com/js-dojo/unit-testing-vue-router-1d091241312)
+- ... 在此添加您的推荐
 
-### Documentation
+### 文档
 - [@vue/test-utils](https://test-utils.vuejs.org)
 - [jest 24](https://facebook.github.io/jest/)
 - [cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Cypress-Is-Simple)
