@@ -6,7 +6,6 @@
         <div class="landing__hero-logo col-12 flex flex-center q-mb-lg"><img class="landing__logo-image"
             src="https://cdn.quasar.dev/logo-v2/svg/logo-vertical.svg"></div>
         <div class="landing__hero-text col-12 column items-center">
-          <!--  .text-h4.landing__hero-text-main.text-bold.text-brand-primary.q-pb-xs QUASAR FRAMEWORK -->
           <div class="q-pb-lg text-grey-6 landing__hero-quote text-center">帮助您在短时间内快速构建高性能，高质量的
             <span class="text-bold text-no-wrap">Vue.js 3</span> 应用程序
           </div>
@@ -15,28 +14,21 @@
             <q-btn color="brand-primary" outline no-caps to="/start" label="Get Started"></q-btn>
             <q-btn color="accent" unelevated no-caps to="/video-tutorials" label="视频教程"></q-btn>
           </div>
-          <div class="q-pb-lg text-grey-6 landing__hero-quote text-center">本中文网站持续翻译中,信息来自：<a target="_blank"
+          <div class="q-mt-lg text-grey-6 text-center">
+            本中文网站持续翻译中,信息来自：
+            <a target="_blank"
               class="text-bold text-no-wrap" href="https://quasar.dev">英文官网</a>。
             如果想了解翻译进度，或者参与翻译，请访问 <a target="_blank" class="text-bold text-no-wrap"
               href="https://github.com/dongwa/quasar-docs-cn">仓库地址</a>。
             另外，我的B站账号中有 <a target="_blank" class="text-bold text-no-wrap"
-              href="https://www.bilibili.com/video/BV1pA4y197Zc">quasar 的视频教程</a>欢迎观看👏</div>
+              href="https://www.bilibili.com/video/BV1pA4y197Zc">quasar 的视频教程</a>欢迎观看👏
+            </div>
+            <div class="q-mt-lg text-grey-6 flex text-center content-center">
+              目前，网站更新频繁，您每次访问时，可以<a href="javascript:void 0"  @click="reload" class="text-bold text-no-wrap">清除缓存</a>以防遗漏更新。
+            </div>
         </div>
       </div>
     </section>
-    <!-- <section class="landing__front text-center">
-      <div>
-        <div class="row justify-center">
-          <introduction-video class="landing__video"></introduction-video>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="bg-white text-grey-10 text-center">
-      <div>
-        <div class="text-h4 q-mb-xl">我们的高级赞助商</div>
-        <sponsor-list></sponsor-list>
-      </div>
-    </section> -->
     <section class="bg-white text-grey-10 text-center row justify-center">
       <div class="landing__features row">
         <div class="col-12 text-center">
@@ -148,11 +140,6 @@
 <script>
 import { useMeta } from 'quasar'
 
-// import Sponsor from 'components/page-parts/sponsors-and-backers/Sponsor.vue'
-// import SponsorList from 'components/page-parts/sponsors-and-backers/SponsorList.vue'
-// import IntroductionVideo from 'components/page-parts/introduction-to-quasar/IntroductionVideo.vue'
-// import SurveyCountdown from '../components/SurveyCountdown.vue'
-
 import {
   fabGithub,
   fabTwitter,
@@ -183,13 +170,6 @@ import features from 'assets/features.js'
 export default {
   name: 'Landing',
 
-  components: {
-    // Sponsor,
-    // SponsorList,
-    // SurveyCountdown,
-    // IntroductionVideo
-  },
-
   setup () {
     useMeta({
       title: 'Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档',
@@ -199,7 +179,12 @@ export default {
     const $store = useDocStore()
     $store.toc = []
 
+    function reload () {
+      window.location.reload()
+    }
+
     return {
+      reload,
       year: new Date().getFullYear(),
       features,
 
