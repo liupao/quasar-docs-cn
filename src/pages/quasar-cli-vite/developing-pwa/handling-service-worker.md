@@ -77,7 +77,7 @@ devServer: {
 
 ## 重要的部署主机配置
 
-不允许浏览器缓存 Service Worker 文件（默认为 `sw.js` ），这一点很重要。否则，应用的更新可能因为浏览器从缓存中加载 service-worker 而被忽略。
+有一点很重要，不要允许浏览器缓存 Service Worker 文件（默认为 `sw.js` ），否则，应用的更新可能因为浏览器从缓存中加载 service-worker 而被忽略。
 
 所以在部署的主机上，必须为 `sw.js` 文件添加 `"Cache-Control": "no-cache"` 响应头。
 
