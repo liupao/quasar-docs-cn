@@ -1,49 +1,49 @@
 ---
-title: Opening Your Dev Server to the Public
-desc: (@quasar/app-vite) How to offer temporary access to your development server to anyone on the Internet.
+title: 向公众开放开发服务器
+desc: (@quasar/app-vite) 如何向因特网上的任何人提供对开发服务器的临时访问。
 ---
-At some point you may want to show someone else the project you've been working on. Fortunately, there are a couple of good tools to accomplish this, [localhost.run](https://localhost.run/) and [Ngrok](https://ngrok.com/). Both create a tunnel to your dev server and (by default) auto-generate an internet address on their respective servers to offer to your clients or anyone special you'd like to show your work to.
 
-::: warning
-Opening your dev server to the public poses security risks. Be absolutely cautious when using tools like this.
+在某些时候，可能需要向其他人展示正在进行的项目。有几个很不错的工具可以做到这一点，[localhost.run](https://localhost.run/) 和 [Ngrok](https://ngrok.com/)。两者都为您的开发服务器创建隧道，并且（默认情况下）在其各自的服务器上自动生成一个因特网地址，以提供给您的客户。
 
-When you've finished with your demonstration or testing, make sure to stop localhost.run or ngrok. This will prevent any unwanted access of your computer through them.
+::: warning 警告
+向公众开放开发服务器会带来安全风险。 使用这样的工具时要绝对小心。
+
+完成演示或测试后，请确保停止 localhost.run 或 ngrok。防止别人通过它们对您的计算机进行任何不必要的访问
 :::
 
-## Using localhost.run (easiest)
+## 使用 localhost.run （最简单）
 
-1. Assuming you have an SSH shell, you only need issue the following command (substituting your details)
+1. 假设您有一个SSH shell，您只需要运行以下命令（替换您的详细信息）
 ``` bash
 $ ssh -R 80:localhost:8080 ssh.localhost.run
-# In case your development server doesn't run on port 8080 you need to change the number to the correct port
+# 如果您的开发服务器不在端口 8080 上运行，则需要将数字更改为正确的端口
 ```
 
-2. That's it, and you will now have a random subdomain based on your current system username assigned to you like so:
+2. 就这样，现在您将有一个基于当前系统用户名分配给您的随机子域，如下所示：
 ``` bash
 $ ssh -R 80:localhost:8080 ssh.localhost.run
 Connect to http://fakeusername-random4chars.localhost.run or https://fakeusername-random4chars.localhost.run
 Press ctrl-c to quit.
 ```
 
-It's not currently possible to request your own subdomain.
+当前无法请求自己的子域。
 
-## Using Ngrok
+## 使用 Ngrok
 
-1. Download and install ngrok [here](https://ngrok.com/download).
-(Please note that the ngrok executable file does not need to be placed in or run from inside your cordova folder. When on a mac it's best to place the ngrok executable file inside `/usr/local/bin` to be able to run it globally.)
+1. 下载并安装 ngrok [here](https://ngrok.com/download)。（请注意，ngrok 可执行文件不需要放在 cordova 文件夹中或从中运行。在 mac 上，最好将 ngok 可执行文件放在 `/usr/local/bin` 中，以便能够全局运行它。）
 
-2. Start your Dev server
+2. 启动开发服务器
 ``` bash
 $ quasar dev
 ```
 
-3. Create your ngrok connection
+3. 创建 ngrok 连接
 ``` bash
 $ ngrok http 8080
-# In case your development server doesn't run on port 8080 you need to change the number to the correct port
+# 如果您的开发服务器不在端口 8080 上运行，则需要将数字更改为正确的端口
 ```
 
-4. ngrok shows the url in the command line when it started.
+4. 当启动成功后，ngrok 会在命令行中显示 url。
 ``` bash
 Tunnel Status                 online
 Version                       2.0/2.0
@@ -54,10 +54,10 @@ Forwarding                    https://92832de0.ngrok.io -> localhost:8080
 Connections                  ttl     opn     rt1     rt5     p50     p90
                               0       0       0.00    0.00    0.00    0.00
 ```
-Please be careful as the 'Forwarding' URL will be accessible to anyone until this connection is closed again.
+请小心注意，在关闭此连接之前，任何人都可以访问或“转发” URL。
 
-### Inspecting traffic
+### 检查流量
 
-When running ngrok, visit `http://localhost:4040` to inspect the traffic.
+当运行 ngrok 时，访问 `http://localhost:4040` 可检查访问流量。
 
-This tool allows for custom domains, password protection and a lot more. If you require further assistance, please refer to the [ngrok docs](https://ngrok.com/docs) for more information.
+该工具允许自定义域、密码保护等。如果您需要进一步的帮助，请参阅 [ngrok 文档](https://ngrok.com/docs)以获取更多信息。
