@@ -6,7 +6,7 @@ related:
 ---
 
 
-我们将利用 Quasar CLI 开发和构建 PWA 网站。构建 SPA、Mobile App、Electron App、PWA 或 SSR 之间的区别仅仅是由`quasar dev`和`quasar build` 命令中的`mode`参数决定的。
+我们将利用 Quasar CLI 开发和构建 PWA 网站。构建 SPA、Mobile App、Electron App、PWA 或 SSR 之间的区别仅仅是由 `quasar dev` 和`quasar build` 命令中的 `mode` 参数决定的。
 
 为了开发或建立一个 PWA 网站，我们首先需要将 PWA 模式添加到我们的 Quasar 项目中:
 
