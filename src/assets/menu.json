@@ -851,7 +851,7 @@
             "path": "app-icons-spa"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -925,7 +925,7 @@
             "path": "ssr-frequently-asked-questions"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -951,7 +951,7 @@
             "path": "preparation"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1009,7 +1009,7 @@
             "path": "capacitor-api"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1051,7 +1051,7 @@
             "path": "cordova-plugins"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1093,7 +1093,7 @@
             "path": "app-icons-electron"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1147,7 +1147,7 @@
             "path": "app-icons-browser-extension"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1276,7 +1276,7 @@
             "path": "app-icons-spa"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1355,7 +1355,7 @@
             "path": "ssr-frequently-asked-questions"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1382,7 +1382,7 @@
             "path": "preparation"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1441,7 +1441,7 @@
             "path": "capacitor-api"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1483,7 +1483,7 @@
             "path": "cordova-plugins"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1526,7 +1526,7 @@
             "path": "app-icons-electron"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {
@@ -1580,7 +1580,7 @@
             "path": "app-icons-browser-extension"
           },
           {
-            "name": "构建命令",
+            "name": "打包命令",
             "path": "build-commands"
           },
           {

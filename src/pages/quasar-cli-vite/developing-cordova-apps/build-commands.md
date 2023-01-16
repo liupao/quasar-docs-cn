@@ -1,5 +1,5 @@
 ---
-title: 移动应用构建命令
+title: 移动应用打包命令
 desc: (@quasar/app-vite) Quasar CLI 开发 Cordova 混合应用的命令列表。
 ---
 

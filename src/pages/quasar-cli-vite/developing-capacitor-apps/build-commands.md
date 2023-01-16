@@ -1,5 +1,5 @@
 ---
-title: Capacitor 构建命令
+title: Capacitor 打包命令
 desc: (@quasar/app-vite) 使用 Capacitor 开发或构建混合移动应用程序时，Quasar CLI 的命令列表。
 ---
 

@@ -1804,7 +1804,7 @@
     </item>
 
     <item>
-      <title><![CDATA[SSR 构建命令 | Quasar V2 中文文档]]></title>
+      <title><![CDATA[SSR 打包命令 | Quasar V2 中文文档]]></title>
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</guid>
       <author>null</author>
@@ -1966,7 +1966,7 @@
     </item>
 
     <item>
-      <title><![CDATA[Capacitor 构建命令 | Quasar V2 中文文档]]></title>
+      <title><![CDATA[Capacitor 打包命令 | Quasar V2 中文文档]]></title>
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</guid>
       <author>null</author>
@@ -2047,7 +2047,7 @@
     </item>
 
     <item>
-      <title><![CDATA[移动应用构建命令 | Quasar V2 中文文档]]></title>
+      <title><![CDATA[移动应用打包命令 | Quasar V2 中文文档]]></title>
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</guid>
       <author>null</author>

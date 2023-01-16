@@ -1,5 +1,5 @@
 ---
-title: SSR 构建命令
+title: SSR 打包命令
 desc: (@quasar/app-vite) Quasar CLI 开发/构建 SSR 服务端渲染应用的命令
 ---
 
