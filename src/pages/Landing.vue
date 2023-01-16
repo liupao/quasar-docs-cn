@@ -183,7 +183,7 @@ export default {
     $store.toc = []
 
     function reload () {
-      window.location.reload()
+      window.location.reload(true)
     }
 
     return {
