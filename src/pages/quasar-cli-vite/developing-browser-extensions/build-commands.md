@@ -111,20 +111,20 @@ Quasar CLI 将打包的产物输出在 dist 目录下（默认在  `/dist/bex/`�
 如需测试 `your-project-name.zip` 文件，将他们拖动到开发时加载插件的位置即可，Chrome 在 `chrome://extensions` 中，Firefox 在 `about:debugging` 中。
 :::
 
-### A Note on Minification
+### 关于压缩代码的注意事项
 
-Part of the review process for Browser Extensions in both Chrome and Firefox must allow the relative teams to examine the code being deployed as a live extension. With this in mind, minified code is not allowed. So, to allow for the review process, Quasar will not obfuscate and minify the built code for Browser Extensions.
+Chrome 和 Firefox 浏览器插件的部分审查过程检查插件实时部署的代码，考虑到这一点，不允许压缩代码。因此，为了便于审查，Quasar 不会混淆和压缩浏览器插件的内置代码。
 
-Given any extension will be ran directly on the user's computer, upload speed isn't a factor to worry about here, so minifying the code isn't necessary.
+考虑到任何插件都将直接在用户的计算机上运行，上传速度在这里不是一个需要担心的因素，因此不需要压缩代码。
 
-## Publishing to the Stores
+## 发布到插件市场
 
-Since Quasar removes the burden of building and packaging your Browser Extension, once you are finished developing your extension, it is ready to be published. The publishing process differs between browsers, but the official documentation will guide you through the process.
+Quasar 已经消除了构建和打包浏览器插件的负担，一旦您完成了扩展的开发，就可以发布它了。不同浏览器的发布过程不同，但官方文档将指导您完成整个过程。
 
-**Chrome** - [Publishing a Chrome Browser Extension](https://developer.chrome.com/webstore/publish)
+**Chrome** - [发布一个 Chrome 浏览器插件](https://developer.chrome.com/webstore/publish)
 
-**Firefox** - [Publishing a Firefox Add On (Browser Extension)](https://extensionworkshop.com/documentation/publish/)
+**Firefox** - [发布一个 Firefox 浏览器插件](https://extensionworkshop.com/documentation/publish/)
 
-::: tip
-BEX mode should be compatible with all chromium based browsers. Please refer to their relative documentation on publishing extensions.
+::: tip 提示
+BEX 模式应该与所有基于 chromium 的浏览器兼容。请参考它们关于发布插件的相关文档。
 :::
