@@ -1,18 +1,18 @@
 ---
-title: DOM Script
-desc: (@quasar/app-vite) How to communicate to the underlying web page using dom hooks in Quasar Browser Extension mode.
+title: DOM 脚本
+desc: (@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用 DOM 脚本的钩子函数与网页通信。
 ---
 
-`src-bex/dom-script.js` is a file that is injected into the underlying web page automatically by Quasar but as with all the other hook files has access to the bridge via:
+`src-bex/dom-script.js` 是一个由 Quasar 自动注入到底层网页的文件，和所有其他钩子文件一样，可以通过以下方式访问通信桥梁（bridge）:
 
 ```js
 export default function (bridge) {
 }
 ```
 
-If you ever find yourself needing to inject a JS file into your underlying web page, you can use the dom script instead as it means you can maintain that chain of communication in the BEX.
+如果您发现自己需要将一个 JS 文件注入到底层网页中，那么您可以使用 DOM 脚本，因为它意味着您可以在 BEX 中维护通信链。
 
-For example, lets say you wanted to write a BEX that detects whether or not a Quasar app is running on a page, the only way to do this is by running some javascript in the context of the web page.
+例如，假设你想编写一个 BEX 来检测一个 Quasar 应用是否在页面上运行，唯一的方法就是在网页的上下文中运行一些 javascript。
 
 ```js
 // We create a new folder + file:
@@ -82,4 +82,4 @@ export default function (bridge) {
 }
 ```
 
-The bridge above will notify all listeners in the BEX that Quasar has been found and along with that send the instance information.
+上面的网桥（bridge）将通知 BEX 中的所有侦听器 Quasar 已经找到，并发送实例信息。
