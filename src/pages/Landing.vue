@@ -26,8 +26,7 @@
               href="https://www.bilibili.com/video/BV1pA4y197Zc">quasar 的视频教程</a>，欢迎观看👏
             </div>
             <div class="q-mt-lg text-grey-6 flex text-center content-center">
-              目前，网站更新频繁，您每次访问时，可以
-              <a class="doc-link text-no-wrap" href="javascript:void 0"  @click="reload" >清除缓存</a>以防遗漏更新。
+              目前，网站更新频繁，您每次访问时，可以清除缓存以防遗漏更新。
             </div>
         </div>
       </div>
