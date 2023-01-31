@@ -6,10 +6,10 @@ related:
   - /vue-components/file-picker
 ---
 
-Quasar 为您提供了一种通过 QUploader 组件上载文件的方法。
+QUploader 是 Quasar 提供的文件上传组件。
 
 ::: tip
-如果您只是想要一个输入一个文件，那么您需要的可能是 [QFile](/vue-components/file-picker) 文件选择器组件。
+如果您只是想要一个输入文件的组件，那么您需要的可能是 [QFile](/vue-components/file-picker) 文件选择器组件。
 :::
 
 ## QUploader API
@@ -19,7 +19,7 @@ Quasar 为您提供了一种通过 QUploader 组件上载文件的方法。
 ## 用法
 
 ::: warning
-QUploader 需要一个后端服务器来接收文件。下面的示例实际上不会真正的上传。
+QUploader 需要一个后端服务器来接收文件。下面的示例不会真正的上传。
 :::
 
 ::: tip
