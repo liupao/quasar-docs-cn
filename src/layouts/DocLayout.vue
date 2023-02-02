@@ -68,13 +68,6 @@
           ></app-search-results>
         </template>
         <template v-else>
-          <!-- <survey-countdown
-            class="layout-countdown"
-            color="primary"
-            align-class="justify-center"
-            padding-class="q-py-md"
-          ></survey-countdown>
-          <q-separator class="q-mb-lg"></q-separator> -->
           <div class="row justify-center q-my-md">
             <q-btn
               class="doc-layout__main-btn"
@@ -108,7 +101,8 @@
         </template>
       </q-scroll-area>
       <div class="absolute-top header">
-        <form
+        <NavBarSearch class="full-width app-search-input" />
+        <!-- <form
           autocorrect="off"
           autocapitalize="off"
           autocomplete="off"
@@ -145,7 +139,7 @@
             </template>
           </q-input>
         </form>
-        <q-separator />
+        <q-separator /> -->
       </div>
     </q-drawer>
     <q-drawer
@@ -208,6 +202,7 @@ import useToc from './doc-layout/use-toc'
 import useDrawers from './doc-layout/use-drawers'
 import useScroll from './doc-layout/use-scroll'
 import useSearch from './doc-layout/use-search'
+import NavBarSearch from '../components/NavBarSearch.vue'
 
 export default {
   name: 'DocLayout',
@@ -216,7 +211,8 @@ export default {
     AppMenu,
     AppSearchResults,
     // SurveyCountdown,
-    HeaderMenu
+    HeaderMenu,
+    NavBarSearch
   },
 
   setup () {

@@ -1,7 +1,7 @@
 import { ref, computed, watch } from 'vue'
 
+const leftDrawerState = ref(false)
 export default function useDrawers (scope, $q, $route) {
-  const leftDrawerState = ref(false)
   const rightDrawerState = ref(false)
   const rightDrawerOnLayout = ref(false)
 
