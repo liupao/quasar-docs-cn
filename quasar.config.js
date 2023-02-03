@@ -43,7 +43,7 @@ module.exports = ctx => ({
 
   framework: {
     iconSet: 'svg-mdi-v6',
-
+    lang: 'zh-CN',
     config: {
       loadingBar: {
         color: 'brand-primary',

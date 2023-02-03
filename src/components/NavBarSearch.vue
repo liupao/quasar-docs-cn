@@ -25,12 +25,53 @@ const VPAlgoliaSearchBox = defineAsyncComponent(() => import('./AlgoliaSearchBox
 const loaded = ref(false)
 
 const metaKey = ref('\'Meta\'')
-// const buttonText = ref('搜索')
+const buttonText = ref('搜索')
 const theme = ref({
   algolia: {
     appId: 'QAQ47WD5F3',
     apiKey: '435dce366a16ec195ef828d5831179c5',
-    indexName: 'quasar-v2'
+    indexName: 'quasar-v2',
+
+    placeholder: '搜索文档',
+    translations: {
+      button: {
+        buttonText: '搜索',
+        buttonAriaLabel: '搜索文档'
+      },
+      modal: {
+        searchBox: {
+          resetButtonTitle: '清除查询条件',
+          resetButtonAriaLabel: '清除查询条件',
+          cancelButtonText: '取消',
+          cancelButtonAriaLabel: '取消'
+        },
+        startScreen: {
+          recentSearchesTitle: '搜索历史',
+          noRecentSearchesText: '没有搜索历史',
+          saveRecentSearchButtonTitle: '保存至搜索历史',
+          removeRecentSearchButtonTitle: '从搜索历史中移除',
+          favoriteSearchesTitle: '收藏',
+          removeFavoriteSearchButtonTitle: '从收藏中移除'
+        },
+        errorScreen: {
+          titleText: '无法获取结果',
+          helpText: '你可能需要检查你的网络连接'
+        },
+        footer: {
+          selectText: '选择',
+          navigateText: '切换',
+          closeText: '关闭',
+          searchByText: '搜索提供者'
+        },
+        noResultsScreen: {
+          noResultsText: '无法找到相关结果',
+          suggestedQueryText: '你可以尝试查询',
+          reportMissingResultsText: '你认为该查询应该有结果？',
+          reportMissingResultsLinkText: '点击反馈'
+        }
+      }
+
+    }
   }
 })
 
@@ -101,9 +142,9 @@ onMounted(() => {
 
 <template>
   <div class="VPNavBarSearch">
-    <VPAlgoliaSearchBox  :algolia="theme.algolia" />
+    <VPAlgoliaSearchBox v-if="loaded"  :algolia="theme.algolia" />
 
-    <!-- <div  v-else id="docsearch" @click="load">
+    <div  v-else id="docsearch" @click="load">
       <button
         type="button"
         class="DocSearch DocSearch-Button"
@@ -132,48 +173,35 @@ onMounted(() => {
           <kbd class="DocSearch-Button-Key">K</kbd>
         </span>
       </button>
-    </div> -->
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.VPNavBarSearch {
-  display: flex;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .VPNavBarSearch {
-    flex-grow: 1;
-    padding-left: 24px;
-  }
-}
-
-@media (min-width: 960px) {
-  .VPNavBarSearch {
-    padding-left: 32px;
-  }
-}
-
+<style lang="scss">
 :root{
-  --docsearch-muted-color: #969faf;
+  --brand-primary:#00B4FF;
+  --docsearch-highlight-color:var(--brand-primary);
+  // --docsearch-muted-color: var(--brand-primary);
   --vp-c-bg: #ffffff;
   --vp-c-bg-soft: #f6f6f7;
   --vp-c-bg-soft-mute: #e3e3e5;
   --vp-c-bg-alt: #f6f6f7;
   --vp-c-divider: rgba(60, 60, 67, .12);
   --vp-c-text-1: var(--vp-c-text-light-1);
-  --vp-c-brand: var(--vp-c-green);
+  // --vp-c-brand: var(--brand-primary);
   --vp-c-white: #ffffff;
   --vp-c-text-light-1: rgba(60, 60, 67, .92);
   --vp-c-text-light-2: rgba(60, 60, 67, .7);
   --vp-c-green: #10b981;
 }
 
+.DocSearch-Container{
+  z-index: 3001;
+}
+
 .DocSearch {
-  --docsearch-primary-color: $brand-primary;
+  // --docsearch-primary-color: var(--brand-primary);
   --docsearch-text-color: var(--vp-c-text-1);
-  --docsearch-muted-color: var(--vp-c-text-2);
   --docsearch-searchbox-shadow: none;
   --docsearch-searchbox-focus-background: transparent;
   --docsearch-key-gradient: transparent;
@@ -185,26 +213,28 @@ onMounted(() => {
 .dark .DocSearch {
   --docsearch-modal-shadow: none;
   --docsearch-footer-shadow: none;
-  --docsearch-logo-color: var(--vp-c-text-2);
+  --docsearch-logo-color: var(--brand-primary) !important;
   --docsearch-hit-background: var(--vp-c-bg-soft-mute);
   --docsearch-hit-color: var(--vp-c-text-2);
   --docsearch-hit-shadow: none;
 }
 
 .DocSearch-Button {
+  width: 100%;
+  height: 51px;
+  border-radius: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
-  width: 32px;
-  height: 55px;
   background: transparent;
   transition: border-color 0.25s;
 }
 
 .DocSearch-Button:hover {
   background: transparent;
+  border-radius: 0px;
 }
 
 .DocSearch-Button:focus {
@@ -214,23 +244,6 @@ onMounted(() => {
 
 .DocSearch-Button:focus:not(:focus-visible) {
   outline: none !important;
-}
-
-@media (min-width: 768px) {
-  .DocSearch-Button {
-    justify-content: flex-start;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 0 10px 0 12px;
-    width: 100%;
-    height: 40px;
-    background-color: var(--vp-c-bg-alt);
-  }
-
-  .DocSearch-Button:hover {
-    border-color: var(--vp-c-brand);
-    background: var(--vp-c-bg-alt);
-  }
 }
 
 .DocSearch-Button .DocSearch-Button-Container {
@@ -247,60 +260,27 @@ onMounted(() => {
   transition: color 0.5s;
 }
 
-.DocSearch-Button:hover .DocSearch-Search-Icon {
-  color: var(--vp-c-text-1);
-}
+// .DocSearch-Button:hover .DocSearch-Search-Icon {
+//   color: var(--brand-primary);
+// }
 
-@media (min-width: 768px) {
-  .DocSearch-Button .DocSearch-Search-Icon {
-    top: 1px;
-    margin-right: 8px;
-    width: 14px;
-    height: 14px;
-    color: var(--vp-c-text-2);
-  }
-}
-
-.DocSearch-Button .DocSearch-Button-Placeholder {
-  display: none;
-  margin-top: 2px;
-  padding: 0 16px 0 0;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--vp-c-text-2);
-  transition: color 0.5s;
+.DocSearch-Button-Placeholder{
+  padding: 0 6px 0 6px;
 }
 
 .DocSearch-Button:hover .DocSearch-Button-Placeholder {
   color: var(--vp-c-text-1);
 }
 
-@media (min-width: 768px) {
-  .DocSearch-Button .DocSearch-Button-Placeholder {
-    display: inline-block;
-  }
-}
-
-.DocSearch-Button .DocSearch-Button-Keys {
-  /*rtl:ignore*/
-  direction: ltr;
-  display: none;
-  min-width: auto;
-}
-
-@media (min-width: 768px) {
-  .DocSearch-Button .DocSearch-Button-Keys {
-    display: flex;
-    align-items: center;
-  }
+.DocSearch-Button:hover .DocSearch-Button-Key, .DocSearch-Button:hover .DocSearch-Button-Key:first-child:after {
+    border-color: var(--brand-primary) !important;
+    color: var(--brand-primary) !important;
 }
 
 .DocSearch-Button .DocSearch-Button-Key {
   display: block;
   margin: 2px 0 0 0;
-  border: 1px solid var(--vp-c-divider);
   /*rtl:begin:ignore*/
-  border-right: none;
   border-radius: 4px 0 0 4px;
   padding-left: 6px;
   /*rtl:end:ignore*/
@@ -316,7 +296,7 @@ onMounted(() => {
 
 .DocSearch-Button .DocSearch-Button-Key + .DocSearch-Button-Key {
   /*rtl:begin:ignore*/
-  border-right: 1px solid var(--vp-c-divider);
+  border: 1px solid var(--vp-c-divider);
   border-left: none;
   border-radius: 0 4px 4px 0;
   padding-left: 2px;
@@ -326,6 +306,8 @@ onMounted(() => {
 
 .DocSearch-Button .DocSearch-Button-Key:first-child {
   font-size: 1px;
+  border: 1px solid var(--vp-c-divider);
+  border-right: none;
   letter-spacing: -12px;
   color: transparent;
 }
@@ -335,10 +317,6 @@ onMounted(() => {
   font-size: 12px;
   letter-spacing: normal;
   color: var(--docsearch-muted-color);
-}
-
-.DocSearch-Button .DocSearch-Button-Key:first-child > * {
-  display: none;
 }
 
 .dark .DocSearch-Footer {

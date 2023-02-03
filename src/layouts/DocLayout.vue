@@ -101,45 +101,7 @@
         </template>
       </q-scroll-area>
       <div class="absolute-top header">
-        <NavBarSearch class="full-width app-search-input" />
-        <!-- <form
-          autocorrect="off"
-          autocapitalize="off"
-          autocomplete="off"
-          spellcheck="false"
-        >
-          <q-input
-            class="full-width app-search-input"
-            ref="searchInputRef"
-            v-model="searchTerms"
-            dense
-            square
-            borderless
-            debounce="300"
-            @keydown="onSearchKeydown"
-            @focus="onSearchFocus"
-            @blur="onSearchBlur"
-            placeholder="搜索"
-            type="search"
-          >
-            <template v-slot:prepend><q-icon name="search"></q-icon></template>
-            <template v-slot:append>
-              <q-icon
-                class="cursor-pointer"
-                v-if="searchTerms"
-                name="cancel"
-                @click="onSearchClear"
-              ></q-icon>
-              <div
-                class="row items-center no-wrap no-pointer-events"
-                v-else-if="!searchHasFocus"
-              >
-                <kbd class="flex flex-center">/</kbd>
-              </div>
-            </template>
-          </q-input>
-        </form>
-        <q-separator /> -->
+        <NavBarSearch />
       </div>
     </q-drawer>
     <q-drawer
