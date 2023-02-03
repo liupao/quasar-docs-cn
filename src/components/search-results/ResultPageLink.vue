@@ -34,7 +34,6 @@ export default {
   props: { entry: Object, active: Boolean },
 
   extractProps (hit) {
-    console.log('hit', hit)
     const title = [
       hit.menu !== void 0 ? hit.menu.join(' » ') : null,
       [ hit.l1, hit.l2, hit.l3, hit.l4, hit.l5, hit.l6 ]
