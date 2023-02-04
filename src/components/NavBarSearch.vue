@@ -6,16 +6,6 @@ import {
   onUnmounted,
   ref
 } from 'vue'
-import { useQuasar } from 'quasar'
-import { useRoute } from 'vue-router'
-import useDrawers from '../layouts/doc-layout/use-drawers'
-import useToc from '../layouts/doc-layout/use-toc'
-const $q = useQuasar()
-const $route = useRoute()
-
-const scope = {}
-useToc(scope, $route)
-useDrawers(scope, $q, $route)
 
 const VPAlgoliaSearchBox = defineAsyncComponent(() => import('./AlgoliaSearchBox.vue'))
 
@@ -108,7 +98,6 @@ function load () {
 function poll () {
   // programmatically open the search box after initialize
   // 弹出搜索框时关闭左侧抽屉
-  if ($q.screen.width < 1023) scope.leftDrawerState.value = false
   const e = new Event('keydown')
 
   e.key = 'k'
@@ -260,9 +249,9 @@ onMounted(() => {
   transition: color 0.5s;
 }
 
-// .DocSearch-Button:hover .DocSearch-Search-Icon {
-//   color: var(--brand-primary);
-// }
+.DocSearch-Button-Keys, .DocSearch-Button-Placeholder {
+    display: flex;
+}
 
 .DocSearch-Button-Placeholder{
   padding: 0 6px 0 6px;
