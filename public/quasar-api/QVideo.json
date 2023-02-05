@@ -1,0 +1,89 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/video"
+  },
+  "props": {
+    "ratio": {
+      "type": [
+        "String",
+        "Number"
+      ],
+      "desc": "Aspect ratio for the content; If value is a String, then avoid using a computational statement (like '16/9') and instead specify the String value of the result directly (eg. '1.7777')",
+      "examples": [
+        ":ratio=\"4/3\"",
+        ":ratio=\"16/9\"",
+        "ratio=\"1\""
+      ],
+      "category": "style",
+      "desc_cn": "内容的尺寸；如果值是字符串，则避免使用计算语句（如“16/9”），而是直接指定结果的字符串值（如“1.7777”）"
+    },
+    "src": {
+      "type": "String",
+      "desc": "The source url to display in an iframe",
+      "required": true,
+      "examples": [
+        "https://www.youtube.com/embed/k3_tw44QsZQ"
+      ],
+      "category": "model",
+      "desc_cn": "要在 iframe 中显示的源 url"
+    },
+    "title": {
+      "type": "String",
+      "desc": "(Accessibility) Set the native 'title' attribute value of the inner iframe being used",
+      "required": false,
+      "examples": [
+        "My Daily Marathon"
+      ],
+      "category": "accessibility",
+      "addedIn": "v2.4.3",
+      "desc_cn": "设置正在使用的内部 iframe 的 'title' 属性值"
+    },
+    "fetchpriority": {
+      "type": "String",
+      "desc": "Provides a hint of the relative priority to use when fetching the iframe document",
+      "default": "auto",
+      "values": [
+        "high",
+        "low",
+        "auto"
+      ],
+      "category": "behavior",
+      "addedIn": "v2.6.6",
+      "required": false,
+      "desc_cn": "提供获取 iframe 文档时使用的相对优先级"
+    },
+    "loading": {
+      "type": "String",
+      "desc": "Indicates how the browser should load the iframe",
+      "default": "eager",
+      "values": [
+        "eager",
+        "lazy"
+      ],
+      "category": "behavior",
+      "addedIn": "v2.6.6",
+      "required": false,
+      "desc_cn": "设置浏览器加载 iframe 的方式"
+    },
+    "referrerpolicy": {
+      "type": "String",
+      "desc": "Indicates which referrer to send when fetching the frame's resource",
+      "default": "strict-origin-when-cross-origin",
+      "values": [
+        "no-referrer",
+        "no-referrer-when-downgrade",
+        "origin",
+        "origin-when-cross-origin",
+        "same-origin",
+        "strict-origin",
+        "strict-origin-when-cross-origin",
+        "unsafe-url"
+      ],
+      "category": "behavior",
+      "addedIn": "v2.6.6",
+      "required": false,
+      "desc_cn": "设置获取资源时请求头中的 referrer"
+    }
+  }
+}

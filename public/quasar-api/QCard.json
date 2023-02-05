@@ -1,0 +1,51 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/card"
+  },
+  "props": {
+    "dark": {
+      "type": "Boolean",
+      "desc": "Notify the component that the background is a dark color",
+      "category": "style",
+      "desc_cn": "通知组件背景为深色"
+    },
+    "square": {
+      "type": "Boolean",
+      "desc": "Removes border-radius so borders are squared",
+      "category": "style",
+      "desc_cn": "删除border-radius，使边界为正方形"
+    },
+    "flat": {
+      "type": "Boolean",
+      "desc": "Applies a 'flat' design (no default shadow)",
+      "category": "style",
+      "desc_cn": "应用“平面”设计（无默认阴影）"
+    },
+    "bordered": {
+      "type": "Boolean",
+      "desc": "Applies a default border to the component",
+      "category": "style",
+      "desc_cn": "将默认边框应用于组件"
+    },
+    "tag": {
+      "type": "String",
+      "desc": "HTML tag to use",
+      "examples": [
+        "div",
+        "span",
+        "div",
+        "form"
+      ],
+      "category": "content",
+      "default": "div",
+      "required": false
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "type": "directive",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-directives/mutation"
+  },
+  "value": {
+    "type": [
+      "Function"
+    ],
+    "desc": "Function to call when mutation occurs; It is HIGHLY recommended to reference it from your vue component scope, otherwise the directive update cycle will continuously recreate the observer which hits performance hard",
+    "examples": [
+      "v-intersection=\"myHandler\""
+    ],
+    "returns": {
+      "type": "Boolean",
+      "desc": "If you return Boolean false from the handler, the observer stops",
+      "desc_cn": "如果从处理程序返回Boolean false，观察者将停止"
+    },
+    "params": {
+      "mutationList": {
+        "type": "Array",
+        "desc": "Array of MutationRecord items",
+        "definition": {
+          "type": {
+            "type": "String",
+            "desc": "Type of mutation",
+            "values": [
+              "childList",
+              "attributes",
+              "characterData"
+            ],
+            "desc_cn": "变动类型"
+          },
+          "target": {
+            "type": "Element",
+            "desc": "The DOM element that the mutation affected, depending on the mutation type",
+            "desc_cn": "变动影响的DOM元素，取决于变动类型"
+          },
+          "addedNodes": {
+            "type": "Array",
+            "desc": "The NodeList of the nodes that have been added",
+            "desc_cn": "已添加节点的NodeList"
+          },
+          "removedNodes": {
+            "type": "Array",
+            "desc": "The NodeList of the nodes that have been removed",
+            "desc_cn": "已删除节点的NodeList"
+          },
+          "previousSibling": {
+            "type": "Object",
+            "desc": "The previous sibling of the added or removed nodes, or null",
+            "desc_cn": "添加或删除的节点的上一个同级节点，或为null"
+          },
+          "nextSibling": {
+            "type": "Object",
+            "desc": "The next sibling of the added or removed nodes, or null",
+            "desc_cn": "添加或删除的节点的下一个同级节点，或为null"
+          },
+          "attributeName": {
+            "type": "String",
+            "desc": "The local name of the changed attribute, or null",
+            "examples": [
+              "some-attribute"
+            ],
+            "desc_cn": "已更改属性的本地名称，或null"
+          },
+          "attributeNamespace": {
+            "type": "String",
+            "desc": "The namespace of the changed attribute, or null",
+            "desc_cn": "已更改属性的命名空间，或为null"
+          },
+          "oldValue": {
+            "type": "String",
+            "desc": "Value depends on the mutation type; For attributes, it is the value of the changed attribute before the change; For characterData it is data of the changed node before the change; For childList it is null; Note that for this to work as expected, attributeOldValue or characterDataOldValue must be set",
+            "desc_cn": "值取决于变动类型；对于属性，它是更改前更改的属性的值；对于characterData，它是更改前更改节点的数据；childList为空；请注意，要使其按预期工作，必须设置attributeOldValue或characterDataOldValue"
+          }
+        },
+        "desc_cn": "MutationRecord项数组"
+      }
+    },
+    "desc_cn": "发生变动时调用的函数；强烈建议从vue组件范围引用它，否则指令更新周期将持续重新创建观察者严重影响性能"
+  },
+  "modifiers": {
+    "once": {
+      "type": "Boolean",
+      "desc": "Call handler only once, when the first mutation was triggered, then stop monitoring",
+      "examples": [
+        "v-mutation.once"
+      ],
+      "desc_cn": "只调用处理程序一次，当触发第一个变动时停止监视"
+    },
+    "childList": {
+      "type": "Boolean",
+      "desc": "Monitor the target node (and, if 'subtree' is also set, its descendants) for the addition of new child nodes or removal of existing child nodes",
+      "examples": [
+        "v-mutation.childList"
+      ],
+      "desc_cn": "监视目标节点（如果还设置了“subtree”，则监视其子节点）以添加新的子节点或删除现有的子节点"
+    },
+    "subtree": {
+      "type": "Boolean",
+      "desc": "Extend monitoring to the entire subtree of nodes rooted at target",
+      "examples": [
+        "v-mutation.subtree"
+      ],
+      "desc_cn": "将监视扩展到作为根的目标节点的整个子树"
+    },
+    "attributes": {
+      "type": "Boolean",
+      "desc": "Watch for changes to the value of attributes on the node or nodes being monitored",
+      "examples": [
+        "v-mutation.attributes"
+      ],
+      "desc_cn": "观察被监视节点上属性值的更改"
+    },
+    "characterData": {
+      "type": "Boolean",
+      "desc": "Monitor the specified target node or subtree for changes to the character data contained within the node or nodes",
+      "examples": [
+        "v-mutation.characterData"
+      ],
+      "desc_cn": "监视指定的目标节点或子树中包含的字符数据的更改"
+    },
+    "attributeOldValue": {
+      "type": "Boolean",
+      "desc": "Record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes",
+      "examples": [
+        "v-mutation.attributeOldValue"
+      ],
+      "desc_cn": "记录在监视一个或多个节点的属性更改时更改的任何属性的上一个值"
+    },
+    "characterDataOldValue": {
+      "type": "Boolean",
+      "desc": "Record the previous value of a node's text whenever the text changes on nodes being monitored",
+      "examples": [
+        "v-mutation.characterDataOldValue"
+      ],
+      "desc_cn": "每当被监视的节点上的文本发生更改时，记录节点文本的上一个值"
+    }
+  }
+}

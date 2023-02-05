@@ -1,0 +1,126 @@
+{
+  "type": "directive",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-directives/material-ripple"
+  },
+  "quasarConfOptions": {
+    "propName": "ripple",
+    "definition": {
+      "early": {
+        "type": "Boolean",
+        "desc": "Trigger early/immediately on user interaction",
+        "desc_cn": "在用户交互时提前/立即触发"
+      },
+      "stop": {
+        "type": "Boolean",
+        "desc": "Stop click/touch event propagation",
+        "desc_cn": "停止点击/触摸事件传播"
+      },
+      "center": {
+        "type": "Boolean",
+        "desc": "Ripple starts from the absolute center",
+        "desc_cn": "波纹从绝对中心开始"
+      },
+      "color": {
+        "type": "String",
+        "desc": "Color name from Quasar Color Palette; Overrides default dynamic color",
+        "examples": [
+          "orange-5"
+        ],
+        "desc_cn": "来自Quasar调色板的颜色名称；替代默认动态颜色"
+      },
+      "keyCodes": {
+        "type": [
+          "Array",
+          "Number"
+        ],
+        "desc": "List of keyCode that should trigger the ripple",
+        "examples": [
+          "[]",
+          "[13, 32]"
+        ],
+        "desc_cn": "触发波纹的键码列表"
+      }
+    }
+  },
+  "value": {
+    "type": [
+      "Boolean",
+      "Object"
+    ],
+    "desc": "Boolean (if just wanting to enable/disable) or Object for configuring more options",
+    "definition": {
+      "early": {
+        "type": "Boolean",
+        "desc": "Trigger early/immediately on user interaction",
+        "desc_cn": "在用户交互时提前/立即触发"
+      },
+      "stop": {
+        "type": "Boolean",
+        "desc": "Stop click/touch event propagation",
+        "desc_cn": "停止点击/触摸事件传播"
+      },
+      "center": {
+        "type": "Boolean",
+        "desc": "Ripple starts from the absolute center",
+        "desc_cn": "波纹从绝对中心开始"
+      },
+      "color": {
+        "type": "String",
+        "desc": "Color name from Quasar Color Palette; Overrides default dynamic color",
+        "examples": [
+          "orange-5"
+        ],
+        "desc_cn": "来自Quasar调色板的颜色名称；替代默认动态颜色"
+      },
+      "keyCodes": {
+        "type": [
+          "Array",
+          "Number"
+        ],
+        "desc": "List of keyCode that should trigger the ripple",
+        "examples": [
+          "[]",
+          "[13, 32]"
+        ],
+        "desc_cn": "触发波纹的键码列表"
+      }
+    },
+    "examples": [
+      "v-ripple=\"booleanState\"",
+      "v-ripple=\"{ center: true, color: 'primary', keyCodes: [] }\""
+    ],
+    "desc_cn": "布尔值（如果只是想启用/禁用）或用于配置更多选项的对象"
+  },
+  "arg": {
+    "type": "String",
+    "desc": "Color name from Quasar Color Palette; Overrides default dynamic color",
+    "examples": [
+      "v-ripple:orange-5"
+    ],
+    "desc_cn": "来自Quasar调色板的颜色名称；替代默认动态颜色"
+  },
+  "modifiers": {
+    "early": {
+      "type": "Boolean",
+      "desc": "Trigger early/immediately on user interaction",
+      "desc_cn": "在用户交互时提前/立即触发"
+    },
+    "stop": {
+      "type": "Boolean",
+      "desc": "Stop click/touch event propagation",
+      "examples": [
+        "v-ripple.stop"
+      ],
+      "desc_cn": "停止点击/触摸事件传播"
+    },
+    "center": {
+      "type": "Boolean",
+      "desc": "Ripple starts from the absolute center",
+      "examples": [
+        "v-ripple.center"
+      ],
+      "desc_cn": "波纹从绝对中心开始"
+    }
+  }
+}

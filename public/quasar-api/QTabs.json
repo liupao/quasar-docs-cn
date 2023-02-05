@@ -1,0 +1,192 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/tabs"
+  },
+  "props": {
+    "model-value": {
+      "desc": "Model of the component defining current panel name; Either use this property (along with a listener for 'update:modelValue' event) OR use v-model directive",
+      "required": false,
+      "syncable": true,
+      "category": "model",
+      "type": [
+        "Number",
+        "String",
+        "null",
+        "undefined"
+      ],
+      "examples": [
+        "v-model=\"selectedTab\""
+      ]
+    },
+    "vertical": {
+      "type": "Boolean",
+      "desc": "Use vertical design (tabs one on top of each other rather than one next to the other horizontally)",
+      "category": "content",
+      "desc_cn": "使用垂直设计（选项卡一个接一个，而不是水平排列）"
+    },
+    "outside-arrows": {
+      "type": "Boolean",
+      "desc": "Reserve space for arrows to place them on each side of the tabs (the arrows fade when inactive)",
+      "category": "content",
+      "desc_cn": "为箭头留出空间，以便将其放置在选项卡的每一侧（箭头在不活动时会褪色）"
+    },
+    "mobile-arrows": {
+      "type": "Boolean",
+      "desc": "Force display of arrows (if needed) on mobile",
+      "category": "content",
+      "desc_cn": "在移动设备上强制显示箭头（如果需要）"
+    },
+    "align": {
+      "type": "String",
+      "desc": "Horizontal alignment the tabs within the tabs container",
+      "default": "center",
+      "values": [
+        "left",
+        "center",
+        "right",
+        "justify"
+      ],
+      "category": "content",
+      "required": false,
+      "desc_cn": "水平对齐选项卡容器中的选项卡"
+    },
+    "breakpoint": {
+      "type": [
+        "Number",
+        "String"
+      ],
+      "desc": "Breakpoint (in pixels) of tabs container width at which the tabs automatically turn to a justify alignment",
+      "default": 600,
+      "category": "content|behavior",
+      "required": false,
+      "desc_cn": "选项卡容器宽度的断点（以像素为单位），选项卡在该断点处自动变为对齐"
+    },
+    "active-color": {
+      "type": "String",
+      "desc": "The color to be attributed to the text of the active tab",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "作为活动选项卡属性的文本的颜色"
+    },
+    "active-bg-color": {
+      "type": "String",
+      "desc": "The color to be attributed to the background of the active tab",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "作为活动选项卡属性的背景的颜色"
+    },
+    "indicator-color": {
+      "type": "String",
+      "desc": "The color to be attributed to the indicator (the underline) of the active tab",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "作为活动选项卡属性的指示符（下划线）的颜色"
+    },
+    "content-class": {
+      "type": "String",
+      "desc": "Class definitions to be attributed to the content wrapper",
+      "examples": [
+        "my-special-class"
+      ],
+      "category": "style",
+      "desc_cn": "作为内容包装器属性的类的定义"
+    },
+    "active-class": {
+      "type": "String",
+      "desc": "The class to be set on the active tab",
+      "examples": [
+        "my-active-class"
+      ],
+      "category": "style",
+      "addedIn": "v2.1.4"
+    },
+    "left-icon": {
+      "type": "String",
+      "desc": "The name of an icon to replace the default arrow used to scroll through the tabs to the left, when the tabs extend past the width of the tabs container",
+      "examples": [
+        "arrow_left"
+      ],
+      "category": "content",
+      "desc_cn": "当选项卡超出选项卡容器的宽度时，替换用于向左滚动选项卡的默认箭头的图标名称"
+    },
+    "right-icon": {
+      "type": "String",
+      "desc": "The name of an icon to replace the default arrow used to scroll through the tabs to the right, when the tabs extend past the width of the tabs container",
+      "examples": [
+        "arrow_right"
+      ],
+      "category": "content",
+      "desc_cn": "当选项卡超出选项卡容器的宽度时，替换用于向右滚动选项卡的默认箭头的图标名称"
+    },
+    "stretch": {
+      "type": "Boolean",
+      "desc": "When used on flexbox parent, tabs will stretch to parent's height",
+      "category": "content",
+      "desc_cn": "在flexbox父级上使用时，选项卡将延伸到父级的高度"
+    },
+    "shrink": {
+      "type": "Boolean",
+      "desc": "By default, QTabs is set to grow to the available space; However, you can reverse that with this prop; Useful (and required) when placing the component in a QToolbar",
+      "category": "content",
+      "desc_cn": "默认情况下，QTabs设置为增长到可用空间；不过，你可以用这个属性来扭转这种局面；在QToolbar中放置构件时非常有用（并且是必需的）"
+    },
+    "switch-indicator": {
+      "type": "Boolean",
+      "desc": "Switches the indicator position (on left of tab for vertical mode or above the tab for default horizontal mode)",
+      "category": "content",
+      "desc_cn": "切换指示器位置（垂直模式在选项卡左侧或默认水平模式在选项卡上方）"
+    },
+    "narrow-indicator": {
+      "type": "Boolean",
+      "desc": "Allows the indicator to be the same width as the tab's content (text or icon), instead of the whole width of the tab",
+      "category": "content",
+      "desc_cn": "允许指示器与选项卡内容（文本或图标）的宽度相同，而不是选项卡的整个宽度"
+    },
+    "inline-label": {
+      "type": "Boolean",
+      "desc": "Allows the text to be inline with the icon, should one be used",
+      "category": "content",
+      "desc_cn": "如果使用图标，则允许文本与图标内联"
+    },
+    "no-caps": {
+      "type": "Boolean",
+      "desc": "Turns off capitalizing all letters within the tab (which is the default)",
+      "category": "content",
+      "desc_cn": "关闭选项卡中所有字母的大写（这是默认值）"
+    },
+    "dense": {
+      "type": "Boolean",
+      "desc": "Dense mode; occupies less space",
+      "category": "style",
+      "desc_cn": "密集模式；占用更少的空间"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  },
+  "events": {
+    "update:model-value": {
+      "desc": "Emitted when the component needs to change the model; Is also used by v-model",
+      "params": {
+        "value": {
+          "type": "Any",
+          "desc": "New model value",
+          "required": true
+        }
+      }
+    }
+  }
+}

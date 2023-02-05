@@ -1,0 +1,67 @@
+{
+  "type": "plugin",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/quasar-plugins/loading-bar"
+  },
+  "injection": "$q.loadingBar",
+  "quasarConfOptions": {
+    "propName": "loadingBar",
+    "definition": {
+      "...props": {
+        "type": "Object",
+        "desc": "QAjaxBar component props, EXCEPT for 'hijack-filter'"
+      }
+    }
+  },
+  "props": {
+    "isActive": {
+      "type": "Boolean",
+      "desc": "Is LoadingBar active?",
+      "reactive": true
+    }
+  },
+  "methods": {
+    "start": {
+      "desc": "Notify bar you've started a background activity",
+      "params": {
+        "speed": {
+          "type": "Number",
+          "desc": "Delay (in milliseconds) between bar progress increments",
+          "default": 300,
+          "required": false,
+          "desc_cn": "加载栏进度增量之间的延迟（毫秒）"
+        }
+      },
+      "desc_cn": "通知加载栏您已开始一个后台活动"
+    },
+    "stop": {
+      "desc": "Notify bar one background activity has finalized",
+      "desc_cn": "通知加载栏一个后台活动已完成"
+    },
+    "increment": {
+      "desc": "Manually trigger a bar progress increment",
+      "params": {
+        "amount": {
+          "type": "Number",
+          "desc": "Amount (0.0 < x < 1.0) to increment with",
+          "desc_cn": "增加的量（0.0<x<1.0）"
+        }
+      },
+      "desc_cn": "手动触发加载栏进度增量"
+    },
+    "setDefaults": {
+      "desc": "Set the inner QAjaxBar's props",
+      "params": {
+        "props": {
+          "type": "Object",
+          "required": true,
+          "desc": "QAjaxBar component props",
+          "examples": [
+            "{ position: 'bottom', reverse: true }"
+          ]
+        }
+      },
+      "desc_cn": "设置内部QAjaxBar的属性"
+    }
+  }
+}

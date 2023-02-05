@@ -1,0 +1,48 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/layout/page"
+  },
+  "props": {
+    "padding": {
+      "type": "Boolean",
+      "desc": "Applies a default responsive page padding",
+      "category": "content",
+      "desc_cn": "应用默认的响应页面填充"
+    },
+    "style-fn": {
+      "type": "Function",
+      "desc": "Override default CSS style applied to the component (sets minHeight); Function(offset: Number) => CSS props/value: Object; For best performance, reference it from your scope and do not define it inline",
+      "params": {
+        "offset": {
+          "type": "Number",
+          "desc": "Header + Footer height (in pixels)",
+          "desc_cn": "页眉+页脚高度（像素）"
+        },
+        "height": {
+          "type": "Number",
+          "desc": "Value in pixels of container height (if containerized) or window height otherwise",
+          "desc_cn": "以像素表示的容器高度值（如果是容器化的）或窗口高度值"
+        }
+      },
+      "returns": {
+        "type": "Object",
+        "desc": "Object with CSS properties to apply to Page DOM element",
+        "desc_cn": "对象的CSS属性应用于页面DOM元素"
+      },
+      "default": "(see source code)",
+      "examples": [
+        "(see source code)"
+      ],
+      "category": "style",
+      "required": false,
+      "desc_cn": "覆盖应用于组件的默认CSS样式（设置最小高度）；函数（offset:Number）=>CSS props/value:Object；为了获得最佳性能，请从您的范围中引用它，而不要内联定义它"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

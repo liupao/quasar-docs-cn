@@ -1,0 +1,213 @@
+{
+  "type": "plugin",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/quasar-plugins/web-storage"
+  },
+  "injection": "$q.localStorage",
+  "methods": {
+    "has": {
+      "desc": "Check if storage item exists",
+      "params": {
+        "key": {
+          "type": "String",
+          "desc": "Entry key",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "项目的键"
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "Does the item exists or not?",
+        "desc_cn": "项目是否存在？"
+      },
+      "desc_cn": "检查存储项是否存在"
+    },
+    "getLength": {
+      "desc": "Get storage number of entries",
+      "returns": {
+        "type": "Number",
+        "desc": "Number of entries",
+        "desc_cn": "项目数量"
+      },
+      "desc_cn": "获取存储的项目数量"
+    },
+    "getItem": {
+      "tsType": "WebStorageGetItemMethodType",
+      "desc": "Get a storage item value",
+      "params": {
+        "key": {
+          "type": "String",
+          "desc": "Entry key",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "项目的键"
+        }
+      },
+      "returns": {
+        "type": [
+          "Date",
+          "RegExp",
+          "Number",
+          "Boolean",
+          "Function",
+          "Object",
+          "Array",
+          "String",
+          "null"
+        ],
+        "desc": "Storage item value",
+        "examples": [
+          "john12",
+          702
+        ],
+        "desc_cn": "项目的值"
+      },
+      "desc_cn": "获取存储项的值"
+    },
+    "getIndex": {
+      "tsType": "WebStorageGetIndexMethodType",
+      "desc": "Get the storage item value at specific index",
+      "params": {
+        "index": {
+          "type": "Number",
+          "desc": "Entry index",
+          "required": true,
+          "desc_cn": "项目索引"
+        }
+      },
+      "returns": {
+        "type": [
+          "Number",
+          "null"
+        ],
+        "desc": "Storage item index",
+        "desc_cn": "存储项索引"
+      },
+      "desc_cn": "获取特定索引处的存储项的值"
+    },
+    "getKey": {
+      "tsType": "WebStorageGetKeyMethodType",
+      "desc": "Get the storage key at specific index",
+      "params": {
+        "index": {
+          "type": "Number",
+          "desc": "Entry index",
+          "required": true,
+          "desc_cn": "项目索引"
+        }
+      },
+      "returns": {
+        "type": [
+          "String",
+          "null"
+        ],
+        "desc": "Storage key",
+        "examples": [
+          "userId"
+        ],
+        "desc_cn": "存储的键"
+      },
+      "desc_cn": "获取特定索引处的存储项的键"
+    },
+    "getAll": {
+      "desc": "Retrieve all items in storage",
+      "returns": {
+        "type": "Object",
+        "desc": "Object syntax: item name as Object key and its value",
+        "examples": [
+          "{ userId: 'jon12', timesLoggedIn: 14 }"
+        ],
+        "desc_cn": "对象语法：作为对象键的项目名及其值"
+      },
+      "desc_cn": "检索存储中的所有项目"
+    },
+    "getAllKeys": {
+      "tsType": "WebStorageGetAllKeysMethodType",
+      "desc": "Retrieve all keys in storage",
+      "returns": {
+        "type": "Array",
+        "desc": "Storage keys (Array of Strings)",
+        "examples": [
+          "['userId', 'password']"
+        ],
+        "desc_cn": "存储的键（字符串数组）"
+      },
+      "desc_cn": "检索存储中的所有键"
+    },
+    "set": {
+      "desc": "Set item in storage",
+      "params": {
+        "key": {
+          "type": "String",
+          "desc": "Entry key",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "项目的键"
+        },
+        "value": {
+          "type": [
+            "Date",
+            "RegExp",
+            "Number",
+            "Boolean",
+            "Function",
+            "Object",
+            "Array",
+            "String",
+            "null"
+          ],
+          "desc": "Entry value",
+          "required": true,
+          "params": {
+            "...params": {
+              "type": "Any"
+            }
+          },
+          "returns": {
+            "type": "Any"
+          },
+          "examples": [
+            "john12"
+          ],
+          "desc_cn": "项目的值"
+        }
+      },
+      "desc_cn": "在存储中设置项目"
+    },
+    "remove": {
+      "desc": "Remove a storage item",
+      "params": {
+        "key": {
+          "type": "String",
+          "desc": "Storage key",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "存储的键"
+        }
+      },
+      "desc_cn": "删除存储项"
+    },
+    "clear": {
+      "desc": "Remove everything from the storage",
+      "desc_cn": "从存储中移除所有"
+    },
+    "isEmpty": {
+      "desc": "Determine if storage has any items",
+      "returns": {
+        "type": "Boolean",
+        "desc": "Tells if storage is empty or not",
+        "desc_cn": "指示存储是否为空"
+      },
+      "desc_cn": "确定存储是否有任何项"
+    }
+  }
+}

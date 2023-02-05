@@ -1,0 +1,68 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/button-group"
+  },
+  "props": {
+    "spread": {
+      "type": "Boolean",
+      "desc": "Spread horizontally to all available space",
+      "category": "content",
+      "desc_cn": "水平扩展到所有可用空间"
+    },
+    "outline": {
+      "type": "Boolean",
+      "desc": "Use 'outline' design for buttons",
+      "category": "style",
+      "desc_cn": "按钮采用“轮廓线”设计"
+    },
+    "flat": {
+      "type": "Boolean",
+      "desc": "Use 'flat' design for buttons",
+      "category": "style",
+      "desc_cn": "按钮采用“扁平”设计"
+    },
+    "unelevated": {
+      "type": "Boolean",
+      "desc": "Remove shadow on buttons",
+      "category": "style",
+      "desc_cn": "删除按钮上的阴影"
+    },
+    "rounded": {
+      "type": "Boolean",
+      "desc": "Applies a more prominent border-radius for squared shape buttons",
+      "category": "style",
+      "desc_cn": "为方形按钮应用更突出的border-radius"
+    },
+    "square": {
+      "type": "Boolean",
+      "desc": "Removes border-radius so borders are squared",
+      "category": "style",
+      "addedIn": "v2.7.6"
+    },
+    "push": {
+      "type": "Boolean",
+      "desc": "Use 'push' design for buttons",
+      "category": "style",
+      "desc_cn": "按钮采用“推”设计"
+    },
+    "stretch": {
+      "type": "Boolean",
+      "desc": "When used on flexbox parent, buttons will stretch to parent's height",
+      "category": "content",
+      "desc_cn": "在flexbox父元素上使用时，按钮将延伸到父元素的高度"
+    },
+    "glossy": {
+      "type": "Boolean",
+      "desc": "Applies a glossy effect",
+      "category": "style",
+      "desc_cn": "应用光泽效果"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Suggestion: QBtn",
+      "desc_cn": "建议：QBtn"
+    }
+  }
+}

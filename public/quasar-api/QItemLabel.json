@@ -1,0 +1,41 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/list-and-list-items"
+  },
+  "props": {
+    "overline": {
+      "type": "Boolean",
+      "desc": "Renders an overline label",
+      "category": "content",
+      "desc_cn": "渲染上划线标签"
+    },
+    "caption": {
+      "type": "Boolean",
+      "desc": "Renders a caption label",
+      "category": "content",
+      "desc_cn": "渲染标题标签"
+    },
+    "header": {
+      "type": "Boolean",
+      "desc": "Renders a header label",
+      "category": "content",
+      "desc_cn": "渲染头部标签"
+    },
+    "lines": {
+      "type": [
+        "Number",
+        "String"
+      ],
+      "desc": "Apply ellipsis when there's not enough space to render on the specified number of lines;",
+      "category": "content|behavior",
+      "desc_cn": "当没有足够的空间在指定的行数上渲染时应用省略号；"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "The content of the label; Suggestion: text",
+      "desc_cn": "标签内容；建议：文本"
+    }
+  }
+}

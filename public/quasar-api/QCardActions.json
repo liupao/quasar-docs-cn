@@ -1,0 +1,37 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/card"
+  },
+  "props": {
+    "align": {
+      "type": "String",
+      "desc": "Specify how to align the actions",
+      "default": "left (for horizontal mode) / stretch (for vertical mode)",
+      "values": [
+        "left",
+        "center",
+        "right",
+        "between",
+        "around",
+        "evenly",
+        "stretch"
+      ],
+      "category": "content",
+      "required": false,
+      "desc_cn": "指定如何对齐操作"
+    },
+    "vertical": {
+      "type": "Boolean",
+      "desc": "Display actions one below the other",
+      "category": "content",
+      "desc_cn": "一个接一个地显示操作"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Suggestions: QBtn",
+      "desc_cn": "建议：QBtn"
+    }
+  }
+}

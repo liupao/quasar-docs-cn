@@ -1,0 +1,114 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/timeline"
+  },
+  "props": {
+    "heading": {
+      "type": "Boolean",
+      "desc": "Defines a heading timeline item",
+      "category": "content",
+      "desc_cn": "定义头部时间线项"
+    },
+    "tag": {
+      "type": "String",
+      "desc": "Tag to use, if of type 'heading' only",
+      "examples": [
+        "div",
+        "span",
+        "h1"
+      ],
+      "category": "content",
+      "default": "h3",
+      "required": false,
+      "desc_cn": "要使用的标记（如果仅属于“heading”类型）"
+    },
+    "side": {
+      "type": "String",
+      "desc": "Side to place the timeline entry; Works only if QTimeline layout is loose.",
+      "default": "right",
+      "values": [
+        "left",
+        "right"
+      ],
+      "category": "behavior",
+      "required": false,
+      "desc_cn": "侧边放置时间线条目；仅当QTimeline布局是loose时有效。"
+    },
+    "icon": {
+      "type": "String",
+      "desc": "Icon name following Quasar convention; Make sure you have the icon library installed unless you are using 'img:' prefix; If 'none' (String) is used as value then no icon is rendered (but screen real estate will still be used for it)",
+      "examples": [
+        "map",
+        "ion-add",
+        "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
+        "img:path/to/some_image.png"
+      ],
+      "category": "content"
+    },
+    "avatar": {
+      "type": "String",
+      "desc": "URL to the avatar image; Icon takes precedence if used, so it replaces avatar",
+      "transformAssetUrls": true,
+      "examples": [
+        "(public folder) src=\"img/my-bg.png\"",
+        "(assets folder) src=\"~assets/my-img.png\"",
+        "(relative path format) :src=\"require('./my_img.jpg')\"",
+        "(URL) src=\"https://placeimg.com/500/300/nature\""
+      ],
+      "category": "content",
+      "desc_cn": "头像图片的URL；图标优先使用，所以它取代了头像"
+    },
+    "color": {
+      "type": "String",
+      "desc": "Color name for component from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+    },
+    "title": {
+      "type": "String",
+      "desc": "Title of timeline entry; Is overridden if using 'title' slot",
+      "examples": [
+        "December party"
+      ],
+      "category": "content",
+      "desc_cn": "时间线条目标题；如果使用“title”槽，则被覆盖"
+    },
+    "subtitle": {
+      "type": "String",
+      "desc": "Subtitle of timeline entry; Is overridden if using 'subtitle' slot",
+      "examples": [
+        "All invited"
+      ],
+      "category": "content",
+      "desc_cn": "时间线条目的副标题；如果使用“subtitle”槽，则被覆盖"
+    },
+    "body": {
+      "type": "String",
+      "desc": "Body content of timeline entry; Use this prop or the default slot",
+      "examples": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      ],
+      "category": "content",
+      "desc_cn": "时间线条目的正文内容；使用此属性或默认插槽"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Timeline entry content (body)",
+      "desc_cn": "时间线条目内容（正文）"
+    },
+    "title": {
+      "desc": "Optional slot for title; When used, it overrides 'title' prop",
+      "desc_cn": "可选的标题槽；使用时，它会覆盖“title”属性"
+    },
+    "subtitle": {
+      "desc": "Optional slot for subtitle; When used, it overrides 'subtitle' prop",
+      "desc_cn": "可选的子标题槽；使用时，它会覆盖“subtitle”属性"
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/uploader"
+  },
+  "props": {
+    "factory": {
+      "type": "Function",
+      "tsType": "QUploaderFactoryFn",
+      "desc": "Function which should return an Object or a Promise resolving with an Object; For best performance, reference it from your scope and do not define it inline",
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
+        }
+      },
+      "returns": {
+        "type": [
+          "Object",
+          "Promise<any>"
+        ],
+        "desc": "Optional configuration for the upload process; You can override QUploader props in this Object (url, method, headers, formFields, fieldName, withCredentials, sendRaw); Props of these Object can also be Functions with the form of (file[s]) => value",
+        "desc_cn": "上传过程的可选配置；您可以覆盖此对象中的QUploader属性（url、method、headers、formFields、fieldName、withCredentials、sendRaw）；这些对象的属性也可以是（file[s]）=>value形式的函数"
+      },
+      "category": "upload",
+      "desc_cn": "应该返回一个对象或一个Promise的函数；为了获得最佳性能，请从您的范围中引用它，而不要内联定义它"
+    },
+    "url": {
+      "type": [
+        "String",
+        "Function"
+      ],
+      "desc": "URL or path to the server which handles the upload. Takes String or factory function, which returns String. Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "examples": [
+        "https://example.com/path",
+        "files => `https://example.com?count=${files.length}`"
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "String",
+        "desc": "URL or path to the server which handles the upload"
+      },
+      "category": "upload",
+      "desc_cn": "处理上传的服务器的URL或路径。接受String或factory函数，后者返回String。函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "method": {
+      "type": [
+        "String",
+        "Function"
+      ],
+      "default": "POST",
+      "desc": "HTTP method to use for upload; Takes String or factory function which returns a String; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "values": [
+        "POST",
+        "PUT"
+      ],
+      "examples": [
+        "POST",
+        ":method=\"files => files.length > 10 ? 'POST' : 'PUT'\""
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "String",
+        "desc": "HTTP method to use for upload"
+      },
+      "category": "upload",
+      "required": false,
+      "desc_cn": "用于上传的HTTP方法；获取字符串或返回字符串的工厂函数；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "field-name": {
+      "type": [
+        "String",
+        "Function"
+      ],
+      "desc": "Field name for each file upload; This goes into the following header: 'Content-Disposition: form-data; name=\"__HERE__\"; filename=\"somefile.png\"; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "default": "(file) => file.name",
+      "examples": [
+        "backgroundFile",
+        ":field-name=\"(file) => 'background' + file.name\""
+      ],
+      "params": {
+        "files": {
+          "type": "File",
+          "desc": "The current file being processed"
+        }
+      },
+      "returns": {
+        "type": "String",
+        "desc": "Field name for the current file upload"
+      },
+      "category": "upload",
+      "required": false,
+      "desc_cn": "每个上传文件的字段名；这将进入以下头部（header）：“Content-Disposition: form-data; name=\"__HERE__\"; filename=\"somefile.png\"”；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "headers": {
+      "type": [
+        "Array",
+        "Function"
+      ],
+      "desc": "Array or a factory function which returns an array; Array consists of objects with header definitions; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "definition": {
+        "name": {
+          "type": "String",
+          "required": true,
+          "desc": "Header name",
+          "examples": [
+            "Content-Type",
+            "Accept",
+            "Cache-Control"
+          ],
+          "desc_cn": "头部名称"
+        },
+        "value": {
+          "type": "String",
+          "required": true,
+          "desc": "Header value",
+          "examples": [
+            "application/json",
+            "no-cache"
+          ],
+          "desc_cn": "头部值"
+        }
+      },
+      "examples": [
+        "[{name: 'Content-Type', value: 'application/json'}, {name: 'Accept', value: 'application/json'}]",
+        "() => [{name: 'X-Custom-Timestamp', value: Date.now()}]",
+        "files => [{name: 'X-Custom-Count', value: files.length}]"
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "String",
+        "desc": "An array consisting of objects with header definitions"
+      },
+      "category": "upload",
+      "desc_cn": "数组或返回数组的工厂函数；数组由具有头部定义的对象组成；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "form-fields": {
+      "type": [
+        "Array",
+        "Function"
+      ],
+      "desc": "Array or a factory function which returns an array; Array consists of objects with additional fields definitions (used by Form to be uploaded); Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "definition": {
+        "name": {
+          "type": "String",
+          "required": true,
+          "desc": "Field name",
+          "examples": [
+            "Some field"
+          ],
+          "desc_cn": "字段名称"
+        },
+        "value": {
+          "type": "String",
+          "required": true,
+          "desc": "Field value",
+          "examples": [
+            "some-value"
+          ],
+          "desc_cn": "字段值"
+        }
+      },
+      "examples": [
+        "[{name: 'my-field', value: 'my-value'}]",
+        "() => [{name: 'my-field', value: 'my-value'}]",
+        "files => [{name: 'my-field', value: 'my-value' + files.length}]"
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "String",
+        "desc": "An array consists of objects with additional fields definitions (used by Form to be uploaded)"
+      },
+      "category": "upload",
+      "desc_cn": "数组或返回数组的工厂函数；数组由具有附加字段定义的对象组成（由要上传的窗体使用）；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "with-credentials": {
+      "type": [
+        "Boolean",
+        "Function"
+      ],
+      "desc": "Sets withCredentials to true on the XHR that manages the upload; Takes boolean or factory function for Boolean; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "examples": [
+        "with-credentials",
+        ":with-credentials=\"files => ...\""
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "If true, withCredentials will be set to true on the XHR that manages the upload"
+      },
+      "category": "upload",
+      "desc_cn": "在管理上传的XHR上将withCredentials设置为true；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "send-raw": {
+      "type": [
+        "Boolean",
+        "Function"
+      ],
+      "desc": "Send raw files without wrapping into a Form(); Takes boolean or factory function for Boolean; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "examples": [
+        "send-raw",
+        ":send-raw=\"files => ...\""
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "If true, raw files will get sent without wrapping into a Form()"
+      },
+      "category": "upload",
+      "desc_cn": "发送原始文件而不包装成Form()；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "batch": {
+      "type": [
+        "Boolean",
+        "Function"
+      ],
+      "desc": "Upload files in batch (in one XHR request); Takes boolean or factory function for Boolean; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "examples": [
+        "files => files.length > 10"
+      ],
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Uploaded files"
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "If true, files will be uploaded in a batch (in one XHR request)"
+      },
+      "category": "upload",
+      "desc_cn": "批量上传文件（在一个XHR请求中）；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+    },
+    "multiple": {
+      "type": "Boolean",
+      "desc": "Allow multiple file uploads",
+      "category": "behavior",
+      "desc_cn": "允许多个文件上传"
+    },
+    "accept": {
+      "type": "String",
+      "desc": "Comma separated list of unique file type specifiers. Maps to 'accept' attribute of native input type=file element",
+      "examples": [
+        ".jpg, .pdf, image/*",
+        "image/jpeg, .pdf"
+      ],
+      "category": "behavior",
+      "desc_cn": "以逗号分隔的唯一文件类型说明符列表。映射到原生输入类型=文件元素的“accept”属性"
+    },
+    "capture": {
+      "type": "String",
+      "desc": "Optionally, specify that a new file should be captured, and which device should be used to capture that new media of a type defined by the 'accept' prop. Maps to 'capture' attribute of native input type=file element",
+      "values": [
+        "user",
+        "environment"
+      ],
+      "category": "behavior",
+      "desc_cn": "（可选）指定应捕获新文件，以及应使用哪个设备捕获由“accept”属性定义的类型的新媒体。映射到原生输入类型=文件元素的“capture”属性"
+    },
+    "max-file-size": {
+      "type": [
+        "Number",
+        "String"
+      ],
+      "desc": "Maximum size of individual file in bytes",
+      "examples": [
+        1024,
+        1048576
+      ],
+      "category": "behavior",
+      "desc_cn": "单个文件的最大大小（字节）"
+    },
+    "max-total-size": {
+      "type": [
+        "Number",
+        "String"
+      ],
+      "desc": "Maximum size of all files combined in bytes",
+      "category": "behavior",
+      "desc_cn": "所有文件的最大大小（以字节为单位）"
+    },
+    "max-files": {
+      "type": [
+        "Number",
+        "String"
+      ],
+      "desc": "Maximum number of files to contain",
+      "category": "behavior",
+      "desc_cn": "要包含的最大文件数"
+    },
+    "filter": {
+      "type": "Function",
+      "desc": "Custom filter for added files; Only files that pass this filter will be added to the queue and uploaded; For best performance, reference it from your scope and do not define it inline",
+      "params": {
+        "files": {
+          "type": [
+            "FileList",
+            "Array"
+          ],
+          "desc": "Candidate files to be added to queue",
+          "desc_cn": "要添加到队列的候选文件"
+        }
+      },
+      "returns": {
+        "type": "Array",
+        "desc": "Filtered files to be added to queue",
+        "desc_cn": "要添加到队列的筛选文件"
+      },
+      "examples": [
+        ":filter=\"files => files.filter(file => file.size === 1024)\""
+      ],
+      "category": "behavior",
+      "desc_cn": "添加文件的自定义过滤器；只有通过此筛选器的文件才会添加到队列并上传；为了获得最佳性能，请从您的范围中引用它，而不要内联定义它"
+    },
+    "label": {
+      "type": "String",
+      "desc": "Label for the uploader",
+      "examples": [
+        "Upload photo here"
+      ],
+      "category": "content",
+      "desc_cn": "上传者标签"
+    },
+    "color": {
+      "type": "String",
+      "desc": "Color name for component from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+    },
+    "text-color": {
+      "type": "String",
+      "desc": "Overrides text color (if needed); Color name from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "覆盖文本颜色（如果需要）；来自Quasar调色板的颜色名称"
+    },
+    "dark": {
+      "type": "Boolean",
+      "desc": "Notify the component that the background is a dark color",
+      "category": "style",
+      "desc_cn": "通知组件背景为深色"
+    },
+    "square": {
+      "type": "Boolean",
+      "desc": "Removes border-radius so borders are squared",
+      "category": "style",
+      "desc_cn": "删除border-radius，使边界为正方形"
+    },
+    "flat": {
+      "type": "Boolean",
+      "desc": "Applies a 'flat' design (no default shadow)",
+      "category": "style",
+      "desc_cn": "应用“平面”设计（无默认阴影）"
+    },
+    "bordered": {
+      "type": "Boolean",
+      "desc": "Applies a default border to the component",
+      "category": "style",
+      "desc_cn": "将默认边框应用于组件"
+    },
+    "no-thumbnails": {
+      "type": "Boolean",
+      "desc": "Don't display thumbnails for image files",
+      "category": "content",
+      "desc_cn": "不显示图像文件的缩略图"
+    },
+    "auto-upload": {
+      "type": "Boolean",
+      "desc": "Upload files immediately when added",
+      "category": "behavior",
+      "desc_cn": "添加后立即上传文件"
+    },
+    "hide-upload-btn": {
+      "type": "Boolean",
+      "desc": "Don't show the upload button",
+      "category": "behavior",
+      "desc_cn": "不显示上传按钮"
+    },
+    "disable": {
+      "type": "Boolean",
+      "desc": "Put component in disabled mode",
+      "category": "state",
+      "desc_cn": "将组件置于禁用模式"
+    },
+    "readonly": {
+      "type": "Boolean",
+      "desc": "Put component in readonly mode",
+      "category": "state",
+      "desc_cn": "将组件置于只读模式"
+    }
+  },
+  "slots": {
+    "header": {
+      "desc": "Slot for custom header; Scope is the QUploader instance itself",
+      "scope": {
+        "...self": {
+          "type": "Component",
+          "tsType": "QUploader",
+          "desc": "QUploader instance",
+          "desc_cn": "QUploader 实例"
+        }
+      },
+      "desc_cn": "自定义头部的插槽；Scope 指向 QUploader 实例本身"
+    },
+    "list": {
+      "desc": "Slot for custom list; Scope is the QUploader instance itself",
+      "scope": {
+        "...self": {
+          "type": "Component",
+          "tsType": "QUploader",
+          "desc": "QUploader instance",
+          "desc_cn": "QUploader 实例"
+        }
+      },
+      "desc_cn": "自定义列表的插槽；Scope 指向 QUploader 实例本身"
+    }
+  },
+  "events": {
+    "uploaded": {
+      "desc": "Emitted when file or batch of files is uploaded",
+      "params": {
+        "info": {
+          "type": "Object",
+          "desc": "Object containing information about the event",
+          "definition": {
+            "files": {
+              "type": "Array",
+              "required": true,
+              "desc": "Uploaded files",
+              "desc_cn": "上传的文件"
+            },
+            "xhr": {
+              "type": "Object",
+              "required": true,
+              "desc": "XMLHttpRequest that has been used to upload this batch of files",
+              "desc_cn": "用于上传此批量文件的XMLHttpRequest"
+            }
+          },
+          "desc_cn": "包含事件信息的对象"
+        }
+      },
+      "desc_cn": "文件或批量文件已上传时发出"
+    },
+    "failed": {
+      "desc": "Emitted when file or batch of files has encountered error while uploading",
+      "params": {
+        "info": {
+          "type": "Object",
+          "desc": "Object containing information about the event",
+          "definition": {
+            "files": {
+              "type": "Array",
+              "required": true,
+              "desc": "Files which encountered error",
+              "desc_cn": "遇到错误的文件"
+            },
+            "xhr": {
+              "type": "Object",
+              "required": true,
+              "desc": "XMLHttpRequest that has been used to upload this batch of files",
+              "desc_cn": "用于上传此批量文件的XMLHttpRequest"
+            }
+          },
+          "desc_cn": "包含事件信息的对象"
+        }
+      },
+      "desc_cn": "当文件或批量文件在上传遇到错误时发出"
+    },
+    "uploading": {
+      "desc": "Emitted when file or batch of files started uploading",
+      "params": {
+        "info": {
+          "type": "Object",
+          "desc": "Object containing information about the event",
+          "definition": {
+            "files": {
+              "type": "Array",
+              "required": true,
+              "desc": "Files which are now uploading",
+              "desc_cn": "正在上传的文件"
+            },
+            "xhr": {
+              "type": "Object",
+              "required": true,
+              "desc": "XMLHttpRequest used for uploading",
+              "desc_cn": "用于上传的XMLHttpRequest"
+            }
+          },
+          "desc_cn": "包含事件信息的对象"
+        }
+      },
+      "desc_cn": "文件或批量文件开始上传时发出"
+    },
+    "factory-failed": {
+      "desc": "Emitted when factory function is supplied with a Promise which is rejected",
+      "params": {
+        "err": {
+          "type": "Error",
+          "desc": "Error object which is the Promise rejection reason",
+          "desc_cn": "Promise 失败的原因"
+        },
+        "files": {
+          "type": "Array",
+          "desc": "Files which were to get uploaded",
+          "desc_cn": "要上传的文件"
+        }
+      },
+      "desc_cn": "当工厂函数提供了失败的 Promise 时触发"
+    },
+    "rejected": {
+      "desc": "Emitted after files are picked and some do not pass the validation props (accept, max-file-size, max-total-size, filter, etc)",
+      "params": {
+        "rejectedEntries": {
+          "type": "Array",
+          "tsType": "QRejectedEntry",
+          "desc": "Array of { failedPropValidation: string, file: File } Objects for files that do not pass the validation",
+          "desc_cn": "未通过验证的文件，{ failedPropValidation: string, file: File } 类型的对象数组"
+        }
+      },
+      "desc_cn": "选取文件后触发，有些文件未通过验证属性（accept、max file size、max total size、filter 等）"
+    },
+    "added": {
+      "desc": "Emitted when files are added into the list",
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Array of files that were added",
+          "desc_cn": "添加的文件数组"
+        }
+      },
+      "desc_cn": "将文件添加到列表时发出"
+    },
+    "removed": {
+      "desc": "Emitted when files are removed from the list",
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Array of files that were removed",
+          "desc_cn": "已删除的文件数组"
+        }
+      },
+      "desc_cn": "从列表中删除文件时发出"
+    },
+    "start": {
+      "desc": "Started working",
+      "desc_cn": "开始上传"
+    },
+    "finish": {
+      "desc": "Finished working (regardless of success or fail)",
+      "desc_cn": "完成上传（不管成功与否）"
+    }
+  },
+  "methods": {
+    "pickFiles": {
+      "desc": "Trigger the file picker dialog; The event must come from a user interaction event handler",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object of the original user interaction handler",
+          "required": true,
+          "desc_cn": "用户触发的原始 JS 事件"
+        }
+      },
+      "desc_cn": "触发文件选择对话框；事件必须来自一个用户交互事件"
+    },
+    "addFiles": {
+      "desc": "Manually add files to the queue",
+      "params": {
+        "files": {
+          "type": "Array",
+          "desc": "Must be an array of instances of JS File type",
+          "required": true,
+          "desc_cn": "必须是一个 JS File 类型的数组"
+        }
+      },
+      "desc_cn": "手动添加文件到列队"
+    },
+    "upload": {
+      "desc": "Start uploading (same as clicking the upload button)",
+      "desc_cn": "开始上传（与单击上传按钮相同）"
+    },
+    "abort": {
+      "desc": "Abort upload of all files (same as clicking the abort button)",
+      "desc_cn": "中止上传所有文件（与单击中止按钮相同）"
+    },
+    "reset": {
+      "desc": "Resets uploader to default; Empties queue, aborts current uploads",
+      "desc_cn": "将上传程序重置为默认值；清空队列，中止当前上传"
+    },
+    "removeUploadedFiles": {
+      "desc": "Removes already uploaded files from the list",
+      "desc_cn": "从列表中删除已上传的文件"
+    },
+    "removeQueuedFiles": {
+      "desc": "Remove files that are waiting for upload to start (same as clicking the left clear button)",
+      "desc_cn": "删除等待上传开始的文件（与单击左清除按钮相同）"
+    },
+    "removeFile": {
+      "desc": "Remove specified file from the queue",
+      "params": {
+        "file": {
+          "type": "File",
+          "desc": "The file to remove",
+          "required": true,
+          "desc_cn": "删除的文件"
+        }
+      },
+      "desc_cn": "从队列中删除指定的文件"
+    },
+    "updateFileStatus": {
+      "desc": "Update the status of a file",
+      "params": {
+        "file": {
+          "type": "File",
+          "desc": "The file to update",
+          "required": true,
+          "desc_cn": "上传的文件"
+        },
+        "status": {
+          "type": "String",
+          "desc": "Status of file",
+          "values": [
+            "idle",
+            "failed",
+            "uploading",
+            "uploaded"
+          ],
+          "required": true,
+          "desc_cn": "文件的状态"
+        },
+        "uploadedSize": {
+          "type": "Number",
+          "desc": "The number of uploaded bytes of the file; Is required explicitly only when status is NOT 'uploaded'",
+          "required": true,
+          "desc_cn": "文件上传的字节数；仅当状态不是 'uploaded' 时才显式需要"
+        }
+      },
+      "desc_cn": "文件的上传状态"
+    },
+    "isAlive": {
+      "desc": "Is the component alive (activated but not unmounted); Useful to determine if you still need to compute anything going further",
+      "returns": {
+        "type": "Boolean",
+        "desc": "If true, the current component is still activated and mounted",
+        "desc_cn": "如果为 true，则组件仍处于激活且挂载状态"
+      },
+      "desc_cn": "组件是否处于活动状态（已激活但未卸载）；有助于确定是否还需要进一步操作"
+    }
+  },
+  "computedProps": {
+    "files": {
+      "type": "Array",
+      "desc": "List of all files",
+      "desc_cn": "所有的文件列表"
+    },
+    "queuedFiles": {
+      "type": "Array",
+      "desc": "List of files that are waiting to be uploaded",
+      "desc_cn": "等待上传的文件列表"
+    },
+    "uploadedFiles": {
+      "type": "Array",
+      "desc": "List of files that have been uploaded",
+      "desc_cn": "已经完成上传的文件列表"
+    },
+    "uploadedSize": {
+      "type": "Number",
+      "desc": "Size of all uploaded files in bytes",
+      "desc_cn": "已经上传的文件大小，单位字节"
+    },
+    "uploadSizeLabel": {
+      "type": "String",
+      "desc": "Label for the size total of all files",
+      "examples": [
+        "1.0MB"
+      ],
+      "desc_cn": "所有文件大小"
+    },
+    "uploadProgressLabel": {
+      "type": "String",
+      "desc": "Label for the upload progress (in %)",
+      "examples": [
+        "52.76%"
+      ],
+      "desc_cn": "上传进度，单位 %"
+    },
+    "canAddFiles": {
+      "type": "Boolean",
+      "desc": "Whether new files can be added to the list",
+      "desc_cn": "是否允许新增文件"
+    },
+    "canUpload": {
+      "type": "Boolean",
+      "desc": "Whether the files can be uploaded",
+      "desc_cn": "是否允许文件上传"
+    },
+    "isBusy": {
+      "type": "Boolean",
+      "desc": "The component state is set as busy; User should not be able to interact with the component",
+      "desc_cn": "组件状态设置为繁忙；用户应该无法与组件进行交互"
+    },
+    "isUploading": {
+      "type": "Boolean",
+      "desc": "The component is uploading files",
+      "desc_cn": "组件是否正在上传文件"
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "type": "plugin",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/quasar-plugins/cookies"
+  },
+  "injection": "$q.cookies",
+  "methods": {
+    "get": {
+      "tsType": "CookiesGetMethodType",
+      "desc": "Get cookie",
+      "params": {
+        "name": {
+          "type": "String",
+          "desc": "Cookie name",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "Cookie名称"
+        }
+      },
+      "returns": {
+        "type": [
+          "String",
+          "null"
+        ],
+        "desc": "Cookie value; Returns null if cookie not found",
+        "examples": [
+          "john12"
+        ],
+        "desc_cn": "Cookie值；如果找不到cookie，则返回null"
+      },
+      "desc_cn": "获取cookie"
+    },
+    "getAll": {
+      "desc": "Get all cookies",
+      "returns": {
+        "type": "Object",
+        "desc": "Object with cookie names (as keys) and their values",
+        "examples": [
+          "{ userId: 'john12', XFrame: 'x534' }"
+        ],
+        "desc_cn": "具有cookie名称（作为键）及其值的对象"
+      },
+      "desc_cn": "获取所有Cookie"
+    },
+    "set": {
+      "desc": "Set cookie",
+      "params": {
+        "name": {
+          "type": "String",
+          "desc": "Cookie name",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "Cookie名称"
+        },
+        "value": {
+          "type": "String",
+          "desc": "Cookie value",
+          "required": true,
+          "examples": [
+            "john12"
+          ],
+          "desc_cn": "Cookie值"
+        },
+        "options": {
+          "type": "Object",
+          "desc": "Cookie options",
+          "definition": {
+            "expires": {
+              "type": [
+                "Number",
+                "String",
+                "Date"
+              ],
+              "desc": "Cookie expires detail; If specified as Number, then the unit is days; If specified as String, it can either be raw stringified date or in Xd Xh Xm Xs format (see examples)",
+              "examples": [
+                30,
+                "Wed, 13 Jan 2021 22:23:01 GMT",
+                "1d",
+                "15m",
+                "13d",
+                "1d 15m",
+                "1d 3h 5m 3s"
+              ],
+              "desc_cn": "Cookie过期详细信息；如果指定为数字，则单位为天；如果指定为字符串，则可以是原始字符串化日期或Xd Xh Xm Xs格式（参见示例）"
+            },
+            "path": {
+              "type": "String",
+              "desc": "Cookie path",
+              "examples": [
+                "/accounts"
+              ],
+              "desc_cn": "Cookie路径"
+            },
+            "domain": {
+              "type": "String",
+              "desc": "Cookie domain",
+              "examples": [
+                ".foo.com"
+              ],
+              "desc_cn": "Cookie域"
+            },
+            "sameSite": {
+              "type": "String",
+              "desc": "SameSite cookie option",
+              "values": [
+                "Lax",
+                "Strict",
+                "None"
+              ]
+            },
+            "httpOnly": {
+              "type": "Boolean",
+              "desc": "Is cookie Http Only?",
+              "desc_cn": "cookie仅限于Http吗？"
+            },
+            "secure": {
+              "type": "Boolean",
+              "desc": "Is cookie secure? (https only)",
+              "desc_cn": "饼干安全吗(（仅限https）"
+            },
+            "other": {
+              "type": "String",
+              "desc": "Raw string for other cookie options; To be used as a last resort for possible newer props that are currently not yet implemented in Quasar",
+              "examples": [
+                "SomeNewCookieProp"
+              ],
+              "desc_cn": "其他cookie选项的原始字符串；作为一个可能的新道具，目前还没有在类星体实施的最后手段"
+            }
+          },
+          "desc_cn": "Cookie选项"
+        }
+      },
+      "desc_cn": "设置cookie"
+    },
+    "has": {
+      "desc": "Check if cookie exists",
+      "params": {
+        "name": {
+          "type": "String",
+          "desc": "Cookie name",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "Cookie名称"
+        }
+      },
+      "returns": {
+        "type": "Boolean",
+        "desc": "Does cookie exists or not?",
+        "desc_cn": "cookie是否存在？"
+      },
+      "desc_cn": "检查cookie是否存在"
+    },
+    "remove": {
+      "desc": "Remove a cookie",
+      "params": {
+        "name": {
+          "type": "String",
+          "desc": "Cookie name",
+          "required": true,
+          "examples": [
+            "userId"
+          ],
+          "desc_cn": "Cookie名称"
+        },
+        "options": {
+          "type": "Object",
+          "desc": "Cookie options",
+          "definition": {
+            "path": {
+              "type": "String",
+              "desc": "Cookie path",
+              "examples": [
+                "/accounts"
+              ],
+              "desc_cn": "Cookie路径"
+            },
+            "domain": {
+              "type": "String",
+              "desc": "Cookie domain",
+              "examples": [
+                ".foo.com"
+              ],
+              "desc_cn": "Cookie域"
+            }
+          },
+          "desc_cn": "Cookie选项"
+        }
+      },
+      "desc_cn": "删除cookie"
+    },
+    "parseSSR": {
+      "desc": "For SSR usage only, and only on the global import (not on $q.cookies)",
+      "params": {
+        "ssrContext": {
+          "type": "Object",
+          "desc": "SSR Context Object",
+          "required": true,
+          "desc_cn": "SSR上下文对象"
+        }
+      },
+      "returns": {
+        "type": "Object",
+        "tsType": "Cookies",
+        "desc": "Cookie object (like $q.cookies) for SSR usage purposes",
+        "desc_cn": "用于SSR用途的Cookie对象（如$q.cookies）"
+      },
+      "desc_cn": "仅用于SSR，并且仅用于全局导入（不用于$q.cookies）"
+    }
+  }
+}

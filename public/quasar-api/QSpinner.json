@@ -1,0 +1,38 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/spinners"
+  },
+  "props": {
+    "size": {
+      "type": "String",
+      "desc": "Size in CSS units, including unit name or standard size name (xs|sm|md|lg|xl)",
+      "examples": [
+        "16px",
+        "2rem",
+        "xs",
+        "md"
+      ],
+      "category": "style",
+      "desc_cn": "以CSS单位表示的大小，包括单位名称或标准大小名称（xs | sm | md | lg | xl）"
+    },
+    "color": {
+      "type": "String",
+      "desc": "Color name for component from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+    },
+    "thickness": {
+      "type": "Number",
+      "desc": "Override value to use for stroke-width",
+      "default": 5,
+      "category": "style",
+      "required": false,
+      "desc_cn": "替代用于stroke-width的值"
+    }
+  }
+}

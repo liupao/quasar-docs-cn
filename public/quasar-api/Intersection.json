@@ -1,0 +1,244 @@
+{
+  "type": "directive",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-directives/intersection"
+  },
+  "value": {
+    "type": [
+      "Object",
+      "Function"
+    ],
+    "desc": "Function to call when scrolling occurs (identical to description of 'handler' prop of the Object form); If using the Object form, it is HIGHLY recommended to reference it from your vue component scope, otherwise the directive update cycle will continuously recreate the observer which hits performance hard",
+    "examples": [
+      "v-intersection=\"myFunction\"",
+      "v-intersection=\"{ handler: myFunction, cfg: { root: myScrollingParentEl, rootMargin: '10px 20px 30px 40px', threshold: [0, 0.25, 0.5, 0.75, 1] } }\""
+    ],
+    "definition": {
+      "handler": {
+        "type": "Function",
+        "desc": "The handler function to be called",
+        "returns": {
+          "type": "Boolean",
+          "desc": "If you return Boolean false from the handler, the observer stops",
+          "desc_cn": "如果从处理程序返回Boolean false，观察者将停止"
+        },
+        "params": {
+          "entry": {
+            "type": "Object",
+            "desc": "The IntersectionObserverEntry object",
+            "definition": {
+              "boundingClientRect": {
+                "type": "Object",
+                "desc": "Object containing the client rect information",
+                "definition": {
+                  "bottom": {
+                    "type": "Number",
+                    "desc": "The bottom of the client rect",
+                    "desc_cn": "客户端矩形的底部"
+                  },
+                  "height": {
+                    "type": "Number",
+                    "desc": "The height of the client rect",
+                    "desc_cn": "客户端矩形的高度"
+                  },
+                  "left": {
+                    "type": "Number",
+                    "desc": "The left of the client rect",
+                    "desc_cn": "客户端矩形的左侧"
+                  },
+                  "right": {
+                    "type": "Number",
+                    "desc": "The right of the client rect",
+                    "desc_cn": "客户矩形的右侧"
+                  },
+                  "top": {
+                    "type": "Number",
+                    "desc": "The top of the client rect",
+                    "desc_cn": "客户端矩形的顶部"
+                  },
+                  "width": {
+                    "type": "Number",
+                    "desc": "The width of the client rect",
+                    "desc_cn": "客户端矩形的宽度"
+                  },
+                  "x": {
+                    "type": "Number",
+                    "desc": "The x position of the client rect",
+                    "desc_cn": "客户端矩形的x位置"
+                  },
+                  "y": {
+                    "type": "Number",
+                    "desc": "The y position of the client rect",
+                    "desc_cn": "客户端矩形的y位置"
+                  }
+                },
+                "desc_cn": "包含客户端矩形信息的对象"
+              },
+              "intersectionRatio": {
+                "type": "Number",
+                "desc": "The ratio of the observed objects visibility",
+                "desc_cn": "观察对象的可见性比率"
+              },
+              "intersectionRect": {
+                "type": "Object",
+                "desc": "Object containing the client rect information",
+                "definition": {
+                  "bottom": {
+                    "type": "Number",
+                    "desc": "The bottom of the client rect",
+                    "desc_cn": "客户端矩形的底部"
+                  },
+                  "height": {
+                    "type": "Number",
+                    "desc": "The height of the client rect",
+                    "desc_cn": "客户端矩形的高度"
+                  },
+                  "left": {
+                    "type": "Number",
+                    "desc": "The left of the client rect",
+                    "desc_cn": "客户端矩形的左侧"
+                  },
+                  "right": {
+                    "type": "Number",
+                    "desc": "The right of the client rect",
+                    "desc_cn": "客户矩形的右侧"
+                  },
+                  "top": {
+                    "type": "Number",
+                    "desc": "The top of the client rect",
+                    "desc_cn": "客户端矩形的顶部"
+                  },
+                  "width": {
+                    "type": "Number",
+                    "desc": "The width of the client rect",
+                    "desc_cn": "客户端矩形的宽度"
+                  },
+                  "x": {
+                    "type": "Number",
+                    "desc": "The x position of the client rect",
+                    "desc_cn": "客户端矩形的x位置"
+                  },
+                  "y": {
+                    "type": "Number",
+                    "desc": "The y position of the client rect",
+                    "desc_cn": "客户端矩形的y位置"
+                  }
+                },
+                "desc_cn": "包含客户端矩形信息的对象"
+              },
+              "isIntersecting": {
+                "type": "Boolean",
+                "desc": "It is Boolean true if intersecting the scrollable area",
+                "desc_cn": "如果与可滚动区域相交，则为Boolean true"
+              },
+              "rootBounds": {
+                "type": "Object",
+                "desc": "Object containing the client rect information",
+                "definition": {
+                  "bottom": {
+                    "type": "Number",
+                    "desc": "The bottom of the client rect",
+                    "desc_cn": "客户端矩形的底部"
+                  },
+                  "height": {
+                    "type": "Number",
+                    "desc": "The height of the client rect",
+                    "desc_cn": "客户端矩形的高度"
+                  },
+                  "left": {
+                    "type": "Number",
+                    "desc": "The left of the client rect",
+                    "desc_cn": "客户端矩形的左侧"
+                  },
+                  "right": {
+                    "type": "Number",
+                    "desc": "The right of the client rect",
+                    "desc_cn": "客户端矩形的右侧"
+                  },
+                  "top": {
+                    "type": "Number",
+                    "desc": "The top of the client rect",
+                    "desc_cn": "客户端矩形的顶部"
+                  },
+                  "width": {
+                    "type": "Number",
+                    "desc": "The width of the client rect",
+                    "desc_cn": "客户端矩形的宽度"
+                  },
+                  "x": {
+                    "type": "Number",
+                    "desc": "The x position of the client rect",
+                    "desc_cn": "客户端矩形的x位置"
+                  },
+                  "y": {
+                    "type": "Number",
+                    "desc": "The y position of the client rect",
+                    "desc_cn": "客户端矩形的y位置"
+                  }
+                },
+                "desc_cn": "包含客户端矩形信息的对象"
+              },
+              "target": {
+                "type": "Element",
+                "desc": "The target element",
+                "desc_cn": "目标元素"
+              },
+              "time": {
+                "type": "Number",
+                "desc": "The timestamp of the event",
+                "examples": [
+                  "6316.879999998491"
+                ],
+                "desc_cn": "事件的时间戳"
+              }
+            },
+            "desc_cn": "IntersectionObserverEntry对象"
+          }
+        },
+        "desc_cn": "要调用的处理程序函数"
+      },
+      "cfg": {
+        "type": "Object",
+        "desc": "Intersection observer options (can be omitted and all its props are optional)",
+        "definition": {
+          "root": {
+            "type": "Element",
+            "desc": "Lets you define an alternative to the viewport as your root (through its DOM element); It is important to keep in mind that root needs to be an ancestor of the observed element",
+            "examples": [
+              "myScrollingParentEl"
+            ],
+            "desc_cn": "允许您定义可替代视区的元素作为根元素（通过其DOM元素）；必须记住，根元素必须是被观察元素的祖先"
+          },
+          "rootMargin": {
+            "type": "String",
+            "desc": "Allows you to specify the margins for the root, effectively allowing you to either grow or shrink the area used for intersections",
+            "examples": [
+              "10px 20px 30px 40px"
+            ],
+            "desc_cn": "允许您指定根元素的边距，有效地允许您扩大或缩小用于交叉的区域"
+          },
+          "threshold": {
+            "type": "Array",
+            "desc": "Threshold(s) at which to trigger callback, specified as a ratio, or list of ratios, of (visible area / total area) of the observed element",
+            "examples": [
+              "[ 0, 0.25, 0.5, 0.75, 1 ]"
+            ],
+            "desc_cn": "触发回调的阈值，指定为观察元素的（可见面积/总面积）的比率或比率列表"
+          }
+        },
+        "desc_cn": "交叉观察者选项（可以省略，其所有属性都是可选的）"
+      }
+    },
+    "desc_cn": "发生滚动时要调用的函数（与对象形式的“handler”属性的描述相同）；如果使用对象形式，强烈建议从vue组件范围引用它，否则指令更新周期将持续重新创建观察者将严重影响性能"
+  },
+  "modifiers": {
+    "once": {
+      "type": "Boolean",
+      "desc": "Call handler only once, when the conditions are first met",
+      "examples": [
+        "v-intersection.once"
+      ],
+      "desc_cn": "仅在第一次满足条件时调用处理程序一次"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/bar"
+  },
+  "props": {
+    "dense": {
+      "type": "Boolean",
+      "desc": "Dense mode; occupies less space",
+      "category": "style",
+      "desc_cn": "密集模式；占用更少的空间"
+    },
+    "dark": {
+      "type": "Boolean",
+      "desc": "The component background color lights up the parent's background (as opposed to default behavior which is to darken it); Works unless you specify a CSS background color for it",
+      "category": "style",
+      "desc_cn": "组件背景颜色使父对象的背景变亮（与默认行为相反，默认行为是使其变暗）；除非为其指定CSS背景色，否则将正常工作"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

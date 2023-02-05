@@ -1,0 +1,12 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/stepper"
+  },
+  "slots": {
+    "default": {
+      "desc": "The content of the custom navigation, child of a QStep or of a QStepper (globally, through 'navigation' slot)",
+      "desc_cn": "自定义导航的内容，QStep或QStepper的子元素（全局，通过“navigation”插槽）"
+    }
+  }
+}

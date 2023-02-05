@@ -1,0 +1,132 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/form"
+  },
+  "props": {
+    "autofocus": {
+      "type": "Boolean",
+      "desc": "Focus first focusable element on initial component render",
+      "category": "behavior",
+      "desc_cn": "在初始组件渲染时将第一个可聚焦元素聚焦"
+    },
+    "no-error-focus": {
+      "type": "Boolean",
+      "desc": "Do not try to focus on first component that has a validation error when submitting form",
+      "category": "behavior",
+      "desc_cn": "提交表单时不要试图聚焦第一个有验证错误的组件"
+    },
+    "no-reset-focus": {
+      "type": "Boolean",
+      "desc": "Do not try to focus on first component when resetting form",
+      "category": "behavior",
+      "desc_cn": "在重置表单时不要试图聚焦在第一个组件上"
+    },
+    "greedy": {
+      "type": "Boolean",
+      "desc": "Validate all fields in form (by default it stops after finding the first invalid field with synchronous validation)",
+      "category": "behavior",
+      "desc_cn": "验证表单中的所有字段（默认情况下，它在通过同步的验证找到第一个无效字段后停止）"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  },
+  "events": {
+    "submit": {
+      "desc": "Emitted when all validations have passed when tethered to a submit button",
+      "params": {
+        "evt": {
+          "type": [
+            "Event",
+            "SubmitEvent"
+          ],
+          "desc": "Form submission event object"
+        }
+      },
+      "desc_cn": "当绑定到提交按钮时，所有验证都已通过时发出"
+    },
+    "reset": {
+      "desc": "Emitted when all validations have been reset when tethered to a reset button; It is recommended to manually reset the wrapped components models in this handler",
+      "desc_cn": "当绑定到重置按钮时，所有验证都被重置时发出；建议在此处理程序中手动重置包装的组件模型"
+    },
+    "validation-success": {
+      "desc": "Emitted after a validation was triggered and all inner Quasar components models are valid",
+      "desc_cn": "在验证被触发并且所有内部Quasar成分模型都有效后发出"
+    },
+    "validation-error": {
+      "desc": "Emitted after a validation was triggered and at least one of the inner Quasar components models are NOT valid",
+      "params": {
+        "ref": {
+          "type": "Component",
+          "desc": "Vue reference to the first component that triggered the validation error",
+          "desc_cn": "对触发验证错误的第一个组件的Vue引用"
+        }
+      },
+      "desc_cn": "在验证被触发并且至少一个内部Quasar组件模型无效后发出"
+    }
+  },
+  "methods": {
+    "focus": {
+      "desc": "Focus on first focusable element/component in the form",
+      "desc_cn": "关注表单中第一个可聚焦的元素/组件"
+    },
+    "validate": {
+      "desc": "Triggers a validation on all applicable inner Quasar components",
+      "params": {
+        "shouldFocus": {
+          "type": "Boolean",
+          "desc": "Tell if it should focus or not on component with error on submitting form; Overrides 'no-focus-error' prop if specified",
+          "desc_cn": "告知是否应该聚焦提交表单时出错的组件；覆盖“no-focus-error”属性（如果指定）"
+        }
+      },
+      "returns": {
+        "type": "Promise<boolean>",
+        "desc": "Promise is always fulfilled and receives the outcome (true -> validation was a success, false -> invalid models detected)",
+        "examples": [
+          "validate().then(outcome => { ... })"
+        ],
+        "desc_cn": "承诺（Promise）总是兑现并收到结果（true->验证成功，false->检测到无效模型）"
+      },
+      "desc_cn": "触发所有适用的Quasar内部组件的验证"
+    },
+    "resetValidation": {
+      "desc": "Resets the validation on all applicable inner Quasar components",
+      "desc_cn": "重置所有适用的Quasar内部组件的验证"
+    },
+    "submit": {
+      "desc": "Manually trigger form validation and submit",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object",
+          "desc_cn": "JS事件对象"
+        }
+      },
+      "desc_cn": "手动触发表单验证并提交"
+    },
+    "reset": {
+      "desc": "Manually trigger form reset",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object",
+          "desc_cn": "JS事件对象"
+        }
+      },
+      "desc_cn": "手动触发表单重置"
+    },
+    "getValidationComponents": {
+      "desc": "Get array of children vue components that support validation",
+      "returns": {
+        "type": "Array",
+        "desc": "Vue components that support Quasar validation API",
+        "desc_cn": "支持Quasar验证API的Vue组件"
+      },
+      "desc_cn": "获取支持验证的子vue组件数组"
+    }
+  }
+}

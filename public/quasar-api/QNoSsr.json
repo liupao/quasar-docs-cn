@@ -1,0 +1,41 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/no-ssr"
+  },
+  "props": {
+    "tag": {
+      "type": "String",
+      "desc": "HTML tag to use",
+      "examples": [
+        "div",
+        "span",
+        "div",
+        "span",
+        "blockquote"
+      ],
+      "category": "content",
+      "default": "div",
+      "required": false
+    },
+    "placeholder": {
+      "type": "String",
+      "desc": "Text to display on server-side render (unless using 'placeholder' slot)",
+      "examples": [
+        "This is server-side only"
+      ],
+      "category": "content",
+      "desc_cn": "要在服务器端渲染上显示的文本（除非使用“placeholder”槽）"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot is used to render content on client-side",
+      "desc_cn": "默认槽用于在客户端呈现内容"
+    },
+    "placeholder": {
+      "desc": "Slot used as placeholder on server-side render, which gets replaced by the default slot on client-side; overrides 'placeholder' prop",
+      "desc_cn": "在服务器端渲染中用作占位符的插槽，将被客户端的默认插槽替换；覆盖“placeholder”属性"
+    }
+  }
+}

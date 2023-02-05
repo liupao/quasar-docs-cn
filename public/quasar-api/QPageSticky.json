@@ -1,0 +1,48 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/layout/page-sticky"
+  },
+  "props": {
+    "position": {
+      "type": "String",
+      "desc": "Page side/corner to stick to",
+      "default": "bottom-right",
+      "values": [
+        "top-right",
+        "top-left",
+        "bottom-right",
+        "bottom-left",
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "category": "position",
+      "required": false,
+      "desc_cn": "要粘贴的页边/页角"
+    },
+    "offset": {
+      "type": "Array",
+      "desc": "An array of two numbers to offset the component horizontally and vertically in pixels",
+      "examples": [
+        "[8, 8]",
+        "[5, 10]"
+      ],
+      "category": "position",
+      "desc_cn": "以像素为单位水平和垂直偏移分量的两个数字的数组"
+    },
+    "expand": {
+      "type": "Boolean",
+      "desc": "By default the component shrinks to content's size; By using this prop you make the component fully expand horizontally or vertically, based on 'position' prop",
+      "category": "content",
+      "desc_cn": "默认情况下，组件缩小到内容的大小；通过使用这个属性，你可以使组件完全展开水平或垂直，基于'position'属性"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

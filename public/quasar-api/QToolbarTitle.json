@@ -1,0 +1,20 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/toolbar"
+  },
+  "props": {
+    "shrink": {
+      "type": "Boolean",
+      "desc": "By default, QToolbarTitle is set to grow to the available space. However, you can reverse that with this prop",
+      "category": "behavior",
+      "desc_cn": "默认情况下，QToolbarTitle设置为增长到可用空间。不过，你可以用这个属性来逆转"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

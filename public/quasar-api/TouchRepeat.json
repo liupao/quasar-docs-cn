@@ -1,0 +1,167 @@
+{
+  "type": "directive",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-directives/touch-repeat"
+  },
+  "value": {
+    "type": "Function",
+    "desc": "Handler for touch-repeat (use a non-function to disable)",
+    "params": {
+      "details": {
+        "type": "Object",
+        "desc": "Event details",
+        "definition": {
+          "evt": {
+            "type": "Event",
+            "desc": "Original JS event Object",
+            "desc_cn": "原始JS事件对象"
+          },
+          "touch": {
+            "type": "Boolean",
+            "desc": "Triggered by a touch event",
+            "desc_cn": "由触摸事件触发"
+          },
+          "mouse": {
+            "type": "Boolean",
+            "desc": "Triggered by a mouse event",
+            "desc_cn": "由鼠标事件触发"
+          },
+          "keyboard": {
+            "type": "Boolean",
+            "desc": "Triggered by a keyboard event",
+            "desc_cn": "由键盘事件触发"
+          },
+          "position": {
+            "type": "Object",
+            "desc": "Event Position Object; Supplied ONLY if it's a touch or mouse event",
+            "definition": {
+              "top": {
+                "type": "Number",
+                "desc": "Vertical offset from top of window",
+                "desc_cn": "从窗口顶部的垂直偏移"
+              },
+              "left": {
+                "type": "Number",
+                "desc": "Horizontal offset from left of window",
+                "desc_cn": "从窗口左侧的水平偏移"
+              }
+            },
+            "desc_cn": "事件位置对象；仅当是触摸或鼠标事件时提供"
+          },
+          "keyCode": {
+            "type": "Number",
+            "desc": "Keycode; Supplied ONLY if it's a keyboard event",
+            "desc_cn": "键码；仅当是键盘事件时提供"
+          },
+          "duration": {
+            "type": "Number",
+            "desc": "How long it took to trigger the event (in milliseconds)",
+            "desc_cn": "触发事件所用的时间（毫秒）"
+          },
+          "repeatCount": {
+            "type": "Number",
+            "desc": "Handler called for nth time",
+            "desc_cn": "处理程序第n次调用"
+          },
+          "startTime": {
+            "type": "Number",
+            "desc": "Unix timestamp of the moment when event started; Equivalent to Date.now()",
+            "desc_cn": "事件开始时刻的Unix时间戳；相当于Date.now()"
+          }
+        },
+        "desc_cn": "活动详细信息"
+      }
+    },
+    "returns": null,
+    "examples": [
+      "v-touch-repeat=\"fnToCall\"",
+      "v-touch-repeat=\"void 0\""
+    ],
+    "desc_cn": "触摸重复处理程序（如果不是函数则表示禁用）"
+  },
+  "arg": {
+    "type": "String",
+    "desc": "String of numbers (at least one number) separated by ':' which defines the amount of time to wait for 1st handler call, 2nd, 3rd and so on; All subsequent calls will use last value as time to wait until triggering",
+    "default": "0:600:300",
+    "examples": [
+      "v-touch-repeat:0:400=\"fnToCall\""
+    ],
+    "required": false,
+    "desc_cn": "由“:”分隔的数字字符串（至少一个数字），用于定义等待第一个处理程序调用、第二个、第三个等的时间量；所有后续调用都将使用最后一个值作为等待触发的时间"
+  },
+  "modifiers": {
+    "capture": {
+      "type": "Boolean",
+      "desc": "Use capture for touchstart event",
+      "desc_cn": "使用touchstart事件捕获"
+    },
+    "mouse": {
+      "type": "Boolean",
+      "desc": "Listen for mouse events too",
+      "desc_cn": "也要侦听鼠标事件"
+    },
+    "mouseCapture": {
+      "type": "Boolean",
+      "desc": "Use capture for mousedown event",
+      "desc_cn": "对mousedown事件使用捕获"
+    },
+    "keyCapture": {
+      "type": "Boolean",
+      "desc": "Use capture for keydown event",
+      "desc_cn": "将捕获用于keydown事件"
+    },
+    "esc": {
+      "type": "Boolean",
+      "desc": "Catch ESC key",
+      "desc_cn": "按ESC键"
+    },
+    "tab": {
+      "type": "Boolean",
+      "desc": "Catch TAB key",
+      "desc_cn": "Catch TAB键"
+    },
+    "enter": {
+      "type": "Boolean",
+      "desc": "Catch ENTER key",
+      "desc_cn": "按回车键"
+    },
+    "space": {
+      "type": "Boolean",
+      "desc": "Catch SPACE key",
+      "desc_cn": "捕获空格键"
+    },
+    "up": {
+      "type": "Boolean",
+      "desc": "Catch UP arrow key",
+      "desc_cn": "捕获上箭头键"
+    },
+    "left": {
+      "type": "Boolean",
+      "desc": "Catch LEFT arrow key",
+      "desc_cn": "捕获左箭头键"
+    },
+    "right": {
+      "type": "Boolean",
+      "desc": "Catch RIGHT arrow key",
+      "desc_cn": "捕获右箭头键"
+    },
+    "down": {
+      "type": "Boolean",
+      "desc": "Catch DOWN key",
+      "desc_cn": "捕获下箭头键"
+    },
+    "delete": {
+      "type": "Boolean",
+      "desc": "Catch DELETE key",
+      "desc_cn": "捕获删除键"
+    },
+    "[keycode]": {
+      "type": "Number",
+      "desc": "Key code to catch",
+      "examples": [
+        "v-touch-repeat.68=\"fnToCall\""
+      ],
+      "desc_cn": "要捕获的键码"
+    }
+  }
+}

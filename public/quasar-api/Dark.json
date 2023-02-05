@@ -1,0 +1,55 @@
+{
+  "type": "plugin",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/quasar-plugins/dark"
+  },
+  "injection": "$q.dark",
+  "props": {
+    "isActive": {
+      "type": "Boolean",
+      "desc": "Is Dark mode active?",
+      "reactive": true,
+      "desc_cn": "暗模式是否激活？"
+    },
+    "mode": {
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "desc": "Dark mode configuration (not status)",
+      "values": [
+        "auto",
+        "(Boolean) true",
+        "(Boolean) false"
+      ],
+      "reactive": true,
+      "desc_cn": "暗模式配置（非状态）"
+    }
+  },
+  "methods": {
+    "set": {
+      "desc": "Set dark mode status",
+      "params": {
+        "status": {
+          "type": [
+            "Boolean",
+            "String"
+          ],
+          "desc": "Dark mode status",
+          "values": [
+            "(Boolean) true",
+            "(Boolean) false",
+            "auto"
+          ],
+          "required": true,
+          "desc_cn": "暗模式状态"
+        }
+      },
+      "desc_cn": "设置暗模式状态"
+    },
+    "toggle": {
+      "desc": "Toggle dark mode status",
+      "desc_cn": "切换暗模式状态"
+    }
+  }
+}

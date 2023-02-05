@@ -1,0 +1,33 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/card"
+  },
+  "props": {
+    "horizontal": {
+      "type": "Boolean",
+      "desc": "Display a horizontal section (will have no padding and can contain other QCardSection)",
+      "category": "content",
+      "desc_cn": "显示水平部分（没有填充，可以包含其他QCardSection）"
+    },
+    "tag": {
+      "type": "String",
+      "desc": "HTML tag to use",
+      "examples": [
+        "div",
+        "span",
+        "div",
+        "form"
+      ],
+      "category": "content",
+      "default": "div",
+      "required": false
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

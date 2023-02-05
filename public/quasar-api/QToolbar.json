@@ -1,0 +1,20 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/toolbar"
+  },
+  "props": {
+    "inset": {
+      "type": "Boolean",
+      "desc": "Apply an inset to content (useful for subsequent toolbars)",
+      "category": "content",
+      "desc_cn": "向内容嵌入空白（对后续工具栏有用）"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  }
+}

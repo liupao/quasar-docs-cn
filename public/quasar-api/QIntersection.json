@@ -1,0 +1,113 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/intersection"
+  },
+  "props": {
+    "tag": {
+      "type": "String",
+      "desc": "HTML tag to use",
+      "examples": [
+        "div",
+        "span",
+        "div",
+        "span",
+        "blockquote"
+      ],
+      "category": "content",
+      "default": "div",
+      "required": false
+    },
+    "once": {
+      "type": "Boolean",
+      "desc": "Get triggered only once",
+      "category": "behavior",
+      "desc_cn": "只触发一次"
+    },
+    "ssr-prerender": {
+      "type": "Boolean",
+      "desc": "Pre-render content on server side if using SSR (use it to pre-render above the fold content)",
+      "category": "behavior",
+      "desc_cn": "如果使用SSR，则在服务器端预渲染内容（使用它在折叠内容上方预渲染）"
+    },
+    "root": {
+      "type": "Element",
+      "desc": "[Intersection API root prop] Lets you define an alternative to the viewport as your root (through its DOM element); It is important to keep in mind that root needs to be an ancestor of the observed element",
+      "examples": [
+        "$refs.myTable.$el",
+        "getElementById(\"myTable\")"
+      ],
+      "category": "behavior",
+      "desc_cn": "[交叉API的root属性]允许您定义可替代视区的元素作为根元素（通过其DOM元素）；必须记住，root必须是被观察元素的祖先"
+    },
+    "margin": {
+      "type": "String",
+      "desc": "[Intersection API rootMargin prop] Allows you to specify the margins for the root, effectively allowing you to either grow or shrink the area used for intersections",
+      "examples": [
+        "-20px 0px",
+        "10px 20px 30px 40px"
+      ],
+      "category": "behavior",
+      "desc_cn": "[交叉点API的rootMargin属性]允许您指定根元素的边距，有效地允许您增加或缩小用于交叉点的区域"
+    },
+    "threshold": {
+      "type": [
+        "Array",
+        "Number"
+      ],
+      "desc": "[Intersection API threshold prop] Threshold(s) at which to trigger, specified as a ratio, or list of ratios, of (visible area / total area) of the observed element",
+      "examples": [
+        "[ 0, 0.25, 0.5, 0.75, 1 ]",
+        ":threshold=\"1\""
+      ],
+      "category": "behavior",
+      "desc_cn": "[交叉点API的threshold属性]要触发的阈值，指定为观察元素（可见面积/总面积）的比率或比率列表"
+    },
+    "transition": {
+      "type": "String",
+      "desc": "One of Quasar's embedded transitions",
+      "examples": [
+        "fade",
+        "slide-down"
+      ],
+      "category": "behavior",
+      "desc_cn": "Quasar的嵌入式过渡动画之一"
+    },
+    "transition-duration": {
+      "type": [
+        "String",
+        "Number"
+      ],
+      "desc": "Transition duration (in milliseconds, without unit)",
+      "default": 300,
+      "category": "behavior",
+      "addedIn": "v2.3.1",
+      "required": false
+    },
+    "disable": {
+      "type": "Boolean",
+      "desc": "Disable visibility observable (content will remain as it was, visible or hidden)",
+      "category": "behavior",
+      "desc_cn": "禁用可见性可观察性（内容将保持原样，可见或隐藏）"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Default slot in the devland unslotted content of the component",
+      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+    }
+  },
+  "events": {
+    "visibility": {
+      "desc": "Fires when visibility changes",
+      "params": {
+        "isVisible": {
+          "type": "Boolean",
+          "desc": "Visibility status (true/false)",
+          "desc_cn": "可见性状态（真/假）"
+        }
+      },
+      "desc_cn": "可见性更改时激发"
+    }
+  }
+}

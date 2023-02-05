@@ -1,0 +1,73 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/icon"
+  },
+  "props": {
+    "size": {
+      "type": "String",
+      "desc": "Size in CSS units, including unit name or standard size name (xs|sm|md|lg|xl)",
+      "examples": [
+        "16px",
+        "2rem",
+        "xs",
+        "md"
+      ],
+      "category": "style",
+      "desc_cn": "以CSS单位表示的大小，包括单位名称或标准大小名称（xs | sm | md | lg | xl）"
+    },
+    "tag": {
+      "type": "String",
+      "desc": "HTML tag to render, unless no icon is supplied or it's an svg icon",
+      "examples": [
+        "div",
+        "span",
+        "div",
+        "i"
+      ],
+      "category": "content",
+      "default": "i",
+      "required": false,
+      "desc_cn": "要呈现的HTML标记，除非未提供图标或它是svg图标"
+    },
+    "name": {
+      "type": "String",
+      "desc": "Icon name following Quasar convention; Make sure you have the icon library installed unless you are using 'img:' prefix; If 'none' (String) is used as value then no icon is rendered (but screen real estate will still be used for it)",
+      "examples": [
+        "map",
+        "ion-add",
+        "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
+        "img:path/to/some_image.png"
+      ],
+      "category": "model"
+    },
+    "color": {
+      "type": "String",
+      "desc": "Color name for component from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+    },
+    "left": {
+      "type": "Boolean",
+      "desc": "Useful if icon is on the left side of something: applies a standard margin on the right side of Icon",
+      "category": "content",
+      "desc_cn": "如果图标位于某个对象的左侧，则很有用：在图标的右侧应用标准边距"
+    },
+    "right": {
+      "type": "Boolean",
+      "desc": "Useful if icon is on the right side of something: applies a standard margin on the left side of Icon",
+      "category": "content",
+      "desc_cn": "如果图标位于某个对象的右侧，则很有用：在图标的左侧应用标准边距"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Suggestions: QTooltip or QMenu",
+      "desc_cn": "建议：QTooltip或QMenu"
+    }
+  }
+}

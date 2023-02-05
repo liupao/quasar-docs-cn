@@ -1,0 +1,68 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-components/separator"
+  },
+  "props": {
+    "dark": {
+      "type": "Boolean",
+      "desc": "Notify the component that the background is a dark color",
+      "category": "style",
+      "desc_cn": "通知组件背景为深色"
+    },
+    "spaced": {
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "desc": "If set to true, the corresponding direction margins will be set to 8px; It can also be set to a size in CSS units, including unit name, or one of the xs|sm|md|lg|xl predefined sizes",
+      "default": "md",
+      "examples": [
+        "12px",
+        "sm",
+        "md"
+      ],
+      "category": "content",
+      "required": false,
+      "desc_cn": "如果设置为真，则相应的方向边距将设置为8px；它还可以设置为CSS单位的大小，包括单位名称，或xs | sm | md | lg | xl预定义大小之一"
+    },
+    "inset": {
+      "type": [
+        "Boolean",
+        "String"
+      ],
+      "desc": "If set to Boolean true, the left and right margins will be set to 16px. If set to 'item' then it will match a QItem's design. If set to 'item-thumbnail' then it will match the design of a QItem with a thumbnail on the left side",
+      "examples": [
+        "item",
+        "item-thumbnail"
+      ],
+      "category": "content"
+    },
+    "vertical": {
+      "type": "Boolean",
+      "desc": "If set to true, the separator will be vertical.",
+      "category": "content",
+      "desc_cn": "如果设置为true，分隔符将是垂直的。"
+    },
+    "size": {
+      "type": "String",
+      "desc": "Size in CSS units, including unit name",
+      "examples": [
+        "16px",
+        "2rem"
+      ],
+      "category": "style",
+      "desc_cn": "以CSS单位表示的大小，包括单位名称"
+    },
+    "color": {
+      "type": "String",
+      "desc": "Color name for component from the Quasar Color Palette",
+      "examples": [
+        "primary",
+        "teal-10"
+      ],
+      "category": "style",
+      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+    }
+  }
+}

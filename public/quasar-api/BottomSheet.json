@@ -1,0 +1,269 @@
+{
+  "type": "plugin",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/quasar-plugins/bottom-sheet"
+  },
+  "injection": "$q.bottomSheet",
+  "methods": {
+    "create": {
+      "desc": "Creates an ad-hoc Bottom Sheet; Same as calling $q.bottomSheet(...)",
+      "params": {
+        "opts": {
+          "type": "Object",
+          "required": true,
+          "definition": {
+            "class": {
+              "type": [
+                "String",
+                "Array",
+                "Object"
+              ],
+              "tsType": "VueClassProp",
+              "desc": "CSS Class name to apply to the Dialog's QCard",
+              "examples": [
+                "my-class"
+              ],
+              "desc_cn": "应用于对话框QCard的CSS类名"
+            },
+            "style": {
+              "type": [
+                "String",
+                "Array",
+                "Object"
+              ],
+              "tsType": "VueStyleProp",
+              "desc": "CSS style to apply to the Dialog's QCard",
+              "examples": [
+                "border: 2px solid black"
+              ],
+              "desc_cn": "应用于对话框QCard的CSS样式"
+            },
+            "title": {
+              "type": "String",
+              "desc": "Title",
+              "examples": [
+                "Share"
+              ],
+              "desc_cn": "标题"
+            },
+            "message": {
+              "type": "String",
+              "desc": "Message",
+              "examples": [
+                "Please select how to share"
+              ],
+              "desc_cn": "信息"
+            },
+            "actions": {
+              "type": "Array",
+              "desc": "Array of Objects, each Object defining an action",
+              "definition": {
+                "classes": {
+                  "type": [
+                    "String",
+                    "Array",
+                    "Object"
+                  ],
+                  "tsType": "VueClassProp",
+                  "desc": "CSS classes for this action",
+                  "examples": [
+                    "my-class"
+                  ],
+                  "desc_cn": "此操作的CSS类"
+                },
+                "icon": {
+                  "type": "String",
+                  "desc": "Icon name following Quasar convention; Make sure you have the icon library installed unless you are using 'img:' prefix; If 'none' (String) is used as value then no icon is rendered (but screen real estate will still be used for it)",
+                  "examples": [
+                    "map",
+                    "ion-add",
+                    "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
+                    "img:path/to/some_image.png"
+                  ],
+                  "category": "content"
+                },
+                "img": {
+                  "type": "String",
+                  "desc": "Path to an image for this action",
+                  "examples": [
+                    "(public folder) img/something.png",
+                    "(relative path format) :src=\"require('./my_img.jpg')\"",
+                    "(URL) https://some-site.net/some-img.gif"
+                  ],
+                  "desc_cn": "此操作的图像路径"
+                },
+                "avatar": {
+                  "type": "Boolean",
+                  "desc": "Display img as avatar (round borders)",
+                  "desc_cn": "将img显示为头像（圆形边框）"
+                },
+                "label": {
+                  "type": [
+                    "String",
+                    "Number"
+                  ],
+                  "desc": "Action label",
+                  "examples": [
+                    "Facebook"
+                  ],
+                  "desc_cn": "操作标签"
+                },
+                "...": {
+                  "type": "Any",
+                  "desc": "Any other custom props"
+                }
+              },
+              "desc_cn": "对象数组，每个对象定义一个操作"
+            },
+            "grid": {
+              "type": "Boolean",
+              "desc": "Display actions as a grid instead of as a list",
+              "desc_cn": "将操作显示为网格而不是列表"
+            },
+            "dark": {
+              "type": "Boolean",
+              "desc": "Apply dark mode",
+              "category": "style",
+              "desc_cn": "应用暗模式"
+            },
+            "seamless": {
+              "type": "Boolean",
+              "desc": "Put Bottom Sheet into seamless mode; Does not use a backdrop so user is able to interact with the rest of the page too",
+              "desc_cn": "设置底部对话框为seamless模式；不使用背景，因此用户也可以与页面的其他部分进行交互"
+            },
+            "persistent": {
+              "type": "Boolean",
+              "desc": "User cannot dismiss Bottom Sheet if clicking outside of it or hitting ESC key",
+              "desc_cn": "如果在底部对话框外单击或按ESC键，则用户无法关闭底部对话框"
+            }
+          },
+          "desc": "Bottom Sheet options",
+          "desc_cn": "底部对话框选项"
+        }
+      },
+      "returns": {
+        "type": "Object",
+        "desc": "Chainable Object",
+        "tsType": "DialogChainObject",
+        "autoDefineTsType": true,
+        "definition": {
+          "onOk": {
+            "type": "Function",
+            "required": true,
+            "desc": "Receives a Function param to tell what to do when OK is pressed / option is selected",
+            "params": {
+              "callbackFn": {
+                "type": "Function",
+                "desc": "Tell what to do",
+                "required": true,
+                "params": {
+                  "payload": {
+                    "type": "Any",
+                    "desc": "The payload if called onDialogOK with the parameter or emitted one with the 'ok' event",
+                    "required": false,
+                    "examples": [
+                      "'Quasar Framework'",
+                      "[ 1, 2, 6, 3 ]",
+                      "{ book: { id: 1, name: 'Lorem Ipsum' }, user: { name: 'Lorem J. Ipsum', role: 'admin' } }"
+                    ]
+                  }
+                },
+                "returns": null,
+                "examples": [
+                  "() => console.log('OK!')",
+                  "(payload) => Notify.create({ type: 'positive', message: `Successfully saved '${payload.book.name}' book!` })"
+                ],
+                "desc_cn": "告诉我该怎么做"
+              }
+            },
+            "returns": {
+              "type": "Object",
+              "desc": "Chained Object",
+              "tsType": "DialogChainObject",
+              "desc_cn": "链式对象"
+            },
+            "desc_cn": "接收一个函数参数，告诉您在按下OK/选择选项时要做什么"
+          },
+          "onCancel": {
+            "type": "Function",
+            "required": true,
+            "desc": "Receives a Function as param to tell what to do when Cancel is pressed / dialog is dismissed",
+            "params": {
+              "callbackFn": {
+                "type": "Function",
+                "desc": "Tell what to do",
+                "required": true,
+                "params": null,
+                "returns": null,
+                "desc_cn": "告诉我该怎么做"
+              }
+            },
+            "returns": {
+              "type": "Object",
+              "desc": "Chained Object",
+              "tsType": "DialogChainObject",
+              "desc_cn": "链式对象"
+            },
+            "desc_cn": "接收一个函数作为参数来告诉您当按下Cancel/取消对话框时要做什么"
+          },
+          "onDismiss": {
+            "type": "Function",
+            "required": true,
+            "desc": "Receives a Function param to tell what to do when the dialog is closed",
+            "params": {
+              "callbackFn": {
+                "type": "Function",
+                "desc": "Tell what to do",
+                "required": true,
+                "params": null,
+                "returns": null,
+                "desc_cn": "告诉我该怎么做"
+              }
+            },
+            "returns": {
+              "type": "Object",
+              "desc": "Chained Object",
+              "tsType": "DialogChainObject",
+              "desc_cn": "链式对象"
+            },
+            "desc_cn": "接收一个函数参数，以指示关闭对话框时要执行的操作"
+          },
+          "hide": {
+            "type": "Function",
+            "required": true,
+            "desc": "Hides the dialog when called",
+            "params": null,
+            "returns": {
+              "type": "Object",
+              "desc": "Chained Object",
+              "tsType": "DialogChainObject",
+              "desc_cn": "链式对象"
+            },
+            "desc_cn": "调用时隐藏对话框"
+          },
+          "update": {
+            "type": "Function",
+            "required": true,
+            "desc": "Updates the initial properties (given as create() param) except for 'component'",
+            "params": {
+              "opts": {
+                "type": "Object",
+                "required": true,
+                "desc": "Props (except 'component') which will overwrite the initial create() params; If create() was invoked with a custom dialog component then this param should contain the new componentProps"
+              }
+            },
+            "returns": {
+              "type": "Object",
+              "desc": "Chained Object",
+              "tsType": "DialogChainObject",
+              "desc_cn": "链式对象"
+            }
+          }
+        },
+        "desc_cn": "可链接对象"
+      },
+      "tsInjectionPoint": true,
+      "desc_cn": "创建特定的底部对话框；与调用$q.bottomSheet（…）相同"
+    }
+  }
+}

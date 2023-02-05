@@ -1,0 +1,28 @@
+{
+  "type": "directive",
+  "meta": {
+    "docsUrl": "https://v2.quasar.dev/vue-directives/scroll"
+  },
+  "value": {
+    "type": "Function",
+    "desc": "Function to call when scrolling occurs (use a non-function to disable)",
+    "params": {
+      "verticalScrollPosition": {
+        "type": "Number",
+        "desc": "Scroll offset from top",
+        "desc_cn": "从顶部滚动偏移"
+      },
+      "horizontalScrollPosition": {
+        "type": "Number",
+        "desc": "Scroll offset from left",
+        "desc_cn": "向左滚动偏移"
+      }
+    },
+    "returns": null,
+    "examples": [
+      "v-scroll=\"fnToCall\"",
+      "v-scroll=\"void 0\""
+    ],
+    "desc_cn": "发生滚动时要调用的函数（如果为非函数则表示禁用）"
+  }
+}
