@@ -1,5 +1,6 @@
 require('./search/index')
 
+/* 此脚本用于检查 api 的翻译，是否有更新或遗漏 */
 const fs = require('fs/promises')
 const path = require('path')
 
@@ -23,7 +24,7 @@ async function run () {
       continue
     }
 
-    transformer(origin, oldApi, originPath)
+    transformer(origin, oldApi, oldFilePath)
     await fs.mkdir(path.dirname(tarPath), {
       recursive: true
     })

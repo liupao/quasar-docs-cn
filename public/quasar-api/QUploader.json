@@ -8,6 +8,7 @@
       "type": "Function",
       "tsType": "QUploaderFactoryFn",
       "desc": "Function which should return an Object or a Promise resolving with an Object; For best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "返回一个对象或者包裹一个对象的 Promise 的函数；为了更好的性能，请在作用域中引用它，不要内联定义它",
       "params": {
         "files": {
           "type": "Array",
@@ -21,10 +22,9 @@
           "Promise<any>"
         ],
         "desc": "Optional configuration for the upload process; You can override QUploader props in this Object (url, method, headers, formFields, fieldName, withCredentials, sendRaw); Props of these Object can also be Functions with the form of (file[s]) => value",
-        "desc_cn": "上传过程的可选配置；您可以覆盖此对象中的QUploader属性（url、method、headers、formFields、fieldName、withCredentials、sendRaw）；这些对象的属性也可以是（file[s]）=>value形式的函数"
+        "desc_cn": "上传任务的可选配置项；您可以在此对象中重写 QUploader 的属性（url, method, headers, formFields, fieldName, withCredentials, sendRaw）；这些对象也可以是一个 (file[s]) => value 格式的函数"
       },
-      "category": "upload",
-      "desc_cn": "应该返回一个对象或一个Promise的函数；为了获得最佳性能，请从您的范围中引用它，而不要内联定义它"
+      "category": "upload"
     },
     "url": {
       "type": [
@@ -32,6 +32,7 @@
         "Function"
       ],
       "desc": "URL or path to the server which handles the upload. Takes String or factory function, which returns String. Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "接收上传文件的服务器 url 地址，可以传入字符串或者返回一个字符串的函数。如果使用一个函数，函数会在上传之前被调用，为了跟好的性能，请在作用域中引用，不要内联定义它",
       "examples": [
         "https://example.com/path",
         "files => `https://example.com?count=${files.length}`"
@@ -39,15 +40,16 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "String",
-        "desc": "URL or path to the server which handles the upload"
+        "desc": "URL or path to the server which handles the upload",
+        "desc_cn": "接收上传文件的服务器 url 地址"
       },
-      "category": "upload",
-      "desc_cn": "处理上传的服务器的URL或路径。接受String或factory函数，后者返回String。函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "category": "upload"
     },
     "method": {
       "type": [
@@ -56,6 +58,7 @@
       ],
       "default": "POST",
       "desc": "HTTP method to use for upload; Takes String or factory function which returns a String; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "上传请求使用的 HTTP 方法，可以传入字符串或者返回一个字符串的函数。如果使用一个函数，函数会在上传之前被调用，为了跟好的性能，请在作用域中引用，不要内联定义它",
       "values": [
         "POST",
         "PUT"
@@ -67,16 +70,17 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "String",
-        "desc": "HTTP method to use for upload"
+        "desc": "HTTP method to use for upload",
+        "desc_cn": "上传请求使用的 HTTP 方法"
       },
       "category": "upload",
-      "required": false,
-      "desc_cn": "用于上传的HTTP方法；获取字符串或返回字符串的工厂函数；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "required": false
     },
     "field-name": {
       "type": [
@@ -84,6 +88,7 @@
         "Function"
       ],
       "desc": "Field name for each file upload; This goes into the following header: 'Content-Disposition: form-data; name=\"__HERE__\"; filename=\"somefile.png\"; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "每个上传文件的名称字段，会被传入以下 header 中：'Content-Disposition: form-data; name=\"__HERE__\"; filename=\"somefile.png\"。为了跟好的性能，请在作用域中引用，不要内联定义它",
       "default": "(file) => file.name",
       "examples": [
         "backgroundFile",
@@ -92,16 +97,17 @@
       "params": {
         "files": {
           "type": "File",
-          "desc": "The current file being processed"
+          "desc": "The current file being processed",
+          "desc_cn": "当前处理的文件"
         }
       },
       "returns": {
         "type": "String",
-        "desc": "Field name for the current file upload"
+        "desc": "Field name for the current file upload",
+        "desc_cn": "当前处理的文件的名称"
       },
       "category": "upload",
-      "required": false,
-      "desc_cn": "每个上传文件的字段名；这将进入以下头部（header）：“Content-Disposition: form-data; name=\"__HERE__\"; filename=\"somefile.png\"”；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "required": false
     },
     "headers": {
       "type": [
@@ -109,27 +115,28 @@
         "Function"
       ],
       "desc": "Array or a factory function which returns an array; Array consists of objects with header definitions; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "一个数组，或者返回一个数组的函数，数组中包含 header 的定义对象。如果使用一个函数，函数会在上传之前被调用，为了跟好的性能，请在作用域中引用，不要内联定义它",
       "definition": {
         "name": {
           "type": "String",
           "required": true,
           "desc": "Header name",
+          "desc_cn": "Header 名称",
           "examples": [
             "Content-Type",
             "Accept",
             "Cache-Control"
-          ],
-          "desc_cn": "头部名称"
+          ]
         },
         "value": {
           "type": "String",
           "required": true,
           "desc": "Header value",
+          "desc_cn": "Header 的值",
           "examples": [
             "application/json",
             "no-cache"
-          ],
-          "desc_cn": "头部值"
+          ]
         }
       },
       "examples": [
@@ -140,15 +147,16 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "String",
-        "desc": "An array consisting of objects with header definitions"
+        "desc": "An array consisting of objects with header definitions",
+        "desc_cn": "一个包含 header 定义的数组"
       },
-      "category": "upload",
-      "desc_cn": "数组或返回数组的工厂函数；数组由具有头部定义的对象组成；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "category": "upload"
     },
     "form-fields": {
       "type": [
@@ -156,24 +164,25 @@
         "Function"
       ],
       "desc": "Array or a factory function which returns an array; Array consists of objects with additional fields definitions (used by Form to be uploaded); Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "一个数组或者返回一个数组的函数，数组中包含表单数据对象的定义（随着表单提交）。如果使用一个函数，函数会在上传之前被调用，为了跟好的性能，请在作用域中引用，不要内联定义它",
       "definition": {
         "name": {
           "type": "String",
           "required": true,
           "desc": "Field name",
+          "desc_cn": "字段的名字",
           "examples": [
             "Some field"
-          ],
-          "desc_cn": "字段名称"
+          ]
         },
         "value": {
           "type": "String",
           "required": true,
           "desc": "Field value",
+          "desc_cn": "字段的值",
           "examples": [
             "some-value"
-          ],
-          "desc_cn": "字段值"
+          ]
         }
       },
       "examples": [
@@ -184,15 +193,16 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "String",
-        "desc": "An array consists of objects with additional fields definitions (used by Form to be uploaded)"
+        "desc": "An array consists of objects with additional fields definitions (used by Form to be uploaded)",
+        "desc_cn": "一个数组，包含附加字段的定义（会随着表单被提交）"
       },
-      "category": "upload",
-      "desc_cn": "数组或返回数组的工厂函数；数组由具有附加字段定义的对象组成（由要上传的窗体使用）；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "category": "upload"
     },
     "with-credentials": {
       "type": [
@@ -200,6 +210,7 @@
         "Function"
       ],
       "desc": "Sets withCredentials to true on the XHR that manages the upload; Takes boolean or factory function for Boolean; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "上传时将 XHR 的 withCredentials 设置为 true。可以传入一个布尔值或者返回一个布尔值的函数。如果使用一个函数，函数会在上传之前被调用，为了跟好的性能，请在作用域中引用，不要内联定义它",
       "examples": [
         "with-credentials",
         ":with-credentials=\"files => ...\""
@@ -207,15 +218,16 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "Boolean",
-        "desc": "If true, withCredentials will be set to true on the XHR that manages the upload"
+        "desc": "If true, withCredentials will be set to true on the XHR that manages the upload",
+        "desc_cn": "如果为 true，上传时将 XHR 的 withCredentials 设置为 true"
       },
-      "category": "upload",
-      "desc_cn": "在管理上传的XHR上将withCredentials设置为true；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "category": "upload"
     },
     "send-raw": {
       "type": [
@@ -223,6 +235,7 @@
         "Function"
       ],
       "desc": "Send raw files without wrapping into a Form(); Takes boolean or factory function for Boolean; Function is called right before upload; If using a function then for best performance, reference it from your scope and do not define it inline",
+      "desc_cn": "发送原始文件而不包装成 Form()；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它",
       "examples": [
         "send-raw",
         ":send-raw=\"files => ...\""
@@ -230,15 +243,16 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "Boolean",
-        "desc": "If true, raw files will get sent without wrapping into a Form()"
+        "desc": "If true, raw files will get sent without wrapping into a Form()",
+        "desc_cn": "如果为 true，则发送时不会通过 Form() 包装"
       },
-      "category": "upload",
-      "desc_cn": "发送原始文件而不包装成Form()；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "category": "upload"
     },
     "batch": {
       "type": [
@@ -252,15 +266,17 @@
       "params": {
         "files": {
           "type": "Array",
-          "desc": "Uploaded files"
+          "desc": "Uploaded files",
+          "desc_cn": "上传的文件"
         }
       },
       "returns": {
         "type": "Boolean",
-        "desc": "If true, files will be uploaded in a batch (in one XHR request)"
+        "desc": "If true, files will be uploaded in a batch (in one XHR request)",
+        "desc_cn": "如果为 true，上传时将使用同一个线程中"
       },
       "category": "upload",
-      "desc_cn": "批量上传文件（在一个XHR请求中）；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "desc_cn": "使用一个线程上传所有文件（在一个 XHR 请求中）；取布尔值或工厂函数作为布尔值；函数在上传之前被调用；如果使用函数，那么为了获得最佳性能，请从作用域中引用它，而不要内联定义它"
     },
     "multiple": {
       "type": "Boolean",
