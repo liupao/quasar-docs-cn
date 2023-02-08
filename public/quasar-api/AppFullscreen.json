@@ -31,7 +31,6 @@
   "methods": {
     "request": {
       "desc": "Request going into Fullscreen (with optional target)",
-      "desc_cn": "请求进入全屏（可选择指定的目标元素）",
       "params": {
         "target": {
           "type": "Element",
@@ -45,21 +44,22 @@
       "returns": {
         "type": "Promise<void>",
         "desc": "A Promise which is resolved when transitioned to fullscreen mode. It gets rejected with 'Not capable' if the browser is not capable, and with an Error object if something else went wrong.",
-        "desc_cn": "成功进入全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能进入全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise",
         "examples": [
           "request().then(response => { ... }).catch(err => { ... })"
-        ]
-      }
+        ],
+        "desc_cn": "成功进入全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能进入全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise"
+      },
+      "desc_cn": "请求进入全屏（可选择指定的目标元素）"
     },
     "exit": {
       "desc": "Request exiting out of Fullscreen mode",
       "returns": {
         "type": "Promise<void>",
         "desc": "A Promise which is resolved when exited out of fullscreen mode. It gets rejected with 'Not capable' if the browser is not capable, and with an Error object if something else went wrong.",
-        "desc_cn": "成功退出全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能退出全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise",
         "examples": [
           "exit().then(response => { ... }).catch(err => { ... })"
-        ]
+        ],
+        "desc_cn": "成功退出全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能退出全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise"
       },
       "desc_cn": "请求退出全屏模式"
     },
@@ -78,10 +78,10 @@
       "returns": {
         "type": "Promise<void>",
         "desc": "A Promise which is resolved when transitioned to / exited out of fullscreen mode. It gets rejected with 'Not capable' if the browser is not capable, and with an Error object if something else went wrong.",
-        "desc_cn": "成功切换全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能切换全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise",
         "examples": [
           "toggle().then(response => { ... }).catch(err => { ... })"
-        ]
+        ],
+        "desc_cn": "成功切换全屏模式时返回一个 resolved 状态的 Promise，如果浏览器不能切换全屏模式则会返回一个带 'Not capable' 信息的 rejected 状态的 Promise，如果发生了错误，则返回一个带有 Error 对象的 rejected 状态的 Promise"
       },
       "desc_cn": "请求切换全屏模式（如果仅请求进入全屏模式，则可选目标元素）"
     }

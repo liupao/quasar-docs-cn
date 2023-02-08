@@ -10,7 +10,7 @@
       "type": "Boolean",
       "desc": "Does the app have user focus? Or the app runs in the background / another tab has the user's attention",
       "reactive": true,
-      "desc_cn": "应用程序是否被用户聚焦？或者在后台/其他选项卡中运行的应用程序有了用户的注意"
+      "desc_cn": "应用程序是否被用户聚焦，或者在运行在后台/其他选项卡中的应用程序被用户唤醒"
     }
   }
 }
