@@ -251,7 +251,7 @@
                 "type": "Object",
                 "required": true,
                 "desc": "Props (except 'component') which will overwrite the initial create() params; If create() was invoked with a custom dialog component then this param should contain the new componentProps",
-                "desc_cn": "重写调用 create() 函数时传入的初始配置项（除了 'component'）。如果 create() 是被自定义对话框组件触发的，那么参数中应该包含新的 componentProps"
+                "desc_cn": "重写调用 create() 函数时传入的初始配置项（除了 'component'）。如果 create() 是被自定义对话框组件触发的，那么参数中还应该包含新的 componentProps"
               }
             },
             "returns": {

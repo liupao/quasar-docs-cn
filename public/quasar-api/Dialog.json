@@ -206,13 +206,13 @@
                 "...QOptionGroupProps": {
                   "type": "Any",
                   "desc": "Any QOptionGroup props",
-                  "desc_cn": "可以是任何 QOptionGroup 的属性",
                   "examples": [
                     "color: 'deep-purple-4'",
                     "inline: true",
                     "dense: true",
                     "leftLabel: true"
-                  ]
+                  ],
+                  "desc_cn": "可以是任何 QOptionGroup 的属性"
                 },
                 "...nativeAttributes": {
                   "type": "Object",
@@ -382,16 +382,16 @@
                 "String"
               ],
               "desc": "Use custom dialog component; use along with 'componentProps' prop where possible",
-              "desc_cn" : "使用自定义的对话框组件；尽可能与 'componentProps' 属性一起使用",
               "examples": [
                 "CustomComponent",
                 "'custom-component'"
-              ]
+              ],
+              "desc_cn": "使用自定义的对话框组件；尽可能与 'componentProps' 属性一起使用"
             },
             "componentProps": {
               "type": "Object",
               "desc": "User defined props which will be forwarded to underlying custom component if 'component' prop is used",
-              "desc_cn":"用户自定义属性，如果使用了 'component' 属性，则将其转发到自定义对话框组件"
+              "desc_cn": "用户自定义属性，如果使用了 'component' 属性，则将其转发到自定义对话框组件"
             }
           },
           "desc": "Dialog options",
@@ -419,13 +419,13 @@
                   "payload": {
                     "type": "Any",
                     "desc": "The payload if called onDialogOK with the parameter or emitted one with the 'ok' event",
-                    "desc_cn": "调用 onDialogOK 或者 'ok' 事件被触发时带有的参数负载",
                     "required": false,
                     "examples": [
                       "'Quasar Framework'",
                       "[ 1, 2, 6, 3 ]",
                       "{ book: { id: 1, name: 'Lorem Ipsum' }, user: { name: 'Lorem J. Ipsum', role: 'admin' } }"
-                    ]
+                    ],
+                    "desc_cn": "调用 onDialogOK 或者 'ok' 事件被触发时带有的参数负载"
                   }
                 },
                 "returns": null,
@@ -509,7 +509,8 @@
               "opts": {
                 "type": "Object",
                 "required": true,
-                "desc": "Props (except 'component') which will overwrite the initial create() params; If create() was invoked with a custom dialog component then this param should contain the new componentProps"
+                "desc": "Props (except 'component') which will overwrite the initial create() params; If create() was invoked with a custom dialog component then this param should contain the new componentProps",
+                "desc_cn": "重写调用 create() 函数时传入的初始配置项（除了 'component'）。如果 create() 是被自定义对话框组件触发的，那么参数中还应该包含新的 componentProps"
               }
             },
             "returns": {
@@ -517,7 +518,8 @@
               "desc": "Chained Object",
               "tsType": "DialogChainObject",
               "desc_cn": "链式对象"
-            }
+            },
+            "desc_cn": "更新属性（调用 create() 函数时传入的配置项），除了 'component'"
           }
         },
         "desc_cn": "可链接对象"
