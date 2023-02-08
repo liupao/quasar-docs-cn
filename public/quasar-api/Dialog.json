@@ -23,7 +23,7 @@
               "examples": [
                 "my-class"
               ],
-              "desc_cn": "应用于对话框QCard的CSS类名"
+              "desc_cn": "应用于对话框 QCard 的 CSS 类名"
             },
             "style": {
               "type": [
@@ -36,7 +36,7 @@
               "examples": [
                 "border: 2px solid black"
               ],
-              "desc_cn": "应用于对话框QCard的CSS样式"
+              "desc_cn": "应用于对话框 QCard 的 CSS 类名"
             },
             "title": {
               "type": "String",
@@ -52,12 +52,12 @@
               "examples": [
                 "Are you certain you want to continue?"
               ],
-              "desc_cn": "一段带有更多信息(有关需要输入、选择或确认什么)的文本。"
+              "desc_cn": "一段带有更多信息（有关需要输入、选择或确认什么）的文本。"
             },
             "html": {
               "type": "Boolean",
               "desc": "Render title and message as HTML; This can lead to XSS attacks, so make sure that you sanitize the message first",
-              "desc_cn": "以HTML格式呈现标题和消息；这可能会导致XSS攻击，因此请确保先对消息进行安全处理"
+              "desc_cn": "以 HTML 格式呈现标题和消息；这可能会导致 XSS 攻击，因此请确保先对消息进行安全处理"
             },
             "position": {
               "type": "String",
@@ -71,7 +71,7 @@
               ],
               "default": "standard",
               "required": false,
-              "desc_cn": "对话框在屏幕上的位置。standard是居中的。"
+              "desc_cn": "对话框在屏幕上的位置。standard 是居中的。"
             },
             "prompt": {
               "type": "Object",
@@ -115,7 +115,7 @@
                     "desc": "The text passed validation or not",
                     "desc_cn": "文本是否通过验证"
                   },
-                  "desc_cn": "键入的内容有效吗？"
+                  "desc_cn": "键入的内容是否有效"
                 },
                 "...QInputProps": {
                   "type": "Any",
@@ -155,7 +155,7 @@
                   "examples": [
                     "[]"
                   ],
-                  "desc_cn": "选择的值（如果是radio或Array类型，则为String）"
+                  "desc_cn": "选择的值（如果是 radio 则为 String 类型，否则为 Array 类型）"
                 },
                 "type": {
                   "type": "String",
@@ -193,7 +193,7 @@
                         "[]",
                         "[ 'opt1', 'opt3' ]"
                       ],
-                      "desc_cn": "当前模型（如果是radio或Array类型，则为String）"
+                      "desc_cn": "当前模型 model（如果是 radio 则为 String 类型，否则为 Array 类型）"
                     }
                   },
                   "returns": {
@@ -201,11 +201,12 @@
                     "desc": "The selection passed validation or not",
                     "desc_cn": "选择是否通过验证"
                   },
-                  "desc_cn": "模型有效吗？"
+                  "desc_cn": "模型（model）是否有效吗"
                 },
                 "...QOptionGroupProps": {
                   "type": "Any",
                   "desc": "Any QOptionGroup props",
+                  "desc_cn": "可以是任何 QOptionGroup 的属性",
                   "examples": [
                     "color: 'deep-purple-4'",
                     "inline: true",
@@ -215,7 +216,8 @@
                 },
                 "...nativeAttributes": {
                   "type": "Object",
-                  "desc": "Any native attributes to pass to the inner QOptionGroup"
+                  "desc": "Any native attributes to pass to the inner QOptionGroup",
+                  "desc_cn": "传递给内部 QOptionGroup 的原生属性"
                 }
               },
               "desc_cn": "用于创建选择表单内容的对象定义"
@@ -230,7 +232,7 @@
                 "spinner": {
                   "type": "Component",
                   "desc": "One of the QSpinners",
-                  "desc_cn": "QSpinners中的一个"
+                  "desc_cn": "QSpinners 中的一个"
                 },
                 "color": {
                   "type": "String",
@@ -240,10 +242,10 @@
                     "teal-10"
                   ],
                   "category": "style",
-                  "desc_cn": "组件的来自Quasar调色板的颜色名称"
+                  "desc_cn": "组件的颜色，来自 Quasar 调色板"
                 }
               },
-              "desc_cn": "显示Quasar旋转器（如果值为真，则使用默认值）；有助于传达某些事情在幕后发生的想法；提示：与persistent、ok:false和update()方法一起使用"
+              "desc_cn": "显示 Quasar 旋转加载器（如果值为 true，则使用默认值）；有助于传达某些事情在幕后发生的想法；提示：与 persistent、ok:false 和 update() 方法搭配使用"
             },
             "ok": {
               "type": [
@@ -256,10 +258,10 @@
                 "...props": {
                   "type": "Any",
                   "desc": "See QBtn for available props",
-                  "desc_cn": "有关可用的属性，请参见QBtn"
+                  "desc_cn": "有关可用的属性，请参见 QBtn"
                 }
               },
-              "desc_cn": "“确定”按钮的属性"
+              "desc_cn": "'OK' 按钮的属性"
             },
             "cancel": {
               "type": [
@@ -272,7 +274,7 @@
                 "...props": {
                   "type": "Any",
                   "desc": "See QBtn for available props",
-                  "desc_cn": "有关可用的属性，请参见QBtn"
+                  "desc_cn": "有关可用的属性，请参见 QBtn"
                 }
               },
               "desc_cn": "取消按钮的属性"
@@ -287,7 +289,7 @@
               ],
               "default": "ok",
               "required": false,
-              "desc_cn": "要聚焦的按钮，除非您还有“prompt”或“options”"
+              "desc_cn": "要聚焦的按钮，除非您还有 'prompt' 或 'options'"
             },
             "stackButtons": {
               "type": "Boolean",
@@ -302,38 +304,38 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "组件的来自Quasar调色板的颜色名称"
+              "desc_cn": "组件的颜色，来自 Quasar 调色板"
             },
             "dark": {
               "type": "Boolean",
               "desc": "Apply dark mode",
               "category": "style",
-              "desc_cn": "应用暗模式"
+              "desc_cn": "应用深色模式"
             },
             "persistent": {
               "type": "Boolean",
               "desc": "User cannot dismiss Dialog if clicking outside of it or hitting ESC key; Also, an app route change won't dismiss it",
-              "desc_cn": "如果用户在对话框外单击或按ESC键，则不能关闭对话框；此外，应用程序路由更改不会关闭它"
+              "desc_cn": "如果开启，则用户在底部对话框外单击或按 ESC 键，无法关闭对话框。此外，应用程序路由更改也不会关闭它"
             },
             "noEscDismiss": {
               "type": "Boolean",
               "desc": "User cannot dismiss Dialog by hitting ESC key; No need to set it if 'persistent' prop is also set",
-              "desc_cn": "用户不能按ESC键关闭对话框；如果还设置了“persistent”属性，则无需设置它"
+              "desc_cn": "用户不能按 ESC 键关闭对话框；如果还设置了 'persistent' 属性，则无需设置它"
             },
             "noBackdropDismiss": {
               "type": "Boolean",
               "desc": "User cannot dismiss Dialog by clicking outside of it; No need to set it if 'persistent' prop is also set",
-              "desc_cn": "用户不能通过单击对话框外部来关闭对话框；如果还设置了“persistent”属性，则无需设置它"
+              "desc_cn": "用户不能通过单击对话框外部来关闭对话框；如果还设置了 'persistent' 属性，则无需设置它"
             },
             "noRouteDismiss": {
               "type": "Boolean",
               "desc": "Changing route app won't dismiss Dialog; No need to set it if 'persistent' prop is also set",
-              "desc_cn": "更改路由应用程序不会关闭对话框；如果还设置了“persistent”属性，则无需设置它"
+              "desc_cn": "更改路由应用程序不会关闭对话框；如果还设置了 'persistent' 属性，则无需设置它"
             },
             "seamless": {
               "type": "Boolean",
               "desc": "Put Dialog into seamless mode; Does not use a backdrop so user is able to interact with the rest of the page too",
-              "desc_cn": "使对话进入无缝模式；不使用背景，因此用户也可以与页面的其他部分进行交互"
+              "desc_cn": "使对话进入无边框模式；不使用背景，因此用户也可以与页面的其他部分进行交互"
             },
             "maximized": {
               "type": "Boolean",
@@ -360,7 +362,7 @@
               "category": "transition",
               "default": "scale",
               "required": false,
-              "desc_cn": "Quasar嵌入的过渡动画之一"
+              "desc_cn": "Quasar 内置的过渡动画之一"
             },
             "transitionHide": {
               "type": "String",
@@ -372,7 +374,7 @@
               "category": "transition",
               "default": "scale",
               "required": false,
-              "desc_cn": "Quasar嵌入的过渡动画之一"
+              "desc_cn": "Quasar 内置的过渡动画之一"
             },
             "component": {
               "type": [
@@ -380,6 +382,7 @@
                 "String"
               ],
               "desc": "Use custom dialog component; use along with 'componentProps' prop where possible",
+              "desc_cn" : "使用自定义的对话框组件；尽可能与 'componentProps' 属性一起使用",
               "examples": [
                 "CustomComponent",
                 "'custom-component'"
@@ -387,7 +390,8 @@
             },
             "componentProps": {
               "type": "Object",
-              "desc": "User defined props which will be forwarded to underlying custom component if 'component' prop is used"
+              "desc": "User defined props which will be forwarded to underlying custom component if 'component' prop is used",
+              "desc_cn":"用户自定义属性，如果使用了 'component' 属性，则将其转发到自定义对话框组件"
             }
           },
           "desc": "Dialog options",
@@ -415,6 +419,7 @@
                   "payload": {
                     "type": "Any",
                     "desc": "The payload if called onDialogOK with the parameter or emitted one with the 'ok' event",
+                    "desc_cn": "调用 onDialogOK 或者 'ok' 事件被触发时带有的参数负载",
                     "required": false,
                     "examples": [
                       "'Quasar Framework'",
@@ -428,7 +433,7 @@
                   "() => console.log('OK!')",
                   "(payload) => Notify.create({ type: 'positive', message: `Successfully saved '${payload.book.name}' book!` })"
                 ],
-                "desc_cn": "告诉我该怎么做"
+                "desc_cn": "回调函数"
               }
             },
             "returns": {
@@ -437,7 +442,7 @@
               "tsType": "DialogChainObject",
               "desc_cn": "链式对象"
             },
-            "desc_cn": "接收一个函数作为参数来告诉您在按下OK/选择option时要做什么"
+            "desc_cn": "接收一个函数作为参数，在按下 OK/选择选项时回会被调用的回调函数"
           },
           "onCancel": {
             "type": "Function",
@@ -450,7 +455,7 @@
                 "required": true,
                 "params": null,
                 "returns": null,
-                "desc_cn": "告诉我该怎么做"
+                "desc_cn": "回调函数"
               }
             },
             "returns": {
@@ -459,7 +464,7 @@
               "tsType": "DialogChainObject",
               "desc_cn": "链式对象"
             },
-            "desc_cn": "接收一个函数作为参数来告诉当按下Cancel/取消对话框时要做什么"
+            "desc_cn": "接收一个函数作为参数，在按下 Cancel/取消对话框时回会被调用的回调函数"
           },
           "onDismiss": {
             "type": "Function",
@@ -472,7 +477,7 @@
                 "required": true,
                 "params": null,
                 "returns": null,
-                "desc_cn": "告诉我该怎么做"
+                "desc_cn": "回调函数"
               }
             },
             "returns": {
@@ -481,7 +486,7 @@
               "tsType": "DialogChainObject",
               "desc_cn": "链式对象"
             },
-            "desc_cn": "接收一个函数作为参数以指示关闭对话框时要执行的操作"
+            "desc_cn": "接收一个函数作为参数，关闭对话框时会被调用的回调函数"
           },
           "hide": {
             "type": "Function",
@@ -518,7 +523,7 @@
         "desc_cn": "可链接对象"
       },
       "tsInjectionPoint": true,
-      "desc_cn": "创建一个定制的对话框；与调用$q.dialog(...)相同"
+      "desc_cn": "创建一个定制的对话框；与调用 $q.dialog(...) 效果相同"
     }
   }
 }

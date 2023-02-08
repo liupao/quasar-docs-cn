@@ -93,7 +93,7 @@ function getNameDiv (prop, label, level, suffix, prefix) {
     })
   )
 
-  const suffixLabel = `${suffix ? ` : ${ suffix }` : ''}${prop.required ? ' - required!' : ''}`
+  const suffixLabel = `${suffix ? ` : ${ suffix }` : ''}${prop.required ? ' - 必填项！' : ''}`
   suffixLabel !== '' && child.push(
     h('div', { class: 'doc-api-entry__type q-ml-xs' }, suffixLabel)
   )

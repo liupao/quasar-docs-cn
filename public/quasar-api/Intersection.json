@@ -20,7 +20,7 @@
         "returns": {
           "type": "Boolean",
           "desc": "If you return Boolean false from the handler, the observer stops",
-          "desc_cn": "如果从处理程序返回Boolean false，观察者将停止"
+          "desc_cn": "如果从处理程序返回 false，则观察者将停止"
         },
         "params": {
           "entry": {

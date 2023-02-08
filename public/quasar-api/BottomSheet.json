@@ -266,7 +266,7 @@
         "desc_cn": "可链接对象"
       },
       "tsInjectionPoint": true,
-      "desc_cn": "创建特定的底部对话框；与调用 $q.bottomSheet（…）相同"
+      "desc_cn": "创建特定的底部对话框；与调用 $q.bottomSheet（…）效果相同"
     }
   }
 }

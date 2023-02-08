@@ -16,7 +16,7 @@
           "examples": [
             "userId"
           ],
-          "desc_cn": "Cookie名称"
+          "desc_cn": "Cookie 名称"
         }
       },
       "returns": {
@@ -28,9 +28,9 @@
         "examples": [
           "john12"
         ],
-        "desc_cn": "Cookie值；如果找不到cookie，则返回null"
+        "desc_cn": "Cookie 值；如果找不到 cookie，则返回 null"
       },
-      "desc_cn": "获取cookie"
+      "desc_cn": "获取 cookie"
     },
     "getAll": {
       "desc": "Get all cookies",
@@ -40,9 +40,9 @@
         "examples": [
           "{ userId: 'john12', XFrame: 'x534' }"
         ],
-        "desc_cn": "具有cookie名称（作为键）及其值的对象"
+        "desc_cn": "具有 cookie 名称（作为键）及其值的对象"
       },
-      "desc_cn": "获取所有Cookie"
+      "desc_cn": "获取所有 cookie"
     },
     "set": {
       "desc": "Set cookie",
@@ -54,7 +54,7 @@
           "examples": [
             "userId"
           ],
-          "desc_cn": "Cookie名称"
+          "desc_cn": "Cookie 名称"
         },
         "value": {
           "type": "String",
@@ -63,7 +63,7 @@
           "examples": [
             "john12"
           ],
-          "desc_cn": "Cookie值"
+          "desc_cn": "Cookie 值"
         },
         "options": {
           "type": "Object",
@@ -85,7 +85,7 @@
                 "1d 15m",
                 "1d 3h 5m 3s"
               ],
-              "desc_cn": "Cookie过期详细信息；如果指定为数字，则单位为天；如果指定为字符串，则可以是原始字符串化日期或Xd Xh Xm Xs格式（参见示例）"
+              "desc_cn": "Cookie 过期详细信息；如果指定为数字，则单位为天；如果指定为字符串，则可以是原始字符串化日期或 Xd Xh Xm Xs 格式（参见示例）"
             },
             "path": {
               "type": "String",
@@ -93,7 +93,7 @@
               "examples": [
                 "/accounts"
               ],
-              "desc_cn": "Cookie路径"
+              "desc_cn": "Cookie 路径"
             },
             "domain": {
               "type": "String",
@@ -101,7 +101,7 @@
               "examples": [
                 ".foo.com"
               ],
-              "desc_cn": "Cookie域"
+              "desc_cn": "Cookie 域"
             },
             "sameSite": {
               "type": "String",
@@ -115,12 +115,12 @@
             "httpOnly": {
               "type": "Boolean",
               "desc": "Is cookie Http Only?",
-              "desc_cn": "cookie仅限于Http吗？"
+              "desc_cn": "cookie 是否仅限于 Http"
             },
             "secure": {
               "type": "Boolean",
               "desc": "Is cookie secure? (https only)",
-              "desc_cn": "饼干安全吗(（仅限https）"
+              "desc_cn": "cookie 是否安全（仅限 https）"
             },
             "other": {
               "type": "String",
@@ -128,13 +128,13 @@
               "examples": [
                 "SomeNewCookieProp"
               ],
-              "desc_cn": "其他cookie选项的原始字符串；作为一个可能的新道具，目前还没有在类星体实施的最后手段"
+              "desc_cn": "其他 cookie 选项的原始字符串；作为一个可能的新属性，目前在 Quasar 中还未实现"
             }
           },
-          "desc_cn": "Cookie选项"
+          "desc_cn": "Cookie 选项"
         }
       },
-      "desc_cn": "设置cookie"
+      "desc_cn": "设置 cookie"
     },
     "has": {
       "desc": "Check if cookie exists",
@@ -146,15 +146,15 @@
           "examples": [
             "userId"
           ],
-          "desc_cn": "Cookie名称"
+          "desc_cn": "Cookie 名称"
         }
       },
       "returns": {
         "type": "Boolean",
         "desc": "Does cookie exists or not?",
-        "desc_cn": "cookie是否存在？"
+        "desc_cn": "cookie 是否存在"
       },
-      "desc_cn": "检查cookie是否存在"
+      "desc_cn": "检查 cookie 是否存在"
     },
     "remove": {
       "desc": "Remove a cookie",
@@ -166,7 +166,7 @@
           "examples": [
             "userId"
           ],
-          "desc_cn": "Cookie名称"
+          "desc_cn": "Cookie 名称"
         },
         "options": {
           "type": "Object",
@@ -178,7 +178,7 @@
               "examples": [
                 "/accounts"
               ],
-              "desc_cn": "Cookie路径"
+              "desc_cn": "Cookie 路径"
             },
             "domain": {
               "type": "String",
@@ -186,13 +186,13 @@
               "examples": [
                 ".foo.com"
               ],
-              "desc_cn": "Cookie域"
+              "desc_cn": "Cookie 域"
             }
           },
-          "desc_cn": "Cookie选项"
+          "desc_cn": "Cookie 选项"
         }
       },
-      "desc_cn": "删除cookie"
+      "desc_cn": "删除 cookie"
     },
     "parseSSR": {
       "desc": "For SSR usage only, and only on the global import (not on $q.cookies)",
@@ -201,16 +201,16 @@
           "type": "Object",
           "desc": "SSR Context Object",
           "required": true,
-          "desc_cn": "SSR上下文对象"
+          "desc_cn": "SSR 上下文对象"
         }
       },
       "returns": {
         "type": "Object",
         "tsType": "Cookies",
         "desc": "Cookie object (like $q.cookies) for SSR usage purposes",
-        "desc_cn": "用于SSR用途的Cookie对象（如$q.cookies）"
+        "desc_cn": "用于 SSR 用途的 Cookie 对象（如$q.cookies）"
       },
-      "desc_cn": "仅用于SSR，并且仅用于全局导入（不用于$q.cookies）"
+      "desc_cn": "仅用于 SSR，并且仅用于全局导入（不用于 $q.cookies）"
     }
   }
 }

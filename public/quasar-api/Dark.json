@@ -9,7 +9,7 @@
       "type": "Boolean",
       "desc": "Is Dark mode active?",
       "reactive": true,
-      "desc_cn": "暗模式是否激活？"
+      "desc_cn": "深色模式是否激活"
     },
     "mode": {
       "type": [
@@ -23,7 +23,7 @@
         "(Boolean) false"
       ],
       "reactive": true,
-      "desc_cn": "暗模式配置（非状态）"
+      "desc_cn": "深色模式配置（非状态）"
     }
   },
   "methods": {
@@ -42,14 +42,14 @@
             "auto"
           ],
           "required": true,
-          "desc_cn": "暗模式状态"
+          "desc_cn": "深色模式状态"
         }
       },
-      "desc_cn": "设置暗模式状态"
+      "desc_cn": "设置深色模式状态"
     },
     "toggle": {
       "desc": "Toggle dark mode status",
-      "desc_cn": "切换暗模式状态"
+      "desc_cn": "切换深色模式状态"
     }
   }
 }
