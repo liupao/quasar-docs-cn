@@ -9,7 +9,8 @@
     "definition": {
       "...props": {
         "type": "Object",
-        "desc": "QAjaxBar component props, EXCEPT for 'hijack-filter'"
+        "desc": "QAjaxBar component props, EXCEPT for 'hijack-filter'",
+        "desc_cn":"QAjaxBar 组件的属性，除了 'hijack-filter'"
       }
     }
   },
@@ -17,6 +18,7 @@
     "isActive": {
       "type": "Boolean",
       "desc": "Is LoadingBar active?",
+      "desc_cn": "LoadingBar 是否被激活",
       "reactive": true
     }
   },
@@ -29,10 +31,10 @@
           "desc": "Delay (in milliseconds) between bar progress increments",
           "default": 300,
           "required": false,
-          "desc_cn": "加载栏进度增量之间的延迟（毫秒）"
+          "desc_cn": "加载栏增加进度时的延迟（毫秒）"
         }
       },
-      "desc_cn": "通知加载栏您已开始一个后台活动"
+      "desc_cn": "激活加载栏，以通知您已开始一个后台活动"
     },
     "stop": {
       "desc": "Notify bar one background activity has finalized",
@@ -44,10 +46,10 @@
         "amount": {
           "type": "Number",
           "desc": "Amount (0.0 < x < 1.0) to increment with",
-          "desc_cn": "增加的量（0.0<x<1.0）"
+          "desc_cn": "增加的进度（0.0<x<1.0）"
         }
       },
-      "desc_cn": "手动触发加载栏进度增量"
+      "desc_cn": "手动触发加载栏进度更新"
     },
     "setDefaults": {
       "desc": "Set the inner QAjaxBar's props",
@@ -56,12 +58,13 @@
           "type": "Object",
           "required": true,
           "desc": "QAjaxBar component props",
+          "desc_cn": "QAjaxBar 组件属性",
           "examples": [
             "{ position: 'bottom', reverse: true }"
           ]
         }
       },
-      "desc_cn": "设置内部QAjaxBar的属性"
+      "desc_cn": "设置内部 QAjaxBar 的属性"
     }
   }
 }

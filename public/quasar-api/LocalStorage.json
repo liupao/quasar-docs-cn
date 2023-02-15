@@ -205,7 +205,7 @@
       "returns": {
         "type": "Boolean",
         "desc": "Tells if storage is empty or not",
-        "desc_cn": "指示存储是否为空"
+        "desc_cn": "存储是否为空"
       },
       "desc_cn": "确定存储是否有任何项"
     }
