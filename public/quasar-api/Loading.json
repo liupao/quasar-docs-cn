@@ -47,7 +47,7 @@
           "bg-amber text-black",
           "q-pa-xl"
         ],
-        "desc:": "自定义包裹内容元素的 CSS 类名"
+        "desc_cn": "自定义包裹内容元素的 CSS 类名"
       },
       "spinnerSize": {
         "type": "Number",

@@ -14,7 +14,7 @@
     "returns": {
       "type": "Boolean",
       "desc": "If you return Boolean false from the handler, the observer stops",
-      "desc_cn": "如果从处理程序返回Boolean false，观察者将停止"
+      "desc_cn": "如果从处理程序返回 false，观察者将停止"
     },
     "params": {
       "mutationList": {
@@ -29,32 +29,32 @@
               "attributes",
               "characterData"
             ],
-            "desc_cn": "变动类型"
+            "desc_cn": "突变类型"
           },
           "target": {
             "type": "Element",
             "desc": "The DOM element that the mutation affected, depending on the mutation type",
-            "desc_cn": "变动影响的DOM元素，取决于变动类型"
+            "desc_cn": "突变影响的 DOM 元素，取决于突变类型"
           },
           "addedNodes": {
             "type": "Array",
             "desc": "The NodeList of the nodes that have been added",
-            "desc_cn": "已添加节点的NodeList"
+            "desc_cn": "已添加节点的 NodeList"
           },
           "removedNodes": {
             "type": "Array",
             "desc": "The NodeList of the nodes that have been removed",
-            "desc_cn": "已删除节点的NodeList"
+            "desc_cn": "已删除节点的 NodeList"
           },
           "previousSibling": {
             "type": "Object",
             "desc": "The previous sibling of the added or removed nodes, or null",
-            "desc_cn": "添加或删除的节点的上一个同级节点，或为null"
+            "desc_cn": "添加或删除的节点的上一个同级节点，或为 null"
           },
           "nextSibling": {
             "type": "Object",
             "desc": "The next sibling of the added or removed nodes, or null",
-            "desc_cn": "添加或删除的节点的下一个同级节点，或为null"
+            "desc_cn": "添加或删除的节点的下一个同级节点，或为 null"
           },
           "attributeName": {
             "type": "String",
@@ -62,23 +62,23 @@
             "examples": [
               "some-attribute"
             ],
-            "desc_cn": "已更改属性的本地名称，或null"
+            "desc_cn": "已更改属性的本地名称，或 null"
           },
           "attributeNamespace": {
             "type": "String",
             "desc": "The namespace of the changed attribute, or null",
-            "desc_cn": "已更改属性的命名空间，或为null"
+            "desc_cn": "已更改属性的命名空间，或为 null"
           },
           "oldValue": {
             "type": "String",
             "desc": "Value depends on the mutation type; For attributes, it is the value of the changed attribute before the change; For characterData it is data of the changed node before the change; For childList it is null; Note that for this to work as expected, attributeOldValue or characterDataOldValue must be set",
-            "desc_cn": "值取决于变动类型；对于属性，它是更改前更改的属性的值；对于characterData，它是更改前更改节点的数据；childList为空；请注意，要使其按预期工作，必须设置attributeOldValue或characterDataOldValue"
+            "desc_cn": "值取决于突变类型；对于属性，它是更改前更改的属性的值；对于 characterData，它是更改前更改节点的数据；childList 为空；请注意，要使其按预期工作，必须设置 attributeOldValue 或 characterDataOldValue"
           }
         },
         "desc_cn": "MutationRecord项数组"
       }
     },
-    "desc_cn": "发生变动时调用的函数；强烈建议从vue组件范围引用它，否则指令更新周期将持续重新创建观察者严重影响性能"
+    "desc_cn": "发生突变时调用的函数；强烈建议从 vue 组件作用域中引用它，否则指令更新周期将持续重新创建观察者严重影响性能"
   },
   "modifiers": {
     "once": {
@@ -87,7 +87,7 @@
       "examples": [
         "v-mutation.once"
       ],
-      "desc_cn": "只调用处理程序一次，当触发第一个变动时停止监视"
+      "desc_cn": "只调用处理程序一次，当触发第一个突变时停止监视"
     },
     "childList": {
       "type": "Boolean",
@@ -95,7 +95,7 @@
       "examples": [
         "v-mutation.childList"
       ],
-      "desc_cn": "监视目标节点（如果还设置了“subtree”，则监视其子节点）以添加新的子节点或删除现有的子节点"
+      "desc_cn": "监视目标节点（如果还设置了 'subtree' ，则监视其子节点）以添加新的子节点或删除现有的子节点"
     },
     "subtree": {
       "type": "Boolean",
