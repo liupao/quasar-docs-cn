@@ -32,7 +32,7 @@
         "examples": [
           "btn"
         ],
-        "desc_cn": "组模型的当前值；当它与“name”相同时，就会触发变形"
+        "desc_cn": "组模型（model）的当前值；当它与 'name' 相同时，就会触发变形"
       },
       "duration": {
         "type": "Number",
@@ -56,7 +56,7 @@
           "ease-out"
         ],
         "required": false,
-        "desc_cn": "动画的计时功能（CSS格式）"
+        "desc_cn": "动画的缓动函数（CSS Timing function 格式）"
       },
       "fill": {
         "type": "String",
@@ -95,7 +95,7 @@
       "useCSS": {
         "type": "Boolean",
         "desc": "Use CSS animations instead of the Animation API",
-        "desc_cn": "使用CSS动画而不是动画API"
+        "desc_cn": "使用 CSS 动画而不是动画 API"
       },
       "hideFromClone": {
         "type": "Boolean",
@@ -117,14 +117,14 @@
         "desc": "If using tween it is the initial opacity of the initial element (will be animated to 0) - the initial element is placed on top of the final element",
         "default": 0.6,
         "required": false,
-        "desc_cn": "如果使用tween，它是初始元素的初始不透明度（将设置为0）-初始元素放置在最终元素的顶部"
+        "desc_cn": "如果使用 tween，它是初始元素的初始不透明度（将设置为0）-初始元素放置在最终元素的顶部"
       },
       "tweenToOpacity": {
         "type": "Number",
         "desc": "If using tween it is the initial opacity of the final element (will be animated to 1)",
         "default": 0.5,
         "required": false,
-        "desc_cn": "如果使用tween，它是最终元素的初始不透明度（将设置为1）"
+        "desc_cn": "如果使用 tween，它是最终元素的初始不透明度（将设置为1）"
       },
       "waitFor": {
         "type": [
@@ -139,7 +139,7 @@
           "transitionend"
         ],
         "required": false,
-        "desc_cn": "延迟动画开始的毫秒数，或者直到目标元素发出“transitionend”事件，或者直到Promise被解析（如果Promise被拒绝，变形将中止，但是“toggle function”已经被调用）"
+        "desc_cn": "延迟动画开始的毫秒数，或者直到目标元素发出 'transitionend' 事件，或者直到 Promise 被解析（如果 Promise 被拒绝，变形将中止，但此时 'toggle' 函数已经被调用）"
       },
       "onEnd": {
         "type": "Function",
@@ -153,7 +153,7 @@
               "to",
               "from"
             ],
-            "desc_cn": "如果变形在最终状态下完成，则为“to”；如果变形在初始状态下完成，则为“from”"
+            "desc_cn": "如果变形在最终状态下完成，则为 'to'；如果变形在初始状态下完成，则为 'from'"
           },
           "aborted": {
             "type": "Boolean",
@@ -183,33 +183,33 @@
       "v-morph:name:groupName:400:100=\"options\"",
       "v-morph:name:groupName:400:transitionend=\"options\""
     ],
-    "desc_cn": "x:x2:y:z，其中x是变形元素名称，x2是变形组，y是动画持续时间（以毫秒为单位），z是等待的时间量（以毫秒为单位）或“transitionend”字符串"
+    "desc_cn": "x:x2:y:z，其中 x 是变形元素名称，x2 是变形组，y 是动画持续时间（以毫秒为单位），z 是等待的时间量（以毫秒为单位）或 'transitionend' 字符串"
   },
   "modifiers": {
     "resize": {
       "type": "Boolean",
       "desc": "Use resize instead of scale transform for morph (forceResize option of the morph function)",
-      "desc_cn": "对变形使用调整大小而不是缩放改变（morph函数的forceResize选项）"
+      "desc_cn": "对变形使用调整大小而不是缩放改变（morph 函数的 forceResize 选项）"
     },
     "useCSS": {
       "type": "Boolean",
       "desc": "Use CSS animations for morph (forceCssAnimation option of the morph function)",
-      "desc_cn": "将CSS动画用于变形（morph函数的forceCssAnimation选项）"
+      "desc_cn": "将 CSS 动画用于变形（morph 函数的 forceCssAnimation 选项）"
     },
     "hideFromClone": {
       "type": "Boolean",
       "desc": "Hide the spacer for the initial element (hideFromClone option of the morph function)",
-      "desc_cn": "隐藏初始元素的间隔符（morph函数的hideFromClone选项）"
+      "desc_cn": "隐藏初始元素的间隔符（ morph 函数的 hideFromClone 选项）"
     },
     "keepToClone": {
       "type": "Boolean",
       "desc": "Keep the final element visible while morphing (keepToClone option of the morph function)",
-      "desc_cn": "变形时保持最后一个元素可见（morph函数的keepToClone选项）"
+      "desc_cn": "变形时保持最后一个元素可见（ morph 函数的 keepToClone 选项）"
     },
     "tween": {
       "type": "Boolean",
       "desc": "Use opacity tween morphing between initial and final elements (tween option of the morph function)",
-      "desc_cn": "在初始元素和最终元素之间使用不透明度过渡变形（morph函数的tween选项）"
+      "desc_cn": "在初始元素和最终元素之间使用不透明度过渡变形（ morph 函数的 tween 选项）"
     }
   }
 }
