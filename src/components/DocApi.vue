@@ -2,6 +2,11 @@
   <q-card class="doc-api q-my-xl" flat bordered>
     <div class="header-toolbar row items-center q-pr-sm">
       <doc-card-title :title="nameBanner" />
+      <q-icon :name="isChineseApi ? 'g_translate' : 'translate'"  @click="isChineseApi = !isChineseApi" >
+        <q-tooltip>
+        API 中英文切换，当前中文 API 未校验完毕，请优先使用英文 API
+        </q-tooltip>
+      </q-icon>
 
       <div
         class="col doc-api__search-field row items-center no-wrap"
@@ -65,12 +70,12 @@
 
             <q-tab-panels class="col" v-model="currentInnerTab" animated transition-prev="slide-down" transition-next="slide-up">
               <q-tab-panel class="q-pa-none" v-for="innerTab in innerTabsList[tab]" :name="innerTab" :key="innerTab">
-                <doc-api-entry :type="tab" :definition="filteredApi[tab][innerTab]" />
+                <doc-api-entry :type="tab" :definition="filteredApi[tab][innerTab]" :isChinese="isChineseApi" />
               </q-tab-panel>
             </q-tab-panels>
           </div>
           <div class="doc-api__container" v-else>
-            <doc-api-entry :type="tab" :definition="filteredApi[tab][defaultInnerTabName]" />
+            <doc-api-entry :type="tab" :definition="filteredApi[tab][defaultInnerTabName]"  :isChinese="isChineseApi"/>
           </div>
         </q-tab-panel>
       </q-tab-panels>
@@ -238,6 +243,7 @@ const props = defineProps({
   pageLink: Boolean
 })
 
+const isChineseApi = ref(true)
 const inputRef = ref(null)
 
 const loading = ref(true)

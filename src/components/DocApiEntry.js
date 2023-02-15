@@ -1,4 +1,4 @@
-import { h, ref } from 'vue'
+import { h, ref, watchEffect } from 'vue'
 import { QBadge, QBtn, Notify } from 'quasar'
 import { copyToClipboard } from 'assets/page-utils'
 import { mdiMinusBox, mdiPlusBox } from '@quasar/extras/mdi-v6'
@@ -514,11 +514,16 @@ export default {
 
   props: {
     type: String,
-    definition: [ Object, String ]
+    definition: [ Object, String ],
+    isChinese: { type: Boolean, default: true }
   },
 
   setup (props) {
     const openState = ref({})
+
+    watchEffect(() => {
+      language.value = props.isChinese ? 'chinese' : 'en'
+    })
 
     return () => {
       const content = Object.keys(props.definition).length !== 0
