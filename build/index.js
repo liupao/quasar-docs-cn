@@ -46,6 +46,7 @@ function transformer (origin, old, apiFile) {
     } else if (key === 'desc') {
       if (origin[ key ] !== old[ key ]) {
         console.log(`${apiFile} 中,${key} 字段发生了变化，请处理`, `新：${origin[ key ]},旧：${old[ key ]}`)
+        origin.desc = old.desc
         continue
       }
       if (!old.desc_cn) {

@@ -31,12 +31,14 @@
           "default-group-name"
         ],
         "addedIn": "v2.8",
-        "required": false
+        "required": false,
+        "desc_cn":"默认的分组名称"
       },
       "html": {
         "type": "Boolean",
         "desc": "Force render the message as HTML; This can lead to XSS attacks so make sure that you sanitize the content",
-        "category": "behavior"
+        "category": "behavior",
+        "desc_cn":"强制以 HTML 格式渲染信息。这可能导致 XSS 攻击，所以您必须确保提前对信息的内容进行“消毒”处理"
       },
       "boxClass": {
         "type": "String",
@@ -44,7 +46,8 @@
         "examples": [
           "bg-amber text-black",
           "q-pa-xl"
-        ]
+        ],
+        "desc:": "自定义包裹内容元素的 CSS 类名"
       },
       "spinnerSize": {
         "type": "Number",
@@ -59,7 +62,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "旋转器的来自Quasar调色板的颜色名称"
+        "desc_cn": "旋转器的颜色，来自 Quasar 调色板的颜色名称"
       },
       "messageColor": {
         "type": "String",
@@ -69,7 +72,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "文本的来自Quasar调色板的颜色名称"
+        "desc_cn": "文本的颜色，来自 Quasar 调色板的颜色名称"
       },
       "backgroundColor": {
         "type": "String",
@@ -79,7 +82,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "背景的来自Quasar调色板的颜色名称"
+        "desc_cn": "背景的颜色，来自 Quasar 调色板的颜色名称"
       },
       "spinner": {
         "type": "String",
@@ -87,14 +90,15 @@
         "examples": [
           "QSpinnerAudio"
         ],
-        "desc_cn": "所有QSpinner组件中的一个"
+        "desc_cn": "一个 QSpinner 组件"
       },
       "customClass": {
         "type": "String",
         "desc": "Add a CSS class to the container element to easily customize the component",
         "examples": [
           "my-class"
-        ]
+        ],
+        "desc_cn" : "给组件的容器元素添加 CSS 类名，来自定义组件的样式"
       }
     }
   },
@@ -103,7 +107,7 @@
       "type": "Boolean",
       "desc": "Is Loading active?",
       "reactive": true,
-      "desc_cn": "加载栏激活了吗？"
+      "desc_cn": "加载栏是否处于激活状态"
     }
   },
   "methods": {
@@ -115,7 +119,7 @@
           "tsType": "QLoadingShowOptions",
           "autoDefineTsType": true,
           "desc": "All props are optional",
-          "definition": {
+          "definition": { 
             "delay": {
               "type": "Number",
               "desc": "Wait a number of millisecond before showing; Not worth showing for 100ms for example then hiding it, so wait until you're sure it's a process that will take some considerable amount of time",
@@ -135,12 +139,14 @@
               "examples": [
                 "some-api-call"
               ],
-              "addedIn": "v2.8"
+              "addedIn": "v2.8",
+              "desc_cn": "加载的分组名称"
             },
             "html": {
               "type": "Boolean",
               "desc": "Render the message as HTML; This can lead to XSS attacks so make sure that you sanitize the message first",
-              "category": "behavior"
+              "category": "behavior",
+              "desc_cn": "强制以 HTML 格式渲染信息。这可能导致 XSS 攻击，所以您必须确保提前对信息的内容进行“消毒”处理"
             },
             "boxClass": {
               "type": "String",
@@ -148,7 +154,8 @@
               "examples": [
                 "bg-amber text-black",
                 "q-pa-xl"
-              ]
+              ],
+              "desc_cn": "自定义包裹内容的元素的 CSS 类名"
             },
             "spinnerSize": {
               "type": "Number",
@@ -163,7 +170,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "旋转器的Quasar调色板的颜色名称"
+              "desc_cn": "旋转器的颜色，来自 Quasar 调色板的颜色名称"
             },
             "messageColor": {
               "type": "String",
@@ -173,7 +180,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "文本的来自Quasar调色板的颜色名称"
+              "desc_cn": "文本的颜色，来自 Quasar 调色板的颜色名称"
             },
             "backgroundColor": {
               "type": "String",
@@ -183,12 +190,12 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "背景的来自Quasar调色板的颜色名称"
+              "desc_cn": "背景的颜色，来自 Quasar 调色板的颜色名称"
             },
             "spinner": {
               "type": "Component",
               "desc": "One of the QSpinners",
-              "desc_cn": "所有QSpinner组件中的一个"
+              "desc_cn": "一个 QSpinner 组件"
             },
             "customClass": {
               "type": "String",
@@ -196,12 +203,12 @@
               "examples": [
                 "my-class"
               ],
-              "desc_cn": "添加CSS类以方便地自定义组件"
+              "desc_cn": "给组件的容器元素添加 CSS 类名，来自定义组件的样式"
             },
             "ignoreDefaults": {
               "type": "Boolean",
               "desc": "Ignore the default configuration (set by setDefaults()) for this instance only",
-              "desc_cn": "仅忽略此实例的默认配置（由setDefaults()设置）"
+              "desc_cn": "仅忽略此实例的默认配置（由 setDefaults() 设置）"
             }
           },
           "desc_cn": "所有属性都是可选的"
@@ -215,11 +222,13 @@
             "type": "Object",
             "tsType": "QLoadingUpdateOptions",
             "required": false,
-            "desc": "Loading properties that will be shallow merged to the group ones; (See 'opts' param of 'show()' for object properties, except 'group')"
+            "desc": "Loading properties that will be shallow merged to the group ones; (See 'opts' param of 'show()' for object properties, except 'group')",
+            "desc_cn": "此对象将会更新此组加载组件的配置属性，但是不能更新其分组名称。（对象的字段参考 'show()' 方法的 'opts' 参数，除了 'group' 属性）"
           }
         },
         "returns": null,
-        "addedIn": "v2.8"
+        "addedIn": "v2.8",
+        "desc_cn": "如果调用时不穿参数，则关闭这组加载组件，如果调用时传入对象类型的参数，则使用此对象更新这组的配置属性，（此对象将会以浅合并的方式更新原来的属性，除了 'group' 属性）"
       },
       "desc_cn": "激活并显示"
     },
@@ -229,6 +238,7 @@
         "group": {
           "type": "String",
           "desc": "Optional Loading group name to hide instead of hiding all groups",
+          "desc_cn": "可选值，关闭指定分组而不是所有分组",
           "required": false,
           "examples": [
             "some-api-call"
@@ -236,7 +246,7 @@
           "addedIn": "v2.8"
         }
       },
-      "desc_cn": "把它隐藏起来"
+      "desc_cn": "关闭它"
     },
     "setDefaults": {
       "desc": "Merge options into the default ones",
@@ -282,7 +292,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "微调器的来自Quasar调色板的颜色名称"
+              "desc_cn": "旋转器的颜色，来自 Quasar 调色板的颜色名称"
             },
             "messageColor": {
               "type": "String",
@@ -292,7 +302,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "文本的来自Quasar调色板的颜色名称"
+              "desc_cn": "文本的颜色，来自 Quasar 调色板的颜色名称"
             },
             "backgroundColor": {
               "type": "String",
@@ -302,12 +312,12 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "背景的来自Quasar调色板的颜色名称"
+              "desc_cn": "背景的颜色，来自 Quasar 调色板的颜色名称"
             },
             "spinner": {
               "type": "Component",
               "desc": "One of the QSpinners",
-              "desc_cn": "所有QSpinner组件中的一个"
+              "desc_cn": "一个 QSpinner 组件"
             },
             "customClass": {
               "type": "String",
@@ -315,13 +325,13 @@
               "examples": [
                 "my-class"
               ],
-              "desc_cn": "添加CSS类以方便地自定义组件"
+              "desc_cn": "给组件的容器元素添加 CSS 类名，来自定义组件的样式"
             }
           },
           "desc_cn": "选择要定义的子映射"
         }
       },
-      "desc_cn": "将选项合并到默认选项中"
+      "desc_cn": "将配置项合并到默认配置项中"
     }
   }
 }
