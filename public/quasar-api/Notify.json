@@ -14,7 +14,7 @@
           "negative",
           "custom-type"
         ],
-        "desc_cn": "可选类型（以前注册过）或现成类型之一（“positive”、“negative”、“warning”、“info”、“ongoing”）"
+        "desc_cn": "可选值，通知的类型，可以是之前注册过的类型或内置类型之一（'positive'、negative'、'warning'、'info'、'ongoing'）"
       },
       "color": {
         "type": "String",
@@ -24,7 +24,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "组件的来自Quasar调色板的颜色名称"
+        "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
       },
       "textColor": {
         "type": "String",
@@ -34,7 +34,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "文本的来自Quasar调色板的颜色名称"
+        "desc_cn": "文本的颜色，来自 Quasar 调色板的颜色名称"
       },
       "message": {
         "type": "String",
@@ -50,11 +50,12 @@
         "examples": [
           "5 minutes ago"
         ],
-        "desc_cn": "可选标题的内容"
+        "desc_cn": "可选值，标题的内容"
       },
       "html": {
         "type": "Boolean",
-        "desc": "Render the message as HTML; This can lead to XSS attacks, so make sure that you sanitize the message first"
+        "desc": "Render the message as HTML; This can lead to XSS attacks, so make sure that you sanitize the message first",
+        "desc_cn": "将消息渲染为 HTML，这会导致 XSS 攻击，所以您需要确保提前对消息进行“消毒”处理 "
       },
       "icon": {
         "type": "String",
@@ -65,7 +66,8 @@
           "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
           "img:path/to/some_image.png"
         ],
-        "category": "content"
+        "category": "content",
+        "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
       },
       "iconColor": {
         "type": "String",
@@ -75,7 +77,8 @@
           "teal-10"
         ],
         "category": "style",
-        "addedIn": "v2.5.5"
+        "addedIn": "v2.5.5",
+        "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
       },
       "iconSize": {
         "type": "String",
@@ -85,7 +88,8 @@
           "2rem"
         ],
         "category": "style",
-        "addedIn": "v2.5.5"
+        "addedIn": "v2.5.5",
+        "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称"
       },
       "avatar": {
         "type": "String",
@@ -94,7 +98,8 @@
           "(public folder) img/something.png",
           "(relative path format) require('./my_img.jpg')",
           "(URL) https://some-site.net/some-img.gif"
-        ]
+        ],
+        "desc_cn": "指向图标/图片的 URL 地址，建议将相关资源放置在 public 目录"
       },
       "spinner": {
         "type": "Boolean",
@@ -102,7 +107,8 @@
         "examples": [
           true,
           "QSpinnerBars"
-        ]
+        ],
+        "desc_cn": "当更新通知时很有用，显示一个 Quasar 加载组件来代替头像或者图标。如果值设置为 true，则显示默认的 QSpinner"
       },
       "spinnerColor": {
         "type": "String",
@@ -112,7 +118,8 @@
           "teal-10"
         ],
         "category": "style",
-        "addedIn": "v2.5.5"
+        "addedIn": "v2.5.5",
+        "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
       },
       "spinnerSize": {
         "type": "String",
@@ -122,7 +129,8 @@
           "2rem"
         ],
         "category": "style",
-        "addedIn": "v2.5.5"
+        "addedIn": "v2.5.5",
+        "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称"
       },
       "position": {
         "type": "String",
@@ -140,7 +148,7 @@
           "center"
         ],
         "required": false,
-        "desc_cn": "要粘贴的窗口的边/角"
+        "desc_cn": "要贴在的窗口的哪个边/角"
       },
       "group": {
         "type": [
@@ -154,7 +162,7 @@
           "my-group"
         ],
         "required": false,
-        "desc_cn": "用自定义组覆盖自动生成的组；无法更新分组通知；字符串或数字值说明这是一个特定组的一部分，不管它的选项是什么；当使用相同的组名触发新通知时，它将替换旧通知，并显示一个标记，显示触发通知的次数"
+        "desc_cn": "自定义分组名称；被分组了的通知无法被更新；字符串或数字值指明它属于某个特殊的组，不管它的配置项是什么；当使用相同的组名触发新通知时，它将替换旧通知，并显示一个徽标，和触发通知的次数"
       },
       "badgeColor": {
         "type": "String",
@@ -164,7 +172,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "标记的来自Quasar调色板的颜色名称"
+        "desc_cn": "徽标的颜色，来自 Quasar 调色板的颜色名称"
       },
       "badgeTextColor": {
         "type": "String",
@@ -174,7 +182,7 @@
           "teal-10"
         ],
         "category": "style",
-        "desc_cn": "标记文本的来自Quasar调色板的颜色名称"
+        "desc_cn": "徽标中文本的颜色，来自 Quasar 调色板的颜色名称"
       },
       "badgePosition": {
         "type": "String",
@@ -187,7 +195,7 @@
           "bottom-right"
         ],
         "required": false,
-        "desc_cn": "贴标记的通知弹窗的角；如果通知弹窗在左侧，则默认值为右上角，否则为左上角"
+        "desc_cn": "设置徽标贴在通知弹窗的哪个角。如果通知弹窗在左侧，则默认值为右上角，否则为左上角"
       },
       "badgeStyle": {
         "type": [
@@ -201,7 +209,7 @@
           "background-color: #ff0000",
           "{ backgroundColor: '#ff0000' }"
         ],
-        "desc_cn": "用于标记属性的样式的定义"
+        "desc_cn": "自定义徽标的样式"
       },
       "badgeClass": {
         "type": [
@@ -215,12 +223,12 @@
           "my-special-class",
           "{ 'my-special-class': <condition> }"
         ],
-        "desc_cn": "用于标记属性的类的定义"
+        "desc_cn": "自定义徽标的 CSS 类名"
       },
       "progress": {
         "type": "Boolean",
         "desc": "Show progress bar to detail when notification will disappear automatically (unless timeout is 0)",
-        "desc_cn": "显示进度条以详细说明通知弹窗何时自动消失（除非超时为0）"
+        "desc_cn": "显示进度条以详细说明通知弹窗何时自动消失（除非显示时长设置为0）"
       },
       "progressClass": {
         "type": [
@@ -234,7 +242,7 @@
           "my-special-class",
           "{ 'my-special-class': <condition> }"
         ],
-        "desc_cn": "用于进度条属性的类定义"
+        "desc_cn": "自定义进度条 CSS 类名"
       },
       "classes": {
         "type": "String",
@@ -242,7 +250,7 @@
         "examples": [
           "my-notif-class"
         ],
-        "desc_cn": "将CSS类添加到通知弹窗中以便于自定义"
+        "desc_cn": "自定义通知弹窗的 CSS 类名"
       },
       "attrs": {
         "type": "Object",
@@ -250,14 +258,14 @@
         "examples": [
           "{ role: 'alertdialog' }"
         ],
-        "desc_cn": "设置通知弹窗属性的键值"
+        "desc_cn": "设置通知弹窗属性（attributes）的键值"
       },
       "timeout": {
         "type": "Number",
         "desc": "Amount of time to display (in milliseconds)",
         "default": 5000,
         "required": false,
-        "desc_cn": "显示的时间量（毫秒）"
+        "desc_cn": "显示的时长（毫秒）"
       },
       "closeBtn": {
         "type": [
@@ -267,12 +275,13 @@
         "desc": "Convenient way to add a dismiss button with a specific label, without using the 'actions' prop; If set to true, it uses a label according to the current Quasar language",
         "examples": [
           "Close me"
-        ]
+        ],
+        "desc_cn": "不使用 'actions' 属性也可以方便的添加一个关闭按钮，并带有特定的本文。如果设置为 true，则它使用的文本由当前的 Quasar 语言包提供"
       },
       "multiLine": {
         "type": "Boolean",
         "desc": "Put notification into multi-line mode; If this prop isn't used and more than one 'action' is specified then notification goes into multi-line mode by default",
-        "desc_cn": "将通知弹窗设置为多行模式；如果未使用此属性并且指定了多个“action”，则默认情况下通知弹窗将进入多行模式"
+        "desc_cn": "将通知弹窗设置为多行模式。如果未使用此属性并且指定了多个 'action'，则默认情况下通知弹窗将进入多行模式"
       }
     }
   },
@@ -298,7 +307,7 @@
                 "negative",
                 "custom-type"
               ],
-              "desc_cn": "可选类型（以前注册过）或现成类型之一（“positive”、“negative”、“warning”、“info”、“ongoing”）"
+              "desc_cn": "可选类型（以前注册过）或现成类型之一（'positive'、'negative'、'warning'、'info'、'ongoing'）"
             },
             "color": {
               "type": "String",
@@ -308,7 +317,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "组件的来自Quasar调色板的颜色名称"
+              "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
             },
             "textColor": {
               "type": "String",
@@ -318,7 +327,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "文本的来自Quasar调色板的颜色名称"
+              "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
             },
             "message": {
               "type": "String",
@@ -338,7 +347,8 @@
             },
             "html": {
               "type": "Boolean",
-              "desc": "Render the message as HTML; This can lead to XSS attacks, so make sure that you sanitize the message first"
+              "desc": "Render the message as HTML; This can lead to XSS attacks, so make sure that you sanitize the message first",
+              "desc_cn": "将消息渲染为 HTML，这会导致 XSS 攻击，所以您需要确保提前对消息进行“消毒”处理 "
             },
             "icon": {
               "type": "String",
@@ -349,7 +359,8 @@
                 "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
                 "img:path/to/some_image.png"
               ],
-              "category": "content"
+              "category": "content",
+              "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
             },
             "iconColor": {
               "type": "String",
@@ -359,7 +370,8 @@
                 "teal-10"
               ],
               "category": "style",
-              "addedIn": "v2.5.5"
+              "addedIn": "v2.5.5",
+              "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
             },
             "iconSize": {
               "type": "String",
@@ -369,7 +381,8 @@
                 "2rem"
               ],
               "category": "style",
-              "addedIn": "v2.5.5"
+              "addedIn": "v2.5.5",
+              "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称"
             },
             "avatar": {
               "type": "String",
@@ -378,7 +391,8 @@
                 "(public folder) img/something.png",
                 "(relative path format) require('./my_img.jpg')",
                 "(URL) https://some-site.net/some-img.gif"
-              ]
+              ],
+              "desc_cn": "指向图标/图片的 URL 地址，建议将相关资源放置在 public 目录"
             },
             "spinner": {
               "type": [
@@ -390,7 +404,7 @@
                 true,
                 "QSpinnerBars"
               ],
-              "desc_cn": "用于更新通知；显示Quasar旋转器而不是头像或图标；如果值为布尔值“true”，则显示默认的QSpinner"
+              "desc_cn": "当更新通知时很有用，显示一个 Quasar 加载组件来代替头像或者图标。如果值设置为 true，则显示默认的 QSpinner"
             },
             "spinnerColor": {
               "type": "String",
@@ -400,7 +414,8 @@
                 "teal-10"
               ],
               "category": "style",
-              "addedIn": "v2.5.5"
+              "addedIn": "v2.5.5",
+              "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
             },
             "spinnerSize": {
               "type": "String",
@@ -410,7 +425,8 @@
                 "2rem"
               ],
               "category": "style",
-              "addedIn": "v2.5.5"
+              "addedIn": "v2.5.5",
+              "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称"
             },
             "position": {
               "type": "String",
@@ -442,7 +458,7 @@
                 "my-group"
               ],
               "required": false,
-              "desc_cn": "用自定义组覆盖自动生成的组；无法更新分组通知；字符串或数字值说明这是一个特定组的一部分，不管它的选项是什么；当使用相同的组名触发新通知时，它将替换旧通知，并显示一个标记，显示触发通知的次数"
+              "desc_cn": "自定义分组名称；被分组了的通知无法被更新；字符串或数字值指明它属于某个特殊的组，不管它的配置项是什么；当使用相同的组名触发新通知时，它将替换旧通知，并显示一个徽标，和触发通知的次数"
             },
             "badgeColor": {
               "type": "String",
@@ -452,7 +468,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "标记的来自Quasar调色板的颜色名称"
+              "desc_cn": "徽标的颜色，来自 Quasar 调色板的颜色名称"
             },
             "badgeTextColor": {
               "type": "String",
@@ -462,7 +478,7 @@
                 "teal-10"
               ],
               "category": "style",
-              "desc_cn": "标记文本的来自Quasar调色板中颜色名称"
+              "desc_cn": "徽标中文本的颜色，来自 Quasar 调色板的颜色名称"
             },
             "badgePosition": {
               "type": "String",
@@ -475,7 +491,7 @@
                 "bottom-right"
               ],
               "required": false,
-              "desc_cn": "贴标记的通知弹窗的角；如果通知弹窗在左侧，则默认值为右上角，否则为左上角"
+              "desc_cn": "设置徽标贴在通知弹窗的哪个角。如果通知弹窗在左侧，则默认值为右上角，否则为左上角"
             },
             "badgeStyle": {
               "type": [
@@ -489,7 +505,7 @@
                 "background-color: #ff0000",
                 "{ backgroundColor: '#ff0000' }"
               ],
-              "desc_cn": "用于标记属性的样式的定义"
+              "desc_cn": "自定义徽标的样式"
             },
             "badgeClass": {
               "type": [
@@ -503,12 +519,12 @@
                 "my-special-class",
                 "{ 'my-special-class': <condition> }"
               ],
-              "desc_cn": "用于标记属性的类的定义"
+              "desc_cn": "自定义徽标的 CSS 类名"
             },
             "progress": {
               "type": "Boolean",
               "desc": "Show progress bar to detail when notification will disappear automatically (unless timeout is 0)",
-              "desc_cn": "显示进度条以详细说明通知弹窗何时自动消失（除非超时为0）"
+              "desc_cn": "显示进度条以详细说明通知弹窗何时自动消失（除非显示时长设置为0）"
             },
             "progressClass": {
               "type": [
@@ -530,7 +546,7 @@
               "examples": [
                 "my-notif-class"
               ],
-              "desc_cn": "将CSS类添加到通知弹窗中以便于自定义"
+              "desc_cn": "自定义通知弹窗的 CSS 类名"
             },
             "attrs": {
               "type": "Object",
@@ -538,7 +554,7 @@
               "examples": [
                 "{ role: 'alertdialog' }"
               ],
-              "desc_cn": "设置通知弹窗属性的键值"
+              "desc_cn": "设置通知弹窗属性（attributes）的键值"
             },
             "timeout": {
               "type": "Number",
@@ -548,7 +564,7 @@
                 2500
               ],
               "required": false,
-              "desc_cn": "显示的时间量（毫秒）"
+              "desc_cn": "显示的时长（毫秒）"
             },
             "actions": {
               "type": "Array",
@@ -562,11 +578,13 @@
                   "returns": null,
                   "examples": [
                     "() => { console.log('button clicked') }"
-                  ]
+                  ],
+                  "desc_cn": "在按钮被点击时会执行的函数"
                 },
                 "noDismiss": {
                   "type": "Boolean",
-                  "desc": "Do not dismiss the notification when the button is clicked/tapped"
+                  "desc": "Do not dismiss the notification when the button is clicked/tapped",
+                  "desc_cn": "点击按钮后不关闭通知弹窗"
                 },
                 "...": {
                   "type": "Any",
@@ -574,12 +592,14 @@
                   "examples": [
                     "label: 'Learn more'",
                     "color: 'primary'"
-                  ]
+                  ],
+                  "desc_cn": "还可接受任何 QBtn 的其他属性，除了 'onClick' （使用 'handler' 代替）"
                 }
               },
               "examples": [
                 "[ { label: 'Show', handler: () => {}, 'aria-label': 'Button label' }, { icon: 'map', handler: () => {}, color: 'yellow' }, { label: 'Learn more', noDismiss: true, handler: () => {} } ]"
-              ]
+              ],
+              "desc_cn": "定义通知弹窗的操作区域（按钮）。除非设置了 'noDismiss' 为 true ，否则点击这些按钮也会关闭通知。也可看看更方便的 'closeBtn' 属性"
             },
             "onDismiss": {
               "type": "Function",
@@ -599,20 +619,21 @@
               "desc": "Convenient way to add a dismiss button with a specific label, without using the 'actions' prop; If set to true, it uses a label according to the current Quasar language",
               "examples": [
                 "Close me"
-              ]
+              ],
+              "desc_cn": "不使用 'actions' 属性也可以方便的添加一个关闭按钮，并带有特定的本文。如果设置为 true，则它使用的文本由当前的 Quasar 语言包提供"
             },
             "multiLine": {
               "type": "Boolean",
               "desc": "Put notification into multi-line mode; If this prop isn't used and more than one 'action' is specified then notification goes into multi-line mode by default",
-              "desc_cn": "将通知弹窗设置为多行模式；如果未使用此属性并且指定了多个“action”，则默认情况下通知弹窗将进入多行模式"
+              "desc_cn": "将通知弹窗设置为多行模式。如果未使用此属性但指定了多个 'action'，则默认情况下通知弹窗将进入多行模式"
             },
             "ignoreDefaults": {
               "type": "Boolean",
               "desc": "Ignore the default configuration (set by setDefaults()) for this instance only",
-              "desc_cn": "仅忽略此实例的默认配置（由setDefaults()设置）"
+              "desc_cn": "仅忽略此实例的默认配置（由 setDefaults() 设置）"
             }
           },
-          "desc_cn": "通知弹窗选项"
+          "desc_cn": "通知弹窗配置项"
         }
       },
       "returns": {
@@ -623,13 +644,14 @@
             "type": "Object",
             "tsType": "QNotifyUpdateOptions",
             "required": false,
-            "desc": "Notification properties that will be shallow merged to previous ones in order to update the non-grouped notification; (See 'opts' param of 'create()' for object properties, except 'group' and 'position')"
+            "desc": "Notification properties that will be shallow merged to previous ones in order to update the non-grouped notification; (See 'opts' param of 'create()' for object properties, except 'group' and 'position')",
+            "desc_cn": "返回的对象将会合并到上一个通知弹窗的配置对象中去，以更新未分组的通知弹窗。（对象的字段参考 'create()' 函数的 'opts' 参数，除了其中的 'group' 和 'position'）"
           }
         },
         "returns": null,
-        "desc_cn": "不带参数调用此函数会隐藏通知弹窗；当使用一个对象参数调用时（原始通知弹窗不能分组），它会更新通知弹窗（指定的属性与以前的属性合并；请注意，更新时不能更改组和位置，因此将忽略它们）"
+        "desc_cn": "不带参数调用此函数会隐藏通知弹窗。当使用一个对象参数调用时（原始通知弹窗不能是已经被被分组的），它会更新通知弹窗（指定的属性与以前的属性合并。请注意，更新时不能更改分组和位置（'group' 和 'position'），因此将忽略它们）"
       },
-      "desc_cn": "创建通知弹窗；与调用$q.notify（…）相同"
+      "desc_cn": "创建通知弹窗，与调用 $q.notify（…）相同"
     },
     "setDefaults": {
       "desc": "Merge options into the default ones",
@@ -638,10 +660,11 @@
           "type": "Object",
           "tsType": "QNotifyOptions",
           "required": true,
-          "desc": "Notification options (See 'opts' param of 'create()' for object properties)"
+          "desc": "Notification options (See 'opts' param of 'create()' for object properties)",
+          "desc_cn": "通知弹窗的配置对象，（对象的字段参考 'create()' 函数的 'opts' 参数）"
         }
       },
-      "desc_cn": "将选项合并到默认选项中"
+      "desc_cn": "将配置项合并到默认选项中"
     },
     "registerType": {
       "desc": "Register a new type of notification (or override an existing one)",
@@ -653,7 +676,7 @@
           "examples": [
             "my-type"
           ],
-          "desc_cn": "类型的名称（稍后用作“type”属性）"
+          "desc_cn": "类型的名称（稍后用作 'type' 属性）"
         },
         "typeOpts": {
           "type": "Object",
@@ -662,7 +685,7 @@
           "desc": "Notification options (See 'opts' param of 'create()' for object properties)"
         }
       },
-      "desc_cn": "注册新类型的通知弹窗（或覆盖现有通知弹窗）"
+      "desc_cn": "注册新类型的通知弹窗（或覆盖内置的通知弹窗类型）"
     }
   }
 }
