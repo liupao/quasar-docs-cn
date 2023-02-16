@@ -32,13 +32,13 @@
         ],
         "addedIn": "v2.8",
         "required": false,
-        "desc_cn":"默认的分组名称"
+        "desc_cn": "默认的分组名称"
       },
       "html": {
         "type": "Boolean",
         "desc": "Force render the message as HTML; This can lead to XSS attacks so make sure that you sanitize the content",
         "category": "behavior",
-        "desc_cn":"强制以 HTML 格式渲染信息。这可能导致 XSS 攻击，所以您必须确保提前对信息的内容进行“消毒”处理"
+        "desc_cn": "强制以 HTML 格式渲染信息。这可能导致 XSS 攻击，所以您必须确保提前对信息的内容进行“消毒”处理"
       },
       "boxClass": {
         "type": "String",
@@ -98,7 +98,7 @@
         "examples": [
           "my-class"
         ],
-        "desc_cn" : "给组件的容器元素添加 CSS 类名，来自定义组件的样式"
+        "desc_cn": "给组件的容器元素添加 CSS 类名，来自定义组件的样式"
       }
     }
   },
@@ -119,7 +119,7 @@
           "tsType": "QLoadingShowOptions",
           "autoDefineTsType": true,
           "desc": "All props are optional",
-          "definition": { 
+          "definition": {
             "delay": {
               "type": "Number",
               "desc": "Wait a number of millisecond before showing; Not worth showing for 100ms for example then hiding it, so wait until you're sure it's a process that will take some considerable amount of time",
@@ -238,12 +238,12 @@
         "group": {
           "type": "String",
           "desc": "Optional Loading group name to hide instead of hiding all groups",
-          "desc_cn": "可选值，关闭指定分组而不是所有分组",
           "required": false,
           "examples": [
             "some-api-call"
           ],
-          "addedIn": "v2.8"
+          "addedIn": "v2.8",
+          "desc_cn": "可选值，关闭指定分组而不是所有分组"
         }
       },
       "desc_cn": "关闭它"

@@ -54,7 +54,7 @@
         "(public folder) src=\"img/my-bg.png\"",
         "(assets folder) src=\"~assets/my-img.png\"",
         "(relative path format) :src=\"require('./my_img.jpg')\"",
-        "(URL) src=\"https://placeimg.com/500/300/nature\""
+        "(URL) src=\"https://picsum.photos/500/300\""
       ],
       "category": "content",
       "desc_cn": "头像图片的URL；图标优先使用，所以它取代了头像"

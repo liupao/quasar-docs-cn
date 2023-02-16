@@ -180,13 +180,13 @@
       "scope": {
         "index": {
           "type": "Number",
-          "desc": "Item index in the options list",
+          "desc": "Item index in the items list",
           "desc_cn": "列表项的索引"
         },
         "item": {
           "type": "Any",
-          "desc": "Item data -- its value is taken from 'options' prop",
-          "desc_cn": "列表项的数据，来自 'options' 属性"
+          "desc": "Item data -- its value is taken from 'items' prop",
+          "desc_cn": "列表项的数据，来自 'items' 属性"
         }
       },
       "desc_cn": "定义列表项的插槽模版，推荐使用 QItem"

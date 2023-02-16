@@ -10,7 +10,7 @@
       "...props": {
         "type": "Object",
         "desc": "QAjaxBar component props, EXCEPT for 'hijack-filter'",
-        "desc_cn":"QAjaxBar 组件的属性，除了 'hijack-filter'"
+        "desc_cn": "QAjaxBar 组件的属性，除了 'hijack-filter'"
       }
     }
   },
@@ -18,8 +18,8 @@
     "isActive": {
       "type": "Boolean",
       "desc": "Is LoadingBar active?",
-      "desc_cn": "LoadingBar 是否被激活",
-      "reactive": true
+      "reactive": true,
+      "desc_cn": "LoadingBar 是否被激活"
     }
   },
   "methods": {
@@ -58,10 +58,10 @@
           "type": "Object",
           "required": true,
           "desc": "QAjaxBar component props",
-          "desc_cn": "QAjaxBar 组件属性",
           "examples": [
             "{ position: 'bottom', reverse: true }"
-          ]
+          ],
+          "desc_cn": "QAjaxBar 组件属性"
         }
       },
       "desc_cn": "设置内部 QAjaxBar 的属性"
