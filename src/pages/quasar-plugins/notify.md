@@ -40,7 +40,7 @@ setup () {
 }
 ```
 
-<doc-example title="Basic" file="Notify/Basic" />
+<doc-example title="基础用法" file="Notify/Basic" />
 
 ::: tip 提示
 如果定义了任何的操作按钮，则在用户选择该操作时，该通知将自动删除。
@@ -48,7 +48,7 @@ setup () {
 
 ### 带有副标题
 
-<doc-example title="Caption" file="Notify/Caption" />
+<doc-example title="带有副标题" file="Notify/Caption" />
 
 ### 带有图标，头像或者加载动画
 
@@ -93,7 +93,7 @@ setup () {
 ### 倒计时进度条
 如果您希望，可以告知用户这个通知什么时候会消失，可以看看下面的列子，只需要设置：`progress: true` 即可。
 
-<doc-example title="Timeout progress" file="Notify/TimeoutProgress" />
+<doc-example title="倒计时进度条" file="Notify/TimeoutProgress" />
 
 ### 更新通知的内容
 
@@ -107,7 +107,7 @@ setup () {
 
 我们预设了四种开箱即用的通知类型： "positive", "negative", "warning" 和 "info":
 
-<doc-example title="Out of the box types" file="Notify/PredefinedTypesDefault" />
+<doc-example title="预设的内置通知类型" file="Notify/PredefinedTypesDefault" />
 
 此外，您也可以注册自己的通知类型或者修改上述的预设类型，最好的方式是在一个 boot 文件中做此事，[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files).
 
@@ -130,7 +130,7 @@ Notify.registerType('my-notif', {
 ### 使用 HTML
 若设置了`html: true`字段，也可以使用 html 作为 message，**一定要注意这样做可能导致 XSS 攻击**，所以一定要自己保证 message 的安全。
 
-<doc-example title="Unsafe HTML message" file="Notify/UnsafeHtml" />
+<doc-example title="不安全的 HTML 消息" file="Notify/UnsafeHtml" />
 
 ### 设置属性
 
