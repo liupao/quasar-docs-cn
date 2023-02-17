@@ -1,0 +1,3289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://www.quasar-cn.cn/</title>
+  <link>https://www.quasar-cn.cn/</link>
+
+<item>
+     <link>https://www.quasar-cn.cn/</link>
+     <title>Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>基于 vuejs 的开源前端框架，高性能，内置丰富的 css 和 vue 组件库，响应式支持，一套代码可以编译出 SPA，PWA，SSR，手机应用和桌面应用。明智的人选择 vue，高产的人选择 quasar + vue。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/introduction-to-quasar</link>
+     <title>为什么要选择 Quasar? | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What Quasar is and how it can considerably reduce your development time and costs.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/sponsors-and-backers</link>
+     <title>Sponsors and Backers | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The list of sponsors and backers who are donating to Quasar Framework development.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/why-donate</link>
+     <title>Why Donate? | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar Team's manifesto on why it is essential to donate towards the development of the framework.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/api-explorer</link>
+     <title>Quasar API 搜索 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>搜索 Quasar 所有的组件，指令，插件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/video-tutorials</link>
+     <title>Quasar 视频教程 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>下面的视频教程都是由社区贡献的。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/meet-the-team</link>
+     <title>Meet the Team | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The list of people behind Quasar Framework.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/pick-quasar-flavour</link>
+     <title>Getting Started - Pick a Quasar Flavour | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Get started with Quasar by picking one of its flavours: Quasar CLI, Vue CLI or UMD</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/quasar-cli</link>
+     <title>Quasar CLI | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use the Quasar CLI, the premium developer experience for free.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/umd</link>
+     <title>Quasar UMD - CDN 安装 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 Quasar 的统一模块定义形式</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/vite-plugin</link>
+     <title>Quasar Vite 插件模式 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>将 Quasar 嵌入 Vite 应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/vue-cli-plugin</link>
+     <title>Vue CLI 的 Quasar 插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>将 Quasar 嵌入 Vue CLI 应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/how-to-use-vue</link>
+     <title>如何使用 Vue | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 关于 Vue 的教程</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/playground</link>
+     <title>Quasar 在线试用 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>在一个 jsFiddle, Codepen 或 Codesandbox 模版中试用 Quasar。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/release-notes</link>
+     <title>发行说明 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar-core 的更新日志</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/roadmap</link>
+     <title>Quasar 的发展计划 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 框架的发展计划</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/upgrade-guide</link>
+     <title>升级指南 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何将 Quasar 项目从老的项目升级收到新的版本</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start/vs-code-configuration</link>
+     <title>配置 VS Code | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>配置 VS Code，以便更好地使用 Quasar。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/contribution-guide/contribution-guide</link>
+     <title>Contribution Guide | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to contribute to Quasar Framework.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/contribution-guide/running-projects</link>
+     <title>Active Project, Goals and Maintainers | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar's active projects, goals and maintainers.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/contribution-guide/new-project</link>
+     <title>How-to Start a New Project | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to start a new project for Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/contribution-guide/project-maintainer</link>
+     <title>The Role of the Project Maintainer | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The role of a Quasar project manager</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/contribution-guide/commit-conventions</link>
+     <title>Commit Conventions | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar commit conventions</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/the-q-object</link>
+     <title>Quasar 中的$q 对象 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 Quasar 中的$q 对象。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/app-icons</link>
+     <title>App Icons | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>管理 Quasar 的应用图标和启动页面。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/seo</link>
+     <title>SEO with Quasar | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 Quasar 中进行搜索引擎优化。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/quasar-language-packs</link>
+     <title>Quasar 语言包 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何配置 Quasar 的语言包。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/app-internationalization</link>
+     <title>应用程序多语言国际化 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 Quasar 中使用 vue-i18n。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/rtl-support</link>
+     <title>RTL 支持 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>在 Quasar 中支持从右到左的布局。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/installing-icon-libraries</link>
+     <title>安装图标库 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 Quasar 中引用图标库</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/quasar-icon-sets</link>
+     <title>Quasar Icon Sets | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to configure icon sets for Quasar components.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/platform-detection</link>
+     <title>平台检测 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何检测 Quasar 运行在哪个平台。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/screen-plugin</link>
+     <title>屏幕插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了屏幕插件来帮助开发者通过 js 开发出动态的响应式的页面</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/animations</link>
+     <title>动画 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>为 Quasar 程序提供 Animate.css 支持</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/options/transitions</link>
+     <title>Quasar 组件的过渡效果 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>开箱即用的 Quasar 组件过渡效果</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/typography</link>
+     <title>Typography 字体和排版 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The typography of a Quasar app and its helper CSS classes.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/color-palette</link>
+     <title>Color Palette | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use and customize the Quasar Color Palette.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/theme-builder</link>
+     <title>主题 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 主题构建器，帮助您的 app 构建主题颜色</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/dark-mode</link>
+     <title>暗色/夜间模式 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>处理 Quasar 的暗色/夜间模式。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/spacing</link>
+     <title>CSS 间距类 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供的这些 CSS 工具类用于简化元素排版时的内外间距，并且是响应式的</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/shadows</link>
+     <title>CSS Shadows (Elevation) | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了 css 工具类帮助给 DOM 添加阴影</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/breakpoints</link>
+     <title>Breakpoints | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 的 css 断点列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/body-classes</link>
+     <title>Body classes | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar's helper classes that get added to document.body.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/visibility</link>
+     <title>CSS 可见性 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了下述 CSS 工具类来帮助您响应式的控制组件或 DOM 的可见性。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/positioning</link>
+     <title>CSS 定位工具类 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了下述 CSS 工具类帮您定位 DOM。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/sass-scss-variables</link>
+     <title>Sass/SCSS 变量 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 Quasar 预设的 Sass/SCSS 变量。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/other-helper-classes</link>
+     <title>其他的 CSS 工具类 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供的关于鼠标，大小，方向和边框相关的 CSS 辅助类。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/style/intellisense-css-vscode</link>
+     <title>Quasar 内置 css 的代码提示 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 vscode 中获取 quasar 内置 css 的代码提示。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/introduction-to-flexbox</link>
+     <title>Flexbox 介绍 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>什么是 flexbox CSS，如何将其应用到 Quasar 中</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/row</link>
+     <title>网格行 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 Quasar 中使用网格行。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/column</link>
+     <title>网格列 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何在 Quasar 中使用网格列。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/gutter</link>
+     <title>Grid Gutter | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use the Quasar grid for gutter spaces.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/flexbox-patterns</link>
+     <title>Flexbox 技巧 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>flexbox CSS 的常见技巧，以及如何在 Quasar app 中使用</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/grid/flex-playground</link>
+     <title>Flex Grid Playground | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>交互式体验 Quasar Flex 网格布局</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/layout</link>
+     <title>布局 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如果使用 QLayout 组件管理 Quasar 应用程序的布局主窗口。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/routing-with-layouts-and-pages</link>
+     <title>使用布局和页面进行路由 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何将 Vue router 和 Quasar 的布局相关联。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/header-and-footer</link>
+     <title>页头和页脚 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 QHeader 和 QFooter 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/drawer</link>
+     <title>布局抽屉 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 QDrawer 组件。Quasar 的侧边栏。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/page</link>
+     <title>Layout Page | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use QPageContainer and QPage components. They define the contents of your Quasar app pages.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout-builder</link>
+     <title>布局生成器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>生成 Quasar 布局页面的工具。可视化配置布局然后到处代码使用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery</link>
+     <title>布局模板 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>在您的 Quasar 应用中开箱即用的布局模板</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/page-sticky</link>
+     <title>Layout QPageSticky | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use the QPageSticky component. Statically place components on the layout without overlapping with header/footer/sidebars.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/page-scroller</link>
+     <title>Layout QPageScroller | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>如何使用 QPageScroller 组件。将用户滚动后屏幕上出现的组件放置在屏幕上。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/ajax-bar</link>
+     <title>Ajax Bar | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QAjaxBar 组件会在 Ajax 请求触发时展示一个加载进度条。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/avatar</link>
+     <title>Avatar | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QAvatar Vue component creates an element that can embed a letter, an icon or an image within its shape.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/badge</link>
+     <title>Badge | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBadge Vue component allows you to display information like contextual data that needs to stand out and get noticed.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/banner</link>
+     <title>Banner | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBanner Vue component displays a prominent message and related optional actions.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/bar</link>
+     <title>Bar | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBar Vue component is used to create the top bar on different platforms.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/breadcrumbs</link>
+     <title>Breadcrumbs | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBreadcrumbs Vue component is a navigational aid for your UI. It allows users to keep track of their location within programs, documents, or websites.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/button</link>
+     <title>Button | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBtn Vue component is a button with features like shaping, loading state, ripple and more.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/button-group</link>
+     <title>Button Group | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBtnGroup Vue component groups QBtn and QBtnDropdown into a single unit.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/button-dropdown</link>
+     <title>Dropdown Button | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QBtnDropdown Vue component is used to display dropdown content on a button.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/card</link>
+     <title>Card | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QCard 是一个很棒的用于展示重要信息的 Vue 组件，它可以将信息聚合在卡片容器中展示，帮助用户更直观的获取信息。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/carousel</link>
+     <title>Carousel | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QCarousel Vue 组件允许您使用幻灯片以更少的空间显示更多信息，对于创建向导或图库也很有用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/chat</link>
+     <title>聊天消息 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QChatMessage Vue 组件可以显示包含一个或多个用户消息的聊天条目。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/chip</link>
+     <title>Chip | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QChip Vue 组件基本上是一个简单的 UI 实体块，以紧凑的方式表示更复杂的数据，例如用来展示联系人。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/circular-progress</link>
+     <title>圆形进度 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QCircularProgress Vue 组件显示一个彩色的圆形进度条。工具条可以有一个确定的进度值，也可以有一个不确定的动画。它可以用于通知用户在后台正在进行某个操作。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/color-picker</link>
+     <title>颜色选择器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QColor Vue 组件提供了一种输入颜色的方式。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/dialog</link>
+     <title>对话框 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QDialog 组件提供了具有定位，样式化，最大化等功能的模态框。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/editor</link>
+     <title>富文本编辑器 (WYSIWYG) | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QEditor Vue 组件是一个 WYSIWYG 编辑器，可以将编辑的内容转化成 HTML。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/expansion-item</link>
+     <title>扩展项/手风琴 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QExpansionItem 组件可以隐藏与用户不直接相关的内容。可以把它们想象成手风琴一样，当点击它们时，它们就会展开，这也被称为可折叠面板。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/floating-action-button</link>
+     <title>悬浮操作按钮 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>使用 QFab 为来您的 Quasar 引用添加悬浮的操作按钮。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/input</link>
+     <title>输入框 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QInput Vue 组件用于收集用户输入的文本或数字。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/select</link>
+     <title>选择框 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QSelect Vue component has two types of selection - single or multiple. This component opens up a menu for the selection list and action. A filter can also be used for longer lists.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/file-picker</link>
+     <title>文件选择器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QFile是一个处理用户交互以选取文件的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/form</link>
+     <title>表单 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QForm Vue 组件渲染一个表单元素，并提供简单的表单验证方式</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/field</link>
+     <title>Field | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QField Vue component is used to provide common functionality and aspect to form components.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/radio</link>
+     <title>单选框 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QRadio Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供一种从多个选项中选择选项的方法。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/checkbox</link>
+     <title>复选框 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QCheckbox是一个Vue复选框组件，带有着色，涟漪特效等特性。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/toggle</link>
+     <title>Toggle | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QToggle Vue 组件是采集用户输入的一个基本元素。您可以使用它为用户提供设置开关切换或者真假值输入功能。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/button-toggle</link>
+     <title>Button Toggle | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QBtnToggle Vue 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/option-group</link>
+     <title>选项组 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QOptionGroup Vue component allows you better control for grouping binary form input components like checkboxes, radios or toggles.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/slider</link>
+     <title>滑块 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSlider 是用户指定最小值和最大值之间的数值的好方法。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/range</link>
+     <title>Range | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The QRange Vue component offers a way for the user to select from a sub-range of values between a maximum and maximum value, with optional steps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/time</link>
+     <title>QTime | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTime 组件提供了输入时间的方法。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/date</link>
+     <title>QDate | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QDate 组件提供了一种输入日期的方法。目前它支持公历（默认）和波斯历。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/icon</link>
+     <title>图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QIcon 组件允许您轻松地将图标插入其他组件或页面的任何区域中。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/img</link>
+     <title>QImg 图片组件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QImg 组件可以很方便的处理响应式的图片（任何图片格式），并且还添加了一些很棒的新特性，例如加载效果、自定义长宽比等等。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/infinite-scroll</link>
+     <title>无限滚动 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QInfiniteScroll是一个可以在用户滚动页面时加载新内容的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/inner-loading</link>
+     <title>内部加载 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QInnerLoading组件是一个可以在组件内添加进度动画的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/intersection</link>
+     <title>交叉 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QIntersection是一个封装了Quasar的Intersection指令的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/knob</link>
+     <title>旋钮 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QKnob是一个用于通过鼠标/触摸平移从用户那里输入数字的Vue 组件.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/linear-progress</link>
+     <title>线性进度 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QLinearProgress Vue 组件显示一个彩色加载进度条。进度条可以有一个确定的进度，也可以有一个不确定的动画。它应该用于通知用户在后台正在进行某个操作。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/list-and-list-items</link>
+     <title>列表和列表项 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use the QList, QItem, QItemSection and QItemLabel Vue components.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/markup-table</link>
+     <title>markup 表格 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QMarkupTable是一个封装了原生表格，使其具有质感设计样式的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/menu</link>
+     <title>菜单 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QMenu是一个方便展示菜单的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/no-ssr</link>
+     <title>No SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QNoSsr是一个可以控制其内容只在SSR应用的客户端或服务端渲染的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/resize-observer</link>
+     <title>元素大小变化侦听器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QResizeObserver是一个可以在监听到目标元素/组件的大小改变时触发一个事件的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/scroll-observer</link>
+     <title>滚动监听器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QScrollObserver是一个可以监听到用户滚动行为的Vue 组件</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/pagination</link>
+     <title>分页 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QPagination是一个可以在页面中展示分页控件的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/parallax</link>
+     <title>Parallax 视差 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QParallax是一个可以在页面中轻松实现视差滚动效果的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/popup-edit</link>
+     <title>弹出编辑 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QPopupEdit 是一个可用于“就地”编辑值，例如 QTable 中的单元格的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/popup-proxy</link>
+     <title>弹出代理 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>当您需要在较大的屏幕上显示QMenu，在较小的屏幕上显示QDialog时，您可以使用 QPopupProxy。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/pull-to-refresh</link>
+     <title>下拉刷新 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QPullToRefresh是一个可以让用户下拉屏幕以刷新页面或检索最新内容的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/rating</link>
+     <title>评分组件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QRating是一个允许用户对项目进行评分的Vue 组件.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/responsive</link>
+     <title>Responsive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QResponsive是一个Vue 组件，它强制内容根据其宽度保持纵横比。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/scroll-area</link>
+     <title>滚动区域 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QScrollArea是一个提供了定制滚动条的简便方法的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/separator</link>
+     <title>分割条 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSeparator是一个用于分隔文本部分、其他组件等的Vue 组件。它在父级的容器上创建一条水平的或垂直的彩色分割线。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/skeleton</link>
+     <title>骨架屏 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSkeleton是一个用于在加载实际页面数据之前显示占位符预览内容的Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/slide-item</link>
+     <title>滑动项 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSlideItem 组件本质上是一个带有两个额外插槽的QItem，它允许用户通过鼠标或用手指将项目拖动到其中一侧，以便应用特定的操作。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/slide-transition</link>
+     <title>滑动过渡 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSlideTransition 根据其可见性向上或向下滑动 DOM 元素或组件，在单个元素上与 v-show 和 v-if 一起使用，</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/space</link>
+     <title>QSpace-留白 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSpace 是一个简单地填充 flexbox DOM 元素内的所有可用空间的 Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/spinners</link>
+     <title>加载器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSpinner 用于向用户显示当前正在进行的流程。这是一个重要的用户体验特性，它给用户一种系统在长期活动中继续工作的感觉，比如从服务器获取数据或进行一些繁重的计算。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/splitter</link>
+     <title>分栏 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QSplitter 是一个可以将容器通过一个可拖动的分割栏垂直或水平分开的 vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/stepper</link>
+     <title>步进器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QStepper是一个步进器Vue 组件，它通过一系列逻辑和编号的步骤显示进度。它们也可用作导航。当用户需要按照步骤完成一个过程时，它很有用，例如一个向导。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/table</link>
+     <title>表格 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTable 是一个可以以表格的形式展示数据的Vue 组件，通常被称为数据表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/tabs</link>
+     <title>选项卡 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTabs, QTab 和 QRouteTab Vue 组件可以帮助用户在页面或选项面板之间导航。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/tab-panels</link>
+     <title>选项面板 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTabPanel 是一个可以用较小的窗口展示更多的信息的 Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/timeline</link>
+     <title>时间线 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTimeline Vue 组件按时间顺序显示事件列表。它通常是一个图形设计，显示一个长条形图，在其旁边标注日期，通常是事件</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/toolbar</link>
+     <title>工具栏 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QToolbar 和  QToolbarTitle Vue 组件通常作为布局头/脚的一部分，但是不局限于此，它也可以用在页面的任何地方。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/tooltip</link>
+     <title>悬浮提示 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTooltip Vue 组件用于向用户提供有关应用程序中某个区域的更多信息。当鼠标悬停在目标元素上时(或者在移动平台上快速点击并保持) ，工具提示就会出现。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/tree</link>
+     <title>Tree | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QTree 是一个高度可定制的用于展示带层级数据的 Vue 组件，例如树状结构的目录。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/uploader</link>
+     <title>上传器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QUploader 是一个上传文件到服务端的 Vue 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/video</link>
+     <title>视频 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>使用 QVideo Vue 组件可以轻松嵌入类似 Youtube 的视频播放器。默认情况下，它还会调整大小以适合容器。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/virtual-scroll</link>
+     <title>虚拟滚动 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>QVirtualScroll Vue 组件可以每次只渲染长列表中用户视图中可见的那一小部分，并在用户滚动容器中更新可见的项目。每次只有可见区域的数据被渲染，最小化渲染 DOM 树的性能和内存开销。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/close-popup</link>
+     <title>关闭弹层 Close Popup Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Helper Vue directive when working with QDialog or QMenu.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/intersection</link>
+     <title>Intersection Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>使用 Intersection Observer API 监听当 DOM/组件在可视窗口中出现或者消失时触发一个函数的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/material-ripple</link>
+     <title>Material Ripples | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>帮您轻松实现 material design 中的涟漪动画的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/mutation</link>
+     <title>Mutation Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>使用 Mutation Observer API 来监听 DOM 树变化的 Vue 指令</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/morph</link>
+     <title>Morph Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 中可以实现 dom 在两种状态间动画形变的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/scroll</link>
+     <title>v-scroll 指令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>用户滚动页面时触发的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/scroll-fire</link>
+     <title>Scroll Fire Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>当用户滚动页面导致组件进入视口时触发一个函数的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/touch-hold</link>
+     <title>长按指令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>当用户触摸或者长按一个元素/组件时触发一个事件的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/touch-pan</link>
+     <title>Touch Pan Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Vue directive which triggers an event when the user drags the finger or mouse on a component or element.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/touch-repeat</link>
+     <title>Touch Repeat Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Vue 指令，当用户触摸并按住一个组件或元素时，在指定的时间间隔内触发一个事件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-directives/touch-swipe</link>
+     <title>Touch Swipe Directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>当用户用手指或鼠标在组件或元素上滑动时触发一个事件的 Vue 指令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/addressbar-color</link>
+     <title>地址栏颜色插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>可以再移动端浏览器上自定义地址栏颜色的 Quasar 插件</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/app-fullscreen</link>
+     <title>全屏插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>一个可以切换全屏状态的 Quasar 插件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/app-visibility</link>
+     <title>App 可见性 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>这个 Quasar 插件封装了 Page Visibility API，让您可以知道您的 App 当前是否可见。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/bottom-sheet</link>
+     <title>Bottom Sheet Plugin | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>当用户在应用底部窗口底部上划时展示一组操作菜单的 Quasar 组件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/cookies</link>
+     <title>Cookies | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 插件封装了浏览器的 cookie api，使得其在 SSR 中也可以使用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/dark</link>
+     <title>Dark Plugin | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>一个可以切换应用暗色模式开关的 Quasar 插件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/dialog</link>
+     <title>Dialog 插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 通过 Dialog 插件以非常简单的方式展示对话框，用于提示、选择、确认或警告。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/loading</link>
+     <title>加载插件 Loading | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>这个 Quasar 插件可以通过旋转器和消息为您的应用程序展示加载状态。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/loading-bar</link>
+     <title>LoadingBar | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>A Quasar plugin that wraps the QAjaxBar component for the easiest way of showing such a loading indicator in an app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/web-storage</link>
+     <title>Local/Session Storage Plugins | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>一个封装了 LocalStorage 和 SessionStorage 的 Quasar 插件，可以存储原始的 JS 类型。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/meta</link>
+     <title>Quasar Meta Plugin | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>可以轻松管理 meta 标签的 Quasar 插件，帮助改善应用的 SEO。它能管理 meta，style，script 标签，html 和 body 的属性以及页面的 title。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins/notify</link>
+     <title>Notify 通知 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>一个可以给用户展示带有动画的信息的 Quasar 插件，例如提示，通知，警告等。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-composables/use-quasar</link>
+     <title>useQuasar composable | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What is useQuasar() composable and how you can use it</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-composables/use-dialog-plugin-component</link>
+     <title>useDialogPluginComponent composable | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What is Quasar's useDialogPluginComponent() composable and how you can use it</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-composables/use-form-child</link>
+     <title>useFormChild composable | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What is Quasar's useFormChild() composable and how you can use it</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-composables/use-meta</link>
+     <title>useMeta composable | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What is Quasar's useMeta() composable and how you can use it</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/security/dos-and-donts</link>
+     <title>Security DO's and DON'Ts | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The list of Quasar security recommendations.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/security/report-a-vulnerability</link>
+     <title>Report a vulnerability | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to report a Quasar security threat, vulnerability or exploit.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/quasar-config-js</link>
+     <title>quasar.config.js 配置详解 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 和 vite 的项目中如何进行配置。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/convert-to-quasar-cli-with-vite</link>
+     <title>Convert project to Quasar CLI with Vite | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) How to convert a Quasar CLI with Webpack project to a Quasar CLI with Vite one.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/browser-compatibility</link>
+     <title>浏览器兼容性 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如果利用 Quasar CLI 处理浏览器兼容性。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/directory-structure</link>
+     <title>目录结构 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasa 项目的目录结构详解。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/commands-list</link>
+     <title>命令列表 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar CLI 完整的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/css-preprocessors</link>
+     <title>CSS 预处理器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 中提供开箱即用的 Sass/SCSS CSS 预处理器。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/routing</link>
+     <title>应用路由 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 中使用 Vue Router 路由。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/lazy-loading</link>
+     <title>按需加载/代码拆分 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite)Vite 版本的 Quasar CLI 怎么创建异步加载模块。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-assets</link>
+     <title>应用处理静态资源 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 项目如何处理静态（assets 和 static）资源。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/boot-files</link>
+     <title>Boot 启动文件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar Boot 启动文件详解。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/prefetch-feature</link>
+     <title>预取特性 PreFetch | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 中预取数据，初始化 Store，验证路由或者重定向路由</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/api-proxying</link>
+     <title>开发时进行 API 代理 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 开发服务如何开启 API 代理。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-vite</link>
+     <title>配置 Vite | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 项目中管理 Vite。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/handling-process-env</link>
+     <title>处理 process.env | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 项目中根不同的环境加载不同的环境变量。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-pinia</link>
+     <title>使用 Pinia 管理状态 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 项目中如何使用 Pinia。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/state-management-with-vuex</link>
+     <title>应用 Vuex Store | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 项目中使用 Vuex 管理状态数据。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/linter</link>
+     <title>ESLint | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何为 Quasar 项目配置 ESLint。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/testing-and-auditing</link>
+     <title>集成测试 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 应用如何进行单元测试和端到端测试。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/introduction</link>
+     <title>SPA 是什么 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 介绍什么是一个单页面应用（SPA）。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/app-icons-spa</link>
+     <title>SPA 应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何配置 Quasar 单页应用（SPA）的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/build-commands</link>
+     <title>SPA 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar CLI 开发和打包单页应用的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa/deploying</link>
+     <title>部署 SPA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) 如何部署 Quasar CLI 打包出来的单页应用（SPA）。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/introduction</link>
+     <title>介绍 - 什么是 SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Quasar CLI 构建 SSR 服务端渲染应用的介绍。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/writing-universal-code</link>
+     <title>为 SSR 编写通用的代码 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何为 Quasar 的 SSR 服务端渲染编写通用的代码。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-upgrade-guide</link>
+     <title>Upgrade guide on SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Upgrading instructions from Quasar v1 to v2 when dealing with SSR.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/preparation</link>
+     <title>开发 SSR 的准备 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar 添加 SSR 模式</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/configuring-ssr</link>
+     <title>配置 SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar CLI 管理您的 SSR 应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-context</link>
+     <title>The ssrContext Object | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) The ssrContext Object in Quasar SSR</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-middleware</link>
+     <title>SSR Middleware | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Managing the SSR middleware in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-webserver</link>
+     <title>SSR Webserver | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/vue-ssr-directives</link>
+     <title>Vue SSR 指令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Managing the Vue directives for SSR in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/app-icons-ssr</link>
+     <title>SSR 模式的应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如果管理 Quasar 的服务端渲染应用程序的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/seo-for-ssr</link>
+     <title>SEO for SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 的服务端进行搜索引擎优化（SEO）</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/client-side-hydration</link>
+     <title>客户端水化 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 什么是 hydration（水化），在 Quasar 的服务端渲染中是怎么进行 hydration（水化）的。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</link>
+     <title>SSR 处理 404 和 500 错误 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-pwa</link>
+     <title>SSR with PWA Client Takeover | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何给 Quasar 的服务端渲染应用的客户端使用 PWA。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-frequently-asked-questions</link>
+     <title>SSR 的常见问题 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite)  Quasar 服务端渲染的提示与技巧。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/build-commands</link>
+     <title>SSR 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar CLI 开发/构建 SSR 服务端渲染应用的命令</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/ssr-with-typescript</link>
+     <title>SSR with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 的 SSR 模式中使用 Typescript</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/deploying</link>
+     <title>部署 SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/introduction</link>
+     <title>什么是 PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 介绍什么是一个渐进式 Web 应用（PWA）以及如何在 Quasar 应用中使用它。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/preparation</link>
+     <title>开发 PWA 的准备工作 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar CLI 添加 PWA 模式。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/build-commands</link>
+     <title>PWA 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 开发或打包一个渐进式 Web 应用（PWA）的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/configuring-pwa</link>
+     <title>配置 PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar CLI 管理您的渐进式 Web（PWA）应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/hmr-for-dev</link>
+     <title>PWA 应用的热更新 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何管理 Quasar PWA 应用的热更新（HMR）。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/app-icons-pwa</link>
+     <title>PWA 应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何配置 Quasar 渐进式 Web 应用（PWA）的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/handling-service-worker</link>
+     <title>处理 Service Worker | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 渐进式 Web 应用（应用）中配置 service worker 。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa/pwa-with-typescript</link>
+     <title>PWA 与 Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar PWA 中使用 Typescript。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-mobile-apps</link>
+     <title>开发手机应用 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Quasar CLI 开发混合应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/introduction</link>
+     <title>Capacitor 是什么 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 介绍 Quasar 移动应用程序背后的一项技术。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/preparation</link>
+     <title>开发 Capacitor 应用前准备 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在您使用 Capacitor 开发 Quasar 混合移动应用程序之前需要做的工作。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-version-support</link>
+     <title>Capacitor 版本 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 中支持的 Capacitor 版本。如何升级到较新的 Capacitor 版本。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/configuring-capacitor</link>
+     <title>配置 Capacitor | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何用 Quasar CLI 来管理您的 Capacitor 应用程序。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/app-icons-capacitor</link>
+     <title>应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何用 Capacitor 管理 Quasar 混合移动应用程序的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/capacitor-api</link>
+     <title>Capacitor 接口 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 应用程序中使用 Capacitor 插件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/build-commands</link>
+     <title>Capacitor 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Capacitor 开发或构建混合移动应用程序时，Quasar CLI 的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/troubleshooting-and-tips</link>
+     <title>Capacitor 故障与技巧 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Capacitor 的 Quasar 混合移动应用程序的技巧和窍门。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/managing-google-analytics</link>
+     <title>管理谷歌分析 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 混合型移动应用程序 Capacitor 模式中使用谷歌分析。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps/publishing-to-store</link>
+     <title>发布到应用商店 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何用 Capacitor 发布 Quasar 混合移动应用程序到谷歌商店和苹果商店。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/introduction</link>
+     <title>什么是 Cordova | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 介绍 Quasar 混合移动应用程序背后的一项技术。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/preparation</link>
+     <title>开发 Cordova App 的准备工作 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Quasar 和 Cordova 开发混合应用需要的准备工作。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/configuring-cordova</link>
+     <title>配置 Cordova | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar ClI 管理您的 Cordova 应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/app-icons-cordova</link>
+     <title>Cordova 应用的图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如果管理 Quasar 和 Cordova 开发的混合应用的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/cordova-plugins</link>
+     <title>Cordova 插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如果在 Quasar 中使用 Cordova 插件</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/build-commands</link>
+     <title>移动应用打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar CLI 开发 Cordova 混合应用的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/troubleshooting-and-tips</link>
+     <title>Cordova 的常见问题和技巧 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Quasar 和 Cordova 开发混合应用时的常见问题和技巧。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/managing-google-analytics</link>
+     <title>管理 Google Analytics | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) How to use analytics in a Quasar hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps/publishing-to-store</link>
+     <title>发布应用到商店 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如果发布一个使用 Quasar 和 Cordova 开发的混合应用到 google 和 apple 商店。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/introduction</link>
+     <title>什么是 Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Introduction about the technology behind Quasar desktop apps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-upgrade-guide</link>
+     <title>Upgrade guide on Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Upgrading instructions when dealing with Electron in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/preparation</link>
+     <title>开发 Electron 的准备工作 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何给 Quasar 项目添加 Electron 开发模式。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/configuring-electron</link>
+     <title>Electron 配置项 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 项目中对您的 Electron 进行配置。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/app-icons-electron</link>
+     <title>Electron 应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何管理 Quasar 桌面应用的图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/build-commands</link>
+     <title>Electron 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite)Quasar CLI 提供的用于开发或打包桌面应用的命令。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-preload-script</link>
+     <title>Electron Preload 预加载脚本 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite)Quasar 项目中如何使用 Electron Preload 脚本处理 Node 集成。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-packages</link>
+     <title>Electron Packages | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 可以在 Quasar 中使用的 Electron 相关 npm 包。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-accessing-files</link>
+     <title>Electron 访问文件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite)在 Quasar 桌面项目中如何访问文件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/frameless-electron-window</link>
+     <title>无边框 Electron 窗口 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何给 Quasar 桌面应用隐藏边框。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-with-typescript</link>
+     <title>Electron 和 Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在 Quasar 项目的 Electron 中使用 Typescript。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/electron-security-concerns</link>
+     <title>Electron 安全问题 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 开发 Quasar 桌面应用时，您需要知道的安全问题。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps/troubleshooting-and-tips</link>
+     <title>常见问题 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 使用 Quasar 开发 Electron 桌面应用时的常见问题和技巧。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/introduction</link>
+     <title>什么是浏览器插件/扩展 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 介绍什么是浏览器插件/扩展（BEX）。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/preparation</link>
+     <title>开发 BEX 的准备 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何在一个 Quasar 应用中添加浏览器扩展模式（BEX）。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/configuring-bex</link>
+     <title>配置 BEX | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何使用 Quasar CLI 管理浏览器插件应用。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/app-icons-browser-extension</link>
+     <title>BEX 应用图标 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何管理 Quasar 的浏览器插件（BEX）的应用图标。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/build-commands</link>
+     <title>BEX 打包命令 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 通过 Quasar CLI 开发或打包一个浏览器插件（BEX）的命令列表。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/types-of-bex</link>
+     <title>BEX 的类型 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) How to configure each type of Browser Extensions in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/bex-communication</link>
+     <title>BEX 通信 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) Quasar 浏览器插件（BEX）的不同部分之间如何通信。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/background-script</link>
+     <title>后台脚本 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用后台脚本与其他部分通信。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/content-scripts</link>
+     <title>内容脚本 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用内容脚本与后台脚本和应用部分通信。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions/dom-script</link>
+     <title>DOM 脚本 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用 DOM 脚本的钩子函数与网页通信。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/ajax-requests</link>
+     <title>Ajax 请求 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 在 Quasar 应用中使用 Axios 请求数据。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/opening-dev-server-to-public</link>
+     <title>向公众开放开发服务器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-vite) 如何向因特网上的任何人提供对开发服务器的临时访问。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/quasar-config-js</link>
+     <title>quasar.config.js 配置详解 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) 在 Quasar 和 webpack 的项目中如何进行配置。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/convert-to-quasar-cli-with-webpack</link>
+     <title>Convert project to Quasar CLI with Webpack | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to convert a Quasar CLI with Vite project to a Quasar CLI with Webpack one.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/browser-compatibility</link>
+     <title>浏览器兼容性 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) 如何处理Quasar CLI 项目的浏览器兼容性。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/supporting-ts</link>
+     <title>Supporting TypeScript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to enable support for TypeScript in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/directory-structure</link>
+     <title>Directory Structure | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The structure of a Quasar app with explanations for each folder and file.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/commands-list</link>
+     <title>Commands List | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The entire list of Quasar CLI commands.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/css-preprocessors</link>
+     <title>CSS Preprocessors | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Sass/SCSS are the out of the box supported css preprocessors in Quasar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/routing</link>
+     <title>App Routing | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use the Vue Router in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/lazy-loading</link>
+     <title>Lazy Loading / Code Splitting | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to create Webpack chunks in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-assets</link>
+     <title>App Handling Assets | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use regular app assets and static assets in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/boot-files</link>
+     <title>Boot files | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing your startup code in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/prefetch-feature</link>
+     <title>PreFetch Feature | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to prefetch data and initialize your Vuex store, validate the route and redirect to another page in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/api-proxying</link>
+     <title>API Proxying for Dev | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use an API proxy with the Quasar dev server.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-webpack</link>
+     <title>Handling Webpack | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage Webpack in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/handling-process-env</link>
+     <title>Handling process.env | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to differentiate the runtime procedure based on process.env in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-pinia</link>
+     <title>State management with Pinia | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage Pinia in a Quasar App.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-with-vuex</link>
+     <title>App Vuex Store | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the Vuex Store in a Quasar App.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/linter</link>
+     <title>ESLint | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to configure a code linter in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/testing-and-auditing</link>
+     <title>Testing &amp; Auditing | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to unit and end to end test a Quasar app and also how to audit for quality and security.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/introduction</link>
+     <title>What is SPA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on what a Single Page App is.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/app-icons-spa</link>
+     <title>App Icons for SPA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar Single Page Application.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/build-commands</link>
+     <title>SPA Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a single page application.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-spa/deploying</link>
+     <title>Deploying a SPA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to publish a Single Page App built by Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/introduction</link>
+     <title>What is SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on server-side rendered apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/writing-universal-code</link>
+     <title>Writing Universal Code | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Guide on how to write code for a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-upgrade-guide</link>
+     <title>Upgrade guide on SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Upgrading instructions from Quasar v1 to v2 when dealing with SSR.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/preparation</link>
+     <title>Preparation for SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to add SSR mode with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/configuring-ssr</link>
+     <title>Configuring SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your server-side rendered apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-context</link>
+     <title>The ssrContext Object | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The ssrContext Object in Quasar SSR</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-middleware</link>
+     <title>SSR Middleware | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing the SSR middleware in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-production-export</link>
+     <title>SSR Production Export | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Configuring the Quasar SSR webserver for different platforms, including a serverless architecture.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/vue-ssr-directives</link>
+     <title>Vue SSR Directives | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing the Vue directives for SSR in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/app-icons-ssr</link>
+     <title>App Icons for SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/seo-for-ssr</link>
+     <title>SEO for SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing the search engine optimizations in a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/client-side-hydration</link>
+     <title>Client Side Hydration | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) What hydration is and its caveats in a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/handling-404-and-500-errors</link>
+     <title>SSR Handling of 404 and 500 Errors | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing the common 404 and 500 HTTP errors in a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-pwa</link>
+     <title>SSR with PWA Client Takeover | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to configure your Quasar server-side rendered app to become a Progressive Web App on the client side.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-frequently-asked-questions</link>
+     <title>SSR FAQ | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Tips and tricks for a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/build-commands</link>
+     <title>SSR Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/ssr-with-typescript</link>
+     <title>SSR with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with SSR in Quasar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-ssr/deploying</link>
+     <title>Deploying SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to publish a Quasar server-side rendered app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/introduction</link>
+     <title>What is a PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on what a Progressive Web App is and how it can be configured in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/preparation</link>
+     <title>Preparation for PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to add PWA mode with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/build-commands</link>
+     <title>PWA Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a Progressive Web App.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/configuring-pwa</link>
+     <title>Configuring PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your Progressive Web Apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/hmr-for-dev</link>
+     <title>Hot Module Reload for PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage HMR (Hot Module Reload) with Quasar PWA.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/app-icons-pwa</link>
+     <title>App Icons for PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar Progressive Web App.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/handling-service-worker</link>
+     <title>Handling Service Worker | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to configure the service worker in a Quasar Progressive Web App.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-pwa/pwa-with-typescript</link>
+     <title>PWA with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with Quasar PWA</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-mobile-apps</link>
+     <title>Developing Mobile Apps | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Developing hybrid mobile apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/introduction</link>
+     <title>What is Capacitor | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on one of the technologies behind Quasar mobile apps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/preparation</link>
+     <title>Preparation for Capacitor App | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) What you need to do before developing a Quasar hybrid mobile app with Capacitor.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/capacitor-version-support</link>
+     <title>Capacitor versions | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Supported Capacitor versions in Quasar. How to upgrade to a newer Capacitor version.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/configuring-capacitor</link>
+     <title>Configuring Capacitor | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your Capacitor apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/app-icons-capacitor</link>
+     <title>App Icons for Capacitor | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar hybrid mobile app with Capacitor.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/capacitor-api</link>
+     <title>Capacitor APIs | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use the Capacitor plugins in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/build-commands</link>
+     <title>Capacitor Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a hybrid mobile app with Capacitor.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/troubleshooting-and-tips</link>
+     <title>Capacitor Troubleshooting and Tips | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Tips and tricks for a Quasar hybrid mobile app with Capacitor.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/managing-google-analytics</link>
+     <title>Managing Google Analytics | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use analytics in a Quasar hybrid mobile app with Capacitor.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-capacitor-apps/publishing-to-store</link>
+     <title>Publishing to Store | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to publish a Quasar hybrid mobile app with Capacitor to Google Play Store and to Apple App Store.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/introduction</link>
+     <title>What is Cordova | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on one of the technologies behind Quasar hybrid mobile apps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/preparation</link>
+     <title>Preparation for Cordova App | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) What you need to do before developing a Quasar hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/configuring-cordova</link>
+     <title>Configuring Cordova | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your Cordova apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/app-icons-cordova</link>
+     <title>App Icons for Cordova | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/cordova-plugins</link>
+     <title>Cordova Plugins | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use the Cordova plugins in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/build-commands</link>
+     <title>Mobile App Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/troubleshooting-and-tips</link>
+     <title>Cordova Troubleshooting and Tips | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Tips and tricks for a Quasar hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/managing-google-analytics</link>
+     <title>Managing Google Analytics | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use analytics in a Quasar hybrid mobile app with Cordova.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-cordova-apps/publishing-to-store</link>
+     <title>Publishing to Store | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to publish a Quasar hybrid mobile app with Cordova to Google Play Store and to Apple App Store.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/introduction</link>
+     <title>What is Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction about the technology behind Quasar desktop apps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-upgrade-guide</link>
+     <title>Upgrade guide on Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Upgrading instructions when dealing with Electron in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/preparation</link>
+     <title>Preparation for Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to add Electron mode into a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/configuring-electron</link>
+     <title>Configuring Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your Electron apps with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/app-icons-electron</link>
+     <title>App Icons for Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Desktop Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/build-commands</link>
+     <title>Electron Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-preload-script</link>
+     <title>Electron Preload Script | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to handle Electron Node Integration with an Electron Preload script with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-packages</link>
+     <title>Electron Packages | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The list of Electron packages available in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-accessing-files</link>
+     <title>Electron Accessing Files | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to access files in a Quasar desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/frameless-electron-window</link>
+     <title>Frameless Electron Window | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to hide the window frame in a Quasar desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-with-typescript</link>
+     <title>Electron with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with Electron in Quasar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/electron-security-concerns</link>
+     <title>Electron Security Concerns | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The things you should know about security in a Quasar desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-electron-apps/troubleshooting-and-tips</link>
+     <title>Troubleshooting and Tips | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Tips and tricks for a Quasar desktop app with Electron.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/introduction</link>
+     <title>What is a Browser Extension | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Introduction on what a Browser Extension (BEX) is.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/preparation</link>
+     <title>Preparation for BEX | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to add the Browser Extension (BEX) mode into a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/configuring-bex</link>
+     <title>Configuring BEX | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage your Browser Extensions with Quasar CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/app-icons-browser-extension</link>
+     <title>App Icons for (BEX) | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to manage the app icons for a Quasar Browser Extension (BEX).</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/build-commands</link>
+     <title>BEX Build Commands | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The Quasar CLI list of commands when developing or building a Browser Extension (BEX).</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/types-of-bex</link>
+     <title>Types of BEX | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to configure each type of Browser Extensions in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/bex-communication</link>
+     <title>BEX Communication | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to communicate between different parts of your Browser Extension (BEX) in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/background-hooks</link>
+     <title>Background Hooks | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to communicate using your background script with other parts of your Browser Extension (BEX).</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/content-hooks</link>
+     <title>Content Hooks | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to communicate using your content script with your Quasar App and Background Script in Quasar Browser Extension mode.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/developing-browser-extensions/dom-hooks</link>
+     <title>DOM Hooks | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to communicate to the underlying web page using dom hooks in Quasar Browser Extension mode.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/ajax-requests</link>
+     <title>Ajax Requests | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Using Axios for fetching data in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/opening-dev-server-to-public</link>
+     <title>Opening Your Dev Server to the Public | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to offer temporary access to your development server to anyone on the Internet.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/icongenie/introduction</link>
+     <title>Icon Genie CLI | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>A Quasar tool for generating all your app's icons and splash screens in 100+ formats.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/icongenie/installation</link>
+     <title>Icon Genie CLI Installation | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to install the Icon Genie CLI on your development machine.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/icongenie/command-list</link>
+     <title>Icon Genie CLI Command List | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Command list for Icon Genie CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/icongenie/app-icons-list</link>
+     <title>App Icons List | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of the app icons and splash screens that are generated by the Icon Genie CLI based on the Quasar mode.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/icongenie/profile-files</link>
+     <title>Icon Genie Profile Files | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to use profile files with the Icon Genie CLI.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/introduction</link>
+     <title>App Extensions | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>What Quasar App Extensions are and how they can help both you and the community.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/discover</link>
+     <title>Discover App Extensions | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Look up official and community Quasar App Extensions.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/development-guide/introduction</link>
+     <title>App Extension Development | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>How to setup your machine for a Quasar App Extension development and getting started quickly.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/development-guide/prompts-api</link>
+     <title>App Extension Prompts API | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Syntax of the questions that the user is going to be asked in order to configure the Quasar App Extension.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/development-guide/install-api</link>
+     <title>App Extension Install API | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The API for the install script of a Quasar App Extension. Initializes the app space by rendering or changing files and more.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/development-guide/index-api</link>
+     <title>App Extension Index API | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The API for the index script of a Quasar App Extension. Provides access to Quasar context, registers new CLI commands, extends Webpack config and more.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/development-guide/uninstall-api</link>
+     <title>App Extension Uninstall API | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>The API for the uninstall script of a Quasar App Extension.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/introduction</link>
+     <title>App Extension tips &amp; tricks introduction | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Introduction to the list of Quasar App Extension tips &amp; tricks documentation.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/provide-a-ui-component</link>
+     <title>Provide a UI component | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Tips and tricks on how to provide a Vue component to the host app of a Quasar App Extension.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/provide-a-directive</link>
+     <title>Providing a directive | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Tips and tricks on how to provide a Vue directive to the host app of a Quasar App Extension.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/inject-quasar-plugin</link>
+     <title>Injecting Quasar Plugin | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Tips and tricks on how to use a Quasar App Extension to configure the host app to use a Quasar Plugin.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/starter-kit-equivalent</link>
+     <title>Starter kit equivalent | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Tips and tricks on how to use a Quasar App Extension to create the equivalent of a starter kit.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/app-extensions/tips-and-tricks/chain-webpack</link>
+     <title>Chain Webpack | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Tips and tricks on how to use a Quasar App Extension to configure the host app to use a Webpack loader.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/date-utils</link>
+     <title>时间工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了一组有用的函数，不需要额外安装高昂成本的第三方库就可以在大多数使用情况下轻松地操作 JS 中的 Date。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/color-utils</link>
+     <title>颜色工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供的一组用于修改主题颜色和操作颜色字符串的工具函数。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/dom-utils</link>
+     <title>DOM 工具函数 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了一组用于 DOM 元素的工具函数，可帮助您检查屏幕视口上的偏移量，获取和设置样式，等待 DOM 就绪并变形 DOM 元素。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/morph-utils</link>
+     <title>DOM 变形工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了一组 DOM 变形工具，可以将一个 DOM 元素变形成另一个（带有动画效果），或者同一个 DOM 元素在两个状态之间变形。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/formatter-utils</link>
+     <title>格式化工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供的一组用于格式化数据方法，大写转换、填充、标准化等。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/scrolling-utils</link>
+     <title>滚动工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供的一组与滚动有关的工具函数，例如获取滚动容器或者和改变一个元素或者页面的滚动位置。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/type-checking-utils</link>
+     <title></title>
+     <description>Quasar 提供的一组用于检查类型的工具函数。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/event-bus-util</link>
+     <title>事件总线工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了一个全局的事件总线工具</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-utils/other-utils</link>
+     <title>其他工具 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Quasar 提供了一组工具函数，包括防抖、节流、深度克隆、跨平台打开 URL 以及处理 DOM 事件。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/start</link>
+     <title>Getting Started - Pick a Quasar Flavour | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Get started with Quasar by picking one of its flavours: Quasar CLI, Vue CLI or UMD</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components</link>
+     <title>Vue 组件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Vue 组件' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite</link>
+     <title>Quasar CLI（Vite） | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Quasar CLI（Vite）' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/boot-files</link>
+     <title>Boot files | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Managing your startup code in a Quasar app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-electron-apps/electron-upgrade-guide</link>
+     <title>Upgrade guide on Electron | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Upgrading instructions when dealing with Electron in Quasar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-electron-apps/electron-with-typescript</link>
+     <title>Electron with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with Electron in Quasar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-pwa/pwa-with-typescript</link>
+     <title>PWA with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with Quasar PWA</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-ssr/ssr-upgrade-guide</link>
+     <title>Upgrade guide on SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) Upgrading instructions from Quasar v1 to v2 when dealing with SSR.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-ssr/ssr-with-typescript</link>
+     <title>SSR with Typescript | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to use Typescript with SSR in Quasar</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/youtube</link>
+     <title>Youtube Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Youtube</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/google-play</link>
+     <title>Google Play Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Google Play</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/github</link>
+     <title>GitHub Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like GitHub</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/google-photos</link>
+     <title>Google Photos Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Google Photos</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/google-news</link>
+     <title>Google News Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Google News</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/whatsapp</link>
+     <title>Whatsapp Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Whatsapp</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/quasar-classic</link>
+     <title>Quasar Classic Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Quasar Classic</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/layout/gallery/quasar-classic-dark</link>
+     <title>Quasar Classic (Dark) Layout | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>Example of a Quasar layout that looks like Quasar Classic (Dark)</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-electron-apps/frameless-electron-window</link>
+     <title>Frameless Electron Window | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) How to hide the window frame in a Quasar desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli/developing-electron-apps/electron-security-concerns</link>
+     <title>Electron Security Concerns | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>(@quasar/app-webpack) The things you should know about security in a Quasar desktop app.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/state-management-pinia-vuex</link>
+     <title>Oops.. | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>基于 vuejs 的开源前端框架，高性能，内置丰富的 css 和 vue 组件库，响应式支持，一套代码可以编译出 SPA，PWA，SSR，手机应用和桌面应用。明智的人选择 vue，高产的人选择 quasar + vue。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-webpack/state-management-pinia-vuex</link>
+     <title>Oops.. | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>基于 vuejs 的开源前端框架，高性能，内置丰富的 css 和 vue 组件库，响应式支持，一套代码可以编译出 SPA，PWA，SSR，手机应用和桌面应用。明智的人选择 vue，高产的人选择 quasar + vue。</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-plugins</link>
+     <title>Quasar 插件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Quasar 插件' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/buttons</link>
+     <title>Buttons 按钮 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Buttons 按钮' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/form-components</link>
+     <title>Form Components 表单组件 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Form Components 表单组件' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/vue-components/observers</link>
+     <title>Observers 侦听器 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the 'Observers 侦听器' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-spa</link>
+     <title>开发 SPA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 SPA' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr</link>
+     <title>开发 SSR | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 SSR' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-pwa</link>
+     <title>开发 PWA | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 PWA' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-capacitor-apps</link>
+     <title>开发 Capacitor 应用 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 Capacitor 应用' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-cordova-apps</link>
+     <title>开发 Cordova 应用 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 Cordova 应用' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-electron-apps</link>
+     <title>开发 Electron 应用 | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发 Electron 应用' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-browser-extensions</link>
+     <title>开发浏览器插件（BEX） | Quasar 框架 V2 中文文档 | Quasar Framework V2 中文文档</title>
+     <description>List of pages under the '开发浏览器插件（BEX）' section</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
