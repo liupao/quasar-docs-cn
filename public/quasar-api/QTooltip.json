@@ -51,7 +51,7 @@
         "2rem"
       ],
       "category": "content",
-      "desc_cn": "工具提示的最大高度；以CSS单位表示的大小，包括单位名称"
+      "desc_cn": "工具提示的最大高度；带有 CSS 单位的尺寸大小，包括单位的名称"
     },
     "max-width": {
       "type": "String",
@@ -61,7 +61,7 @@
         "2rem"
       ],
       "category": "content",
-      "desc_cn": "工具提示的最大宽度；以CSS单位表示的大小，包括单位名称"
+      "desc_cn": "工具提示的最大宽度；带有 CSS 单位的尺寸大小，包括单位的名称"
     },
     "anchor": {
       "type": "String",

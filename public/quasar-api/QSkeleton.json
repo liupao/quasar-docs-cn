@@ -86,7 +86,7 @@
         "2rem"
       ],
       "category": "style",
-      "desc_cn": "以CSS单位表示的大小，包括单位名称；覆盖“height”和“width”属性，并将值同时应用于height和width"
+      "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称；覆盖“height”和“width”属性，并将值同时应用于height和width"
     },
     "width": {
       "type": "String",

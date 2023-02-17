@@ -16,7 +16,7 @@
       ],
       "category": "style",
       "required": false,
-      "desc_cn": "窗口中应显示QAjaxBar的位置"
+      "desc_cn": "窗口中显示 QAjaxBar 的位置"
     },
     "size": {
       "type": "String",
@@ -28,7 +28,7 @@
       "category": "style",
       "default": "2px",
       "required": false,
-      "desc_cn": "以CSS单位表示的大小，包括单位名称"
+      "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称"
     },
     "color": {
       "type": "String",
@@ -38,7 +38,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "reverse": {
       "type": "Boolean",
@@ -50,7 +50,7 @@
       "type": "Boolean",
       "desc": "Skip Ajax hijacking (not a reactive prop)",
       "category": "behavior",
-      "desc_cn": "跳过Ajax劫持（不是被动的属性）"
+      "desc_cn": "跳过 Ajax 劫持（不是一个响应式属性）"
     },
     "hijack-filter": {
       "type": "Function",

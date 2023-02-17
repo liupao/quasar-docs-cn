@@ -165,7 +165,7 @@
       "category": "style",
       "default": "grey-8",
       "required": false,
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "icon-first-page": {
       "type": "String",

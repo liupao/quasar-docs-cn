@@ -23,7 +23,7 @@
         "md"
       ],
       "category": "style",
-      "desc_cn": "以CSS单位表示的大小，包括单位名称或标准大小名称（xs | sm | md | lg | xl）"
+      "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称或标准大小名称（xs | sm | md | lg | xl）"
     },
     "model-value": {
       "desc": "Model of the component; Either use this property (along with a listener for 'update:model-value' event) OR use v-model directive",
@@ -120,7 +120,7 @@
         "[\"accent\", \"grey-7\"] "
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称；v1.5.0+：如果提供了数组，则每个额定值将使用数组中相应的颜色（基于0）"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称；v1.5.0+：如果提供了数组，则每个额定值将使用数组中相应的颜色（基于0）"
     },
     "color-selected": {
       "type": [

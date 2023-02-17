@@ -50,7 +50,7 @@
       "category": "style",
       "default": "42px",
       "required": false,
-      "desc_cn": "以CSS单位表示的大小，包括单位名称，或内部微调器的标准大小名称（xs | sm | md | lg | xl）（除非使用默认插槽）"
+      "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称，或内部微调器的标准大小名称（xs | sm | md | lg | xl）（除非使用默认插槽）"
     },
     "showing": {
       "type": "Boolean",

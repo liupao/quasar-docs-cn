@@ -63,7 +63,7 @@
       "category": "style",
       "default": "primary",
       "required": false,
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "validate": {
       "type": "Function",
@@ -197,7 +197,7 @@
         "2rem"
       ],
       "category": "style",
-      "desc_cn": "菜单的最大高度；以CSS单位表示的大小，包括单位名称"
+      "desc_cn": "菜单的最大高度；带有 CSS 单位的尺寸大小，包括单位的名称"
     },
     "max-width": {
       "type": "String",
@@ -207,7 +207,7 @@
         "2rem"
       ],
       "category": "style",
-      "desc_cn": "菜单的最大宽度；以CSS单位表示的大小，包括单位名称"
+      "desc_cn": "菜单的最大宽度；带有 CSS 单位的尺寸大小，包括单位的名称"
     }
   },
   "slots": {

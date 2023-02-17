@@ -14,7 +14,7 @@
         "md"
       ],
       "category": "style",
-      "desc_cn": "以CSS单位表示的大小，包括单位名称或标准大小名称（xs | sm | md | lg | xl）"
+      "desc_cn": "带有 CSS 单位的尺寸大小，包括单位的名称或标准大小名称（xs | sm | md | lg | xl）"
     },
     "color": {
       "type": "String",
@@ -24,7 +24,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     }
   }
 }

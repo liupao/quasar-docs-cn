@@ -76,7 +76,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "track-color": {
       "type": "String",
@@ -152,7 +152,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "label-text-color": {
       "type": "String",
@@ -162,7 +162,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件的颜色，来自 Quasar 调色板的颜色名称"
     },
     "switch-label-side": {
       "type": "Boolean",
