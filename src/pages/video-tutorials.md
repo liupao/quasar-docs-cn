@@ -25,6 +25,6 @@ components:
 
 ## Vue 2 (过时的) 视频教程
 
-Quaasr 是基于 Vue 的，所以先学会 Vue 也很重要
+Quasar 是基于 Vue 的，所以先学会 Vue 也很重要
 
 <tutorial-listing which="vue" />

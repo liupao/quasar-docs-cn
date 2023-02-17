@@ -4,7 +4,7 @@ desc: Quasar 的 css 断点列表。
 related:
   - /style/spacing
 ---
-Quaasr 拥有以下 CSS 断点：
+Quasar 拥有以下 CSS 断点：
 
 | Window 大小 | 命名 | 断点像素大小 |
 | --- | --- | --- |
