@@ -17,12 +17,12 @@ QAvatar（头像）组件创建了一个可伸缩的、可着色的元素，可�
 使用 `size` 属性来定义 Avatar 组件的长和宽。`font-size`属性可以设置 Avatar 组件内使用的文字的大小，同时也会作用到字母和图标上面。
 :::
 
-<doc-example title="Basic" file="QAvatar/Basic" />
+<doc-example title="基础用法" file="QAvatar/Basic" />
 
-<doc-example title="Standard sizes" file="QAvatar/StandardSizes" />
+<doc-example title="标准尺寸" file="QAvatar/StandardSizes" />
 
-<doc-example title="Square" file="QAvatar/Square" />
+<doc-example title="方形" file="QAvatar/Square" />
 
-<doc-example title="Rounded" file="QAvatar/Rounded" />
+<doc-example title="圆角边框" file="QAvatar/Rounded" />
 
-<doc-example title="With other components" file="QAvatar/Integrated" />
+<doc-example title="搭配其他组件" file="QAvatar/Integrated" />

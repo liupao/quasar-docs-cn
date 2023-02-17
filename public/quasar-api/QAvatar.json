@@ -44,11 +44,12 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "覆盖文本颜色（如果需要）；来自Quasar调色板的颜色名称"
+      "desc_cn": "覆盖文本颜色（如果需要）；来自 Quasar 调色板的颜色名称"
     },
     "icon": {
       "type": "String",
-      "desc": "Icon name following Quasar convention; Make sure you have the icon library installed unless you are using 'img:' prefix; If 'none' (String) is used as value then no icon is rendered (but screen real estate will still be used for it)","desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标",
+      "desc": "Icon name following Quasar convention; Make sure you have the icon library installed unless you are using 'img:' prefix; If 'none' (String) is used as value then no icon is rendered (but screen real estate will still be used for it)"
+      ,"desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标",
       "examples": [
         "map",
         "ion-add",
@@ -61,19 +62,19 @@
       "type": "Boolean",
       "desc": "Removes border-radius so borders are squared",
       "category": "style",
-      "desc_cn": "删除border-radius，使边框为正方形"
+      "desc_cn": "删除边框圆角（border-radius），使边框为正方形"
     },
     "rounded": {
       "type": "Boolean",
       "desc": "Applies a small standard border-radius for a squared shape of the component",
       "category": "style",
-      "desc_cn": "为组件的方形应用较小的标准border-radius"
+      "desc_cn": "为组件应用较小标准的边框圆角（border-radius）"
     }
   },
   "slots": {
     "default": {
       "desc": "Optional; Suggestions: one character string, <img> tag",
-      "desc_cn": "可选；建议：一个字符串，<img>标记"
+      "desc_cn": "可选。建议：一个字符串，<img> 标签"
     }
   }
 }
