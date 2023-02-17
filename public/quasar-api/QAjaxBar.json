@@ -55,10 +55,12 @@
     "hijack-filter": {
       "type": "Function",
       "desc": "Filter which URL should trigger start() + stop()",
+      "desc_cn":"过滤哪些 URL 可以触发 start() + stop()",
       "params": {
         "url": {
           "type": "String",
           "desc": "The URL being triggered",
+          "desc_cn":"待判断的 URL",
           "examples": [
             "https://some.url/path"
           ]
@@ -66,7 +68,8 @@
       },
       "returns": {
         "type": "Boolean",
-        "desc": "Should the URL received as param trigger start() + stop()?"
+        "desc": "Should the URL received as param trigger start() + stop()?",
+        "desc_cn":"当前的 URL 是否可以触发 start() + stop()"
       },
       "category": "behavior",
       "addedIn": "v2.4.5"
@@ -75,11 +78,11 @@
   "events": {
     "start": {
       "desc": "Emitted when bar is triggered to appear",
-      "desc_cn": "Ajax栏被触发显示时发出"
+      "desc_cn": "Ajax 栏被触发显示时发出"
     },
     "stop": {
       "desc": "Emitted when bar has finished its job",
-      "desc_cn": "当Ajax栏完成它的工作时发出"
+      "desc_cn": "当 Ajax 栏完成它的工作时发出"
     }
   },
   "methods": {
@@ -91,14 +94,15 @@
           "default": 300,
           "desc": "Delay (in milliseconds) between progress auto-increments; If delay is 0 then it disables auto-incrementing",
           "required": false,
-          "desc_cn": "进度自动递增之间的延迟（毫秒）；如果延迟为0，则禁用自动递增"
+          "desc_cn": "进度自动递增之间的延迟（毫秒）；如果为0，则禁用自动递增"
         }
       },
       "returns": {
         "type": "Number",
-        "desc": "Number of active simultaneous sessions"
+        "desc": "Number of active simultaneous sessions",
+        "desc_cn":"同时激活的会话数量"
       },
-      "desc_cn": "通知ajax栏您正在等待新进程完成"
+      "desc_cn": "手动开启一个 ajax 栏，通知它您正在等待一个新进程完成"
     },
     "increment": {
       "desc": "Manually trigger a bar progress increment",
@@ -121,7 +125,7 @@
         "type": "Number",
         "desc": "Number of active simultaneous sessions"
       },
-      "desc_cn": "通知ajax栏您等待的进程已完成"
+      "desc_cn": "手动关闭 ajax 栏，通知它您等待的进程已完成"
     }
   }
 }

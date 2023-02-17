@@ -32,7 +32,7 @@ QAjaxBar 组件默认会自动捕获 Ajax 调用，然后展示它的进度。(�
 
 ### 基础
 
-<doc-example title="Basic" file="QAjaxBar/Basic" />
+<doc-example title="基础用法" file="QAjaxBar/Basic" />
 
 
 
