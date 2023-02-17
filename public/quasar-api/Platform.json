@@ -11,7 +11,7 @@
       "examples": [
         "mozilla/5.0 (macintosh; intel mac os x 10_14_5) applewebkit/537.36 (khtml, like gecko) chrome/75.0.3770.100 safari/537.36"
       ],
-      "desc_cn": "客户端浏览器用户代理"
+      "desc_cn": "客户端浏览器用户代理（User Agent）"
     },
     "is": {
       "type": "Object",
@@ -22,14 +22,16 @@
           "desc": "Browser name",
           "examples": [
             "chrome"
-          ]
+          ],
+          "desc_cn": "浏览器名称"
         },
         "platform": {
           "type": "String",
           "desc": "Platform name",
           "examples": [
             "mac"
-          ]
+          ],
+          "desc_cn": "平台名称"
         },
         "version": {
           "type": "String",
@@ -37,47 +39,56 @@
           "desc": "Detailed browser version",
           "examples": [
             "71.0.3578.98"
-          ]
+          ],
+          "desc_cn": "详细的浏览器版本"
         },
         "versionNumber": {
           "type": "Number",
           "required": false,
-          "desc": "Major browser version as a number"
+          "desc": "Major browser version as a number",
+          "desc_cn": "浏览器的主（Major）版本号"
         },
         "desktop": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is desktop"
+          "desc": "Whether the platform is desktop",
+          "desc_cn": "是否是桌面端"
         },
         "mobile": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is mobile"
+          "desc": "Whether the platform is mobile",
+          "desc_cn": "是否是移动端"
         },
         "electron": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is Electron"
+          "desc": "Whether the platform is Electron",
+          "desc_cn": "是否是 Electron 平台"
         },
         "bex": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is BEX(Browser Extension)"
+          "desc": "Whether the platform is BEX(Browser Extension)",
+          "desc_cn": "是否是 BEX（浏览器插件）"
         },
         "capacitor": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is Capacitor"
+          "desc": "Whether the platform is Capacitor",
+          "desc_cn": "是否是 Capacitor 平台"
         },
         "cordova": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is Cordova"
+          "desc": "Whether the platform is Cordova",
+          "desc_cn": "是否是 Cordova 平台"
         },
         "nativeMobile": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the platform is a native mobile wrapper"
+          "desc": "Whether the platform is a native mobile wrapper",
+          "desc_cn": "是否是原生移动平台"
         },
         "nativeMobileWrapper": {
           "type": "String",
@@ -86,102 +97,122 @@
             "cordova",
             "capacitor"
           ],
-          "desc": "Type of the native mobile wrapper"
+          "desc": "Type of the native mobile wrapper",
+          "desc_cn": "原生移动平台的类型"
         },
         "chrome": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Google Chrome"
+          "desc": "Whether the browser is Google Chrome",
+          "desc_cn": "是否是 Google Chrome 浏览器"
         },
         "firefox": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Firefox"
+          "desc": "Whether the browser is Firefox",
+          "desc_cn": "是否是 Firefox 浏览器"
         },
         "safari": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Safari"
+          "desc": "Whether the browser is Safari",
+          "desc_cn": "是否是 Safari 浏览器"
         },
         "edgeChromium": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Microsoft Edge (Chromium)"
+          "desc": "Whether the browser is Microsoft Edge (Chromium)",
+          "desc_cn": "是否是 Microsoft Edge (Chromium) 浏览器"
         },
         "edge": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Microsoft Edge Legacy"
+          "desc": "Whether the browser is Microsoft Edge Legacy",
+          "desc_cn": "是否是老版本 Microsoft Edge 浏览器"
         },
         "opera": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Opera"
+          "desc": "Whether the browser is Opera",
+          "desc_cn": "是否是 Opera 浏览器"
         },
         "vivaldi": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Vivaldi"
+          "desc": "Whether the browser is Vivaldi",
+          "desc_cn": "是否是 Vivaldi 浏览器"
         },
         "win": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Windows"
+          "desc": "Whether the operating system is Windows",
+          "desc_cn": "是否是 Windows 操作系统"
         },
         "linux": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Linux"
+          "desc": "Whether the operating system is Linux",
+          "desc_cn": "是否是 Linux 操作系统"
         },
         "mac": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Mac OS"
+          "desc": "Whether the operating system is Mac OS",
+          "desc_cn": "是否是 Mac OS 操作系统"
         },
         "cros": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Chrome OS"
+          "desc": "Whether the operating system is Chrome OS",
+          "desc_cn": "是否是 Chrome OS 操作系统"
         },
         "android": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Android"
+          "desc": "Whether the operating system is Android",
+          "desc_cn": "是否是 Android 操作系统"
         },
         "ios": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is iOS"
+          "desc": "Whether the operating system is iOS",
+          "desc_cn": "是否是 iOS 操作系统"
         },
         "winphone": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the operating system is Windows Phone"
+          "desc": "Whether the operating system is Windows Phone",
+          "desc_cn": "是否是 Windows Phone 操作系统"
         },
         "iphone": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the device is an iPhone"
+          "desc": "Whether the device is an iPhone",
+          "desc_cn": "是否是 iPhone 设备"
         },
         "ipad": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the device is an iPad"
+          "desc": "Whether the device is an iPad",
+          "desc_cn": "是否是 iPad 设备"
         },
         "ipod": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the device is an iPod"
+          "desc": "Whether the device is an iPod",
+          "desc_cn": "是否是 iPod 设备"
         },
         "kindle": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the device is a Kindle"
+          "desc": "Whether the device is a Kindle",
+          "desc_cn": "是否是 Kindle 设备"
         },
         "silk": {
           "type": "Boolean",
           "required": false,
-          "desc": "Whether the browser is Amazon Silk"
+          "desc": "Whether the browser is Amazon Silk",
+          "desc_cn": "是否是 Amazon Silk 浏览器"
         }
       },
       "examples": [
@@ -196,12 +227,12 @@
         "touch": {
           "type": "Boolean",
           "desc": "Client browser runs on device with touch support",
-          "desc_cn": "客户端浏览器在支持触摸的设备上运行"
+          "desc_cn": "客户端浏览器是否在支持触摸的设备上运行"
         },
         "webStorage": {
           "type": "Boolean",
           "desc": "Client browser has Web Storage support",
-          "desc_cn": "客户端浏览器支持Web存储"
+          "desc_cn": "客户端浏览器是否支持 Web 存储"
         }
       },
       "examples": [
@@ -216,7 +247,7 @@
         "iframe": {
           "type": "Boolean",
           "desc": "Does the app run under an iframe?",
-          "desc_cn": "应用程序是否在iframe下运行？"
+          "desc_cn": "应用程序是否在 iframe 中运行"
         }
       },
       "examples": [
@@ -233,16 +264,16 @@
           "type": "Object",
           "desc": "SSR Context Object",
           "required": true,
-          "desc_cn": "SSR上下文对象"
+          "desc_cn": "SSR 上下文对象"
         }
       },
       "returns": {
         "type": "Object",
         "tsType": "Platform",
         "desc": "Platform object (like $q.platform) for SSR usage purposes",
-        "desc_cn": "用于SSR用途的平台对象（如$q.Platform）"
+        "desc_cn": "用于 SSR 用途的平台对象（类似于 $q.Platform）"
       },
-      "desc_cn": "仅用于SSR，并且仅用在全局导入上（不用在$q.platform上）"
+      "desc_cn": "仅用于 SSR，并且仅可使用全局导入（不能使用 $q.platform）"
     }
   }
 }
