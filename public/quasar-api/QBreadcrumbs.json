@@ -15,7 +15,7 @@
       ],
       "category": "content",
       "required": false,
-      "desc_cn": "用来分开面包屑的字符串"
+      "desc_cn": "用来分割面包屑的字符串"
     },
     "active-color": {
       "type": "String",
@@ -27,7 +27,7 @@
       "category": "style",
       "default": "primary",
       "required": false,
-      "desc_cn": "激活的面包屑的颜色，可以是Quasar调色板中的任何颜色"
+      "desc_cn": "被激活的面包屑的颜色，可以是 Quasar 调色板中的任何颜色"
     },
     "gutter": {
       "type": "String",
@@ -43,7 +43,7 @@
       ],
       "category": "content",
       "required": false,
-      "desc_cn": "gutter值允许您控制面包屑元素之间的空间。"
+      "desc_cn": "gutter 值控制面包屑元素之间的间隔。"
     },
     "separator-color": {
       "type": "String",
@@ -53,7 +53,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "用于给分隔符上色的颜色，可以是Quasar调色板中的任何颜色"
+      "desc_cn": "设置分隔符的颜色，可以是 Quasar 调色板中的任何颜色"
     },
     "align": {
       "type": "String",
@@ -69,16 +69,17 @@
       ],
       "category": "content",
       "required": false,
-      "desc_cn": "指定如何水平对齐面包屑"
+      "desc_cn": "设置面包屑的水平对齐方式"
     }
   },
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+      "desc_cn": "组件的默认插槽"
     },
     "separator": {
-      "desc": "HTML or component you can slot in to separate the breadcrumbs"
+      "desc": "HTML or component you can slot in to separate the breadcrumbs",
+      "desc_cn": "HTML 或 组件，用于自定义分隔符插槽"
     }
   }
 }
