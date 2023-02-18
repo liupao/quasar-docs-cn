@@ -29,7 +29,8 @@
         "href=\"https://quasar.dev\" target=\"_blank\""
       ],
       "category": "general",
-      "required": false
+      "required": false,
+      "desc_cn": "1. 定义按钮的原生 type 属性（submit，reset，button） \n2. 使用 <a> 标签渲染组件，这样即使按钮被禁用，依然可以触发事件\n3. 使用 'href' 属性并将 'type' 声明为一个媒体标签" 
     },
     "to": {
       "type": [
@@ -373,7 +374,8 @@
           },
           "desc_cn": "仅在使用了路由导航相关的属性（'to'/'replce'）时可用。当您想要控制组件触发导航的时机时，你可以在点击事件的处理函数中调用 evt.preventDefault() 来阻止导航跳转，然后在合适的时机再调用此函数进行路由跳转。当您需要等待一些异步任务完成后再执行跳转，或者您想要重定向到别的地方时特别有用"
         }
-      }
+      },
+      "desc_cn": "当组件被点击时触发"
     }
   },
   "methods": {
