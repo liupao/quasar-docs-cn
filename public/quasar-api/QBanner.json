@@ -40,7 +40,7 @@
     },
     "action": {
       "desc": "Slot for Banner action (suggestions: QBtn)",
-      "desc_cn": "横幅操作槽（建议：QBtn）"
+      "desc_cn": "横幅操作按钮的插槽（建议：QBtn）"
     }
   }
 }
