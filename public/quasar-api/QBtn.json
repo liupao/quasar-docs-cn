@@ -58,7 +58,8 @@
         "href=\"https://quasar.dev\" target=\"_blank\""
       ],
       "category": "navigation",
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "原生 <a> 标签的 href 属性。优先级高于 'to'/'exact'/'replace'/'active-class'/'exact-active-class' 属性"
     },
     "target": {
       "type": "String",
@@ -70,7 +71,8 @@
         "_top"
       ],
       "category": "navigation",
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "原生 <a> 标签的 target 属性。优先级高于 'to'/'exact'/'replace'/'active-class'/'exact-active-class' 属性"
     },
     "label": {
       "type": [
@@ -130,7 +132,7 @@
       "type": "Boolean",
       "desc": "Applies a more prominent border-radius for a squared shape button",
       "category": "style",
-      "desc_cn": "为方形按钮应用更突出的border-radius"
+      "desc_cn": "为方形按钮应用更突出的圆角（border-radius）"
     },
     "push": {
       "type": "Boolean",
@@ -142,7 +144,8 @@
       "type": "Boolean",
       "desc": "Removes border-radius so borders are squared",
       "category": "style",
-      "addedIn": "v2.7.6"
+      "addedIn": "v2.7.6",
+      "desc_cn": "删除边框圆角（border-radius），所以边框是方形的"
     },
     "glossy": {
       "type": "Boolean",
@@ -154,13 +157,13 @@
       "type": "Boolean",
       "desc": "Makes button size and shape to fit a Floating Action Button",
       "category": "style",
-      "desc_cn": "使按钮大小和形状适合浮动操作按钮"
+      "desc_cn": "使按钮大小和形状适合浮动按钮"
     },
     "fab-mini": {
       "type": "Boolean",
       "desc": "Makes button size and shape to fit a small Floating Action Button",
       "category": "style",
-      "desc_cn": "使按钮的大小和形状适合一个小的浮动动作按钮"
+      "desc_cn": "使按钮的大小和形状适合一个小的浮动按钮"
     },
     "padding": {
       "type": "String",
@@ -174,7 +177,7 @@
         "2px 2px 5px 7px"
       ],
       "category": "style",
-      "desc_cn": "应用自定义填充（垂直[水平]）；以CSS单位表示的尺寸，包括单位名称或标准尺寸名称（none | xs | sm | md | lg | xl）；设置时也会删除最小宽度和高度"
+      "desc_cn": "应用自定义内边距（垂直[水平]）。以 CSS 单位表示的尺寸，包括单位名称或标准尺寸名称（none | xs | sm | md | lg | xl）。设置时也会删除最小宽度和高度"
     },
     "color": {
       "type": "String",
@@ -194,7 +197,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "覆盖文本颜色（如果需要）；来自Quasar调色板的颜色名称"
+      "desc_cn": "覆盖文本颜色（如果需要）；来自 Quasar 调色板的颜色名称"
     },
     "no-caps": {
       "type": "Boolean",
@@ -227,7 +230,7 @@
       ],
       "category": "style",
       "required": false,
-      "desc_cn": "配置material波动（通过将其设置为“false”或提供配置对象将其禁用）"
+      "desc_cn": "配置 material 水波动画（设置为 “false” 将其禁用或提供一个配置对象）"
     },
     "tabindex": {
       "type": [
@@ -240,7 +243,7 @@
         "100"
       ],
       "category": "general",
-      "desc_cn": "Tabindex HTML属性值"
+      "desc_cn": "Tabindex HTML 属性值"
     },
     "align": {
       "type": "String",
@@ -256,7 +259,7 @@
       ],
       "category": "content",
       "required": false,
-      "desc_cn": "标签或内容对齐"
+      "desc_cn": "文本或内容的对齐方式"
     },
     "stack": {
       "type": "Boolean",
@@ -268,13 +271,13 @@
       "type": "Boolean",
       "desc": "When used on flexbox parent, button will stretch to parent's height",
       "category": "content",
-      "desc_cn": "当用于flexbox父元素时，按钮将拉伸到父元素的高度"
+      "desc_cn": "当用于 flexbox 父元素时，按钮将拉伸到父元素的高度"
     },
     "loading": {
       "type": "Boolean",
       "desc": "Put button into loading state (displays a QSpinner -- can be overridden by using a 'loading' slot)",
       "category": "behavior|state",
-      "desc_cn": "将按钮置于加载状态（显示一个QSpinner——可以通过使用“loading”插槽来重写）"
+      "desc_cn": "将按钮置于加载状态（显示一个 QSpinner ——可以通过使用 'loading' 插槽来重写）"
     },
     "disable": {
       "type": "Boolean",
@@ -286,29 +289,29 @@
       "type": "Boolean",
       "desc": "Makes a circle shaped button",
       "category": "style",
-      "desc_cn": "做一个圆形按钮"
+      "desc_cn": "设置为圆形按钮"
     },
     "percentage": {
       "type": "Number",
       "desc": "Percentage (0.0 < x < 100.0); To be used along 'loading' prop; Display a progress bar on the background",
       "category": "behavior",
-      "desc_cn": "百分比（0.0<x<100.0）；和“loading”属性一起使用；在背景上显示进度条"
+      "desc_cn": "百分比（0.0<x<100.0）；和 'loading' 属性一起使用。在背景上显示进度条"
     },
     "dark-percentage": {
       "type": "Boolean",
       "desc": "Progress bar on the background should have dark color; To be used along with 'percentage' and 'loading' props",
       "category": "behavior",
-      "desc_cn": "背景上的进度条应为深色；与“percentage”和“loading”属性一起使用"
+      "desc_cn": "背景上的进度条设置为深色。与 'percentage' 和 'loading' 属性一起使用"
     }
   },
   "slots": {
     "default": {
       "desc": "Use for custom content, instead of relying on 'icon' and 'label' props",
-      "desc_cn": "用于自定义内容，而不是依赖“icon”和“label”道具"
+      "desc_cn": "用于自定义内容，而不是依赖 'icon' 和 'label' 属性"
     },
     "loading": {
       "desc": "Override the default QSpinner when in 'loading' state",
-      "desc_cn": "当处于“loading”状态时重写默认的QSpinner"
+      "desc_cn": "当处于 'loading' 状态时重写默认的 QSpinner"
     }
   },
   "events": {
@@ -317,7 +320,8 @@
       "params": {
         "evt": {
           "type": "Event",
-          "desc": "JS event object; If you are using route navigation ('to'/'replace' props) and you want to cancel navigation then call evt.preventDefault() synchronously in your event handler"
+          "desc": "JS event object; If you are using route navigation ('to'/'replace' props) and you want to cancel navigation then call evt.preventDefault() synchronously in your event handler",
+          "desc_cn": "JS 事件对象。如果您还使用了路由导航相关的属性（'to'/'replace'）并且先要取消导航，那么可以在处理函数中调用 evt.preventDefault()"
         },
         "go": {
           "type": "Function",
@@ -340,25 +344,34 @@
                   "examples": [
                     "/home/dashboard",
                     "{ name: 'my-route-name' }"
-                  ]
+                  ],
+                  "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。显式指定它，否则它将被设置为与组件的 'to' 属性相同的值"
                 },
                 "replace": {
-                  "type": "Boolean",
+                  "type": [
+                    "String",
+                    "Object"
+                  ],
                   "desc": "Equivalent to Vue Router <router-link> 'replace' property; Specify it explicitly otherwise it will be set with same value as component's 'replace' prop",
-                  "required": false
+                  "required": false,
+                  "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。显式指定它，否则它将被设置为与组件的 'replace' 属性相同的值"
                 },
                 "returnRouterError": {
                   "type": "Boolean",
                   "desc": "Return the router error, if any; Otherwise the returned Promise will always fulfill",
-                  "required": false
+                  "required": false,
+                  "desc_cn": "是否返回路由的错误，若设置为 false，则返回的 Promise 总是会完成"
                 }
-              }
+              },
+              "desc_cn": "可选的配置对象"
             }
           },
           "returns": {
             "type": "Promise<any>",
-            "desc": "Returns the router's navigation promise"
-          }
+            "desc": "Returns the router's navigation promise",
+            "desc_cn": "返回路由导航的 Promise"
+          },
+          "desc_cn": "仅在使用了路由导航相关的属性（'to'/'replce'）时可用。当您想要控制组件触发导航的时机时，你可以在点击事件的处理函数中调用 evt.preventDefault() 来阻止导航跳转，然后在合适的时机再调用此函数进行路由跳转。当您需要等待一些异步任务完成后再执行跳转，或者您想要重定向到别的地方时特别有用"
         }
       }
     }
@@ -370,10 +383,10 @@
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "模拟点击QBtn"
+      "desc_cn": "模拟点击 QBtn"
     }
   }
 }
