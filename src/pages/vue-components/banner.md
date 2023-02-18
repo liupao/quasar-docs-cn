@@ -1,6 +1,6 @@
 ---
 title: Banner
-desc: The QBanner Vue component displays a prominent message and related optional actions.
+desc: QBanner Vue 组件创建一个 banner 元素用于展示一些醒目的信息和一些可选的按钮。
 keys: QBanner
 ---
 QBanner 组件创建一个 banner 元素用于展示一些醒目的信息和一些可选的按钮。
@@ -13,12 +13,12 @@ QBanner 组件创建一个 banner 元素用于展示一些醒目的信息和一�
 
 ## 用法
 
-<doc-example title="Basic" file="QBanner/Basic" />
+<doc-example title="基础用法" file="QBanner/Basic" />
 
-<doc-example title="Rounded border" file="QBanner/Rounded" />
+<doc-example title="圆角边框" file="QBanner/Rounded" />
 
-<doc-example title="With an image" file="QBanner/Image" />
+<doc-example title="带有图片" file="QBanner/Image" />
 
-<doc-example title="Inline actions" file="QBanner/Inline" />
+<doc-example title="内联的操作按钮" file="QBanner/Inline" />
 
-<doc-example title="Dense" file="QBanner/Dense" />
+<doc-example title="紧凑的" file="QBanner/Dense" />

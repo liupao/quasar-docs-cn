@@ -1,6 +1,6 @@
 ---
 title: Avatar
-desc: The QAvatar Vue component creates an element that can embed a letter, an icon or an image within its shape.
+desc: QAvatar（头像）Vue 组件创建了一个可伸缩的、可着色的元素，可以在其元素内包含文本、图标或图像。默认情况下，它是圆形的，但它也可以是正方形，或者带有圆角的矩形。
 keys: QAvatar
 ---
 QAvatar（头像）组件创建了一个可伸缩的、可着色的元素，可以在其元素内包含文本、图标或图像。默认情况下，它是圆形的，但它也可以是正方形，或者带有圆角的矩形。
