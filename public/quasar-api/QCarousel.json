@@ -134,7 +134,7 @@
       "type": "Boolean",
       "desc": "Notify the component that the background is a dark color",
       "category": "style",
-      "desc_cn": "通知组件背景为深色"
+      "desc_cn": "设置组件背景为深色"
     },
     "height": {
       "type": "String",

@@ -54,7 +54,7 @@
       "type": "Boolean",
       "desc": "Notify the component that the background is a dark color",
       "category": "style",
-      "desc_cn": "通知组件背景为深色"
+      "desc_cn": "设置组件背景为深色"
     },
     "reverse": {
       "type": "Boolean",
@@ -84,7 +84,7 @@
       "type": "Boolean",
       "desc": "Applies a small standard border-radius for a squared shape of the component",
       "category": "style",
-      "desc_cn": "为组件的方形应用较小的标准border-radius"
+      "desc_cn": "为组件应用较小标准的边框圆角（border-radius）"
     },
     "instant-feedback": {
       "type": "Boolean",
