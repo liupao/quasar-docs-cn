@@ -6,7 +6,7 @@ keys: QSpace
 
 QSpace（没有属性）的目的是简单地填充 flexbox DOM 元素内的所有可用空间。
 
-作为补充说明，所有 Quasar 组件都使用 flexbox。因此，这意味着，例如（有很多示例，仅提及一个），您可以在QToolbar中使用QSpace。
+作为补充说明，所有 Quasar 组件都使用 flexbox。因此，这意味着，例如（有很多示例，仅提及一个），您可以在 QToolbar 中使用 QSpace。
 
 ## 用法
 

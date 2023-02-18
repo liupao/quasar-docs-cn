@@ -34,7 +34,7 @@ QTime 组件提供了输入时间的方法。
 
 ### 功能
 
-24小时格式的应用取决于您设置的 [Quasar 语言包](/options/quasar-language-packs)，但您也可以强制使用，如下面的示例所示。
+24 小时格式的应用取决于您设置的 [Quasar 语言包](/options/quasar-language-packs)，但您也可以强制使用，如下面的示例所示。
 
 <doc-example title="24小时格式" file="QTime/Format24h" overflow />
 

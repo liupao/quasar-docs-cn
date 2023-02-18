@@ -103,7 +103,7 @@ QInput 组件用于收集用户输入的文本或数字。它可以像普通的 
 #### 输入文件类型
 
 ::: tip 替代选择
-**推荐您使用 [QFile](/vue-components/file-picker)，甚至是 [QUploader](/vue-components/uploader) 来收集文件，而不是使用 `type="file"` 的 QInput**。但是，如果您仍希望使用QInput，请阅读以下警告
+**推荐您使用 [QFile](/vue-components/file-picker)，甚至是 [QUploader](/vue-components/uploader) 来收集文件，而不是使用 `type="file"` 的 QInput**。但是，如果您仍希望使用 QInput，请阅读以下警告
 :::
 
 ::: warning

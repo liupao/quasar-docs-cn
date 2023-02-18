@@ -84,7 +84,7 @@ $ npm i -g @quasar/cli
     :::
 
     ::: tip WSL2
-    微软推荐的 [WSL2 中的 Nodejs 开发环境设置](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)。当使用 WSL2（Windows 的 Linux 子系统）时，微软建议将文件保存在 Linux 文件系统中，以实现性能最大化。如果项目文件在 Windows 上而不是在本地 Linux 文件系统上，项目的构建速度会慢3倍左右，而且 HMR（热模块重载）在没有 hack 的情况下将无法工作。这在基于 Windows 的开发环境的 Docker 中也是如此。
+    微软推荐的 [WSL2 中的 Nodejs 开发环境设置](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)。当使用 WSL2（Windows 的 Linux 子系统）时，微软建议将文件保存在 Linux 文件系统中，以实现性能最大化。如果项目文件在 Windows 上而不是在本地 Linux 文件系统上，项目的构建速度会慢 3 倍左右，而且 HMR（热模块重载）在没有 hack 的情况下将无法工作。这在基于 Windows 的开发环境的 Docker 中也是如此。
     :::
 
 ## Quasar CLI 是如何工作的

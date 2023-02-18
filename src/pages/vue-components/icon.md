@@ -99,7 +99,7 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
 #### Ionicons
 
 * 图标名称总是以中划线划线连接并且带有 "ion-", "ion-md-", "ion-ios-" 或 "ion-logo-" 前缀。
-* 请前往 [Ionicons (v6)](https://ionicons.com/) or [Ionicons (v4)](https://ionicons.com/v4)，找到您想要的图标，点击它，在页面的底部将会弹出一个对话框，注意其中类似 `<ion-icon name="square-outline"></ion-icon>` 的代码，记住它的名字（例如："square-outline"）。 根据您想要的变体（自动检测平台、材料或iOS），您将得到以下结果：`ion-square-outline` 或`ion-md-square-outline` or `ion-ios-square-outline`。
+* 请前往 [Ionicons (v6)](https://ionicons.com/) or [Ionicons (v4)](https://ionicons.com/v4)，找到您想要的图标，点击它，在页面的底部将会弹出一个对话框，注意其中类似 `<ion-icon name="square-outline"></ion-icon>` 的代码，记住它的名字（例如："square-outline"）。 根据您想要的变体（自动检测平台、材料或 iOS），您将得到以下结果：`ion-square-outline` 或`ion-md-square-outline` or `ion-ios-square-outline`。
 * **注意：**从 v5 开始，Ionicons 不在使用 Ionicons，也不再提供 Material or IOS 变种。
 
 #### Eva Icons
@@ -161,7 +161,7 @@ export default {
 ```
 
 ::: tip
-如果您只使用svg图标（并且配置了 [Quasar图标集](/options/quasar-icon-sets)），那么您的应用程序中根本不需要 webfont。
+如果您只使用 svg 图标（并且配置了 [Quasar图标集](/options/quasar-icon-sets)），那么您的应用程序中根本不需要 webfont。
 :::
 
 | 图标库 | Quasar 图标集名称 | 从此导入  | 版本要求 |
@@ -183,7 +183,7 @@ export default {
 
 ### 导入指南
 
-Svg 图标由 `@quasar/extras` 提供（您也可以提供自己的Svg图标！）。以下是导入语法：
+Svg 图标由 `@quasar/extras` 提供（您也可以提供自己的 Svg 图标！）。以下是导入语法：
 
 #### SVG Material Icons (Google)
 
@@ -370,7 +370,7 @@ P 是符合以下语法的 path（每个都是属性）：
 
 ## SVG-文件 使用方法
 
-此 svg 方法使您可以将SVG文件存储为静态资产并引用它们。
+此 svg 方法使您可以将 SVG 文件存储为静态资产并引用它们。
 
 ```html
 // File: /public/icons.svg
@@ -408,7 +408,7 @@ P 是符合以下语法的 path（每个都是属性）：
 
 ## 内联的 svg
 
-如果您不想使用上面的 webfont 或 svg 变体，请注意 QIcon 还支持一个内联 `<svg>` 标记（svg的内容可以是任何内容，而不仅仅是 path）。
+如果您不想使用上面的 webfont 或 svg 变体，请注意 QIcon 还支持一个内联 `<svg>` 标记（svg 的内容可以是任何内容，而不仅仅是 path）。
 
 为什么在 QIcon 中使用 `<svg>` 的原因是，svg 将会通过 QIcon 的属性来继承它的大小和颜色。如果不需要这些特性，您最好在模板中内联 svg，而不使用 QIcon 包装。
 
@@ -422,7 +422,7 @@ P 是符合以下语法的 path（每个都是属性）：
 ```
 
 一些限制：
-* 请勿在 `<svg>` 标签上使用 "height"/"width" 属性（它将打破Qicon处理尺寸的方式）。
+* 请勿在 `<svg>` 标签上使用 "height"/"width" 属性（它将打破 Qicon 处理尺寸的方式）。
 * 所有的 `<path>` 将会拥有一个默认的 "fill: currentColor" CSS；如果您不希望这样，使用 `fill="none"` 来避免。
 
 ## 使用图片作为图标

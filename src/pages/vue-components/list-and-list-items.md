@@ -58,7 +58,7 @@ QList 和 QItem 是一组组件，它们可以一起工作，将多个行项目�
 ### QItemLabel
 
 ::: warning
-注意，您可以使用 `lines` 属性处理标签溢出，告诉它可以占用多少行。但是，此功能使用依赖于 Webkit 的 CSS，因此无法在 IE/老版本Edge 中使用。
+注意，您可以使用 `lines` 属性处理标签溢出，告诉它可以占用多少行。但是，此功能使用依赖于 Webkit 的 CSS，因此无法在 IE/老版本 Edge 中使用。
 :::
 
 <doc-example title="项标签" file="QItem/ItemLabel" />

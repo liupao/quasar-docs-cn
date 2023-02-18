@@ -36,7 +36,7 @@ module.exports = function (ctx) {
 
 ## Manifest.json
 
-BEX最重要的配置文件是 `/src-bex/manifest.json`。建议在开始项目之前阅读该文件的[说明文档](https://developer.chrome.com/extensions/manifest)。
+BEX 最重要的配置文件是 `/src-bex/manifest.json`。建议在开始项目之前阅读该文件的[说明文档](https://developer.chrome.com/extensions/manifest)。
 
 当你第一次添加 BEX 模式时，你会被问到你喜欢哪个浏览器插件 Manifest 版本:
 

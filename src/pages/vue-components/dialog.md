@@ -56,7 +56,7 @@ QDialog 最好使用 QCard 作为主要内容。如果您想使用其他的组�
 <doc-example title="容器化的 QLayout" file="QDialog/Layout" />
 
 ::: tip
-当您想使用容器化的 QLayout时，如果使用左/右定位，则需要为 QDialog 设置一个宽度，如果使用上/下定位。则需要为 QDialog 设置一个高度。您可以使用 vw 和 vh 单位。
+当您想使用容器化的 QLayout 时，如果使用左/右定位，则需要为 QDialog 设置一个宽度，如果使用上/下定位。则需要为 QDialog 设置一个高度。您可以使用 vw 和 vh 单位。
 :::
 
 ### 处理滚动

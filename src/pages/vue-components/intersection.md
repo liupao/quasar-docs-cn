@@ -14,7 +14,7 @@ QIntersection 组件本质上是 [Intersection 指令](/vue-directives/intersect
 它在底层使用了 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)。
 
 ::: warning
-并非所有浏览器都支持 Intersection Observer API。 大多数[现代浏览器](https://caniuse.com/#search=intersection)都可以，但是其他浏览器，如 IE 11 却没有支持。 如果需要支持较旧的浏览器，则可以安装和导入（在启动文件中）W3C官方的 [polyfill](https://github.com/w3c/IntersectionObserver)。
+并非所有浏览器都支持 Intersection Observer API。 大多数[现代浏览器](https://caniuse.com/#search=intersection)都可以，但是其他浏览器，如 IE 11 却没有支持。 如果需要支持较旧的浏览器，则可以安装和导入（在启动文件中）W3C 官方的 [polyfill](https://github.com/w3c/IntersectionObserver)。
 
 :::
 
@@ -51,7 +51,7 @@ QIntersection 组件本质上是 [Intersection 指令](/vue-directives/intersect
 
 ### 一次性
 
-但是，仅触发一次就意味着您失去了释放 DOM 树的好处。无论可见性如何，内容都将保留在DOM中
+但是，仅触发一次就意味着您失去了释放 DOM 树的好处。无论可见性如何，内容都将保留在 DOM 中
 
 <doc-example title="只触发一次" file="QIntersection/Once" scrollable no-edit />
 

@@ -13,7 +13,7 @@ desc: (@quasar/app-vite) 如何向因特网上的任何人提供对开发服务�
 
 ## 使用 localhost.run （最简单）
 
-1. 假设您有一个SSH shell，您只需要运行以下命令（替换您的详细信息）
+1. 假设您有一个 SSH shell，您只需要运行以下命令（替换您的详细信息）
 ``` bash
 $ ssh -R 80:localhost:8080 ssh.localhost.run
 # 如果您的开发服务器不在端口 8080 上运行，则需要将数字更改为正确的端口

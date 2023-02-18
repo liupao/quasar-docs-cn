@@ -157,4 +157,4 @@ QEditor 组件是一个 WYSIWYG （“what you see is what you get”——所�
 如果您没有设置字体（或者用户没有选择字体），打印对话框中将使用系统默认字体，根据浏览器和底层操作系统的不同而不同。一定要考虑到这一点。
 
 ### 国际化
-QEditor的工具提示文案内容由 [Quasar 语言包提供](/options/quasar-language-packs)，因此仅更改语言也会更改界面。如果缺少所需的语言包，或者发现错误，请考虑以 PR 形式提供更新。
+QEditor 的工具提示文案内容由 [Quasar 语言包提供](/options/quasar-language-packs)，因此仅更改语言也会更改界面。如果缺少所需的语言包，或者发现错误，请考虑以 PR 形式提供更新。

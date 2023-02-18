@@ -47,7 +47,7 @@ QUploader 是兼容拖拽的。
 <doc-example title="基础限制" file="QUploader/RestrictionBasic" />
 
 ::: tip
-在上面的示例中，我们使用的是 `accept` 属性。其值必须是以逗号分隔的唯一文件类型说明符列表。映射到原生input type=file 标签的 'accept' 属性。[更多信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers)。
+在上面的示例中，我们使用的是 `accept` 属性。其值必须是以逗号分隔的唯一文件类型说明符列表。映射到原生 input type=file 标签的 'accept' 属性。[更多信息](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers)。
 :::
 
 ::: warning
@@ -171,7 +171,7 @@ Quploader 与 Microsoft ASP.NET MVC/Core 2.x Web API 后端无缝集成。在 Vu
 />
 ```
 
-如果您的服务器需要身份验证(如JWT令牌)，请使用 QUploader 的工厂函数指定 QUploadeer 将使用的 xhr 头。例如：
+如果您的服务器需要身份验证(如 JWT 令牌)，请使用 QUploader 的工厂函数指定 QUploadeer 将使用的 xhr 头。例如：
 
 ```html
 <template>
@@ -350,7 +350,7 @@ app->start;
 
 ## 支持其他的服务器
 
-QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如Firebase。下面是您可以做的。
+QUploader 目前支持通过 HTTP(S) 协议上传。但您也可以扩展组件以支持其他服务。例如 Firebase。下面是您可以做的。
 
 
 ::: warning 感谢您的帮助
@@ -422,7 +422,7 @@ export default createUploaderComponent({
 
 ::: tip TIPS
 * 对于这种插件形式的默认 XHR 实现，请查看[源代码](https://github.com/quasarframework/quasar/blob/dev/ui/src/components/uploader/xhr-uploader-plugin.js).
-* 对于UMD版本，请使用 `Quasar.createUploaderComponent({ ... })`.
+* 对于 UMD 版本，请使用 `Quasar.createUploaderComponent({ ... })`.
 :::
 
 然后向 Vue 全局注册该组件，或者导入该组件并将其添加到 Vue 组件中的 "components: {}" 中。
@@ -446,7 +446,7 @@ export default {
 }
 ```
 
-如果您使用的是TypeScript，则需要注册新的组件类型，以允许 Volar 为您自动补全属性和插槽。
+如果您使用的是 TypeScript，则需要注册新的组件类型，以允许 Volar 为您自动补全属性和插槽。
 
 ```js
 import {
