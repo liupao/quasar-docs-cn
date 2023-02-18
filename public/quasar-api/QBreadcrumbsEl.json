@@ -10,42 +10,42 @@
         "Object"
       ],
       "desc": "Equivalent to Vue Router <router-link> 'to' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。如果还设置了 'href' 属性则优先使用 'href'，'to' 会被取代",
       "examples": [
         "/home/dashboard",
         ":to=\"{ name: 'my-route-name' }\""
       ],
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。如果还设置了 'href' 属性则优先使用 'href'，'to' 会被取代"
     },
     "exact": {
       "type": "Boolean",
       "desc": "Equivalent to Vue Router <router-link> 'exact' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'exact' 属性。如果还设置了 'href' 属性则优先使用 'href'，'exact' 会被取代",
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'exact' 属性。如果还设置了 'href' 属性则优先使用 'href'，'exact' 会被取代"
     },
     "replace": {
       "type": "Boolean",
       "desc": "Equivalent to Vue Router <router-link> 'replace' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。如果还设置了 'href' 属性则优先使用 'href'，'replace' 会被取代",
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。如果还设置了 'href' 属性则优先使用 'href'，'replace' 会被取代"
     },
     "active-class": {
       "type": "String",
       "desc": "Equivalent to Vue Router <router-link> 'active-class' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'active-class' 属性。如果还设置了 'href' 属性则优先使用 'href'，'active-class' 会被取代",
       "examples": [
         "my-active-class"
       ],
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'active-class' 属性。如果还设置了 'href' 属性则优先使用 'href'，'active-class' 会被取代"
     },
     "exact-active-class": {
       "type": "String",
       "desc": "Equivalent to Vue Router <router-link> 'exact-active-class' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'exact-active-class' 属性。如果还设置了 'href' 属性则优先使用 'href'，'exact-active-class' 会被取代",
       "examples": [
         "my-exact-active-class"
       ],
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'exact-active-class' 属性。如果还设置了 'href' 属性则优先使用 'href'，'exact-active-class' 会被取代"
     },
     "href": {
       "type": "String",

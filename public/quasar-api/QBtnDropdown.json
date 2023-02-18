@@ -79,18 +79,18 @@
         "Object"
       ],
       "desc": "Equivalent to Vue Router <router-link> 'to' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。如果还设置了 'href' 属性则优先使用 'href'，'to' 会被取代",
       "examples": [
         "/home/dashboard",
         ":to=\"{ name: 'my-route-name' }\""
       ],
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。如果还设置了 'href' 属性则优先使用 'href'，'to' 会被取代"
     },
     "replace": {
       "type": "Boolean",
       "desc": "Equivalent to Vue Router <router-link> 'replace' property; Superseded by 'href' prop if used",
-      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。如果还设置了 'href' 属性则优先使用 'href'，'replace' 会被取代",
-      "category": "navigation"
+      "category": "navigation",
+      "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。如果还设置了 'href' 属性则优先使用 'href'，'replace' 会被取代"
     },
     "href": {
       "type": "String",
