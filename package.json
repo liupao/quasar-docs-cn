@@ -11,7 +11,8 @@
     "build": "node build/index.js && quasar build -m ssr",
     "lint": "eslint --ext .js,.vue ./ --fix",
     "test": "echo \"No test specified\" && exit 0",
-    "start": "cd ./dist/quasar.dev && npm i && npm run start"
+    "start": "cd ./dist/quasar.dev && npm i && npm run start",
+    "checkSpace": "textlint --fix **/*.md"
   },
   "dependencies": {
     "@docsearch/css": "^3.3.2",
@@ -38,6 +39,8 @@
     "markdown-it": "^12.3.2",
     "markdown-it-container": "^3.0.0",
     "pug": "^3.0.2",
+    "textlint": "^13.3.0",
+    "textlint-rule-ja-space-between-half-and-full-width": "^2.3.0",
     "toml": "^3.0.0",
     "workbox-build": "^6.5.4"
   },
