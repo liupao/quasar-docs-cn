@@ -140,6 +140,16 @@
         </q-item>
       </q-list>
     </q-btn-dropdown>
+    <q-btn-dropdown class="text-bold" :align="align" flat no-caps stretch label="交流群" auto-close>
+      <q-list dense padding>
+        <q-item clickable href="https://jq.qq.com/?_wv=1027&k=y7sNr5Tu" rel="noopener" target="_blank">
+          <q-item-section class="text-brand-primary" avatar>
+            <q-icon name="img:/imgs/svg/qq.svg"></q-icon>
+          </q-item-section>
+          <q-item-section class="text-no-wrap">533619633</q-item-section>
+        </q-item>
+      </q-list>
+    </q-btn-dropdown>
     <q-btn-dropdown class="text-bold" :align="align" flat no-caps stretch label="支持" auto-close>
       <q-list dense padding>
         <q-item clickable href="https://chat.quasar.dev" rel="noopener" target="_blank">
