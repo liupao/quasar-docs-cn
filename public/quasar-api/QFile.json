@@ -340,7 +340,7 @@
       "type": "Boolean",
       "desc": "Dense mode; occupies less space",
       "category": "style",
-      "desc_cn": "密集模式；占用更少的空间"
+      "desc_cn": "紧凑模式，占用更少的空间"
     },
     "item-aligned": {
       "type": "Boolean",

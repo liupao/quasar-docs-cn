@@ -337,7 +337,7 @@
       "type": "Boolean",
       "desc": "Dense mode; occupies less space",
       "category": "style",
-      "desc_cn": "密集模式；占用更少的空间"
+      "desc_cn": "紧凑模式，占用更少的空间"
     },
     "item-aligned": {
       "type": "Boolean",
@@ -551,7 +551,7 @@
       "type": "Boolean",
       "desc": "Dense mode for options list; occupies less space",
       "category": "options",
-      "desc_cn": "选项列表的密集模式；占用更少的空间"
+      "desc_cn": "选项列表的紧凑模式，占用更少的空间"
     },
     "options-dark": {
       "type": "Boolean",

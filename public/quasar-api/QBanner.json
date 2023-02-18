@@ -8,13 +8,13 @@
       "type": "Boolean",
       "desc": "Display actions on same row as content",
       "category": "content",
-      "desc_cn": "在与内容所在的相同行上显示操作"
+      "desc_cn": "在与内容所在的相同行上显示操作按钮"
     },
     "dense": {
       "type": "Boolean",
       "desc": "Dense mode; occupies less space",
       "category": "style",
-      "desc_cn": "密集模式；占用更少的空间"
+      "desc_cn": "紧凑模式，占用更少的空间"
     },
     "rounded": {
       "type": "Boolean",
