@@ -78,12 +78,12 @@ related:
 
 <doc-example title="选项卡通知" file="QTabs/Notifying" />
 
-### 对其
+### 对齐
 
 
 QTAB 是响应式的，当容器宽度（非窗口宽度）大于配置的断点时，`align` 属性将会生效（见下文）。出于演示的目的，下面的选项卡禁用了断点。
 
-<doc-example title="对其" file="QTabs/Alignment" />
+<doc-example title="对齐" file="QTabs/Alignment" />
 
 ### 搭配下拉框
 

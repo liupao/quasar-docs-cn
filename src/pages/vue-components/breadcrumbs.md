@@ -26,4 +26,4 @@ QBreadcrumbs （面包屑）组件在 UI 中用作导航辅助。帮助用户定
 
 <doc-example title="间隔" file="QBreadcrumbs/Gutters" />
 
-<doc-example title="对其" file="QBreadcrumbs/Align" />
+<doc-example title="对齐" file="QBreadcrumbs/Align" />

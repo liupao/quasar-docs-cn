@@ -27,7 +27,7 @@ related:
 | `fixed-full`, `absolute-full` |固定/绝对定位到屏幕的所有边 Fixed or absolute position to all screen edges |
 | `relative-position` | 设置 `position` 为 `relative` |
 
-## 对其
+## 对齐
 | CSS 类名 | 描述 |
 | --- | --- |
 | `float-left` | 浮动到左边  |
@@ -36,10 +36,10 @@ related:
 | `on-right` | 在左边设置一个小尺寸的外边距，通常会用在 icon 组件上  |
 
 ::: tip
-相对于使用`float-left` 或 `float-right`来实现布局或对其，更推荐您使用 Quasar 提供的网格系统
+相对于使用`float-left` 或 `float-right`来实现布局或对齐，更推荐您使用 Quasar 提供的网格系统
 :::
 
-垂直方向对其:
+垂直方向对齐:
 
 | CSS 类名 | 描述 |
 | --- | --- |

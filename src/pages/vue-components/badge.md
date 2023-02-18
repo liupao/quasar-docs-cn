@@ -14,7 +14,7 @@ QBadge（徽标）组件用于创建一个小徽标来添加一些引人注目�
 
 <doc-example title="基础用法" file="QBadge/Basic" />
 
-<doc-example title="对其方式" file="QBadge/Align" />
+<doc-example title="对齐方式" file="QBadge/Align" />
 
 <doc-example title="浮动" file="QBadge/Floating" />
 
