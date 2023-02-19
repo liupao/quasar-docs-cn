@@ -7,6 +7,7 @@
     "transition-show": {
       "type": "String",
       "desc": "One of Quasar's embedded transitions",
+      "desc_cn": "Quasar 内置的过渡效果之一",
       "examples": [
         "fade",
         "slide-down"
@@ -18,6 +19,7 @@
     "transition-hide": {
       "type": "String",
       "desc": "One of Quasar's embedded transitions",
+      "desc_cn": "Quasar 内置的过渡效果之一",
       "examples": [
         "fade",
         "slide-down"
@@ -32,6 +34,7 @@
         "Number"
       ],
       "desc": "Transition duration (in milliseconds, without unit)",
+      "desc_cn": "过渡效果时长（单位毫秒，不需要带上单位）",
       "default": 300,
       "category": "transition",
       "required": false

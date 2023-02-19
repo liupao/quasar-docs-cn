@@ -355,6 +355,7 @@
             "transitionShow": {
               "type": "String",
               "desc": "One of Quasar's embedded transitions",
+      "desc_cn": "Quasar 内置的过渡效果之一",
               "examples": [
                 "fade",
                 "slide-down"
@@ -367,6 +368,7 @@
             "transitionHide": {
               "type": "String",
               "desc": "One of Quasar's embedded transitions",
+      "desc_cn": "Quasar 内置的过渡效果之一",
               "examples": [
                 "fade",
                 "slide-down"
