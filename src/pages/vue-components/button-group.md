@@ -1,5 +1,5 @@
 ---
-title: Button Group
+title: 组合按钮
 desc:  QBtnGroup Vue 组件可以很方便的把 QBtn 和 QBtnDropdown 组合起来。
 keys: QBtnGroup
 related:

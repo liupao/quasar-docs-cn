@@ -1,5 +1,5 @@
 ---
-title: Card
+title: 卡片
 desc: QCard 是一个很棒的用于展示重要信息的 Vue 组件，它可以将信息聚合在卡片容器中展示，帮助用户更直观的获取信息。
 keys: QCard
 related:

@@ -1,5 +1,5 @@
 ---
-title: Badge
+title: 徽标
 desc: QBadge Vue 组件可以用于显示引人注意的数据。
 keys: QBadge
 ---

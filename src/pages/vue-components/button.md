@@ -1,5 +1,5 @@
 ---
-title: Button
+title: 按钮
 desc: Quasar 中的按钮组件叫 QBtn，它还带有一些额外实用的特性。
 keys: QBtn
 related:

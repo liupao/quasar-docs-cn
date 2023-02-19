@@ -1,5 +1,5 @@
 ---
-title: Dropdown Button
+title: 下拉按钮
 desc: QBtnDropdown Vue 组件是一个点击显示下拉内容的按钮。
 keys: QBtnDropdown
 related:

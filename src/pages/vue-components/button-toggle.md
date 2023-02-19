@@ -1,5 +1,5 @@
 ---
-title: Button Toggle
+title: 切换按钮
 desc: QBtnToggle Vue 组件也是一个基础的交互组件，有点相似于 QRadio，但是它是基于按钮的。
 keys: QBtnToggle
 related:

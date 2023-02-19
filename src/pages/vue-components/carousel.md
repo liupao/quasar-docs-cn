@@ -1,5 +1,5 @@
 ---
-title: Carousel
+title: 幻灯片
 desc: QCarousel Vue 组件允许您使用幻灯片以更少的空间显示更多信息，对于创建向导或图库也很有用。
 keys: QCarousel
 ---

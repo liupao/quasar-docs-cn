@@ -1,5 +1,5 @@
 ---
-title: Breadcrumbs
+title: 面包屑
 desc: QBreadcrumbs（面包屑）Vue 组件在 UI 中用作导航辅助。帮助用户定位目前处于应用程序中的哪个页面。
 keys: QBreadcrumbs,QBreadcrumbsEl
 ---

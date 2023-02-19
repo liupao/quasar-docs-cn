@@ -1,5 +1,5 @@
 ---
-title: Ajax Bar
+title: Ajax 进度栏
 desc: QAjaxBar 组件会在 Ajax 请求触发时展示一个加载进度条。
 keys: QAjaxBar
 related:
