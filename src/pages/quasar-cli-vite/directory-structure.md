@@ -3,7 +3,7 @@ title: 目录结构
 desc: (@quasar/app-vite) Quasa 项目的目录结构详解。
 ---
 
-下面是安装了所有 Quaasr 模式的项目的目录结构，不过不用担心！
+下面是安装了所有 Quasar 模式的项目的目录结构，不过不用担心！
 ::: tip
 如果您是一个初学者，那么您只需要关系那么几个文件即可，`/quasar.config.js` （Quasar 项目配置文件）, `/src/router`, `/src/layouts`, `/src/pages` 和可选的 `/src/assets`。
 :::

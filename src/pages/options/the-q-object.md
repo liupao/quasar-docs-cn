@@ -1,6 +1,6 @@
 ---
-title: Quaasr 中的$q 对象
-desc: 如何使用 Quaasr 中的$q 对象。
+title: Quasar 中的$q 对象
+desc: 如何使用 Quasar 中的$q 对象。
 related:
   - /vue-composables/use-quasar
 ---

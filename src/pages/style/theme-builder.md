@@ -1,6 +1,6 @@
 ---
 title: 主题
-desc: Quaasr 主题构建器，帮助您的 app 构建主题颜色
+desc: Quasar 主题构建器，帮助您的 app 构建主题颜色
 components:
   - theming/ThemePicker
 related:

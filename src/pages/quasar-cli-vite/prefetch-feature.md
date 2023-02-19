@@ -81,7 +81,7 @@ return {
 | `/shop/all` | ShopLayout 然后 ShopAll | - |
 | `/shop/new` | ShopNew | ShopNew 是 ShopLayout 的一个子页面,并且 ShopLayout 已经渲染过了，所以 ShopLayout 中的钩子没有再次被调用 |
 | `/shop/product/pyjamas` | ShopProduct | - |
-| `/shop/product/shoes` | ShopProduct |Quaasr 注意到相同的组件被渲染，但是路由和路由参数有更新，所以再次调用了组件中的钩子 |
+| `/shop/product/shoes` | ShopProduct |Quasar 注意到相同的组件被渲染，但是路由和路由参数有更新，所以再次调用了组件中的钩子 |
 | `/shop/product/shoes/overview` | ShopProduct 然后 ShopProductOverview | ShopProduct 中有路由参数，所以其中的钩子再次被调用，尽管他之前已经被渲染过 |
 | `/` | LandingPage | - |
 

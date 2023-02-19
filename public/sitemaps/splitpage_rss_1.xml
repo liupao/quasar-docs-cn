@@ -215,11 +215,11 @@
     </item>
 
     <item>
-      <title><![CDATA[Quaasr 中的$q 对象 | Quasar V2 中文文档]]></title>
+      <title><![CDATA[Quasar 中的$q 对象 | Quasar V2 中文文档]]></title>
       <link>https://www.quasar-cn.cn/options/the-q-object</link>
       <guid>https://www.quasar-cn.cn/options/the-q-object</guid>
       <author>null</author>
-      <description><![CDATA[如何使用 Quaasr 中的$q 对象。]]></description>
+      <description><![CDATA[如何使用 Quasar 中的$q 对象。]]></description>
       <category></category>
     </item>
 
@@ -345,7 +345,7 @@
       <link>https://www.quasar-cn.cn/style/theme-builder</link>
       <guid>https://www.quasar-cn.cn/style/theme-builder</guid>
       <author>null</author>
-      <description><![CDATA[Quaasr 主题构建器，帮助您的 app 构建主题颜色]]></description>
+      <description><![CDATA[Quasar 主题构建器，帮助您的 app 构建主题颜色]]></description>
       <category></category>
     </item>
 
@@ -1785,7 +1785,7 @@
       <link>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</link>
       <guid>https://www.quasar-cn.cn/quasar-cli-vite/developing-ssr/handling-404-and-500-errors</guid>
       <author>null</author>
-      <description><![CDATA[(@quasar/app-vite) 在 Quaasr 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误]]></description>
+      <description><![CDATA[(@quasar/app-vite) 在 Quasar 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误]]></description>
       <category></category>
     </item>
 

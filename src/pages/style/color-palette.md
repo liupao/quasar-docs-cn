@@ -144,7 +144,7 @@ getComputedStyle(document.documentElement)
 
 ### 更多的颜色工具
 
-除了上面的 utils，quaasr 还有更多的处理颜色的工具函数:[Color utils](/quasar-utils/color-utils)
+除了上面的 utils，Quasar 还有更多的处理颜色的工具函数:[Color utils](/quasar-utils/color-utils)
 
 ```js
 import { colors, setCssVar } from 'quasar'

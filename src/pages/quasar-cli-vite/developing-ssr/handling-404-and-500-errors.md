@@ -1,6 +1,6 @@
 ---
 title: SSR 处理 404 和 500 错误
-desc: (@quasar/app-vite) 在 Quaasr 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误
+desc: (@quasar/app-vite) 在 Quasar 的服务端渲染中处理通用的 404 和 500 的 HTTP 错误
 ---
 
 处理 SSR 模式的 404 和 500 错误的方式与其他的模式（SPA 等）有些不同，如果您打开了`/src-ssr/middlewares/render.js`，您会发现以下代码：

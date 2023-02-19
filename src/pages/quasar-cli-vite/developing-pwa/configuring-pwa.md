@@ -1,6 +1,6 @@
 ---
 title: 配置 PWA
-desc: (@quasar/app-vite) 如何使用 Quaasr CLI 管理您的渐进式 Web（PWA）应用。
+desc: (@quasar/app-vite) 如何使用 Quasar CLI 管理您的渐进式 Web（PWA）应用。
 related:
   - /quasar-cli-vite/quasar-config-js
 ---
