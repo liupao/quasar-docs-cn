@@ -73,7 +73,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "覆盖文本颜色（如果需要）；来自Quasar调色板的颜色名称"
+      "desc_cn": "覆盖文本颜色（如果需要的话）。来自 Quasar 调色板的颜色名称"
     },
     "glossy": {
       "type": "Boolean",

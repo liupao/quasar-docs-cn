@@ -64,4 +64,4 @@ Qcard 组件很轻巧，它实际上是一个容器元素，您可以使用 QCar
 ### 可展开的
 
 下面的示例可以点击最右边的按钮来展开操作面板
-<doc-example title="Expandable" file="QCard/Expandable" />
+<doc-example title="可展开的" file="QCard/Expandable" />

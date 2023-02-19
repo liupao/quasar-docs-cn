@@ -105,7 +105,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "覆盖文本颜色（如果需要）；来自Quasar调色板的颜色名称"
+      "desc_cn": "覆盖文本颜色（如果需要的话）。来自 Quasar 调色板的颜色名称"
     },
     "dark": {
       "type": "Boolean",
@@ -373,6 +373,7 @@
   "events": {
     "update:model-value": {
       "desc": "Emitted when the component needs to change the model; Is also used by v-model",
+      "desc_cn":"当组件需要改变模型数据（model）时触发，也会被 v-model 使用",
       "params": {
         "value": {
           "type": [
