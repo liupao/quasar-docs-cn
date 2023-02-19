@@ -32,13 +32,14 @@
       "type": "Boolean",
       "desc": "Applies a more prominent border-radius for squared shape buttons",
       "category": "style",
-      "desc_cn": "为方形按钮应用更突出的border-radius"
+      "desc_cn": "为方形按钮应用更突出的圆角边框（border-radius）"
     },
     "square": {
       "type": "Boolean",
       "desc": "Removes border-radius so borders are squared",
       "category": "style",
-      "addedIn": "v2.7.6"
+      "addedIn": "v2.7.6",
+      "desc_cn": "删除边框圆角（border-radius），所以边框是方形的"
     },
     "push": {
       "type": "Boolean",
@@ -50,7 +51,7 @@
       "type": "Boolean",
       "desc": "When used on flexbox parent, buttons will stretch to parent's height",
       "category": "content",
-      "desc_cn": "在flexbox父元素上使用时，按钮将延伸到父元素的高度"
+      "desc_cn": "在 flexbox 父元素上使用时，按钮将延伸到父元素的高度"
     },
     "glossy": {
       "type": "Boolean",
