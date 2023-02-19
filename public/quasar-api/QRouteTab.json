@@ -163,7 +163,7 @@
       ],
       "category": "style",
       "required": false,
-      "desc_cn": "配置material波动（通过将其设置为“false”或提供配置对象将其禁用）"
+      "desc_cn": "配置 material 水波动画（设置为 “false” 将其禁用或提供一个配置对象）"
     },
     "tabindex": {
       "type": [
@@ -176,7 +176,7 @@
         "100"
       ],
       "category": "general",
-      "desc_cn": "Tabindex HTML属性值"
+      "desc_cn": "Tabindex HTML 属性值"
     }
   },
   "slots": {

@@ -132,13 +132,13 @@
         "100"
       ],
       "category": "general",
-      "desc_cn": "Tabindex HTML属性值"
+      "desc_cn": "Tabindex HTML 属性值"
     }
   },
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+      "desc_cn": "组件的默认插槽"
     }
   },
   "events": {

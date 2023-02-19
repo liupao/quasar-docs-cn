@@ -7,7 +7,6 @@
     "transition-show": {
       "type": "String",
       "desc": "One of Quasar's embedded transitions",
-      "desc_cn": "Quasar 内置的过渡效果之一",
       "examples": [
         "fade",
         "slide-down"
@@ -15,12 +14,11 @@
       "category": "transition",
       "default": "jump-down",
       "required": false,
-      "desc_cn": "Quasar的嵌入式过渡动画之一"
+      "desc_cn": "Quasar 内置的过渡效果之一"
     },
     "transition-hide": {
       "type": "String",
       "desc": "One of Quasar's embedded transitions",
-      "desc_cn": "Quasar 内置的过渡效果之一",
       "examples": [
         "fade",
         "slide-down"
@@ -28,7 +26,7 @@
       "category": "transition",
       "default": "jump-up",
       "required": false,
-      "desc_cn": "Quasar的嵌入式过渡动画之一"
+      "desc_cn": "Quasar 内置的过渡效果之一"
     },
     "transition-duration": {
       "type": [
@@ -188,7 +186,7 @@
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽"
+      "desc_cn": "组件的默认插槽"
     }
   },
   "events": {

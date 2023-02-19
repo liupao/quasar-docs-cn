@@ -53,7 +53,7 @@
         "md lg"
       ],
       "category": "style",
-      "desc_cn": "应用自定义填充（垂直[水平]）；以CSS单位表示的尺寸，包括单位名称或标准尺寸名称（无| xs | sm | md | lg | xl）；设置时也会删除最小宽度和高度"
+      "desc_cn": "应用自定义内边距（垂直[水平]）。以 CSS 单位表示的尺寸，包括单位名称或标准尺寸名称（none | xs | sm | md | lg | xl）。设置时也会删除最小宽度和高度"
     },
     "color": {
       "type": "String",
@@ -170,7 +170,7 @@
         "100"
       ],
       "category": "general",
-      "desc_cn": "Tabindex HTML属性值"
+      "desc_cn": "Tabindex HTML 属性值"
     },
     "model-value": {
       "desc": "Controls state of fab actions (showing/hidden); Works best with v-model directive, otherwise use along listening to 'update:modelValue' event",

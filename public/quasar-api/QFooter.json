@@ -48,7 +48,7 @@
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component; Suggestion: QToolbar",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽；建议：QToolbar"
+      "desc_cn": "组件的默认插槽；建议：QToolbar"
     }
   },
   "events": {

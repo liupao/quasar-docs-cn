@@ -138,7 +138,7 @@
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component (overridden by 'mini' slot if used and drawer is in mini mode)",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽（如果已使用且侧滑菜单处于迷你模式，则由“mini”插槽覆盖）"
+      "desc_cn": "组件的默认插槽（如果已使用且侧滑菜单处于迷你模式，则由“mini”插槽覆盖）"
     },
     "mini": {
       "desc": "Content to show when in mini mode (overrides 'default' slot)",

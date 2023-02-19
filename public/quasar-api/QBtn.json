@@ -30,7 +30,7 @@
       ],
       "category": "general",
       "required": false,
-      "desc_cn": "1. 定义按钮的原生 type 属性（submit，reset，button） \n2. 使用 <a> 标签渲染组件，这样即使按钮被禁用，依然可以触发事件\n3. 使用 'href' 属性并将 'type' 声明为一个媒体标签" 
+      "desc_cn": "1. 定义按钮的原生 type 属性（submit，reset，button） \n2. 使用 <a> 标签渲染组件，这样即使按钮被禁用，依然可以触发事件\n3. 使用 'href' 属性并将 'type' 声明为一个媒体标签"
     },
     "to": {
       "type": [
@@ -146,7 +146,7 @@
       "desc": "Removes border-radius so borders are squared",
       "category": "style",
       "addedIn": "v2.7.6",
-      "desc_cn": "删除边框圆角（border-radius），所以边框是方形的"
+      "desc_cn": "删除边框圆角（border-radius），使边框为正方形"
     },
     "glossy": {
       "type": "Boolean",
@@ -349,10 +349,7 @@
                   "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'to' 属性。显式指定它，否则它将被设置为与组件的 'to' 属性相同的值"
                 },
                 "replace": {
-                  "type": [
-                    "String",
-                    "Object"
-                  ],
+                  "type": "Boolean",
                   "desc": "Equivalent to Vue Router <router-link> 'replace' property; Specify it explicitly otherwise it will be set with same value as component's 'replace' prop",
                   "required": false,
                   "desc_cn": "等价于 Vue Router 中的 <router-link> 组件的 'replace' 属性。显式指定它，否则它将被设置为与组件的 'replace' 属性相同的值"

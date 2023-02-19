@@ -152,7 +152,7 @@
       "type": "Boolean",
       "desc": "Applies a more prominent border-radius for a squared shape button",
       "category": "style",
-      "desc_cn": "为方形按钮应用更突出的border-radius"
+      "desc_cn": "为方形按钮应用更突出的圆角边框（border-radius）"
     },
     "push": {
       "type": "Boolean",
@@ -193,7 +193,7 @@
         "2px 2px 5px 7px"
       ],
       "category": "style",
-      "desc_cn": "应用自定义填充（垂直[水平]）；以CSS单位表示的尺寸，包括单位名称或标准尺寸名称（none | xs | sm | md | lg | xl）；设置时也会删除最小宽度和高度"
+      "desc_cn": "应用自定义内边距（垂直[水平]）。以 CSS 单位表示的尺寸，包括单位名称或标准尺寸名称（none | xs | sm | md | lg | xl）。设置时也会删除最小宽度和高度"
     },
     "no-caps": {
       "type": "Boolean",
@@ -220,7 +220,7 @@
       ],
       "category": "style",
       "required": false,
-      "desc_cn": "配置material波动（通过将其设置为“false”或提供配置对象将其禁用）"
+      "desc_cn": "配置 material 水波动画（设置为 “false” 将其禁用或提供一个配置对象）"
     },
     "dense": {
       "type": "Boolean",
@@ -250,7 +250,7 @@
       "type": "Boolean",
       "desc": "When used on flexbox parent, button will stretch to parent's height",
       "category": "content",
-      "desc_cn": "当用于flexbox父元素时，按钮将拉伸到父元素的高度"
+      "desc_cn": "当用于 flexbox 父元素时，按钮将拉伸到父元素的高度"
     },
     "clearable": {
       "type": "Boolean",

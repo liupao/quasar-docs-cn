@@ -132,7 +132,7 @@
   "slots": {
     "default": {
       "desc": "Default slot in the devland unslotted content of the component; Suggestion: QTooltip, QMenu",
-      "desc_cn": "组件的devland unslotted内容中的默认插槽；建议：QTooltip、QMenu"
+      "desc_cn": "组件的默认插槽；建议：QTooltip、QMenu"
     },
     "before": {
       "desc": "Content of the panel on left/top",

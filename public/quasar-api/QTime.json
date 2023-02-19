@@ -117,7 +117,7 @@
       "type": "Boolean",
       "desc": "Removes border-radius so borders are squared",
       "category": "style",
-      "desc_cn": "删除border-radius，使边界为正方形"
+      "desc_cn": "删除边框圆角（border-radius），使边框为正方形"
     },
     "flat": {
       "type": "Boolean",

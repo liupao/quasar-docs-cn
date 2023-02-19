@@ -120,7 +120,7 @@
         "100"
       ],
       "category": "general",
-      "desc_cn": "Tabindex HTML属性值"
+      "desc_cn": "Tabindex HTML 属性值"
     },
     "tag": {
       "type": "String",
