@@ -258,7 +258,6 @@
   "events": {
     "update:model-value": {
       "desc": "Emitted when the component needs to change the model; Is also used by v-model",
-      "desc_cn":"当组件需要改变模型数据（model）时触发，也会被 v-model 使用",
       "params": {
         "value": {
           "type": [
@@ -314,7 +313,8 @@
             }
           }
         }
-      }
+      },
+      "desc_cn": "当组件需要改变模型数据（model）时触发，也会被 v-model 使用"
     }
   },
   "methods": {

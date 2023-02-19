@@ -273,7 +273,6 @@
   "events": {
     "update:model-value": {
       "desc": "Emitted when the component needs to change the model; Is also used by v-model",
-      "desc_cn":"当组件需要改变模型数据（model）时触发，也会被 v-model 使用",
       "params": {
         "value": {
           "type": "Any",
@@ -281,7 +280,8 @@
           "required": true,
           "desc_cn": "新的 model 值"
         }
-      }
+      },
+      "desc_cn": "当组件需要改变模型数据（model）时触发，也会被 v-model 使用"
     },
     "clear": {
       "desc": "When using the 'clearable' property, this event is emitted when the already selected button is clicked",
