@@ -4,7 +4,7 @@ desc: Quasar 插件封装了浏览器的 cookie api，使得其在 SSR 中也可
 keys: Cookies
 ---
 
-这个插件是`document.cookie`的封装，除了标准的使用方式外，还可以 以 JSON 对象的方式对读写 cookie，也可以管理 SSR 中的 cookie。
+这个插件是 `document.cookie` 的封装，除了标准的使用方式外，还可以 以 JSON 对象的方式对读写 cookie，也可以管理 SSR 中的 cookie。
 
 ## Cookies API
 
@@ -19,7 +19,7 @@ keys: Cookies
 <doc-installation plugins="Cookies" />
 
 ## 构建 SSR 时需要注意
-当构建 SSR 应用时我们只能用`$q.cookies` 的格式，如果您想使用`import { Cookies } from 'quasar'`的格式，需要做以下操作：
+当构建 SSR 应用时我们只能用 `$q.cookies` 的格式，如果您想使用 `import { Cookies } from 'quasar'` 的格式，需要做以下操作：
 
 
 ```js
@@ -35,7 +35,7 @@ function (ssrContext) {
 }
 ```
 
-这个 `ssrContext` 可以在 boot 文件的函数参数中获取到（[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) or [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)），也可以在[@quasar/app-vite preFetch](/quasar-cli-vite/prefetch-feature) or [@quasar/app-webpack preFetch](/quasar-cli-webpack/prefetch-feature) 特性中获取到。
+这个 `ssrContext` 可以在 boot 文件的函数参数中获取到（[@quasar/app-vite Boot File](/quasar-cli-vite/boot-files) 或 [@quasar/app-webpack Boot File](/quasar-cli-webpack/boot-files)），也可以在[@quasar/app-vite preFetch](/quasar-cli-vite/prefetch-feature) or [@quasar/app-webpack preFetch](/quasar-cli-webpack/prefetch-feature) 特性中获取到。
 
 
 这样做的原因是，在仅有客户端的应用程序中，每个用户都会在它们的浏览器中使用应用程序的一个新实例。对于服务器端渲染，我们也希望如此:每个请求都应该有一个新的、独立的应用实例，这样就不会有交叉请求的状态污染。因此 cookie 需要分别绑定到每个请求。
@@ -67,7 +67,7 @@ import { Cookies } from 'quasar'
 const cookies = Cookies.getAll()
 ```
 
-`cookies`变量会是一个(cookie_name : cookie_value)格式的对象。
+`cookies` 变量会是一个 (cookie_name : cookie_value) 格式的对象。
 ```js
 // 在 Vue 文件之内
 import { useQuasar } from 'quasar'
@@ -129,7 +129,7 @@ setup () {
   $q.cookies.set('cookie_name', cookie_value, options)
 }
 ```
-其中`options`参数是可选的，属性列表如下：
+其中 `options` 参数是可选的，属性列表如下：
 
 ### Option: expires 过期时间
 
@@ -174,7 +174,7 @@ SameSite cookie 允许服务器要求 cookie 不与跨站点(其中 Site 由可�
 
 **Lax** - 如果该属性设置为 Lax，则在跨站点的子请求(如加载图像或帧的调用)中保留同站点 cookie，但在用户从外部站点导航到 URL 时(如通过跟随链接)将发送此 cookie。
 
-更多关于`same-site`的设置请参考 [here](https://web.dev/samesite-cookies-explained/).
+更多关于 `same-site` 的设置请参考 [here](https://web.dev/samesite-cookies-explained/).
 
 ### Option: httpOnly
 
@@ -211,8 +211,8 @@ import { Cookies } from 'quasar'
 
 Cookies.remove('cookie_name')
 
-// 如果待移除的 cookie 在写入时传入了特殊的配置项例如： path 或者 domain
-//那么在删除时也得传入它们
+// 如果待移除的 cookie 在写入时传入了特殊的配置项例如：path 或者 domain
+// 那么在删除时也得传入它们
 Cookies.remove('cookie_name', options)
 ```
 
@@ -226,12 +226,12 @@ setup () {
   $q.cookies.remove('cookie_name')
 
   // 如果待移除的 cookie 在写入时传入了特殊的配置项，例如： path 或者 domain
-  //那么在删除时也得传入它们
+  // 那么在删除时也得传入它们
   $q.cookies.remove('cookie_name', options)
 }
 ```
 
 ::: warning
 如果待移除的 cookie 在写入时传入了特殊的配置项，例如： path 或者 domain
-那么在删除时也得将它们通过 options 传入 remove()才能成功删除它们，这是遵循了 RFC6265 规定。
+那么在删除时也得将它们通过 options 传入 remove() 才能成功删除它们，这是遵循了 RFC6265 规定。
 :::
