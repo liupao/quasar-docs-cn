@@ -20,12 +20,12 @@
     "@quasar/extras": "^1.15.11",
     "algoliasearch": "^4.14.3",
     "prismjs": "^1.29.0",
-    "quasar": "^2.11.6",
+    "quasar": "^2.11.7",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.2.0",
+    "@quasar/app-vite": "^1.2.1",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.30.0",
     "eslint-config-standard": "^17.0.0",
