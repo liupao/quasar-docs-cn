@@ -77,6 +77,10 @@
       <div>
         <doc-link to="http://beian.miit.gov.cn/">鄂ICP备2022014971号-1</doc-link>
       </div>
+      <div class="flex flex-col">
+        版权声明
+        本中文文档内容版权为站长个人所有，保留所有权利。
+      </div>
     </div>
   </q-page>
 </template>

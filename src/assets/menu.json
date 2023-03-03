@@ -5,6 +5,11 @@
     "path": "introduction-to-quasar"
   },
   {
+    "name": "联系站长",
+    "icon": "alternate_email",
+    "path": "contact"
+  },
+  {
     "name": "赞助商和支持者",
     "icon": "favorite",
     "path": "sponsors-and-backers"
