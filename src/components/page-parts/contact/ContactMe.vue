@@ -14,14 +14,14 @@
         <q-td>
           <q-img
             style="width: 350px"
-            src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iirq80h6j30ep0f7mzf.jpg"
+            src="/pay/wechat.png"
             alt="微信"
           />
         </q-td>
         <q-td>
           <q-img
             style="width: 350px"
-            src="http://tva1.sinaimg.cn/large/0080GS1wly1h4iisk6y7vj30jf0k9wgn.jpg"
+            src="/pay/zfb.jpg"
             alt="支付宝"
           />
         </q-td>
