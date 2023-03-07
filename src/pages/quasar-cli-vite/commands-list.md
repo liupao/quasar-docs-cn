@@ -9,10 +9,10 @@ desc: (@quasar/app-vite) Quasar CLI 完整的命令列表。
 ``` bash
 $ quasar
 
-  Example 用法
+  示例用法
     $ quasar <command> <options>
 
-  Help for a command
+ 查询一个命令的帮助信息
     $ quasar <command> --help
     $ quasar <command> -h
 
@@ -77,7 +77,7 @@ $ quasar upgrade -i
 :::
 
 ## Info
-Quasar CLI 配备了多个 NPM 包(Vite，Vue 等)的稳定组合，这些软件包在经过大量测试后会频繁更新。
+Quasar CLI 配备了多个 NPM 包（Vite，Vue 等）的稳定组合，这些软件包在经过大量测试后会频繁更新。
 
 有时为了定位问题，需要查看您的项目中各个包的版本，请在项目根目录中运行以下命令：
 
@@ -170,7 +170,7 @@ $ quasar dev -m ios '--' some params --and options --here
 $ quasar dev -m electron '--' --no-sandbox --disable-setuid-sandbox
 ```
 
-如果要更改应用程序的主机名或端口，您有 3 个选项：
+如果要更改应用程序的主机名或端口，有 3 种方式：
 * 编辑 '/quasar.config.js':
   ```js
   devServer: {
@@ -482,6 +482,7 @@ $ quasar describe QIcon
 
 ## Inspect
 这个命令用于查看 Quasar CLI 生成的 Vite 配置。
+
 ```bash
 $ quasar inspect -h
 
