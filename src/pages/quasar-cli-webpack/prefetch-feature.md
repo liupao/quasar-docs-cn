@@ -1,22 +1,22 @@
 ---
-title: PreFetch Feature
-desc: (@quasar/app-webpack) How to prefetch data and initialize your Vuex store, validate the route and redirect to another page in a Quasar app.
+title: 预取特性 PreFetch
+desc: (@quasar/app-webpack) 如何在 Quasar 中预取数据，初始化 Store，验证路由或者重定向路由
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
 
-The PreFetch is a feature (**only available when using Quasar CLI**) which allows the components picked up by Vue Router (defined in `/src/router/routes.js`) to:
+预取（PreFetch）是 Quasar CLI 提供的一个特性，它可以让被 vue router 选中的组件（在`/src/router/routes.js`中定义的组件）拥有以下额外能力：
 
-* pre-fetch data
-* validate the route
-* redirect to another route, when some conditions aren't met (like user isn't logged in)
-* can help in initializing the Store state
+* 预取数据 pre-fetch data
+* 验证路由 validate the route
+* 当不满足验证条件时进行路由重定向（例如用户未登录时）
+* 帮助初始化 Store 数据
 
-All the above will run before the actual route component is rendered.
+上面这些工作都在组件渲染之前完成。
 
-**It is designed to work with all Quasar modes** (SPA, PWA, SSR, Cordova, Electron), but it is especially useful for SSR builds.
+**这个特性在所有的开发模式中都可用** (SPA, PWA, SSR, Cordova, Electron)，但是它对 SSR 开发模式尤其有用。
 
-## Installation
+## 安装
 
 ```js
 // quasar.config.js
@@ -25,21 +25,22 @@ return {
 }
 ```
 
-::: warning
-When you use it to pre-fetch data, you are required to use a Vuex Store, so make sure that your project folder has the `/src/store` folder when you create your project, otherwise generate a new project and copy the store folder contents to your current project.
+::: warning 警告
+当您想使用预取数据时，您需要使用 Pinia 或 Vuex 来存储数据，所以请确保您的项目中已经添加了其中一个，否则，请创建一个新的项目，复制其中的`/src/stores` (Pinia) **或** `/src/store` (Vuex)目录到您的项目。（或者直接使用`quasar new store`命令来为您添加状态管理工具）
 :::
 
-## How PreFetch Helps SSR Mode
-This feature is especially useful for the SSR mode (but not limited to it only). During SSR, we are essentially rendering a "snapshot" of our app, so if the app relies on some asynchronous data, **then this data needs to be pre-fetched and resolved before we start the rendering process**.
+## 为什么 PreFetch 对 SSR 很有用
+这个特性对 SSR 开发模式尤其有用（但并不是只能用于 SSR 模式中），因为开发 SSR 时，我们相当于渲染了我们应用的“快照”，所以，当应用需要一些异步的数据时，**为了使得最终渲染的页面中带有这些数据，我们需要在应用开始渲染之前将这些数据预处理好**。
 
-Another concern is that on the client, the same data needs to be available before we mount the client side app - otherwise the client app would render using a different state and the hydration would fail.
+另一个问题是，在客户端，同样的数据需要在我们挂载客户端应用程序之前可用——否则客户端应用程序将使用不同的数据状态渲染，这会导致水合作用（hydration）将失败。
 
-To address this, the fetched data needs to live outside the view components, in a dedicated data store, or a "state container". On the server, we can pre-fetch and fill data into the store before rendering. The client-side store will directly pick up the server state before we mount the app.
+为了解决这个问题，获取的数据需要存储在视图组件之外、一个专用的数据存储 store（Pinia 或 Vuex）中。在服务器上，我们可以在渲染页面之前预取数据并将数据填充到 store 中。在客户端的 store 会在挂载 app 之前同步服务端的数据。
 
-## When PreFetch Gets Activated
-The `preFetch` hook (described in next sections) is determined by the route visited - which also determines what components are rendered. In fact, the data needed for a given route is also the data needed by the components rendered at that route. **So it is natural (and also required) to place the hook logic ONLY inside route components.** This includes `/src/App.vue`, which in this case will run only once at the app bootup.
+## PreFetch 钩子何时被激活
 
-Let's take an example in order to understand when the hook is being called. Let's say we have these routes and we've written `preFetch` hooks for all these components:
+预取`preFetch`钩子（将在下一节中介绍）由访问的路由确定，该路由还确定渲染哪些组件。事实上，给定路由所需的数据也是在该路由上渲染的组件所需的。**因此，只在路由组件内部放置`preFetch`钩子的逻辑是很自然的（也是必需的）**。 这也包括`/src/App.vue`，在这种情况下，在应用程序启动时只运行一次。
+
+让我们通过一个例子来理解钩子何时被调用。假设我们有这些路由，并为这些组件都编写了`preFetch`钩子：
 
 ```js
 // routes
@@ -72,24 +73,26 @@ Let's take an example in order to understand when the hook is being called. Let'
   }
 ]
 ```
+现在，让我们看看当用户按照下面指定的顺序依次访问这些路由时，钩子是如何被调用的。
 
-Now, let's see how the hooks are called when the user visits these routes in the order specified below, one after another.
-
-| Route being visited | Hooks called from | Observations |
+| 被访问的路由 | 钩子被调用的地方 | 观察分析结果 |
 | --- | --- | --- |
-| `/` | App.vue then LandingPage | App.vue hook is called since our app boots up. |
-| `/shop/all` | ShopLayout then ShopAll | - |
-| `/shop/new` | ShopNew | ShopNew is a child of ShopLayout, and ShopLayout is already rendered, so ShopLayout isn't called again. |
+| `/` | App.vue 然后是 LandingPage | 当 app 启动时，App.vue 中的钩子会被调用 |
+| `/shop/all` | ShopLayout 然后 ShopAll | - |
+| `/shop/new` | ShopNew | ShopNew 是 ShopLayout 的一个子页面,并且 ShopLayout 已经渲染过了，所以 ShopLayout 中的钩子没有再次被调用 |
 | `/shop/product/pyjamas` | ShopProduct | - |
-| `/shop/product/shoes` | ShopProduct | Quasar notices the same component is already rendered, but the route has been updated and it has route params, so it calls the hook again. |
-| `/shop/product/shoes/overview` | ShopProduct then ShopProductOverview | ShopProduct has route params so it is called even though it's already rendered. |
+| `/shop/product/shoes` | ShopProduct |Quasar 注意到相同的组件被渲染，但是路由和路由参数有更新，所以再次调用了组件中的钩子 |
+| `/shop/product/shoes/overview` | ShopProduct 然后 ShopProductOverview | ShopProduct 中有路由参数，所以其中的钩子再次被调用，尽管他之前已经被渲染过 |
 | `/` | LandingPage | - |
 
-## 用法
-The hook is defined as a custom static function called `preFetch` on our route components. Note that because this function will be called before the components are instantiated, it doesn't have access to `this`.
+##  用法
+
+这个钩子在路由组件中定义为一个叫做`preFetch`的静态函数。注意，因为这个函数将在组件实例化之前调用，所以它没有访问权限`this`。
+
+下面的例子是当使用 Vuex 时：
 
 ```html
-<!-- some .vue component used as route -->
+<!-- 被路由使用的一些.vue 组件 -->
 <template>
   <div>{{ item.title }}</div>
 </template>
@@ -98,23 +101,23 @@ The hook is defined as a custom static function called `preFetch` on our route c
 import { useStore } from 'vuex'
 
 export default {
-  // our hook here
+  // 我们的钩子在这里
   preFetch ({ store, currentRoute, previousRoute, redirect, ssrContext, urlPath, publicPath }) {
-    // fetch data, validate route and optionally redirect to some other route...
+    // 在这里可以获取数据，验证路由，重定向路由等等...
 
-    // ssrContext is available only server-side in SSR mode
+    // ssrContext 只有在开发 SSR 模式时才能访问
 
-    // No access to "this" here
+    // 这里无法访问 this
 
-    // Return a Promise if you are running an async job
-    // Example:
+    // 如果您执行了异步的任务，请返回一个 Promise
+    // 示例:
     return store.dispatch('fetchItem', currentRoute.params.id)
   },
 
   setup () {
     const $store = useStore()
 
-    // display the item from store state.
+    // 展示 store state 中的 items
     const item = computed(() => $store.state.items[this.$route.params.id])
 
     return { item }
@@ -123,7 +126,7 @@ export default {
 </script>
 ```
 
-If you are using `<script setup>`, then add a `<script>` section besides it which simply returns an Object with the preFetch() method:
+如果您在使用`<script setup>`，请再添加一个`<script>`单独用于处理 preFetch，在其中返回一个带有 preFetch 函数的对象：
 
 ```html
 <script>
@@ -138,12 +141,12 @@ export default {
 <script setup>....</script>
 ```
 
-::: tip
-If you are developing a SSR app, then you can check out the [ssrContext](/quasar-cli-webpack/developing-ssr/ssr-context) Object that gets supplied server-side.
+::: tip 提示
+如果您在开发 SSR 应用，您可以查看服务端提供的[ssrContext](/quasar-cli-webpack/developing-ssr/ssr-context)对象。
 :::
 
 ```js
-// related action for Promise example
+// 执行异步任务相关的示例
 // ...
 
 actions: {
@@ -157,12 +160,13 @@ actions: {
 // ...
 ```
 
-### Redirecting Example
-Below is an example of redirecting the user under some circumstances, like when they try to access a page that only an authenticated user should see.
+### 重定向示例
+下面是在某些情况下重定向页面的示例，比如当未登录的用户试图访问只有经过身份验证的用户才能看到的页面时。
+
 
 ```js
-// We assume here we already wrote the authentication logic
-// in the Vuex Store, so take as a high-level example only.
+// 这里假设我们已经编写了身份验证逻辑
+// 在 Vuex store 中
 preFetch ({ store, redirect }) {
   if (!store.state.authenticated) {
     redirect({ path: '/login' })
@@ -170,13 +174,13 @@ preFetch ({ store, redirect }) {
 }
 ```
 
-If `redirect(false)` is called (supported only on client-side!), it aborts the current route navigation. Note that if you use it like this in `src/App.vue` it will halt the app bootup, which is undesirable.
+如果调用了 `redirect(false)`（仅在客户端支持！），则将中止当前的路由跳转。请注意，如果在`src/app.vue`中这样的使用，vue 将停止应用程序启动，这是不可取的。
 
-The `redirect()` method requires a Vue Router location Object.
+ `redirect()`函数可以接受一个 Vue Router 的 location 对象作为参数。
 
-### Using preFetch to Initialize Pinia or Vuex Store(s)
+### 使用预取 preFetch 来初始化 Pinia 或 Vuex
 
-The `preFetch` hook runs only once, when the app boots up, so you can use this opportunity to initialize the Pinia store(s) or the Vuex Store here.
+当 app 启动时`preFetch`钩子只会运行一次，所以您可以借助这个机会来初始化 Pinia 或者 Vuex Store。
 
 ```js
 // -- Pinia on Non SSR --
@@ -225,8 +229,9 @@ export default {
 }
 ```
 
-### Vuex Store Code Splitting
-In a large application, your Vuex store will likely be split into multiple modules. Of course, it is also possible to code-split these modules into corresponding route component chunks. Suppose we have the following store module:
+### Vuex Store 代码拆分
+
+在大型应用程序中，Vuex Store 可能会被拆分为多个模块。当然，也可以将这些模块编码为相应的路由组件块。假设我们有以下 store 模块：
 
 ```js
 // src/store/foo.js
@@ -298,15 +303,14 @@ export default {
 </script>
 ```
 
-Also note that because the module is now a dependency of the route component, it will be moved into the route component's async chunk by Webpack.
+还要注意的是，由于该模块现在是路由组件的一个依赖项，它将被 webpack 移到路由组件的异步块中。
 
-::: warning
-Don't forget to use the `preserveState: true` option for `registerModule` so we keep the state injected by the server.
+::: warning 警告
+不要忘记为`registerModule`设置`preserveState: true`选项，这样我们就可以保持由服务端注入的数据。
 :::
 
-### 用法 with Vuex and TypeScript
-
-You can use `preFetch` helper to type-hint the store parameter (which will otherwise have an `any` type):
+### Vuex 搭配 Typescript
+您可以使用`preFetch`的类型工具来标注`store`参数的类型（否则为 any）：
 
 ```js
 import { preFetch } from 'quasar/wrappers'
@@ -323,18 +327,19 @@ export default {
 }
 ```
 
-::: tip
-This is useful only to type `store` parameter, other parameters are automatically typed even when using the normal syntax.
+::: tip 提示
+这只对`store`参数有效，其他的参数类型会被自动推断
 :::
 
-## Loading State
-A good UX includes notifying the user that something is being worked on in the background while he/she waits for the page to be ready. Quasar CLI offers two options for this out of the box.
+## 加载状态
+一个好的用户体验包括提示用户有一些运行在后台的工作在页面准备就绪之前需要等待。针对于此，Quasar 提供了两种开箱即用的选项。
 
 ### LoadingBar
-When you add Quasar [LoadingBar](/quasar-plugins/loading-bar) plugin to your app, Quasar CLI will use it while it runs the preFetch hooks by default.
+当您为您的 app 添加了 Quasar 的[LoadingBar](/quasar-plugins/loading-bar)插件时，Quasar 默认会自动在 preFetch 钩子运行时调用 loadingBar。
 
 ### Loading
-There's also the possibility to use Quasar [Loading](/quasar-plugins/loading) plugin. Here's an example:
+也可以使用 Quasar 的[Loading](/quasar-plugins/loading)插件。
+示例：
 
 ```js
 // a route .vue component
