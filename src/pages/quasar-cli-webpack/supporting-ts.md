@@ -1,19 +1,19 @@
 ---
-title: Supporting TypeScript
-desc: (@quasar/app-webpack) How to enable support for TypeScript in a Quasar app.
+title: 支持 TypeScript
+desc: (@quasar/app-webpack) 如何为一个 Quasar 项目开启 TypeScript 支持。
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
-
-The Typescript support is not added by default to your project (unless you selected TS when you created your project folder), but it can be easily integrated by following the guide on this page.
+ 
+如果在创建项目时未勾选 TS 选项，则 Typescript 支持不会默认添加到项目中，但是跟随本页的指南，可以很轻松的将其添加。
 
 ::: tip
-The following steps are only required when you **have not** selected TypeScript support when creating a fresh Quasar project. If you selected the TS option on project creation, TypeScript support is already enabled.
+本页指南只针在创建项目时**未勾选** TS 选项时的情况，如果您当时勾选了 TS 选项，则 TypeScript 支持默认开启。
 :::
 
-## Installation of TypeScript Support
+## 配置 TypeScript 支持
 
-In order to support TypeScript, you'll need to edit `/quasar.config.js`:
+为了支持 TypeScript，需要编辑 `/quasar.config.js`：
 
 ```js
 module.exports = function (ctx) {
@@ -23,8 +23,7 @@ module.exports = function (ctx) {
   }
 }
 ```
-
-Then create `/tsconfig.json` file at the root of you project with this content:
+然后，创建一个 `/tsconfig.json` 文件并复制如下内容：
 
 ```json
 {
@@ -35,19 +34,18 @@ Then create `/tsconfig.json` file at the root of you project with this content:
 }
 ```
 
-Now you can start using TypeScript into your project.
+这样，就可以在项目中使用 TypeScript 了。
 
 ::: tip
-Remember that you must change the extension of your JavaScript files to `.ts` to be allowed to write TypeScript code inside them. To write TS code into your components, instead, change the script opening tag like so `<script lang="ts">`.
+编写 TypeScript 代码时记得将 JavaScript 文件扩展名修改为 `.ts`。如果要在 Vue 组件中编写 TypeScript 代码，则需要修改 script 标签为 `<script lang="ts">`.
 :::
 
 ::: warning
-If you enable the `supportTS` flag but fail to add the `tsconfig.json` file, the application will break at compile time!
+如果开启了 `supportTS` 选项，但是没有正确添加 `tsconfig.json` 文件，则编译时会出错。
 :::
 
-## Handling TS Webpack loaders
-
-Behind the curtains, Quasar uses `ts-loader` and `fork-ts-checker-webpack-plugin` (provided by `@quasar/app-webpack` package) to manage TS files. If you ever need to provide a custom configuration for these libs you can do so by making `supportTS` property like so:
+## 处理 TS 的 Webpack loader
+在 Quasar 底层使用了 `ts-loader` 和 `fork-ts-checker-webpack-plugin` （由 `@quasar/app-webpack`  包提供） 来管理 TS 文件。如果您需要为这些库提供自定义的配置项，则需要修改 `supportTS` 属性，如下：
 
 ```js
 // quasar.config.js
@@ -55,11 +53,11 @@ module.exports = function (ctx) {
   return {
     supportTS: {
       tsLoaderConfig: {
-        // `appendTsSuffixTo: [/\.vue$/]` and `transpileOnly: true` are added by default and cannot be overridden
+        // `appendTsSuffixTo: [/\.vue$/]` 和 `transpileOnly: true` 配置是默认被添加的，并且不能被修改
         ...
       },
       tsCheckerConfig: {
-        // `vue: true` is added by default and cannot be overridden
+        // `vue: true` 配置是默认被添加的，并且不能被修改
         ...
       }
     },
@@ -68,15 +66,15 @@ module.exports = function (ctx) {
 }
 ```
 
-### Linting setup
+### 代码检查（Linting） 
 
-First add needed dependencies:
+首先，添加所需的依赖：
 
 ```bash
-$ yarn add --dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn add --dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-Then update your ESLint configuration accordingly, like in the following example:
+然后更新 ESLint 配置，例如：
 
 ```js
 // .eslintrc.js
@@ -147,15 +145,15 @@ module.exports = {
 }
 ```
 
-If anything goes wrong, read the [typescript-eslint guide](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md), on which this example is based.
+如果遇到了问题，请参考 [typescript-eslint guide](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md)，本示例也来源于此。
 
-As a last step, update your `yarn lint` command to also lint `.ts` files.
+最后，更新 `package.json` 中的 `yarn lint` 命令，让其也检查 `.ts` 文件。
 
 ::: tip
-TypeScript Linting is really slow due to type-checking overhead, we suggest you to disable Webpack lint extension into `quasar.config.js` for dev builds.
+由于类型检查的高性能开销，TypeScript 的代码检查真的很慢，建议在开发时在 `quasar.config.js` 中将 Webpack 的 lint 扩展禁用。
 :::
 
-If you setup TypeScript linting and want `fork-ts-checker-webpack-plugin` (provided by `@quasar/app-webpack` package) to take it into account then you should make use of `tsCheckerConfig` property:
+如果您需要开启 TypeScript 的检查，并且希望 `fork-ts-checker-webpack-plugin` 也将其考虑在内，则需要修改  `tsCheckerConfig` 字段：
 
 ```js
 // quasar.config.js
