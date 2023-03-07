@@ -1,16 +1,21 @@
 ---
-title: Lazy Loading / Code Splitting
-desc: (@quasar/app-webpack) How to create Webpack chunks in a Quasar app.
+title: 按需加载/代码拆分
+desc: (@quasar/app-webpack) Webpack 版本的 Quasar CLI 怎么创建异步加载模块。
 ---
-When your website/app is small, you can load all layouts/pages/components into the initial bundle and serve everything at startup. But when your code gets complex and has many layouts/pages/components, it won't be optimal to do this as it will massively impact loading time. Fortunately, there is a way to solve this.
 
-We'll cover how you can lazy load / code split parts of your app so that they are automatically requested only on demand. This is done through dynamic imports. Let's start with an example and then convert it so that we use lazy loading -- we'll focus this example on loading a page, but the same principle can be applied to load anything (assets, JSONs, ...).
+当您的网站/应用程序很小时，您可以将所有布局/页面/组件都放到一个初始加载包中，并在启动时提供所有内容。
 
-## Lazy-load router pages
-It's normal to use the Vue Router calling static components as below.
+但是，当您的代码变得复杂时，有大量的布局/页面/组件时，这样做并不是最理想的，因为它会影响加载时间。幸运的是，有一种方法可以解决这个问题。
+
+我们将介绍如何通过动态导入来进行按需加载/拆分应用程序的部分代码，以便仅在需要时才自动请求它们。我们将举一个加载页面的例子，但是这种方法也同样适用于别的文件（静态资源，JSON 文件，……）：
+
+## 在定义路由时按需加载页面
+
+如下所示，使用 Vue 路由器调用静态组件是正常的
 
 ::: warning
-Quasar documentation assumes you are already familiar with [Vue Router](https://github.com/vuejs/vue-router). Below it's described only the basics of how to make use of it in a Quasar CLI project. For the full list of its features please visit the [Vue Router documentation](https://router.vuejs.org/).
+Quasar 文档假设您已经熟悉了 [Vue Router](https://github.com/vuejs/vue-router)。
+下面的内容描述了如何在 Quasar CLI 项目中使用路由。更多关于 Vue Router 本身的内容请参考： [Vue Router 文档](https://router.vuejs.org/)。
 :::
 
 ```js
@@ -24,7 +29,7 @@ const routes = [
 ]
 ```
 
-Now let's change this and make the page be loaded on demand only, using dynamic imports:
+现在，让我们使用动态导入来更改此内容，这样，浏览器将仅在需要时再加载此页面：
 
 ```js
 const routes = [
@@ -35,10 +40,11 @@ const routes = [
 ]
 ```
 
-Easy, right? What this does is that it creates a separate chunk for `/src/pages/SomePage.vue` which is then loaded only when it is needed. In this case, when a user visits the '/some-page' route.
+简单吧？它所做的是为 `/src/pages/SomePage.vue` 创建一个单独的文件块，只有在需要时才加载它。在这个例子中，就是指当用户访问 '/some-page' 路由的时候。
 
-## Lazy-load components
-Normally you would import a component and then register it to the Page, Layout or Component.
+## 按需加载组件
+
+通常情况下，您会导入一个组件，然后将其注册到页面、布局或组件中。
 
 ```html
 <script>
@@ -52,7 +58,7 @@ export default {
 </script>
 ```
 
-Now let's change this and make the component be loaded on demand only, using dynamic imports:
+现在让我们改变这种方式，使用动态导入使组件按需加载：
 ```html
 <script>
 import { defineAsyncComponent } from 'vue'
@@ -64,32 +70,31 @@ export default {
 </script>
 ```
 
-## Lazy-load on the fly
-As you noticed above, we're using dynamic imports (`import('..resource..')`) instead of regular imports (`import Resource from './path/to/resource'`). Dynamic imports are essentially returning a Promise that you can use:
+## ESM 的动态导入
+
+正如您在上面注意到的那样，我们使用动态导入（`import('..resource..')`）代替（`import Resource from './path/to/resource'`）。动态导入会返回一个 Promise：
 
 ```js
 import('./categories.json')
   .then(categories => {
-    // hey, we have lazy loaded the file
-    // and we have its content in "categories"
+    // 在此，我们已经按需加载了这个文件，可以访问 "categories" 中的内容
   })
   .catch(() => {
-    // oops, something went wrong...
-    // couldn't load the resource
+    // 出错了，加载资源失败
   })
 ```
 
-One advantage of using dynamic imports as opposed to regular imports is that the import path can be determined at runtime:
+与常规导入相比，使用动态导入的一个优点是可以在运行时确定导入路径：
 
 ```js
 import('pages/' + pageName + '/' + 'id')
 ```
 
-## Caveat with vendor imports
+## 关于代码块导入的说明 
 
-By default, Quasar includes packages from `node_modules` in a vendor chunk even if your code imports them dynamically. This increases the vendor chunk size, but since you don't usually change your dependencies, browsers will use the cached version of this chunk and actually speed up loading your app on subsequent visits.
+默认情况下，Quasar 会将 `node_modules` 中的包打包在一个 vendor 块中，即使您的代码是动态导入的。这会增加 vendor 区块的大小，但由于依赖关系不会被频繁更改，因此浏览器可以利用该区块的缓存版本，并在后续访问时加快加载应用程序的速度。
 
-For example, if you have installed a package (let's call it `my-package`) you can import it dynamically like this:
+例如，如果您安装了一个包（假设它名为 `my-package`），那么，您可以像这样动态导入它：
 
 ````js
 import('my-package')
@@ -98,7 +103,7 @@ import('my-package')
   })
 ````
 
-However, should you want to make Quasar CLI put `my-package` in its own chunk you'll have to edit `quasar.config.js`:
+然而，如果您想将 `my-package` 打包在一个单独的代码块中，需要修改 `quasar.config.js`，如下：
 
 ````js
 // quasar.config.js
@@ -109,33 +114,35 @@ return {
 }
 ````
 
-For more details, see the [vendors section](/quasar-cli-webpack/quasar-config-js#property-vendor) of `quasar.config.js`.
+更多详细信息，参考 `quasar.config.js` 的 [vendors 部分](/quasar-cli-webpack/quasar-config-js#property-vendor)。
 
-## Caveat for dynamic imports
-There's one caveat when using dynamic imports with variable parts like in the previous example. When the website/app is bundled, so at compile time, we have no way of telling what the exact import path will be at runtime. As a result, chunks will be created for each file that could match the variable path. You might see un-necessary files in the build log.
+## 关于动态导入的路径中存在变量的说明
 
-So how can we limit the number of chunks created in this case? The idea is to limit the variable part as much as you can so the matched paths are as few as possible.
-1. Add file extension, even if it works without it too. This will create chunks only for that file types. Useful when that folder contains many file types.
+如果动态导入的路径中存在变量，由于在编译时无法得知确切的导入路径，我们只能将所有可能与此动态路径匹配的模块都打包进来，因此，您可能会在构建日志中看到不必要的文件。
+
+所以，这种情况下，如何限制生成的代码块的数量及大小呢？思路是限制动态路径，使其能匹配的模块尽可能的少。
+
+1. 添加文件扩展名，当目录下有多种类型的同名文件时很有用。
   ```js
-  // bad
+  // 不好
   import('./folder/' + pageName)
 
-  // much better
+  // 好一些
   import('./folder/' + pageName + '.vue')
   ```
-2. Try to create a folder structure that will limit the files available in that variable path. Make it as specific as possible:
+2. 使动态路径尽可能的明确。
   ```js
-  // bad -- makes chunks for any JSON inside ./folder (recursive search)
+  // 不好 -- 将所有的 JSON 模块都放在 ./folder 中，然后递归查找
   const asset = 'my/jsons/categories.json'
   import('./folder/' + asset)
 
-  // good -- makes chunks only for JSONs inside ./folder/my/jsons
+  // 好 --  只查找 ./folder/my/jsons 目录下的 JSON 模块
   const asset = 'categories.json'
   import('./folder/my/jsons/' + asset)
   ```
-3. Try to import from folders containing only files. Take the previous example and imagine ./folder/my/jsons further contains sub-folders. We made the dynamic import better by specifying a more specific path, but it's still not optimal in this case. Best is to use terminal folders that only contain files, so we limit the number of matched paths.
+3. 尝试从只包含文件的目录中导入，在上一个示例中，如果 `./folder/my/jsons` 中仍然有子文件夹，那么我们通过明确动态路径的方式仍然不是最优解，最好是调整目录结构，确保导入的终端路径中只存在文件。
 
-4. Use [Webpack magic comments](https://webpack.js.org/api/module-methods/#magic-comments) `webpackInclude` and `webpackExclude` to constrain the bundled chunks with a regular expression, for example:
+4. 使用 [Webpack 魔法注释](https://webpack.js.org/api/module-methods/#magic-comments)中的 `webpackInclude` 和 `webpackExclude` 通过一个正则表达式来声明可能会被导入的代码块，示例：
   ```js
   await import(
     /* webpackInclude: /(ar|en-US|ro)\.js$/ */
@@ -145,6 +152,7 @@ So how can we limit the number of chunks created in this case? The idea is to li
       Quasar.lang.set(lang.default)
     })
   ```
-  will result in bundling only the language packs you need for your site/app, instead of bundling all the language packs (more than 40!) which might hamper the performance of the commands `quasar dev` and `quasar build`.
+  这样，在打包的时候只会将所需要的语言包（ar|en-US|ro）打包进构建产物中，而不是将 `quasar/lang/` 目录下的所有语言包都打包（超过 40 个,可能会影响 `quasar dev` 和 `quasar build` 命令的性能）。
 
-Remember that the number of matched paths equals to the number of chunks being generated.
+注意，动态路径匹配的模块数量等于构建产物生产块的数量。
+
