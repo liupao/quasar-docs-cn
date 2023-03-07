@@ -1,21 +1,22 @@
 ---
-title: API Proxying for Dev
-desc: (@quasar/app-webpack) How to use an API proxy with the Quasar dev server.
+title: 开发时进行 API 代理
+desc: (@quasar/app-webpack) Quasar 开发服务如何开启 API 代理。
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
-When integrating a project folder (created by Quasar CLI) with an existing backend, a common need is to access the backend API when using the dev server. To achieve this, we can run the dev server and the API backend side-by-side (or remotely), and let the dev server proxy all API requests to the actual backend.
 
-This is useful if you access relative paths in your API requests. Obviously, these relative paths will probably not work while you are developing. In order to create an environment similar to the one used by your deployed website/app, you can proxy your API requests.
+当开发时，我们常常需要访问后端提供的接口 API，我们可以让开发服务器将所有 API 请求代理到实际的后端。
 
-To configure the proxy rules, edit `/quasar.config.js` in `devServer.proxy`. You should refer to [Webpack Dev Server Proxy](https://webpack.js.org/configuration/dev-server/#devserver-proxy) docs for detailed usage. But here's a simple example:
+例如，当您的 API 请求路径都是相对路径时，这就非常有用了，显然，这些相对路径的接口在开发环境下可能不存在。也就是说您可以使用代理 API 的方式创建与网站/应用部署时类似的环境。
+
+为了配置代理规则，需要编辑 `/quasar.config.js` 文件中的 `devServer.proxy` 对象。您应该参考 [Webpack Dev Server Proxy](https://webpack.js.org/configuration/dev-server/#devserver-proxy) 页面参考详细的用法，但是这里有一个简单的示例：
 
 ```js
 // quasar.config.js
 
 devServer: {
   proxy: {
-    // proxy all requests starting with /api to jsonplaceholder
+    // 代理所有以 /api 开头的请求
     '/api': {
       target: 'http://some.api.target.com:7070',
       changeOrigin: true,
@@ -26,5 +27,4 @@ devServer: {
   }
 }
 ```
-
-The above example will proxy the request `/api/posts/1` to `http://some.api.target.com:7070/posts/1`.
+上面的示例会将 `/api/posts/1` 请求代理到 `http://some.api.target.com:7070/posts/1`。
