@@ -1,19 +1,18 @@
 ---
-title: CSS Preprocessors
-desc: (@quasar/app-webpack) Sass/SCSS are the out of the box supported css preprocessors in Quasar
+title: CSS 预处理器
+desc: (@quasar/app-webpack) Quasar 中提供开箱即用的 Sass/SCSS CSS 预处理器。
 related:
   - /style/sass-scss-variables
 ---
 
-**Sass** or **SCSS** (recommending any of the two flavours) are the out of the box supported css preprocessors through Quasar CLI, should you want to use them.
+Quasar CLI 中提供了开箱即用的 **Sass** 或 **SCSS** 支持,不需要额外安装库或扩展 Webpack 配置。
 
-You won't need to install any additional packages or extend the Webpack configuration.
 
-## How to
-Your Vue files can contain Sass/SCSS code through the `<style>` tag.
+## 用法
+您的 Vue 文件可以通过 `<style>` 标签来包含 Sass/SCSS 代码。
 
 ```html
-<!-- Notice lang="sass" -->
+<!-- 注意 lang="sass" -->
 <style lang="sass">
 div
   color: #444
@@ -22,7 +21,7 @@ div
 ```
 
 ```html
-<!-- Notice lang="scss" -->
+<!-- 注意 lang="scss" -->
 <style lang="scss">
 div {
   color: #444;
@@ -31,7 +30,7 @@ div {
 </style>
 ```
 
-And, of course, standard CSS is also supported:
+当然标准的 CSS 也是支持的：
 
 ```html
 <style>
@@ -42,5 +41,5 @@ div {
 </style>
 ```
 
-## Variables
-Quasar also supplies variables (`$primary`, `$grey-3`, ...and many more) and you can directly use them. Read more about [Sass/SCSS variables](/style/sass-scss-variables).
+## 变量
+Quasar 也提供了一些可以直接使用的变量（如: `$primary`, `$grey-3`, ...）,关于更多信息，请参考：[Sass/SCSS 变量](/style/sass-scss-variables)。
