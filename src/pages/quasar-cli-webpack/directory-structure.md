@@ -1,55 +1,55 @@
 ---
-title: Directory Structure
-desc: (@quasar/app-webpack) The structure of a Quasar app with explanations for each folder and file.
+title: 项目目录结构
+desc: (@quasar/app-webpack) Quasar 项目目录结构详解
 ---
-This is the structure of a project with all modes installed. There's no reason to be intimidated though!
 
+下面是安装了所有 Quasar 模式的项目的目录结构，不过不用被复杂的目录吓到！
 ::: tip
-If you are a beginner, all you'll need to care about is `/quasar.config.js` (Quasar App Config file), `/src/router`, `/src/layouts`, `/src/pages` and optionally `/src/assets`.
+如果您是一个初学者，那么您只需要关系那么几个文件即可，`/quasar.config.js` （Quasar 项目配置文件）, `/src/router`, `/src/layouts`, `/src/pages` 和可选的 `/src/assets`。
 :::
 
 ``` bash
 .
-├── public/                  # pure static assets (directly copied)
+├── public/                  # 纯静态资源 （会被直接复制到产物目录中）
 ├── src/
-│   ├── assets/              # dynamic assets (processed by webpack)
-│   ├── components/          # .vue components used in pages & layouts
-│   ├── css/                 # CSS/Sass/... files for your app
+│   ├── assets/              # 动态的静态资源（会被 vite 进行处理打包）
+│   ├── components/          # 可用于 pages & layoute 中的 .vue 文件组件
+│   ├── css/                 # CSS/Sass/... 样式文件
 |   |   ├── app.sass
-|   │   └── quasar.variables.sass # Quasar Sass variables for you to tweak
-│   ├── layouts/             # layout .vue files
-│   ├── pages/               # page .vue files
-│   ├── boot/                # boot files (app initialization code)
+|   │   └── quasar.variables.sass # Quasar SASS 变量供您调整
+│   ├── layouts/             # 布局页面文件
+│   ├── pages/               # .vue 页面文件
+│   ├── boot/                # boot 启动文件（项目初始化时会被执行的代码）
 │   ├── router/              # Vue Router
-|   |   ├── index.js         # Vue Router definition
-|   │   └── routes.js        # App Routes definitions
-│   ├── stores/              # Pinia Stores (if not using Vuex)
-|   |   ├── index.js         # Pinia initialization
+|   |   ├── index.js         # Vue Router 初始化
+|   │   └── routes.js        # 定义路由
+│   ├── stores/              # Pinia Stores (全局状态管理库 Pinia 和 Vuex 二选一即可)
+|   |   ├── index.js         # Pinia 初始化
 |   │   ├── <store>          # Pinia stores...
 |   │   └── <store>...
-│   ├── store/               # Vuex Store (if not using Pinia)
-|   |   ├── index.js         # Vuex Store definition
-|   │   ├── <folder>         # Vuex Store Module...
-|   │   └── <folder>         # Vuex Store Module...
-│   ├── App.vue              # root Vue component of your App
-│   └── index.template.html  # Template for index.html
-├── src-ssr/                 # SSR specific code (like production Node webserver)
-├── src-pwa/                 # PWA specific code (like Service Worker)
-├── src-cordova/             # Cordova generated folder used to create Mobile Apps
-├── src-electron/            # Electron specific code (like "main" thread)
-├── src-bex/                 # BEX (browser extension) specific code (like "main" thread)
-├── dist/                    # where production builds go
-│   ├── spa/                 # example when building SPA
-│   ├── ssr/                 # example when building SSR
-│   ├── electron/            # example when building Electron
+│   ├── store/               # Vuex Store (全局状态管理库 Pinia 和 Vuex 二选一即可)
+|   |   ├── index.js         # Vuex Store 定义
+|   │   ├── <folder>         # Vuex Store 模块...
+|   │   └── <folder>         # Vuex Store 模块...
+│   └── App.vue              # 项目的 Vue 根组件
+│   └── index.template.html  # index.html 模板文件
+├── src-ssr/                 # SSR 模式专属文件 (例如生产环境的 Node web 服务器)
+├── src-pwa/                 # PWA 模式专属文件 (例如 Service Worker)
+├── src-cordova/             # Cordova 生成的用于构建手机应用的目录
+├── src-electron/            # Electron 模式专属文件 (例如主进程文件)
+├── src-bex/                 # BEX (浏览器插件) 模式专属文件 (like "main" thread)
+├── dist/                    # 打包构建产物目录
+│   ├── spa/                 # 例如构建 SPA 时
+│   ├── ssr/                 # 例如构建 SSR 时
+│   ├── electron/            # 例如构建 Electron 时
 │   └── ....
-├── quasar.config.js           # Quasar App Config file
-├── babel.config.js          # Babeljs config
-├── .editorconfig            # editor config
-├── .eslintignore            # ESlint ignore paths
-├── .eslintrc.js             # ESlint config
+├── quasar.config.js         # Quasar 项目配置文件
+├── babel.config.js          # Babeljs 配置文件
+├── .editorconfig            # editor 配置文件
+├── .eslintignore            # ESlint 忽略配置文件
+├── .eslintrc.js             # ESlint 配置文件
 ├── .postcssrc.js            # PostCSS config
-├── .gitignore               # GIT ignore paths
-├── package.json             # npm scripts and dependencies
-└── README.md                # readme for your website/App
+├── .gitignore               # GIT 忽略配置文件
+├── package.json             # npm 脚本或者依赖管理
+└── README.md                # 网站/App 的 readme 文件
 ```

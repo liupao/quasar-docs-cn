@@ -3,7 +3,7 @@ title: 目录结构
 desc: (@quasar/app-vite) Quasa 项目的目录结构详解。
 ---
 
-下面是安装了所有 Quasar 模式的项目的目录结构，不过不用担心！
+下面是安装了所有 Quasar 模式的项目的目录结构，不过不用被复杂的目录吓到！
 ::: tip
 如果您是一个初学者，那么您只需要关系那么几个文件即可，`/quasar.config.js` （Quasar 项目配置文件）, `/src/router`, `/src/layouts`, `/src/pages` 和可选的 `/src/assets`。
 :::
@@ -48,9 +48,9 @@ desc: (@quasar/app-vite) Quasa 项目的目录结构详解。
 ├── .editorconfig            # editor 配置文件
 ├── .eslintignore            # ESlint 忽略配置文件
 ├── .eslintrc.js             # ESlint 配置文件
-├── postcss.配置文件.js        # PostCSS 配置文件
-├── js 配置文件.json            # Editor 配置文件 (如果没有使用 ts 的话)
-├── ts 配置文件.json            # Typescript 配置文件
+├── postcss.config.js        # PostCSS 配置文件
+├── jsconfig.json            # Editor 配置文件 (如果没有使用 ts 的话)
+├── tsconfig.json            # Typescript 配置文件
 ├── package.json             # npm 脚本或者依赖管理
-└── README.md                # 您的网站/App 的 readme 文件
+└── README.md                # 网站/App 的 readme 文件
 ```
