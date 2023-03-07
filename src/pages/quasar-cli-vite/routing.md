@@ -2,6 +2,7 @@
 title: 应用路由
 desc: (@quasar/app-vite) 如何在 Quasar 中使用 Vue Router 路由。
 ---
+
 您会注意到您的 Quasar 项目中包含一个 `/src/router` 目录。这里包含您的网站/应用程序的路由配置：
 
 * "/src/router/index.js" 文件中处理 Vue Router 的初始化工作
