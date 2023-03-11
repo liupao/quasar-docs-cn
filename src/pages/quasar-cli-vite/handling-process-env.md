@@ -47,7 +47,7 @@ if (process.env.MODE === 'electron') {
 
 ## 剥离代码
 当构建您的网站/应用时，会根据 proces.env 判断 `if ()` 分支。如果表达式为
-"false"，则该分支中的代码会被删除，不会进入到最后的构建产物中去。示例：
+`false`，则该分支中的代码会被删除，不会进入到最后的构建产物中去。示例：
 
 ```js
 if (process.env.DEV) {
@@ -147,17 +147,104 @@ build: {
 
 请参考 [dotenv 文档](https://www.npmjs.com/package/dotenv)然后在项目根目录下创建必要的 `.env` 文件。
 
-## 警告
+请注意，上述方法将仅传递在 `.env` 文件中定义的内容，而不会传递终端中定义的内容（例如 `MY_API=api.com quasar build`），也不会覆盖 `.env` 文件。
 
-1. 不要使用 `console.log(process)` 或 `console.log(process.env)`，出于安全的原因，这段代码将会报错。
-2. 只有完整的对象路径会被正确解析，并在构建时正确替换。
+如果您想要覆盖 `.env` 文件中的内容，或者想要使 `.env` 文件完全可选，则必须遵循另一种方法。如果您正在使用 CI/CD、Docker 等，您可能不想仅限于 `.env` 文件。这是一个示例：
 
-    例如，使用下面的代码时，`console.log(process.env .my)` 会报错，但是  `console.log(process.env .my.prop)`会正常工作。
+```js
+// quasar.config.js
 
-    ```js
+// 如果存在 `.env` 文件，则从中加载，但不会覆盖现有的 `process.env.*` 值
+require('dotenv').config()
+
+// process.env 现在包含终端变量和来自 .env 文件的变量
+// 优先级：
+//   1. 终端变量（API_URL=https://api.com quasar build）
+//   2. `.env` 文件
+// 如果您希望 .env 文件覆盖终端变量，
+// 使用 `require('dotenv').config({ override: true })` 代替
+
+return {
+// ...
+  build: {
     env: {
-      my: { prop: 'value' }
+      // 您必须手动定义要传递的所有变量
+      API_URL: process.env.API_URL,
+      // ...
     }
-    ```
+  }
+// ...
+```
+
+## 故障排除
+
+如果您错误地访问变量或者配置不正确，可能会在浏览器控制台中收到 `process is not defined` 的错误提示。
+
+### 错误的使用
+
+```js
+// quasar.config.js > build
+env: {
+  FOO: 'hello',
+}
+```
+```js
+const { FOO } = process.env // ❌ 它不允许解构或类似操作
+process.env.FOO             // ✅ 它只能替换直接使用的方式，如此
+
+function getEnv(name) {
+  return process.env[name] // ❌ 它无法分析动态使用情况
+}
+
+console.log(process)     // ❌
+console.log(process.env) // ❌
+// 如果您想查看可用的环境变量列表，
+// 您可以在`quasar.config.js`中的“build > env”内部记录您要传递的对象。
+
+console.log(process.env.FOO) // ✅
+console.log(process.env.foo) // ❌ 大小写敏感
+console.log(process.env.F0O) // ❌ 变量名存在拼写错误（中间o应为0）
+```
+
+### 配置错误
+
+#### 手动定义
+
+```js
+// quasar.config.js > build
+env: {
+  FOO: 'hello',
+}
+```
+
+```js
+console.log(process.env.FOO) // ✅
+console.log(process.env.BAR) // ❌ 它未在 `build > env` 中定义
+```
+
+#### dotenv
+
+```js
+// quasar.config.js > build
+env: require('dotenv').config(/* ... */).parsed
+```
+
+如果 `.env` 文件不存在或文件名存在拼写错误：
+
+```js
+console.log(process.env.FOO) // ❌ `.env` 文件未加载，此操作将失败
+```
+
+如果 `.env` 文件以正确的名称存在，并且具有以下内容：
+
+```bash
+FOO=hello
+```
+
+```js
+console.log(process.env.FOO) // ✅ 它已从`.env`文件中正确加载
+console.log(process.env.BAR) // ❌ 它未在`.env`文件中定义
+```
+
 ## 视频讲解
 [quasar 入门教程-quasar 处理 env](https://www.bilibili.com/video/BV1N3411N7Bd?share_source=copy_web&vd_source=c91bd9c1eab4dae95f036e5d67a76dcd)
