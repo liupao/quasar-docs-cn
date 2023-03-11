@@ -80,7 +80,7 @@ export default {
 
 ## 使用 javaScript 获取静态资源
 
-为了使 Webpack 返回正确的资源路径，您需要使用 `require('./relative/path/to/file.jpg')`，它将由 `file-loader` 处理并返回已解析的URL。例如：
+为了使 Webpack 返回正确的资源路径，您需要使用 `require('./relative/path/to/file.jpg')`，它将由 `file-loader` 处理并返回已解析的 URL。例如：
 
 ```js
 computed: {
