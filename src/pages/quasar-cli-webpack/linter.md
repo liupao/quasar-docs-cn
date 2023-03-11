@@ -1,32 +1,33 @@
 ---
 title: ESLint
-desc: (@quasar/app-webpack) How to configure a code linter in a Quasar app.
+desc: (@quasar/app-webpack) 如何为 Quasar 项目配置 ESLint。
 ---
-Having a code linter (like [ESLint](https://eslint.org/) in place is highly recommended and ensures your code looks legible. It also helps you capture some errors before even running the code.
 
-When you scaffold a Quasar project folder it will ask you if you want a linter and which setup you want for ESLint:
+强烈推荐您使用一个代码检查工具（linter） （例如  [ESLint](https://eslint.org/)）来保证您的代码的可读性。它也可以帮助您在代码运行前检查代码中的一些错误。
+
+当您使用 Quasar CLI 创建项目时，它会询问是否要添加代码检查工具（linter）以及选择哪一种风格的 ESlint 配置：
 
 * [Prettier](https://github.com/prettier/prettier)
 * [Standard](https://github.com/standard/standard)
 * [Airbnb](https://github.com/airbnb/javascript)
-* .. or you can configure one yourself
+* .. 或者您可以自定义
 
-Two dot files will be created:
+会创建两个文件：
 
-* .eslintrc.js -- ESLint configuration, including rules
-* .eslintignore -- what ESLint should ignore when linting
+* .eslintrc.js -- ESLint 配置文件，包括了代码检查规则
+* .eslintignore -- 代码检查时忽略项
 
-Further extension of one of the Eslint setups above can be made. Your project will by default use `eslint-plugin-vue` to handle your Vue files. Take a quick look at `.eslintrc.js` and notice it:
+可以进一步扩展上述 ESLint 设置。您的项目会默认使用 `eslint-plugin-vue` 来处理 Vue 文件，快速看一下`/.eslintrc.js`：
 
 ```js
 extends: [
   // https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention-for-vue-js-3-x
-  // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
+  // 考虑切换为 `plugin:vue/strongly-recommended` 或 `plugin:vue/recommended` 以使用更严格的规则
   'plugin:vue/strongly-recommended'
 ]
 ```
 
-If you chose ESLint when creating your project folder, you'll also notice that `/quasar.config.js` adds the eslint-loader to Webpack configuration for you:
+如果您在创建项目时勾选了 ESLint，那么在您的 `/quasar.config.js` 会被添加一个 `eslint` 属性：
 
 ```js
 build: {
@@ -37,15 +38,17 @@ build: {
 }
 ```
 
-## Lint Rules
-The linting rules can be removed, changed, or added. Notice some things:
+## 代码检查规则
 
-* Some rules are for the Standard, Airbnb or Prettier standards (whichever you chose when project was created). Example: 'brace-style'.
-* Some rules are for eslint-plugin-vue. Example: 'vue/max-attributes-per-line'.
+代码检查规则被可以删除，修改，添加。但是注意：
 
-You can add/remove/change rules by first visiting [https://eslint.org/docs/rules/](https://eslint.org/docs/rules/) or [https://eslint.vuejs.org/rules](https://eslint.vuejs.org/rules).
+* 一些规则属于 Standard, Airbnb 或 Prettier （创建时选择的）的标准。例如：'brace-style'。
+* 一些规则属于 eslint-plugin-vue。 例如: 'vue/max-attributes-per-line'.
 
-Example of ESLint rules below:
+您可以删除/修改/添加代码检查规则，参考[https://eslint.org/docs/rules/](https://eslint.org/docs/rules/) 或 [https://eslint.vuejs.org/rules](https://eslint.vuejs.org/rules)：。
+
+一些示例的 ESLint  规则如下：
+
 ```js
 // .eslintrc.js
 
@@ -76,14 +79,15 @@ Example of ESLint rules below:
 }
 ```
 
-## Disabling Linter
-In order for you to disable ESLint later, all you need to do is comment out (or remove) the following code from `/quasar.config.js`:
+## 禁用 ESLint
+
+为了禁用 ESLint，您只需要操作编辑 `/quasar.config.js` 如下：
 
 ```js
 build: {
   chainWebpack (chain) {
     /*
-     * we comment out this block
+     * 注释掉这里
      *
     chain.plugin('eslint-webpack-plugin')
       .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
