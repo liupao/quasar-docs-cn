@@ -51,7 +51,7 @@ desc: (@quasar/app-vite) 如何部署一个 Quasar 服务端渲染的应用。
 ## 部署到 Vercel
 
 ::: tip
-注意：以下内容不属于官方文档内容，属于夹带私货
+注意：以下内容属于译者批注，非官方文档内容
 :::
 
 由于上面的 Cleavr 在国内无法访问，您可以使用由我个人开发的 [node-vercel](https://github.com/dongwa/vercel-quasar) 将您的 Quasar SSR 应用免费部署到 [vercel](https://vercel.com/) 上，它免费而且在国内不墙。
