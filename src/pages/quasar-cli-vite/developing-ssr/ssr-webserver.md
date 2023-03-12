@@ -238,7 +238,7 @@ export async function listen ({ app, port, isReady }) {
 
 如果您有一个 serverless 架构的基础设施，那么需要导出一个 handler 处理程序，而不是开始监听一个端口。
 
-您的 serverless 服务需要您提供：
+一般 serverless 服务需要我们提供：
 ``` js
 module.exports.handler = __your_handler__
 ```
