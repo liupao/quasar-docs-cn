@@ -1,10 +1,10 @@
 ---
-title: What is SPA
-desc: (@quasar/app-webpack) Introduction on what a Single Page App is.
+title: SPA 是什么
+desc: (@quasar/app-webpack) 介绍什么是一个单页面应用（SPA）。
 ---
 
-A Single-Page Application (SPA) is a web application or web site that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server. This approach avoids interruption of the user experience between successive pages, making the application behave more like a desktop application.
+单页应用程序（SPA）是指通过动态重写当前页面而不是从服务器加载整个新页面来与用户交互的 web 应用程序或网站。这种方法避免了连续页面之间用户体验的中断，使应用程序的行为更像桌面应用程序。
 
-In a SPA the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does control transfer to another page, although the location hash or the HTML5 History API (using one or the other based on your Vue Router mode in `quasar.config.js`) can be used to provide the perception and navigability of separate logical pages in the application.
+在 SPA 中，适当的资源会根据需要动态加载并添加到页面中，通常是响应用户的操作。该页面在使用过程中永远都不会重新加载，也不会将控制权转移到其他页面，尽量通过路由哈希或 HTML5 的 History API（取决于 `quasar.config.js` 中的配置）来提供独立页面的逻辑性和导航行为。
 
-Interaction with the single page application often involves dynamic communication with the web server behind the scenes.
+与单页应用程序的交互通常涉及与背后 web 服务器的动态通信。

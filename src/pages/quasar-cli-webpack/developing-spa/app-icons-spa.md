@@ -1,25 +1,25 @@
 ---
-title: App Icons for SPA
-desc: (@quasar/app-webpack) How to manage the app icons for a Quasar Single Page Application.
+title: SPA 应用图标
+desc: (@quasar/app-webpack) 如何配置 Quasar 单页应用（SPA）的图标。
 ---
 
-This build target includes a variety of special icons for individual browsers and operating systems. You need all of them - and if you discover one that is new or missing, please [open an issue](https://github.com/quasarframework/quasar/issues).
+为 SPA 模式生成用于各种浏览器和操作系统的特殊图标，构建出来的所有的图标都是有用的，如果您发现缺少了用于某个平台的图标，请 [提交一个 issue](https://github.com/quasarframework/quasar/issues)。
 
 <img src="https://cdn.quasar.dev/img/iconfactory.png" style="float:right;max-width:15%;min-width:240px;padding-top:40px" />
 
 ## Icon Genie CLI
 
 ::: tip
-We highly recommend using the [Icon Genie CLI](/icongenie/introduction), because it consumes a source icon and automatically clones, scales, minifies and places the icons in the appropriate directories for you. When needed, it also tells you what tags you'll need to add to your /src/index.template.html file.
+我们强烈推荐使用 [Icon Genie CLI](/icongenie/introduction)，您可以提供一个资源图标，使用它帮您生成所有需要的图标，并将其放在对应的目录中。同时还可以配置缩放，压缩，裁剪等功能。需要时它还会提醒将哪些标签添加到您的/index.html 文件中。
 :::
 
-Quickly bootstrap the necessary images with Icon Genie CLI. For a complete list of options, please visit the [Icon Genie CLI](/icongenie/command-list) command list page.
+通过 Icon Genie CLI 快速生成所需的图标，关于完整的命令列表和配置参数请移步 [Icon Genie CLI](/icongenie/command-list) 页面。
 
 ```bash
 $ icongenie generate -m spa -i /path/to/source/icon.png
 ```
 
-## Manual instructions
+## 说明
 
 ```
 public/
@@ -31,7 +31,7 @@ public/
       favicon-16x16.png
 ```
 
-The required HTML code that goes into `/src/index.template.html` to reference the above files:
+需要将以下代码添加到 `/index.html` 中来引用这些图标：
 
 ```html
 <link rel="icon" type="image/ico" href="favicon.ico">

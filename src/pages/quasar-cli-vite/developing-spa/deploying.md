@@ -1,6 +1,6 @@
 ---
 title: 部署 SPA
-desc: (@quasar/app-webpack) 如何部署 Quasar CLI 打包出来的单页应用（SPA）。
+desc: (@quasar/app-vite) 如何部署 Quasar CLI 打包出来的单页应用（SPA）。
 ---
 
 有许多服务可以轻松部署应用程序。将其全部列出是不可能的，因此我们将专注于一般部署过程和一些普通服务的细节。
