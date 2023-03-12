@@ -1,30 +1,29 @@
 ---
-title: SSR Build Commands
-desc: (@quasar/app-webpack) The Quasar CLI list of commands when developing or building a server-side rendered app.
+title: SSR 打包命令
+desc: (@quasar/app-webpack) Quasar CLI 开发/构建 SSR 服务端渲染应用的命令
 ---
-[Quasar CLI](/start/quasar-cli) makes it incredibly simple to develop or build the final distributables from your source code.
 
-## Developing
+## 开发
 ```bash
 $ quasar dev -m ssr
 
-# ..or the longer form:
+# ..或者更长的格式:
 $ quasar dev --mode ssr
 ```
 
-## Building for Production
+## 打包生产环境代码
 ```bash
 $ quasar build -m ssr
 
-# ..or the longer form:
+# ..或者更长的格式:
 $ quasar build --mode ssr
 ```
 
-If you want a production build with debugging enabled:
+如果您想打包生产环境代码时带上调试能力：
 
 ```bash
 $ quasar build -m ssr -d
 
-# ..or the longer form
+# ..或者更长的格式:
 $ quasar build -m ssr --debug
 ```

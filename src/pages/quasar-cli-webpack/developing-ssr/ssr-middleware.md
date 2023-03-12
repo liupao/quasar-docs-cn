@@ -5,67 +5,69 @@ related:
   - /quasar-cli-webpack/quasar-config-js
 ---
 
-The SSR middleware files fulfill one special purpose: they prepare the Nodejs server that runs your SSR app with additional functionality (Expressjs compatible middleware).
+SSR middleware（中间件）文件用于：它们为运行 SSR 应用程序的 Nodejs 服务器添加额外的附加功能（Express.js 兼容的中间件）
 
-With SSR middleware files, it is possible to split the middleware logic into self-contained, easy to maintain files. It is also trivial to disable any of the SSR middleware files or even contextually determine which of the SSR middleware files get into the build through `quasar.config.js` configuration.
+利用 SSR 的 middleware 文件可以将中间件的逻辑拆分到独立的文件中，易于维护。可以通过`quasar.config.js` 来配置禁用某些中间件，或者根据上下文环境来判断启用哪些中间件。
 
-::: tip
-For more advanced usage, you will need to get acquainted to the [Expressjs API](https://expressjs.com/en/4x/api.html).
+
+::: tip 提示
+关于更高级的用法，您需要熟悉[Expressjs API](https://expressjs.com/en/4x/api.html)。
 :::
 
-::: warning
-You will need at least one SSR middleware file which handles the rendering of the page with Vue (which should be positioned as last in the middlewares list). When SSR mode is added to your Quasar CLI project, this will be scaffolded into `src-ssr/middlewares/render.js`.
+::: warning 警告
+至少需要一个处理 Vue 页面渲染的 SSR 中间件（这个中间件应该始终位于中间件数组的最后一个位置上）。当使用 Quasar CLI 添加 SSR 模式时，这个中间件会自动被创建到 `src-ssr/middlewares/render.js`中。
 :::
 
-## Anatomy of a middleware file
+## middleware 文件解析
 
-A SSR middleware file is a simple JavaScript file which exports a function. Quasar will then call the exported function when it prepares the Nodejs server (Expressjs) app and additionally pass an Object as param (which will be detailed in the next section).
+一个 SSR middleware 文件是一个导出了一个函数的 javascipt 文件。Quasar 会在准备 Nodejs 服务器 (Expressjs)的时候调用这个被导出的函数，并额外传递一个对象作为参数（会在下一节详细介绍）
 
 ```js
-// import something here
+// 在这里可以导入一些包
 
-export default ({ app, resolve, publicPath, folders, render, serve }) => {
+export default ({ app, port, resolve, publicPath, folders, render, serve }) => {
   // something to do with the server "app"
 }
 ```
 
-The SSR middleware files can also be async:
+SSR middleware 文件中导出的函数也可以是异步的：
 
 ```js
-// import something here
+// 在这里可以导入一些包
 
-export default async ({ app, resolve, publicPath, folders, render, serve }) => {
+export default async ({ app, port, resolve, publicPath, folders, render, serve }) => {
   // something to do with the server "app"
   await something()
 }
 ```
+您可以使用`ssrMiddleware`函数将需要导出的函数包裹起来，这样您可以在 IDE 中获得 typescript 提供的类型推导以及代码补全等功能：
 
-You can wrap the returned function with `ssrMiddleware` helper to get a better IDE autocomplete experience (through Typescript):
 
 ```js
 import { ssrMiddleware } from 'quasar/wrappers'
 
-export default ssrMiddleware(async ({ app, resolve, publicPath, folders, render, serve }) => {
+export default ssrMiddleware(async ({ app, port, resolve, publicPath, folders, render, serve }) => {
   // something to do
   await something()
 })
 ```
 
-Notice we are using the [ES6 destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Only assign what you actually need/use.
+请注意我们在示例中使用了[ES6 的参数解构语法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，请自行斟酌是否需要解构这个对象参数。
 
-## Middleware object parameter
+## Middleware 对象参数解析
 
-We are referring here to the Object received as parameter by the default exported function of the SSR middleware file.
+上面多次提到了 SSR middleware 的默认导出函数中，有一个对象参数，我们来解析一下它：
 
 ```js
-export default ({ app, resolve, publicPath, folders, render, serve }) => {
+export default ({ app, port, resolve, publicPath, folders, render, serve }) => {
 ```
 
 Detailing the Object:
 
 ```js
 {
-  app, // Expressjs app instance
+  app, // Node.js app 实例
+  port, // Nodej.js 服务器的端口号配置
   resolve: {
     urlPath(path)
     root(arg1, arg2),
@@ -86,49 +88,54 @@ Detailing the Object:
 
 #### app
 
-This is the Expressjs app instance. The "bread and butter" of any middleware since you'll be using it to configure the webserver.
+他是 Node.js 的 app 实例，是所有中间件的基础设施，通过它来配置 Node.js 的 web 服务
+
+#### port
+
+为 Node.js webserver 配置的端口。
 
 #### resolve
 
-| Prop name | Description |
+| 属性名 | 描述 |
 | --- | --- |
-| `urlPath(path)` | Whenever you define a route (with app.use(), app.get(), app.post() etc), you should use the `resolve.urlPath()` method so that you'll also keep into account the configured publicPath (quasar.config.js > build > publicPath). |
-| `root(path1[, path2, ...pathN])` | Resolve folder path to the root (of the project in dev and of the distributables in production). Under the hood, it does a `path.join()`. |
-| `public(path1[, path2, ...pathN])` | Resolve folder path to the "public" folder. Under the hood, it does a `path.join()`. |
+| `urlPath(path)` | 当您定义一个路由时（通过 app.use(), app.get(), app.post()等），您需要使用`resolve.urlPath()`方法来设置路由的路径。这样才能将路由添加到配置的 pulicPath 中 (quasar.config.js > build > publicPath)。 |
+| `root(path1[, path2, ...pathN])` | 解析 root 目录到指定目录的路径，低层使用了`path.join()`方法。 |
+| `public(path1[, path2, ...pathN])` | 解析 public 目录到指定目录的路径，低层使用了`path.join()`方法。 |
 
 #### publicPath
 
-The configured quasar.config.js > build > publicPath
+在 quasar.config.js > build > publicPath 中配置的 publicPath
 
 #### folders
 
-The `folders` is sometimes needed because the exact path to root folder and to the public folder differs in a production build than in a development build. So by using `folders` you won't need to mind about this.
+由于在开发环境下和生产环境下的 root 目录和 public 目录不同，您需要使用 folders 来帮您消除这些差异。
 
-| Prop name | Description |
+| 属性名 | 描述 |
 | --- | --- |
-| `root` | Full path to the root (of the project in dev and of the distributables in production). |
-| `public` | Full path to the "public" folder. |
+| `root` | root 目录的绝对路径 (of the project in dev and of the distributables in production). |
+| `public` | public 目录的绝对路径 |
 
 #### render
 
-* Syntax: `<Promise(String)> render(ssrContext)`.
-* Description: Uses Vue and Vue Router to render the requested URL path. Returns the rendered HTML string to return to the client.
+* 语法： `<Promise(String)> render(ssrContext)`。
+* 描述: 根据客户端请求的 URL 路径，使用 Vue 和 Vue Router 来渲染页面，并返回一个 html 字符串给客户端。
 
 
 #### serve
 
 serve.static():
 
-* Syntax: `<middlewareFn> serve.static(pathFromPublicFolder, opts)`
-* Description: It's essentially a wrapper over `express.static()` with a few convenient tweaks:
-  * the `pathFromPublicFolder` is a path resolved to the "public" folder out of the box
-  * the `opts` are the same as for `express.static()`
-  * `opts.maxAge` is used by default, taking into account the quasar.config.js > ssr > maxAge configuration; this sets how long the respective file(s) can live in browser's cache
+
+* 语法: `<middlewareFn> serve.static(pathFromPublicFolder, opts)`
+* 描述: 本质上，它是`express.static()`的一个封装，添加了一些方便了的调整：
+  * 其中`pathFromPublicFolder`是可以直接使用的，从 public 目录解析的路径。
+  * `opts`对象与的 `express.static()`配置对象相同。
+  * `opts.maxAge`：在默认情况下，它是从 quasar.config.js > ssr > maxAge 中读取的配置，它定义请求返回的文件可以在浏览器的缓存中存活多久。
 
   ```js
   serve.static('my-file.json')
 
-  // is equivalent to:
+  // 等同于：
 
   express.static(resolve.public('my-file.json'), {
     maxAge: ... // quasar.config.js > ssr > maxAge
@@ -137,47 +144,48 @@ serve.static():
 
 serve.error():
 
-* Syntax: `<void> serve.error({ err, req, res })`
-* Description: Displays a wealth of useful debug information (including the stack trace).
-* It's available only in development and **NOT in production**.
+* 语法: `<void> serve.error({ err, req, res })`
+* 描述: 显示一组有用的调试信息（包括函数调用栈）。
+* 只在开发环境下可用，**在生产环境下不可用**。
 
-## 用法 of SSR middleware
+## SSR middleware 的用法
 
-The first step is always to generate a new SSR middleware file using Quasar CLI:
+第一步是使用 Quasar CLI 生成一个新的 SSR  middleware 文件：
 
 ```bash
 $ quasar new ssrmiddleware <name>
 ```
 
-Where `<name>` should be exchanged by a suitable name for your SSR middleware file.
+`<name>` 需要替换为任意的，合适的 SSR middleware 文件名称。
 
-This command creates a new file: `/src-ssr/middlewares/<name>.js` with the following content:
+这个命令会出创建一个新的 `/src-ssr/middlewares/<name>.js`文件，并且其中带有一下内容：
+
 
 ```js
-// import something here
+// 在这里可以导入一些包
 
-// "async" is optional!
-// remove it if you don't need it
-export default async ({ app resolveUrlPath, publicPath, folders, render }) => {
-  // something to do with the server "app"
+// "async" 是可选的！
+// 如果不需要的话可以移除它
+export default async ({ app, port, resolveUrlPath, publicPath, folders, render, serve }) => {
+  // 在这里可以使用"app"做一些事情
 }
 ```
 
-You can also return a Promise:
+也可以返回一个`Promise`：
 
 ```js
-// import something here
+// 在这里可以导入一些包
 
-export default ({ app, resolve, publicPath, folders, render, serve }) => {
+export default ({ app, port, resolve, publicPath, folders, render, serve }) => {
   return new Promise((resolve, reject) => {
-    // something to do with the server "app"
+    // 在这里可以使用"app"做一些事情
   })
 }
 ```
 
-You can now add content to that file depending on the intended use of your SSR middleware file.
+现在可以根据 SSR 中间件文件的预期用途向该文件添加内容。
 
-The last step is to tell Quasar to use your new SSR middleware file. For this to happen you need to add the file in `/quasar.config.js`
+最后一步是告诉 Quasar 启用您创建的新的中间件文件，您需要将其文件名添加到`/quasar.config.js`配置文件的 ssr -> middlewares 数组中：
 
 ```js
 // quasar.config.js
@@ -190,82 +198,80 @@ ssr: {
 }
 ```
 
-When building a SSR app, you may want some boot files to run only on production or only on development, in which case you can do so like below:
-
+当构建一个 SSR 应用时，您可能希望某些中间件文件只运行在开发模式或者生产环境中，示例：
 ```js
 // quasar.config.js
 
 ssr: {
   middlewares: [
-    ctx.prod ? '<name>' : '', // I run only on production!
-    ctx.dev ? '<name>' : '' // I run only on development
+    ctx.prod ? '<name>' : '', // 只运行在生产模式下
+    ctx.dev ? '<name>' : '' // 只运行在开发模式下
   ]
 }
 ```
-
-In case you want to specify SSR middleware file from node_modules, you can do so by prepending the path with `~` (tilde) character:
+如果您想启用来自 node_modules 中的某个 SSR 中间件文件，可以在路径前加上 `~`：
 
 ```js
 // quasar.config.js
 
 ssr: {
   middlewares: [
-    // boot file from an npm package
+    // 启用某个 npm 包中的中间件文件
     '~my-npm-package/some/file'
   ]
 }
 ```
 
-::: warning
-The order in which you specify the SSR middlewares matters because it determines the way in which the middlewares are applied to the Nodejs server. So they influence how it responds to the client.
+::: warning  警告
+
+指定 SSR 中间件的顺序很重要，因为它决定了将中间件被 Nodejs 服务器调用的方式。因此，中间件的调用顺序会影响客户端得到的响应结果。
 :::
 
-## The SSR render middleware
+## SSR 渲染中间件
 
-::: danger Important!
-Out of all the possible SSR middlewares in your app, **this one is absolutely required**, because it handles the actual SSR rendering with Vue.
+::: danger 重要！
+在所有的 SSR 中间中，只有这个 SSR 渲染中间件是必须的，因为它是 SSR 中实际使用 Vue 的渲染页面的中间件。
 :::
 
-In the example below we highlight that this middleware needs to be the last in the list. This is because it also responds to the client (as we'll see in the second code sample below) with the HTML of the page. So any subsequent middleware cannot set headers.
+下面的示例中，我们强调了这个中间必须位于中间件数组中的最后一个位置上。因为它会给客户端返回页面的 HTML（下面第二个示例），所以后续的中间件无法再修改请求的 headers（res.setHeader）。
 
 ```js
 // quasar.config.js
 
 ssr: {
   middlewares: [
-    // ..... all other middlewares
+    // ..... 其他的中间件
 
-    'render' // references /src-ssr/middlewares/render.js;
-             // you can name the file however you want,
-             // just make sure that it runs as last middleware
+    'render' // 引用自 /src-ssr/middlewares/render.js;
+             // 您可以将其名称修改为任何您喜欢的,
+             // 只需确保他是此数组中的最后一个即可
   ]
 }
 ```
 
-Now let's see what it contains:
+现在，我们一起来看看它的内容：
 
 ```js
 // src-ssr/middlewares/render.js
 
-// This middleware should execute as last one
-// since it captures everything and tries to
-// render the page with Vue
+// 这个中间件需要在最后执行
+// 因为他会捕获所有路由，并使用 Vue 渲染页面
 
 export default ({ app, resolve, render, serve }) => {
-  // we capture any other Express route and hand it
-  // over to Vue and Vue Router to render our page
+  // 我们捕获所有的 Express 路由然后处理它
+  // 通过 Vue 和 Vue Router 去渲染页面
   app.get(resolve.urlPath('*'), (req, res) => {
     res.setHeader('Content-Type', 'text/html')
 
     render({ req, res })
       .then(html => {
-        // now let's send the rendered html to the client
+        // 发送渲染好的 html 页面给客户端
         res.send(html)
       })
       .catch(err => {
-        // oops, we had an error while rendering the page
+        // 处理渲染页面时发生的异常
 
-        // we were told to redirect to another URL
+        // 重定向到另一个 URL
         if (err.url) {
           if (err.code) {
             res.redirect(err.code, err.url)
@@ -274,63 +280,51 @@ export default ({ app, resolve, render, serve }) => {
             res.redirect(err.url)
           }
         }
-        // hmm, Vue Router could not find the requested route
+        // 处理 404 请求，Vue Router 没有找到的路由
         else if (err.code === 404) {
-          // Should reach here only if no "catch-all" route
-          // is defined in /src/routes
+          // 只有当/src/routes 中没有定义"catch-all"路由时才会到达这里
           res.status(404).send('404 | Page Not Found')
         }
-        // well, we treat any other code as error;
-        // if we're in dev mode, then we can use Quasar CLI
-        // to display a nice error page that contains the stack
-        // and other useful information
+        // 我们也可以处理其他类型的错误
+        // 如果处于开发模式，我们可以使用 Quasar CLI
+        // 来显示一个带调用栈的漂亮的错误页面
+        // 以及其他的提示信息
         else if (process.env.DEV) {
-          // serve.error is available on dev only
+          // serve.error 只在开发模式下可用
           serve.error({ err, req, res })
         }
-        // we're in production, so we should have another method
-        // to display something to the client when we encounter an error
-        // (for security reasons, it's not ok to display the same wealth
-        // of information as we do in development)
+        // 当处于生产环境下时
+        // 我们需要使用另一种方法通知客户端发生了错误
+        // （出于安全的考虑，不能在生产模式下
+        // 展示开发模式下同样的报错信息）
         else {
-          // Render Error Page on production or
-          // create a route (/src/routes) for an error page and redirect to it
+          // 渲染一个错误页面
+          // 或者重定向到一个提前准备好的错误页面中
+          // （提前定义在(/src/routes)中的错误页面）
           res.status(500).send('500 | Internal Server Error')
+          // console.error(err.stack)
         }
       })
   })
 }
 ```
-
-Notice the `render` parameter (from the above code sample) that the exported function of the middleware gets called with. That's where the SSR rendering happens.
+注意在导出的函数中调用了`render`参数，那就是 SSR 中渲染的实现。
 
 ## Hot Module Reload
 
-While developing, whenever you change anything in the SSR middlewares, Quasar App CLI will automatically trigger a recompilation of client-side resources and apply the middleware changes to the Nodejs server (Expressjs).
+当开发时，只要您在 SSR 中间件文件中做出任何的修改，Quasar CLI 都会自动触发客户端资源的重新编译然后在 Node.js 的服务端 （Expressjs）应用中间件的修改。
 
-## Examples of SSR middleware
+## SSR 中间件示例
 
-::: tip
-You can use any Expressjs compatible middleware.
+::: tip 提示
+您可以使用任何连接 API 兼容的中间件。
+
+You can use any connect API compatible middleware.
 :::
 
-### Compression
+### 日志/拦截器
 
-This one makes sense to use it for production only.
-
-```js
-import compression from 'compression'
-
-export default ({ app }) => {
-  app.use(
-    compression({ threshold: 0 })
-  )
-}
-```
-
-### Logger / Interceptor
-
-The order in which the SSR middlewares are applied matters. So it might be wise to set the following one as the first (in quasar.config.js > ssr > middlewares) so that it will be able to intercept all client requests.
+所有的 SSR 中间件都是按照指定的顺序执行的（在 quasar.config.js > ssr > middlewares 中指定顺序），所以，第一个中间件很适合充当一个拦截器，它可以拦截所有的客户端请求：
 
 ```js
 export default ({ app, resolve }) => {
