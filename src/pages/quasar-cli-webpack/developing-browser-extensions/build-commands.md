@@ -1,128 +1,130 @@
 ---
-title: BEX Build Commands
-desc: (@quasar/app-webpack) The Quasar CLI list of commands when developing or building a Browser Extension (BEX).
+title: BEX 打包命令
+desc: (@quasar/app-webpack) 通过 Quasar CLI 开发或打包一个浏览器插件（BEX）的命令列表。
 ---
 
-## Developing
+## 开发
 
-Start developing a Browser Extension with just one command.
+开发开发一个浏览器插件只需要以下命令：
 
 ```bash
 $ quasar dev -m bex
 
-# ..or the longer form:
+# 或更长的格式：
 $ quasar dev --mode bex
 ```
 
-You may or may not have already had a `src-bex` folder, but you will definitely have one now. You will also have a set of files under `src-bex/www`. These files are the output from the webpack development server. Normally, these files are kept in memory, which is why you wouldn't see them when creating an SPA, but for Browser Extension development, physical files are required in order for the process to work.
+之前您可能已经有了 `src-bex` 文件夹，也可能还没有，但是运行上述命令之后肯定会有一个。现在我们已经创建了一个开发环境，我们需要将生成的浏览器插件加载到浏览器中。
 
-::: warning
-Do not edit anything under the `src-bex/www` folder, as these changes are overridden via Hot Module Reloading (HMR). This folder is just the built output of your `src` folder, so make the changes there instead.
-:::
+当您开发 BEX 时，您会注意到 Quasar CLI 将打包的产物输出在 dist 目录下（默认在  `/dist/bex/`）：
 
-Now that we've created a development environment, we need to load generated browser extension into your browser.
+```bash
+.
+└── dist/
+    ├── ...files  # 从 /src-bex 中打包的代码
+    └── www/      # 从 /src 中打包的代码
+```
 
 ### Chrome
 
-![Installing a Quasar Browser Extension in Chrome](https://cdn.quasar.dev/img/adding-bex-to-chrome-with-debug.png)
+![在 Chrome 中安装一个 Quasar 浏览器插件](https://cdn.quasar.dev/img/adding-bex-to-chrome-with-debug.png)
 
-In line with the screenshot above, the following steps must be taken:
+根据上面的截图，步骤如下：
 
-1. In Chrome, navigate to `chrome://extensions`
-2. Toggle "Developer Mode".
-3. Click "Load unpacked". This will present you with the *folder* selection dialog. Navigate to and select your `src-bex` folder.
-4. You should now see your BEX mounted in Chrome.
+1. 在 Chrome 中，导航到 `chrome://extensions`。
+2. 打开 "Developer Mode"。
+3. 点击 "Load unpacked"，将会打开文件夹选择对话框，选择上述 `/dist/bex/` 目录。
+4. 您将会看到您的 BEX 挂载在了 Chrome 上。
 
-More information about debugging Chrome Browser Extensions can be found in the [official documentation](https://developer.chrome.com/extensions/tut_debugging).
+有关调试 Chrome 浏览器扩展的更多信息，请参阅[官方文档](https://developer.chrome.com/extensions/tut_debugging)。
 
-### Other Chromium Browsers
+### 其他基于 Chromium 的浏览器
 
-Although we haven't tested all the various Chromium based browsers, BEX mode should be compatible with them. Please refer to the appropriate browser documentation on how to add a browser extension to that particular browser.
+虽然我们还没有测试所有基于 Chromium 的浏览器，但 BEX 模式应该与它们兼容。有关如何向特定浏览器添加浏览器扩展，请参阅相应的浏览器文档。
 
 ### Firefox
 
-![Installing a Quasar Browser Extension in Firefox](https://cdn.quasar.dev/img/adding-bex-to-firefox.png)
+![在 Firefox 中安装一个 Quasar 浏览器插件](https://cdn.quasar.dev/img/adding-bex-to-firefox.png)
 
-In line with the screenshot above, the following steps must be taken:
+根据上面的截图，步骤如下：
 
-1. In Firefox, navigate to `about:debugging`
-2. Click on "This Firefox"
-3. Click "Load Temporary Add-on...". This will present you with the *file* selection dialog. Navigate to and select your `src-bex/manifest.json` file. **Note:** Firefox requires the manifest file, not the `src-bex` folder like Chromium browsers.
-4. You should now see your BEX mounted in Firefox.
+1. 在 Firefox 中，导航到 `about:debugging`
+2. 点击 "This Firefox"
+3. 点击 "Load Temporary Add-on..."，将会打开文件选择对话框，选择 `dist/bex/manifest.json` 目录。**注意**，Firefox 需要的是 manifest 文件，而不是 `/dist/bex/` 目录。
+4. 您将会看到您的 BEX 挂载在了 Firefox 上。
 
-More information about debugging Firefox temporary addons can be found in the [Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+有关调试 Firefox 临时插件的更多信息，请参见 [Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
 
-### Hot Module Reloading (HMR)
+### 热更新（HMR）
 
-HMR works with Browser Extension development but does work slightly differently depending on which browser you're developing on. In both cases, the Quasar application being built will reload when changes are made. The quasar application in this instance would refer to changes made to everything under the `src` folder.
+HMR 可用于浏览器插件开发，但工作方式略有不同，具体取决于您正在开发的浏览器。您需要等待浏览器插件在每次更改后重新打包生成，然后手动刷新浏览器选项卡页面或使用浏览器刷新开发的浏览器插件。
 
 ::: tip
-**Chrome vs Firefox Nuances** - When developing your Browser Extension, you will often need to make changes to the files under the `src-bex` folder as well. This will be done when configuring hooks, setting up popups etc. Firefox will see these changes and automatically re-load the Browser Extension. Chrome on the other hand will not. When you have made these changes in Chrome, you will need to navigate to your Extension (see the Chrome section above) and click on the refresh icon in your Development Browser Extension.
+**Chrome 与 Firefox 的差别** - 在开发浏览器插件时，您会经常修改 `src-bex` 文件夹下的文件。Firefox 将监听到这些更改并自动重新加载浏览器插件。但 Chrome 不会，当您在 Chrome 中进行了这些更改后，您需要导航到扩展（请参阅上面的 Chrome 部分），然后单击开发浏览器扩展中的刷新图标。
 :::
 
-## Debugging
+## 调试
 
-Browser extensions runs in three different environments (more on upcoming pages) and it requires various environments for debugging.
+浏览器扩展在三种不同的环境中运行（更多内容将在后面的页面中介绍），它需要各种环境进行调试。
 
-### With Chrome
 
-You can find following places to investigate the errors and outputs from the console in DevTools:
+### 使用 Chrome
 
-1. Popup - right click on the page or on the extension icon  a choose `Inspect` pop-up for DevTools.
-2. Background scripts (e.g.: background-hooks.js) open DevTools from `Manage extensions - background page`.
-3. Content scripts - page where your script is injected.
-4. Extension Errors - list of errors related to the extension (e.g. manifest configuration) are available in `Manage extension - Errors`.
+您可以在开发者工具的控制台中找到以下位置来调查错误和输出：
+
+1. 弹窗 - 在页面或插件图标上右键并选择 `Inspect pop-up`。
+2. 后台脚本（如：background-hooks.js）从 `Manage extensions - background page` 中打开开发者工具。
+3. 内容脚本 - 注入脚本的页面。
+4. 插件错误 - 与扩展相关的错误列表可以在中找到 `Manage extension - Errors`（如：manifest 配置错误）。
 
 ![Popup](https://cdn.quasar.dev/img/bex-debug-popup.png)
 
 ![Background scripts, Content scripts and Extension Errors](https://cdn.quasar.dev/img/bex-debug-bg.png)
 
-If your code changes are not propagated to the browser you can try to:
-	- Update or Reload extension - from the Extensions list (screenshots)
-	- Restart browser
-	- Restart dev process
+如果您的代码更改没有应用到浏览器，您可以尝试:
+- 从插件列表更新或重新加载扩展插件
+- 重启浏览器
+- 重启开发进程
 
-For more information, please visit [Debugging extensions](https://developer.chrome.com/docs/extensions/mv2/tut_debugging/).
+有关更多信息,请访问[调试插件](https://developer.chrome.com/docs/extensions/mv2/tut_debugging/)。
 
-## Building for Production
+## 打包生产环境
+
 ```bash
 $ quasar build -m bex
 
-# ..or the longer form:
+# 或更长的格式：
 $ quasar build --mode bex
 ```
-When building for production, multiple directories are generated:
 
-The new folder has the following structure:
+Quasar CLI 将打包的产物输出在 dist 目录下（默认在  `/dist/bex/`）：
+
 ```bash
 .
 └── dist/
-    ├── UnPackaged/                       # Built code ready for testing in your development environment
-    └── Packaged/
-        ├── Chrome
-        |   └── your-project-name.zip     # A zip file ready for submission to the Chrome Browser Extension Store / Other Chromium based stores.
-        └── Firefox
-            └── your-project-name.zip     # A zip file ready for submission to the Firefox Extension Store
+    ├── ...files                        # 从 /src-bex 中打包的代码
+		├── www/                            # 从 /src 中打包的代码
+    └── Packaged.your-project-name.zip  # 用于提交到插件市场的压缩包
 ```
 
 ::: tip
-If you want to test out the `your-project-name.zip` file, you can do this by dragging the file into the same place you load the Extension in development mode; for Chrome `chrome://extensions` and Firefox `about:debugging`. See the development screenshots above for more information.
+如需测试 `your-project-name.zip` 文件，将他们拖动到开发时加载插件的位置即可，Chrome 在 `chrome://extensions` 中，Firefox 在 `about:debugging` 中。
 :::
 
-### A Note on Minification
+### 关于压缩代码的注意事项
 
-Part of the review process for Browser Extensions in both Chrome and Firefox must allow the relative teams to examine the code being deployed as a live extension. With this in mind, minified code is not allowed. So, to allow for the review process, Quasar will not obfuscate and minify the built code for Browser Extensions.
+Chrome 和 Firefox 浏览器插件的部分审查过程检查插件实时部署的代码，考虑到这一点，不允许压缩代码。因此，为了便于审查，Quasar 不会混淆和压缩浏览器插件的内置代码。
 
-Given any extension will be ran directly on the user's computer, upload speed isn't a factor to worry about here, so minifying the code isn't necessary.
+考虑到任何插件都将直接在用户的计算机上运行，上传速度在这里不是一个需要担心的因素，因此不需要压缩代码。
 
-## Publishing to the Stores
+## 发布到插件市场
 
-Since Quasar removes the burden of building and packaging your Browser Extension, once you are finished developing your extension, it is ready to be published. The publishing process differs between browsers, but the official documentation will guide you through the process.
+Quasar 已经消除了构建和打包浏览器插件的负担，一旦您完成了扩展的开发，就可以发布它了。不同浏览器的发布过程不同，但官方文档将指导您完成整个过程。
 
-**Chrome** - [Publishing a Chrome Browser Extension](https://developer.chrome.com/webstore/publish)
+**Chrome** - [发布一个 Chrome 浏览器插件](https://developer.chrome.com/webstore/publish)
 
-**Firefox** - [Publishing a Firefox Add On (Browser Extension)](https://extensionworkshop.com/documentation/publish/)
+**Firefox** - [发布一个 Firefox 浏览器插件](https://extensionworkshop.com/documentation/publish/)
 
-::: tip
-BEX mode should be compatible with all chromium based browsers. Please refer to their relative documentation on publishing extensions.
+::: tip 提示
+BEX 模式应该与所有基于 chromium 的浏览器兼容。请参考它们关于发布插件的相关文档。
 :::

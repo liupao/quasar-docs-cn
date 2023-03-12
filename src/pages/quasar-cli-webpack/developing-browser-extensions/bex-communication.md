@@ -1,70 +1,66 @@
 ---
-title: BEX Communication
-desc: (@quasar/app-webpack) How to communicate between different parts of your Browser Extension (BEX) in Quasar.
+title: BEX 通信
+desc: (@quasar/app-webpack) Quasar 浏览器插件（BEX）的不同部分之间如何通信。
 ---
-Allowing a Quasar App to communicate with the various parts of the BEX is essential. Quasar closes this gap using a `bridge`.
 
-There are 4 areas in a BEX which will need a communication layer:
+允许 Quasar 应用与 BEX 的不同部分之间的通信至关重要，Quasar 使用一个 `bridge` 来实现这一点。
 
-1. The Quasar App itself - this is true for all types of BEX i.e Popup, Options Page, Dev Tools or Web Page
-2. Background Script
-3. Content Script
-4. The web page that the BEX is running on
+BEX 中有 4 个需要通信层的区域：
 
-## Communication Rules
+1. Quasar 应用本身 - 适用于所有类型的 BEX，即弹出菜单、选项页、开发工具或网页。
+2. 后台脚本
+3. 内容脚本
+4. 运行 BEX 的网页。
 
-There is a fundamental rule to understand with the communication bridge in Quasar.
+## 通信规则
 
-**Not all BEX types have a content script** - Only BEX which run in the context of a web page will have a content script. This is how browser extensions in general work. This means if you're adding a listener for an event on a content script and trying to trigger it from a Quasar BEX running as Dev Tools, Options Page or Popup - **it won't work**.
+Quasar 的通信桥梁有一个基本的规则需要了解。
 
-If you want to allow your Dev Tools, Popup or Options Page BEX to communicate with a web page, you will need to use the background script as a proxy. You would do this by:
+**不是所有的 BEX 类型都有内容脚本** - 只有在网页上下文中运行的 BEX 才会有内容脚本。这意味着，如果您在内容脚本上为事件添加侦听器，并试图从作为开发者工具、右键菜单选项页或弹出式菜单中运行的 Quasar BEX 触发事件，**则无法工作**。
 
-1. Adding a listener on the background script which in turn emits another event.
-2. Add a listener to your Quasar App running in the Web Page context which listens for the event the background script is
-raising
-2. Emitting the event to your background script from your Dev Tools, Popup or Options Page.
+如需开发者工具、右键菜单选项页或弹出式菜单中运行的 BEX 与网页通信，需要后台脚本作为代理。步骤如下：
 
-Once you get your head around this concept, there are no limits to how the BEX can communicate with each part.
+1. 在后台脚本上添加侦听器，该侦听器又会发出另一个事件
+2. 在运行在网页上下文中的 Quasar 应用中监听后台脚本发出的事件。
+3. 在开发者工具、右键菜单选项页或弹出式菜单的页面中触发后台脚本的事件。
 
-## The Bridge
+一旦你理解了这个概念，BEX 如何与每个部件交流就没有限制了。
 
-The bridge is a promise based event system which is shared between all parts of the BEX and as such allows you to listen for events in your Quasar App, emit them from other parts or vice versa. This is what gives Quasar BEX mode it's power.
+## 通信桥梁（Bridge）
 
-To access the bridge from within your Quasar App you can use `$q.bex`. In other areas, the bridge is made available via the `bridge` parameter in the respective hook files.
+该桥是一个基于 Promise 的事件系统，在 BEX 的所有部分之间共享，允许您在 Quasar 应用程序中监听事件，从其他部分发出事件，反之亦然。这就是 Quasar BEX 模式的强大之处。
 
-Let's see how it works.
+在 Quasar 应用中，可以通过 `$q.bex` 访问该桥梁，在其他区域，`bridge` 通过各自的钩子函数的参数提供。
 
-### Trigger an event and wait for the response
+来看看他是如何工作的。
+
+### 触发一个事件并等待响应
 
 ```js
-bridge.send('some.event', { someKey: 'aValue' }).then(response => {
-  console.log('Some response from the other side')
+const { data } = await bridge.send('some.event', { someKey: 'aValue' })
+console.log('Some response from the other side', data)
+```
+
+### 监听一个事件并发出响应
+
+```js
+bridge.on('some.event', ({ data, respond }) => {
+  console.log('Event receieved, responding...')
+  respond(data.someKey + ' hey!')
 })
 ```
 
-### Listen for an event and sending a response
+:::warning
+如果您删除了 `respond()`，那么这个 promise 在 `.send()`  后将不会被释放（resolve）。
+:::
 
-```js
-bridge.on('some.event', event => {
-  console.log('Event Receieved, responding ...')
-  bridge.send(event.eventResponseKey)
-})
-```
+Quasar Bridge 在幕后进行了一些工作，以将基于正常事件的通信转换为 Promise，因此，为了使 Promise 能够释放（resolve），我们需要调用 `respond` 方法。
 
-### Clean up your listeners
+### 清除监听器
 
 ```js
 bridge.off('some.event', this.someFunction)
 ```
-
-Wait, what's `bridge.send(event.eventResponseKey)`?
-
-The Quasar bridge does some work behind the scenes to convert the normal event based communication into promises and as such, in order for the promise to resolve, we need to send a *new* event which is captured and promisified.
-
-::: warning
-If you omit `bridge.send(event.eventResponseKey)` the promise on `.send()` will not resolve.
-:::
-
 ::: tip
-The bridge also does some work to split large data which is too big to be transmitted in one go due to the browser extension 60mb data transfer limit. In order for this to happen, the payload must be an array.
+由于浏览器插件限制了数据传输的大小最大为 60mb，该桥还做了一些工作来拆分大数据，这些数据太大，无法一次性传输。为了实现这一点，有效载荷必须是一个数组。
 :::

@@ -1,49 +1,52 @@
 ---
-title: Configuring BEX
-desc: (@quasar/app-webpack) How to manage your Browser Extensions with Quasar CLI.
+title: 配置 BEX
+desc: (@quasar/app-webpack) 如何使用 Quasar CLI 管理浏览器插件应用。
 ---
 
-Before we can configure anything, we need to understand how the BEX is structured. A BEX can be one (or more) of the following:
+在配置任何内容之前，我们需要了解 BEX 的结构。BEX 可以是以下一项（或更多）：
 
-1. Runs in its own tab in the browser
-2. Runs in the [Developer Tools](https://developer.chrome.com/extensions/devtools) window.
-3. Runs in a [Popup](https://developer.chrome.com/extensions/user_interface#popup) window.
-4. Runs as [Options](https://developer.chrome.com/extensions/options) window.
-5. Runs in the context of a web page (injected into a website)
+1. 在浏览器中运行在自己的选项卡
+2. 运行在 [开发者工具](https://developer.chrome.com/extensions/devtools) 窗口中。
+3. 运行在一个[弹窗](https://developer.chrome.com/extensions/user_interface#popup) 中。
+4. 作为[选项窗口](https://developer.chrome.com/extensions/options) 运行。
+5. 在网页的上下文中运行（注入到网站中）。
 
-You do not need a new Quasar App per BEX type above as a single Quasar Application can run in **all** of the instances above. You can find out more about these in the [types section](/quasar-cli-webpack/developing-browser-extensions/types-of-bex).
+不需要为每个类型都创建一个新的 Quasar 应用，因为一个  Quasar 应用可以运行在上述**所有**实例中。更多信息参考：[类型部分](/quasar-cli-webpack/developing-browser-extensions/types-of-bex)。
 
 ## Manifest.json
 
-The most important config file for your BEX is `/src-bex/manifest.json`. It is recommended that you [read up on this file](https://developer.chrome.com/extensions/manifest) before starting your project.
+BEX 最重要的配置文件是 `/src-bex/manifest.json`。建议在开始项目之前阅读该文件的[说明文档](https://developer.chrome.com/extensions/manifest)。
 
-When you create your Quasar BEX, the manifest file is already configured to add the basic properties you will need in order to run your BEX. This includes default background scripts, content scripts and a css file which is injected in the context of the web page the BEX is running on.
+创建 Quasar BEX 时，manifest 文件中已经为您添加了运行 BEX 所需的基本配置。这包括默认的后台脚本、内容脚本和一个 CSS 文件，该文件被注入到运行 BEX 的网页上下文中。
 
-::: tip
-Be aware that the manifest.json file is modified on build so as to auto inject required javascript files.
+:::tip
+请注意，`manifest.json` 文件在构建时会被修改，以便自动注入所需的 JavaScript 文件。
 :::
 
-## Background And Content Scripts
+## 后台和内容脚本
 
-Behind every BEX is a [content script](https://developer.chrome.com/extensions/content_scripts) and a [background script](https://developer.chrome.com/extensions/background_pages). It's a good idea to understand what each of these are before writing your first BEX.
+每个 BEX 的背后都有[内容脚本](https://developer.chrome.com/extensions/content_scripts)和后台脚本或 service-worker。最好在编写第一个 BEX 之前了解它们是什么。
 
-In summary:
+概述：
 
-* **Background Script** - runs in the context of the BEX itself and can listen to all available browser extension events. There will only ever be one instance of each background script *per BEX*.
-* **Content Script** - runs in the context of the web page. There will be a new content script instance per tab running the extension.
+* **后台脚本** - 运行在 BEX 自身的上下文中，可以监听所有可用的浏览器插件事件。*每个* BEX 只有一个背景脚本的实例。 
+* **内容脚本** - 在网页的上下文中运行。每个选项卡都会有一个新的内容脚本实例。
 
-::: tip
-Given content scripts run in the web page context, this means that only BEX's that interact with a web page can use content scripts. Popups, Options and Devtools **will not** have a *content script* running behind them. They will all however have a *background script*.
+::: tip 提示
+给定在网页上下文中运行的内容脚本，这意味着只有与网页交互的 BEX 才能使用内容脚本。弹窗、选项和开发者工具中的 BEX **不会**有内容脚本。不过，它们都会有一个*后台脚本*。
+:::
+
+:::warning
+如果你想要使用 [Manifest v3](https://developer.chrome.com/docs/extensions/mv3/intro/)，那么您需要使用 vite 版本的 Quasar CLI 代替 webpack 版本的 Quasar CLI。更多信息请参考：[这里](https://github.com/quasarframework/quasar/discussions/8844)
 :::
 
 ## CSS
+您希望在网页（而不是 Quasar 应用程序）中使用的任何样式都应包含在 `src-bex/assets/content.css` 中，因为该文件会自动注入 `manifest.json` 文件中。
 
-Any styles you want to be made available to your web page (not your Quasar App) should be included in `src-bex/css/content-css.css` as this file ia automatically injected into the `manifest.json` file.
-
-::: warning
-This must be native CSS as it's not preprocessed via Sass.
+::: warning 警告
+它必须是原生的 CSS，因为它不会通过 Sass 进行预处理。
 :::
 
-## Hook Files
+## Hook 文件
 
-In a Quasar BEX, you are provided with `background-hook.js`, `content-hook.js` and `dom-hook.js`. These files are designed to give you access to a bridge which closes the gap in communication with each layer of a BEX. We will explore them in more detail in the [next section](/quasar-cli-webpack/developing-browser-extensions/bex-communication).
+在 Quasar BEX 中，您提供了 `background-hook.js`、`content-hook.js` 和 `dom-hook.js`。这些文件旨在为您提供访问桥梁，以弥合与 BEX 的每个层之间通信的差距。我们将在[下一节](/quasar-cli-webpack/developing-browser-extensions/bex-communication)中详细探讨它们。

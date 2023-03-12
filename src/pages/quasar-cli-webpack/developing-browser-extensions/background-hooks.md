@@ -1,22 +1,25 @@
 ---
-title: Background Hooks
-desc: (@quasar/app-webpack) How to communicate using your background script with other parts of your Browser Extension (BEX).
+title: 后台脚本
+desc: (@quasar/app-webpack) 在 Quasar 浏览器插件中（BEX）中如何使用后台脚本与其他部分通信。
 ---
 
-`src-bex/js/background-hooks.js` is essentially a standard [background script](https://developer.chrome.com/extensions/background_pages) and you are welcome to use it as such. Background scripts can communicate with **all** Web Pages, Dev Tools, Options and Popups running under your BEX.
+`src-bex/background-hooks.js` 是一个标准的[后台脚本](https://developer.chrome.com/extensions/background_pages)，它可以与 BEX 的**所有**部分进行通信。
 
-The added benefit of this file is this function:
+此文件需要导出一个函数：
 
 ```js
-export default function attachBackgroundHooks (bridge, activeConnections) {
-}
+import { bexBackground } from 'quasar/wrappers'
+
+export default bexBackground((bridge, activeConnections) => {
+  //
+})
 ```
 
-This function is called automatically via the Quasar BEX build chain and injects a bridge which is shared between all parts of the BEX meaning you can communicate with any part of your BEX.
+该函数通过 Quasar BEX 构建链自动调用，并注入一个桥（bridge），该桥在 BEX 的所有部分之间共享，这意味着您可以与 BEX 的任何部分进行通信。
 
-The `bridge` param is the bridge to use for communication. The `activeConnections` param provides an array of all the BEX connections registered via the bridge i.e All the Web Page, Options, Popup and Dev Tools BEX's used by the same Quasar App.
+`bridge` 参数是用于通信的桥梁。`activeConnections` 参数提供了通过桥注册的所有 BEX 连接的数组，即同一个 Quasar 应用使用的所有 BEX 部分（网页，开发者工具、右键菜单选项页或弹出式菜单）。
 
-For example, let's say we want to listen for a new tab being opened in the web browser and then react to it in our Quasar App. First, we'd need to listen for the new tab being opened and emit a new event to tell the Quasar App this has happened:
+例如，假设我们想在 web 浏览器中监听正在打开的新选项卡，然后在 Quasar 应用中对其做出反应。首先，我们需要监听正在打开的新选项卡，并发出一个新事件，告诉 Quasar 应用这已经发生了：
 
 ```js
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
@@ -24,7 +27,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 })
 ```
 
-Then in our Quasar App, we'd listen for this in one of our component lifecycle hooks, like so:
+然后在 Quasar 应用程序中，在一个组件生命周期钩子中监听它，如下所示：
 
 ```js
 import { useQuasar } from 'quasar'
@@ -34,15 +37,15 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    // Our function which receives the URL sent by the background script.
+    // 接收后台脚本发送的 URL 的函数。
     function doOnTabOpened (url) {
       console.log('New Browser Tab Openend: ', url)
     }
 
-    // Add our listener
+    // 监听事件
     $q.bex.on('bex.tab.opened', doOnTabOpened)
 
-    // Don't forget to clean it up
+    // 不要忘记清除事件
     onBeforeUnmount(() => {
       $q.bex.off('bex.tab.opened', doOnTabOpened)
     })
@@ -52,6 +55,8 @@ export default {
 }
 ```
 
-There are wide variety of events available to the browser extension background script - Google is your friend if you're trying to do something in this area.
+浏览器插件的后台脚本有各种各样的事件，如果你想在这方面做点什么，谷歌是你的朋友。
 
-What if you want to modify the underlying web page content in some way? That's where we'd use `content-hooks.js`. Let's look at that in the next section.
+如果您想以某种方式修改基础网页内容，该怎么办？这就是我们需要使用
+<a class="doc-link" href="/quasar-cli-webpack/developing-browser-extensions/content-hooks">内容脚本</a>
+（例如 `my-content-scripts.js`）的地方。

@@ -1,20 +1,24 @@
 ---
-title: Content Hooks
-desc: (@quasar/app-webpack) How to communicate using your content script with your Quasar App and Background Script in Quasar Browser Extension mode.
+title: 内容脚本
+desc: (@quasar/app-webpack) 在 Quasar 浏览器插件中（BEX）中如何使用内容脚本与后台脚本和应用部分通信。
 ---
 
-`src-bex/js/content-hooks.js` is essentially a standard [content script](https://developer.chrome.com/extensions/content_scripts) and you are welcome to use it as such. Content scripts are able to access the DOM of the underlying webpage and thus you are able to manipulate the content of said page.
+`src-bex/content-hooks.js` 是一个标准的[内容脚本](https://developer.chrome.com/extensions/content_scripts)，它能够访问网页的 DOM，因此你能够操纵该网页的内容。
 
-The added benefit of this file is this function:
+此文件需要导出一个函数：
 
 ```js
-export default function attachContentHooks (bridge) {
-}
+import { bexContent } from 'quasar/wrappers'
+
+export default bexContent((bridge) => {
+  //
+})
 ```
 
-This function is called automatically via the Quasar BEX build chain and injects a bridge which is shared between your Quasar App instance and the background script of the BEX.
+该函数通过 Quasar BEX 构建链自动调用，并注入一个桥（bridge），该桥在 Quasar 应用和 BEX 的后台脚本之间共享。
 
-For example, let's say we want to react to a button being pressed on our Quasar App and highlight some text on the underlying web page, this would be done via the content scripts like so:
+
+例如，假设我们想对 Quasar 应用程序上的一个按钮做出反应，并在底层网页上突出显示一些文本，这将通过如下内容脚本来完成:
 
 ```js
 // Quasar App, /src
@@ -22,10 +26,9 @@ For example, let's say we want to react to a button being pressed on our Quasar 
 setup () {
   const $q = useQuasar()
 
-  function myButtonClickHandler () {
-    $q.bex.send('highlight.content.event', { someData: 'someValue '}).then(r => {
-      console.log('Text has been highlighted')
-    })
+  async function myButtonClickHandler () {
+    await $q.bex.send('highlight.content', { selector: '.some-class' })
+    $q.notify('Text has been highlighted')
   }
 
   return { myButtonClickHandler }
@@ -33,7 +36,7 @@ setup () {
 ```
 
 ```css
-/* src-bex/css/content-css.css */
+/* src-bex/assets/content-css.css */
 
 .bex-highlight {
     background-color: red;
@@ -41,24 +44,27 @@ setup () {
 ```
 
 ```js
-// src-bex/js/content-hooks.js:
+// src-bex/content-script.js:
+import { bexContent } from 'quasar/wrappers'
 
-export default function attachContentHooks (bridge) {
+export default bexContent(function (bridge) {
   bridge.on('highlight.content.event', event => {
-    // Find a .some-class element and add our highlight CSS class.
+    // 找到一个带有 .some-class 类名的元素，并给其添加高亮 CSS 类
     const el = document.querySelector('.some-class')
     if (el !== null) {
       el.classList.add('bex-highlight')
     }
 
-    // Not required but resolve our promise.
+    // 不是必需的，但是 resolve 我们的 promise。
     bridge.send(event.responseKey)
   })
-}
+})
 ```
 
-Content scripts live in an [isolated world](https://developer.chrome.com/extensions/content_scripts#isolated_world), allowing a content script to makes changes to its JavaScript environment without conflicting with the page or additional content scripts.
+内容脚本存在于一个[独立的世界](https://developer.chrome.com/extensions/content_scripts#isolated_world),中，允许内容脚本对其 JavaScript 环境进行更改，而不会与页面或其他内容脚本发生冲突。
 
-Isolated worlds do not allow for content scripts, the extension, and the web page to access any variables or functions created by the others. This also gives content scripts the ability to enable functionality that should not be accessible to the web page.
+独立的世界不允许内容脚本、插件和 Web 页面访问其他人创建的任何变量或函数。这也使内容脚本能够启用网页不应该访问的功能。
 
-This is where `dom-hooks` come in.
+这就是
+<a class="doc-link" href="/quasar-cli-webpack/developing-browser-extensions/dom-script">DOM 脚本</a>
+的用武之地。
