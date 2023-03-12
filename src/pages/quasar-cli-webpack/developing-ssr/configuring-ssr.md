@@ -62,7 +62,7 @@ return {
     // 只处理 Webserver 的 webpack 配置
     // 包括 SSR 的中间件
     extendWebpackWebserver (cfg) {
-      // 直接对 pkg 对象做出修改不需要返回任何值
+      // 直接对 cfg 对象做出修改不需要返回任何值
     },
 
     // 可选项；等价于  extendWebpackWebserver()，但是使用了 webpack-chain 

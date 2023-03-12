@@ -70,7 +70,7 @@ return {
 }
 ```
 
-如果想篡改 /src 中 UI 的 Vite 配置：
+如果想修改 /src 中 UI 的 Vite 配置：
 
 ```js
 // quasar.config.js

@@ -66,5 +66,5 @@ export default bexContent(function (bridge) {
 独立的世界不允许内容脚本、插件和 Web 页面访问其他人创建的任何变量或函数。这也使内容脚本能够启用网页不应该访问的功能。
 
 这就是
-<a class="doc-link" href="/quasar-cli-webpack/developing-browser-extensions/dom-script">DOM 脚本</a>
+<a class="doc-link" href="/quasar-cli-webpack/developing-browser-extensions/dom-hooks">DOM 脚本</a>
 的用武之地。
