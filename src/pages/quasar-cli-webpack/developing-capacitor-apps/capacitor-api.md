@@ -1,11 +1,13 @@
 ---
-title: Capacitor APIs
-desc: (@quasar/app-webpack) How to use the Capacitor plugins in a Quasar app.
+title: Capacitor 接口
+desc: (@quasar/app-webpack) 如何在 Quasar 应用程序中使用 Capacitor 插件。
 ---
-You can hook into the native device APIs by using [Capacitor APIs](https://capacitor.ionicframework.com/docs/apis).
 
-## Capacitor APIs
-A few examples of such APIs:
+通过 [Capacitor 接口](https://capacitor.ionicframework.com/docs/apis) 调用原生设备接口。
+
+## Capacitor 接口
+
+此类接口的几个例子：
 
 * Background Task
 * Camera
@@ -20,23 +22,25 @@ A few examples of such APIs:
 * Splash Screen
 * Status Bar
 
-## Using a Capacitor API
-Let's learn by taking some examples, assuming you've added Capacitor mode to your Quasar project already.
+## 使用 Capacitor 接口
 
-### Example: Geolocation
-First step is to read the documentation of the Capacitor API that we want to use. We look at Capacitor's [Geolocation API](https://capacitor.ionicframework.com/docs/apis/geolocation).
+让我们通过一些例子来学习，假设已经在 Quasar 项目中加入了 Capacitor 模式。
 
-Now let's put this plugin to some good use. In one of your Quasar project's pages/layouts/components Vue file, we write:
+### 例子：地理位置
+
+先阅读一下 [Geolocation 接口](https://capacitor.ionicframework.com/docs/apis/geolocation) 使用方法。
+
+然后在 Quasar 项目 pages/layouts/components 下的一个 Vue 文件中，这样子写：
 
 ```html
-// some Vue file
-// remember this is simply an example;
-// only look at how we use the API described in the plugin's page;
-// the rest of things here are of no importance
+// Vue 文件
+// 请记住，这只是一个例子；
+// 只看使用该插件的接口用法；
+// 其余的事情在这里并不重要
 
 <template>
   <div>
-    GPS position: <strong>{{ position }}</strong>
+    GPS 定位: <strong>{{ position }}</strong>
   </div>
 </template>
 
@@ -46,11 +50,11 @@ import { Geolocation } from '@capacitor/geolocation'
 
 export default {
   setup () {
-    const position = ref('determining...')
+    const position = ref('定位中...')
 
     function getCurrentPosition() {
       Geolocation.getCurrentPosition().then(newPosition => {
-        console.log('Current', newPosition)
+        console.log('当前：', newPosition)
         position.value = newPosition
       })
     }
@@ -60,15 +64,15 @@ export default {
     onMounted(() => {
       getCurrentPosition()
 
-      // we start listening
+      // 开始监听
       geoId = Geolocation.watchPosition({}, (newPosition, err) => {
-        console.log('New GPS position')
+        console.log('新的 GPS 定位')
         position.value = newPosition
       })
     })
 
     onBeforeUnmount(() => {
-      // we do cleanup
+      // 清除
       Geolocation.clearWatch(geoId)
     })
 
@@ -80,20 +84,21 @@ export default {
 </script>
 ```
 
-### Example: Camera
-First step is to read the documentation of the Capacitor API that we want to use. We look at Capacitor's [Camera API](https://capacitor.ionicframework.com/docs/apis/camera).
+### 例子：相机
 
-Now let's put this API to some good use. In one of your Quasar project's pages/layouts/components Vue file, we write:
+先阅读一下 [Camera 接口](https://capacitor.ionicframework.com/docs/apis/camera) 使用方法。
+
+然后在 Quasar 项目 pages/layouts/components 下的一个 Vue 文件中，这样子写：
 
 ```html
-// some Vue file
-// remember this is simply an example;
-// only look at how we use the API described in the plugin's page;
-// the rest of things here are of no importance
+// Vue 文件
+// 请记住，这只是一个例子；
+// 只看使用该插件的接口用法；
+// 其余的事情在这里并不重要
 
 <template>
   <div>
-    <q-btn color="primary" label="Get Picture" @click="captureImage" />
+    <q-btn color="primary" label="获取图片" @click="captureImage" />
 
     <img :src="imageSrc">
   </div>
@@ -114,10 +119,10 @@ export default {
         resultType: CameraResultType.Uri
       })
 
-      // The result will vary on the value of the resultType option.
-      // CameraResultType.Uri - Get the result from image.webPath
-      // CameraResultType.Base64 - Get the result from image.base64String
-      // CameraResultType.DataUrl - Get the result from image.dataUrl
+      // 其结果将根据 resultType 选项的值而变化。
+      // CameraResultType.Uri - 从 image.webPath 获取
+      // CameraResultType.Base64 - 从 image.base64String 获取
+      // CameraResultType.DataUrl - 从 image.dataUrl 获取
       imageSrc.value = image.webPath
     }
 
@@ -130,13 +135,13 @@ export default {
 </script>
 ```
 
-Some Capacitor plugins, such as Camera, have a web-based UI available when not running natively but in a standard web browser. To enable these controls, add @ionic/pwa-elements to your project:
+一些 Capacitor 插件，如 Camera，有一个基于网络的用户界面，当不是原生运行而是在一个标准的网络浏览器中运行时，要使用就要启用这些控件，请在项目中添加 @ionic/pwa-elements。
 
 ```bash
 $ npm install @ionic/pwa-elements
 ```
 
-Then create a boot file to initialize them, for example `src/boot/capacitor.js`:
+然后创建一个启动文件来初始化它们，比如说 `src/boot/capacitor.js`：
 
 ```js
 import { defineCustomElements } from '@ionic/pwa-elements/loader'
@@ -146,30 +151,30 @@ export default () => {
 }
 ```
 
-Don't forget to call the boot script in `quasar.config.js`
+不要忘了在 `quasar.config.js` 中调用启动脚本
 
 ```js
 boot: ['capacitor']
 ```
 
-Now you are able to use the Camera API not just in native Android or iOS, but also in web based projects like a SPA or PWA.
+现在，不仅可以在原生 Android 或 iOS 中使用相机接口，还可以在 SPA 或 PWA 等基于 Web 的项目中使用。
 
+### 例子：设备
 
-### Example: Device
-First step is to read the documentation of the Capacitor API that we want to use. Look at the Capacitor's [Device API](https://capacitor.ionicframework.com/docs/apis/device).
+先阅读一下 [Device 接口](https://capacitor.ionicframework.com/docs/apis/device) 使用方法。
 
-Now let's put this API to some good use. In one of your Quasar project's pages/layouts/components Vue file, we write:
+然后在 Quasar 项目 pages/layouts/components 下的一个 Vue 文件中，这样子写：
 
 ```html
-// some Vue file
-// remember this is simply an example;
-// only look at how we use the API described in the plugin's page;
-// the rest of things here are of no importance
+// Vue 文件
+// 请记住，这只是一个例子；
+// 只看使用该插件的接口用法；
+// 其余的事情在这里并不重要
 
 <template>
   <div>
-    <div>Model: {{ model }}</div>
-    <div>Manufacturer: {{ manufacturer }}</div>
+    <div>型号: {{ model }}</div>
+    <div>制造商: {{ manufacturer }}</div>
   </div>
 </template>
 
@@ -179,8 +184,8 @@ import { Device } from '@capacitor/device'
 
 export default {
   setup () {
-    const model = ref('Please wait...')
-    const manufacturer = ref('Please wait...')
+    const model = ref('请等待...')
+    const manufacturer = ref('请等待...')
 
     onMounted(() => {
       Device.getInfo().then(info => {
