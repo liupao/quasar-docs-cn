@@ -71,6 +71,8 @@ const routes = [
 // 这里添加的钩子为 BEX 内容脚本和 Quasar 应用程序之间的通信搭建了一个桥梁。
 // 更多信息: https://www.quasar-cn.cm/quasar-cli-vite/developing-browser-extensions/content-hooks
 
+import { bexContent } from 'quasar/wrappers'
+
 const
   iFrame = document.createElement('iframe'),
   defaultFrameHeight = '62px'
@@ -121,14 +123,13 @@ export default function (bridge) {
    * 切换抽屉时，将 iFrame 高度设置为占据整个页面。
    * 当抽屉关闭时重置高度。
    */
-  bridge.on('wb.drawer.toggle', event => {
-    const payload = event.data
-    if (payload.open) {
+  bridge.on('wb.drawer.toggle',  ({ data, respond }) => {
+    if (data.open) {
       setIFrameHeight('100%')
     } else {
       resetIFrameHeight()
     }
-    bridge.send(event.eventResponseKey)
+    respond()
   })
 }
 ```
@@ -163,15 +164,14 @@ setup () {
   const $q = useQuasar()
   const drawerIsOpen = ref(true)
 
-  function drawerToggled () {
-    $q.bex
+  async function drawerToggled () {
+    await $q.bex
       .send('wb.drawer.toggle', {
-        open: drawerIsOpen.value // 所以它知道要变得更大 /更小
+        open: drawerIsOpen.value // 所以它知道要变得更大 / 更小
       })
-      .then(r => {
-        // 只有在 Promise 解决后才设置此选项，这样我们才能看到整个幻灯片动画。
-        drawerIsOpen.value = !drawerIsOpen.value
-      })
+
+      // 只有在 Promise 解决后才设置此选项，这样我们才能看到整个幻灯片动画。
+      drawerIsOpen.value = !drawerIsOpen.value
   }
 
   return { drawerToggled }

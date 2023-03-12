@@ -9,11 +9,14 @@ desc: (@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用�
 可以有多个内容脚本，每当创建一个新的内容脚本，都需要在 `/src-bex/manifest.json` 文件中引用。引用时需要使用 `.js` 后缀，即使你在使用 `.ts`。
 :::
 
-此文件的另一个好处是此函数：
+此文件需要导出一个函数：
 
 ```js
-export default function (bridge) {
-}
+import { bexContent } from 'quasar/wrappers'
+
+export default bexContent((bridge) => {
+  //
+})
 ```
 
 该函数通过 Quasar BEX 构建链自动调用，并注入一个桥（bridge），该桥在 Quasar 应用和 BEX 的后台脚本之间共享。
@@ -27,10 +30,9 @@ export default function (bridge) {
 setup () {
   const $q = useQuasar()
 
-  function myButtonClickHandler () {
-    $q.bex.send('highlight.content.event', { someData: 'someValue '}).then(r => {
-      console.log('Text has been highlighted')
-    })
+  async function myButtonClickHandler () {
+    await $q.bex.send('highlight.content', { selector: '.some-class' })
+    $q.notify('Text has been highlighted')
   }
 
   return { myButtonClickHandler }
@@ -46,9 +48,10 @@ setup () {
 ```
 
 ```js
-// src-bex/my-content-script.js:
+// src-bex/content-script.js:
+import { bexContent } from 'quasar/wrappers'
 
-export default function (bridge) {
+export default bexContent(function (bridge) {
   bridge.on('highlight.content.event', event => {
     // 找到一个带有 .some-class 类名的元素，并给其添加高亮 CSS 类
     const el = document.querySelector('.some-class')
@@ -59,7 +62,7 @@ export default function (bridge) {
     // 不是必需的，但是 resolve 我们的 promise。
     bridge.send(event.responseKey)
   })
-}
+})
 ```
 
 内容脚本存在于一个[独立的世界](https://developer.chrome.com/extensions/content_scripts#isolated_world),中，允许内容脚本对其 JavaScript 环境进行更改，而不会与页面或其他内容脚本发生冲突。

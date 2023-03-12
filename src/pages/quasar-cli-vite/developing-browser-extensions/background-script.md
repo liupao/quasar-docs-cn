@@ -3,14 +3,16 @@ title: 后台脚本
 desc: (@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用后台脚本与其他部分通信。
 ---
 
-`src-bex/background-script.js` 是一个标准的后台脚本，它可以与 BEX 的**所有**部分进行通信。
+`src-bex/background-script.js` 是一个标准的[后台脚本](https://developer.chrome.com/extensions/background_pages)，它可以与 BEX 的**所有**部分进行通信。
 
-此文件的另一个好处是此函数：
+此文件需要导出一个函数：
 
 ```js
-export default function (bridge, activeConnections) {
+import { bexBackground } from 'quasar/wrappers'
+
+export default bexBackground((bridge, activeConnections) => {
   //
-}
+})
 ```
 
 该函数通过 Quasar BEX 构建链自动调用，并注入一个桥（bridge），该桥在 BEX 的所有部分之间共享，这意味着您可以与 BEX 的任何部分进行通信。
@@ -58,3 +60,4 @@ export default {
 如果您想以某种方式修改基础网页内容，该怎么办？这就是我们需要使用
 <a class="doc-link" href="/quasar-cli-vite/developing-browser-extensions/content-scripts">内容脚本</a>
 （例如 `my-content-scripts.js`）的地方。
+

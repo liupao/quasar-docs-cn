@@ -22,7 +22,7 @@ Quasar 的通信桥梁有一个基本的规则需要了解。
 
 1. 在后台脚本上添加侦听器，该侦听器又会发出另一个事件
 2. 在运行在网页上下文中的 Quasar 应用中监听后台脚本发出的事件。
-2. 在开发者工具、右键菜单选项页或弹出式菜单的页面中触发后台脚本的事件。
+3. 在开发者工具、右键菜单选项页或弹出式菜单的页面中触发后台脚本的事件。
 
 一旦你理解了这个概念，BEX 如何与每个部件交流就没有限制了。
 
@@ -37,34 +37,30 @@ Quasar 的通信桥梁有一个基本的规则需要了解。
 ### 触发一个事件并等待响应
 
 ```js
-bridge.send('some.event', { someKey: 'aValue' }).then(response => {
-  console.log('Some response from the other side')
-})
+const { data } = await bridge.send('some.event', { someKey: 'aValue' })
+console.log('Some response from the other side', data)
 ```
 
 ### 监听一个事件并发出响应
 
 ```js
-bridge.on('some.event', event => {
-  console.log('Event Receieved, responding ...')
-  bridge.send(event.eventResponseKey)
+bridge.on('some.event', ({ data, respond }) => {
+  console.log('Event receieved, responding...')
+  respond(data.someKey + ' hey!')
 })
 ```
+
+:::warning
+如果您删除了 `respond()`，那么这个 promise 在 `.send()`  后将不会被释放（resolve）。
+:::
+
+Quasar Bridge 在幕后进行了一些工作，以将基于正常事件的通信转换为 Promise，因此，为了使 Promise 能够释放（resolve），我们需要调用 `respond` 方法。
 
 ### 清除监听器
 
 ```js
 bridge.off('some.event', this.someFunction)
 ```
-
-等等，`bridge.send(event.eventResponseKey)` 是什么？
-
-Quasar Bridge 在幕后进行了一些工作，以将基于正常事件的通信转换为 Promise，因此，为了释放（resolve） Promise，我们需要发送一个**新**事件，该事件被捕获并释放上述 Promise。
-
-::: warning
-如果遗漏了 `bridge.send(event.eventResponseKey)`，那么 promise 将不会被释放（resolve）。
-:::
-
 ::: tip
 由于浏览器插件限制了数据传输的大小最大为 60mb，该桥还做了一些工作来拆分大数据，这些数据太大，无法一次性传输。为了实现这一点，有效载荷必须是一个数组。
 :::

@@ -6,8 +6,11 @@ desc: (@quasar/app-vite) 在 Quasar 浏览器插件中（BEX）中如何使用 D
 `src-bex/dom-script.js` 是一个由 Quasar 自动注入到底层网页的文件，和所有其他钩子文件一样，可以通过以下方式访问通信桥梁（bridge）:
 
 ```js
-export default function (bridge) {
-}
+import { bexDom } from 'quasar/wrappers'
+
+export default bexDom((bridge) => {
+  //
+})
 ```
 
 如果您发现自己需要将一个 JS 文件注入到底层网页中，那么您可以使用 DOM 脚本，因为它意味着您可以在 BEX 中维护通信链。
@@ -76,10 +79,12 @@ export default function detectQuasar (bridge) {
 ```js
 // src-bex/dom-script.js:
 
+import { bexDom } from 'quasar/wrappers'
 import detectQuasar from './dom/detect-quasar'
-export default function (bridge) {
+
+export default bexDom((bridge) => {
   detectQuasar(bridge)
-}
+})
 ```
 
 上面的网桥（bridge）将通知 BEX 中的所有侦听器 Quasar 已经找到，并发送实例信息。
