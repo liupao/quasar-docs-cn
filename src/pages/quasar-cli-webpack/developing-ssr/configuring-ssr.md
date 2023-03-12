@@ -69,7 +69,11 @@ return {
     // 只处理 Webserver 的 webpack 配置
     // 包括 SSR 的中间件
     chainWebpackWebserver (chain) {
-      // 直接对 pkg 对象做出修改不需要返回任何值
+      // chain 是一个 webpack-chain 实例，表示 Webpack 配置
+
+      // 例如：
+      // chain.plugin('eslint-webpack-plugin')
+      //   .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
     }
   }
 }

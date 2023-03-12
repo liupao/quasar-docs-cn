@@ -1,37 +1,38 @@
 ---
-title: Preparation for PWA
-desc: (@quasar/app-webpack) How to add PWA mode with Quasar CLI.
+title: 开发 PWA 的准备工作
+desc: (@quasar/app-webpack) 如何使用 Quasar CLI 添加 PWA 模式。
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
 
-We'll be using Quasar CLI to develop and build a PWA. The difference between building a SPA, Mobile App, Electron App, PWA or SSR is simply determined by the "mode" parameter in "quasar dev" and "quasar build" commands.
 
-In order to build a PWA, we first need to add the PWA mode to our Quasar project:
+我们将利用 Quasar CLI 开发和构建 PWA 网站。构建 SPA、Mobile App、Electron App、PWA 或 SSR 之间的区别仅仅是由 `quasar dev` 和`quasar build` 命令中的 `mode` 参数决定的。
+
+为了开发或建立一个 PWA 网站，我们首先需要将 PWA 模式添加到我们的 Quasar 项目中:
 
 ```bash
 $ quasar mode add pwa
 ```
 
-If you want to jump right in and start developing, you can skip the "quasar mode" command and issue:
+如果您想直接开始开发，也可以跳过 "quasar mode" 命令，直接使用:
 
 ```bash
 $ quasar dev -m pwa
 ```
 
-This will add PWA mode automatically, if it is missing.
+这样，如果项目缺少 PWA 模式，则会自动添加后启动。
 
-A new folder will appear in your project folder (which is explained in detail on the [Configuring PWA](/quasar-cli-webpack/developing-pwa/configuring-pwa) page):
+项目中会新建一个目录，详情请参考[配置 PWA](/quasar-cli-webpack/developing-pwa/configuring-pwa) page)页面。
 
 ```bash
 .
 └── src-pwa/
-    ├── register-service-worker.js  # (or .ts) App-code *managing* service worker
-    └── custom-service-worker.js    # (or .ts) Optional custom service worker file
-                                    #               (InjectManifest mode ONLY)
+    ├── register-service-worker.js  # （或 .ts） UI 代码管理 service worker
+    └── custom-service-worker.js    # （或 .ts）可选的自定义 service worker 文件
+                                    # （仅在 injectManifest 模式中)
 ```
 
-Both files are going to be detailed in the next pages, but the high overview is:
+以上所有文件将在下一页中详细介绍，但主要概述如下：
 
-* The `register-service-worker.[js|ts]` file is part of the UI code and communicates with the service worker.
-* When using InjectManifest, you can write your own custom service worker (`custom-service-worker.[js|ts]`).
+* `register-service-worker.[js|ts]` 文件是 UI 代码的一部分，用于与 service worker 通信。
+* 当使用 InjectManifest 模式时，您可以自定义 service worker (`custom-service-worker.[js|ts]`)。
