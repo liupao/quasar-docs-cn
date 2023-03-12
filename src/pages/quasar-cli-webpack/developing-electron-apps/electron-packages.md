@@ -1,5 +1,6 @@
 ---
 title: Electron Packages
-desc: (@quasar/app-webpack) The list of Electron packages available in a Quasar app.
+desc: (@quasar/app-webpack) 可以在 Quasar 中使用的 Electron 相关 npm 包。
 ---
-You can yarn install and use [Electron specific packages](https://electronjs.org/userland/most_downloaded_packages) in your main thread and preload script. Take a look at the link and choose wisely if you need to. Make sure these are installed into `dependencies` and NOT `devDependencies` in your `package.json` file.
+
+您可以在主进程或渲染进程中安装并使用一些 [Electron 专属的包](https://electronjs.org/userland/most_downloaded_packages)。请确保将它们安装到 `package.json` 的 `dependencies` 而不是 `devDependencies`。

@@ -1,17 +1,11 @@
 ---
-title: Electron with Typescript
-desc: (@quasar/app-webpack) How to use Typescript with Electron in Quasar
+title: Electron 和 Typescript
+desc: (@quasar/app-webpack) 如何在 Quasar 项目的 Electron 中使用 Typescript。
 ---
 
-In order to support Electron with Typescript, you will need to:
-
-1. Edit quasar.config.js > supportTS. Set it to `true` or use the Object form.
-2. Rename the extension for your files in /src-electron from `.js` to `.ts` and make the necessary TS code changes.
+为了给 Electron 支持 TypeScript，您需要将 /src-electron 目录下的 `.js` 文件改为 `.ts` 文件，并做一些必要的 TS 代码修改。
 
 ::: tip
-`electron-packager` and `electron-builder` export their configuration types from their own packages.
-Since autocomplete into `quasar.config.js` relies on those types, properties `electron.packager` and `electron.builder` will be fully typed only after the respective package is installed.
-You can force the installation of the selected bundler (depending on your `electron.bundler` option) by running a build command in Electron mode: `quasar build -m electron`
+`electron-packager` 和 `electron-builder` 都导出了它们各自的类型文件。由于 `quasar.config.js` 文件代码提示和补全依赖于这些类型，所以当您安装了相应的包之后，`electron.packager` 和 `electron.builder` 属性才会得到相关的代码提示和补全。
+运行 `quasar build -m electron` 命令时，它会先帮您安装 `electron.bundler` 指定的包。
 :::
-
-More info: [Supporting TS](/quasar-cli-webpack/supporting-ts)
