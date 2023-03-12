@@ -1,62 +1,61 @@
 ---
-title: Configuring Cordova
-desc: (@quasar/app-webpack) How to manage your Cordova apps with Quasar CLI.
+title: 配置 Cordova
+desc: (@quasar/app-webpack) 如何使用 Quasar ClI 管理您的 Cordova 应用。
 related:
   - /quasar-cli-webpack/quasar-config-js
 ---
 
-We'll be using Quasar CLI (and Cordova CLI) to develop and build a Mobile App. The difference between building a SPA, PWA, Electron App or a Mobile App is simply determined by the "mode" parameter in "quasar dev" and "quasar build" commands.
+我们将使用 Quasar CLI（和 Cordova CLI）开发和构建移动 APP。构建 SPA，PWA，Electron 应用与移动 APP 之间的区别仅由 "quasar dev" 和 "quasar build" 命令中的 "mode" 参数决定。
 
-There are two configuration files of great importance to your mobile apps. We'll go over each one.
+有两个配置文件对您的移动 APP 非常重要。我们会逐一介绍。
 
 ## config.xml
-The most important config file for your mobile app is `/src-cordova/config.xml`. The `/src-cordova` folder is a Cordova project, so please refer to [Cordova documentation](https://cordova.apache.org/docs/en/latest/) in order to understand what each file from there does. But for now, have a few moments to read about [config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
+您的移动 APP 最重要的配置文件是 `/src-cordova/config.xml`。`/src-cordova` 文件夹是 Cordova 项目的源代码，所以请参考 [Cordova 文档](https://cordova.apache.org/docs/en/latest/) 以了解每个文件的作用。但现在，请花一些时间阅读 [config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-Some properties from this file will get overwritten as we'll see in next section.
+我们将在下一节中看到该文件的一些属性将被覆盖。
 
 ## quasar.config.js
-Quasar CLI helps you in setting some properties of the mobile Apps automatically (from config.xml): the Cordova "id", app version, description and android-versionCode. This is for convenience so you'll be able to have a single point where, for example, you change the version of your app, not multiple files that you need to simultaneously touch which is error prone.
+Quasar CLI 可帮助您自动设置移动 APP 的某些属性（从 config.xml 文件获取）：Cordova "id"、APP 版本(version)、说明(description）和 Android 系统的 versionCode。为了方便，我们只使用一个数据源。例如，要改变您的 APP 版本，您不需要同时修改的多个文件，这是容易出错的。
 
-For determining the values for each of the properties mentioned above, Quasar CLI:
-1. Looks in `/quasar.config.js` for a "cordova" Object. Does it have "version", "description" and/or "androidVersionCode"? If yes, it will use them.
-2. If not, then it looks into your `/package.json` for "cordovaId", "version" and "description" fields.
+Quasar CLI 为了确定上面提到的每个属性的值：
+1. 在 `/quasar.config.js` 中查找 "cordova" 对象。它有 "version", "description" 和/或 "androidVersionCode"吗？如果是的话，它会使用它们。
+2. 如果没有，那么它会查看 `/package.json` 中的 "cordovaId", "version" 和 "description"字段。
 
 ```js
 return {
   capacitor: {
-    // If not present, will look for package.json > version
+    // 若未设置，将会查找 package.json > version
     version: '..', // string
-    // If not present, will look for package.json > description
+    // 若未设置，将会查找 package.json > description
     description: '...', // string
     androidVersionCode: '..', // string
 
     /**
-     * Enable Xcode modern build even if after considering iOS-Cordova issues.
-     * You can enable it if you know what you are doing,
-     *  for example if you want to specify the build type in your “build.json”.
+     * 即使考虑到 iOS-Cordova 问题，也启用 Xcode modern build，
+     * 如果您明确知道自己需要它，那么可以将其开启，
+     * 例如，如果您想在您的“build.json”文件中明确构建的类型。
      *
-     * Default: false
+     * 默认值: false
      */
     noIosLegacyBuildFlag: true/false
   }
 }
 ```
 
-Other options you can configure:
+您可以配置的其他选项：
 
 ```js
 return {
   framework: {
     config: {
       cordova: {
-        // add the dynamic top padding on iOS mobile devices
+        // 在 iOS 移动设备上添加动态的顶部填充(top padding)
         iosStatusBarPadding: true/false,
 
-        // Quasar handles app exit on mobile phone back button.
+        // Quasar 处理手机的返回按钮是否退出应用
         backButtonExit: true/false/'*'/['/login', '/home', '/my-page'],
 
-        // On the other hand, the following completely
-        // disables Quasar's back button management.
+        // 相反，下面的配置会完全禁用 Quasar 对返回按钮的管理
         backButton: true/false
       }
     }

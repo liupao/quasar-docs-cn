@@ -1,9 +1,10 @@
 ---
-title: What is Cordova
-desc: (@quasar/app-webpack) Introduction on one of the technologies behind Quasar hybrid mobile apps.
+title: 什么是 Cordova
+desc: (@quasar/app-webpack) 介绍 Quasar 混合移动应用程序背后的一项技术。
 ---
-Apache Cordova is a mobile application development framework originally created by Nitobi. Adobe Systems purchased Nitobi in 2011, rebranded it as PhoneGap, and later released an open source version of the software called Apache Cordova.
 
-[Apache Cordova](https://cordova.apache.org/) enables software programmers to build applications for mobile devices using CSS3, HTML5, and JavaScript instead of relying on platform-specific APIs like those in Android, iOS, or Windows Phone. It enables wrapping up of CSS, HTML, and JavaScript code depending upon the platform of the device. It extends the features of HTML and JavaScript to work with the device. The resulting applications are hybrid, meaning that they are neither truly native mobile application (because all layout rendering is done via Web views instead of the platform's native UI framework) nor purely Web-based (because they are not just Web apps, but are packaged as apps for distribution and have access to native device APIs).
+Apache Cordova 是一个最初由 Nitobi 创建的移动应用程序开发框架。Adobe Systems 于 2011 年收购了 Nitobi，并将其更名为   PhoneGap，随后发布了一个名为 Apache Cordova 的开源版本。
 
-You can hook into the native device APIs by using [Cordova Plugins](/quasar-cli-webpack/developing-cordova-apps/cordova-plugins).
+[Apache Cordova](https://cordova.apache.org/) 使开发者能够使用 CSS3，HTML5 和 JavaScript 为移动设备构建应用程序，而不是依赖特定平台的 API，如 Android，iOS 或 Windows Phone 中的 API。它可以根据设备的平台来封装 CSS，HTML 和 JavaScript 代码，并且扩展了 HTML 和 JavaScript 的功能以与设备一起工作。由此产生的 APP 属于混合应用，这意味着它们既不是真正的原生移动 APP（因为所有的布局视图渲染都是通过 Web 视图而不是平台的本地 UI 框架完成的），也不是纯粹的基于 Web 的 APP（它们不仅仅是 Web APP，因为可以打包成可分发的 APP, 并可访问本机设备 API）。
+
+您可以使用 [Cordova 插件](/quasar-cli-webpack/developing-cordova-apps/cordova-plugins)来访问设备的原生 API。

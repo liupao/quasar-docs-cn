@@ -1,31 +1,34 @@
 ---
-title: Managing Google Analytics
+title: 管理 Google Analytics
 desc: (@quasar/app-webpack) How to use analytics in a Quasar hybrid mobile app with Cordova.
 ---
-Getting to know your users and measuring user behavior is an important step in App Development. Unfortunately, it takes a bit of non-standard work to get Google Analytics to work after wrapping your mobile app with Cordova. Setting up Google Analytics in a pure web application is quite easy, but Cordova somehow prevents pageviews and events from being sent to Google Analytics.
 
-Follow this guide to implement Google Analytics into your Cordova powered Quasar App.
+了解用户和衡量用户行为是 App 开发中的重要一步。不幸的是，在使用 Cordova 包装移动应用程序后，需要一些非标准工作才能使 Google Analytics 工作。在纯 Web 应用程序中设置 Google Analytics 非常容易，但 Cordova 会以某种方式阻止将浏览量和事件发送到 Google Analytics。
 
-You may also want to read these great tutorials:
+遵循本指南将 Google Analytics 应用到 Cordova 包装的 Quasar 应用程序中。
+
+您可能还想阅读这些实用的教程：
+
 - [Google Tag Manager and Analytics Setup for an SPA Website](https://jannerantala.com/tutorials/quasar-framework-google-tag-manager-and-analytics-setup-for-an-spa-website/)
 - [Google Analytics Setup for a Cordova App](https://jannerantala.com/tutorials/quasar-framework-google-analytics-setup-for-cordova-app/)
 
 ::: warning
-You'll need to include a `<script>` tag provided by Google in `/src/index.template.html`, which will make your App depend on an Internet connection!
+您需要在 `/src/index.template.html` 中包含 Google 提供的 `<script>` 标记，这会使您的应用程序依赖于网络连接！
 :::
 
-## Prerequisites
+## 前提条件
 
-* Make sure all your routes have a name and path parameter specified. Otherwise, they cannot be posted to the `ga.logPage` function. Please refer to [Routing](/quasar-cli-webpack/routing) for more info on routing.
-* Have Basic knowledge of Google Analytics
+* 确保所有路由都有明确的名称和路径参数。否则，它们不能被发布到 `ga.logPage` 函数。有关路由的更多信息，请参阅[Routing](/quasar-cli-webpack/routing)。
+* 了解 Google Analytics 的基本知识
 
-## Preparation
-Before we can start implementing Google Analytics into your application, you'll need an account for [Google Analytics](https://analytics.google.com) and [Google Tagmanager](https://tagmanager.google.com/). So let's do that first. When you have these accounts, it's time to configure Tag manager. Follow the steps in this [Multiminds article](https://www.multiminds.eu/blog/2016/12/google-analytics-and-tag-manager-with-ionic-and-cordova-apps/) to do so.
+## 准备
 
-## Implementing this into application
-> For this guide, we'll assume you have a fixed sessionId that you send to Google Analytics. Google Analytics uses a sessionId to distinguish different users from each other. If you want to create an anonymous sessionId, see [Analytics Documentation on user id](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id).
+在我们开始将 Google Analytics 应用于您的应用程序之前，您需要有 [Google Analytics](https://analytics.google.com) 和 [Google Tagmanager](https://tagmanager.google.com/) 的帐户 。所以我们首先注册帐户。当您拥有这些帐户时，是时候配置标签管理器了。按照 [Multiminds 文章](https://www.multiminds.eu/blog/2016/12/google-analytics-and-tag-manager-with-ionic-and-cordova-apps/)中的步骤操作。
 
-Place the Tag Manager snippet into head of your `index.html` file (if you've followed the [Multiminds article](http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/), you already have this.) Create a new file in your codebase called `analytics.js` with the following contents:
+## 将其实施到项目中
+> 对于本指南，我们假设您拥有发送给 Google Analytics 的固定 sessionId。 Google Analytics 使用 sessionId 来区分不同的用户。如果要创建匿名 sessionId，请参阅[用户 ID 分析文档](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id)。
+
+将标签管理器代码片段放置到您的 `index.html` 文件的头部（如果您已按照[Multiminds 文章](http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/)做了，您已经有了这个。）在您的代码库中创建一个名为 `analytics.js` 的新文件，内容如下：
 
 ```javascript
 export default {
@@ -50,13 +53,13 @@ export default {
 }
 ```
 
-To make sure all the pages in your application are automatically posted to Google Analytics, we create an app boot file:
+为确保您的应用中的所有网页都自动发布到 Google Analytics，我们创建了一个 boot 文件：
 
 ```bash
 $ quasar new boot google-analytics [--format ts]
 ```
 
-Then we edit the newly created file: `/src/boot/google-analytics.js`:
+然后我们编辑新创建的文件： `/src/boot/google-analytics.js`:
 
 ```js
 import ga from 'analytics.js'
@@ -67,8 +70,7 @@ export default ({ router }) => {
   })
 }
 ```
-
-Finally we register the app boot file in `/quasar.config.js`. We can do so only for Cordova wrapped apps if we want:
+最后，我们在 `/quasar.config.js` 中注册 app 启动文件。 我们可以控制只在 Cordova 的应用程序里这样做：
 
 ```js
 boot: [
@@ -76,6 +78,6 @@ boot: [
 ]
 ```
 
-More information about events can be found in the [Analytics documentation on events](https://developers.google.com/analytics/devguides/collection/analyticsjs/events).
+关于事件的更多信息可以在 [Analytics documentation on events](https://developers.google.com/analytics/devguides/collection/analyticsjs/events)中找到。
 
-You'll see the events and pageviews coming in when you run your app. It usually takes around 5 to 10 seconds for a pageview to be registered in the realtime view.
+运行应用时，您会看到事件和浏览量。 在实时视图中注册浏览量通常需要大约 5 到 10 秒的时间。
