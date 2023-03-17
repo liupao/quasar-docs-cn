@@ -366,6 +366,15 @@
     }
   },
   "events": {
+    "fullscreen": {
+      "desc": "Emitted when fullscreen state changes",
+      "params": {
+        "value": {
+          "type": "Boolean",
+          "desc": "Fullscreen state (showing/hidden)"
+        }
+      }
+    },
     "update:model-value": {
       "desc": "Emitted when the component needs to change the model; Is also used by v-model",
       "params": {
@@ -376,6 +385,46 @@
         }
       },
       "desc_cn": "当组件需要改变模型数据（model）时触发，也会被 v-model 使用"
+    },
+    "dropdown-show": {
+      "desc": "Emitted after a dropdown in the toolbar has triggered show()",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object"
+        }
+      },
+      "addedIn": "v2.11.8"
+    },
+    "dropdown-before-show": {
+      "desc": "Emitted when a dropdown in the toolbar triggers show() but before it finishes doing it",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object"
+        }
+      },
+      "addedIn": "v2.11.8"
+    },
+    "dropdown-hide": {
+      "desc": "Emitted after a dropdown in the toolbar has triggered hide()",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object"
+        }
+      },
+      "addedIn": "v2.11.8"
+    },
+    "dropdown-before-hide": {
+      "desc": "Emitted when a dropdown in the toolbar triggers hide() but before it finishes doing it",
+      "params": {
+        "evt": {
+          "type": "Event",
+          "desc": "JS event object"
+        }
+      },
+      "addedIn": "v2.11.8"
     }
   },
   "methods": {

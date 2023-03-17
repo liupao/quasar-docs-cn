@@ -2213,6 +2213,15 @@
     }
   },
   "events": {
+    "fullscreen": {
+      "desc": "Emitted when fullscreen state changes",
+      "params": {
+        "value": {
+          "type": "Boolean",
+          "desc": "Fullscreen state (showing/hidden)"
+        }
+      }
+    },
     "row-click": {
       "desc": "Emitted when user clicks/taps on a row; Is not emitted when using body/row/item scoped slots",
       "params": {
