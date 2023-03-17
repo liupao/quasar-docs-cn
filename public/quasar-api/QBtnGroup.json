@@ -14,19 +14,19 @@
       "type": "Boolean",
       "desc": "Use 'outline' design for buttons",
       "category": "style",
-      "desc_cn": "按钮采用“轮廓线”设计"
+      "desc_cn": "采用“轮廓线”设计的按钮"
     },
     "flat": {
       "type": "Boolean",
       "desc": "Use 'flat' design for buttons",
       "category": "style",
-      "desc_cn": "按钮采用“扁平”设计"
+      "desc_cn": "采用“扁平”设计的按钮"
     },
     "unelevated": {
       "type": "Boolean",
       "desc": "Remove shadow on buttons",
       "category": "style",
-      "desc_cn": "删除按钮上的阴影"
+      "desc_cn": "去掉按钮上的阴影效果"
     },
     "rounded": {
       "type": "Boolean",
@@ -45,7 +45,7 @@
       "type": "Boolean",
       "desc": "Use 'push' design for buttons",
       "category": "style",
-      "desc_cn": "按钮采用“推”设计"
+      "desc_cn": "采用 'push' 设计的按钮"
     },
     "stretch": {
       "type": "Boolean",
@@ -63,7 +63,7 @@
   "slots": {
     "default": {
       "desc": "Suggestion: QBtn",
-      "desc_cn": "建议：QBtn"
+      "desc_cn": "建议：使用 QBtn 组件"
     }
   }
 }
