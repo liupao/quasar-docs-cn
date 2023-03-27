@@ -20,7 +20,7 @@
       "type": "Boolean",
       "desc": "Applies a 'flat' design (no default shadow)",
       "category": "style",
-      "desc_cn": "应用“平面”设计（无默认阴影）"
+      "desc_cn": "应用“扁平”设计（无默认阴影）"
     },
     "bordered": {
       "type": "Boolean",
@@ -39,7 +39,8 @@
       ],
       "category": "content",
       "default": "div",
-      "required": false
+      "required": false,
+      "desc_cn": "使用的 HTML 标签"
     }
   },
   "slots": {

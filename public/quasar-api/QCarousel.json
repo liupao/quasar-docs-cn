@@ -27,13 +27,14 @@
       "examples": [
         "v-model=\"panelName\""
       ],
-      "category": "model"
+      "category": "model",
+      "desc_cn": "组件的 model 数据，与当前显示面板的名称绑定。如果使用一个数字，它不表示面板的索引，而是指面板的名称也可以是一个整数。'update:model-value' 监听事件和 'v-model' 指令都会使用此属性"
     },
     "keep-alive": {
       "type": "Boolean",
       "desc": "Equivalent to using Vue's native <keep-alive> component on the content",
       "category": "behavior",
-      "desc_cn": "相当于在内容上使用Vue的原生<keep alive>组件"
+      "desc_cn": "相当于在内容上使用 Vue 的原生 '<keep alive>' 组件"
     },
     "keep-alive-include": {
       "type": [
@@ -48,7 +49,7 @@
         "['a', 'b']"
       ],
       "category": "behavior",
-      "desc_cn": "相当于为<keep alive>使用Vue的原生的include属性；值必须是有效的Vue组件名称"
+      "desc_cn": "相当于 Vue 原生组件 '<keep alive>' 的 include 属性；值必须是有效的 Vue 组件名称"
     },
     "keep-alive-exclude": {
       "type": [
@@ -63,25 +64,25 @@
         "['a', 'b']"
       ],
       "category": "behavior",
-      "desc_cn": "相当于为<keep alive>使用Vue的原生的exclude属性；值必须是有效的Vue组件名称"
+      "desc_cn": "相当于 Vue 原生组件 '<keep alive>' 的 exclude 属性；值必须是有效的 Vue 组件名称"
     },
     "keep-alive-max": {
       "type": "Number",
       "desc": "Equivalent to using Vue's native max prop for <keep-alive>",
       "category": "behavior",
-      "desc_cn": "相当于为<keep alive>使用Vue的原生的max属性"
+      "desc_cn": "相当于 Vue 原生组件 '<keep alive>' 的 max 属性；值必须是有效的 Vue 组件名称"
     },
     "animated": {
       "type": "Boolean",
       "desc": "Enable transitions between panel (also see 'transition-prev' and 'transition-next' props)",
       "category": "behavior",
-      "desc_cn": "启用面板之间的转换（另请参阅“transition-prev”和“transition-next”属性）"
+      "desc_cn": "启用面板之间切换时的过渡动画（另请参阅 'transition-prev' 和 'transition-next' 属性）"
     },
     "infinite": {
       "type": "Boolean",
       "desc": "Makes component appear as infinite (when reaching last panel, next one will become the first one)",
       "category": "behavior",
-      "desc_cn": "使组件显示为无限大（当到达最后一个面板时，下一个将成为第一个）"
+      "desc_cn": "使组件无限循环切换（当到达最后一个面板时，下一个切回第一个）"
     },
     "swipeable": {
       "type": "Boolean",
@@ -93,7 +94,7 @@
       "type": "Boolean",
       "desc": "Default transitions and swipe actions will be on the vertical axis",
       "category": "behavior",
-      "desc_cn": "默认的转换和滑动操作将在垂直轴上"
+      "desc_cn": "默认的切换和滑动操作将作用在垂直轴上"
     },
     "transition-prev": {
       "type": "String",
@@ -105,7 +106,7 @@
       "category": "transition",
       "default": "fade",
       "required": false,
-      "desc_cn": "Quasar的嵌入过渡效果之一（只有设置了“animated”属性才有效）"
+      "desc_cn": "Quasar 的内置过渡效果之一（只有设置了 'animated' 属性才有效）"
     },
     "transition-next": {
       "type": "String",
@@ -117,7 +118,7 @@
       "category": "transition",
       "default": "fade",
       "required": false,
-      "desc_cn": "Quasar的嵌入过渡效果之一（只有设置了“动画”道具才有效）"
+      "desc_cn": "Quasar 的内置过渡效果之一（只有设置了 'animated' 属性才有效）"
     },
     "transition-duration": {
       "type": [
@@ -128,7 +129,8 @@
       "default": 300,
       "category": "transition",
       "addedIn": "v2.2",
-      "required": false
+      "required": false,
+      "desc_cn": "过渡效果的时长（单位毫秒，不带单位）"
     },
     "dark": {
       "type": "Boolean",
@@ -144,13 +146,13 @@
         "2rem"
       ],
       "category": "style",
-      "desc_cn": "转盘的高度（CSS单位），包括单位名称"
+      "desc_cn": "每张幻灯片的高度（CSS 单位），包括单位名称"
     },
     "padding": {
       "type": "Boolean",
       "desc": "Applies a default padding to each slide, according to the usage of 'arrows' and 'navigation' props",
       "category": "content",
-      "desc_cn": "根据“arrows”和“navigation”属性的用法，对每张幻灯片应用默认填充"
+      "desc_cn": "根据 'arrows' 和 'navigation' 属性的值，对每张幻灯片应用默认内边距"
     },
     "control-color": {
       "type": "String",
@@ -160,7 +162,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "QCarousel按钮控件（箭头、导航）的来自Quasar调色板的颜色名称"
+      "desc_cn": "QCarousel 按钮控件的颜色（箭头、导航），来自 Quasar 调色板的颜色名称"
     },
     "control-text-color": {
       "type": "String",
@@ -170,7 +172,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "QCarousel按钮控件（箭头、导航）的文本颜色的来自Quasar调色板的颜色名称"
+      "desc_cn": "QCarousel 按钮控件的文本颜色（箭头、导航），来自Quasar调色板的颜色名称"
     },
     "control-type": {
       "type": "String",
@@ -183,7 +185,7 @@
         "unelevated"
       ],
       "category": "style",
-      "desc_cn": "用于控件的按钮类型（箭头、导航）"
+      "desc_cn": "控件的按钮样式类型（箭头、导航）"
     },
     "autoplay": {
       "type": [
@@ -198,7 +200,8 @@
         false
       ],
       "category": "behavior",
-      "required": false
+      "required": false,
+      "desc_cn": "间隔固定时间自动切换。如果值为 true 则每隔 5000 毫秒自动向下一页切换；如果值为大于 0 的数字，则以此数字为间隔（单位毫秒），自动向下一页切换；如果值为小于 0 的数字，则以此数字为间隔（单位毫秒），自动向上一页切换；如果值为 false 则关闭自动播放"
     },
     "arrows": {
       "type": "Boolean",
@@ -216,7 +219,7 @@
         "img:path/to/some_image.png"
       ],
       "category": "content",
-      "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
+      "desc_cn": "上一页按钮的图标名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
     },
     "next-icon": {
       "type": "String",
@@ -228,7 +231,7 @@
         "img:path/to/some_image.png"
       ],
       "category": "content",
-      "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
+      "desc_cn": "下一页按钮的图标名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
     },
     "navigation": {
       "type": "Boolean",
@@ -260,7 +263,7 @@
         "img:path/to/some_image.png"
       ],
       "category": "content",
-      "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
+      "desc_cn": "导航图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
     },
     "navigation-active-icon": {
       "type": "String",
@@ -272,7 +275,7 @@
         "img:path/to/some_image.png"
       ],
       "category": "content",
-      "desc_cn": "图标名称遵循激活的（当前幻灯片）导航图标的Quasar约定；请确保已安装图标库，除非使用“img:”前缀"
+      "desc_cn": "导航被激活的图标名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
     },
     "thumbnails": {
       "type": "Boolean",
@@ -288,30 +291,35 @@
     },
     "control": {
       "desc": "Slot specific for QCarouselControl",
-      "desc_cn": "特定于QCarouselControl的插槽"
+      "desc_cn": "特定于 QCarouselControl 的插槽"
     },
     "navigation-icon": {
       "desc": "Slot for navigation icon/btn; Suggestion: QBtn",
       "scope": {
         "index": {
           "type": "Number",
-          "desc": "The 0-based index of corresponding slide"
+          "desc": "The 0-based index of corresponding slide",
+          "desc_cn": "对应幻灯片的基于 0 的索引。"
         },
         "maxIndex": {
           "type": "Number",
-          "desc": "The available number of slides"
+          "desc": "The available number of slides",
+          "desc_cn": "可用幻灯片的最大数量"
         },
         "name": {
           "type": "Any",
-          "desc": "The name of the corresponding slide"
+          "desc": "The name of the corresponding slide",
+          "desc_cn": "对应幻灯片的名称"
         },
         "active": {
           "type": "Boolean",
-          "desc": "Is this the current slide?"
+          "desc": "Is this the current slide?",
+          "desc_cn": "是否是当前显示的幻灯片"
         },
         "btnProps": {
           "type": "Object",
-          "desc": "Default QBtn props that can be binded to your own QBtn"
+          "desc": "Default QBtn props that can be binded to your own QBtn",
+          "desc_cn": "默认 QBtn 的属性，可以绑定到自己的 QBtn"
         },
         "onClick": {
           "type": "Function",
@@ -320,12 +328,15 @@
             "evt": {
               "type": "Event",
               "desc": "JS event object",
-              "required": true
+              "required": true,
+              "desc_cn": "JS 事件对象"
             }
           },
-          "returns": null
+          "returns": null,
+          "desc_cn": "默认的点击事件"
         }
-      }
+      },
+      "desc_cn": "导航图标/按钮的插槽；建议使用：QBtn"
     }
   },
   "events": {
@@ -334,9 +345,11 @@
       "params": {
         "value": {
           "type": "Boolean",
-          "desc": "Fullscreen state (showing/hidden)"
+          "desc": "Fullscreen state (showing/hidden)",
+          "desc_cn": "全屏状态（显示/隐藏）"
         }
-      }
+      },
+      "desc_cn": "当全屏状态切换时触发"
     },
     "update:model-value": {
       "desc": "Emitted when the component changes the model; This event _isn't_ fired if the model is changed externally; Is also used by v-model",
@@ -349,9 +362,11 @@
           "desc": "New current panel name",
           "examples": [
             "dashboard"
-          ]
+          ],
+          "desc_cn": "新的面板名称"
         }
-      }
+      },
+      "desc_cn": "当组件的 model 数据发生变化时触发。如果 model 数据被外部更改，则不会触发此事件；它也被 v-model 使用。"
     },
     "before-transition": {
       "desc": "Emitted before transitioning to a new panel",
@@ -365,7 +380,7 @@
           "examples": [
             "dashboard"
           ],
-          "desc_cn": "正在发生转换到的目标面板名称"
+          "desc_cn": "正在发生切换到的目标面板名称"
         },
         "oldVal": {
           "type": [
@@ -376,10 +391,10 @@
           "examples": [
             "dashboard"
           ],
-          "desc_cn": "正在发生转换的来源面板名称"
+          "desc_cn": "正在发生切换的来源面板名称"
         }
       },
-      "desc_cn": "在转换到新面板之前发出"
+      "desc_cn": "在切换到新面板之前触发"
     },
     "transition": {
       "desc": "Emitted after component transitioned to a new panel",
@@ -393,7 +408,7 @@
           "examples": [
             "dashboard"
           ],
-          "desc_cn": "已发生转换的目标面板名称"
+          "desc_cn": "已发生切换的目标面板名称"
         },
         "oldVal": {
           "type": [
@@ -404,10 +419,10 @@
           "examples": [
             "dashboard"
           ],
-          "desc_cn": "已发生转换的来源面板名称"
+          "desc_cn": "已发生切换的来源面板名称"
         }
       },
-      "desc_cn": "在组件转换到新面板后发出"
+      "desc_cn": "在组件切换到新面板后触发"
     }
   },
   "methods": {

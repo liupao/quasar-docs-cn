@@ -8,7 +8,7 @@
       "type": "Boolean",
       "desc": "Display a horizontal section (will have no padding and can contain other QCardSection)",
       "category": "content",
-      "desc_cn": "显示水平部分（没有填充，可以包含其他QCardSection）"
+      "desc_cn": "水平显示此部分（没有内边距，可以包含其他的 QCardSection）"
     },
     "tag": {
       "type": "String",
@@ -21,7 +21,8 @@
       ],
       "category": "content",
       "default": "div",
-      "required": false
+      "required": false,
+      "desc_cn": "使用的 HTML 标签"
     }
   },
   "slots": {

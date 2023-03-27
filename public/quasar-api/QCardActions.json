@@ -19,13 +19,13 @@
       ],
       "category": "content",
       "required": false,
-      "desc_cn": "指定如何对齐操作"
+      "desc_cn": "指定如何对齐操作按钮"
     },
     "vertical": {
       "type": "Boolean",
       "desc": "Display actions one below the other",
       "category": "content",
-      "desc_cn": "一个接一个地显示操作"
+      "desc_cn": "一个接一个地显示操作按钮"
     }
   },
   "slots": {
