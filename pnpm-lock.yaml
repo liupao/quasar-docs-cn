@@ -4,7 +4,7 @@ specifiers:
   '@docsearch/css': ^3.3.2
   '@docsearch/js': ^3.3.2
   '@quasar/app-vite': ^1.2.1
-  '@quasar/extras': ^1.15.11
+  '@quasar/extras': ^1.16.1
   algoliasearch: ^4.14.3
   autoprefixer: ^10.4.13
   eslint: ^8.30.0
@@ -20,7 +20,7 @@ specifiers:
   markdown-it-container: ^3.0.0
   prismjs: ^1.29.0
   pug: ^3.0.2
-  quasar: ^2.11.8
+  quasar: ^2.11.9
   textlint: ^13.3.0
   textlint-rule-ja-space-between-half-and-full-width: ^2.3.0
   toml: ^3.0.0
@@ -31,15 +31,15 @@ specifiers:
 dependencies:
   '@docsearch/css': 3.3.2
   '@docsearch/js': 3.3.2
-  '@quasar/extras': registry.npmmirror.com/@quasar/extras/1.15.11
+  '@quasar/extras': registry.npmmirror.com/@quasar/extras/1.16.1
   algoliasearch: 4.14.3
   prismjs: 1.29.0
-  quasar: registry.npmmirror.com/quasar/2.11.8
+  quasar: registry.npmmirror.com/quasar/2.11.9
   vue: 3.2.45
   vue-router: 4.1.6_vue@3.2.45
 
 devDependencies:
-  '@quasar/app-vite': registry.npmmirror.com/@quasar/app-vite/1.2.1_nofthoquqtqedud7spvll3qmq4
+  '@quasar/app-vite': registry.npmmirror.com/@quasar/app-vite/1.2.1_ifuyaj44xqwzm7jn2xmd2kmuqe
   autoprefixer: 10.4.13
   eslint: 8.30.0
   eslint-config-standard: 17.0.0_snpl5wgzq3nl6iwyoqvj6sxsdi
@@ -3973,7 +3973,7 @@ packages:
     version: 1.0.0
     dev: true
 
-  registry.npmmirror.com/@quasar/app-vite/1.2.1_nofthoquqtqedud7spvll3qmq4:
+  registry.npmmirror.com/@quasar/app-vite/1.2.1_ifuyaj44xqwzm7jn2xmd2kmuqe:
     resolution: {integrity: sha512-iKvpucrnt5pQuuQxqkLLWuI7Wm9Xx9fcBK1miMHWBgdcbHOXhc/OrlxeLvRwxm7GMd91cp3nhslo5j3a+zMCOg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@quasar/app-vite/-/app-vite-1.2.1.tgz}
     id: registry.npmmirror.com/@quasar/app-vite/1.2.1
     name: '@quasar/app-vite'
@@ -4005,7 +4005,7 @@ packages:
         optional: true
     dependencies:
       '@quasar/fastclick': registry.npmmirror.com/@quasar/fastclick/1.1.5
-      '@quasar/vite-plugin': registry.npmmirror.com/@quasar/vite-plugin/1.3.0_y23ie32zgc5557ad2uzm23rjf4
+      '@quasar/vite-plugin': registry.npmmirror.com/@quasar/vite-plugin/1.3.0_swuaddycalfykzsfikt4xyrjua
       '@rollup/pluginutils': registry.npmmirror.com/@rollup/pluginutils/4.2.1
       '@types/chrome': registry.npmmirror.com/@types/chrome/0.0.208
       '@types/compression': registry.npmmirror.com/@types/compression/1.7.2
@@ -4032,7 +4032,7 @@ packages:
       minimist: registry.npmmirror.com/minimist/1.2.7
       open: registry.npmmirror.com/open/8.4.0
       ouch: registry.npmmirror.com/ouch/2.0.1
-      quasar: registry.npmmirror.com/quasar/2.11.8
+      quasar: registry.npmmirror.com/quasar/2.11.9
       register-service-worker: registry.npmmirror.com/register-service-worker/1.7.2
       rollup-plugin-visualizer: registry.npmmirror.com/rollup-plugin-visualizer/5.8.3
       sass: registry.npmmirror.com/sass/1.32.12
@@ -4051,10 +4051,10 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/@quasar/extras/1.15.11:
-    resolution: {integrity: sha512-EEXL10EJQmL9jNs5fp0Kd/nyonG8hTODolj+qpYNPG3qEEoy3txr05Pdmp9qJYaXIzP9rOS9FGhFe9Mnq6MBBg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@quasar/extras/-/extras-1.15.11.tgz}
+  registry.npmmirror.com/@quasar/extras/1.16.1:
+    resolution: {integrity: sha512-bRnWSC469Qogw0ceDVd0yTQVBQjyhV6L10EMixXK1dpOs9tWGKRVgyyGZ5DEBkDgyn4BeRuV5s5e9VrQdQPsOg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@quasar/extras/-/extras-1.16.1.tgz}
     name: '@quasar/extras'
-    version: 1.15.11
+    version: 1.16.1
     dev: false
 
   registry.npmmirror.com/@quasar/fastclick/1.1.5:
@@ -4063,7 +4063,7 @@ packages:
     version: 1.1.5
     dev: true
 
-  registry.npmmirror.com/@quasar/vite-plugin/1.3.0_y23ie32zgc5557ad2uzm23rjf4:
+  registry.npmmirror.com/@quasar/vite-plugin/1.3.0_swuaddycalfykzsfikt4xyrjua:
     resolution: {integrity: sha512-wd7b/QrKu/WB53l+vxo6GLbkoEwh5FFKLtLl3fM8TXrDDRB1qsKKkRa/vwTU4dpuyBaOZDjycmYuAsOlTdNp8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@quasar/vite-plugin/-/vite-plugin-1.3.0.tgz}
     id: registry.npmmirror.com/@quasar/vite-plugin/1.3.0
     name: '@quasar/vite-plugin'
@@ -4076,7 +4076,7 @@ packages:
       vue: ^3.0.0
     dependencies:
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/2.3.4_vite@2.9.15+vue@3.2.45
-      quasar: registry.npmmirror.com/quasar/2.11.8
+      quasar: registry.npmmirror.com/quasar/2.11.9
       vite: registry.npmmirror.com/vite/2.9.15_sass@1.32.12
       vue: 3.2.45
     dev: true
@@ -6976,10 +6976,10 @@ packages:
       side-channel: registry.npmmirror.com/side-channel/1.0.4
     dev: true
 
-  registry.npmmirror.com/quasar/2.11.8:
-    resolution: {integrity: sha512-JhwTnwNQ7YNTEq3SdhIOK0R32hEw/43gDiomYFDjVVXNF6WQdjlzgQr1N9AWGpXFzKRlJeIyhcskxZClj15EVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/quasar/-/quasar-2.11.8.tgz}
+  registry.npmmirror.com/quasar/2.11.9:
+    resolution: {integrity: sha512-ZHSZRQJk/zN6whhvihh0EyRpAs3IYBZZ+1O5/RSe7nXyOXOVi6RwPBzleab5HoTxtHL5Yuk3/bKgb3CywAyBQQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/quasar/-/quasar-2.11.9.tgz}
     name: quasar
-    version: 2.11.8
+    version: 2.11.9
     engines: {node: '>= 10.18.1', npm: '>= 6.13.4', yarn: '>= 1.21.1'}
 
   registry.npmmirror.com/queue-microtask/1.2.3:

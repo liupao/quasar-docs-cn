@@ -17,10 +17,10 @@
   "dependencies": {
     "@docsearch/css": "^3.3.2",
     "@docsearch/js": "^3.3.2",
-    "@quasar/extras": "^1.15.11",
+    "@quasar/extras": "^1.16.1",
     "algoliasearch": "^4.14.3",
     "prismjs": "^1.29.0",
-    "quasar": "^2.11.8",
+    "quasar": "^2.11.9",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
