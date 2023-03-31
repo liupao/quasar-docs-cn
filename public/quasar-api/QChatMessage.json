@@ -8,7 +8,7 @@
       "type": "Boolean",
       "desc": "Render as a sent message (so from current user)",
       "category": "content",
-      "desc_cn": "呈现为已发送消息（因此来自当前用户）"
+      "desc_cn": "呈现为已发送消息（来自当前用户）"
     },
     "label": {
       "type": "String",
@@ -27,7 +27,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "聊天气泡背景的颜色名称（来自Quasar调色板）"
+      "desc_cn": "聊天气泡背景的颜色名称（来自 Quasar 调色板）"
     },
     "text-color": {
       "type": "String",
@@ -37,7 +37,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "聊天气泡文本的颜色名称（来自Quasar调色板）"
+      "desc_cn": "聊天气泡文本的颜色名称（来自 Quasar 调色板）"
     },
     "name": {
       "type": "String",
@@ -59,7 +59,7 @@
         "(URL) src=\"https://picsum.photos/500/300\""
       ],
       "category": "content",
-      "desc_cn": "作者头像的URL"
+      "desc_cn": "作者头像的 URL"
     },
     "text": {
       "type": "Array",
@@ -69,7 +69,7 @@
         ":text=\"['I\\'m good, thank you!', 'And you?']\""
       ],
       "category": "content",
-      "desc_cn": "作为消息正文的字符串数组。字符串未经过安全处理（请参阅文档中的详细信息）"
+      "desc_cn": "作为消息正文的字符串数组。字符串不会进行安全处理（请参阅文档中的详细信息）"
     },
     "stamp": {
       "type": "String",
@@ -90,33 +90,37 @@
         "12"
       ],
       "category": "style",
-      "desc_cn": "第1-12列，共12列（与col-*相同）"
+      "desc_cn": "第 1-12 列，共 12 列（与 col-* 相同）"
     },
     "label-html": {
       "type": "Boolean",
       "desc": "Render the label as HTML; This can lead to XSS attacks so make sure that you sanitize the message first",
-      "category": "behavior"
+      "category": "behavior",
+      "desc_cn": "渲染 label 时使用的 HTML 标签；这可能导致 XSS 攻击，所以确保提前对消息进行安全处理"
     },
     "name-html": {
       "type": "Boolean",
       "desc": "Render the name as HTML; This can lead to XSS attacks so make sure that you sanitize the message first",
-      "category": "behavior"
+      "category": "behavior",
+      "desc_cn": "渲染名称时使用的 HTML 标签；这可能导致 XSS 攻击，所以确保提前对消息进行安全处理"
     },
     "text-html": {
       "type": "Boolean",
       "desc": "Render the text as HTML; This can lead to XSS attacks so make sure that you sanitize the message first",
-      "category": "behavior"
+      "category": "behavior",
+      "desc_cn": "渲染文本时使用的 HTML 标签；这可能导致 XSS 攻击，所以确保提前对消息进行安全处理"
     },
     "stamp-html": {
       "type": "Boolean",
       "desc": "Render the stamp as HTML; This can lead to XSS attacks so make sure that you sanitize the message first",
-      "category": "behavior"
+      "category": "behavior",
+      "desc_cn": "渲染时间戳时使用的 HTML 标签；这可能导致 XSS 攻击，所以确保提前对消息进行安全处理"
     }
   },
   "slots": {
     "default": {
       "desc": "You can use this slot to define a custom message (overrides props)",
-      "desc_cn": "您可以使用此插槽定义自定义消息（覆盖属性）"
+      "desc_cn": "您可以使用此插槽自定义消息（覆盖属性）"
     },
     "avatar": {
       "desc": "Slot for avatar; Suggestion: QAvatar, img",
@@ -124,15 +128,15 @@
     },
     "name": {
       "desc": "Slot for name; Overrides the 'name' prop",
-      "desc_cn": "名称插槽；覆盖“name”属性"
+      "desc_cn": "名称插槽；覆盖 'name' 属性"
     },
     "stamp": {
       "desc": "Slot for stamp; Overrides the 'stamp' prop",
-      "desc_cn": "时间戳插槽；覆盖“stamp”属性"
+      "desc_cn": "时间戳插槽；覆盖 'stamp' 属性"
     },
     "label": {
       "desc": "Slot for label; Overrides the 'label' prop",
-      "desc_cn": "标签插槽；覆盖“label”属性"
+      "desc_cn": "标签插槽；覆盖 'label' 属性"
     }
   }
 }

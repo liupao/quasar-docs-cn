@@ -20,7 +20,7 @@
       ],
       "category": "position",
       "required": false,
-      "desc_cn": "要粘贴的边/角"
+      "desc_cn": "要附着的边/角"
     },
     "offset": {
       "type": "Array",

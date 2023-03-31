@@ -35,7 +35,8 @@
         "(relative path format) :src=\"require('./my_img.jpg')\"",
         "(URL) src=\"https://picsum.photos/500/300\""
       ],
-      "category": "model"
+      "category": "model",
+      "desc_cn": "幻灯片背景图片 URL"
     }
   },
   "slots": {

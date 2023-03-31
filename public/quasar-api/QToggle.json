@@ -37,7 +37,8 @@
       "examples": [
         "false",
         "['car', 'building']"
-      ]
+      ],
+      "desc_cn": "组件的 model 数据，可通过 'update:model-value' 监听事件或 'v-model' 指令使用此属性"
     },
     "val": {
       "type": "Any",

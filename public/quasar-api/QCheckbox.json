@@ -11,7 +11,7 @@
         "car_id"
       ],
       "category": "behavior",
-      "desc_cn": "用于指定控件的名称；如果处理直接提交到URL的表单，则非常有用"
+      "desc_cn": "用于指定控件的名称；如果处理直接提交到 URL 的表单，则非常有用"
     },
     "size": {
       "type": "String",
@@ -37,7 +37,8 @@
       "examples": [
         "false",
         "['car', 'building']"
-      ]
+      ],
+      "desc_cn": "组件的 model 数据，可通过 'update:model-value' 监听事件或 'v-model' 指令使用此属性"
     },
     "val": {
       "type": "Any",
@@ -46,7 +47,7 @@
         "car"
       ],
       "category": "model",
-      "desc_cn": "当model（'value'）是数组时工作。它告诉组件在勾选/取消勾选时应该添加/删除哪个值"
+      "desc_cn": "当 model（'value'）是数组时，它告诉组件在勾选/取消勾选时应该添加/删除哪个值"
     },
     "true-value": {
       "type": "Any",
@@ -57,7 +58,7 @@
       ],
       "category": "model",
       "required": false,
-      "desc_cn": "什么模型值应被视为选中/勾选/启用？"
+      "desc_cn": "model 为何值时被视为选中/勾选/启用？"
     },
     "false-value": {
       "type": "Any",
@@ -68,7 +69,7 @@
       ],
       "category": "model",
       "required": false,
-      "desc_cn": "什么模型值应被视为未选中/未勾选/关闭？"
+      "desc_cn": "model 为何值时被视为未选中/未勾选/关闭？"
     },
     "indeterminate-value": {
       "type": "Any",
@@ -80,7 +81,7 @@
       ],
       "category": "behavior",
       "required": false,
-      "desc_cn": "什么模型值应被视为“不确定”？"
+      "desc_cn": "model 为何值时被视为“不确定”？"
     },
     "toggle-order": {
       "type": "String",
@@ -92,13 +93,13 @@
       ],
       "category": "behavior",
       "required": false,
-      "desc_cn": "确定两种状态的切换顺序（“t”表示真状态，“f”表示假状态）；如果“toggle-indeterminate”为true，则顺序为：indet->first state->second state->indet（并重复），否则：indet->first state->second state->first state->second state->..."
+      "desc_cn": "定义两种状态的切换顺序（'t' 表示 true，'f' 表示 false）；如果 'toggle-indeterminate' 为 true，则顺序为：indet->first state->second state->indet（并重复），否则：indet->first state->second state->first state->second state->..."
     },
     "toggle-indeterminate": {
       "type": "Boolean",
       "desc": "When user clicks/taps on the component, should we toggle through the indeterminate state too?",
       "category": "behavior",
-      "desc_cn": "当用户点击组件时，我们是否也应该切换到不确定状态？"
+      "desc_cn": "当用户点击组件时，除 true 和 false 外，是否还添加一个不确定（indeterminate）的状态？"
     },
     "label": {
       "type": "String",
@@ -113,7 +114,7 @@
       "type": "Boolean",
       "desc": "Label (if any specified) should be displayed on the left side of the component",
       "category": "label",
-      "desc_cn": "标签（如有指定）应显示在组件的左侧"
+      "desc_cn": "如有标签，应显示在组件的左侧"
     },
     "checked-icon": {
       "type": "String",
@@ -122,7 +123,8 @@
       ],
       "category": "icons",
       "desc": "The icon to be used when the model is truthy (instead of the default design)",
-      "addedIn": "v2.5"
+      "addedIn": "v2.5",
+      "desc_cn": "此图标将会在 model 值为 true 时被使用（代替默认的设计）"
     },
     "unchecked-icon": {
       "type": "String",
@@ -131,7 +133,8 @@
       ],
       "category": "icons",
       "desc": "The icon to be used when the toggle is falsy (instead of the default design)",
-      "addedIn": "v2.5"
+      "addedIn": "v2.5",
+      "desc_cn": "此图标将会在 model 值为 false 时被使用（代替默认的设计）"
     },
     "indeterminate-icon": {
       "type": "String",
@@ -140,7 +143,8 @@
       ],
       "category": "icons",
       "desc": "The icon to be used when the model is indeterminate (instead of the default design)",
-      "addedIn": "v2.5"
+      "addedIn": "v2.5",
+      "desc_cn": "此图标将会在 model 值为 indeterminate（不确定状态）时被使用（代替默认的设计）"
     },
     "color": {
       "type": "String",
@@ -156,7 +160,7 @@
       "type": "Boolean",
       "desc": "Should the color (if specified any) be kept when the component is unticked/ off?",
       "category": "behavior",
-      "desc_cn": "当组件未勾选/关闭时，是否应保留颜色（如有规定）？"
+      "desc_cn": "当组件未勾选/关闭时，是否应保留颜色？"
     },
     "dark": {
       "type": "Boolean",
@@ -193,7 +197,7 @@
   "slots": {
     "default": {
       "desc": "Default slot can be used as label, unless 'label' prop is specified; Suggestion: string",
-      "desc_cn": "可以用作标签的默认插槽，除非指定了“label”属性；建议：字符串"
+      "desc_cn": "可以用作标签的默认插槽，除非指定了 'label' 属性；建议：字符串"
     }
   },
   "events": {
@@ -203,12 +207,14 @@
         "value": {
           "type": "Any",
           "desc": "New model value",
-          "required": true
+          "required": true,
+          "desc_cn": "新的 model 值"
         },
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "required": true
+          "required": true,
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc_cn": "当组件需要改变模型数据（model）时触发，也会被 v-model 使用"
@@ -217,7 +223,7 @@
   "methods": {
     "toggle": {
       "desc": "Toggle the state (of the model)",
-      "desc_cn": "切换（模型的）状态"
+      "desc_cn": "切换模型数据（model）的状态"
     }
   }
 }
