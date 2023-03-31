@@ -1,51 +1,55 @@
 ---
-title: Quasar Icon Sets
-desc: How to configure icon sets for Quasar components.
+title:  Quasar 默认图标库
+desc: 如何配置 Quasar 组件使用的默认图标库
 related:
   - /options/installing-icon-libraries
   - /vue-components/icon
 ---
 
-Quasar components have their own icons. Rather than forcing you into using one icon library in particular (so that they can display correctly), Quasar lets you choose **which icons it should use for its components**. This is called a `Quasar Icon Set`.
+Quasar 的组件中会用到一些默认的图标，您可以指定 Quasar 使用哪个图标库作为默认图标库，被指定的这个图标库称为 `Quasar Icon Set`。
 
-You can install multiple icon libraries, but you must choose only one to use on Quasar's components.
+您可以安装多个图标库，但是只能选择一个作为 Quasar 组件的默认图标库。
 
-Quasar currently supports: [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) and [Bootstrap Icons](https://icons.getbootstrap.com/).
+Quasar 目前支持 [Material Icons](https://material.io/icons/) , [Font Awesome](https://fontawesome.com/icons), [Ionicons](http://ionicons.com/), [MDI](https://materialdesignicons.com/), [Eva Icons](https://akveo.github.io/eva-icons), [Themify Icons](https://themify.me/themify-icons), [Line Awesome](https://icons8.com/line-awesome) 和 [Bootstrap Icons](https://icons.getbootstrap.com/).
 
-It is also possible to use your own icons (as custom svgs or as images in any format) with any Quasar component, see the [QIcon](/vue-components/icon#image-icons) page for more info on this.
+当然，您也可以将自己的图标（自定义的 SVG 或者任意格式的图片）用在 Quasar 的组件中，请参阅 [QIcon](/vue-components/icon#image-icons) 页面了解更多信息。
 
 ::: tip
-Related pages: [Installing Icon Libraries](/options/installing-icon-libraries) and [QIcon component](/vue-components/icon).
+相关页面：[安装图标库](/options/installing-icon-libraries) 和 [QIcon 组件](/vue-components/icon)。
 :::
 
-## Configuring the default Icon Set
-**There are two types of Quasar Icon Sets: webfont-based and svg-based.**
+## 配置默认的图标库
+**Quasar 中有两种类型的图标库：webfont 类型和 svg 类型。**
 
-Unless configured otherwise, Quasar uses Material Icons webfont as the icon set for its components. You can however tell Quasar to use some other Icon Set, but if it's a webfont-based one then be sure to include its icon library in your website/app (see [Installing Icon Libraries](/options/installing-icon-libraries)).
+如果没有特别的配置，Quasar 将会使用 webfont 类型的 Material Icons 作为默认的组件图标库。当然，您可以指定 Quasar 使用别的图标库，但是如果是一个 webfont 类型的图标，您需要确保提前将其安装，请参考[安装图标库](/options/installing-icon-libraries)。
 
-### Hardcoded
-If the default Quasar Icon Set is not dynamically determined (does not depends on cookies for example), then you can:
+### 硬编码
+如果不需要动态切换 Quasar 默认图标库，那么您可以根据您的项目类型选择以下方式之一：
 
-#### Quasar CLI Way
-We edit `/quasar.config.js` again:
+#### Quasar CLI 方式
+编辑 `/quasar.config.js`：
 
 ```js
+extras: [
+  // 确保启用了图标库
+  'mdi-v6'
+],
 framework: {
-  // webfont-based example
+  // webfont 类型的图标库示例
   iconSet: 'mdi-v6'
 }
 ```
 
 ```js
 framework: {
-  // svg-based example
+  // svg 类型的图标库示例
   iconSet: 'svg-mdi-v6'
 }
 ```
 
-For all available options, visit the [GitHub](https://github.com/quasarframework/quasar/tree/dev/ui/icon-set) repository.
+关于所有可用的选项，请参考：[GitHub](https://github.com/quasarframework/quasar/tree/dev/ui/icon-set) 仓库
 
-Full example of including MDI & Fontawesome and telling Quasar to use Fontawesome for its components.
+下面是一个完整的示例，启用 MDI 和 Fontawesome 并指定 Quasar 使用 Fontawesome 作为其组件的默认图标库。
 
 ```js
 extras: [
@@ -57,23 +61,23 @@ framework: {
 }
 ```
 
-This will enable you to use both MDI & Fontawesome webfonts in your app, and all Quasar components will display Fontawesome icons.
+这样，您可以同时在您的项目中使用 MDI 和 Fontawesome 的字体图标，同时，所有的 Quasar 组件都会默认使用 Fontawesome 的图标。
 
-#### UMD Way
-Include the Quasar Icon Set tag for your Quasar version and also tell Quasar to use it. Example:
+#### UMD 方式
+引入图标库，并指定 Quasar 使用它，示例：
 
 ```html
-<!-- include this after Quasar JS tag -->
+<!-- 在 Quasar 的 js 标签之后引入图标库 -->
 <script src="https://cdn.jsdelivr.net/npm/quasar@v2/dist/icon-set/fontawesome-v6.umd.prod.js"></script>
 <script>
   Quasar.iconSet.set(Quasar.iconSet.fontawesomeV6)
 </script>
 ```
 
-Check what tags you need to include in your HTML files on [UMD / Standalone](/start/umd) page.
+请参考 [UMD / Standalone](/start/umd) 页面查看您需要在 HTML 中引入的标签。
 
-#### Quasar Vite Plugin Way
-We edit your `main.js`:
+#### Quasar Vite 插件的方式
+编辑 `main.js`：
 
 ```js
 // ...
@@ -88,8 +92,8 @@ app.use(Quasar, {
 })
 ```
 
-#### Vue CLI Way
-We edit your `main.js`:
+#### Vue CLI 方式
+编辑 `main.js`:
 
 ```js
 import iconSet from 'quasar/icon-set/fontawesome-v6'
@@ -102,42 +106,42 @@ app.use(Quasar, {
 })
 ```
 
-### Dynamic (on non-SSR)
-Quasar CLI: If your desired Quasar Icon Set must be dynamically selected (example: depends on a cookie), then you need to create a boot file: `$ quasar new boot quasar-icon-set [--format ts]`. This will create `/src/boot/quasar-icon-set.js` file. Edit it to:
+### 动态切换 （适用于非 SSR 模式）
+
+Quasar CLI: 如果您的项目中 Quasar 默认图标库需要动态的切换（例如：根据 cookie 来切换），那么您需要创建一个启动文件：`quasar new boot quasar-icon-set [--format ts]`，这个命令会创建一个 `/src/boot/quasar-icon-set.ts` 文件，编辑它如下：
 
 ```js
-// -- With @quasar/app-vite --
+// -- 在 @quasar/app-vite 版本中 --
 
 import { Quasar } from 'quasar'
 
-// relative path to your node_modules/quasar/..
-// change to YOUR path
+// 修改路径为您的 node_modules/quasar/.. 的相对路径
 const iconSetList = import.meta.glob('../../node_modules/quasar/icon-set/*.mjs')
-// or just a select few (example below with only DE and FR):
+// 或者只选择少数的几个图标库（如下面的示例只选择了 mdi-v6 和 fontawesome-v6）：
 // import.meta.glob('../../node_modules/quasar/icon-set/(mdi-v6|fontawesome-v6).mjs')
 
 export default async () => {
-  const iconSetName = 'mdi-v6' // ... some logic to determine it (use Cookies Plugin?)
+  const iconSetName = 'mdi-v6' // ... 在此您可以自定义选择图标库的逻辑（例如使用一个 Cookies 插件？）
 
   try {
     iconSetList[ `../../node_modules/quasar/icon-set/${ iconSetName }.mjs` ]().then(lang => {
-      Quasar.iconSet.set(setDefinition.default)
+      Quasar.iconSet.set(lang.default)
     })
   }
   catch (err) {
-    // Requested Quasar Icon Set does not exist,
-    // let's not break the app, so catching error
+    // 请求的图标库不存在
+    // 为了避免整个应用被破坏，所以捕获这个错误
   }
 }
 ```
 
 ```js
-// -- With @quasar/app-webpack --
+// -- 在 @quasar/app-webpack 版本中 --
 
 import { Quasar } from 'quasar'
 
 export default async () => {
-  const iconSetName = 'mdi-v6' // ... some logic to determine it (use Cookies Plugin?)
+  const iconSetName = 'mdi-v6' // ... 在此您可以自定义选择图标库的逻辑（例如使用一个 Cookies 插件？）
 
   try {
     await import(
@@ -148,13 +152,13 @@ export default async () => {
     })
   }
   catch (err) {
-    // Requested Quasar Icon Set does not exist,
-    // let's not break the app, so catching error
+    // 请求的图标库不存在
+    // 为了避免整个应用被破坏，所以捕获这个错误
   }
 }
 ```
 
-Then register this boot file into `/quasar.config.js`:
+然后记得在 `/quasar.config.js` 中注册这个启动文件：
 
 ```js
 boot: [
@@ -162,36 +166,37 @@ boot: [
 ]
 ```
 
-::: warning Always constrain a dynamic import
-Notice the use of the [Webpack magic comment](https://webpack.js.org/api/module-methods/#magic-comments) - `webpackInclude`. Otherwise all the available icon set files will be bundled, resulting in an increase in the compilation time and the bundle size. See [Caveat for dynamic imports](https://quasar.dev/quasar-cli/lazy-loading#Caveat-for-dynamic-imports)
+::: warning 始终限制动态导入
+注意其中关于 [Webpack 魔法注册](https://webpack.js.org/api/module-methods/#magic-comments) - `webpackInclude` 的使用。否则所有的图标库都会被打包进构建产物中去，即使并没有使用它们，导致编译时间和产物体积增大。更多信息请参考[动态导入的注意事项](https://quasar.dev/quasar-cli/lazy-loading#Caveat-for-dynamic-imports)。
 :::
 
-### Dynamic (on SSR)
-When dealing with SSR, we can't use singleton objects because that would pollute sessions. As a result, as opposed to the dynamical example above (read it first!), you must also specify the `ssrContext` from your boot file:
+### 动态切换 （适用于 SSR 模式）
+
+在处理 SSR 模式时，我们不能使用单例对象，因为这会污染会话。因此，与上面的动态示例（先阅读它！）相反，您还必须从引导文件中指定 `ssrContext`：
+
 
 ```js
 // -- With @quasar/app-vite --
 
 import { Quasar } from 'quasar'
 
-// relative path to your node_modules/quasar/..
-// change to YOUR path
+// 修改路径为您的 node_modules/quasar/.. 的相对路径
 const iconSetList = import.meta.glob('../../node_modules/quasar/icon-set/*.mjs')
-// or just a select few (example below with only DE and FR):
+// 或者只选择少数的几个图标库（如下面的示例只选择了 mdi-v6 和 fontawesome-v6）：
 // import.meta.glob('../../node_modules/quasar/icon-set/(mdi-v6|fontawesome-v6).mjs')
 
-// ! NOTICE ssrContext param:
+// ! 注意 ssrContext 参数：
 export default async ({ ssrContext }) => {
-  const iconSetName = 'mdi-v6' // ... some logic to determine it (use Cookies Plugin?)
+  const iconSetName = 'mdi-v6' // ... 在此您可以自定义选择图标库的逻辑（例如使用一个 Cookies 插件？）
 
   try {
     iconSetList[ `../../node_modules/quasar/icon-set/${ iconSetName }.mjs` ]().then(lang => {
-      Quasar.iconSet.set(setDefinition.default, ssrContext)
+      Quasar.iconSet.set(lang.default, ssrContext)
     })
   }
   catch (err) {
-    // Requested Quasar Icon Set does not exist,
-    // let's not break the app, so catching error
+    // 请求的图标库不存在
+    // 为了避免整个应用被破坏，所以捕获这个错误
   }
 }
 ```
@@ -201,9 +206,9 @@ export default async ({ ssrContext }) => {
 
 import { Quasar } from 'quasar'
 
-// ! NOTICE ssrContext param:
+// ! 注意 ssrContext 参数：
 export default async ({ ssrContext }) => {
-  const iconSetName = 'mdi-v6' // ... some logic to determine it (use Cookies Plugin?)
+  const iconSetName = 'mdi-v6' // ... 在此您可以自定义选择图标库的逻辑（例如使用一个 Cookies 插件？）
 
   try {
     await import(
@@ -214,19 +219,18 @@ export default async ({ ssrContext }) => {
     })
   }
   catch (err) {
-    // Requested Quasar Icon Set does not exist,
-    // let's not break the app, so catching error
+    // 请求的图标库不存在
+    // 为了避免整个应用被破坏，所以捕获这个错误
   }
 }
 ```
 
-## Change Quasar Icon Set at Runtime
-
-#### Changing Icon Set Dynamically
-Quasar Icon Set is reactive, so all components will update properly if you change the $q.iconSet object. Here is an example:
+## 在运行时切换 Quasar 默认图标库
+#### 动态切换默认图标库
+Quasar Icon Set 是响应式的，所以，如果修改了 $q.iconSet 对象，所有的组件都会自动更新。示例：
 
 ```js
-// Composition API variant
+// 组合式 API 形式
 import { useQuasar } from 'quasar'
 import mdiIconSet from 'quasar/icon-set/mdi-v6.js'
 
@@ -244,7 +248,7 @@ setup () {
 ```
 
 ```js
-// Options API variant
+// 选项式 API 形式
 import mdiIconSet from 'quasar/icon-set/mdi-v6.js'
 
 methods: {
@@ -254,11 +258,11 @@ methods: {
 }
 ```
 
-#### Changing a Specific Icon Dynamically
-If you want to change a specific icon to another, you can. Here is an example:
+#### 动态的切换一个指定的组件的图标
+如果您想修改一个指定的图标：
 
 ```js
-// Composition API variant
+// 组合式 API 形式
 import { useQuasar } from 'quasar'
 
 setup () {
@@ -273,7 +277,7 @@ setup () {
 ```
 
 ```js
-// Options API variant
+// 选项式 API 形式
 methods: {
   changeQEditorHeaderIcon () {
     this.$q.iconSet.editor.header1 = 'fas fa-font'
