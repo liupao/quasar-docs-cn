@@ -22,7 +22,7 @@
       "desc": "Current progress (must be between min/max)",
       "category": "model",
       "required": false,
-      "desc_cn": "当前进度（必须介于min/max之间）"
+      "desc_cn": "当前进度（必须介于 min/max 之间）"
     },
     "min": {
       "type": "Number",
@@ -30,7 +30,7 @@
       "desc": "Minimum value defining 'no progress' (must be lower than 'max')",
       "category": "model",
       "required": false,
-      "desc_cn": "定义“无进度”的最小值（必须低于“最大值”）"
+      "desc_cn": "定义 'no progress' 的最小值（必须低于“最大值”）"
     },
     "max": {
       "type": "Number",
@@ -38,7 +38,7 @@
       "desc": "Maximum value defining 100% progress made (must be higher than 'min')",
       "category": "model",
       "required": false,
-      "desc_cn": "定义100%进度的最大值（必须高于“min”）"
+      "desc_cn": "定义 100% 进度的最大值（必须高于 'min' ）"
     },
     "color": {
       "type": "String",
@@ -48,7 +48,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "弧形进度的来自Quasar调色板的颜色名称"
+      "desc_cn": "弧形进度的颜色，来自 Quasar 调色板的颜色名称"
     },
     "center-color": {
       "type": "String",
@@ -58,7 +58,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件中心部分的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件中心部分的颜色，来自 Quasar 调色板的颜色名称"
     },
     "track-color": {
       "type": "String",
@@ -68,7 +68,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "组件轨迹的来自Quasar调色板的颜色名称"
+      "desc_cn": "组件轨道的颜色，来自 Quasar 调色板的颜色名称"
     },
     "font-size": {
       "type": "String",
@@ -81,13 +81,14 @@
       ],
       "category": "style",
       "required": false,
-      "desc_cn": "以CSS单位表示的文本大小，包括单位名称。建议：使用“em”单位与组件大小同步"
+      "desc_cn": "以 CSS 单位表示的文本大小，包括单位名称。建议：使用 'em' 单位与组件大小同步"
     },
     "rounded": {
       "type": "Boolean",
       "desc": "Rounding the arc of progress",
       "category": "style",
-      "addedIn": "v2.8.4"
+      "addedIn": "v2.8.4",
+      "desc_cn": "使进度条的弧线变圆"
     },
     "thickness": {
       "type": "Number",
@@ -95,7 +96,7 @@
       "desc": "Thickness of progress arc as a ratio (0.0 < x < 1.0) of component size",
       "category": "style",
       "required": false,
-      "desc_cn": "进度弧形的厚度与组件大小之比（0.0<x<1.0）"
+      "desc_cn": "进度条弧形的厚度与组件大小之比（0.0<x<1.0）"
     },
     "angle": {
       "type": "Number",
@@ -103,19 +104,19 @@
       "default": 0,
       "category": "content",
       "required": false,
-      "desc_cn": "旋转进度弧形的角度"
+      "desc_cn": "旋转进度条弧形的角度"
     },
     "indeterminate": {
       "type": "Boolean",
       "desc": "Put component into 'indeterminate' state; Ignores 'value' prop",
       "category": "behavior",
-      "desc_cn": "将组件置于“不确定”状态；忽略“value”属性"
+      "desc_cn": "将组件置于“不确定”（indeterminate）状态；忽略 'value' 属性"
     },
     "show-value": {
       "type": "Boolean",
       "desc": "Enables the default slot and uses it (if available), otherwise it displays the 'value' prop as text; Make sure the text has enough space to be displayed inside the component",
       "category": "content|behavior",
-      "desc_cn": "启用默认插槽并使用它（如果可用），否则它会将“value”属性显示为文本；确保文本有足够的空间显示在组件内部"
+      "desc_cn": "启用默认插槽并使用它（如果可用），否则它会将 'value' 属性显示为文本；确保文本有足够的空间显示在组件内部"
     },
     "reverse": {
       "type": "Boolean",
@@ -127,7 +128,7 @@
       "type": "Boolean",
       "desc": "No animation when model changes",
       "category": "behavior",
-      "desc_cn": "模型更改时没有动画"
+      "desc_cn": "model 更改时没有动画"
     },
     "animation-speed": {
       "type": [
@@ -142,13 +143,14 @@
       "category": "style",
       "default": 600,
       "addedIn": "v2.3",
-      "required": false
+      "required": false,
+      "desc_cn": "动画速度（单位毫秒，不需要带单位）"
     }
   },
   "slots": {
     "default": {
       "desc": "Used for component content only if 'show-value' prop is set; Make sure the content has enough space to be displayed inside the component",
-      "desc_cn": "仅当设置了“show-value”属性时才用于组件内容；确保内容有足够的空间显示在组件内部"
+      "desc_cn": "仅当设置了 'show-value' 属性时才用于组件内容；确保内容有足够的空间显示在组件内部"
     }
   }
 }
