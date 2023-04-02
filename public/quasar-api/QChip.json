@@ -23,7 +23,7 @@
         "2rem"
       ],
       "category": "style",
-      "desc_cn": "QChip大小名称或包含单位名称的CSS单位"
+      "desc_cn": "设置 QChip 尺寸，可以填入标准大小名称或包含单位名称的 CSS 尺寸"
     },
     "dark": {
       "type": "Boolean",
@@ -141,19 +141,19 @@
       "type": "Boolean",
       "desc": "Display using the 'outline' design",
       "category": "style",
-      "desc_cn": "使用“轮廓线”设计显示"
+      "desc_cn": "使用 'outline' 设计显示"
     },
     "clickable": {
       "type": "Boolean",
       "desc": "Is QChip clickable? If it's the case, then it will add hover effects and emit 'click' events",
       "category": "state",
-      "desc_cn": "QChip是可点击的吗？如果是这样，那么它将添加悬停效果并发出“click”事件"
+      "desc_cn": "QChip 是否可点击，如果是，那么它将添加悬停动画和 'click' 事件"
     },
     "removable": {
       "type": "Boolean",
       "desc": "If set, then it displays a 'remove' icon that when clicked the QChip emits 'remove' event",
       "category": "state",
-      "desc_cn": "如果设置了，那么它会显示一个“删除”图标，当点击QChip时会发出“remove”事件"
+      "desc_cn": "如果设置了，那么它会显示一个 '删除' 图标，当点击 QChip 时会触发 'remove' 事件"
     },
     "ripple": {
       "type": [
@@ -177,7 +177,8 @@
         "Remove item"
       ],
       "category": "accessibility",
-      "addedIn": "v2.8.4"
+      "addedIn": "v2.8.4",
+      "desc_cn": "删除图标的 aria-label"
     },
     "tabindex": {
       "type": [
@@ -202,7 +203,7 @@
   "slots": {
     "default": {
       "desc": "This is where QChip content goes, if not using 'label' property",
-      "desc_cn": "如果不使用“label”属性，这就是QChip内容的放置位置"
+      "desc_cn": "如果不使用 'label' 属性，这就是 QChip 内容的放置位置"
     }
   },
   "events": {
@@ -212,10 +213,10 @@
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "如果设置了“clickable”属性，则在QChip点击后发出"
+      "desc_cn": "如果设置了 'clickable' 属性，则在 QChip 被点击后触发"
     },
     "update:selected": {
       "desc": "Used by Vue on 'v-model:selected' for updating its value",
@@ -225,7 +226,8 @@
           "desc": "Selected state",
           "desc_cn": "选定的状态"
         }
-      }
+      },
+      "desc_cn": "Vue 会使用 'v-model:selected' 更新其值"
     },
     "remove": {
       "desc": "Works along with 'value' and 'removable' prop. Emitted when toggling rendering state of the QChip",
@@ -236,7 +238,7 @@
           "desc_cn": "渲染状态（渲染或不渲染）"
         }
       },
-      "desc_cn": "与“value”和“removable”属性一起使用。切换QChip的渲染状态时发出"
+      "desc_cn": "与 'value' 和 'removable' 属性一起使用。切换 QChip 的渲染状态时触发"
     }
   }
 }
