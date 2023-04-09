@@ -11,7 +11,7 @@
         "car_id"
       ],
       "category": "behavior",
-      "desc_cn": "用于指定控件的名称；如果处理直接提交到URL的表单，则非常有用"
+      "desc_cn": "用于指定控件的名称；如果处理直接提交到 URL 的表单，则非常有用"
     },
     "landscape": {
       "type": "Boolean",
@@ -123,7 +123,7 @@
       "type": "Boolean",
       "desc": "Applies a 'flat' design (no default shadow)",
       "category": "style",
-      "desc_cn": "应用“平面”设计（无默认阴影）"
+      "desc_cn": "应用 'flat' 设计（无默认阴影）"
     },
     "bordered": {
       "type": "Boolean",
@@ -160,7 +160,8 @@
         "v-model=\"[myDate1, myDate2]\"",
         "v-model=\"[{ from: myDateFrom, to: myDateTo }]\"",
         "v-model=\"[myDate1, { from: myDateFrom, to: myDateTo }, myDate2]\""
-      ]
+      ],
+      "desc_cn": "组件的时间，如果使用了 'multiple' 则必须是一个数组。可使用此属性（搭配一个 'update:model-value' 监听事件）或者直接使用 v-model 指令。"
     },
     "title": {
       "type": "String",

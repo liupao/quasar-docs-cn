@@ -26,7 +26,7 @@
       "examples": [
         "v-model=\"myColor\""
       ],
-      "desc_cn": "组件的 model 数据，可通过 'update:model-value' 监听事件或 'v-model' 指令使用此属性"
+      "desc_cn": "组件的 model 数据，可使用此属性（搭配一个 'update:model-value' 监听事件）或者直接使用 v-model 指令。"
     },
     "default-value": {
       "type": "String",
