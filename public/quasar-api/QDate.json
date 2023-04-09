@@ -170,7 +170,7 @@
         "Birthday"
       ],
       "category": "content",
-      "desc_cn": "指定时，它将覆盖默认的头部标题；不处于“最小”模式时有意义"
+      "desc_cn": "指定时，它将替换默认的头部标题；不处于 'minimal' 模式时生效"
     },
     "subtitle": {
       "type": "String",
@@ -179,7 +179,7 @@
         "John Doe"
       ],
       "category": "content",
-      "desc_cn": "当指定时，它会覆盖默认的头部副标题；不处于“最小”模式时有意义"
+      "desc_cn": "当指定时，它会替换默认的头部副标题；不处于 'minimal' 模式时生效"
     },
     "default-year-month": {
       "type": "String",
@@ -188,7 +188,7 @@
         "1986/02"
       ],
       "category": "model",
-      "desc_cn": "模型未设置（undefined或null）时要显示的默认年份和月份（YYYY/MM格式）；请确保在年月的最小/最大导航内（如果使用）"
+      "desc_cn": "model 数据未设置（ undefined 或 null）时要显示的默认年份和月份（YYYY/MM 格式）；如果使用，请确保在年月的最小/最大范围内"
     },
     "default-view": {
       "type": "String",
@@ -207,7 +207,7 @@
       "type": "Boolean",
       "desc": "Show the years selector in months view",
       "category": "behavior",
-      "desc_cn": "在月视图中显示年选择器"
+      "desc_cn": "在月份视图中显示年份选择器"
     },
     "events": {
       "type": [
@@ -222,19 +222,21 @@
           "examples": [
             "2018/11/05",
             "2021/10/25"
-          ]
+          ],
+          "desc_cn": "当前处理的日期"
         }
       },
       "returns": {
         "type": "Boolean",
-        "desc": "If true, the current date will be highlighted"
+        "desc": "If true, the current date will be highlighted",
+        "desc_cn": "如果为 true，则高亮当前的日期"
       },
       "examples": [
         ":events=\"['2018/11/05', '2018/11/06', '2018/11/09', '2018/11/23']\"",
         ":events=\"date => date[9] % 3 === 0\""
       ],
       "category": "model",
-      "desc_cn": "日历上要突出显示的事件列表；如果使用函数，它将以字符串形式接收日期，并且必须返回布尔值（匹配与否）；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "desc_cn": "日历上要高亮显示的事件列表；如果使用函数，它将以字符串形式接收日期，并且必须返回布尔值（匹配与否）；如果使用函数，那么为了获得最佳性能，请从 Vue 作用域范围中引用它，而不要内联定义它"
     },
     "event-color": {
       "type": [
@@ -249,7 +251,8 @@
           "examples": [
             "2018/11/05",
             "2021/10/25"
-          ]
+          ],
+          "desc_cn": "当前处理的日期"
         }
       },
       "returns": {
@@ -258,14 +261,15 @@
         "examples": [
           "teal",
           "orange"
-        ]
+        ],
+        "desc_cn": "当前日期的颜色"
       },
       "examples": [
         "teal-10",
         ":event-color=\"(date) => date[9] % 2 === 0 ? 'teal' : 'orange'\""
       ],
       "category": "style",
-      "desc_cn": "颜色名称（来自Quasar调色板）；如果使用函数，它将接收作为字符串的日期，并且必须返回字符串（颜色表示接收的日期）；如果使用函数，那么为了获得最佳性能，请从您的范围引用它，而不要内联定义它"
+      "desc_cn": "颜色名称（来自 Quasar 调色板）；如果使用函数，它将接收作为字符串的日期，并且必须返回字符串（表示当前日期的颜色）；如果使用函数，那么为了获得最佳性能，请从 Vue 作用域范围中引用它，而不要内联定义它"
     },
     "options": {
       "type": [
@@ -280,12 +284,14 @@
           "examples": [
             "2018/11/05",
             "2021/10/25"
-          ]
+          ],
+          "desc_cn": "当前处理的日期"
         }
       },
       "returns": {
         "type": "Boolean",
-        "desc": "If true, the current date will be made available for selection"
+        "desc": "If true, the current date will be made available for selection",
+        "desc_cn": "如果为 true，则当前日期可以被选中"
       },
       "examples": [
         ":options=\"['2018/11/05', '2018/11/12', '2018/11/19', '2018/11/26' ]\"",
@@ -293,7 +299,7 @@
         ":options=\"date => date >= '2018/11/03' && date <= '2018/11/15'\""
       ],
       "category": "model",
-      "desc_cn": "可选择地配置能够选择的天数；如果使用函数，它将以字符串形式接收日期，并且必须返回布尔值（日期是否可接受）；如果使用一个函数，那么为了获得最佳性能，请从您的范围引用它，不要内联定义它；与“range”属性不兼容"
+      "desc_cn": "可选择地配置能够选择的日期；如果使用函数，它将以字符串形式接收日期，并且必须返回布尔值（日期是否可接受）；如果使用一个函数，那么为了获得最佳性能，请从 Vue 作用域范围中引用它，不要内联定义它；与 'range' 属性不兼容"
     },
     "navigation-min-year-month": {
       "type": "String",
@@ -302,7 +308,7 @@
         "2020/07"
       ],
       "category": "selection",
-      "desc_cn": "锁定用户在特定年+月（YYYY/MM格式）以下导航；此属性不用于修正模型；您可能还需要使用“default-year-month”属性"
+      "desc_cn": "锁定用户在特定年+月（YYYY/MM 格式）以下导航；此属性不用于修正 model 数据；您可能还需要使用 'default-year-month' 属性"
     },
     "navigation-max-year-month": {
       "type": "String",
@@ -311,13 +317,13 @@
         "2020/10"
       ],
       "category": "selection",
-      "desc_cn": "锁定用户在特定年+月（YYYY/MM格式）以上导航；此属性不用于修正模型；您可能还需要使用“default-year-month”属性"
+      "desc_cn": "锁定用户在特定年+月（YYYY/MM格式）以上导航；此属性不用于修正 model 数据；您可能还需要使用 'default-year-month' 属性"
     },
     "no-unset": {
       "type": "Boolean",
       "desc": "Remove ability to unselect a date; It does not apply to selecting a range over already selected dates",
       "category": "selection",
-      "desc_cn": "取消不选择日期的功能；它不适用于选择已选定日期的范围"
+      "desc_cn": "取消日期不可被选择的功能；它不适用于在已选择的日期上选择一个范围。"
     },
     "first-day-of-week": {
       "type": [
@@ -338,7 +344,7 @@
       "type": "Boolean",
       "desc": "Display a button that selects the current day",
       "category": "content",
-      "desc_cn": "显示选择当前日期的按钮"
+      "desc_cn": "显示回到当前日期的按钮"
     },
     "minimal": {
       "type": "Boolean",
@@ -350,19 +356,19 @@
       "type": "Boolean",
       "desc": "Allow multiple selection; Model must be Array",
       "category": "model|selection",
-      "desc_cn": "允许多选；模型必须是数组"
+      "desc_cn": "允许多选；model 数据必须是数组"
     },
     "range": {
       "type": "Boolean",
       "desc": "Allow range selection; Partial compatibility with 'options' prop: selected ranges might also include 'unselectable' days",
       "category": "model|selection",
-      "desc_cn": "允许范围选择；与“options”属性部分兼容：选定的范围可能还包括“不能选择”的天"
+      "desc_cn": "允许范围选择；与 'options' 属性部分兼容：选定的范围可能还包括“不能选择”的天"
     },
     "emit-immediately": {
       "type": "Boolean",
       "desc": "Emit model when user browses month and year too; ONLY for single selection (non-multiple, non-range)",
       "category": "model",
-      "desc_cn": "用户浏览月份和年份时也会发出模型；仅用于单选（非多个，非范围）"
+      "desc_cn": "用户浏览月份和年份时也会触发 model 改变；仅用于单选（非多选，非范围选择）"
     }
   },
   "slots": {
@@ -383,7 +389,8 @@
             "null"
           ],
           "desc": "New model value",
-          "required": true
+          "required": true,
+          "desc_cn": "新的 model 值"
         },
         "reason": {
           "type": "String",
@@ -397,7 +404,8 @@
             "locale",
             "year",
             "month"
-          ]
+          ],
+          "desc_cn": "用户交互的类型"
         },
         "details": {
           "type": "Object",
@@ -406,17 +414,20 @@
             "year": {
               "type": "Number",
               "required": true,
-              "desc": "The year of the date that the user has clicked/tapped on"
+              "desc": "The year of the date that the user has clicked/tapped on",
+              "desc_cn": "用户点击的日期的年份"
             },
             "month": {
               "type": "Number",
               "required": true,
-              "desc": "The month of the date that the user has clicked/tapped on"
+              "desc": "The month of the date that the user has clicked/tapped on",
+              "desc_cn": "用户点击的日期的月份"
             },
             "day": {
               "type": "Number",
               "required": true,
-              "desc": "The day of the month that the user has clicked/tapped on"
+              "desc": "The day of the month that the user has clicked/tapped on",
+              "desc_cn": "用户点击的日期的某天"
             },
             "from": {
               "type": "Object",
@@ -426,19 +437,23 @@
                 "year": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The year"
+                  "desc": "The year",
+                  "desc_cn": "年"
                 },
                 "month": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The month"
+                  "desc": "The month",
+                  "desc_cn": "月"
                 },
                 "day": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The day of month"
+                  "desc": "The day of month",
+                  "desc_cn": "一月中的第几天"
                 }
-              }
+              },
+              "desc_cn": "范围选择时，范围开始日的属性对象"
             },
             "to": {
               "type": "Object",
@@ -448,21 +463,26 @@
                 "year": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The year"
+                  "desc": "The year",
+                  "desc_cn": "年"
                 },
                 "month": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The month"
+                  "desc": "The month",
+                  "desc_cn": "月"
                 },
                 "day": {
                   "type": "Number",
                   "required": true,
-                  "desc": "The day of month"
+                  "desc": "The day of month",
+                  "desc_cn": "一月中的第几天"
                 }
-              }
+              },
+              "desc_cn": "范围选择时，范围结束日的属性对象"
             }
-          }
+          },
+          "desc_cn": "新的 model 值的属性对象"
         }
       },
       "desc_cn": "当组件需要改变模型数据（model）时触发，也会被 v-model 使用"
@@ -478,19 +498,19 @@
               "type": "Number",
               "required": true,
               "desc": "The year",
-              "desc_cn": "年度"
+              "desc_cn": "年"
             },
             "month": {
               "type": "Number",
               "required": true,
               "desc": "The month",
-              "desc_cn": "月份"
+              "desc_cn": "月"
             }
           },
           "desc_cn": "当前视图的定义（年、月）"
         }
       },
-      "desc_cn": "当用户导航到不同的月份或年份时发出（甚至当模型从外部源更改时）"
+      "desc_cn": "当用户导航到不同的月份或年份时触发（甚至当 model 从外部源更改时）"
     },
     "range-start": {
       "desc": "User has started a range selection",
@@ -503,19 +523,19 @@
               "type": "Number",
               "required": true,
               "desc": "The year",
-              "desc_cn": "年度"
+              "desc_cn": "年"
             },
             "month": {
               "type": "Number",
               "required": true,
               "desc": "The month",
-              "desc_cn": "月份"
+              "desc_cn": "月"
             },
             "day": {
               "type": "Number",
               "required": true,
               "desc": "The day of month",
-              "desc_cn": "月份的哪天"
+              "desc_cn": "月中的第几天"
             }
           },
           "desc_cn": "范围起始日期的定义"
@@ -539,22 +559,22 @@
                   "type": "Number",
                   "required": true,
                   "desc": "The year",
-                  "desc_cn": "年度"
+                  "desc_cn": "年"
                 },
                 "month": {
                   "type": "Number",
                   "required": true,
                   "desc": "The month",
-                  "desc_cn": "月份"
+                  "desc_cn": "月"
                 },
                 "day": {
                   "type": "Number",
                   "required": true,
                   "desc": "The day of month",
-                  "desc_cn": "月份的哪天"
+                  "desc_cn": "月中的第几天"
                 }
               },
-              "desc_cn": "范围起始日期的定义"
+              "desc_cn": "范围开始日期的定义"
             },
             "to": {
               "type": "Object",
@@ -565,19 +585,19 @@
                   "type": "Number",
                   "required": true,
                   "desc": "The year",
-                  "desc_cn": "年度"
+                  "desc_cn": "年"
                 },
                 "month": {
                   "type": "Number",
                   "required": true,
                   "desc": "The month",
-                  "desc_cn": "月份"
+                  "desc_cn": "月"
                 },
                 "day": {
                   "type": "Number",
                   "required": true,
                   "desc": "The day of month",
-                  "desc_cn": "月份的哪天"
+                  "desc_cn": "月中的第几天"
                 }
               },
               "desc_cn": "范围结束日期的定义"
@@ -592,7 +612,7 @@
   "methods": {
     "setToday": {
       "desc": "Change model to today",
-      "desc_cn": "将模型更改为今天"
+      "desc_cn": "将 model 数据更改为今天"
     },
     "setView": {
       "desc": "Change current view",
@@ -606,7 +626,7 @@
             "Months",
             "Years"
           ],
-          "desc_cn": "QDate视图名称"
+          "desc_cn": "QDate 视图名称"
         }
       },
       "desc_cn": "更改当前视图"
@@ -622,7 +642,7 @@
             "month",
             "year"
           ],
-          "desc_cn": "增加/减少什么"
+          "desc_cn": "增加/减少年还是月？"
         },
         "descending": {
           "type": "Boolean",
@@ -638,15 +658,15 @@
         "year": {
           "type": "Number",
           "desc": "The year",
-          "desc_cn": "年度"
+          "desc_cn": "年"
         },
         "month": {
           "type": "Number",
           "desc": "The month",
-          "desc_cn": "月份"
+          "desc_cn": "月"
         }
       },
-      "desc_cn": "更改日历视图的当前年份和月份；如果使用navigation-min/max-year-month并将当前视图设置为Calendar，则会得到更正"
+      "desc_cn": "更改日历视图的当前年份和月份；如果使用 navigation-min/max-year-month 并将当前视图设置为 Calendar，则会得到更正"
     },
     "setEditingRange": {
       "desc": "Configure the current editing range",
@@ -658,17 +678,17 @@
             "year": {
               "type": "Number",
               "desc": "The year",
-              "desc_cn": "年度"
+              "desc_cn": "年"
             },
             "month": {
               "type": "Number",
               "desc": "The month",
-              "desc_cn": "月份"
+              "desc_cn": "月"
             },
             "day": {
               "type": "Number",
               "desc": "The day of month",
-              "desc_cn": "月份的哪天"
+              "desc_cn": "月中的第几天"
             }
           },
           "desc_cn": "范围起始日期的定义"
@@ -680,17 +700,17 @@
             "year": {
               "type": "Number",
               "desc": "The year",
-              "desc_cn": "年度"
+              "desc_cn": "年"
             },
             "month": {
               "type": "Number",
               "desc": "The month",
-              "desc_cn": "月份"
+              "desc_cn": "月"
             },
             "day": {
               "type": "Number",
               "desc": "The day of month",
-              "desc_cn": "月份的哪天"
+              "desc_cn": "月中的第几天"
             }
           },
           "desc_cn": "范围结束日期的定义"
