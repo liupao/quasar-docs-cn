@@ -144,7 +144,7 @@ import zhCH from './zn-CH'
 
 export default {
   'en-US': enUS,
-  'zn-CH': zhCH
+  'zn-CN': zhCN
 }
 ```
 
