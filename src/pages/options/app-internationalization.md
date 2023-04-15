@@ -1,5 +1,5 @@
 ---
-title: 应用程序多语言国际化
+title: 多语言国际化
 desc: 如何在 Quasar 中使用 vue-i18n。
 related:
   - /options/rtl-support
@@ -135,16 +135,16 @@ export default {
 
 下面讲述如何添加一个新的语言
 
-1. 创建新的文件 `src/i18n/zn-CH/index.js`，并将 `src/i18n/en-US/index.js` 文件中的内容拷贝过去，然后修改对应的文案字段。
+1. 创建新的文件 `src/i18n/zh-CN/index.js`，并将 `src/i18n/en-US/index.js` 文件中的内容拷贝过去，然后修改对应的文案字段。
 2. 将新的语言添加到 `src/i18n/index.js` 文件中。
 
 ```js
 import enUS from './en-US'
-import zhCH from './zn-CH'
+import zhCN from './zh-CN'
 
 export default {
   'en-US': enUS,
-  'zn-CN': zhCN
+  'zh-CN': zhCN
 }
 ```
 
@@ -181,7 +181,7 @@ export default {
       locale,
       localeOptions: [
         { value: 'en-US', label: 'English' },
-        { value: 'zn-CH', label: '中文' }
+        { value: 'zh-CN', label: '中文' }
       ]
     }
   }
