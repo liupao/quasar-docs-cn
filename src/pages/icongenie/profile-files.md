@@ -1,15 +1,15 @@
 ---
-title: Icon Genie Profile Files
-desc: How to use profile files with the Icon Genie CLI.
+title: Icon Genie 配置文件
+desc: 怎样使用 Icon Genie CLI 的配置文件？
 ---
 
-If you need to automate the creation of all your app's icons and splash screens, Icon Genie offers configuration files which can be run in batch.
+如果你需要自动创建应用程序的图标和启动画面，Icon Genie 提供了用于批量运行的配置文件。
 
-These configuration files are called "profile files". The files are in JSON format and tell Icon Genie which images to generate and how to generate them. They also spare you from having to remember the whole set of Icon Genie commands and parameters to generate your assets.
+这些配置文件被称为“profile files”。它们是 JSON 格式的，告诉 Icon Genie 要生成哪些图像以及如何生成它们。你就可以不用记忆 Icon Genie CLI 的命令和参数了。
 
-## File structure
+## 文件结构
 
-The generic form of a JSON profile file is:
+JSON 配置文件的一般形式是：
 
 ```json
 {
@@ -18,36 +18,36 @@ The generic form of a JSON profile file is:
 }
 ```
 
-We will be discussing each in the next sections.
+我们将在下一节中逐一讨论。
 
-### Params
+### 参数
 
-The `params` object from a JSON profile file takes the same prop names as the [generate](/icongenie/command-list#generate) command parameters (but camelCased instead of the CLI's kebab-case). There is one key difference: instead of using `mode` (examples: "spa,pwa", "all") you will be writing `include` (examples: [ "spa", "pwa" ], [ "all" ]).
+JSON 配置文件中的 `params` 对象与 [generate](/icongenie/command-list#generate) 命令参数使用相同的名称（但使用驼峰式大小写，而不是 CLI 的 kebab-case）。有一个关键的区别：不是使用 `mode`（例如 “spa,pwa”，“all”），而是使用 `include`（例如 [“spa”，“pwa”]，[“all”]）。
 
-Full list of props that you can write for the `params` object:
+`params` 对象的选项列表：
 
-| Prop name | Type | Description | Examples |
+| 选项名称 | 数据类型 | 说明 | 举例 |
 | --- | --- | --- | --- |
-| include | Array | Include Icon Genie hardcoded sets of assets for specific Quasar modes | `[ "spa", "pwa" ]` / `[ "all" ]` |
-| icon | String | Path to source file for icon; can be absolute or relative to the root of the Quasar project folder | `my-icon.png` |
-| background | String | Path to optional background source file (for splash screens); can be absolute or relative to the root of the Quasar project folder | `my-bg.png` |
-| filter | String | Optionally filter the assets by generators; when used, it can generate only one type of asset instead of all | `ico` |
-| quality | Number [1-12] | Quality of the generated files; higher quality means bigger filesize, slower; lower quality means smaller filesize, faster | `12` |
-| padding | Array [Number] | (v2.1+) Apply fixed padding to the icon image after trimming it; Syntax: [ <horiz_px>, <vert_px> ]; Default is: [0, 0] | `[10, 0]` / `[5,5]` |
-| skipTrim | Boolean | (v2.2+) Do not trim the icon source file | |
-| themeColor | String [hex] | Theme color to use for all generators requiring a color; it gets overridden if any generator color is also specified | `ccc` / `e2b399` |
-| pngColor | String [hex] | Background color to use for the png generator, when "background: true" in the asset definition (like for the cordova/capacitor iOS icons) | `ccc` / `e2b399` |
-| splashscreenColor | String [hex] | Background color to use for the splashscreen generator | `ccc` / `e2b399` |
-| svgColor | String [hex] | Color to use for the generated monochrome SVGs | `ccc` / `e2b399` |
-| splashscreenIconRatio | Number [0-100] | Ratio of icon size in respect to the width or height (whichever is smaller) of the resulting splashscreen; represents percentages; 0 means it won't add the icon of top of the background | `40` |
+| include | Array | Icon Genie 给哪些 Quasar 模式生成图标？ | `[ "spa", "pwa" ]` / `[ "all" ]` |
+| icon | String | 图标的源文件路径；可以是绝对路径，也可以相对于 Quasar 项目的根文件夹 | `my-icon.png` |
+| background | String | 可选，背景源文件的路径（用于启动画面）; 可以是绝对路径，或相对于类星体项目的根文件夹的路径 | `my-bg.png` |
+| filter | String | 可选，过滤资源文件；在使用时，它只能生成一种类型的资源文件，而不是所有类型 | `ico` |
+| quality | Number [1-12] | 生成文件的质量；质量越高，文件越大，速度越慢；较低的质量意味着更小的文件，更快的速度 | `12` |
+| padding | Array [Number] | (v2.1+) 裁剪完图标图片后，添加内边距；语法： [ <水平像素>, <竖直像素> ]；默认是： [0, 0] | `[10, 0]` / `[5,5]` |
+| skipTrim | Boolean | (v2.2+) 不要裁剪图片。 | |
+| themeColor | String [hex] | 为所有需要颜色的生成器使用的默认主题颜色；如果生成器指定了颜色，就会覆盖这个默认值。 | `ccc` / `e2b399` |
+| pngColor | String [hex] | 当资源文件定义了 “Background: true”时，png 生成器使用的背景颜色（类似于 cordova/capacitor iOS 图标） | `ccc` / `e2b399` |
+| splashscreenColor | String [hex] | 启动画面的背景颜色。 | `ccc` / `e2b399` |
+| svgColor | String [hex] | 单色 SVG 图片的颜色。 | `ccc` / `e2b399` |
+| splashscreenIconRatio | Number [0-100] | 图标大小相对于生成的启动画面的宽度或高度（以较小的那个为准）的比率；数字是百分比；0 表示不会添加背景顶部的图标 | `40` |
 
 ### Assets
 
-The `assets` array can contain custom definitions for **extra assets**, should you need them. This can be used when Icon Genie's default list for each mode is not sufficient for your use case. If you don't specify the `include` prop in `params` you can only generate your custom assets.
+如果你需要，`assets` 数组可以包含自定义的 **额外资源** 。当 Icon Genie 的每个模式的默认列表不足以满足您的需要时，可以使用此方法。如果你没有在 `params` 中指定 `include` 属性，你只能生成自定义资源文件。
 
-In 99% of the cases you won't need to specify the `assets` array, but Icon Genie is designed to be very flexible, so it includes this feature too.
+在 99% 的情况下，你不需要指定 `assets` 数组，但是 Icon Genie 被设计得非常灵活，所以它也包含了这个功能。
 
-Some examples for `assets` from which you can extract the syntax for every type of possible asset that Icon Genie can generate:
+一些示例，示范了每种 assets 类型的语法：
 
 ```json
 "assets": [
@@ -144,9 +144,8 @@ Some examples for `assets` from which you can extract the syntax for every type 
   }
 ]
 ```
+## 自动制作配置文件
 
-## Bootstrap profiles
+Icon Genie 还提供了 [profile 命令](/icongenie/command-list#profile)，它可以为你生成 JSON 配置文件。它可以帮助您创建一个或多个这样的文件，然后您可以通过带有 `--profile` 参数（或简短的 `-p`）的 [generate 命令](/icongenie/command-list#generate) 批量运行这些文件。
 
-Icon Genie also offers the [profile command](/icongenie/command-list#profile) which can bootstrap JSON profile files for you. It can help you create one or more such files that you can then run in batch through the [generate command](/icongenie/command-list#generate) with `--profile` param (or short `-p`).
-
-The most handy use case is to generate multiple profile files into one specific folder, each with their own parameters, and then run all of them through `$ icongenie generate -p /path/to/folder`.
+最方便的例子是在一个特定的文件夹中生成多个配置文件，每个文件都有自己的参数，然后通过 `$ icongenie generate -p /path/to/folder` 运行所有文件。

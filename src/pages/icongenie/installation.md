@@ -1,83 +1,82 @@
 ---
-title: Icon Genie CLI Installation
-desc: How to install the Icon Genie CLI on your development machine.
+title: 安装 Icon Genie CLI 
+desc: 如何在你的开发机器上安装 Icon Genie CLI？
 ---
 
-Make sure that you have Node >=12.22.1 and NPM >=6.14.12 installed on your machine.
+确保你的机器上已经安装了 Node.js >=12.22.1 和 NPM >=6.14.12。
 
 ::: warning
-**Do not use uneven versions of Node i.e. 13, 15 etc.** These versions aren't tested with Quasar and often cause issues due to their experimental nature. We highly recommend always using the LTS version of Node.
+**不要使用 Node.js 的奇数版本，例如 13、15 等。** 因为这些版本是实验性质的，常常导致问题，所以我们没有测试。我们强烈建议使用 LTS 版本的 Node.js。
 :::
 
-You will be installing the Icon Genie CLI globally. You don't need to install it in your project folder.
+请全局安装 Icon Genie CLI。不需要安装到项目目录中。
 
 ```bash
-# Node.js >=12.22.1 is required.
+# Node.js >=12.22.1
 
 $ yarn global add @quasar/icongenie
-# or
+# 或
 $ npm install -g @quasar/icongenie
 ```
 
-This will install the `icongenie` command line tool.
+这样就安装了 `icongenie` 命令行工具。
 
-::: tip Attention developers on Windows
-If you get an error like "pngquant failed to build" then you need to also globally install windows-build-tools ("yarn global add windows-build-tools" or "npm install --global windows-build-tools"). Then go to C:\Users\\<windows_username>\\.windows-build-tools and run vs_BuildTools.exe. From there select npm/yarn and python to install. After this step it might require you to reboot your machine, otherwise you can now install @quasar/icongenie.
+::: tip Windows 上的开发人员请注意
+如果你遇到类似“pngquant failed to build”的错误，那么你还需要全局安装 windows-build-tools（`yarn global add windows-build-tools` 或 `npm install ——global windows-build-tools`)。然后转到 `C:\Users\<windows_username>\.windows-build-tools`，运行 `vs_BuildTools.exe`。选择 npm/yarn 和 python 来安装。完成此步骤后，可能需要重启电脑，之后就可以安装 `@quasar/icongenie`。
 :::
 
-## Installation tips
+## 安装技巧
 
-If you are using Yarn, make sure that the Yarn [global install location](https://yarnpkg.com/lang/en/docs/cli/global/) is in your PATH:
-
+如果你使用的是 Yarn，请确保 Yarn 的 [全局安装位置](https://yarnpkg.com/lang/en/docs/cli/global/) 在你的 PATH 环境中：
 ```bash
-# in ~/.bashrc or equivalent
+# ~/.bashrc 或类似的文件里
 export PATH="$(yarn global bin):$PATH"
 ```
 
-Under Windows, modify user's PATH environment variable. If you are using yarn then add `%LOCALAPPDATA%\yarn\bin`, otherwise if you're using npm then add `%APPDATA%\npm`.
+在 Windows 操作系统下，修改用户环境变量 PATH。如果你使用的是 yarn，请添加`%LOCALAPPDATA%\yarn\bin`。如果你使用的是 npm，请添加 `%APPDATA%\npm`。
 
-## Upgrading to Icon Genie v2
+## 升级到 Icon Genie v2
 
-This section applies to those that have been using Icon Genie v1 and are now upgrading to Icon Genie v2.
+本节适用于那些一直使用 Icon Genie v1，现在升级到 Icon Genie v2 的人。
 
-### NPM package name change
+### NPM 包名更改
 
-Version 1 was a Quasar [App Extension](/app-extensions/introduction) and so you installed it into your project folder. The new version (v2) does NOT need to be installed locally as it is installed globally. Your CI/CD will not need it as it is a one-time process and the output files (images) will be added directly to your project folder.
+版本 1 是一个 Quasar 的 [应用扩展](/app-extensions/introduction)，所以要装到你的项目目录里。新版本（v2）是全局安装的，不需要本地安装。你的 CI/CD 也不需要它，因为它是一次性的，输出文件（图像）直接添加到你的项目目录。
 
-As a consequence, please uninstall Icon Genie v1 from your project folder:
+因此，请从您的项目文件夹中卸载 Icon Genie v1：
 
 ```bash
-# from your Quasar CLI project folder:
+# 在你的 Quasar CLI 项目目录里：
 $ quasar ext remove @quasar/icon-genie
 ```
 
-### Input files
+### 输入文件
 
-With version 1 you required to have an app-icon.png and an app-splashscreen.png (at a fixed width and height). This is no longer the case with version 2. You will now just need a png file (its name can be anything) with transparency and with minimum of 64x64 px (but the higher, the better! -- recommended min size: 1024x1024) for the icon, and then another optional png (any name) for the background of the splash screens (min 128x128 px, but recommended minimum is 1024x1024 px).
+版本 v1 时，只要两张图片：一个 app-icon.png 和一个 app-splashscreen.png（固定宽度和高度）。但版本 v2 不是这样。现在只要一个 png 文件（文件名随意），它要有透明度并且最小 64x64 像素（越大越好！——建议最小尺寸：1024x1024）。启动画面的图片可以不设，它是 PNG 格式，文件名不限，最小 128x128 像素，不过建议最小为 1024x1024 像素。
 
-The splash screens work in a completely different manner too. They will get generated with the icon on top of the optional background. The size ratio of the icon to width or height (whichever is lower) can be adjusted with the CLI params (`--splashscreen-icon-ratio`). You can even tell Icon Genie that the ratio is 0 so it won't add the icon on top of the background.
+启动画面的工作方式也完全不同。它们将与可选背景顶部的图标一起生成。图标与宽度或高度（哪个较低）的大小比可以用 CLI 参数 (`--splashscreen-icon-ratio`) 调整。你甚至可以告诉 Icon Genie 这个比例为 0，这样它就不会将图标添加到背景的顶部。
 
-### Output files
+### 输出文件
 
-We have refined the list of icons and splash screens that are generated to match the latest standards and to also avoid duplication. So you will notice that some of the older files don't get generated anymore and some are completely new. Icon Genie will now tell you what tags you need to add (if any) to your /src/index.template.html (**you can copy paste the tags and replace your old ones**) -- so be mindful about the list of tags.
+我们已经改进了生成的图标和启动画面，以符合最新的标准，并避免重复文件。因此，你将注意到一些旧文件不再生成，而一些则是全新的。Icon Genie 现在会适时地提醒你，需要向 `/src/index.template.html` 添加什么标签，**你可以把提示复制粘贴到相应位置**——请留意标签列表。
 
-It might be a good idea to delete all your current icon/splashscreen files and let Icon Genie do its job again. This way you will be sure that what you're left with is actually used in your Quasar App.
+你也可以删除当前项目里的所有图标或启动画面图片，并让运行 Icon Genie v2。这样可以确保项目里所有的图片都是实际要用的。
 
-## What's new in Icon Genie v2
+## Icon Genie v2 有什么新功能
 
-Icon Genie v2 is a complete rewrite from top to bottom.
+Icon Genie v2 已经彻头彻尾地重写了。
 
-* Icon Genie is now a CLI on its own, not a Quasar App Extension any more.
-* The input files (for the icon and the background) can have any name, be placed anywhere, and they don't need to have a fixed width + height. Starting with v2.1, the icon input file does not needs to have same width and height. Also, the icon input file is now automatically trimmed.
-* You can now configure a padding for the icon input file. (v2.1+)
-* We have refined the list of icons and splash screens that get generated to match the latest standards and to also avoid duplication.
-* Splash screens are created in a better manner, with the icon on top of the background (with the icon having any size ratio that you want, including 0 which means: "I only want the background image with no icon on top")
-* New commands: [generate](/icongenie/command-list#generate), [verify](/icongenie/command-list#verify), and [profile](/icongenie/command-list#profile), each with its own purpose.
-* The `generate` command now also shows you what tags you need in your `/src/index.template.html` file.
-* The `verify` command can even check if every file is in the right place and it has the right width by height.
-* A lot of new parameters: quality, svg-color, png-color, splashscreen-color, splashscreen-icon-ratio, etc etc. Check the [command list](/icongenie/command-list) page.
-* You can now control each type of asset (ico, png, splashscreen, ...) for each Quasar mode individually, each with its own settings/parameters. Check the `--filter`, `--quality` and all the color parameters. One good use case is with the `.ico` files.
-* Automation is now possible through Icon Genie [profile files](/icongenie/profile-files).
-* You can now **generate your own custom image files** using the Icon Genie API through the [profile files](/icongenie/profile-files).
+* Icon Genie 现在是独立的 CLI，而不是一个 Quasar 的应用扩展。
+* 输入文件（图标和背景）可以随意取名，随意放置，也不强求固定的宽度和高度。从 v2.1 开始，输入的图标文件不必是相同的宽高。此外，图标文件现在自动裁剪。
+* 你现在可以为输入的图标文件配置 padding 了。(v2.1+)
+* 我们改进了生成文件列表，以匹配最新标准，并避免文件重复。
+* 启动画面以更好的方式创建，图标位于背景顶部。图标具有任何你想要的大小比例，包括 0（意味着：“背景图像的顶部没有图标”）
+* 新命令：[generate](/icongenie/command-list#generate)、[verify](/icongenie/command-list#verify) 和 [profile](/icongenie/command-list#profile)，每个都有自己的用途。
+* `generate` 命令现在还会显示 `/src/index.template.html` 文件中需要什么标签。
+* `verify` 命令可以检查每个文件是否在正确的位置，以及它的宽度和高度是否正确。
+* 大量新参数：quality、svg-color、png-color、splashscreen-color、splashscreen-icon-ratio……查看 [指令列表](/icongenie/command-list)。
+* 你现在可以为每个 Quasar 模式单独地控制资产文件（ico、 png、splashscreen……），每个都有自己的设置或参数。请查看 `——filter`、`——quality` 和所有颜色参数。一个很好的用例是 `.ico`文件。
+* 现在可以通过 Icon Genie [配置文件](/icongenie/profile-files) 实现自动化。
+* 现在可以通过 [配置文件](/icongenie/profile-files) 使用 Icon Genie API **自定义图像文件**。
 
-Finally, we need to emphasize again on the `quality` parameter, which will dictate how good-looking and how big (KB) your images will be.
+最后，我们需要再次强调 `quality` 参数，它将决定你的图像有多好看以及有多大（KB）。
