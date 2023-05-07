@@ -1,6 +1,6 @@
 ---
 title: 应用图标列表
-desc: 用 Icon Genie CLI 根据具体的 Quasar 模式生成的应用图标及启动画面列表。
+desc: 用 Icon Genie CLI（图标精灵命令行工具）根据具体的 Quasar 模式生成的应用图标及启动画面列表。
 ---
 
 每个 Quasar CLI 模式都需要自己的图标列表和启动画面。
