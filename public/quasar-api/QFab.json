@@ -16,25 +16,25 @@
       ],
       "category": "general",
       "required": false,
-      "desc_cn": "定义按钮HTML DOM类型"
+      "desc_cn": "定义按钮的 HTML DOM 类型"
     },
     "outline": {
       "type": "Boolean",
       "desc": "Use 'outline' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“轮廓线”设计"
+      "desc_cn": "为浮动操作按钮使用 'outline' 设计"
     },
     "push": {
       "type": "Boolean",
       "desc": "Use 'push' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“推”设计"
+      "desc_cn": "为浮动操作按钮使用 'push' 设计"
     },
     "flat": {
       "type": "Boolean",
       "desc": "Use 'flat' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“扁平”设计"
+      "desc_cn": "为浮动操作按钮使用 'flat' 设计"
     },
     "unelevated": {
       "type": "Boolean",
@@ -109,13 +109,13 @@
         "left"
       ],
       "category": "style|content",
-      "desc_cn": "图标周围标签的位置"
+      "desc_cn": "图标周围标签显示的位置"
     },
     "hide-label": {
       "type": "Boolean",
       "desc": "Hide the label; Useful for animation purposes where you toggle the visibility of the label",
       "category": "style|content",
-      "desc_cn": "隐藏标签；用于切换标签可见性的动画"
+      "desc_cn": "隐藏标签；有助于实现切换标签可见性时的动画"
     },
     "label-class": {
       "type": [
@@ -130,7 +130,7 @@
         ":input-class=\"{ 'my-special-class': <condition> }\""
       ],
       "category": "style",
-      "desc_cn": "作为标签容器属性的类定义"
+      "desc_cn": "用于标签容器的 CSS 类"
     },
     "label-style": {
       "type": [
@@ -145,7 +145,7 @@
         ":input-style=\"{ backgroundColor: '#ff0000' }\""
       ],
       "category": "style",
-      "desc_cn": "作为标签容器属性的样式定义"
+      "desc_cn": "用于标签容器的样式定义"
     },
     "square": {
       "type": "Boolean",
@@ -177,7 +177,8 @@
       "required": false,
       "syncable": true,
       "category": "model",
-      "type": "Boolean"
+      "type": "Boolean",
+      "desc_cn": "控制浮动按钮显示/隐藏的状态。最好与 v-model 指令一起使用，也可以搭配 'update:modelValue' 事件一起使用"
     },
     "icon": {
       "type": "String",
@@ -201,7 +202,7 @@
         "img:path/to/some_image.png"
       ],
       "category": "content",
-      "desc_cn": "图标的名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
+      "desc_cn": "被激活时的图标名称，需确保已经安装了相关的图标库，除非使用了 'img:' 前缀来引用本地的图片，如果设置为 'none'，则不会渲染图标"
     },
     "hide-icon": {
       "type": "Boolean",
@@ -221,7 +222,7 @@
       ],
       "category": "behavior",
       "required": false,
-      "desc_cn": "展开浮动操作按钮操作的方向"
+      "desc_cn": "浮动按钮的展开方向"
     },
     "vertical-actions-align": {
       "type": "String",
@@ -234,53 +235,59 @@
       ],
       "category": "style|content",
       "required": false,
-      "desc_cn": "浮动操作按钮的一侧，浮动操作按钮的操作将展开的位置（仅当方向为“向上”或“向下”时）"
+      "desc_cn": "浮动按钮展开的位置（仅当方向为 'up' 或 'down' 时）"
     },
     "persistent": {
       "type": "Boolean",
       "desc": "By default, Fab Actions are hidden when user navigates to another route and this prop disables this behavior",
       "category": "behavior",
-      "desc_cn": "默认情况下，当用户导航到另一个路由并且此属性禁用此行为时，浮动操作按钮的操作是隐藏的"
+      "desc_cn": "默认情况下，当用户导航到另一个路由并且此属性禁用此行为时，浮动按钮是隐藏的"
     }
   },
   "slots": {
     "default": {
       "desc": "This is where QFabActions may go into",
-      "desc_cn": "这就是QFabActions可能进入的位置"
+      "desc_cn": "这就是 QFabActions 可能进入的位置"
     },
     "tooltip": {
       "desc": "Slot specifically designed for a QTooltip",
-      "desc_cn": "为QTooltip专门设计的插槽"
+      "desc_cn": "为 QTooltip 专门设计的插槽"
     },
     "icon": {
       "desc": "Slot for icon shown when FAB is closed; Suggestion: QIcon",
       "scope": {
         "opened": {
           "type": "Boolean",
-          "desc": "FAB is opened"
+          "desc": "FAB is opened",
+          "desc_cn": "FAB 是否打开"
         }
       },
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "FAB 关闭时的图标插槽，建议：QIcon"
     },
     "active-icon": {
       "desc": "Slot for icon shown when FAB is opened; Suggestion: QIcon",
       "scope": {
         "opened": {
           "type": "Boolean",
-          "desc": "FAB is opened"
+          "desc": "FAB is opened",
+          "desc_cn": "FAB 是否打开"
         }
       },
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "FAB 打开时的图标插槽，建议：QIcon"
     },
     "label": {
       "desc": "Slot for label",
       "scope": {
         "opened": {
           "type": "Boolean",
-          "desc": "FAB is opened"
+          "desc": "FAB is opened",
+          "desc_cn": "FAB 是否打开"
         }
       },
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "标签插槽"
     }
   },
   "events": {
@@ -289,9 +296,11 @@
       "params": {
         "value": {
           "type": "Boolean",
-          "desc": "New state (showing/hidden)"
+          "desc": "New state (showing/hidden)",
+          "desc_cn": "新状态（显示/隐藏）"
         }
-      }
+      },
+      "desc_cn": "当浮动按钮显示/隐藏时触发，被 v-model 指令捕获"
     },
     "show": {
       "desc": "Emitted after component has triggered show()",
@@ -300,10 +309,10 @@
           "type": "Event",
           "desc": "JS event object",
           "required": true,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "在组件触发show()后发出"
+      "desc_cn": "在组件触发 show() 后触发"
     },
     "before-show": {
       "desc": "Emitted when component triggers show() but before it finishes doing it",
@@ -312,10 +321,10 @@
           "type": "Event",
           "desc": "JS event object",
           "required": true,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "在组件触发show()但在完成之前发出"
+      "desc_cn": "在组件触发 show() 但在完成之前触发"
     },
     "hide": {
       "desc": "Emitted after component has triggered hide()",
@@ -327,7 +336,7 @@
           "desc_cn": "JS事件对象"
         }
       },
-      "desc_cn": "在组件触发hide()后发出"
+      "desc_cn": "在组件触发 hide() 后触发"
     },
     "before-hide": {
       "desc": "Emitted when component triggers hide() but before it finishes doing it",
@@ -336,10 +345,10 @@
           "type": "Event",
           "desc": "JS event object",
           "required": true,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "在组件触发hide()但在完成之前发出"
+      "desc_cn": "在组件触发 hide() 但在完成之前触发"
     }
   },
   "methods": {
@@ -350,7 +359,7 @@
           "type": "Event",
           "desc": "JS event object",
           "required": false,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc_cn": "展开浮动操作按钮的操作列表"
@@ -362,7 +371,7 @@
           "type": "Event",
           "desc": "JS event object",
           "required": false,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc_cn": "折叠浮动操作按钮的操作列表"
@@ -373,7 +382,7 @@
           "type": "Event",
           "desc": "JS event object",
           "required": false,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc": "Triggers component to toggle between show/hide",
