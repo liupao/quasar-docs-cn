@@ -214,8 +214,8 @@
       "desc_cn": "在组件触发 hide() 之前触发"
     },
     "shake": {
-      "desc": "Emitted when the Dialog shakes in order to catch user's attention, unless the 'no-shake' property is set"
-      ,"desc_cn": "当对话框晃动以引起用户注意时触发，除非设置了 'no-shake' 属性。"
+      "desc": "Emitted when the Dialog shakes in order to catch user's attention, unless the 'no-shake' property is set",
+      "desc_cn": "当对话框晃动以引起用户注意时触发，除非设置了 'no-shake' 属性。"
     },
     "escape-key": {
       "desc": "Emitted when ESC key is pressed; Does not get emitted if Dialog is 'persistent' or it has 'no-esc-key' set",

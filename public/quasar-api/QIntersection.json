@@ -95,6 +95,11 @@
     "default": {
       "desc": "Default slot in the devland unslotted content of the component",
       "desc_cn": "组件的默认插槽"
+    },
+    "hidden": {
+      "desc": "Slot for content to render when component is not on screen; Example: a text that the user can search for with the browser's search function",
+      "addedIn": "v2.12.0",
+      "desc_cn": "当组件不在屏幕上时渲染内容的插槽；例如：用户可以使用浏览器的搜索功能搜索的文本。"
     }
   },
   "events": {

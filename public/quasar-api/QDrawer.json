@@ -56,17 +56,24 @@
       "required": false,
       "desc_cn": "处于迷你（mini）模式时侧滑菜单的宽度（像素）"
     },
-    "dark": {
-      "type": "Boolean",
-      "desc": "Notify the component that the background is a dark color",
-      "category": "style",
-      "desc_cn": "设置组件背景为深色"
-    },
     "mini-to-overlay": {
       "type": "Boolean",
       "desc": "Mini mode will expand as an overlay",
       "category": "behavior",
       "desc_cn": "迷你模式将扩展为覆盖（overlay）"
+    },
+    "no-mini-animation": {
+      "type": "Boolean",
+      "desc": "Disables animation of the drawer when toggling mini mode",
+      "category": "behavior",
+      "addedIn": "v2.12.0",
+      "desc_cn": "当抽屉切换到 mini 模式时禁用动画"
+    },
+    "dark": {
+      "type": "Boolean",
+      "desc": "Notify the component that the background is a dark color",
+      "category": "style",
+      "desc_cn": "设置组件背景为深色"
     },
     "breakpoint": {
       "type": "Number",
