@@ -68,7 +68,17 @@
           ></app-search-results>
         </template>
         <template v-else>
-          <div class="row justify-center q-my-md">
+          <div class="row justify-center q-gutter-sm q-my-sm">
+            <q-btn
+              class="doc-layout__main-btn"
+              to="/contact"
+              color="brand-primary"
+              outline
+              :icon="mdiHeart"
+              label="支持站点"
+              no-wrap
+              no-caps
+            />
             <q-btn
               class="doc-layout__main-btn"
               href="https://www.bilibili.com/video/BV1pA4y197Zc"
@@ -80,10 +90,7 @@
               label="Quasar 视频教程"
               no-wrap
               no-caps
-            >
-            </q-btn>
-          </div>
-          <div class="row justify-center q-my-md">
+            />
             <q-btn
               class="doc-layout__main-btn"
               href="https://donate.quasar.dev"
@@ -95,7 +102,7 @@
               label="捐赠 Quasar"
               no-wrap
               no-caps
-            ></q-btn>
+            />
           </div>
           <app-menu class="q-mb-lg"></app-menu>
         </template>
@@ -147,6 +154,7 @@
 <script>
 import { useQuasar } from 'quasar'
 import { useRoute } from 'vue-router'
+import { defineComponent } from 'vue'
 
 import {
   mdiMenu,
@@ -166,7 +174,7 @@ import useScroll from './doc-layout/use-scroll'
 import useSearch from './doc-layout/use-search'
 import NavBarSearch from '../components/NavBarSearch.vue'
 
-export default {
+export default defineComponent({
   name: 'DocLayout',
 
   components: {
@@ -196,7 +204,7 @@ export default {
 
     return scope
   }
-}
+})
 </script>
 
 <style lang="sass">
