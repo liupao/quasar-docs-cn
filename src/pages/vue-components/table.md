@@ -130,11 +130,19 @@ columns: [ // 一个对象数组
 请注意，固定表头或行是通过 CSS 中的 `position: sticky` 属性实现的，并不是所有的浏览器都支持它。使用前，请检查 [caniuse.com](https://caniuse.com/#search=sticky)。
 :::
 
+::: tip
+固定表头或列都是由 css 实现的，所以在下面的几个示例中要注意 style 部分的代码，尤其是   `position: sticky`
+:::
+
 <doc-example title="固定表头" file="QTable/StickyHeader" />
 
-<doc-example title="固定行" file="QTable/StickyColumn" />
+<doc-example title="固定第一列" file="QTable/StickyColumn" />
 
-<doc-example title="固定表头和行" file="QTable/StickyHeaderAndColumn" />
+<doc-example title="固定最后一列" file="QTable/StickyLastColumn" />
+
+<doc-example title="固定表头和第一列" file="QTable/StickyHeaderAndColumn" />
+
+<doc-example title="固定表头和最后一列" file="QTable/StickyHeaderAndLastColumn" />
 
 ## 分割线
 
