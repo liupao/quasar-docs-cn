@@ -145,40 +145,41 @@ export default {
 
 <style lang="sass">
 .my-sticky-header-column-table
-  /* height or max-height is important */
+  /* height 和 max-height 很重要 */
   height: 310px
 
-  /* specifying max-width so the example can
-    highlight the sticky column on any browser window */
+  /* 为了在任何浏览器窗口上都正确的突出显示固定的列，我们需要声明 max-width 属性 */
   max-width: 600px
 
   td:first-child
-    /* bg color is important for td; just specify one */
+    /* 第一列的背景颜色 */
     background-color: #c1f4cd !important
 
+  /** 固定表头 */
   tr th
     position: sticky
-    /* higher than z-index for td below */
+    /* 表头（tr th）的 z-index 要比下面的 td 高 */
     z-index: 2
-    /* bg color is important; just specify one */
+    /* 表头的背景颜色 */
     background: #fff
 
-  /* this will be the loading indicator */
+  /* 这将是加载指示器 */
   thead tr:last-child th
-    /* height of all previous header rows */
+    /* 所有前面表头行的高度 */
     top: 48px
-    /* highest z-index */
+    /* 最高的 z-index */
     z-index: 3
   thead tr:first-child th
     top: 0
     z-index: 1
   tr:first-child th:first-child
-    /* highest z-index */
+    /* 最高的 z-index */
     z-index: 3
 
   td:first-child
     z-index: 1
 
+  /** 固定第一列 */
   td:first-child, th:first-child
     position: sticky
     left: 0

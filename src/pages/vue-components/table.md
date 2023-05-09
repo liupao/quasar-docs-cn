@@ -124,7 +124,7 @@ columns: [ // 一个对象数组
 
 <doc-example title="从数据中推断列定义" file="QTable/InferColumns" />
 
-## 固定表头/行
+## 固定表头/列
 
 ::: warning
 请注意，固定表头或行是通过 CSS 中的 `position: sticky` 属性实现的，并不是所有的浏览器都支持它。使用前，请检查 [caniuse.com](https://caniuse.com/#search=sticky)。

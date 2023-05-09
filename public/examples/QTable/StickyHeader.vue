@@ -147,23 +147,24 @@ export default {
 
 <style lang="sass">
 .my-sticky-header-table
-  /* height or max-height is important */
+  /* height 或 max-height 很重要 */
   height: 310px
 
   .q-table__top,
   .q-table__bottom,
   thead tr:first-child th
-    /* bg color is important for th; just specify one */
+    /* 设置固定行的表头颜色 */
     background-color: #c1f4cd
 
+  /** 固定表头 */
   thead tr th
     position: sticky
     z-index: 1
   thead tr:first-child th
     top: 0
 
-  /* this is when the loading indicator appears */
+  /* 这是当加载指示器出现时 */
   &.q-table--loading thead tr:last-child th
-    /* height of all previous header rows */
+    /* 所有前面表头行的高度 */
     top: 48px
 </style>

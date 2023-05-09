@@ -145,17 +145,18 @@ export default {
 
 <style lang="sass">
 .my-sticky-column-table
-  /* specifying max-width so the example can
-    highlight the sticky column on any browser window */
+  /* 为了在任何浏览器窗口上都正确的突出显示固定的列，我们需要声明 max-width 属性 */
   max-width: 600px
 
   thead tr:first-child th:first-child
-    /* bg color is important for th; just specify one */
+    /* 设置固定列的表头颜色 */
     background-color: #fff
 
+  /** 设置被固定列的背景颜色 */
   td:first-child
     background-color: #f5f5dc
 
+  /** 固定第一列 */
   th:first-child,
   td:first-child
     position: sticky
