@@ -1,7 +1,7 @@
 <template>
   <q-layout class="doc-layout" view="lHh LpR lff" @scroll="onScroll">
 
-    <q-header class="header text-dark" bordered>
+    <q-header :class="['header',$q.dark.isActive ? '' :'text-dark' ]" bordered>
       <q-toolbar class="q-px-none">
         <q-btn
           class="q-mx-sm lt-md"
@@ -21,14 +21,20 @@
           stretch
           to="/"
         >
-          <img
-            class="quasar-logo__img"
-            src="https://cdn.quasar.dev/logo-v2/svg/logo.svg"
-          />
-          <img
-            class="quasar-logo__logotype"
-            src="https://cdn.quasar.dev/logo-v2/svg/logotype.svg"
-          />
+        <img
+          class="doc-header__logo-img"
+          :src="logo.img"
+          alt="Quasar Logo"
+          width="48"
+          height="48"
+        >
+        <img
+          class="doc-header__logo-text q-ml-md"
+          :src="logo.text"
+          alt="Quasar Logo"
+          width="150"
+          height="20"
+        >
         </q-btn>
         <q-space />
         <header-menu
@@ -44,7 +50,8 @@
           @click="toggleRightDrawer"
           aria-label="Menu"
           :icon="mdiClipboardText"
-        ></q-btn>
+        />
+
       </q-toolbar>
     </q-header>
     <q-drawer
@@ -154,7 +161,7 @@
 <script>
 import { useQuasar } from 'quasar'
 import { useRoute } from 'vue-router'
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 
 import {
   mdiMenu,
@@ -188,13 +195,20 @@ export default defineComponent({
   setup () {
     const $q = useQuasar()
     const $route = useRoute()
-
+    const logo = computed(() => {
+      const opt = $q.dark.isActive === true ? '-dark' : ''
+      return {
+        img: `https://cdn.quasar.dev/logo-v2/svg/logo${opt}.svg`,
+        text: `https://cdn.quasar.dev/logo-v2/svg/logotype${opt}.svg`
+      }
+    })
     const scope = {
       mdiMenu,
       mdiClipboardText,
       mdiHeart,
       mdiMagnify,
-      mdiChevronUp
+      mdiChevronUp,
+      logo
     }
 
     useToc(scope, $route)

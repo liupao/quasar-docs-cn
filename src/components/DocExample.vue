@@ -196,29 +196,12 @@ export default {
 <style lang="sass">
 .doc-example
 
-  &__toolbar
-    color: $grey-8
-    > .q-btn
-      color: $grey-7
-
-  &__tabs
-    background: $grey-3
-    color: $grey-7
-
-  &--dark
-    .doc-example__toolbar
-      background: $grey-10
-      color: #fff
-      > .q-btn
-        color: $grey-3
-    .doc-example__separator
-      background-color: $grey-8
-    .doc-example__tabs
-      background: $grey-9
-      color: $grey-5
-
   &__content
     position: relative
+
+    // reset doc style
+    font-weight: 400
+    font-family: $font-family-examples
 
     &--scrollable
       height: 500px

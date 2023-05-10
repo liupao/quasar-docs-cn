@@ -17,7 +17,7 @@
     <div class="doc-page-nav text-brand-primary" v-if="related !== void 0">
       <div class="q-gutter-md flex">
         <router-link
-          class="q-link doc-page-related rounded-borders q-pa-md cursor-pointer column justify-center bg-grey-3"
+          class="q-link doc-page-related rounded-borders q-pa-md cursor-pointer column justify-center"
           v-for="link in related" :key="link.category + link.path" :to="link.path">
           <div class="row no-wrap items-center">
             <div class="col">
@@ -253,4 +253,33 @@ export default {
 
   &__name
     font-size: 1em
+    body.body--light .doc-page
+    &__related
+      color: $light-text
+      background: $void-suit
+      border: 1px solid $void-suit // match dark to avoid page reflow
+
+    &__toc-container .q-item
+      color: $header-btn-color--light
+
+body.body--light .doc-page
+  &-related
+    color: $light-text
+    background: $void-suit
+    border: 1px solid $separator-color // match dark to avoid page reflow
+
+  &-toc-container .q-item
+    color: $header-btn-color--light
+
+body.body--dark .doc-page
+  &-related
+    color: $dark-text
+    background: $dark-pill
+    border: 1px solid $brand-primary
+
+  &-nav-name
+    color: $brand-primary
+
+  &-toc-container .q-item
+    color: $header-btn-color--dark
 </style>

@@ -211,10 +211,11 @@
         </q-item>
       </q-list>
     </q-btn-dropdown>
+    <q-icon class="self-center q-mx-sm" size="sm"  :name="$q.dark.isActive ? farLightbulb : fasMoon"   @click="$q.dark.toggle()"/>
   </div>
 </template>
 
-<script>
+<script setup>
 import {
   fabGithub,
   fasFlask,
@@ -223,7 +224,9 @@ import {
   fasBolt,
   fasCubes,
   fabTwitter,
-  fabFacebook
+  fabFacebook,
+  fasMoon,
+  farLightbulb
 } from '@quasar/extras/fontawesome-v6'
 
 import {
@@ -244,40 +247,5 @@ import {
   mdiPlayBox
 } from '@quasar/extras/mdi-v6'
 
-export default {
-  name: 'HeaderMenu',
-
-  props: {
-    align: String
-  },
-
-  setup () {
-    return {
-      fabGithub,
-      fasFlask,
-      fabCodepen,
-      fasBolt,
-      fabJsfiddle,
-      fasCubes,
-      fabTwitter,
-      fabFacebook,
-
-      mdiPost,
-      mdiChat,
-      mdiForum,
-      mdiBullhorn,
-      mdiViewDashboard,
-      mdiShoppingMusic,
-      mdiClipboardText,
-      mdiBugCheck,
-      mdiFlare,
-      mdiFilePlus,
-      mdiPaletteSwatch,
-      mdiInvertColors,
-      mdiCharity,
-      mdiStarCircle,
-      mdiPlayBox
-    }
-  }
-}
+defineProps(['align'])
 </script>

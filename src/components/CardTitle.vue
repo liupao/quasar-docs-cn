@@ -38,7 +38,7 @@ $title-color: $grey-4
 .doc-card-title
   margin-left: -24px
   padding: 2px 10px 2px 24px
-  background: $title-color
+  background: $void-suit
   color: $grey-8
   position: relative
   border-radius: 3px 5px 5px 0
@@ -53,4 +53,10 @@ $title-color: $grey-4
     border: 0 solid transparent
     border-top-color: scale-color($title-color, $lightness: -15%)
     border-width: 9px 0 0 11px
+
+body.body--dark .doc-card-title
+  background: $floating-rock
+  color: $dark-text
+  &:after
+    border-top-color: scale-color($floating-rock, $lightness: -30%)
 </style>
