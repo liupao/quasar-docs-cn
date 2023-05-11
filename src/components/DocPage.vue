@@ -254,13 +254,13 @@ export default {
   &__name
     font-size: 1em
     body.body--light .doc-page
-    &__related
-      color: $light-text
-      background: $void-suit
-      border: 1px solid $void-suit // match dark to avoid page reflow
+      &__related
+        color: $light-text
+        background: $void-suit
+        border: 1px solid $void-suit // match dark to avoid page reflow
 
-    &__toc-container .q-item
-      color: $header-btn-color--light
+      &__toc-container .q-item
+        color: $header-btn-color--light
 
 body.body--light .doc-page
   &-related

@@ -23,7 +23,7 @@
 
 .doc-code
     &__inner
-    padding: 1em
+      padding: 1em
     &--prerendered
       border-width: 1px 4px
       border-style: solid
@@ -33,13 +33,10 @@ body.body--light
   .doc-code
     color: $grey-9
     background-color: $light-pill
-
-
-  &__inner
-    &--prerendered
-      border-color: $separator-color
-      border-left-color: $brand-primary
-      border-right-color: $brand-primary
+  &__inner--prerendered
+    border-color: $separator-color
+    border-left-color: $brand-primary
+    border-right-color: $brand-primary
 
   .token.comment,
   .token.block-comment,
@@ -112,8 +109,7 @@ body.body--dark
   .doc-code
     color: #f8f8f2
     background-color: $dark-pill
-    &__inner
-      &--prerendered
+    &__inner--prerendered
         border-color: scale-color($brand-primary, $lightness: -50%)
         border-left-color: scale-color($brand-primary, $lightness: -50%)
         border-right-color: scale-color($brand-primary, $lightness: -50%)
