@@ -211,7 +211,7 @@
         </q-item>
       </q-list>
     </q-btn-dropdown>
-    <q-icon class="self-center q-mx-sm" size="sm"  :name="$q.dark.isActive ? farLightbulb : fasMoon"   @click="$q.dark.toggle()"/>
+    <q-icon class="self-center q-mx-sm" size="sm"  :name="isDark ? farLightbulb : fasMoon"   @click="toggleDark"/>
   </div>
 </template>
 
@@ -246,6 +246,10 @@ import {
   mdiStarCircle,
   mdiPlayBox
 } from '@quasar/extras/mdi-v6'
+import { useDark } from '../composables/useDark'
 
 defineProps(['align'])
+
+const { toggleDark, isDark } = useDark()
+
 </script>
