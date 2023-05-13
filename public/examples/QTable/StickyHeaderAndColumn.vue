@@ -153,7 +153,7 @@ export default {
 
   td:first-child
     /* 第一列的背景颜色 */
-    background-color: #c1f4cd !important
+    background-color: #00b4ff !important
 
   /** 固定表头 */
   tr th
@@ -161,7 +161,7 @@ export default {
     /* 表头（tr th）的 z-index 要比下面的 td 高 */
     z-index: 2
     /* 表头的背景颜色 */
-    background: #fff
+    background: #00b4ff
 
   /* 这将是加载指示器 */
   thead tr:last-child th

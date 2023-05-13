@@ -150,11 +150,11 @@ export default {
 
   thead tr:first-child th:first-child
     /* 设置固定列的表头颜色 */
-    background-color: #fff
+    background-color: #00b4ff
 
   /** 设置被固定列的背景颜色 */
   td:first-child
-    background-color: #f5f5dc
+    background-color: #00b4ff
 
   /** 固定第一列 */
   th:first-child,

@@ -154,7 +154,7 @@ export default {
   .q-table__bottom,
   thead tr:first-child th
     /* 设置固定行的表头颜色 */
-    background-color: #c1f4cd
+    background-color: #00b4ff
 
   /** 固定表头 */
   thead tr th

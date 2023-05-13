@@ -151,7 +151,7 @@ export default {
 
   thead tr:last-child th:last-child
     /* 设置固定列的表头颜色 */
-    background-color: #fff
+    background-color: #00b4ff
 
   /** 设置被固定列的背景颜色 */
   td:last-child

@@ -175,7 +175,7 @@ export default {
   .q-table__top,
   .q-table__bottom,
   thead tr:first-child th /* 设置固定列的表头颜色 */
-    background-color: #fff
+    background-color: #00b4ff
 
   thead tr th
     position: sticky
