@@ -1,25 +1,22 @@
-<template lang="pug">
-q-card.doc-installation.q-my-lg(flat, bordered)
-  q-tabs.text-grey-7.bg-white(v-model="currentTab", align="left", indicator-color="brand-primary", dense, :breakpoint="0")
-    q-tab(
-      v-for="tab in ['Quasar CLI', 'Vite plugin / Vue CLI', 'UMD']"
-      :key="`installation-${tab}`"
-      :name="tab"
-      :label="tab"
-      no-caps
-    )
-
-  q-separator
-
-  q-tab-panels(v-model="currentTab", animated)
-    q-tab-panel.q-pa-none(name="Quasar CLI")
-      doc-code(:code="QuasarCli")
-
-    q-tab-panel.q-pa-none(name="Vite plugin / Vue CLI")
-      doc-code(:code="ExternalCli")
-
-    q-tab-panel.q-pa-none(name="UMD")
-      doc-code(:code="UMD")
+<template>
+  <q-card class="doc-installation q-my-lg" flat bordered>
+    <q-tabs v-model="currentTab" align="left" indicator-color="brand-primary" dense :breakpoint="0">
+      <q-tab v-for="tab in ['Quasar CLI', 'Vite plugin / Vue CLI', 'UMD']" :key="`installation-${tab}`" :name="tab"
+        :label="tab" no-caps></q-tab>
+    </q-tabs>
+    <q-separator></q-separator>
+    <q-tab-panels v-model="currentTab" animated>
+      <q-tab-panel class="q-pa-none" name="Quasar CLI">
+        <doc-code :code="QuasarCli"></doc-code>
+      </q-tab-panel>
+      <q-tab-panel class="q-pa-none" name="Vite plugin / Vue CLI">
+        <doc-code :code="ExternalCli"></doc-code>
+      </q-tab-panel>
+      <q-tab-panel class="q-pa-none" name="UMD">
+        <doc-code :code="UMD"></doc-code>
+      </q-tab-panel>
+    </q-tab-panels>
+  </q-card>
 </template>
 
 <script>
@@ -114,7 +111,7 @@ app.use(Quasar, {
     const ExternalCli = computed(() => {
       const types = [], imports = []
 
-      ;[ 'components', 'directives', 'plugins' ].forEach(type => {
+        ;[ 'components', 'directives', 'plugins' ].forEach(type => {
         if (props[ type ] !== void 0) {
           imports.push(nameAsString(props[ type ], 2, false))
           types.push(`${type}: {
