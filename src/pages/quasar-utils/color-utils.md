@@ -33,7 +33,7 @@ Quasar 提供了一组有用的函数，可以在大多数使用情况下轻松�
 :::
 
 ### lighten (color, percent)
-调亮颜色（如果 `percent` 为正）或者调暗颜色（如果 `percent` 为父）。
+调亮颜色（如果 `percent` 为正数）或者调暗颜色（如果 `percent` 为负数）。
 
 接受一个 HEX/A 或 RGB/A 格式的字符串作为 `color` 参数，加上一个 `percent` (0 到 100 或 -100 到 0)参数表示要做作用于 `color` 高/暗的百分比。返回一个十六进制的字符串作为 `color` 的计算结果。
 
