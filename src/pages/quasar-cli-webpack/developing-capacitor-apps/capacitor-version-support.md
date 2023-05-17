@@ -3,7 +3,7 @@ title: Capacitor 版本
 desc: (@quasar/app-webpack) Quasar 中支持的 Capacitor 版本。如何升级到较新的 Capacitor 版本。
 ---
 
-官方支持的 Capacitor 版本是 v1、v2 和 v3。
+官方支持的 Capacitor 版本是从 v1 到 v5。
 
 ## 升级 Capacitor
 
@@ -15,11 +15,40 @@ desc: (@quasar/app-webpack) Quasar 中支持的 Capacitor 版本。如何升级�
 4. 在这一步中，将会安装好 Capacitor。现在可以运行 `quasar dev -m capacitor -T [ios|android]` 或者 `quasar build -m capacitor -T [ios|android]` 命令，这将在 iOS/Android 平台添加 Capacitor 相对应的升级版。
 
 检查 Capacitor 本身的更新日志，看看它有哪些突破性的变化，也是明智之举。
+## Capacitor v5 <q-badge label="@quasar/app-webpack v3.9.1+" />
+
+假设您已经安装了 Capacitor，那么您的 /src-capacitor/package.json 将会拥有如下内容：
+
+```
+dependencies: {
+  "@capacitor/app": "^5.0.0",
+  "@capacitor/cli": "^5.0.0",
+  "@capacitor/core": "^5.0.0",
+  "@capacitor/splash-screen": "^5.0.0"
+}
+```
+
+其中，`@capacitor/app` 和 `@capacitor/splash-screen` 是可选的，但是安装它们可以帮助 quasar 获得一些功能性的 UI。
+
+## Capacitor v4 <q-badge label="@quasar/app-webpack v3.9.0+" />
+
+假设您已经安装了 Capacitor，那么您的 /src-capacitor/package.json 将会拥有如下内容：
+
+```
+dependencies: {
+  "@capacitor/app": "^4.0.0",
+  "@capacitor/cli": "^4.0.0",
+  "@capacitor/core": "^4.0.0",
+  "@capacitor/splash-screen": "^4.0.0"
+}
+```
+
+其中，`@capacitor/app` 和 `@capacitor/splash-screen` 是可选的，但是安装它们可以帮助 quasar 获得一些功能性的 UI。
 
 ## Capacitor v3
 
 ::: warning 已知问题
-目前还不支持 HTTPS 开发服务器（通过 quasar.config.js > devServer > https: true 开启）。如果正在使用依赖于它的 Capacitor 插件，最好暂时保持使用 Capacitor v2。
+目前还不支持 HTTPS 开发服务器（通过 quasar.config.js > devServer > https: true 开启）。如果正在使用依赖于它的 Capacitor 插件，最好升级到更新版本的 Capacitor。
 :::
 
 假设已经安装了 Capacitor 模式，在 /src-capacitor/package.json 文件中的依赖项应该是这样的：
