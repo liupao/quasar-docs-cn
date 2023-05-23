@@ -134,7 +134,7 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
 
 ### Svg 用法
 
-注意，在下面的示例中，我们希望避免 Vue 将这些数据包装成响应式数据，因此我们通过 create () 生命周期在实例中注入图标。如果在 data() 中声明这些数据也可以正常工作，但是...会造成额外的开销。
+在 `<template>` 中使用：
 
 ```html
 <template>
@@ -144,7 +144,48 @@ QIcon 的尺寸由 `font-size` CSS 属性决定，它还会继承当前字体的
     <q-btn :icon="mdiAbTesting" />
   </div>
 </template>
+```
 
+注意我们使用了 `:` 来绑定变量而不是普通字符串，然后我们需要保证这些变量在 template 中可用，这取决与您使用哪种风格的 Vue API：
+
+#### 组合式 API 和 setup 语法糖
+
+这种方式最方便，只需要将其导入即可：
+
+```html
+<script setup>
+import { matMenu } from '@quasar/extras/material-icons'
+import { mdiAbTesting } from '@quasar/extras/mdi-v6'
+import { fasFont } from '@quasar/extras/fontawesome-v5'
+</script>
+```
+
+#### 组合式 API
+
+```html
+<script>
+import { matMenu } from '@quasar/extras/material-icons'
+import { mdiAbTesting } from '@quasar/extras/mdi-v6'
+import { fasFont } from '@quasar/extras/fontawesome-v5'
+
+export default {
+  // ...
+  setup () {
+    return {
+      matMenu,
+      mdiAbTesting,
+      fasFont
+    }
+  }
+}
+</script>
+```
+
+#### 选项式 API
+
+注意，在下面的示例中，我们希望避免 Vue 将这些数据包装成响应式数据，因此我们通过 create () 生命周期在实例中注入图标。如果在 data() 中声明这些数据也可以正常工作，但是会造成额外的开销。
+
+```html
 <script>
 import { matMenu } from '@quasar/extras/material-icons'
 import { mdiAbTesting } from '@quasar/extras/mdi-v6'
@@ -158,6 +199,7 @@ export default {
     this.fasFont = fasFont
   }
 }
+</script>
 ```
 
 ::: tip
