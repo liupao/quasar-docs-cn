@@ -31,18 +31,20 @@
     </div>
     <slot></slot>
 
-    <div class="doc-page__nav doc-page__nav--footer" v-if="nav">
+    <div class="doc-page-nav doc-page-nav__footer q-pb-xl" v-if="nav !== void 0">
       <div class="text-h6 q-pb-md">查看更多？</div>
-      <div class="q-gutter-sm flex">
+      <div class="q-gutter-md flex">
         <router-link
-          v-for="link in nav"
-          :key="link.category + link.path"
-          :to="link.path"
-          class="q-link doc-page__related rounded-borders cursor-pointer column justify-center"
-          :class="link.classes"
-        >
-          <div class="doc-page__nav-categ">{{ link.category || 'Docs' }}</div>
-          <div class="doc-page__nav-name text-weight-bold">{{ link.name }}</div>
+          class="q-link doc-page-related doc-page-related-bordered rounded-borders q-pa-md cursor-pointer column justify-center"
+          v-for="link in nav" :key="link.category + link.path" :to="link.path">
+          <div class="row no-wrap items-center">
+            <q-icon :name="link.dir === 'left' ? mdiChevronLeft : mdiChevronRight" v-if="link.dir !== void 0"
+              :class="link.dir === 'right' ? 'order-last q-ml-md' : 'order-first q-mr-md'"></q-icon>
+            <div class="col">
+              <div class="doc-page-nav__categ text-uppercase">{{ link.category || 'Docs' }}</div>
+              <div class="doc-page-nav__name text-weight-bold">{{ link.name }}</div>
+            </div>
+          </div>
         </router-link>
       </div>
     </div>
@@ -222,7 +224,6 @@ export default {
         color: $grey-8
 
 .doc-page-nav
-  color: $brand-primary
 
   &__footer
     margin: 68px 0 0
@@ -269,11 +270,21 @@ body.body--light .doc-page
     background: $void-suit
     border: 1px solid $separator-color // match dark to avoid page reflow
 
+  &-nav
+  color: $light-text
+  background: $void-suit
+  border: 1px solid $separator-color // match dark to avoid page reflow
+
   &-toc-container .q-item
     color: $header-btn-color--light
 
 body.body--dark .doc-page
   &-related
+    color: $dark-text
+    background: $dark-pill
+    border: 1px solid $brand-primary
+
+  &-nav
     color: $dark-text
     background: $dark-pill
     border: 1px solid $brand-primary
