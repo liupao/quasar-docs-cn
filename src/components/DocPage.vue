@@ -270,21 +270,11 @@ body.body--light .doc-page
     background: $void-suit
     border: 1px solid $separator-color // match dark to avoid page reflow
 
-  &-nav
-  color: $light-text
-  background: $void-suit
-  border: 1px solid $separator-color // match dark to avoid page reflow
-
   &-toc-container .q-item
     color: $header-btn-color--light
 
 body.body--dark .doc-page
   &-related
-    color: $dark-text
-    background: $dark-pill
-    border: 1px solid $brand-primary
-
-  &-nav
     color: $dark-text
     background: $dark-pill
     border: 1px solid $brand-primary
