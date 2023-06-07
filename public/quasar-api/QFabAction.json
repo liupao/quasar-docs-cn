@@ -16,25 +16,25 @@
       ],
       "category": "general",
       "required": false,
-      "desc_cn": "定义按钮HTML DOM类型"
+      "desc_cn": "定义按钮的 HTML DOM 类型"
     },
     "outline": {
       "type": "Boolean",
       "desc": "Use 'outline' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“轮廓线”设计"
+      "desc_cn": "为浮动操作按钮使用 'outline'（轮廓）设计"
     },
     "push": {
       "type": "Boolean",
       "desc": "Use 'push' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“推”设计"
+      "desc_cn": "为浮动操作按钮使用 'push'（堆叠）设计"
     },
     "flat": {
       "type": "Boolean",
       "desc": "Use 'flat' design for Fab button",
       "category": "style",
-      "desc_cn": "为浮动操作按钮使用“扁平”设计"
+      "desc_cn": "为浮动操作按钮使用 'flat'（扁平）设计"
     },
     "unelevated": {
       "type": "Boolean",
@@ -130,7 +130,7 @@
         ":input-class=\"{ 'my-special-class': <condition> }\""
       ],
       "category": "style",
-      "desc_cn": "作为标签容器属性的类定义"
+      "desc_cn": "定义标签容器的 CSS 类"
     },
     "label-style": {
       "type": [
@@ -145,7 +145,7 @@
         ":input-style=\"{ backgroundColor: '#ff0000' }\""
       ],
       "category": "style",
-      "desc_cn": "作为标签容器属性的样式定义"
+      "desc_cn": "定义标签容器的样式"
     },
     "square": {
       "type": "Boolean",
@@ -193,7 +193,7 @@
         "end"
       ],
       "category": "style|content",
-      "desc_cn": "相对于浮动操作按钮的展开侧如何对齐浮动操作按钮的操作；默认情况下，它使用QFab中指定的对齐方式"
+      "desc_cn": "相对于浮动操作按钮的展开侧如何对齐浮动操作按钮的操作；默认情况下，它使用 QFab 中指定的对齐方式"
     },
     "to": {
       "type": [
@@ -206,13 +206,13 @@
         ":to=\"{ name: 'my-route-name' }\""
       ],
       "category": "router",
-      "desc_cn": "相当于Vue Router <Router link>的“to”属性"
+      "desc_cn": "相当于Vue Router <Router link> 的 'to' 属性"
     },
     "replace": {
       "type": "Boolean",
       "desc": "Equivalent to Vue Router <router-link> 'replace' property",
       "category": "router",
-      "desc_cn": "相当于Vue Router <Router link>的“replace”属性"
+      "desc_cn": "相当于Vue Router <Router link> 的 'replace' 属性"
     }
   },
   "slots": {
@@ -222,11 +222,13 @@
     },
     "icon": {
       "desc": "Slot for icon; Suggestion: QIcon",
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "图标插槽，建议使用：QIcon"
     },
     "label": {
       "desc": "Slot for label",
-      "addedIn": "v2.4"
+      "addedIn": "v2.4",
+      "desc_cn": "标签插槽"
     }
   },
   "events": {
@@ -237,7 +239,7 @@
           "type": "Event",
           "desc": "JS event object",
           "required": true,
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc_cn": "当用户单击/轻触组件时发出"
@@ -250,10 +252,10 @@
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "模拟点击QFabAction"
+      "desc_cn": "模拟点击 QFabAction"
     }
   }
 }

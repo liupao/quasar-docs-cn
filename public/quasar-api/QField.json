@@ -23,7 +23,7 @@
         "Username must have at least 5 characters"
       ],
       "category": "content",
-      "desc_cn": "验证错误消息（仅当“error”设置为“true”时显示）"
+      "desc_cn": "验证错误消息（仅当 'error' 设置为 'true' 时显示）"
     },
     "no-error-icon": {
       "type": "Boolean",
@@ -47,7 +47,7 @@
       "type": "Boolean",
       "desc": "By default a change in the rules does not trigger a new validation until the model changes; If set to true then a change in the rules will trigger a validation; Has a performance penalty, so use it only when you really need it",
       "category": "behavior",
-      "desc_cn": "默认情况下，在模型更改之前，规则的更改不会触发新的验证；如果设置为true，则规则中的更改将触发验证；有一个性能损失，所以只有当你真的需要它时使用它"
+      "desc_cn": "默认情况下，在 model 更改之前，规则的更改不会触发新的验证；如果设置为 true，则规则中的更改将触发验证；会有性能损失，所以只有当你真的需要它时使用它"
     },
     "lazy-rules": {
       "type": [
@@ -61,16 +61,16 @@
         "ondemand"
       ],
       "category": "behavior",
-      "desc_cn": "如果设置为布尔真，则只有在字段第一次失去焦点后，它才会根据“rules”检查验证状态；如果设置为“ondemand”，则仅当手动调用组件的validate()方法或当包装器QForm提交自身时才会触发"
+      "desc_cn": "如果设置为布尔 true，则只有在字段第一次失去焦点后，它才会根据 'rules' 检查验证状态；如果设置为 'ondemand' ，则仅当手动调用组件的 validate() 方法或当包装器 QForm 提交自身时才会触发"
     },
     "label": {
       "type": "String",
-      "desc": "A text label that will “float” up above the input field, once the field gets focus",
+      "desc": "A text label that will  'float'  up above the input field, once the field gets focus",
       "examples": [
         "Username"
       ],
       "category": "content",
-      "desc_cn": "一种文本标签，一旦字段获得焦点，它将“浮动”到输入字段上方"
+      "desc_cn": "一种文本标签，一旦字段获得焦点，它将'浮动'到输入字段上方"
     },
     "stack-label": {
       "type": "Boolean",
@@ -119,7 +119,7 @@
         "teal-10"
       ],
       "category": "style",
-      "desc_cn": "来自Quasar调色板的标签的颜色名称；覆盖“color”属性；与“color”属性的区别在于，标签将始终具有此颜色，即使字段未聚焦"
+      "desc_cn": "来自 Quasar 调色板的标签的颜色名称；覆盖 'color' 属性；与 'color' 属性的区别在于，标签将始终具有此颜色，即使字段未聚焦"
     },
     "color": {
       "type": "String",
@@ -151,13 +151,13 @@
       "type": "Boolean",
       "desc": "Signals the user a process is in progress by displaying a spinner; Spinner can be customized by using the 'loading' slot.",
       "category": "behavior|content",
-      "desc_cn": "通过显示旋转器向用户发出进程正在进行的信号；可以使用“loading”槽自定义旋转器。"
+      "desc_cn": "通过显示旋转器向用户发出进程正在进行的信号；可以使用 'loading' 槽自定义旋转器。"
     },
     "clearable": {
       "type": "Boolean",
       "desc": "Appends clearable icon when a value (not undefined or null) is set; When clicked, model becomes null",
       "category": "behavior|content",
-      "desc_cn": "设置值（非undefined或null）时附加可清除图标；单击时，模型将变为空"
+      "desc_cn": "设置值（非 undefined 或 null）时附加可清除图标；单击时，model 将变为空"
     },
     "clear-icon": {
       "type": "String",
@@ -166,25 +166,25 @@
         "close"
       ],
       "category": "content",
-      "desc_cn": "与“clearable”属性一起使用时用于清除按钮的自定义图标"
+      "desc_cn": "与 'clearable' 属性一起使用时用于清除按钮的自定义图标"
     },
     "filled": {
       "type": "Boolean",
       "desc": "Use 'filled' design for the field",
       "category": "style",
-      "desc_cn": "对字段使用“填充”设计"
+      "desc_cn": "对字段使用 'filled'（填充）设计"
     },
     "outlined": {
       "type": "Boolean",
       "desc": "Use 'outlined' design for the field",
       "category": "style",
-      "desc_cn": "对字段使用“轮廓线”设计"
+      "desc_cn": "对字段使用 'outlined'（轮廓线）设计"
     },
     "borderless": {
       "type": "Boolean",
       "desc": "Use 'borderless' design for the field",
       "category": "style",
-      "desc_cn": "对字段采用“无边界”设计"
+      "desc_cn": "对字段采用 'borderless' （无边框）设计"
     },
     "standout": {
       "type": [
@@ -197,13 +197,13 @@
         "standout=\"bg-primary text-white\""
       ],
       "category": "style",
-      "desc_cn": "对字段采用“突出”设计；指定聚焦时要应用的类（覆盖默认类）"
+      "desc_cn": "对字段采用 'standout' （突出）设计；指定聚焦时要应用的类（覆盖默认类）"
     },
     "label-slot": {
       "type": "Boolean",
       "desc": "Enables label slot; You need to set it to force use of the 'label' slot if the 'label' prop is not set",
       "category": "content",
-      "desc_cn": "启用标签槽；如果未设置“label”属性，则需要将其设置为强制使用“label”插槽"
+      "desc_cn": "启用标签槽；如果未设置 'label' 属性，则需要将其设置为强制使用 'label' 插槽"
     },
     "bottom-slots": {
       "type": "Boolean",
@@ -215,7 +215,7 @@
       "type": "Boolean",
       "desc": "Do not reserve space for hint/error/counter anymore when these are not used; As a result, it also disables the animation for those; It also allows the hint/error area to stretch vertically based on its content",
       "category": "style",
-      "desc_cn": "不使用hint/error/counter时，不要再为其保留空间；因此，它也会禁用这些对象的动画；它还允许hint/error区域根据其内容进行垂直拉伸"
+      "desc_cn": "不使用 hint/error/counter 时，不要再为其保留空间；因此，它也会禁用这些对象的动画；它还允许 hint/error 区域根据其内容进行垂直拉伸"
     },
     "counter": {
       "type": "Boolean",
@@ -233,7 +233,7 @@
       "type": "Boolean",
       "desc": "Remove border-radius so borders are squared; Overrides 'rounded' prop",
       "category": "style",
-      "desc_cn": "去除border-radius，使边界为正方形；覆盖“rounded”属性"
+      "desc_cn": "去除border-radius，使边界为正方形；覆盖 'rounded' 属性"
     },
     "dense": {
       "type": "Boolean",
@@ -245,7 +245,7 @@
       "type": "Boolean",
       "desc": "Match inner content alignment to that of QItem",
       "category": "style",
-      "desc_cn": "将内部内容对齐方式与QItem匹配"
+      "desc_cn": "将内部内容对齐方式与 QItem 匹配"
     },
     "disable": {
       "type": "Boolean",
@@ -272,7 +272,7 @@
         "myFieldsId"
       ],
       "category": "behavior",
-      "desc_cn": "用于指定控件的“id”以及包装它的标签的“for”属性；如果没有指定'name'属性，那么它也将用于此属性"
+      "desc_cn": "用于指定控件的 'id' 以及包装它的标签的 'for' 属性；如果没有指定'name'属性，那么它也将用于此属性"
     },
     "name": {
       "type": "String",
@@ -281,7 +281,7 @@
         "car_id"
       ],
       "category": "behavior",
-      "desc_cn": "用于指定控件的名称；处理表单时有用；如果未指定，则采用“for”属性的值（如果存在）"
+      "desc_cn": "用于指定控件的名称；处理表单时有用；如果未指定，则采用 'for' 属性的值（如果存在）"
     },
     "maxlength": {
       "type": [
@@ -316,23 +316,23 @@
     },
     "label": {
       "desc": "Slot for label; Used only if 'label-slot' prop is set or the 'label' prop is set; When it is used the text in the 'label' prop is ignored",
-      "desc_cn": "标签槽；仅当设置了“label-slot”属性或设置了“label”属性时使用；使用时，“label”属性中的文本将被忽略"
+      "desc_cn": "标签槽；仅当设置了 'label-slot' 属性或设置了 'label' 属性时使用；使用时， 'label' 属性中的文本将被忽略"
     },
     "error": {
       "desc": "Slot for errors; Enabled only if 'bottom-slots' prop is used; Suggestion: <div>",
-      "desc_cn": "错误插槽；仅在使用“bottom-slots”属性时启用；建议：<div>"
+      "desc_cn": "错误插槽；仅在使用 'bottom-slots' 属性时启用；建议：<div>"
     },
     "hint": {
       "desc": "Slot for hint text; Enabled only if 'bottom-slots' prop is used; Suggestion: <div>",
-      "desc_cn": "提示文本槽；仅在使用“bottom-slots”属性时启用；建议：<div>"
+      "desc_cn": "提示文本槽；仅在使用 'bottom-slots' 属性时启用；建议：<div>"
     },
     "counter": {
       "desc": "Slot for counter text; Enabled only if 'bottom-slots' prop is used; Suggestion: <div>",
-      "desc_cn": "计数器文本槽；仅在使用“bottom-slots”属性时启用；建议：<div>"
+      "desc_cn": "计数器文本槽；仅在使用 'bottom-slots' 属性时启用；建议：<div>"
     },
     "loading": {
       "desc": "Override default spinner when component is in loading mode; Use in conjunction with 'loading' prop",
-      "desc_cn": "当组件处于加载模式时重写默认旋转器；与“loading”属性一起使用"
+      "desc_cn": "当组件处于加载模式时重写默认旋转器；与 'loading' 属性一起使用"
     },
     "control": {
       "desc": "Slot for controls; Suggestion QSlider, QRange, QKnob, ...",
@@ -342,23 +342,28 @@
           "desc": "Element id used in the `for` attribute of the field label. Can be used to link the control to the label",
           "examples": [
             "qf_363270c0-7a83-62b1-8dcf-6dfd64ee38fa"
-          ]
+          ],
+          "desc_cn": "在字段标签的 'for' 属性中使用的元素 id。可用于将控件链接到标签"
         },
         "field": {
           "type": "Element",
-          "desc": "DOM element of the field"
+          "desc": "DOM element of the field",
+          "desc_cn": "field 的 DOM 元素"
         },
         "editable": {
           "type": "Boolean",
-          "desc": "Field is editable"
+          "desc": "Field is editable",
+          "desc_cn": "field 是否可编辑"
         },
         "focused": {
           "type": "Boolean",
-          "desc": "Field has focus"
+          "desc": "Field has focus",
+          "desc_cn": "field 是否被聚焦"
         },
         "floatingLabel": {
           "type": "Boolean",
-          "desc": "Field's label is floating"
+          "desc": "Field's label is floating",
+          "desc_cn": "field 的标签是否是浮动的"
         },
         "modelValue": {
           "type": "Any",
@@ -366,7 +371,8 @@
           "examples": [
             0.241,
             "Text"
-          ]
+          ],
+          "desc_cn": "field 的值"
         },
         "emitValue": {
           "type": "Function",
@@ -379,10 +385,12 @@
               "examples": [
                 0,
                 "Changed text"
-              ]
+              ],
+              "desc_cn": "触发的值"
             }
           },
-          "returns": null
+          "returns": null,
+          "desc_cn": "在 field 的上下文中触发一个 @input 事件的函数"
         }
       }
     },
@@ -400,7 +408,7 @@
           "desc_cn": "清除之前的值"
         }
       },
-      "desc_cn": "使用“clearable”属性时，单击清除图标时会发出此事件"
+      "desc_cn": "使用 'clearable' 属性时，单击清除图标时会发出此事件"
     },
     "update:model-value": {
       "desc": "Emitted when the model changes, only when used with 'clearable' or the 'control' scoped slot.",
@@ -408,9 +416,11 @@
         "value": {
           "type": "Any",
           "desc": "New model value",
-          "required": true
+          "required": true,
+          "desc_cn": "新的 model 值"
         }
-      }
+      },
+      "desc_cn": "当 model 改变时发出，仅当与 'clearable' 或者 'control' 插槽一起使用时发出"
     },
     "focus": {
       "desc": "Emitted when component gets focused",
@@ -418,7 +428,7 @@
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
       "desc_cn": "组件被聚焦时发出"
@@ -429,10 +439,10 @@
         "evt": {
           "type": "Event",
           "desc": "JS event object",
-          "desc_cn": "JS事件对象"
+          "desc_cn": "JS 事件对象"
         }
       },
-      "desc_cn": "当组件失去焦点时发射"
+      "desc_cn": "当组件失去焦点时发出"
     }
   },
   "methods": {
@@ -459,7 +469,7 @@
           "true",
           "validate().then(outcome => { ... })"
         ],
-        "desc_cn": "如果没有异步规则，则为True/false，否则为带有结果的Promise（True->验证成功，false->检测到无效模型）"
+        "desc_cn": "如果没有异步规则，则为 True/false，否则为带有结果的 Promise（True->验证成功，false->检测到无效模型）"
       },
       "desc_cn": "触发验证"
     },
@@ -475,7 +485,8 @@
   "computedProps": {
     "hasError": {
       "type": "Boolean",
-      "desc": "Whether the component is in error state"
+      "desc": "Whether the component is in error state",
+      "desc_cn": "组件是否处于错误状态"
     }
   }
 }
