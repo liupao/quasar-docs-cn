@@ -60,7 +60,7 @@ Quasar is looking into the future and sets its own high and modern standards. An
 Quasar 内置了极其丰富的 vue 组件酷，几乎可以覆盖到任何 web 开发的需求场景。并且每一个 Quasar 的组件都是精心制作的，为用户提供最好的体验。Quasar 在设计时十分注重**性能和响应性**，因此使用 Quasar 的性能开销几乎可以忽略不计。对性能和设计的关注是我们引以为傲的地方。
 
 #### 默认情况下集成了最佳实践
-类星体的建立也是为了鼓励开发者遵循 web 开发的最佳实践。为了做到这一点，Quasar 帮您做好了很多开箱即用的特性 - **无需额外配置**。
+Quasar 的建立也是为了鼓励开发者遵循 web 开发的最佳实践。为了做到这一点，Quasar 帮您做好了很多开箱即用的特性 - **无需额外配置**。
 
 
 #### 应用扩展支持
