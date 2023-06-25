@@ -38,20 +38,20 @@ Vite 官方指南，详见 [Vite 官网](https://cn.vitejs.dev/guide/#scaffoldin
 
 ::: tip 提示
 * 注意，`@quasar/extras` 是**可选的**。
-* 此外，只有在使用 Quasar Sass/SCSS 时，才需要添加 `sass@1.32.0` (注意要指定版本)。
+* 此外，只有在使用 Quasar Sass/SCSS 时，才需要添加 `sass@1.32.12` (注意要指定版本)。
 :::
 
 ``` bash
 $ yarn add quasar @quasar/extras
-$ yarn add -D @quasar/vite-plugin sass@1.32.0
+$ yarn add -D @quasar/vite-plugin sass@1.32.12
 
 # 或
 $ npm install quasar @quasar/extras
-$ npm install -D @quasar/vite-plugin sass@1.32.0
+$ npm install -D @quasar/vite-plugin sass@1.32.12
 
 # 或
 $ pnpm add quasar @quasar/extras
-$ pnpm add -D @quasar/vite-plugin sass@1.32.0
+$ pnpm add -D @quasar/vite-plugin sass@1.32.12
 ```
 
 ## 使用 Quasar
