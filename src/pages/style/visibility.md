@@ -45,7 +45,7 @@ Quasar 提供了下述这些常用的 CSS 工具类，您可以直接在 html �
 | `lg` | 只会在大尺寸的屏幕上展示 |
 | `xl` | 只会在超大尺寸的屏幕上展示 |
 
-也可指定在小于/大于某断点尺寸的屏幕上展示 DOM 元素或者组件，只需要使用`lt-` 或 `gt-` 前缀。lt 表示小于是 lower than 的缩写，gt 表示大雨是 greater than 的缩写。例如： `lt-md`，表示在只在小于 md（即 xs 和 sm）尺寸的屏幕上展示，`lt-xl` 表示在小于 xl 尺寸的屏幕上展示（即 xs, sm, md 和 lg），`gt-md`表示在大于 md 尺寸的屏幕上展示（即 lg 和 xl）。
+也可指定在小于/大于某断点尺寸的屏幕上展示 DOM 元素或者组件，只需要使用`lt-` 或 `gt-` 前缀。lt 表示小于是 lower than 的缩写，gt 表示大于是 greater than 的缩写。例如： `lt-md`，表示在只在小于 md（即 xs 和 sm）尺寸的屏幕上展示，`lt-xl` 表示在小于 xl 尺寸的屏幕上展示（即 xs, sm, md 和 lg），`gt-md`表示在大于 md 尺寸的屏幕上展示（即 lg 和 xl）。
 
 
 ::: tip
